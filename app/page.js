@@ -60,37 +60,7 @@ export default function ScannerApp() {
     }
   };
 
-  // Background price updater (Client-side Cron)
-  useEffect(() => {
-    let isMounted = true;
-    const startBackgroundUpdater = async () => {
-      // Delay start to prioritize initial page load
-      await new Promise(r => setTimeout(r, 5000));
-      while (isMounted) {
-        try {
-          const res = await fetch('/api/cron/update-prices');
-          const data = await res.json();
-          if (data.message === 'End of results, reset cursor') {
-            // Reached the end (all items fetched). Sleep for 10 minutes before next full cycle.
-            await new Promise(r => setTimeout(r, 10 * 60 * 1000));
-          } else if (data.skipped) {
-            // Another user is already updating, sleep for 5 seconds
-            await new Promise(r => setTimeout(r, 5000));
-          } else {
-            // Fetched a page successfully. Sleep 3 seconds before fetching next page.
-            await new Promise(r => setTimeout(r, 3000));
-          }
-        } catch (e) {
-          // Network error, sleep and retry
-          await new Promise(r => setTimeout(r, 10000));
-        }
-      }
-    };
-    if (isEngineReady) {
-      startBackgroundUpdater();
-    }
-    return () => { isMounted = false; };
-  }, [isEngineReady]);
+
 
   const submitComment = async (e) => {
     e.preventDefault();
