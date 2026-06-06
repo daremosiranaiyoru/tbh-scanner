@@ -355,6 +355,21 @@ export default function ScannerApp() {
   };
   const getRarityLabel = (rarity) => rarityTranslations[rarity]?.[selectedLang] || rarityTranslations[rarity]?.['en-US'] || rarity;
 
+  const announcementTranslations = {
+    'en-US': '🚀 Update: You can now paste (Ctrl+V) screenshots directly from your clipboard!',
+    'ja-JP': '🚀 アップデート: クリップボードから画像枠に直接ペースト（Ctrl+V）できるようになりました！',
+    'zh-Hans': '🚀 更新: 现在您可以直接从剪贴板粘贴（Ctrl+V）屏幕截图了！',
+    'zh-Hant': '🚀 更新: 現在您可以直接從剪貼簿貼上（Ctrl+V）螢幕截圖了！',
+    'ko-KR': '🚀 업데이트: 이제 클립보드에서 스크린샷을 직접 붙여넣기(Ctrl+V)할 수 있습니다!',
+    'ru-RU': '🚀 Обновление: Теперь вы можете вставлять (Ctrl+V) скриншоты прямо из буфера обмена!',
+    'es-ES': '🚀 Actualización: ¡Ahora puedes pegar (Ctrl+V) capturas de pantalla directamente desde tu portapapeles!',
+    'fr-FR': '🚀 Mise à jour: Vous pouvez maintenant coller (Ctrl+V) des captures d\'écran directement depuis votre presse-papiers!',
+    'de-DE': '🚀 Update: Sie können nun Screenshots direkt aus Ihrer Zwischenablage einfügen (Strg+V)!',
+    'pt-BR': '🚀 Atualização: Agora você pode colar (Ctrl+V) capturas de tela diretamente da sua área de transferência!',
+    'tr-TR': '🚀 Güncelleme: Artık ekran görüntülerini doğrudan panonuzdan yapıştırabilirsiniz (Ctrl+V)!',
+    'vi-VN': '🚀 Cập nhật: Bây giờ bạn có thể dán (Ctrl+V) ảnh chụp màn hình trực tiếp từ khay nhớ tạm!'
+  };
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -392,6 +407,22 @@ export default function ScannerApp() {
       </header>
 
       <main className={styles.content}>
+        
+        {/* Announcement Banner */}
+        <div style={{
+          background: 'linear-gradient(90deg, rgba(33, 150, 243, 0.2), rgba(156, 39, 176, 0.2))',
+          border: '1px solid rgba(255, 255, 255, 0.1)',
+          borderRadius: '12px',
+          padding: '12px 20px',
+          marginBottom: '24px',
+          textAlign: 'center',
+          fontWeight: 'bold',
+          color: 'white',
+          boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
+        }}>
+          {announcementTranslations[selectedLang] || announcementTranslations['en-US']}
+        </div>
+
         {/* Left Side: Upload & Canvas */}
         <div className="glass-panel" style={{ padding: '20px' }}>
           <div 
