@@ -153,10 +153,18 @@ export default function ScannerApp() {
   };
 
   const processImage = async (file) => {
-    if (!isEngineReady) return alert("Engine is not ready yet!");
-    
     setIsScanning(true);
     setResults([]);
+    
+    // If engine is not ready, wait for it
+    if (!isEngineReady) {
+      showToast("エンジンの起動を待機しています...");
+      while (!window.cv || !window.cv.Mat) {
+        await new Promise(r => setTimeout(r, 200));
+      }
+      // If loadDatabase hasn't finished, wait a bit more
+      await new Promise(r => setTimeout(r, 500)); 
+    }
     
     const imgUrl = URL.createObjectURL(file);
     const img = new Image();
@@ -357,62 +365,53 @@ export default function ScannerApp() {
       <main className={styles.content}>
         {/* Left Side: Upload & Canvas */}
         <div className="glass-panel" style={{ padding: '20px' }}>
-          {!isEngineReady ? (
-            <div className={styles.loading}>
+          <div 
+            className={`${styles.uploadZone} ${dragActive ? styles.dragActive : ''}`}
+            onDragEnter={handleDrag}
+            onDragLeave={handleDrag}
+            onDragOver={handleDrag}
+            onDrop={handleDrop}
+            onClick={() => document.getElementById('fileInput').click()}
+            style={{ display: results.length > 0 ? 'none' : 'flex' }}
+          >
+            <div className={styles.uploadIcon}>📥</div>
+            <h3>Drag & Drop Screenshot Here</h3>
+            <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>or click to browse</p>
+            <input 
+              type="file" 
+              id="fileInput" 
+              style={{ display: 'none' }} 
+              accept="image/png, image/jpeg"
+              onChange={handleFileSelect} 
+            />
+          </div>
+
+          {isScanning && (
+            <div className={styles.loading} style={{ minHeight: '400px' }}>
               <div className={styles.spinner}></div>
-              <p>Loading AI Vision Engine...</p>
+              <p>{!isEngineReady ? "Loading AI Engine (1st time only)..." : "Analyzing pixels..."}</p>
             </div>
-          ) : (
-            <>
-              <div 
-                className={`${styles.uploadZone} ${dragActive ? styles.dragActive : ''}`}
-                onDragEnter={handleDrag}
-                onDragLeave={handleDrag}
-                onDragOver={handleDrag}
-                onDrop={handleDrop}
-                onClick={() => document.getElementById('fileInput').click()}
-                style={{ display: results.length > 0 ? 'none' : 'flex' }}
-              >
-                <div className={styles.uploadIcon}>📥</div>
-                <h3>Drag & Drop Screenshot Here</h3>
-                <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>or click to browse</p>
-                <input 
-                  type="file" 
-                  id="fileInput" 
-                  style={{ display: 'none' }} 
-                  accept="image/png, image/jpeg"
-                  onChange={handleFileSelect} 
-                />
-              </div>
+          )}
 
-              {isScanning && (
-                <div className={styles.loading} style={{ minHeight: '400px' }}>
-                  <div className={styles.spinner}></div>
-                  <p>Analyzing pixels...</p>
-                </div>
-              )}
-
-              <div 
-                className={styles.canvasContainer} 
-                style={{ display: (!isScanning && results.length > 0) ? 'block' : 'none' }}
-              >
-                <canvas ref={canvasRef}></canvas>
-              </div>
-              <canvas ref={hiddenCanvasRef} style={{ display: 'none' }}></canvas>
-              
-              {results.length > 0 && (
-                <button 
-                  onClick={() => setResults([])} 
-                  style={{
-                    marginTop: '16px', width: '100%', padding: '12px', 
-                    background: 'var(--panel-bg)', border: '1px solid var(--panel-border)',
-                    color: 'white', borderRadius: '8px', cursor: 'pointer'
-                  }}
-                >
-                  Scan Another Screenshot
-                </button>
-              )}
-            </>
+          <div 
+            className={styles.canvasContainer} 
+            style={{ display: (!isScanning && results.length > 0) ? 'block' : 'none' }}
+          >
+            <canvas ref={canvasRef}></canvas>
+          </div>
+          <canvas ref={hiddenCanvasRef} style={{ display: 'none' }}></canvas>
+          
+          {results.length > 0 && (
+            <button 
+              onClick={() => setResults([])} 
+              style={{
+                marginTop: '16px', width: '100%', padding: '12px', 
+                background: 'var(--panel-bg)', border: '1px solid var(--panel-border)',
+                color: 'white', borderRadius: '8px', cursor: 'pointer'
+              }}
+            >
+              Scan Another Screenshot
+            </button>
           )}
         </div>
 
