@@ -504,7 +504,10 @@ export default function ScannerApp() {
                   }
                 }
               }
-              if (marketData && marketData.priceCents) totalCents += marketData.priceCents;
+              if (marketData) {
+                const cents = marketData.medianCents || marketData.priceCents || marketData.lowestCents;
+                if (cents) totalCents += cents;
+              }
             });
             
             let localizedTotal = '';
@@ -676,6 +679,13 @@ export default function ScannerApp() {
                         'de-DE': 'Zuletzt verkauft:', 'pt-BR': 'Última venda:', 'tr-TR': 'Son satış:', 'vi-VN': 'Đã bán gần đây:'
                       };
                       const recentSoldLabel = labelTranslations[selectedLang] || 'Recent Sold:';
+
+                      const lowestLabelTranslations = {
+                        'en-US': 'Lowest Listing:', 'ja-JP': '最低出品:', 'zh-Hans': '最低上架:', 'zh-Hant': '最低上架:',
+                        'ko-KR': '최저가:', 'ru-RU': 'Самая низкая цена:', 'es-ES': 'Listado más bajo:', 'fr-FR': 'Liste la plus basse:',
+                        'de-DE': 'Niedrigstes Angebot:', 'pt-BR': 'Menor preço:', 'tr-TR': 'En Düşük İlan:', 'vi-VN': 'Danh sách thấp nhất:'
+                      };
+                      const lowestLabel = lowestLabelTranslations[selectedLang] || 'Lowest Listing:';
                       
                       let marketData = null;
                       if (prices) {
@@ -692,6 +702,7 @@ export default function ScannerApp() {
                       }
                       
                       let localizedPrice = '';
+                      let localizedLowestPrice = '';
                       if (rates) {
                         const curr = langToCurrency[selectedLang] || { code: 'USD' };
                         const rate = rates[curr.code] || 1;
@@ -699,8 +710,10 @@ export default function ScannerApp() {
                           style: 'currency', currency: curr.code,
                           maximumFractionDigits: curr.code === 'JPY' || curr.code === 'KRW' ? 0 : 2
                         });
-                        if (marketData && marketData.priceCents) {
-                          localizedPrice = formatter.format((marketData.priceCents / 100) * rate);
+                        if (marketData) {
+                          const primaryCents = marketData.medianCents || marketData.priceCents;
+                          if (primaryCents) localizedPrice = formatter.format((primaryCents / 100) * rate);
+                          if (marketData.lowestCents) localizedLowestPrice = formatter.format((marketData.lowestCents / 100) * rate);
                         }
                       }
                       
@@ -730,7 +743,11 @@ export default function ScannerApp() {
                           </div>
                           <div className={styles.itemPrice} style={{ textAlign: 'right', flexShrink: 0 }}>
                             {marketData ? (
-                              <div className={styles.priceValue} style={{ color: '#4caf50' }}>{recentSoldLabel} {localizedPrice}</div>
+                              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '2px' }}>
+                                {localizedPrice && <div className={styles.priceValue} style={{ color: '#4caf50', fontWeight: 'bold' }}>{recentSoldLabel} {localizedPrice}</div>}
+                                {localizedLowestPrice && <div style={{ fontSize: '0.85rem', color: '#81c784' }}>{lowestLabel} {localizedLowestPrice}</div>}
+                                {(!localizedPrice && !localizedLowestPrice) && <div className={styles.priceLabel}>No Data</div>}
+                              </div>
                             ) : prices ? (
                               <div className={styles.priceLabel}>No Data</div>
                             ) : (

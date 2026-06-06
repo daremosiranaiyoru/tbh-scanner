@@ -43,19 +43,19 @@ export async function GET(request) {
                     queue.push(item.hash_name);
                 }
 
+                let lowestCents = item.sell_price;
+                if (item.sale_price_text) {
+                    const parsed = parseFloat(item.sale_price_text.replace(/[^0-9.]/g, ''));
+                    if (!isNaN(parsed)) lowestCents = Math.round(parsed * 100);
+                }
+
                 if (!existingCache[item.hash_name]) {
-                    // Set baseline lowest_price if completely new
-                    let cents = item.sell_price;
-                    if (item.sale_price_text) {
-                        const parsed = parseFloat(item.sale_price_text.replace(/[^0-9.]/g, ''));
-                        if (!isNaN(parsed)) cents = Math.round(parsed * 100);
-                    }
                     existingCache[item.hash_name] = {
-                        priceCents: cents,
+                        lowestCents: lowestCents,
                         qty: item.sell_listings
                     };
                 } else {
-                    // Only update the listing quantity, DO NOT overwrite the median_price!
+                    existingCache[item.hash_name].lowestCents = lowestCents;
                     existingCache[item.hash_name].qty = item.sell_listings;
                 }
                 updatedCount++;
