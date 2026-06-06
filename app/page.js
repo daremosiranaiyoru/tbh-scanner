@@ -36,6 +36,7 @@ export default function ScannerApp() {
       if (window.cv && window.cv.Mat) {
         clearInterval(checkCv);
         loadDatabase().then(() => {
+          window.isDatabaseLoaded = true;
           setIsEngineReady(true);
         });
       }
@@ -157,13 +158,11 @@ export default function ScannerApp() {
     setResults([]);
     
     // If engine is not ready, wait for it
-    if (!isEngineReady) {
-      showToast("エンジンの起動を待機しています...");
-      while (!window.cv || !window.cv.Mat) {
+    if (!window.isDatabaseLoaded) {
+      showToast("エンジンの起動とデータベースの構築を待機しています...");
+      while (!window.isDatabaseLoaded) {
         await new Promise(r => setTimeout(r, 200));
       }
-      // If loadDatabase hasn't finished, wait a bit more
-      await new Promise(r => setTimeout(r, 500)); 
     }
     
     const imgUrl = URL.createObjectURL(file);
