@@ -66,11 +66,13 @@ export async function GET() {
             const items = await kv.get('steam_prices') || {};
             const rates = await kv.get('steam_rates') || { USD: 1, JPY: 150 };
             const cachedAt = await kv.get('steam_last_fetch') || 0;
+            const queue = await kv.get('steam_items_queue') || [];
             
             return NextResponse.json({
                 cachedAt,
                 items,
-                rates
+                rates,
+                queueLength: queue.length
             });
         } catch (e) {
             console.error("KV Error:", e);
