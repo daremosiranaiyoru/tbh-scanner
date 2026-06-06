@@ -142,6 +142,34 @@ export default function ScannerApp() {
     }
   };
 
+  const processImageRef = useRef(null);
+  processImageRef.current = processImage;
+
+  useEffect(() => {
+    const handlePaste = (e) => {
+      // Ignore paste events when typing in inputs
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      
+      const items = e.clipboardData?.items;
+      if (!items) return;
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].type.indexOf('image') !== -1) {
+          const file = items[i].getAsFile();
+          if (file) {
+            e.preventDefault();
+            if (processImageRef.current) {
+              processImageRef.current(file);
+            }
+            break;
+          }
+        }
+      }
+    };
+    
+    window.addEventListener('paste', handlePaste);
+    return () => window.removeEventListener('paste', handlePaste);
+  }, []);
+
   const fetchPrices = async () => {
     try {
       const res = await fetch('/api/prices');
@@ -374,7 +402,7 @@ export default function ScannerApp() {
             style={{ display: results.length > 0 ? 'none' : 'flex' }}
           >
             <div className={styles.uploadIcon}>📥</div>
-            <h3>Drag & Drop Screenshot Here</h3>
+            <h3>Drag & Drop or Paste (Ctrl+V) Screenshot</h3>
             <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>or click to browse</p>
             <input 
               type="file" 
