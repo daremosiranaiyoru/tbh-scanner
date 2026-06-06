@@ -43,11 +43,8 @@ export async function GET(request) {
                     queue.push(item.hash_name);
                 }
 
+                // Use sell_price directly (includes Steam fees) so it matches the median_price format
                 let lowestCents = item.sell_price;
-                if (item.sale_price_text) {
-                    const parsed = parseFloat(item.sale_price_text.replace(/[^0-9.]/g, ''));
-                    if (!isNaN(parsed)) lowestCents = Math.round(parsed * 100);
-                }
 
                 if (!existingCache[item.hash_name]) {
                     existingCache[item.hash_name] = {
