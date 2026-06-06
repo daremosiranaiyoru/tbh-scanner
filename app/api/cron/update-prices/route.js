@@ -25,7 +25,11 @@ export async function GET(request) {
         if (queue.length === 0) {
             let cursor = await kv.get('steam_market_cursor') || 0;
             const url = `https://steamcommunity.com/market/search/render/?query=&start=${cursor}&count=${PAGE_SIZE}&search_descriptions=0&sort_column=popular&sort_dir=desc&appid=${APP_ID}&currency=1&norender=1`;
-            const res = await fetch(url);
+            const res = await fetch(url, {
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                }
+            });
             
             if (!res.ok) {
                 return NextResponse.json({ error: 'Steam API error', status: res.status }, { status: 500 });
@@ -87,7 +91,11 @@ export async function GET(request) {
         const encodedName = encodeURIComponent(itemName);
         const overviewUrl = `https://steamcommunity.com/market/priceoverview/?appid=${APP_ID}&currency=1&market_hash_name=${encodedName}`;
         
-        const overviewRes = await fetch(overviewUrl);
+        const overviewRes = await fetch(overviewUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+            }
+        });
         if (!overviewRes.ok) {
             return NextResponse.json({ error: `Overview fetch failed for ${itemName}`, status: overviewRes.status });
         }
