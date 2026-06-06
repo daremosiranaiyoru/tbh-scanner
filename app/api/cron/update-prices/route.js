@@ -14,6 +14,14 @@ export async function GET(request) {
     }
 
     try {
+        // Concurrency lock to prevent hammering Steam if multiple users trigger this
+        const now = Date.now();
+        const lastRun = await kv.get('steam_cron_lock') || 0;
+        if (now - lastRun < 2000) {
+            return NextResponse.json({ skipped: true, message: 'Rate limited' });
+        }
+        await kv.set('steam_cron_lock', now);
+
         // 1. Get current pagination cursor
         let cursor = await kv.get('steam_market_cursor');
         if (typeof cursor !== 'number') {
