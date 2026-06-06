@@ -142,34 +142,6 @@ export default function ScannerApp() {
     }
   };
 
-  const processImageRef = useRef(null);
-  processImageRef.current = processImage;
-
-  useEffect(() => {
-    const handlePaste = (e) => {
-      // Ignore paste events when typing in inputs
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-      
-      const items = e.clipboardData?.items;
-      if (!items) return;
-      for (let i = 0; i < items.length; i++) {
-        if (items[i].type.indexOf('image') !== -1) {
-          const file = items[i].getAsFile();
-          if (file) {
-            e.preventDefault();
-            if (processImageRef.current) {
-              processImageRef.current(file);
-            }
-            break;
-          }
-        }
-      }
-    };
-    
-    window.addEventListener('paste', handlePaste);
-    return () => window.removeEventListener('paste', handlePaste);
-  }, []);
-
   const fetchPrices = async () => {
     try {
       const res = await fetch('/api/prices');
@@ -274,6 +246,36 @@ export default function ScannerApp() {
       showToast("画像の自動コピーがブロックされました。ブラウザの権限設定をご確認ください。");
     }
   };
+
+  const processImageRef = useRef(processImage);
+  useEffect(() => {
+    processImageRef.current = processImage;
+  }, [processImage]);
+
+  useEffect(() => {
+    const handlePaste = (e) => {
+      // Ignore paste events when typing in inputs
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      
+      const items = e.clipboardData?.items;
+      if (!items) return;
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].type.indexOf('image') !== -1) {
+          const file = items[i].getAsFile();
+          if (file) {
+            e.preventDefault();
+            if (processImageRef.current) {
+              processImageRef.current(file);
+            }
+            break;
+          }
+        }
+      }
+    };
+    
+    window.addEventListener('paste', handlePaste);
+    return () => window.removeEventListener('paste', handlePaste);
+  }, []);
 
   const removeItem = (idx) => {
     const newResults = [...results];
