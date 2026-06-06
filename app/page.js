@@ -371,8 +371,24 @@ export default function ScannerApp() {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
+    <>
+      {/* Full Width Edge-to-Edge Announcement Banner */}
+      <div style={{
+        width: '100%',
+        background: 'linear-gradient(90deg, #1e88e5, #8e24aa)',
+        padding: '12px 20px',
+        textAlign: 'center',
+        fontWeight: 'bold',
+        color: 'white',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+        zIndex: 100,
+        position: 'relative'
+      }}>
+        {announcementTranslations[selectedLang] || announcementTranslations['en-US']}
+      </div>
+
+      <div className={styles.container}>
+        <header className={styles.header}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{flex: 1}}></div>
           <div style={{flex: 2, textAlign: 'center'}}>
@@ -407,22 +423,6 @@ export default function ScannerApp() {
       </header>
 
       <main className={styles.content}>
-        
-        {/* Announcement Banner */}
-        <div style={{
-          background: 'linear-gradient(90deg, rgba(33, 150, 243, 0.2), rgba(156, 39, 176, 0.2))',
-          border: '1px solid rgba(255, 255, 255, 0.1)',
-          borderRadius: '12px',
-          padding: '12px 20px',
-          marginBottom: '24px',
-          textAlign: 'center',
-          fontWeight: 'bold',
-          color: 'white',
-          boxShadow: '0 4px 12px rgba(0,0,0,0.2)'
-        }}>
-          {announcementTranslations[selectedLang] || announcementTranslations['en-US']}
-        </div>
-
         {/* Left Side: Upload & Canvas */}
         <div className="glass-panel" style={{ padding: '20px' }}>
           <div 
@@ -899,6 +899,7 @@ export default function ScannerApp() {
           `}</style>
         </div>
       )}
-    </div>
+      </div>
+    </>
   );
 }
