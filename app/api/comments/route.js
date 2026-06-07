@@ -9,7 +9,7 @@ let localComments = [
 export async function GET() {
   if (process.env.KV_REST_API_URL) {
     try {
-      const comments = await kv.lrange('tbh_comments', 0, 49) || [];
+      const comments = await kv.lrange('tbh_comments', 0, 499) || [];
       return NextResponse.json(comments);
     } catch (e) {
       console.error("KV Error (Comments GET):", e);
@@ -41,14 +41,14 @@ export async function POST(request) {
     if (process.env.KV_REST_API_URL) {
       // Add to the front of the list
       await kv.lpush('tbh_comments', newComment);
-      // Keep only the latest 50 comments
-      await kv.ltrim('tbh_comments', 0, 49);
+      // Keep only the latest 500 comments
+      await kv.ltrim('tbh_comments', 0, 499);
       
       return NextResponse.json(newComment);
     } else {
       // Local fallback
       localComments.unshift(newComment);
-      if (localComments.length > 50) localComments = localComments.slice(0, 50);
+      if (localComments.length > 500) localComments = localComments.slice(0, 500);
       return NextResponse.json(newComment);
     }
 
