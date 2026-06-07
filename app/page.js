@@ -326,18 +326,18 @@ export default function ScannerApp() {
   const getRarityLabel = (rarity) => rarityTranslations[rarity]?.[selectedLang] || rarityTranslations[rarity]?.['en-US'] || rarity;
 
   const announcementTranslations = {
-    'en-US': '🚀 Update: You can now paste (Ctrl+V) screenshots directly from your clipboard!',
-    'ja-JP': '🚀 アップデート: クリップボードから画像枠に直接ペースト（Ctrl+V）できるようになりました！',
-    'zh-Hans': '🚀 更新: 现在您可以直接从剪贴板粘贴（Ctrl+V）屏幕截图了！',
-    'zh-Hant': '🚀 更新: 現在您可以直接從剪貼簿貼上（Ctrl+V）螢幕截圖了！',
-    'ko-KR': '🚀 업데이트: 이제 클립보드에서 스크린샷을 직접 붙여넣기(Ctrl+V)할 수 있습니다!',
-    'ru-RU': '🚀 Обновление: Теперь вы можете вставлять (Ctrl+V) скриншоты прямо из буфера обмена!',
-    'es-ES': '🚀 Actualización: ¡Ahora puedes pegar (Ctrl+V) capturas de pantalla directamente desde tu portapapeles!',
-    'fr-FR': '🚀 Mise à jour: Vous pouvez maintenant coller (Ctrl+V) des captures d\'écran directement depuis votre presse-papiers!',
-    'de-DE': '🚀 Update: Sie können nun Screenshots direkt aus Ihrer Zwischenablage einfügen (Strg+V)!',
-    'pt-BR': '🚀 Atualização: Agora você pode colar (Ctrl+V) capturas de tela diretamente da sua área de transferência!',
-    'tr-TR': '🚀 Güncelleme: Artık ekran görüntülerini doğrudan panonuzdan yapıştırabilirsiniz (Ctrl+V)!',
-    'vi-VN': '🚀 Cập nhật: Bây giờ bạn có thể dán (Ctrl+V) ảnh chụp màn hình trực tiếp từ khay nhớ tạm!'
+    'en-US': '⚠️ Notice: Image recognition may fail for some items (e.g. Void Staff, Accessories). If this happens, please use the pencil icon (✎) to correct it manually.',
+    'ja-JP': '⚠️ お知らせ: 一部アイテム（ヴォイドスタッフやアクセサリー類など）の画像認識がうまくいかないバグがあります。その際は、右側の鉛筆マーク（✎）から正しいアイテム名に書き換えてください。',
+    'zh-Hans': '⚠️ 提示: 部分物品（如虚空法杖、饰品等）的图像识别可能会失败。请点击铅笔图标（✎）手动修改为正确的物品。',
+    'zh-Hant': '⚠️ 提示: 部分物品（如虛空法杖、飾品等）的圖像識別可能會失敗。請點擊鉛筆圖標（✎）手動修改為正確的物品。',
+    'ko-KR': '⚠️ 공지: 일부 아이템(공허의 지팡이, 장신구 등)의 이미지 인식이 실패하는 버그가 있습니다. 이 경우 연필 아이콘(✎)을 클릭하여 올바른 아이템으로 수정해 주세요.',
+    'ru-RU': '⚠️ Внимание: Распознавание изображений может не работать для некоторых предметов. Используйте значок карандаша (✎) для ручного исправления.',
+    'es-ES': '⚠️ Aviso: El reconocimiento de imágenes puede fallar con algunos objetos. Utiliza el icono del lápiz (✎) para corregirlo manualmente.',
+    'fr-FR': '⚠️ Avis : La reconnaissance d\'image peut échouer pour certains objets. Veuillez utiliser l\'icône du crayon (✎) pour corriger manuellement.',
+    'de-DE': '⚠️ Hinweis: Die Bilderkennung kann bei einigen Gegenständen fehlschlagen. Bitte verwenden Sie das Stift-Symbol (✎) zur manuellen Korrektur.',
+    'pt-BR': '⚠️ Aviso: O reconhecimento de imagem pode falhar para alguns itens. Use o ícone de lápis (✎) para corrigir manualmente.',
+    'tr-TR': '⚠️ Uyarı: Görüntü tanıma bazı öğelerde başarısız olabilir. Lütfen manuel olarak düzeltmek için kalem simgesini (✎) kullanın.',
+    'vi-VN': '⚠️ Thông báo: Nhận dạng hình ảnh có thể không hoạt động với một số vật phẩm. Vui lòng sử dụng biểu tượng bút chì (✎) để sửa thủ công.'
   };
 
   return (
