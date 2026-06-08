@@ -45,6 +45,9 @@ export default function ScannerApp() {
     // Fetch initial comments
     fetchComments();
     
+    // Pre-fetch prices so they are instantly ready when scanning
+    fetchPrices();
+    
     return () => clearInterval(checkCv);
   }, []);
 
