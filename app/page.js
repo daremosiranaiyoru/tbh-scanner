@@ -329,18 +329,18 @@ export default function ScannerApp() {
   const getRarityLabel = (rarity) => rarityTranslations[rarity]?.[selectedLang] || rarityTranslations[rarity]?.['en-US'] || rarity;
 
   const announcementTranslations = {
-    'en-US': '⚠️ Notice: Image recognition may fail for some items (e.g. Void Staff, Accessories). If this happens, please use the pencil icon (✎) to correct it manually.',
-    'ja-JP': '⚠️ お知らせ: 一部アイテム（ヴォイドスタッフやアクセサリー類など）の画像認識がうまくいかないバグがあります。その際は、右側の鉛筆マーク（✎）から正しいアイテム名に書き換えてください。',
-    'zh-Hans': '⚠️ 提示: 部分物品（如虚空法杖、饰品等）的图像识别可能会失败。请点击铅笔图标（✎）手动修改为正确的物品。',
-    'zh-Hant': '⚠️ 提示: 部分物品（如虛空法杖、飾品等）的圖像識別可能會失敗。請點擊鉛筆圖標（✎）手動修改為正確的物品。',
-    'ko-KR': '⚠️ 공지: 일부 아이템(공허의 지팡이, 장신구 등)의 이미지 인식이 실패하는 버그가 있습니다. 이 경우 연필 아이콘(✎)을 클릭하여 올바른 아이템으로 수정해 주세요.',
-    'ru-RU': '⚠️ Внимание: Распознавание изображений может не работать для некоторых предметов. Используйте значок карандаша (✎) для ручного исправления.',
-    'es-ES': '⚠️ Aviso: El reconocimiento de imágenes puede fallar con algunos objetos. Utiliza el icono del lápiz (✎) para corregirlo manualmente.',
-    'fr-FR': '⚠️ Avis : La reconnaissance d\'image peut échouer pour certains objets. Veuillez utiliser l\'icône du crayon (✎) pour corriger manuellement.',
-    'de-DE': '⚠️ Hinweis: Die Bilderkennung kann bei einigen Gegenständen fehlschlagen. Bitte verwenden Sie das Stift-Symbol (✎) zur manuellen Korrektur.',
-    'pt-BR': '⚠️ Aviso: O reconhecimento de imagem pode falhar para alguns itens. Use o ícone de lápis (✎) para corrigir manualmente.',
-    'tr-TR': '⚠️ Uyarı: Görüntü tanıma bazı öğelerde başarısız olabilir. Lütfen manuel olarak düzeltmek için kalem simgesini (✎) kullanın.',
-    'vi-VN': '⚠️ Thông báo: Nhận dạng hình ảnh có thể không hoạt động với một số vật phẩm. Vui lòng sử dụng biểu tượng bút chì (✎) để sửa thủ công.'
+    'en-US': '⚠️ Notice: Image recognition may fail for some items (e.g. Void Staff, Accessories). If this happens, please use the pencil icon (✎) to correct it manually. Also, displayed prices may differ from actual market prices due to sync timing. Please check the blue "🛒 Steam Market" button for real-time prices.',
+    'ja-JP': '⚠️ お知らせ: 一部アイテム（ヴォイドスタッフやアクセサリー類など）の画像認識がうまくいかないバグがあります。その際は、右側の鉛筆マーク（✎）から正しいアイテム名に書き換えてください。また、データ取得のタイミングにより実際の値段と表示される値段に乖離がある場合があります。正確な情報は「🛒 Steam Market」と書かれた青いボタンからどうぞ。',
+    'zh-Hans': '⚠️ 提示: 部分物品的图像识别可能会失败，请点击铅笔图标（✎）手动修改为正确的物品。此外，由于数据同步延迟，显示价格可能与实际价格有所出入。请点击蓝色的「🛒 Steam Market」按钮查看实时准确价格。',
+    'zh-Hant': '⚠️ 提示: 部分物品的圖像識別可能會失敗，請點擊鉛筆圖標（✎）手動修改為正確的物品。此外，由於資料同步延遲，顯示價格可能與實際價格有所出入。請點擊藍色的「🛒 Steam Market」按鈕查看即時準確價格。',
+    'ko-KR': '⚠️ 공지: 일부 아이템의 이미지 인식이 실패하는 버그가 있습니다. 이 경우 연필 아이콘(✎)을 클릭하여 수정해 주세요. 또한 데이터 동기화 타이밍에 따라 표시된 가격과 실제 가격에 차이가 있을 수 있습니다. 정확한 가격은 파란색 "🛒 Steam Market" 버튼을 확인해 주세요.',
+    'ru-RU': '⚠️ Внимание: Распознавание изображений может не работать для некоторых предметов. Используйте значок карандаша (✎) для исправления. Также цены могут отличаться из-за задержки. Точные цены смотрите по синей кнопке "🛒 Steam Market".',
+    'es-ES': '⚠️ Aviso: El reconocimiento de imágenes puede fallar con algunos objetos. Utiliza el icono del lápiz (✎) para corregirlo. Además, los precios pueden diferir debido a la sincronización. Verifica el botón azul "🛒 Steam Market" para precios exactos.',
+    'fr-FR': '⚠️ Avis : La reconnaissance d\'image peut échouer pour certains objets. Utilisez l\'icône du crayon (✎) pour corriger. De plus, les prix peuvent différer en raison de la synchronisation. Vérifiez le bouton bleu "🛒 Steam Market" pour les prix exacts.',
+    'de-DE': '⚠️ Hinweis: Die Bilderkennung kann bei einigen Gegenständen fehlschlagen. Nutzen Sie das Stift-Symbol (✎) zur Korrektur. Zudem können Preise aufgrund der Synchronisation abweichen. Für genaue Preise nutzen Sie den blauen "🛒 Steam Market" Button.',
+    'pt-BR': '⚠️ Aviso: O reconhecimento de imagem pode falhar para alguns itens. Use o ícone de lápis (✎) para corrigir. Além disso, os preços podem diferir devido à sincronização. Verifique o botão azul "🛒 Steam Market" para preços exatos.',
+    'tr-TR': '⚠️ Uyarı: Görüntü tanıma bazı öğelerde başarısız olabilir. Düzeltmek için kalem simgesini (✎) kullanın. Ayrıca fiyatlar senkronizasyon nedeniyle farklı olabilir. Kesin fiyatlar için mavi "🛒 Steam Market" düğmesini kontrol edin.',
+    'vi-VN': '⚠️ Thông báo: Nhận dạng hình ảnh có thể không hoạt động với một số vật phẩm. Sử dụng biểu tượng bút chì (✎) để sửa. Ngoài ra, giá có thể khác do độ trễ đồng bộ. Kiểm tra nút "🛒 Steam Market" màu xanh để biết giá chính xác.'
   };
 
   return (
