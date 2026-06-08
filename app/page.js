@@ -344,18 +344,18 @@ export default function ScannerApp() {
   const getRarityLabel = (rarity) => rarityTranslations[rarity]?.[selectedLang] || rarityTranslations[rarity]?.['en-US'] || rarity;
 
   const announcementTranslations = {
-    'en-US': '⚠️ Notice: Image recognition may fail for some items (e.g. Void Staff). Please use the pencil icon (✎) to correct it manually.\nThere is a time lag in the displayed prices. For current prices, please click the "🛒 Steam Market" button.',
-    'ja-JP': '⚠️ お知らせ: 一部アイテム（ヴォイドスタッフやアクセサリー類など）の画像認識がうまくいかないバグがあります。その際は、右側の鉛筆マーク（✎）から正しいアイテム名に書き換えてください。\n表示される値段にはタイムラグがあります。現在の値段は「🛒 Steam Market」と書かれたボタンからどうぞ。',
-    'zh-Hans': '⚠️ 提示: 部分物品的图像识别可能会失败，请点击铅笔图标（✎）手动修改。\n显示的价格存在时间延迟。请点击「🛒 Steam Market」按钮查看当前准确价格。',
-    'zh-Hant': '⚠️ 提示: 部分物品的圖像識別可能會失敗，請點擊鉛筆圖標（✎）手動修改。\n顯示的價格存在時間延遲。請點擊「🛒 Steam Market」按鈕查看當前準確價格。',
-    'ko-KR': '⚠️ 공지: 일부 아이템의 이미지 인식이 실패하는 버그가 있습니다. 연필 아이콘(✎)을 클릭하여 수정해 주세요.\n표시된 가격에는 타임래그가 있습니다. 현재 가격은 "🛒 Steam Market" 버튼을 통해 확인해 주세요.',
-    'ru-RU': '⚠️ Внимание: Распознавание изображений может не работать для некоторых предметов. Используйте карандаш (✎) для исправления.\nОтображаемые цены имеют задержку во времени. Текущие цены смотрите по кнопке "🛒 Steam Market".',
-    'es-ES': '⚠️ Aviso: El reconocimiento de imágenes puede fallar con algunos objetos. Utiliza el icono del lápiz (✎) para corregirlo.\nHay un desfase en los precios mostrados. Para ver los precios actuales, haz clic en el botón "🛒 Steam Market".',
-    'fr-FR': '⚠️ Avis : La reconnaissance d\'image peut échouer pour certains objets. Utilisez l\'icône du crayon (✎) pour corriger.\nIl y a un décalage dans les prix affichés. Pour les prix actuels, veuillez cliquer sur le bouton "🛒 Steam Market".',
-    'de-DE': '⚠️ Hinweis: Die Bilderkennung kann bei einigen Gegenständen fehlschlagen. Nutzen Sie das Stift-Symbol (✎) zur Korrektur.\nEs gibt eine Zeitverzögerung bei den angezeigten Preisen. Für aktuelle Preise klicken Sie bitte auf "🛒 Steam Market".',
-    'pt-BR': '⚠️ Aviso: O reconhecimento de imagem pode falhar para alguns itens. Use o ícone de lápis (✎) para corrigir.\nHá um atraso nos preços exibidos. Para preços atuais, clique no botão "🛒 Steam Market".',
-    'tr-TR': '⚠️ Uyarı: Görüntü tanıma bazı öğelerde başarısız olabilir. Düzeltmek için kalem simgesini (✎) kullanın.\nGörüntülenen fiyatlarda bir zaman gecikmesi vardır. Güncel fiyatlar için lütfen "🛒 Steam Market" düğmesine tıklayın.',
-    'vi-VN': '⚠️ Thông báo: Nhận dạng hình ảnh có thể lỗi với một số vật phẩm. Sử dụng bút chì (✎) để sửa.\nCó độ trễ về giá hiển thị. Để xem giá hiện tại, vui lòng nhấp vào nút "🛒 Steam Market".'
+    'en-US': '⚠️ Notice: Image recognition accuracy has been significantly improved! If you find bugs or have feature requests, please let us know in the comments below.\nThere is a time lag in the displayed prices. For the latest information, please click the "🛒 Steam Market" button.',
+    'ja-JP': '⚠️ お知らせ: 画像認識の精度を大幅に向上しました！バグや追加してほしい機能などがある場合は下のコメント欄にお願いします。\n表示される値段はタイムラグがあるので最新情報は「🛒 Steam Market」と書かれたボタンからどうぞ。',
+    'zh-Hans': '⚠️ 提示: 图像识别准确率已大幅提升！如果您发现错误或有功能需求，请在下方评论区留言。\n显示的价格存在时间延迟。请点击「🛒 Steam Market」按钮查看最新信息。',
+    'zh-Hant': '⚠️ 提示: 圖像識別準確率已大幅提升！如果您發現錯誤或有功能需求，請在下方評論區留言。\n顯示的價格存在時間延遲。請點擊「🛒 Steam Market」按鈕查看最新資訊。',
+    'ko-KR': '⚠️ 공지: 이미지 인식 정확도가 크게 향상되었습니다! 버그나 추가를 원하는 기능이 있다면 아래 댓글란에 남겨주세요.\n표시된 가격에는 타임래그가 있습니다. 최신 정보는 "🛒 Steam Market" 버튼을 통해 확인해 주세요.',
+    'ru-RU': '⚠️ Внимание: Точность распознавания изображений значительно улучшена! Если вы нашли ошибки или у вас есть пожелания по функционалу, пожалуйста, напишите в комментариях ниже.\nОтображаемые цены имеют задержку во времени. Актуальную информацию смотрите по кнопке "🛒 Steam Market".',
+    'es-ES': '⚠️ Aviso: ¡La precisión del reconocimiento de imágenes ha mejorado significativamente! Si encuentras errores o tienes sugerencias de nuevas funciones, por favor escríbelo en los comentarios abajo.\nHay un desfase en los precios mostrados. Para ver la información más reciente, haz clic en el botón "🛒 Steam Market".',
+    'fr-FR': '⚠️ Avis : La précision de la reconnaissance d\'image a été considérablement améliorée ! Si vous trouvez des bugs ou avez des suggestions de fonctionnalités, veuillez l\'indiquer dans les commentaires ci-dessous.\nIl y a un décalage dans les prix affichés. Pour les informations les plus récentes, veuillez cliquer sur le bouton "🛒 Steam Market".',
+    'de-DE': '⚠️ Hinweis: Die Genauigkeit der Bilderkennung wurde deutlich verbessert! Wenn Sie Fehler finden oder Funktionswünsche haben, schreiben Sie diese bitte unten in die Kommentare.\nEs gibt eine Zeitverzögerung bei den angezeigten Preisen. Für aktuelle Informationen klicken Sie bitte auf "🛒 Steam Market".',
+    'pt-BR': '⚠️ Aviso: A precisão do reconhecimento de imagem foi significativamente melhorada! Se você encontrar bugs ou tiver sugestões de recursos, por favor escreva nos comentários abaixo.\nHá um atraso nos preços exibidos. Para informações atualizadas, clique no botão "🛒 Steam Market".',
+    'tr-TR': '⚠️ Uyarı: Görüntü tanıma doğruluğu önemli ölçüde iyileştirildi! Hatalar bulursanız veya özellik istekleriniz varsa, lütfen aşağıdaki yorumlar bölümüne yazın.\nGörüntülenen fiyatlarda bir zaman gecikmesi vardır. En güncel bilgiler için lütfen "🛒 Steam Market" düğmesine tıklayın.',
+    'vi-VN': '⚠️ Thông báo: Độ chính xác của nhận dạng hình ảnh đã được cải thiện đáng kể! Nếu bạn tìm thấy lỗi hoặc có yêu cầu tính năng, vui lòng viết vào phần bình luận bên dưới.\nCó độ trễ về giá hiển thị. Để xem thông tin mới nhất, vui lòng nhấp vào nút "🛒 Steam Market".'
   };
 
   return (
