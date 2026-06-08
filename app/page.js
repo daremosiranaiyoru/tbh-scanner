@@ -5,6 +5,21 @@ import styles from './page.module.css';
 import { loadDatabase, scanIcons } from '../lib/ocr-engine';
 import itemNames from '../public/item_names.json';
 
+const langToCurrency = {
+  'en-US': { code: 'USD' },
+  'ja-JP': { code: 'JPY' },
+  'zh-Hans': { code: 'CNY' },
+  'zh-Hant': { code: 'TWD' },
+  'ko-KR': { code: 'KRW' },
+  'ru-RU': { code: 'RUB' },
+  'es-ES': { code: 'EUR' },
+  'fr-FR': { code: 'EUR' },
+  'de-DE': { code: 'EUR' },
+  'pt-BR': { code: 'BRL' },
+  'tr-TR': { code: 'TRY' },
+  'vi-VN': { code: 'VND' },
+};
+
 export default function ScannerApp() {
   const [isScanning, setIsScanning] = useState(false);
   const [isEngineReady, setIsEngineReady] = useState(false);
@@ -696,7 +711,7 @@ export default function ScannerApp() {
                         const rate = rates[curr.code] || 1;
                         const formatter = new Intl.NumberFormat(selectedLang, {
                           style: 'currency', currency: curr.code,
-                          maximumFractionDigits: curr.code === 'JPY' || curr.code === 'KRW' ? 0 : 2
+                          maximumFractionDigits: ['JPY', 'KRW', 'VND'].includes(curr.code) ? 0 : 2
                         });
                         if (marketData) {
                           const primaryCents = marketData.medianCents || marketData.priceCents;

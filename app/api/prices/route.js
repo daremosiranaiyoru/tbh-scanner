@@ -80,7 +80,19 @@ export async function GET() {
             };
 
             const items = await fetchKv('steam_prices', {});
-            const rates = await fetchKv('steam_rates', { USD: 1, JPY: 150 });
+            let rates = await fetchKv('steam_rates', { USD: 1, JPY: 150 });
+            
+            // If rates doesn't include KRW or CNY, fetch real-time rates
+            if (!rates.KRW || !rates.CNY) {
+                try {
+                    const fxRes = await fetch('https://open.er-api.com/v6/latest/USD');
+                    if (fxRes.ok) {
+                        const fxData = await fxRes.json();
+                        if (fxData && fxData.rates) rates = fxData.rates;
+                    }
+                } catch(e) { }
+            }
+            
             const cachedAt = await fetchKv('steam_last_fetch', 0);
             const queue = await fetchKv('steam_items_queue', []);
             
