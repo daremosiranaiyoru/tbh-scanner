@@ -661,18 +661,32 @@ export default function ScannerApp() {
                       const lowestLabel = lowestLabelTranslations[selectedLang] || 'Lowest Listing:';
                       
                       let marketData = null;
+                      let actualKey = englishName; // default fallback key for URL
                       if (prices) {
-                        if (prices[englishName]) marketData = prices[englishName];
+                        if (prices[englishName]) {
+                          marketData = prices[englishName];
+                          actualKey = englishName;
+                        }
                         else if (item.rarity && item.rarity !== 'UNKNOWN') {
                           const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
                           const prefix = `${englishName} (${rarityStr})`;
-                          if (prices[`${prefix} A`]) marketData = prices[`${prefix} A`];
+                          if (prices[`${prefix} A`]) {
+                            marketData = prices[`${prefix} A`];
+                            actualKey = `${prefix} A`;
+                          }
                           else {
                             const matchedKey = Object.keys(prices).find(k => k.startsWith(prefix));
-                            if (matchedKey) marketData = prices[matchedKey];
+                            if (matchedKey) {
+                              marketData = prices[matchedKey];
+                              actualKey = matchedKey;
+                            } else {
+                              actualKey = prefix; // fallback for URL if not found in prices but rarity is known
+                            }
                           }
                         }
                       }
+                      
+                      const steamUrl = `https://steamcommunity.com/market/listings/3678970/${encodeURIComponent(actualKey)}`;
                       
                       let localizedPrice = '';
                       let localizedLowestPrice = '';
@@ -712,6 +726,15 @@ export default function ScannerApp() {
                               }}>
                                 {getRarityLabel(item.rarity)}
                               </span> • {item.matchRate.toFixed(1)}% Match
+                              <br/>
+                              <a 
+                                href={steamUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                style={{ color: '#64b5f6', textDecoration: 'none', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '4px', marginTop: '6px', padding: '2px 8px', background: 'rgba(33, 150, 243, 0.1)', borderRadius: '12px', border: '1px solid rgba(33, 150, 243, 0.3)' }}
+                              >
+                                🛒 Steam Market
+                              </a>
                             </div>
                           </div>
                           <div className={styles.itemPrice} style={{ textAlign: 'right', flexShrink: 0 }}>
