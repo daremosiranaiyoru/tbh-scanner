@@ -1,14 +1,19 @@
 import { NextResponse } from 'next/server';
-import { kv } from '@vercel/kv';
+import { createClient } from '@vercel/kv';
 
 const APP_ID = '3678970';
 const PAGE_SIZE = 100;
 const MAX_ITEMS = 2000;
 
 export async function GET(request) {
-    if (!process.env.KV_REST_API_URL) {
+    const kvUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+    const kvToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+
+    if (!kvUrl || !kvToken) {
         return NextResponse.json({ error: 'KV not configured' }, { status: 500 });
     }
+
+    const kv = createClient({ url: kvUrl, token: kvToken });
 
     try {
         const now = Date.now();
