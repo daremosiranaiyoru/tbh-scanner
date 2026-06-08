@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { kv } from '@vercel/kv';
 
 // Local Fallback Cache for development
 let localComments = [
@@ -7,12 +6,25 @@ let localComments = [
 ];
 
 export async function GET() {
-  if (process.env.KV_REST_API_URL) {
+  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+
+  if (url && token) {
     try {
-      const comments = await kv.lrange('tbh_comments', 0, 499) || [];
-      return NextResponse.json(comments);
+      // LRANGE tbh_comments 0 499
+      const res = await fetch(`${url}/lrange/tbh_comments/0/499`, {
+        headers: { Authorization: `Bearer ${token}` },
+        cache: 'no-store'
+      });
+      const data = await res.json();
+      if (data.result) {
+        // Upstash returns strings for JSON objects stored in lists if added via REST, or objects. 
+        // We ensure they are parsed properly.
+        const comments = data.result.map(item => typeof item === 'string' ? JSON.parse(item) : item);
+        return NextResponse.json(comments);
+      }
     } catch (e) {
-      console.error("KV Error (Comments GET):", e);
+      console.error("Upstash Error (Comments GET):", e);
     }
   }
   
@@ -38,11 +50,24 @@ export async function POST(request) {
       timestamp: Date.now()
     };
 
-    if (process.env.KV_REST_API_URL) {
-      // Add to the front of the list
-      await kv.lpush('tbh_comments', newComment);
-      // Keep only the latest 500 comments
-      await kv.ltrim('tbh_comments', 0, 499);
+    const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+    const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+
+    if (url && token) {
+      // LPUSH tbh_comments newComment
+      await fetch(`${url}/lpush/tbh_comments`, {
+        method: 'POST',
+        headers: { 
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newComment)
+      });
+      
+      // LTRIM tbh_comments 0 499 (Keep only latest 500)
+      await fetch(`${url}/ltrim/tbh_comments/0/499`, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
       
       return NextResponse.json(newComment);
     } else {
