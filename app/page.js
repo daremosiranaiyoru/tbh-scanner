@@ -358,6 +358,36 @@ export default function ScannerApp() {
     'vi-VN': '⚠️ Thông báo: Độ chính xác của nhận dạng hình ảnh đã được cải thiện đáng kể! Nếu bạn tìm thấy lỗi hoặc có yêu cầu tính năng, vui lòng viết vào phần bình luận bên dưới.\nCó độ trễ về giá hiển thị. Để xem thông tin mới nhất, vui lòng nhấp vào nút "🛒 Steam Market".'
   };
 
+  const titleTranslations = {
+    'ja-JP': 'Taskbar Hero AI鑑定士',
+    'en-US': 'Taskbar Hero AI Appraiser',
+    'zh-Hans': 'Taskbar Hero AI 鉴定师',
+    'zh-Hant': 'Taskbar Hero AI 鑑定師',
+    'ko-KR': 'Taskbar Hero AI 감정사',
+    'ru-RU': 'ИИ-оценщик Taskbar Hero',
+    'es-ES': 'Tasador de IA de Taskbar Hero',
+    'fr-FR': 'Évaluateur IA Taskbar Hero',
+    'de-DE': 'Taskbar Hero KI-Gutachter',
+    'pt-BR': 'Avaliador de IA do Taskbar Hero',
+    'tr-TR': 'Taskbar Hero YZ Eksperi',
+    'vi-VN': 'Chuyên gia thẩm định AI Taskbar Hero'
+  };
+
+  const descTranslations = {
+    'ja-JP': '倉庫のスクリーンショットから即座に値段を見積もります',
+    'en-US': 'Instantly appraise prices from your inventory screenshots.',
+    'zh-Hans': '通过仓库截图即时估算价格。',
+    'zh-Hant': '透過倉庫截圖即時估算價格。',
+    'ko-KR': '인벤토리 스크린샷으로 즉시 가격을 감정합니다.',
+    'ru-RU': 'Мгновенно оценивайте цены по скриншотам вашего инвентаря.',
+    'es-ES': 'Estima instantáneamente los precios desde las capturas de pantalla de tu inventario.',
+    'fr-FR': 'Estimez instantanément les prix à partir des captures d\'écran de votre inventaire.',
+    'de-DE': 'Schätzen Sie Preise sofort anhand von Screenshots Ihres Inventars.',
+    'pt-BR': 'Estime instantaneamente os preços a partir das capturas de tela do seu inventário.',
+    'tr-TR': 'Envanterinizin ekran görüntülerinden anında fiyat tahmini alın.',
+    'vi-VN': 'Định giá ngay lập tức từ ảnh chụp màn hình kho đồ của bạn.'
+  };
+
   return (
     <>
       {/* Full Width Edge-to-Edge Announcement Banner */}
@@ -381,8 +411,8 @@ export default function ScannerApp() {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{flex: 1}}></div>
           <div style={{flex: 2, textAlign: 'center'}}>
-            <h1 className={styles.title}>Taskbar Hero Market Scanner</h1>
-            <p className={styles.subtitle}>Upload a screenshot to instantly appraise your inventory.</p>
+            <h1 className={styles.title}>{titleTranslations[selectedLang] || titleTranslations['en-US']}</h1>
+            <p className={styles.subtitle}>{descTranslations[selectedLang] || descTranslations['en-US']}</p>
           </div>
           <div style={{flex: 1, textAlign: 'right'}}>
             <select 
