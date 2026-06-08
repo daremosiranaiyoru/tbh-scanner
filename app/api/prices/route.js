@@ -60,19 +60,35 @@ async function fetchLocalSteamMarketItems() {
 }
 
 export async function GET() {
-    // Check if Vercel KV is configured
-    if (process.env.KV_REST_API_URL) {
+    const kvUrl = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+    const kvToken = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+
+    if (kvUrl && kvToken) {
         try {
-            const items = await kv.get('steam_prices') || {};
-            const rates = await kv.get('steam_rates') || { USD: 1, JPY: 150 };
-            const cachedAt = await kv.get('steam_last_fetch') || 0;
-            const queue = await kv.get('steam_items_queue') || [];
+            // Manually fetch using REST API to support both Vercel KV and Upstash variable names
+            const fetchKv = async (key, defaultValue) => {
+                const res = await fetch(`https://${kvUrl.replace(/^https?:\/\//, '')}/get/${key}`, {
+                    headers: { Authorization: `Bearer ${kvToken}` }
+                });
+                if (!res.ok) return defaultValue;
+                const data = await res.json();
+                if (data.result === null || data.result === undefined) return defaultValue;
+                if (typeof data.result === 'string') {
+                    try { return JSON.parse(data.result); } catch(e) { return data.result; }
+                }
+                return data.result;
+            };
+
+            const items = await fetchKv('steam_prices', {});
+            const rates = await fetchKv('steam_rates', { USD: 1, JPY: 150 });
+            const cachedAt = await fetchKv('steam_last_fetch', 0);
+            const queue = await fetchKv('steam_items_queue', []);
             
             return NextResponse.json({
                 cachedAt,
                 items,
                 rates,
-                queueLength: queue.length
+                queueLength: queue.length || 0
             });
         } catch (e) {
             console.error("KV Error:", e);
