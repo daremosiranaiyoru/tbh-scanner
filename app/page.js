@@ -32,8 +32,9 @@ export default function ScannerApp() {
   
   // Comments state
   const [comments, setComments] = useState([]);
-  const [newCommentText, setNewCommentText] = useState('');
+  const [newCommentText, setNewCommentText] = useState("");
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
+  const [isAdminSecret, setIsAdminSecret] = useState(null);
   
   // Editing states
   const [editingIndex, setEditingIndex] = useState(-1);
@@ -46,6 +47,11 @@ export default function ScannerApp() {
   const hiddenCanvasRef = useRef(null);
 
   useEffect(() => {
+    // Load admin secret if available
+    if (typeof window !== 'undefined') {
+      setIsAdminSecret(localStorage.getItem('adminSecret'));
+    }
+
     // Wait for window.cv to be available, then load database
     const checkCv = setInterval(() => {
       if (window.cv && window.cv.Mat) {
@@ -82,14 +88,27 @@ export default function ScannerApp() {
 
   const submitComment = async (e) => {
     e.preventDefault();
-    if (!newCommentText.trim() || isSubmittingComment) return;
+    const text = newCommentText.trim();
+    if (!text || isSubmittingComment) return;
     
+    // Hidden admin login
+    if (text.startsWith('/admin ')) {
+      const secret = text.split(' ')[1];
+      if (secret) {
+        localStorage.setItem('adminSecret', secret);
+        setIsAdminSecret(secret);
+        setNewCommentText('');
+        showToast("Admin mode activated!");
+      }
+      return;
+    }
+
     setIsSubmittingComment(true);
     try {
       const res = await fetch('/api/comments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: newCommentText })
+        body: JSON.stringify({ text: text, adminSecret: isAdminSecret })
       });
       
       if (res.ok) {
@@ -101,9 +120,27 @@ export default function ScannerApp() {
         showToast(`エラー: ${err.error || '投稿に失敗しました'}`);
       }
     } catch (e) {
-      showToast("ネットワークエラーが発生しました");
+      showToast("ネットワークエラーです");
     } finally {
       setIsSubmittingComment(false);
+    }
+  };
+
+  const deleteComment = async (id) => {
+    if (!isAdminSecret) return;
+    if (!confirm("Delete this comment?")) return;
+    
+    try {
+      const res = await fetch(`/api/comments?id=${id}&secret=${isAdminSecret}`, { method: 'DELETE' });
+      if (res.ok) {
+        fetchComments();
+        showToast("Comment deleted.");
+      } else {
+        const err = await res.json();
+        showToast("Error: " + err.error);
+      }
+    } catch (e) {
+      showToast("Network error.");
     }
   };
 
@@ -975,11 +1012,23 @@ export default function ScannerApp() {
           ) : (
             comments.map((comment) => (
               <div key={comment.id} style={{
-                background: 'rgba(255,255,255,0.03)', padding: '16px', borderRadius: '12px',
-                borderLeft: '4px solid #2196f3'
+                background: comment.isAdmin ? 'rgba(244, 67, 54, 0.05)' : 'rgba(255,255,255,0.03)', 
+                padding: '16px', 
+                borderRadius: '12px',
+                borderLeft: comment.isAdmin ? '4px solid #f44336' : '4px solid #2196f3',
+                position: 'relative'
               }}>
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '8px' }}>
-                  Anonymous • {new Date(comment.timestamp).toLocaleString(selectedLang)}
+                {isAdminSecret && (
+                  <button 
+                    onClick={() => deleteComment(comment.id)}
+                    style={{ position: 'absolute', top: '12px', right: '12px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.2rem', opacity: 0.6 }}
+                    title="Delete Comment"
+                  >
+                    🗑️
+                  </button>
+                )}
+                <div style={{ fontSize: '0.8rem', color: comment.isAdmin ? '#f44336' : 'var(--text-secondary)', marginBottom: '8px', fontWeight: comment.isAdmin ? 'bold' : 'normal' }}>
+                  {comment.isAdmin ? '[Admin]' : 'Anonymous'} • {new Date(comment.timestamp).toLocaleString(selectedLang)}
                 </div>
                 <div style={{ fontSize: '1rem', color: 'white', lineHeight: '1.4' }}>
                   {comment.text}
