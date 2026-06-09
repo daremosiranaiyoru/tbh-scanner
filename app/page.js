@@ -122,12 +122,9 @@ export default function ScannerApp() {
     }
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('preferredLang', selectedLang);
-    }
-  }, [selectedLang]);
 
+
+  useEffect(() => {
     // Wait for window.cv to be available, then load database
     const checkCv = setInterval(() => {
       if (window.cv && window.cv.Mat) {
@@ -617,7 +614,10 @@ export default function ScannerApp() {
               <div style={{flex: 1, textAlign: 'right'}}>
             <select 
               value={selectedLang} 
-              onChange={(e) => setSelectedLang(e.target.value)}
+              onChange={(e) => {
+                setSelectedLang(e.target.value);
+                if (typeof window !== 'undefined') localStorage.setItem('preferredLang', e.target.value);
+              }}
               className={styles.langSelect}
               style={{
                 background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)',
