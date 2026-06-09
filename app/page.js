@@ -715,13 +715,22 @@ export default function ScannerApp() {
                           if (!prices) return 0;
                           const names = itemNames[item.name] || {};
                           const englishName = names['en-US'] || item.name.replace('.png', '');
-                          if (prices[englishName]) return prices[englishName].priceCents || 0;
-                          if (item.rarity && item.rarity !== 'UNKNOWN') {
+                          
+                          let marketData = null;
+                          if (prices[englishName]) {
+                            marketData = prices[englishName];
+                          } else if (item.rarity && item.rarity !== 'UNKNOWN') {
                             const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
                             const prefix = `${englishName} (${rarityStr})`;
-                            if (prices[`${prefix} A`]) return prices[`${prefix} A`].priceCents || 0;
-                            const matchedKey = Object.keys(prices).find(k => k.startsWith(prefix));
-                            if (matchedKey) return prices[matchedKey].priceCents || 0;
+                            if (prices[`${prefix} A`]) marketData = prices[`${prefix} A`];
+                            else {
+                              const matchedKey = Object.keys(prices).find(k => k.startsWith(prefix));
+                              if (matchedKey) marketData = prices[matchedKey];
+                            }
+                          }
+                          
+                          if (marketData) {
+                            return marketData.medianCents || marketData.priceCents || marketData.lowestCents || 0;
                           }
                           return 0;
                         };
