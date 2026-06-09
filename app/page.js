@@ -35,6 +35,7 @@ export default function ScannerApp() {
   const [newCommentText, setNewCommentText] = useState("");
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
   const [isAdminSecret, setIsAdminSecret] = useState(null);
+  const [isSortedByPrice, setIsSortedByPrice] = useState(false);
   
   // Editing states
   const [editingIndex, setEditingIndex] = useState(-1);
@@ -659,6 +660,22 @@ export default function ScannerApp() {
             };
             const addBtnLabel = addBtnTranslations[selectedLang] || '➕ Add Item Manually';
 
+            const sortPriceTranslations = {
+              'ja-JP': '💰 金額順でソート', 'en-US': '💰 Sort by Price', 'zh-Hans': '💰 按价格排序',
+              'zh-Hant': '💰 按價格排序', 'ko-KR': '💰 가격순 정렬', 'ru-RU': '💰 Сортировать по цене',
+              'es-ES': '💰 Ordenar por precio', 'fr-FR': '💰 Trier par prix', 'de-DE': '💰 Nach Preis sortieren',
+              'pt-BR': '💰 Ordenar por preço', 'tr-TR': '💰 Fiyata göre sırala', 'vi-VN': '💰 Sắp xếp theo giá'
+            };
+            const sortPriceLabel = sortPriceTranslations[selectedLang] || '💰 Sort by Price';
+            
+            const sortRestoreTranslations = {
+              'ja-JP': '↺ 元の順に戻す', 'en-US': '↺ Restore Order', 'zh-Hans': '↺ 恢复原序',
+              'zh-Hant': '↺ 恢復原序', 'ko-KR': '↺ 원래 순서로', 'ru-RU': '↺ Восстановить порядок',
+              'es-ES': '↺ Restaurar orden', 'fr-FR': '↺ Restaurer l\'ordre', 'de-DE': '↺ Reihenfolge wiederherstellen',
+              'pt-BR': '↺ Restaurar ordem', 'tr-TR': '↺ Sırayı geri yükle', 'vi-VN': '↺ Khôi phục thứ tự'
+            };
+            const sortRestoreLabel = sortRestoreTranslations[selectedLang] || '↺ Restore Order';
+
             return (
               <>
                 {results.length > 0 && localizedTotal && (
@@ -690,7 +707,15 @@ export default function ScannerApp() {
                       Waiting for scan...
                     </div>
                   ) : (
-                    results.map((item, idx) => {
+                    results
+                      .map((item, originalIdx) => ({ item, originalIdx }))
+                      .sort((a, b) => {
+                        if (!isSortedByPrice) return 0;
+                        const priceA = prices && prices[a.item.name] ? prices[a.item.name].price : 0;
+                        const priceB = prices && prices[b.item.name] ? prices[b.item.name].price : 0;
+                        return priceB - priceA;
+                      })
+                      .map(({ item, originalIdx: idx }) => {
                       if (editingIndex === idx) {
                         return (
                           <div key={idx} className={styles.itemRow} style={{ flexDirection: 'column', alignItems: 'stretch', gap: '12px', background: 'rgba(33, 150, 243, 0.1)' }}>
@@ -910,7 +935,7 @@ export default function ScannerApp() {
                   )}
                 </div>
                 {results.length > 0 && (
-                  <div style={{ padding: '16px', display: 'flex', justifyContent: 'center' }}>
+                  <div style={{ padding: '16px', display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
                     <button 
                       onClick={addItem}
                       style={{ 
@@ -923,6 +948,21 @@ export default function ScannerApp() {
                       onMouseOut={(e) => e.currentTarget.style.background = 'rgba(33, 150, 243, 0.2)'}
                     >
                       {addBtnLabel}
+                    </button>
+                    
+                    <button 
+                      onClick={() => setIsSortedByPrice(!isSortedByPrice)}
+                      style={{ 
+                        background: isSortedByPrice ? 'rgba(255, 152, 0, 0.2)' : 'rgba(156, 39, 176, 0.2)', 
+                        border: isSortedByPrice ? '1px dashed rgba(255, 152, 0, 0.5)' : '1px dashed rgba(156, 39, 176, 0.5)', 
+                        color: isSortedByPrice ? '#ffb74d' : '#ba68c8', padding: '10px 24px', borderRadius: '8px', cursor: 'pointer',
+                        fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px',
+                        transition: 'all 0.2s'
+                      }}
+                      onMouseOver={(e) => e.currentTarget.style.background = isSortedByPrice ? 'rgba(255, 152, 0, 0.3)' : 'rgba(156, 39, 176, 0.3)'}
+                      onMouseOut={(e) => e.currentTarget.style.background = isSortedByPrice ? 'rgba(255, 152, 0, 0.2)' : 'rgba(156, 39, 176, 0.2)'}
+                    >
+                      {isSortedByPrice ? sortRestoreLabel : sortPriceLabel}
                     </button>
                   </div>
                 )}
