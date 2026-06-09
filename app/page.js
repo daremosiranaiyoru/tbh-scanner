@@ -146,6 +146,22 @@ export default function ScannerApp() {
         if (remaining <= 0) {
           setIsShowingAd(false);
           setResults(pendingResults);
+          
+          // Draw rects on the visible canvas now that the ad is over
+          if (canvasRef.current && pendingResults.length > 0) {
+            const ctx = canvasRef.current.getContext('2d');
+            pendingResults.forEach(match => {
+              if (match.rect) {
+                ctx.strokeStyle = '#00ff00';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(match.rect.x, match.rect.y, match.rect.width, match.rect.height);
+                ctx.fillStyle = '#00ff00';
+                ctx.font = '14px sans-serif';
+                ctx.fillText(`${match.matchRate.toFixed(1)}%`, match.rect.x + 2, match.rect.y + 14);
+              }
+            });
+          }
+          
           setPendingResults([]);
           setIsScanning(false);
           clearInterval(timer);
@@ -218,21 +234,25 @@ export default function ScannerApp() {
     
     const displayResults = [];
     
-    // Draw rects
+    // Collect rects
     scanData.results.forEach(res => {
-      // Draw match box
       if (res.match) {
-        ctx.strokeStyle = '#00ff00';
-        ctx.lineWidth = 2;
-        ctx.strokeRect(res.rect.x, res.rect.y, res.rect.width, res.rect.height);
-        
-        ctx.fillStyle = '#00ff00';
-        ctx.font = '14px sans-serif';
-        ctx.fillText(`${res.match.matchRate.toFixed(1)}%`, res.rect.x + 2, res.rect.y + 14);
-        
+        res.match.rect = res.rect; // Store rect for drawing later
         displayResults.push(res.match);
       }
     });
+    
+    // If not using ad test, draw rects immediately
+    if (!ENABLE_AD_TEST) {
+      displayResults.forEach(match => {
+        ctx.strokeStyle = '#00ff00';
+        ctx.lineWidth = 2;
+        ctx.strokeRect(match.rect.x, match.rect.y, match.rect.width, match.rect.height);
+        ctx.fillStyle = '#00ff00';
+        ctx.font = '14px sans-serif';
+        ctx.fillText(`${match.matchRate.toFixed(1)}%`, match.rect.x + 2, match.rect.y + 14);
+      });
+    }
     
     if (ENABLE_AD_TEST) {
       setPendingResults(displayResults);
