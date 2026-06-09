@@ -269,7 +269,10 @@ export default function ScannerApp() {
     
     if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
       const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/')).slice(0, 8);
-      if (files.length > 0) processImages(files);
+      if (files.length > 0) {
+        const shouldAppend = results.length > 0;
+        processImages(files, shouldAppend);
+      }
     }
   };
   
@@ -291,10 +294,11 @@ export default function ScannerApp() {
     }
   };
 
-  const processImages = async (files) => {
+  const processImages = async (files, append = false) => {
     setIsScanning(true);
-    setResults([]);
-    setPreviewImages([]);
+    if (!append) {
+      setResults([]);
+    }
     
     // If engine is not ready, wait for it
     if (!window.isDatabaseLoaded) {
@@ -304,15 +308,35 @@ export default function ScannerApp() {
       }
     }
     
-    let allResults = [];
-    let newPreviewImages = [];
-
-    for (let file of files) {
+    // 1. Pre-load all images and show them on screen immediately without rects
+    const loadedImages = await Promise.all(files.map(async (file) => {
       const imgUrl = URL.createObjectURL(file);
       const img = new Image();
       img.src = imgUrl;
-      
       await new Promise(r => img.onload = r);
+      return { imgUrl, img, width: img.width, height: img.height, rects: [] };
+    }));
+    
+    // Initialize preview state so the images appear on screen before scanning starts
+    let currentPreviewImages = append ? [...previewImages] : [];
+    let newPreviewImages = loadedImages.map(d => ({
+      src: d.imgUrl,
+      width: d.width,
+      height: d.height,
+      rects: []
+    }));
+    currentPreviewImages = [...currentPreviewImages, ...newPreviewImages];
+    setPreviewImages(currentPreviewImages);
+    
+    // Give UI a moment to render the images
+    await new Promise(r => setTimeout(r, 100));
+    
+    let allResults = append ? [...results] : [];
+    const offset = append ? (previewImages.length) : 0;
+
+    // 2. Scan images one by one and update UI progressively
+    for (let i = 0; i < loadedImages.length; i++) {
+      const { img } = loadedImages[i];
       
       // Draw to hidden canvas for scanning
       const hiddenCanvas = hiddenCanvasRef.current;
@@ -321,10 +345,10 @@ export default function ScannerApp() {
       const hCtx = hiddenCanvas.getContext('2d');
       hCtx.drawImage(img, 0, 0);
       
-      // Give UI a moment
+      // Let UI breathe
       await new Promise(r => setTimeout(r, 50)); 
       
-      const scanData = scanIcons(window.cv, hiddenCanvas);
+      const scanData = scanIcons(hiddenCanvas);
       
       const fileDisplayResults = [];
       
@@ -337,16 +361,13 @@ export default function ScannerApp() {
       });
       
       allResults = [...allResults, ...fileDisplayResults];
-      newPreviewImages.push({
-        src: imgUrl,
-        width: img.width,
-        height: img.height,
-        rects: fileDisplayResults.map(r => ({ ...r.rect, matchRate: r.matchRate }))
-      });
+      
+      // Progressively update the preview with the green rects for this image
+      currentPreviewImages[offset + i].rects = fileDisplayResults.map(r => ({ ...r.rect, matchRate: r.matchRate }));
+      setPreviewImages([...currentPreviewImages]); // Trigger re-render
     }
     
     setResults(allResults);
-    setPreviewImages(newPreviewImages);
     setIsScanning(false);
     
     // Fetch prices in background
@@ -370,6 +391,11 @@ export default function ScannerApp() {
     processImagesRef.current = processImages;
   }, [processImages]);
 
+  const resultsRef = useRef(results);
+  useEffect(() => {
+    resultsRef.current = results;
+  }, [results]);
+
   useEffect(() => {
     const handlePaste = (e) => {
       // Ignore paste events when typing in inputs
@@ -389,7 +415,8 @@ export default function ScannerApp() {
       if (imageFiles.length > 0) {
         e.preventDefault();
         if (processImagesRef.current) {
-          processImagesRef.current(imageFiles.slice(0, 8));
+          const shouldAppend = resultsRef.current && resultsRef.current.length > 0;
+          processImagesRef.current(imageFiles.slice(0, 8), shouldAppend);
         }
       }
     };
@@ -551,6 +578,21 @@ export default function ScannerApp() {
     'vi-VN': 'Vui lòng chờ trong giây lát'
   };
 
+  const clearScreenshotTranslations = {
+    'en-US': 'Clear Screenshot',
+    'ja-JP': '画像をクリア',
+    'zh-Hans': '清除截图',
+    'zh-Hant': '清除截圖',
+    'ko-KR': '스크린샷 지우기',
+    'ru-RU': 'Очистить скриншот',
+    'es-ES': 'Borrar captura',
+    'fr-FR': 'Effacer la capture',
+    'de-DE': 'Screenshot löschen',
+    'pt-BR': 'Limpar captura',
+    'tr-TR': 'Ekran Görüntüsünü Temizle',
+    'vi-VN': 'Xóa ảnh chụp màn hình'
+  };
+
   const commentsTitleTranslations = {
     'ja-JP': '💬 コメント欄', 'en-US': '💬 Comments Section', 'zh-Hans': '💬 评论区',
     'zh-Hant': '💬 評論區', 'ko-KR': '💬 댓글 섹션', 'ru-RU': '💬 Раздел комментариев',
@@ -617,15 +659,18 @@ export default function ScannerApp() {
 
       <main className={styles.content}>
         {/* Left Side: Upload & Canvas */}
-        <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isScanning) ? '600px' : 'auto' }}>
+        <div 
+          className={`glass-panel ${dragActive ? styles.dragActive : ''}`} 
+          style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isScanning) ? '600px' : 'auto', transition: 'border 0.3s' }}
+          onDragEnter={handleDrag}
+          onDragLeave={handleDrag}
+          onDragOver={handleDrag}
+          onDrop={handleDrop}
+        >
           <div 
-            className={`${styles.uploadZone} ${dragActive ? styles.dragActive : ''}`}
-            onDragEnter={handleDrag}
-            onDragLeave={handleDrag}
-            onDragOver={handleDrag}
-            onDrop={handleDrop}
+            className={styles.uploadZone}
             onClick={() => document.getElementById('fileInput').click()}
-            style={{ display: (results.length > 0 || isScanning) ? 'none' : 'flex' }}
+            style={{ display: (results.length > 0 || isScanning) ? 'none' : 'flex', pointerEvents: dragActive ? 'none' : 'auto' }}
           >
             <div className={styles.uploadIcon}>📥</div>
             <h3>Drag & Drop or Paste (Ctrl+V) Screenshot</h3>
@@ -644,14 +689,17 @@ export default function ScannerApp() {
             className={styles.canvasContainer} 
             style={{ 
               display: (previewImages.length > 0 || isScanning) ? 'grid' : 'none',
-              gridTemplateColumns: previewImages.length === 1 ? '1fr' : 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '12px'
+              gridTemplateColumns: `repeat(${previewImages.length === 1 ? 1 : previewImages.length <= 4 ? 2 : previewImages.length <= 6 ? 3 : 4}, minmax(0, 1fr))`,
+              gridTemplateRows: `repeat(${previewImages.length <= 2 ? 1 : 2}, minmax(0, 1fr))`,
+              gap: '8px',
+              padding: '8px',
+              boxSizing: 'border-box'
             }}
           >
             {previewImages.map((img, idx) => (
-              <div key={idx} style={{ position: 'relative', width: '100%' }}>
-                <img src={img.src} style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px' }} alt={`Scanned screenshot ${idx + 1}`} />
-                <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} viewBox={`0 0 ${img.width} ${img.height}`}>
+              <div key={idx} style={{ position: 'relative', width: '100%', height: '100%' }}>
+                <img src={img.src} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '8px' }} alt={`Scanned screenshot ${idx + 1}`} />
+                <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} viewBox={`0 0 ${img.width} ${img.height}`} preserveAspectRatio="xMidYMid meet">
                   {img.rects.map((rect, i) => (
                     <rect key={i} x={rect.x} y={rect.y} width={rect.width} height={rect.height} fill="none" stroke="#00ff00" strokeWidth="2" />
                   ))}
@@ -683,7 +731,7 @@ export default function ScannerApp() {
                 color: 'white', borderRadius: '8px', cursor: 'pointer'
               }}
             >
-              Scan Another Screenshot
+              {clearScreenshotTranslations[selectedLang] || clearScreenshotTranslations['en-US']}
             </button>
           )}
         </div>
