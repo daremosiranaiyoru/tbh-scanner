@@ -49,6 +49,7 @@ export default function ScannerApp() {
   
   const canvasRef = useRef(null);
   const hiddenCanvasRef = useRef(null);
+  const adEndTimeRef = useRef(null);
 
   useEffect(() => {
     // Wait for window.cv to be available, then load database
@@ -137,17 +138,24 @@ export default function ScannerApp() {
 
   useEffect(() => {
     let timer;
-    if (isShowingAd && adCountdown > 0) {
+    if (isShowingAd) {
       timer = setInterval(() => {
-        setAdCountdown(prev => prev - 1);
-      }, 1000);
-    } else if (isShowingAd && adCountdown === 0) {
-      setIsShowingAd(false);
-      setResults(pendingResults);
-      setPendingResults([]);
+        if (!adEndTimeRef.current) return;
+        
+        const remaining = Math.ceil((adEndTimeRef.current - Date.now()) / 1000);
+        if (remaining <= 0) {
+          setIsShowingAd(false);
+          setResults(pendingResults);
+          setPendingResults([]);
+          setIsScanning(false);
+          clearInterval(timer);
+        } else {
+          setAdCountdown(remaining);
+        }
+      }, 100);
     }
     return () => clearInterval(timer);
-  }, [isShowingAd, adCountdown, pendingResults]);
+  }, [isShowingAd, pendingResults]);
 
   const fetchPrices = async () => {
     try {
@@ -161,7 +169,14 @@ export default function ScannerApp() {
   };
 
   const processImage = async (file) => {
-    setIsScanning(true);
+    if (ENABLE_AD_TEST) {
+      setIsShowingAd(true);
+      setAdCountdown(5);
+      adEndTimeRef.current = Date.now() + 5000;
+      setIsScanning(true);
+    } else {
+      setIsScanning(true);
+    }
     setResults([]);
     
     // If engine is not ready, wait for it
@@ -186,8 +201,8 @@ export default function ScannerApp() {
     hCtx.drawImage(img, 0, 0);
     
     // Scan!
-    // Give UI a moment to update to scanning state before blocking the main thread
-    await new Promise(r => setTimeout(r, 50)); 
+    // Give UI a moment to update to scanning/ad state before blocking the main thread
+    await new Promise(r => setTimeout(r, 100)); 
     
     const scanData = scanIcons(hiddenCanvas);
     
@@ -218,9 +233,7 @@ export default function ScannerApp() {
     
     if (ENABLE_AD_TEST) {
       setPendingResults(displayResults);
-      setIsShowingAd(true);
-      setAdCountdown(5);
-      setIsScanning(false);
+      // setIsScanning(false) will be called when the ad timer hits 0
     } else {
       setResults(displayResults);
       setIsScanning(false);
