@@ -82,6 +82,7 @@ export default function ScannerApp() {
   const [isScanning, setIsScanning] = useState(false);
   const [isEngineReady, setIsEngineReady] = useState(false);
   const [results, setResults] = useState([]);
+  const [previewImages, setPreviewImages] = useState([]);
   const [dragActive, setDragActive] = useState(false);
   const [prices, setPrices] = useState(null);
   const [rates, setRates] = useState(null);
@@ -108,7 +109,7 @@ export default function ScannerApp() {
   const [editRarity, setEditRarity] = useState('UNKNOWN');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
-  const canvasRef = useRef(null);
+
   const hiddenCanvasRef = useRef(null);
 
   useEffect(() => {
@@ -266,33 +267,21 @@ export default function ScannerApp() {
     e.stopPropagation();
     setDragActive(false);
     
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      processImage(e.dataTransfer.files[0]);
+    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+      const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/')).slice(0, 8);
+      if (files.length > 0) {
+        const shouldAppend = results.length > 0;
+        processImages(files, shouldAppend);
+      }
     }
   };
   
   const handleFileSelect = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      processImage(e.target.files[0]);
+    if (e.target.files && e.target.files.length > 0) {
+      const files = Array.from(e.target.files).filter(f => f.type.startsWith('image/')).slice(0, 8);
+      if (files.length > 0) processImages(files);
     }
   };
-
-  useEffect(() => {
-    // Draw rects on the visible canvas when results are available and scanning is finished
-    if (canvasRef.current && results.length > 0 && !isScanning) {
-      const ctx = canvasRef.current.getContext('2d');
-      results.forEach(match => {
-        if (match.rect) {
-          ctx.strokeStyle = '#00ff00';
-          ctx.lineWidth = 2;
-          ctx.strokeRect(match.rect.x, match.rect.y, match.rect.width, match.rect.height);
-          ctx.fillStyle = '#00ff00';
-          ctx.font = '14px sans-serif';
-          ctx.fillText(`${match.matchRate.toFixed(1)}%`, match.rect.x + 2, match.rect.y + 14);
-        }
-      });
-    }
-  }, [results, isScanning]);
 
   const fetchPrices = async () => {
     try {
@@ -305,58 +294,80 @@ export default function ScannerApp() {
     }
   };
 
-  const processImage = async (file) => {
+  const processImages = async (files, append = false) => {
     setIsScanning(true);
-    setResults([]);
+    if (!append) {
+      setResults([]);
+    }
     
     // If engine is not ready, wait for it
     if (!window.isDatabaseLoaded) {
-      showToast("エンジンの起動とデータベースの構築を待機しています...");
+      showToast("エンジンの起動とデータベースの構築を待っています...");
       while (!window.isDatabaseLoaded) {
         await new Promise(r => setTimeout(r, 200));
       }
     }
     
-    const imgUrl = URL.createObjectURL(file);
-    const img = new Image();
-    img.src = imgUrl;
+    // 1. Pre-load all images and show them on screen immediately without rects
+    const loadedImages = await Promise.all(files.map(async (file) => {
+      const imgUrl = URL.createObjectURL(file);
+      const img = new Image();
+      img.src = imgUrl;
+      await new Promise(r => img.onload = r);
+      return { imgUrl, img, width: img.width, height: img.height, rects: [] };
+    }));
     
-    await new Promise(r => img.onload = r);
+    // Initialize preview state so the images appear on screen before scanning starts
+    let currentPreviewImages = append ? [...previewImages] : [];
+    let newPreviewImages = loadedImages.map(d => ({
+      src: d.imgUrl,
+      width: d.width,
+      height: d.height,
+      rects: []
+    }));
+    currentPreviewImages = [...currentPreviewImages, ...newPreviewImages];
+    setPreviewImages(currentPreviewImages);
     
-    // Draw to hidden canvas for scanning
-    const hiddenCanvas = hiddenCanvasRef.current;
-    hiddenCanvas.width = img.width;
-    hiddenCanvas.height = img.height;
-    const hCtx = hiddenCanvas.getContext('2d');
-    hCtx.drawImage(img, 0, 0);
+    // Give UI a moment to render the images
+    await new Promise(r => setTimeout(r, 100));
     
-    // Draw to visible canvas immediately so user sees it during Ad screen
-    const canvas = canvasRef.current;
-    canvas.width = img.width;
-    canvas.height = img.height;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(img, 0, 0);
+    let allResults = append ? [...results] : [];
+    const offset = append ? (previewImages.length) : 0;
+
+    // 2. Scan images one by one and update UI progressively
+    for (let i = 0; i < loadedImages.length; i++) {
+      const { img } = loadedImages[i];
+      
+      // Draw to hidden canvas for scanning
+      const hiddenCanvas = hiddenCanvasRef.current;
+      hiddenCanvas.width = img.width;
+      hiddenCanvas.height = img.height;
+      const hCtx = hiddenCanvas.getContext('2d');
+      hCtx.drawImage(img, 0, 0);
+      
+      // Let UI breathe
+      await new Promise(r => setTimeout(r, 50)); 
+      
+      const scanData = scanIcons(hiddenCanvas);
+      
+      const fileDisplayResults = [];
+      
+      // Collect rects
+      scanData.results.forEach(res => {
+        if (res.match) {
+          res.match.rect = res.rect; // Store rect for drawing later
+          fileDisplayResults.push(res.match);
+        }
+      });
+      
+      allResults = [...allResults, ...fileDisplayResults];
+      
+      // Progressively update the preview with the green rects for this image
+      currentPreviewImages[offset + i].rects = fileDisplayResults.map(r => ({ ...r.rect, matchRate: r.matchRate }));
+      setPreviewImages([...currentPreviewImages]); // Trigger re-render
+    }
     
-    // Scan!
-    // Give UI a moment to update to scanning/ad state before blocking the main thread
-    await new Promise(r => setTimeout(r, 100)); 
-    
-    const scanData = scanIcons(hiddenCanvas);
-    
-    // Clear and redraw original image before drawing rects
-    ctx.drawImage(img, 0, 0);
-    
-    const displayResults = [];
-    
-    // Collect rects
-    scanData.results.forEach(res => {
-      if (res.match) {
-        res.match.rect = res.rect; // Store rect for drawing later
-        displayResults.push(res.match);
-      }
-    });
-    
-    setResults(displayResults);
+    setResults(allResults);
     setIsScanning(false);
     
     // Fetch prices in background
@@ -373,31 +384,17 @@ export default function ScannerApp() {
     const text = `💰 私のTaskbar Heroインベントリ総資産は ${totalString} でした！\nあなたのインベントリもスキャンしてみよう！👇\nhttps://tbh-scanner.vercel.app\n\n#TaskbarHero #TBHScanner`;
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank', 'width=600,height=600');
-
-    // 2. Copy image to clipboard using a robust Promise approach
-    try {
-      const canvas = canvasRef.current;
-      if (canvas) {
-        // Use toDataURL to avoid callback context loss, then convert to blob
-        const dataUrl = canvas.toDataURL("image/png");
-        const res = await fetch(dataUrl);
-        const blob = await res.blob();
-        
-        const item = new ClipboardItem({ "image/png": blob });
-        await navigator.clipboard.write([item]);
-        showToast("画像をコピーしました！Xの画面で貼り付け(Ctrl+V)してください！");
-      }
-    } catch (err) {
-      console.error("Clipboard copy failed:", err);
-      // Fallback message if browser blocks clipboard access
-      showToast("画像の自動コピーがブロックされました。ブラウザの権限設定をご確認ください。");
-    }
   };
 
-  const processImageRef = useRef(processImage);
+  const processImagesRef = useRef(processImages);
   useEffect(() => {
-    processImageRef.current = processImage;
-  }, [processImage]);
+    processImagesRef.current = processImages;
+  }, [processImages]);
+
+  const resultsRef = useRef(results);
+  useEffect(() => {
+    resultsRef.current = results;
+  }, [results]);
 
   useEffect(() => {
     const handlePaste = (e) => {
@@ -406,16 +403,20 @@ export default function ScannerApp() {
       
       const items = e.clipboardData?.items;
       if (!items) return;
+      
+      const imageFiles = [];
       for (let i = 0; i < items.length; i++) {
         if (items[i].type.indexOf('image') !== -1) {
           const file = items[i].getAsFile();
-          if (file) {
-            e.preventDefault();
-            if (processImageRef.current) {
-              processImageRef.current(file);
-            }
-            break;
-          }
+          if (file) imageFiles.push(file);
+        }
+      }
+      
+      if (imageFiles.length > 0) {
+        e.preventDefault();
+        if (processImagesRef.current) {
+          const shouldAppend = resultsRef.current && resultsRef.current.length > 0;
+          processImagesRef.current(imageFiles.slice(0, 8), shouldAppend);
         }
       }
     };
@@ -577,6 +578,21 @@ export default function ScannerApp() {
     'vi-VN': 'Vui lòng chờ trong giây lát'
   };
 
+  const clearScreenshotTranslations = {
+    'en-US': 'Clear Screenshot',
+    'ja-JP': '画像をクリア',
+    'zh-Hans': '清除截图',
+    'zh-Hant': '清除截圖',
+    'ko-KR': '스크린샷 지우기',
+    'ru-RU': 'Очистить скриншот',
+    'es-ES': 'Borrar captura',
+    'fr-FR': 'Effacer la capture',
+    'de-DE': 'Screenshot löschen',
+    'pt-BR': 'Limpar captura',
+    'tr-TR': 'Ekran Görüntüsünü Temizle',
+    'vi-VN': 'Xóa ảnh chụp màn hình'
+  };
+
   const commentsTitleTranslations = {
     'ja-JP': '💬 コメント欄', 'en-US': '💬 Comments Section', 'zh-Hans': '💬 评论区',
     'zh-Hant': '💬 評論區', 'ko-KR': '💬 댓글 섹션', 'ru-RU': '💬 Раздел комментариев',
@@ -643,15 +659,18 @@ export default function ScannerApp() {
 
       <main className={styles.content}>
         {/* Left Side: Upload & Canvas */}
-        <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isScanning) ? '600px' : 'auto' }}>
+        <div 
+          className={`glass-panel ${dragActive ? styles.dragActive : ''}`} 
+          style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isScanning) ? '600px' : 'auto', transition: 'border 0.3s' }}
+          onDragEnter={handleDrag}
+          onDragLeave={handleDrag}
+          onDragOver={handleDrag}
+          onDrop={handleDrop}
+        >
           <div 
-            className={`${styles.uploadZone} ${dragActive ? styles.dragActive : ''}`}
-            onDragEnter={handleDrag}
-            onDragLeave={handleDrag}
-            onDragOver={handleDrag}
-            onDrop={handleDrop}
+            className={styles.uploadZone}
             onClick={() => document.getElementById('fileInput').click()}
-            style={{ display: (results.length > 0 || isScanning) ? 'none' : 'flex' }}
+            style={{ display: (results.length > 0 || isScanning) ? 'none' : 'flex', pointerEvents: dragActive ? 'none' : 'auto' }}
           >
             <div className={styles.uploadIcon}>📥</div>
             <h3>Drag & Drop or Paste (Ctrl+V) Screenshot</h3>
@@ -661,28 +680,58 @@ export default function ScannerApp() {
               id="fileInput" 
               style={{ display: 'none' }} 
               accept="image/png, image/jpeg"
+              multiple
               onChange={handleFileSelect} 
             />
           </div>
 
           <div 
             className={styles.canvasContainer} 
-            style={{ display: (results.length > 0 || isScanning) ? 'block' : 'none' }}
+            style={{ 
+              display: (previewImages.length > 0 || isScanning) ? 'grid' : 'none',
+              gridTemplateColumns: `repeat(${previewImages.length === 1 ? 1 : previewImages.length <= 4 ? 2 : previewImages.length <= 6 ? 3 : 4}, minmax(0, 1fr))`,
+              gridTemplateRows: `repeat(${previewImages.length <= 2 ? 1 : 2}, minmax(0, 1fr))`,
+              gap: '8px',
+              padding: '8px',
+              boxSizing: 'border-box'
+            }}
           >
-            <canvas ref={canvasRef}></canvas>
+            {previewImages.map((img, idx) => (
+              <div key={idx} style={{ position: 'relative', width: '100%', height: '100%' }}>
+                <img src={img.src} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '8px' }} alt={`Scanned screenshot ${idx + 1}`} />
+                <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} viewBox={`0 0 ${img.width} ${img.height}`} preserveAspectRatio="xMidYMid meet">
+                  {img.rects.map((rect, i) => (
+                    <rect key={i} x={rect.x} y={rect.y} width={rect.width} height={rect.height} fill="none" stroke="#00ff00" strokeWidth="2" />
+                  ))}
+                  {img.rects.map((rect, i) => (
+                     <text key={`text-${i}`} x={rect.x + 2} y={rect.y + 14} fill="#00ff00" fontSize="14" fontFamily="sans-serif">
+                       {rect.matchRate.toFixed(1)}%
+                     </text>
+                  ))}
+                </svg>
+              </div>
+            ))}
+            {isScanning && previewImages.length === 0 && (
+              <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-secondary)' }}>
+                Scanning...
+              </div>
+            )}
           </div>
           <canvas ref={hiddenCanvasRef} style={{ display: 'none' }}></canvas>
           
           {results.length > 0 && (
             <button 
-              onClick={() => setResults([])} 
+              onClick={() => {
+                setResults([]);
+                setPreviewImages([]);
+              }} 
               style={{
                 marginTop: '16px', width: '100%', padding: '12px', 
                 background: 'var(--panel-bg)', border: '1px solid var(--panel-border)',
                 color: 'white', borderRadius: '8px', cursor: 'pointer'
               }}
             >
-              Scan Another Screenshot
+              {clearScreenshotTranslations[selectedLang] || clearScreenshotTranslations['en-US']}
             </button>
           )}
         </div>
