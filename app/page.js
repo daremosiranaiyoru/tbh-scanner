@@ -596,23 +596,25 @@ export default function ScannerApp() {
               {(adRemainTranslations[selectedLang] || adRemainTranslations['en-US'])(adCountdown)}
             </div>
             
-            {/* Ninja AdMax Placeholder */}
+            {/* Ninja AdMax Iframe */}
             <div style={{ 
               width: '100%', 
               maxWidth: '90%', 
               flex: 1, 
               maxHeight: '400px', 
-              background: 'rgba(255,255,255,0.05)', 
-              border: '2px dashed rgba(255,255,255,0.2)',
+              background: 'rgba(0,0,0,0.2)', 
               display: 'flex',
-              flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
               borderRadius: '12px',
-              color: 'var(--text-secondary)'
+              overflow: 'hidden'
             }}>
-              <span style={{ fontSize: '1.2rem', marginBottom: '8px' }}>Ninja AdMax / Advertisement</span>
-              <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>(Placeholder)</span>
+              <iframe 
+                src="/ad.html" 
+                style={{ width: '300px', height: '250px', border: 'none', overflow: 'hidden' }}
+                scrolling="no"
+                title="Advertisement"
+              />
             </div>
           </div>
         ) : (
