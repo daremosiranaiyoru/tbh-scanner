@@ -609,18 +609,18 @@ export default function ScannerApp() {
   };
 
   const uploadDescTranslations = {
-    'en-US': 'or click to browse',
-    'ja-JP': 'またはクリックしてファイルを選択',
-    'zh-Hans': '或点击浏览文件',
-    'zh-Hant': '或點擊瀏覽檔案',
-    'ko-KR': '또는 클릭하여 파일 선택',
-    'ru-RU': 'или нажмите, чтобы выбрать файл',
-    'es-ES': 'o haz clic para buscar',
-    'fr-FR': 'ou cliquez pour parcourir',
-    'de-DE': 'oder klicken, um zu durchsuchen',
-    'pt-BR': 'ou clique para procurar',
-    'tr-TR': 'veya göz atmak için tıklayın',
-    'vi-VN': 'hoặc nhấp để duyệt'
+    'en-US': 'Up to 8 images can be appraised simultaneously',
+    'ja-JP': '8枚まで同時に鑑定可能',
+    'zh-Hans': '最多可同时鉴定8张图片',
+    'zh-Hant': '最多可同時鑑定8張圖片',
+    'ko-KR': '최대 8장까지 동시에 감정 가능',
+    'ru-RU': 'Возможна одновременная оценка до 8 изображений',
+    'es-ES': 'Se pueden evaluar hasta 8 imágenes simultáneamente',
+    'fr-FR': 'Jusqu\'à 8 images peuvent être évaluées simultanément',
+    'de-DE': 'Bis zu 8 Bilder können gleichzeitig bewertet werden',
+    'pt-BR': 'Até 8 imagens podem ser avaliadas simultaneamente',
+    'tr-TR': 'Aynı anda 8 görüntüye kadar değerlendirme yapılabilir',
+    'vi-VN': 'Có thể đánh giá đồng thời tối đa 8 hình ảnh'
   };
 
   const commentsTitleTranslations = {
