@@ -112,10 +112,21 @@ export default function ScannerApp() {
   const hiddenCanvasRef = useRef(null);
 
   useEffect(() => {
-    // Load admin secret if available
+    // Load admin secret and preferred language if available
     if (typeof window !== 'undefined') {
       setIsAdminSecret(localStorage.getItem('adminSecret'));
+      const savedLang = localStorage.getItem('preferredLang');
+      if (savedLang) {
+        setSelectedLang(savedLang);
+      }
     }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('preferredLang', selectedLang);
+    }
+  }, [selectedLang]);
 
     // Wait for window.cv to be available, then load database
     const checkCv = setInterval(() => {
