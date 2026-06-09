@@ -711,9 +711,21 @@ export default function ScannerApp() {
                       .map((item, originalIdx) => ({ item, originalIdx }))
                       .sort((a, b) => {
                         if (!isSortedByPrice) return 0;
-                        const priceA = prices && prices[a.item.name] ? prices[a.item.name].price : 0;
-                        const priceB = prices && prices[b.item.name] ? prices[b.item.name].price : 0;
-                        return priceB - priceA;
+                        const getPrice = (item) => {
+                          if (!prices) return 0;
+                          const names = itemNames[item.name] || {};
+                          const englishName = names['en-US'] || item.name.replace('.png', '');
+                          if (prices[englishName]) return prices[englishName].price;
+                          if (item.rarity && item.rarity !== 'UNKNOWN') {
+                            const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
+                            const prefix = `${englishName} (${rarityStr})`;
+                            if (prices[`${prefix} A`]) return prices[`${prefix} A`].price;
+                            const matchedKey = Object.keys(prices).find(k => k.startsWith(prefix));
+                            if (matchedKey) return prices[matchedKey].price;
+                          }
+                          return 0;
+                        };
+                        return getPrice(b.item) - getPrice(a.item);
                       })
                       .map(({ item, originalIdx: idx }) => {
                       if (editingIndex === idx) {
