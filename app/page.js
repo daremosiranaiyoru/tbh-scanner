@@ -427,6 +427,36 @@ export default function ScannerApp() {
     'vi-VN': 'Định giá ngay lập tức từ ảnh chụp màn hình kho đồ của bạn.'
   };
 
+  const adCalcTranslations = {
+    'ja-JP': '市場価格を計算中...',
+    'en-US': 'Calculating market prices...',
+    'zh-Hans': '正在计算市场价格...',
+    'zh-Hant': '正在計算市場價格...',
+    'ko-KR': '시장 가격 계산 중...',
+    'ru-RU': 'Расчет рыночных цен...',
+    'es-ES': 'Calculando precios de mercado...',
+    'fr-FR': 'Calcul des prix du marché...',
+    'de-DE': 'Marktpreise werden berechnet...',
+    'pt-BR': 'Calculando preços de mercado...',
+    'tr-TR': 'Piyasa fiyatları hesaplanıyor...',
+    'vi-VN': 'Đang tính giá thị trường...'
+  };
+
+  const adRemainTranslations = {
+    'ja-JP': (s) => `残り ${s} 秒`,
+    'en-US': (s) => `${s} seconds remaining`,
+    'zh-Hans': (s) => `剩余 ${s} 秒`,
+    'zh-Hant': (s) => `剩餘 ${s} 秒`,
+    'ko-KR': (s) => `${s}초 남음`,
+    'ru-RU': (s) => `Осталось ${s} сек.`,
+    'es-ES': (s) => `${s} segundos restantes`,
+    'fr-FR': (s) => `${s} secondes restantes`,
+    'de-DE': (s) => `Noch ${s} Sekunden`,
+    'pt-BR': (s) => `Restam ${s} segundos`,
+    'tr-TR': (s) => `Kalan süre ${s} saniye`,
+    'vi-VN': (s) => `Còn lại ${s} giây`
+  };
+
   return (
     <>
       {/* Full Width Edge-to-Edge Announcement Banner */}
@@ -536,16 +566,19 @@ export default function ScannerApp() {
         {/* Right Side: Results or Ad Screen */}
         {isShowingAd ? (
           <div className={`glass-panel ${styles.resultsPanel}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '20px' }}>
-            <h2 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#fff' }}>市場価格を計算中...</h2>
-            <div style={{ fontSize: '3rem', fontWeight: 'bold', color: '#2196f3', marginBottom: '30px' }}>
-              残り {adCountdown} 秒
+            <h2 style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'var(--text-secondary)' }}>
+              {adCalcTranslations[selectedLang] || adCalcTranslations['en-US']}
+            </h2>
+            <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2196f3', marginBottom: '15px' }}>
+              {(adRemainTranslations[selectedLang] || adRemainTranslations['en-US'])(adCountdown)}
             </div>
             
             {/* Ninja AdMax Placeholder */}
             <div style={{ 
               width: '100%', 
-              maxWidth: '300px', 
-              height: '250px', 
+              maxWidth: '90%', 
+              flex: 1, 
+              maxHeight: '400px', 
               background: 'rgba(255,255,255,0.05)', 
               border: '2px dashed rgba(255,255,255,0.2)',
               display: 'flex',
@@ -555,8 +588,8 @@ export default function ScannerApp() {
               borderRadius: '12px',
               color: 'var(--text-secondary)'
             }}>
-              <span style={{ fontSize: '1.2rem', marginBottom: '8px' }}>忍者AdMax 広告枠</span>
-              <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>（プレースホルダー）</span>
+              <span style={{ fontSize: '1.2rem', marginBottom: '8px' }}>Ninja AdMax / Advertisement</span>
+              <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>(Placeholder)</span>
             </div>
           </div>
         ) : (
