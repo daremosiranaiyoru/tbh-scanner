@@ -593,6 +593,36 @@ export default function ScannerApp() {
     'vi-VN': 'Xóa ảnh chụp màn hình'
   };
 
+  const uploadTitleTranslations = {
+    'en-US': 'Drag & Drop or Paste (Ctrl+V) Screenshot',
+    'ja-JP': 'スクリーンショットをドラッグ＆ドロップまたはペースト (Ctrl+V)',
+    'zh-Hans': '拖放或粘贴 (Ctrl+V) 截图',
+    'zh-Hant': '拖放或貼上 (Ctrl+V) 截圖',
+    'ko-KR': '스크린샷을 드래그 앤 드롭하거나 붙여넣기 (Ctrl+V)',
+    'ru-RU': 'Перетащите или вставьте (Ctrl+V) скриншот',
+    'es-ES': 'Arrastra y suelta o pega (Ctrl+V) la captura de pantalla',
+    'fr-FR': 'Glissez-déposez ou collez (Ctrl+V) la capture d\'écran',
+    'de-DE': 'Screenshot per Drag & Drop oder Einfügen (Strg+V) hinzufügen',
+    'pt-BR': 'Arraste e solte ou cole (Ctrl+V) a captura de tela',
+    'tr-TR': 'Ekran görüntüsünü Sürükleyip Bırakın veya Yapıştırın (Ctrl+V)',
+    'vi-VN': 'Kéo & Thả hoặc Dán (Ctrl+V) ảnh chụp màn hình'
+  };
+
+  const uploadDescTranslations = {
+    'en-US': 'or click to browse',
+    'ja-JP': 'またはクリックしてファイルを選択',
+    'zh-Hans': '或点击浏览文件',
+    'zh-Hant': '或點擊瀏覽檔案',
+    'ko-KR': '또는 클릭하여 파일 선택',
+    'ru-RU': 'или нажмите, чтобы выбрать файл',
+    'es-ES': 'o haz clic para buscar',
+    'fr-FR': 'ou cliquez pour parcourir',
+    'de-DE': 'oder klicken, um zu durchsuchen',
+    'pt-BR': 'ou clique para procurar',
+    'tr-TR': 'veya göz atmak için tıklayın',
+    'vi-VN': 'hoặc nhấp để duyệt'
+  };
+
   const commentsTitleTranslations = {
     'ja-JP': '💬 コメント欄', 'en-US': '💬 Comments Section', 'zh-Hans': '💬 评论区',
     'zh-Hant': '💬 評論區', 'ko-KR': '💬 댓글 섹션', 'ru-RU': '💬 Раздел комментариев',
@@ -673,8 +703,10 @@ export default function ScannerApp() {
             style={{ display: (results.length > 0 || isScanning) ? 'none' : 'flex', pointerEvents: dragActive ? 'none' : 'auto' }}
           >
             <div className={styles.uploadIcon}>📥</div>
-            <h3>Drag & Drop or Paste (Ctrl+V) Screenshot</h3>
-            <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>or click to browse</p>
+            <h3>{uploadTitleTranslations[selectedLang] || uploadTitleTranslations['en-US']}</h3>
+            <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>
+              {uploadDescTranslations[selectedLang] || uploadDescTranslations['en-US']}
+            </p>
             <input 
               type="file" 
               id="fileInput" 
