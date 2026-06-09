@@ -504,18 +504,18 @@ export default function ScannerApp() {
   const getRarityLabel = (rarity) => rarityTranslations[rarity]?.[selectedLang] || rarityTranslations[rarity]?.['en-US'] || rarity;
 
   const announcementTranslations = {
-    'en-US': '⚠️ Notice: Image recognition accuracy has been significantly improved! If you find bugs or have feature requests, please let us know in the comments below.\nThere is a time lag in the displayed prices. For the latest information, please click the "🛒 Steam Market" button.',
-    'ja-JP': '⚠️ お知らせ: 画像認識の精度を大幅に向上しました！バグや追加してほしい機能などがある場合は下のコメント欄にお願いします。\n表示される値段はタイムラグがあるので最新情報は「🛒 Steam Market」と書かれたボタンからどうぞ。',
-    'zh-Hans': '⚠️ 提示: 图像识别准确率已大幅提升！如果您发现错误或有功能需求，请在下方评论区留言。\n显示的价格存在时间延迟。请点击「🛒 Steam Market」按钮查看最新信息。',
-    'zh-Hant': '⚠️ 提示: 圖像識別準確率已大幅提升！如果您發現錯誤或有功能需求，請在下方評論區留言。\n顯示的價格存在時間延遲。請點擊「🛒 Steam Market」按鈕查看最新資訊。',
-    'ko-KR': '⚠️ 공지: 이미지 인식 정확도가 크게 향상되었습니다! 버그나 추가를 원하는 기능이 있다면 아래 댓글란에 남겨주세요.\n표시된 가격에는 타임래그가 있습니다. 최신 정보는 "🛒 Steam Market" 버튼을 통해 확인해 주세요.',
-    'ru-RU': '⚠️ Внимание: Точность распознавания изображений значительно улучшена! Если вы нашли ошибки или у вас есть пожелания по функционалу, пожалуйста, напишите в комментариях ниже.\nОтображаемые цены имеют задержку во времени. Актуальную информацию смотрите по кнопке "🛒 Steam Market".',
-    'es-ES': '⚠️ Aviso: ¡La precisión del reconocimiento de imágenes ha mejorado significativamente! Si encuentras errores o tienes sugerencias de nuevas funciones, por favor escríbelo en los comentarios abajo.\nHay un desfase en los precios mostrados. Para ver la información más reciente, haz clic en el botón "🛒 Steam Market".',
-    'fr-FR': '⚠️ Avis : La précision de la reconnaissance d\'image a été considérablement améliorée ! Si vous trouvez des bugs ou avez des suggestions de fonctionnalités, veuillez l\'indiquer dans les commentaires ci-dessous.\nIl y a un décalage dans les prix affichés. Pour les informations les plus récentes, veuillez cliquer sur le bouton "🛒 Steam Market".',
-    'de-DE': '⚠️ Hinweis: Die Genauigkeit der Bilderkennung wurde deutlich verbessert! Wenn Sie Fehler finden oder Funktionswünsche haben, schreiben Sie diese bitte unten in die Kommentare.\nEs gibt eine Zeitverzögerung bei den angezeigten Preisen. Für aktuelle Informationen klicken Sie bitte auf "🛒 Steam Market".',
-    'pt-BR': '⚠️ Aviso: A precisão do reconhecimento de imagem foi significativamente melhorada! Se você encontrar bugs ou tiver sugestões de recursos, por favor escreva nos comentários abaixo.\nHá um atraso nos preços exibidos. Para informações atualizadas, clique no botão "🛒 Steam Market".',
-    'tr-TR': '⚠️ Uyarı: Görüntü tanıma doğruluğu önemli ölçüde iyileştirildi! Hatalar bulursanız veya özellik istekleriniz varsa, lütfen aşağıdaki yorumlar bölümüne yazın.\nGörüntülenen fiyatlarda bir zaman gecikmesi vardır. En güncel bilgiler için lütfen "🛒 Steam Market" düğmesine tıklayın.',
-    'vi-VN': '⚠️ Thông báo: Độ chính xác của nhận dạng hình ảnh đã được cải thiện đáng kể! Nếu bạn tìm thấy lỗi hoặc có yêu cầu tính năng, vui lòng viết vào phần bình luận bên dưới.\nCó độ trễ về giá hiển thị. Để xem thông tin mới nhất, vui lòng nhấp vào nút "🛒 Steam Market".'
+    'en-US': 'Multi-image upload is now supported! You can appraise up to 8 images at once!\nYou can also add more images by dragging and dropping or copy-pasting without pressing the Clear Screenshot button!',
+    'ja-JP': '複数画像のアップロードに対応しました！一気に8枚まで鑑定可能です！\n画像をクリアボタンを押さずに追加でドラッグアンドドロップかコピーペーストを行ってもOKです！',
+    'zh-Hans': '现已支持多图上传！一次最多可鉴定8张图片！\n您无需点击“清除截图”按钮，直接通过拖拽或复制粘贴即可追加上传！',
+    'zh-Hant': '現已支援多圖上傳！一次最多可鑑定8張圖片！\n您無需點擊「清除截圖」按鈕，直接透過拖曳或複製貼上即可追加上傳！',
+    'ko-KR': '다중 이미지 업로드를 지원합니다! 한 번에 최대 8장까지 감정 가능합니다!\n스크린샷 지우기 버튼을 누르지 않고도 드래그 앤 드롭이나 복사-붙여넣기로 이미지를 추가할 수 있습니다!',
+    'ru-RU': 'Теперь поддерживается загрузка нескольких изображений! Вы можете оценить до 8 изображений за раз!\nВы также можете добавлять дополнительные изображения путем перетаскивания или копирования и вставки без нажатия кнопки Очистить скриншот!',
+    'es-ES': '¡Ahora se admite la carga de múltiples imágenes! ¡Puedes evaluar hasta 8 imágenes a la vez!\n¡También puedes agregar más imágenes arrastrando y soltando o copiando y pegando sin presionar el botón Borrar captura!',
+    'fr-FR': 'Le téléchargement de plusieurs images est désormais pris en charge ! Vous pouvez évaluer jusqu\'8 images à la fois !\nVous pouvez également ajouter d\'autres images par glisser-déposer ou copier-coller sans appuyer sur le bouton Effacer la capture !',
+    'de-DE': 'Der Upload mehrerer Bilder wird jetzt unterstützt! Sie können bis zu 8 Bilder auf einmal bewerten!\nSie können auch weitere Bilder per Drag & Drop oder durch Kopieren und Einfügen hinzufügen, ohne die Schaltfläche Screenshot löschen drücken zu müssen!',
+    'pt-BR': 'O upload de múltiplas imagens agora é suportado! Você pode avaliar até 8 imagens de uma vez!\nVocê também pode adicionar mais imagens arrastando e soltando ou copiando e colando sem pressionar o botão Limpar captura!',
+    'tr-TR': 'Çoklu görüntü yükleme artık destekleniyor! Aynı anda 8 görüntüye kadar değerlendirme yapabilirsiniz!\nEkran Görüntüsünü Temizle düğmesine basmadan sürükleyip bırakarak veya kopyalayıp yapıştırarak daha fazla görüntü ekleyebilirsiniz!',
+    'vi-VN': 'Tính năng tải lên nhiều hình ảnh hiện đã được hỗ trợ! Bạn có thể đánh giá tối đa 8 hình ảnh cùng một lúc!\nBạn cũng có thể thêm hình ảnh bằng cách kéo và thả hoặc sao chép và dán mà không cần nhấn nút Xóa ảnh chụp màn hình!'
   };
 
   const titleTranslations = {
