@@ -213,11 +213,7 @@ export default function ScannerApp() {
     
     const scanData = scanIcons(hiddenCanvas);
     
-    // Draw results on visible canvas
-    const canvas = canvasRef.current;
-    canvas.width = img.width;
-    canvas.height = img.height;
-    const ctx = canvas.getContext('2d');
+    // Clear and redraw original image before drawing rects
     ctx.drawImage(img, 0, 0);
     
     const displayResults = [];
