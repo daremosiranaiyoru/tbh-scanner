@@ -82,7 +82,6 @@ export default function ScannerApp() {
   const [isScanning, setIsScanning] = useState(false);
   const [isEngineReady, setIsEngineReady] = useState(false);
   const [results, setResults] = useState([]);
-  const [previewImages, setPreviewImages] = useState([]);
   const [dragActive, setDragActive] = useState(false);
   const [prices, setPrices] = useState(null);
   const [rates, setRates] = useState(null);
@@ -109,7 +108,7 @@ export default function ScannerApp() {
   const [editRarity, setEditRarity] = useState('UNKNOWN');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
-
+  const canvasRef = useRef(null);
   const hiddenCanvasRef = useRef(null);
 
   useEffect(() => {
@@ -267,18 +266,33 @@ export default function ScannerApp() {
     e.stopPropagation();
     setDragActive(false);
     
-    if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
-      const files = Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/')).slice(0, 8);
-      if (files.length > 0) processImages(files);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      processImage(e.dataTransfer.files[0]);
     }
   };
   
   const handleFileSelect = (e) => {
-    if (e.target.files && e.target.files.length > 0) {
-      const files = Array.from(e.target.files).filter(f => f.type.startsWith('image/')).slice(0, 8);
-      if (files.length > 0) processImages(files);
+    if (e.target.files && e.target.files[0]) {
+      processImage(e.target.files[0]);
     }
   };
+
+  useEffect(() => {
+    // Draw rects on the visible canvas when results are available and scanning is finished
+    if (canvasRef.current && results.length > 0 && !isScanning) {
+      const ctx = canvasRef.current.getContext('2d');
+      results.forEach(match => {
+        if (match.rect) {
+          ctx.strokeStyle = '#00ff00';
+          ctx.lineWidth = 2;
+          ctx.strokeRect(match.rect.x, match.rect.y, match.rect.width, match.rect.height);
+          ctx.fillStyle = '#00ff00';
+          ctx.font = '14px sans-serif';
+          ctx.fillText(`${match.matchRate.toFixed(1)}%`, match.rect.x + 2, match.rect.y + 14);
+        }
+      });
+    }
+  }, [results, isScanning]);
 
   const fetchPrices = async () => {
     try {
@@ -291,62 +305,58 @@ export default function ScannerApp() {
     }
   };
 
-  const processImages = async (files) => {
+  const processImage = async (file) => {
     setIsScanning(true);
     setResults([]);
-    setPreviewImages([]);
     
     // If engine is not ready, wait for it
     if (!window.isDatabaseLoaded) {
-      showToast("エンジンの起動とデータベースの構築を待っています...");
+      showToast("エンジンの起動とデータベースの構築を待機しています...");
       while (!window.isDatabaseLoaded) {
         await new Promise(r => setTimeout(r, 200));
       }
     }
     
-    let allResults = [];
-    let newPreviewImages = [];
-
-    for (let file of files) {
-      const imgUrl = URL.createObjectURL(file);
-      const img = new Image();
-      img.src = imgUrl;
-      
-      await new Promise(r => img.onload = r);
-      
-      // Draw to hidden canvas for scanning
-      const hiddenCanvas = hiddenCanvasRef.current;
-      hiddenCanvas.width = img.width;
-      hiddenCanvas.height = img.height;
-      const hCtx = hiddenCanvas.getContext('2d');
-      hCtx.drawImage(img, 0, 0);
-      
-      // Give UI a moment
-      await new Promise(r => setTimeout(r, 50)); 
-      
-      const scanData = scanIcons(window.cv, hiddenCanvas);
-      
-      const fileDisplayResults = [];
-      
-      // Collect rects
-      scanData.results.forEach(res => {
-        if (res.match) {
-          res.match.rect = res.rect; // Store rect for drawing later
-          fileDisplayResults.push(res.match);
-        }
-      });
-      
-      allResults = [...allResults, ...fileDisplayResults];
-      newPreviewImages.push({
-        src: imgUrl,
-        width: img.width,
-        height: img.height,
-        rects: fileDisplayResults.map(r => ({ ...r.rect, matchRate: r.matchRate }))
-      });
-    }
+    const imgUrl = URL.createObjectURL(file);
+    const img = new Image();
+    img.src = imgUrl;
     
-    setResults(allResults);
-    setPreviewImages(newPreviewImages);
+    await new Promise(r => img.onload = r);
+    
+    // Draw to hidden canvas for scanning
+    const hiddenCanvas = hiddenCanvasRef.current;
+    hiddenCanvas.width = img.width;
+    hiddenCanvas.height = img.height;
+    const hCtx = hiddenCanvas.getContext('2d');
+    hCtx.drawImage(img, 0, 0);
+    
+    // Draw to visible canvas immediately so user sees it during Ad screen
+    const canvas = canvasRef.current;
+    canvas.width = img.width;
+    canvas.height = img.height;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    
+    // Scan!
+    // Give UI a moment to update to scanning/ad state before blocking the main thread
+    await new Promise(r => setTimeout(r, 100)); 
+    
+    const scanData = scanIcons(hiddenCanvas);
+    
+    // Clear and redraw original image before drawing rects
+    ctx.drawImage(img, 0, 0);
+    
+    const displayResults = [];
+    
+    // Collect rects
+    scanData.results.forEach(res => {
+      if (res.match) {
+        res.match.rect = res.rect; // Store rect for drawing later
+        displayResults.push(res.match);
+      }
+    });
+    
+    setResults(displayResults);
     setIsScanning(false);
     
     // Fetch prices in background
@@ -363,12 +373,31 @@ export default function ScannerApp() {
     const text = `💰 私のTaskbar Heroインベントリ総資産は ${totalString} でした！\nあなたのインベントリもスキャンしてみよう！👇\nhttps://tbh-scanner.vercel.app\n\n#TaskbarHero #TBHScanner`;
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank', 'width=600,height=600');
+
+    // 2. Copy image to clipboard using a robust Promise approach
+    try {
+      const canvas = canvasRef.current;
+      if (canvas) {
+        // Use toDataURL to avoid callback context loss, then convert to blob
+        const dataUrl = canvas.toDataURL("image/png");
+        const res = await fetch(dataUrl);
+        const blob = await res.blob();
+        
+        const item = new ClipboardItem({ "image/png": blob });
+        await navigator.clipboard.write([item]);
+        showToast("画像をコピーしました！Xの画面で貼り付け(Ctrl+V)してください！");
+      }
+    } catch (err) {
+      console.error("Clipboard copy failed:", err);
+      // Fallback message if browser blocks clipboard access
+      showToast("画像の自動コピーがブロックされました。ブラウザの権限設定をご確認ください。");
+    }
   };
 
-  const processImagesRef = useRef(processImages);
+  const processImageRef = useRef(processImage);
   useEffect(() => {
-    processImagesRef.current = processImages;
-  }, [processImages]);
+    processImageRef.current = processImage;
+  }, [processImage]);
 
   useEffect(() => {
     const handlePaste = (e) => {
@@ -377,19 +406,16 @@ export default function ScannerApp() {
       
       const items = e.clipboardData?.items;
       if (!items) return;
-      
-      const imageFiles = [];
       for (let i = 0; i < items.length; i++) {
         if (items[i].type.indexOf('image') !== -1) {
           const file = items[i].getAsFile();
-          if (file) imageFiles.push(file);
-        }
-      }
-      
-      if (imageFiles.length > 0) {
-        e.preventDefault();
-        if (processImagesRef.current) {
-          processImagesRef.current(imageFiles.slice(0, 8));
+          if (file) {
+            e.preventDefault();
+            if (processImageRef.current) {
+              processImageRef.current(file);
+            }
+            break;
+          }
         }
       }
     };
@@ -635,48 +661,21 @@ export default function ScannerApp() {
               id="fileInput" 
               style={{ display: 'none' }} 
               accept="image/png, image/jpeg"
-              multiple
               onChange={handleFileSelect} 
             />
           </div>
 
           <div 
             className={styles.canvasContainer} 
-            style={{ 
-              display: (previewImages.length > 0 || isScanning) ? 'grid' : 'none',
-              gridTemplateColumns: previewImages.length === 1 ? '1fr' : 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '12px'
-            }}
+            style={{ display: (results.length > 0 || isScanning) ? 'block' : 'none' }}
           >
-            {previewImages.map((img, idx) => (
-              <div key={idx} style={{ position: 'relative', width: '100%' }}>
-                <img src={img.src} style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '8px' }} alt={`Scanned screenshot ${idx + 1}`} />
-                <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} viewBox={`0 0 ${img.width} ${img.height}`}>
-                  {img.rects.map((rect, i) => (
-                    <rect key={i} x={rect.x} y={rect.y} width={rect.width} height={rect.height} fill="none" stroke="#00ff00" strokeWidth="2" />
-                  ))}
-                  {img.rects.map((rect, i) => (
-                     <text key={`text-${i}`} x={rect.x + 2} y={rect.y + 14} fill="#00ff00" fontSize="14" fontFamily="sans-serif">
-                       {rect.matchRate.toFixed(1)}%
-                     </text>
-                  ))}
-                </svg>
-              </div>
-            ))}
-            {isScanning && previewImages.length === 0 && (
-              <div style={{ padding: '40px', textAlign: 'center', color: 'var(--text-secondary)' }}>
-                Scanning...
-              </div>
-            )}
+            <canvas ref={canvasRef}></canvas>
           </div>
           <canvas ref={hiddenCanvasRef} style={{ display: 'none' }}></canvas>
           
           {results.length > 0 && (
             <button 
-              onClick={() => {
-                setResults([]);
-                setPreviewImages([]);
-              }} 
+              onClick={() => setResults([])} 
               style={{
                 marginTop: '16px', width: '100%', padding: '12px', 
                 background: 'var(--panel-bg)', border: '1px solid var(--panel-border)',
