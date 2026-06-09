@@ -5,6 +5,64 @@ import styles from './page.module.css';
 import { loadDatabase, scanIcons } from '../lib/ocr-engine';
 import itemNames from '../public/item_names.json';
 
+import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
+import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
+
+function SortableComment({ comment, isAdminSecret, deleteComment, selectedLang, handleReply }) {
+  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: comment.id });
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+    background: comment.isAdmin ? 'rgba(244, 67, 54, 0.05)' : 'rgba(255,255,255,0.03)', 
+    padding: '16px', 
+    borderRadius: '12px',
+    borderLeft: comment.isAdmin ? '4px solid #f44336' : '4px solid #2196f3',
+    position: 'relative',
+    marginLeft: comment.parentId ? '40px' : '0px',
+    marginBottom: '16px',
+    zIndex: transform ? 999 : 1
+  };
+
+  return (
+    <div ref={setNodeRef} style={style}>
+      {isAdminSecret && (
+        <div 
+          style={{ position: 'absolute', top: '12px', right: '40px', cursor: 'grab', fontSize: '1.2rem', opacity: 0.6 }} 
+          {...attributes} 
+          {...listeners} 
+          title="Drag to reorder"
+        >
+          ☰
+        </div>
+      )}
+      {isAdminSecret && (
+        <button 
+          onClick={() => deleteComment(comment.id)}
+          style={{ position: 'absolute', top: '12px', right: '12px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.2rem', opacity: 0.6 }}
+          title="Delete Comment"
+        >
+          🗑️
+        </button>
+      )}
+      <button 
+        onClick={() => handleReply(comment.id)}
+        style={{ position: 'absolute', bottom: '12px', right: '12px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.2rem', opacity: 0.8 }}
+        title="Reply"
+      >
+        ↩️
+      </button>
+      <div style={{ fontSize: '0.8rem', color: comment.isAdmin ? '#f44336' : 'var(--text-secondary)', marginBottom: '8px', fontWeight: comment.isAdmin ? 'bold' : 'normal' }}>
+        {comment.isAdmin ? '[Admin]' : 'Anonymous'} • {new Date(comment.timestamp).toLocaleString(selectedLang)} {comment.parentId && ' (Reply)'}
+      </div>
+      <div style={{ fontSize: '1rem', color: 'white', lineHeight: '1.4' }}>
+        {comment.text}
+      </div>
+    </div>
+  );
+}
+
 const langToCurrency = {
   'en-US': { code: 'USD' },
   'ja-JP': { code: 'JPY' },
@@ -36,6 +94,12 @@ export default function ScannerApp() {
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
   const [isAdminSecret, setIsAdminSecret] = useState(null);
   const [isSortedByPrice, setIsSortedByPrice] = useState(false);
+  const [replyingToId, setReplyingToId] = useState(null);
+
+  const sensors = useSensors(
+    useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
+    useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates })
+  );
   
   // Editing states
   const [editingIndex, setEditingIndex] = useState(-1);
@@ -118,22 +182,50 @@ export default function ScannerApp() {
       const res = await fetch('/api/comments', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text: text, adminSecret: isAdminSecret })
+        body: JSON.stringify({ text: text, adminSecret: isAdminSecret, parentId: replyingToId })
       });
       
       if (res.ok) {
         setNewCommentText('');
+        setReplyingToId(null);
         fetchComments(); // Refresh comments list
         showToast("コメントを投稿しました！");
       } else {
         const err = await res.json();
-        showToast(`エラー: ${err.error || '投稿に失敗しました'}`);
+        showToast("Error: " + err.error);
       }
     } catch (e) {
-      showToast("ネットワークエラーです");
+      console.error(e);
+      showToast("Network error while submitting.");
     } finally {
       setIsSubmittingComment(false);
     }
+  };
+
+  const handleReply = (commentId) => {
+    setReplyingToId(commentId);
+    setNewCommentText('');
+    showToast("Replying to a comment");
+  };
+
+  const handleDragEndComments = async (event) => {
+    const { active, over } = event;
+    if (!over || active.id === over.id) return;
+
+    setComments((items) => {
+      const oldIndex = items.findIndex(item => item.id === active.id);
+      const newIndex = items.findIndex(item => item.id === over.id);
+      const newArray = arrayMove(items, oldIndex, newIndex);
+      
+      // Call API to save new order in background
+      fetch('/api/comments', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ comments: newArray, adminSecret: isAdminSecret })
+      }).catch(err => console.error("Failed to save reorder", err));
+
+      return newArray;
+    });
   };
 
   const deleteComment = async (id) => {
@@ -1056,6 +1148,12 @@ export default function ScannerApp() {
           {commentsTitleTranslations[selectedLang] || commentsTitleTranslations['en-US']}
         </h2>
         
+        {replyingToId && (
+          <div style={{ fontSize: '0.8rem', color: '#ff9800', marginBottom: '8px', display: 'flex', justifyContent: 'space-between' }}>
+            <span>Replying to a comment...</span>
+            <button type="button" onClick={() => setReplyingToId(null)} style={{ background: 'none', border: 'none', color: '#ff9800', cursor: 'pointer', textDecoration: 'underline' }}>Cancel Reply</button>
+          </div>
+        )}
         <form onSubmit={submitComment} style={{ display: 'flex', gap: '12px', marginBottom: '30px' }}>
           <input 
             type="text" 
@@ -1088,31 +1186,27 @@ export default function ScannerApp() {
               No comments yet. Be the first to share your scan results!
             </div>
           ) : (
-            comments.map((comment) => (
-              <div key={comment.id} style={{
-                background: comment.isAdmin ? 'rgba(244, 67, 54, 0.05)' : 'rgba(255,255,255,0.03)', 
-                padding: '16px', 
-                borderRadius: '12px',
-                borderLeft: comment.isAdmin ? '4px solid #f44336' : '4px solid #2196f3',
-                position: 'relative'
-              }}>
-                {isAdminSecret && (
-                  <button 
-                    onClick={() => deleteComment(comment.id)}
-                    style={{ position: 'absolute', top: '12px', right: '12px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.2rem', opacity: 0.6 }}
-                    title="Delete Comment"
-                  >
-                    🗑️
-                  </button>
-                )}
-                <div style={{ fontSize: '0.8rem', color: comment.isAdmin ? '#f44336' : 'var(--text-secondary)', marginBottom: '8px', fontWeight: comment.isAdmin ? 'bold' : 'normal' }}>
-                  {comment.isAdmin ? '[Admin]' : 'Anonymous'} • {new Date(comment.timestamp).toLocaleString(selectedLang)}
-                </div>
-                <div style={{ fontSize: '1rem', color: 'white', lineHeight: '1.4' }}>
-                  {comment.text}
-                </div>
-              </div>
-            ))
+            <DndContext 
+              sensors={sensors} 
+              collisionDetection={closestCenter} 
+              onDragEnd={handleDragEndComments}
+            >
+              <SortableContext 
+                items={comments.map(c => c.id)} 
+                strategy={verticalListSortingStrategy}
+              >
+                {comments.map((comment) => (
+                  <SortableComment 
+                    key={comment.id} 
+                    comment={comment} 
+                    isAdminSecret={isAdminSecret} 
+                    deleteComment={deleteComment} 
+                    selectedLang={selectedLang}
+                    handleReply={handleReply}
+                  />
+                ))}
+              </SortableContext>
+            </DndContext>
           )}
         </div>
       </section>
