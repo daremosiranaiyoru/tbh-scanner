@@ -477,6 +477,14 @@ export default function ScannerApp() {
     'vi-VN': 'Vui lòng chờ trong giây lát'
   };
 
+  const commentsTitleTranslations = {
+    'ja-JP': '💬 コメント欄', 'en-US': '💬 Comments Section', 'zh-Hans': '💬 评论区',
+    'zh-Hant': '💬 評論區', 'ko-KR': '💬 댓글 섹션', 'ru-RU': '💬 Раздел комментариев',
+    'es-ES': '💬 Sección de comentarios', 'fr-FR': '💬 Section des commentaires', 
+    'de-DE': '💬 Kommentarbereich', 'pt-BR': '💬 Seção de comentários', 
+    'tr-TR': '💬 Yorumlar Bölümü', 'vi-VN': '💬 Phần bình luận'
+  };
+
   return (
     <>
       {/* Full Width Edge-to-Edge Announcement Banner */}
@@ -495,15 +503,16 @@ export default function ScannerApp() {
         {announcementTranslations[selectedLang] || announcementTranslations['en-US']}
       </div>
 
-      <div className={styles.container}>
-        <header className={styles.header}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <div style={{flex: 1}}></div>
-          <div style={{flex: 2, textAlign: 'center'}}>
-            <h1 className={styles.title}>{titleTranslations[selectedLang] || titleTranslations['en-US']}</h1>
-            <p className={styles.subtitle}>{descTranslations[selectedLang] || descTranslations['en-US']}</p>
-          </div>
-          <div style={{flex: 1, textAlign: 'right'}}>
+      <div className={styles.pageLayout}>
+        <div className={styles.mainColumn}>
+          <header className={styles.header}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div style={{flex: 1}}></div>
+              <div style={{flex: 2, textAlign: 'center'}}>
+                <h1 className={styles.title}>{titleTranslations[selectedLang] || titleTranslations['en-US']}</h1>
+                <p className={styles.subtitle}>{descTranslations[selectedLang] || descTranslations['en-US']}</p>
+              </div>
+              <div style={{flex: 1, textAlign: 'right'}}>
             <select 
               value={selectedLang} 
               onChange={(e) => setSelectedLang(e.target.value)}
@@ -1035,20 +1044,24 @@ export default function ScannerApp() {
           );
         })()}
       </section>
+      </div> {/* Close mainColumn */}
 
       {/* Anonymous Comments Section */}
-      <section style={{
-        marginTop: '20px', 
-        padding: '30px', 
-        background: 'rgba(0, 0, 0, 0.2)', 
-        borderRadius: '16px',
-        border: '1px solid rgba(255, 255, 255, 0.05)',
-      }}>
-        <h2 style={{ fontSize: '1.4rem', marginBottom: '20px', color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          💬 Anonymous Comments
+      <aside className={styles.commentsColumn}>
+        <section style={{
+          padding: '20px', 
+          background: 'rgba(0, 0, 0, 0.2)', 
+          borderRadius: '16px',
+          border: '1px solid rgba(255, 255, 255, 0.05)',
+          flex: 1,
+          display: 'flex',
+          flexDirection: 'column'
+        }}>
+        <h2 style={{ fontSize: '1.2rem', marginBottom: '16px', color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          {commentsTitleTranslations[selectedLang] || commentsTitleTranslations['en-US']}
         </h2>
         
-        <form onSubmit={submitComment} style={{ display: 'flex', gap: '12px', marginBottom: '30px' }}>
+        <form onSubmit={submitComment} style={{ display: 'flex', gap: '8px', marginBottom: '20px' }}>
           <input 
             type="text" 
             value={newCommentText}
@@ -1057,24 +1070,24 @@ export default function ScannerApp() {
             maxLength={100}
             disabled={isSubmittingComment}
             style={{
-              flex: 1, padding: '12px 16px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.2)',
-              background: 'rgba(255,255,255,0.05)', color: 'white', outline: 'none', fontSize: '1rem'
+              flex: 1, padding: '10px 14px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.2)',
+              background: 'rgba(255,255,255,0.05)', color: 'white', outline: 'none', fontSize: '0.9rem'
             }}
           />
           <button 
             type="submit"
             disabled={isSubmittingComment || !newCommentText.trim()}
             style={{
-              padding: '0 24px', borderRadius: '8px', border: 'none', background: '#2196f3',
+              padding: '0 16px', borderRadius: '8px', border: 'none', background: '#2196f3',
               color: 'white', fontWeight: 'bold', cursor: isSubmittingComment || !newCommentText.trim() ? 'not-allowed' : 'pointer',
-              opacity: isSubmittingComment || !newCommentText.trim() ? 0.5 : 1, transition: 'opacity 0.2s'
+              opacity: isSubmittingComment || !newCommentText.trim() ? 0.5 : 1, transition: 'opacity 0.2s', fontSize: '0.9rem'
             }}
           >
             Post
           </button>
         </form>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxHeight: '400px', overflowY: 'auto', paddingRight: '8px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', paddingRight: '4px' }}>
           {comments.length === 0 ? (
             <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '20px' }}>
               No comments yet. Be the first to share your scan results!
@@ -1083,31 +1096,33 @@ export default function ScannerApp() {
             comments.map((comment) => (
               <div key={comment.id} style={{
                 background: comment.isAdmin ? 'rgba(244, 67, 54, 0.05)' : 'rgba(255,255,255,0.03)', 
-                padding: '16px', 
+                padding: '12px 14px', 
                 borderRadius: '12px',
-                borderLeft: comment.isAdmin ? '4px solid #f44336' : '4px solid #2196f3',
+                borderLeft: comment.isAdmin ? '4px solid #f44336' : '3px solid #2196f3',
                 position: 'relative'
               }}>
                 {isAdminSecret && (
                   <button 
                     onClick={() => deleteComment(comment.id)}
-                    style={{ position: 'absolute', top: '12px', right: '12px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.2rem', opacity: 0.6 }}
+                    style={{ position: 'absolute', top: '10px', right: '10px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '1rem', opacity: 0.6 }}
                     title="Delete Comment"
                   >
                     🗑️
                   </button>
                 )}
-                <div style={{ fontSize: '0.8rem', color: comment.isAdmin ? '#f44336' : 'var(--text-secondary)', marginBottom: '8px', fontWeight: comment.isAdmin ? 'bold' : 'normal' }}>
+                <div style={{ fontSize: '0.75rem', color: comment.isAdmin ? '#f44336' : 'var(--text-secondary)', marginBottom: '6px', fontWeight: comment.isAdmin ? 'bold' : 'normal' }}>
                   {comment.isAdmin ? '[Admin]' : 'Anonymous'} • {new Date(comment.timestamp).toLocaleString(selectedLang)}
                 </div>
-                <div style={{ fontSize: '1rem', color: 'white', lineHeight: '1.4' }}>
+                <div style={{ fontSize: '0.9rem', color: 'white', lineHeight: '1.4' }}>
                   {comment.text}
                 </div>
               </div>
             ))
           )}
         </div>
-      </section>
+        </section>
+      </aside>
+      </div> {/* Close pageLayout */}
 
       {/* Toast Notification */}
       {toastMessage && (
@@ -1128,7 +1143,6 @@ export default function ScannerApp() {
           `}</style>
         </div>
       )}
-      </div>
     </>
   );
 }
