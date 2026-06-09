@@ -5,6 +5,8 @@ import styles from './page.module.css';
 import { loadDatabase, scanIcons } from '../lib/ocr-engine';
 import itemNames from '../public/item_names.json';
 
+const ENABLE_AD_TEST = true; // Set to false to disable the 5-second ad loading screen
+
 const langToCurrency = {
   'en-US': { code: 'USD' },
   'ja-JP': { code: 'JPY' },
@@ -24,6 +26,9 @@ export default function ScannerApp() {
   const [isScanning, setIsScanning] = useState(false);
   const [isEngineReady, setIsEngineReady] = useState(false);
   const [results, setResults] = useState([]);
+  const [pendingResults, setPendingResults] = useState([]);
+  const [isShowingAd, setIsShowingAd] = useState(false);
+  const [adCountdown, setAdCountdown] = useState(5);
   const [dragActive, setDragActive] = useState(false);
   const [prices, setPrices] = useState(null);
   const [rates, setRates] = useState(null);
@@ -130,6 +135,20 @@ export default function ScannerApp() {
     }
   };
 
+  useEffect(() => {
+    let timer;
+    if (isShowingAd && adCountdown > 0) {
+      timer = setInterval(() => {
+        setAdCountdown(prev => prev - 1);
+      }, 1000);
+    } else if (isShowingAd && adCountdown === 0) {
+      setIsShowingAd(false);
+      setResults(pendingResults);
+      setPendingResults([]);
+    }
+    return () => clearInterval(timer);
+  }, [isShowingAd, adCountdown, pendingResults]);
+
   const fetchPrices = async () => {
     try {
       const res = await fetch('/api/prices');
@@ -197,8 +216,15 @@ export default function ScannerApp() {
       }
     });
     
-    setResults(displayResults);
-    setIsScanning(false);
+    if (ENABLE_AD_TEST) {
+      setPendingResults(displayResults);
+      setIsShowingAd(true);
+      setAdCountdown(5);
+      setIsScanning(false);
+    } else {
+      setResults(displayResults);
+      setIsScanning(false);
+    }
     
     // Fetch prices in background
     fetchPrices();
@@ -494,9 +520,35 @@ export default function ScannerApp() {
           )}
         </div>
 
-        {/* Right Side: Results */}
-        <div className={`glass-panel ${styles.resultsPanel}`}>
-          <div className={styles.resultsHeader}>
+        {/* Right Side: Results or Ad Screen */}
+        {isShowingAd ? (
+          <div className={`glass-panel ${styles.resultsPanel}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '20px' }}>
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#fff' }}>市場価格を計算中...</h2>
+            <div style={{ fontSize: '3rem', fontWeight: 'bold', color: '#2196f3', marginBottom: '30px' }}>
+              残り {adCountdown} 秒
+            </div>
+            
+            {/* Ninja AdMax Placeholder */}
+            <div style={{ 
+              width: '100%', 
+              maxWidth: '300px', 
+              height: '250px', 
+              background: 'rgba(255,255,255,0.05)', 
+              border: '2px dashed rgba(255,255,255,0.2)',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: '12px',
+              color: 'var(--text-secondary)'
+            }}>
+              <span style={{ fontSize: '1.2rem', marginBottom: '8px' }}>忍者AdMax 広告枠</span>
+              <span style={{ fontSize: '0.8rem', opacity: 0.7 }}>（プレースホルダー）</span>
+            </div>
+          </div>
+        ) : (
+          <div className={`glass-panel ${styles.resultsPanel}`}>
+            <div className={styles.resultsHeader}>
             <h2>Detected Items ({results.length})</h2>
             {prices === null && results.length > 0 && (
               <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
@@ -833,7 +885,8 @@ export default function ScannerApp() {
               </>
             );
           })()}
-        </div>
+          </div>
+        )}
       </main>
       
       {/* How to Use Section */}
