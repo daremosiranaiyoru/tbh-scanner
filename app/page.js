@@ -715,13 +715,13 @@ export default function ScannerApp() {
                           if (!prices) return 0;
                           const names = itemNames[item.name] || {};
                           const englishName = names['en-US'] || item.name.replace('.png', '');
-                          if (prices[englishName]) return prices[englishName].price;
+                          if (prices[englishName]) return prices[englishName].priceCents || 0;
                           if (item.rarity && item.rarity !== 'UNKNOWN') {
                             const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
                             const prefix = `${englishName} (${rarityStr})`;
-                            if (prices[`${prefix} A`]) return prices[`${prefix} A`].price;
+                            if (prices[`${prefix} A`]) return prices[`${prefix} A`].priceCents || 0;
                             const matchedKey = Object.keys(prices).find(k => k.startsWith(prefix));
-                            if (matchedKey) return prices[matchedKey].price;
+                            if (matchedKey) return prices[matchedKey].priceCents || 0;
                           }
                           return 0;
                         };
@@ -965,14 +965,14 @@ export default function ScannerApp() {
                     <button 
                       onClick={() => setIsSortedByPrice(!isSortedByPrice)}
                       style={{ 
-                        background: isSortedByPrice ? 'rgba(255, 152, 0, 0.2)' : 'rgba(156, 39, 176, 0.2)', 
-                        border: isSortedByPrice ? '1px dashed rgba(255, 152, 0, 0.5)' : '1px dashed rgba(156, 39, 176, 0.5)', 
-                        color: isSortedByPrice ? '#ffb74d' : '#ba68c8', padding: '10px 24px', borderRadius: '8px', cursor: 'pointer',
+                        background: isSortedByPrice ? 'rgba(255, 152, 0, 0.2)' : 'rgba(33, 150, 243, 0.2)', 
+                        border: isSortedByPrice ? '1px dashed rgba(255, 152, 0, 0.5)' : '1px dashed rgba(33, 150, 243, 0.5)', 
+                        color: isSortedByPrice ? '#ffb74d' : '#64b5f6', padding: '10px 24px', borderRadius: '8px', cursor: 'pointer',
                         fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px',
                         transition: 'all 0.2s'
                       }}
-                      onMouseOver={(e) => e.currentTarget.style.background = isSortedByPrice ? 'rgba(255, 152, 0, 0.3)' : 'rgba(156, 39, 176, 0.3)'}
-                      onMouseOut={(e) => e.currentTarget.style.background = isSortedByPrice ? 'rgba(255, 152, 0, 0.2)' : 'rgba(156, 39, 176, 0.2)'}
+                      onMouseOver={(e) => e.currentTarget.style.background = isSortedByPrice ? 'rgba(255, 152, 0, 0.3)' : 'rgba(33, 150, 243, 0.3)'}
+                      onMouseOut={(e) => e.currentTarget.style.background = isSortedByPrice ? 'rgba(255, 152, 0, 0.2)' : 'rgba(33, 150, 243, 0.2)'}
                     >
                       {isSortedByPrice ? sortRestoreLabel : sortPriceLabel}
                     </button>
