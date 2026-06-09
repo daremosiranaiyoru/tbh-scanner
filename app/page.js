@@ -443,7 +443,7 @@ export default function ScannerApp() {
 
       <main className={styles.content}>
         {/* Left Side: Upload & Canvas */}
-        <div className="glass-panel" style={{ padding: '20px' }}>
+        <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: results.length > 0 ? '600px' : 'auto' }}>
           <div 
             className={`${styles.uploadZone} ${dragActive ? styles.dragActive : ''}`}
             onDragEnter={handleDrag}
