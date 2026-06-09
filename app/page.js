@@ -200,6 +200,13 @@ export default function ScannerApp() {
     const hCtx = hiddenCanvas.getContext('2d');
     hCtx.drawImage(img, 0, 0);
     
+    // Draw to visible canvas immediately so user sees it during Ad screen
+    const canvas = canvasRef.current;
+    canvas.width = img.width;
+    canvas.height = img.height;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+    
     // Scan!
     // Give UI a moment to update to scanning/ad state before blocking the main thread
     await new Promise(r => setTimeout(r, 100)); 
@@ -512,7 +519,7 @@ export default function ScannerApp() {
 
       <main className={styles.content}>
         {/* Left Side: Upload & Canvas */}
-        <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: results.length > 0 ? '600px' : 'auto' }}>
+        <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isShowingAd) ? '600px' : 'auto' }}>
           <div 
             className={`${styles.uploadZone} ${dragActive ? styles.dragActive : ''}`}
             onDragEnter={handleDrag}
@@ -520,7 +527,7 @@ export default function ScannerApp() {
             onDragOver={handleDrag}
             onDrop={handleDrop}
             onClick={() => document.getElementById('fileInput').click()}
-            style={{ display: results.length > 0 ? 'none' : 'flex' }}
+            style={{ display: (results.length > 0 || isScanning || isShowingAd) ? 'none' : 'flex' }}
           >
             <div className={styles.uploadIcon}>📥</div>
             <h3>Drag & Drop or Paste (Ctrl+V) Screenshot</h3>
@@ -534,7 +541,7 @@ export default function ScannerApp() {
             />
           </div>
 
-          {isScanning && (
+          {isScanning && !isShowingAd && (
             <div className={styles.loading} style={{ minHeight: '400px' }}>
               <div className={styles.spinner}></div>
               <p>{!isEngineReady ? "Loading AI Engine (1st time only)..." : "Analyzing pixels..."}</p>
@@ -543,7 +550,7 @@ export default function ScannerApp() {
 
           <div 
             className={styles.canvasContainer} 
-            style={{ display: (!isScanning && results.length > 0) ? 'block' : 'none' }}
+            style={{ display: ((!isScanning && results.length > 0) || isShowingAd) ? 'block' : 'none' }}
           >
             <canvas ref={canvasRef}></canvas>
           </div>
