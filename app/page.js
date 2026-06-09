@@ -5,8 +5,6 @@ import styles from './page.module.css';
 import { loadDatabase, scanIcons } from '../lib/ocr-engine';
 import itemNames from '../public/item_names.json';
 
-const ENABLE_AD_TEST = true; // Set to false to disable the 5-second ad loading screen
-
 const langToCurrency = {
   'en-US': { code: 'USD' },
   'ja-JP': { code: 'JPY' },
@@ -26,9 +24,6 @@ export default function ScannerApp() {
   const [isScanning, setIsScanning] = useState(false);
   const [isEngineReady, setIsEngineReady] = useState(false);
   const [results, setResults] = useState([]);
-  const [pendingResults, setPendingResults] = useState([]);
-  const [isShowingAd, setIsShowingAd] = useState(false);
-  const [adCountdown, setAdCountdown] = useState(5);
   const [dragActive, setDragActive] = useState(false);
   const [prices, setPrices] = useState(null);
   const [rates, setRates] = useState(null);
@@ -49,7 +44,6 @@ export default function ScannerApp() {
   
   const canvasRef = useRef(null);
   const hiddenCanvasRef = useRef(null);
-  const adEndTimeRef = useRef(null);
 
   useEffect(() => {
     // Wait for window.cv to be available, then load database
@@ -137,41 +131,21 @@ export default function ScannerApp() {
   };
 
   useEffect(() => {
-    let timer;
-    if (isShowingAd) {
-      timer = setInterval(() => {
-        if (!adEndTimeRef.current) return;
-        
-        const remaining = Math.ceil((adEndTimeRef.current - Date.now()) / 1000);
-        if (remaining <= 0) {
-          setIsShowingAd(false);
-          setResults(pendingResults);
-          
-          // Draw rects on the visible canvas now that the ad is over
-          if (canvasRef.current && pendingResults.length > 0) {
-            const ctx = canvasRef.current.getContext('2d');
-            pendingResults.forEach(match => {
-              if (match.rect) {
-                ctx.strokeStyle = '#00ff00';
-                ctx.lineWidth = 2;
-                ctx.strokeRect(match.rect.x, match.rect.y, match.rect.width, match.rect.height);
-                ctx.fillStyle = '#00ff00';
-                ctx.font = '14px sans-serif';
-                ctx.fillText(`${match.matchRate.toFixed(1)}%`, match.rect.x + 2, match.rect.y + 14);
-              }
-            });
-          }
-          
-          setPendingResults([]);
-          setIsScanning(false);
-          clearInterval(timer);
-        } else {
-          setAdCountdown(remaining);
+    // Draw rects on the visible canvas when results are available and scanning is finished
+    if (canvasRef.current && results.length > 0 && !isScanning) {
+      const ctx = canvasRef.current.getContext('2d');
+      results.forEach(match => {
+        if (match.rect) {
+          ctx.strokeStyle = '#00ff00';
+          ctx.lineWidth = 2;
+          ctx.strokeRect(match.rect.x, match.rect.y, match.rect.width, match.rect.height);
+          ctx.fillStyle = '#00ff00';
+          ctx.font = '14px sans-serif';
+          ctx.fillText(`${match.matchRate.toFixed(1)}%`, match.rect.x + 2, match.rect.y + 14);
         }
-      }, 100);
+      });
     }
-    return () => clearInterval(timer);
-  }, [isShowingAd, pendingResults]);
+  }, [results, isScanning]);
 
   const fetchPrices = async () => {
     try {
@@ -185,14 +159,7 @@ export default function ScannerApp() {
   };
 
   const processImage = async (file) => {
-    if (ENABLE_AD_TEST) {
-      setIsShowingAd(true);
-      setAdCountdown(5);
-      adEndTimeRef.current = Date.now() + 5000;
-      setIsScanning(true);
-    } else {
-      setIsScanning(true);
-    }
+    setIsScanning(true);
     setResults([]);
     
     // If engine is not ready, wait for it
@@ -242,25 +209,8 @@ export default function ScannerApp() {
       }
     });
     
-    // If not using ad test, draw rects immediately
-    if (!ENABLE_AD_TEST) {
-      displayResults.forEach(match => {
-        ctx.strokeStyle = '#00ff00';
-        ctx.lineWidth = 2;
-        ctx.strokeRect(match.rect.x, match.rect.y, match.rect.width, match.rect.height);
-        ctx.fillStyle = '#00ff00';
-        ctx.font = '14px sans-serif';
-        ctx.fillText(`${match.matchRate.toFixed(1)}%`, match.rect.x + 2, match.rect.y + 14);
-      });
-    }
-    
-    if (ENABLE_AD_TEST) {
-      setPendingResults(displayResults);
-      // setIsScanning(false) will be called when the ad timer hits 0
-    } else {
-      setResults(displayResults);
-      setIsScanning(false);
-    }
+    setResults(displayResults);
+    setIsScanning(false);
     
     // Fetch prices in background
     fetchPrices();
@@ -450,34 +400,34 @@ export default function ScannerApp() {
     'vi-VN': 'Định giá ngay lập tức từ ảnh chụp màn hình kho đồ của bạn.'
   };
 
-  const adCalcTranslations = {
-    'ja-JP': '市場価格を計算中...',
-    'en-US': 'Calculating market prices...',
-    'zh-Hans': '正在计算市场价格...',
-    'zh-Hant': '正在計算市場價格...',
-    'ko-KR': '시장 가격 계산 중...',
-    'ru-RU': 'Расчет рыночных цен...',
-    'es-ES': 'Calculando precios de mercado...',
-    'fr-FR': 'Calcul des prix du marché...',
-    'de-DE': 'Marktpreise werden berechnet...',
-    'pt-BR': 'Calculando preços de mercado...',
-    'tr-TR': 'Piyasa fiyatları hesaplanıyor...',
-    'vi-VN': 'Đang tính giá thị trường...'
+  const appraisingTranslations = {
+    'ja-JP': '鑑定中...',
+    'en-US': 'Appraising...',
+    'zh-Hans': '正在鉴定...',
+    'zh-Hant': '正在鑑定...',
+    'ko-KR': '감정 중...',
+    'ru-RU': 'Оценка...',
+    'es-ES': 'Evaluando...',
+    'fr-FR': 'Évaluation...',
+    'de-DE': 'Schätzung...',
+    'pt-BR': 'Avaliando...',
+    'tr-TR': 'Değerlendiriliyor...',
+    'vi-VN': 'Đang định giá...'
   };
 
-  const adRemainTranslations = {
-    'ja-JP': (s) => `残り ${s} 秒`,
-    'en-US': (s) => `${s} seconds remaining`,
-    'zh-Hans': (s) => `剩余 ${s} 秒`,
-    'zh-Hant': (s) => `剩餘 ${s} 秒`,
-    'ko-KR': (s) => `${s}초 남음`,
-    'ru-RU': (s) => `Осталось ${s} сек.`,
-    'es-ES': (s) => `${s} segundos restantes`,
-    'fr-FR': (s) => `${s} secondes restantes`,
-    'de-DE': (s) => `Noch ${s} Sekunden`,
-    'pt-BR': (s) => `Restam ${s} segundos`,
-    'tr-TR': (s) => `Kalan süre ${s} saniye`,
-    'vi-VN': (s) => `Còn lại ${s} giây`
+  const pleaseWaitTranslations = {
+    'ja-JP': 'しばらくお待ちください',
+    'en-US': 'Please wait a moment',
+    'zh-Hans': '请稍等',
+    'zh-Hant': '請稍候',
+    'ko-KR': '잠시만 기다려주세요',
+    'ru-RU': 'Подождите, пожалуйста',
+    'es-ES': 'Por favor espera un momento',
+    'fr-FR': 'Veuillez patienter',
+    'de-DE': 'Bitte warten Sie einen Moment',
+    'pt-BR': 'Por favor, aguarde um momento',
+    'tr-TR': 'Lütfen biraz bekleyin',
+    'vi-VN': 'Vui lòng chờ trong giây lát'
   };
 
   return (
@@ -535,7 +485,7 @@ export default function ScannerApp() {
 
       <main className={styles.content}>
         {/* Left Side: Upload & Canvas */}
-        <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isShowingAd) ? '600px' : 'auto' }}>
+        <div className="glass-panel" style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isScanning) ? '600px' : 'auto' }}>
           <div 
             className={`${styles.uploadZone} ${dragActive ? styles.dragActive : ''}`}
             onDragEnter={handleDrag}
@@ -543,7 +493,7 @@ export default function ScannerApp() {
             onDragOver={handleDrag}
             onDrop={handleDrop}
             onClick={() => document.getElementById('fileInput').click()}
-            style={{ display: (results.length > 0 || isScanning || isShowingAd) ? 'none' : 'flex' }}
+            style={{ display: (results.length > 0 || isScanning) ? 'none' : 'flex' }}
           >
             <div className={styles.uploadIcon}>📥</div>
             <h3>Drag & Drop or Paste (Ctrl+V) Screenshot</h3>
@@ -557,16 +507,9 @@ export default function ScannerApp() {
             />
           </div>
 
-          {isScanning && !isShowingAd && (
-            <div className={styles.loading} style={{ minHeight: '400px' }}>
-              <div className={styles.spinner}></div>
-              <p>{!isEngineReady ? "Loading AI Engine (1st time only)..." : "Analyzing pixels..."}</p>
-            </div>
-          )}
-
           <div 
             className={styles.canvasContainer} 
-            style={{ display: ((!isScanning && results.length > 0) || isShowingAd) ? 'block' : 'none' }}
+            style={{ display: (results.length > 0 || isScanning) ? 'block' : 'none' }}
           >
             <canvas ref={canvasRef}></canvas>
           </div>
@@ -586,36 +529,20 @@ export default function ScannerApp() {
           )}
         </div>
 
-        {/* Right Side: Results or Ad Screen */}
-        {isShowingAd ? (
+        {/* Right Side: Results or Loading Screen */}
+        {isScanning ? (
           <div className={`glass-panel ${styles.resultsPanel}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '20px' }}>
-            <h2 style={{ fontSize: '1.2rem', marginBottom: '10px', color: 'var(--text-secondary)' }}>
-              {adCalcTranslations[selectedLang] || adCalcTranslations['en-US']}
+            <h2 style={{ fontSize: '1.5rem', marginBottom: '10px', color: '#fff' }}>
+              {appraisingTranslations[selectedLang] || appraisingTranslations['en-US']}
             </h2>
-            <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#2196f3', marginBottom: '15px' }}>
-              {(adRemainTranslations[selectedLang] || adRemainTranslations['en-US'])(adCountdown)}
-            </div>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '30px' }}>
+              {pleaseWaitTranslations[selectedLang] || pleaseWaitTranslations['en-US']}
+            </p>
             
-            {/* Ninja AdMax Iframe */}
-            <div style={{ 
-              width: '100%', 
-              maxWidth: '90%', 
-              flex: 1, 
-              maxHeight: '400px', 
-              background: 'rgba(0,0,0,0.2)', 
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: '12px',
-              overflow: 'hidden'
-            }}>
-              <iframe 
-                src="/ad.html" 
-                style={{ width: '300px', height: '250px', border: 'none', overflow: 'hidden' }}
-                scrolling="no"
-                title="Advertisement"
-              />
-            </div>
+            <div className={styles.spinner} style={{ width: '60px', height: '60px', borderWidth: '6px' }}></div>
+            <p style={{ marginTop: '20px', color: 'var(--text-secondary)' }}>
+              {!isEngineReady ? "Loading AI Engine (1st time only)..." : "Analyzing pixels..."}
+            </p>
           </div>
         ) : (
           <div className={`glass-panel ${styles.resultsPanel}`}>
