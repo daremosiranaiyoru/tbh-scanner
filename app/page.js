@@ -91,6 +91,15 @@ export default function ScannerApp() {
     const text = newCommentText.trim();
     if (!text || isSubmittingComment) return;
     
+    // Hidden admin logout
+    if (text === '/logout' || text === '/admin logout') {
+      localStorage.removeItem('adminSecret');
+      setIsAdminSecret(null);
+      setNewCommentText('');
+      showToast("Admin mode deactivated.");
+      return;
+    }
+
     // Hidden admin login
     if (text.startsWith('/admin ')) {
       const secret = text.split(' ')[1];
