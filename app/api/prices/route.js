@@ -68,17 +68,24 @@ export async function GET() {
         try {
             // Manually fetch using REST API to support both Vercel KV and Upstash variable names
             const fetchKv = async (key, defaultValue) => {
-                const res = await fetch(`https://${kvUrl.replace(/^https?:\/\//, '')}/get/${key}`, {
-                    headers: { Authorization: `Bearer ${kvToken}` },
-                    cache: 'no-store'
-                });
-                if (!res.ok) return defaultValue;
-                const data = await res.json();
-                if (data.result === null || data.result === undefined) return defaultValue;
-                if (typeof data.result === 'string') {
-                    try { return JSON.parse(data.result); } catch(e) { return data.result; }
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 3000);
+                try {
+                    const res = await fetch(`https://${kvUrl.replace(/^https?:\/\//, '')}/get/${key}`, {
+                        headers: { Authorization: `Bearer ${kvToken}` },
+                        cache: 'no-store',
+                        signal: controller.signal
+                    });
+                    if (!res.ok) return defaultValue;
+                    const data = await res.json();
+                    if (data.result === null || data.result === undefined) return defaultValue;
+                    if (typeof data.result === 'string') {
+                        try { return JSON.parse(data.result); } catch(e) { return data.result; }
+                    }
+                    return data.result;
+                } finally {
+                    clearTimeout(timeoutId);
                 }
-                return data.result;
             };
 
             const items = await fetchKv('steam_prices', {});
@@ -87,7 +94,10 @@ export async function GET() {
             // If rates doesn't include KRW or CNY, fetch real-time rates
             if (!rates.KRW || !rates.CNY) {
                 try {
-                    const fxRes = await fetch('https://open.er-api.com/v6/latest/USD');
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 3000);
+                    const fxRes = await fetch('https://open.er-api.com/v6/latest/USD', { signal: controller.signal });
+                    clearTimeout(timeoutId);
                     if (fxRes.ok) {
                         const fxData = await fxRes.json();
                         if (fxData && fxData.rates) rates = fxData.rates;
@@ -106,11 +116,19 @@ export async function GET() {
             });
         } catch (e) {
             console.error("KV Error:", e);
-            // Fallback to local
+            // Fallback to local only if NOT on Vercel
+            if (process.env.VERCEL) {
+                return NextResponse.json({ error: "KV Connection Error", cachedAt: 0, items: {}, rates: { USD: 1, JPY: 150 } });
+            }
         }
     }
     
     // --- LOCAL FALLBACK (No KV) ---
+    if (process.env.VERCEL) {
+        // Vercel execution environment cannot wait 10+ seconds for Steam Market scraping
+        return NextResponse.json({ error: "Missing KV Config", cachedAt: 0, items: {}, rates: { USD: 1, JPY: 150 } });
+    }
+
     const now = Date.now();
     if (Object.keys(localPriceCache).length === 0 && !isFetching) {
         await fetchLocalSteamMarketItems();
