@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
-import { kv } from '@vercel/kv';
+
+export const dynamic = 'force-dynamic';
 
 const APP_ID = '3678970';
 const CACHE_DURATION_MS = 30 * 60 * 1000;
@@ -68,7 +69,8 @@ export async function GET() {
             // Manually fetch using REST API to support both Vercel KV and Upstash variable names
             const fetchKv = async (key, defaultValue) => {
                 const res = await fetch(`https://${kvUrl.replace(/^https?:\/\//, '')}/get/${key}`, {
-                    headers: { Authorization: `Bearer ${kvToken}` }
+                    headers: { Authorization: `Bearer ${kvToken}` },
+                    cache: 'no-store'
                 });
                 if (!res.ok) return defaultValue;
                 const data = await res.json();
