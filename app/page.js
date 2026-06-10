@@ -298,32 +298,26 @@ export default function ScannerApp() {
   };
 
   const fetchPrices = async () => {
-    let success = false;
-    let attempts = 0;
-    while (!success && attempts < 100) {
-      attempts++;
-      try {
-        const res = await fetch('/api/prices', { cache: 'no-store' });
-        if (!res.ok) throw new Error("Prices API returned " + res.status);
-        const data = await res.json();
-        
+    try {
+      const res = await fetch('/api/prices', { cache: 'no-store' });
+      if (!res.ok) throw new Error("Prices API returned " + res.status);
+      const data = await res.json();
+      
+      setPrices(prev => {
         if (data.items && Object.keys(data.items).length > 0) {
-          setPrices(prev => ({ ...(prev || {}), ...data.items }));
-          if (data.rates && Object.keys(data.rates).length > 0) {
-            setRates(prev => ({ ...(prev || {}), ...data.rates }));
-          }
-          if (data.cachedAt) setPricesCachedAt(data.cachedAt);
-          success = true;
-        } else {
-          throw new Error("Empty items returned");
+          return { ...(prev || {}), ...data.items };
         }
-      } catch (e) {
-        console.error(`Failed to fetch prices (Attempt ${attempts}):`, e);
-        await new Promise(r => setTimeout(r, 2000));
-      }
-    }
-    
-    if (!success) {
+        return prev || {};
+      });
+      
+      setRates(prev => {
+        if (data.rates && Object.keys(data.rates).length > 0) {
+          return { ...(prev || {}), ...data.rates };
+        }
+        return prev || null;
+      });
+    } catch (e) {
+      console.error("Failed to fetch prices:", e);
       setPrices(prev => prev || {});
     }
   };
