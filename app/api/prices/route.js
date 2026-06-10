@@ -69,7 +69,7 @@ export async function GET() {
             // Manually fetch using REST API to support both Vercel KV and Upstash variable names
             const fetchKv = async (key, defaultValue) => {
                 const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 3000);
+                const timeoutId = setTimeout(() => controller.abort(), 8000); // Increased to 8s for cold starts
                 try {
                     const res = await fetch(`https://${kvUrl.replace(/^https?:\/\//, '')}/get/${key}`, {
                         headers: { Authorization: `Bearer ${kvToken}` },
