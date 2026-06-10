@@ -79,14 +79,17 @@ const langToCurrency = {
   'vi-VN': { code: 'VND' },
 };
 
+// Cache for preserving state across client-side navigations (e.g. going to tips page and back)
+let pageCache = null;
+
 export default function ScannerApp() {
   const [isScanning, setIsScanning] = useState(false);
   const [isEngineReady, setIsEngineReady] = useState(false);
-  const [results, setResults] = useState([]);
-  const [previewImages, setPreviewImages] = useState([]);
+  const [results, setResults] = useState(pageCache?.results || []);
+  const [previewImages, setPreviewImages] = useState(pageCache?.previewImages || []);
   const [dragActive, setDragActive] = useState(false);
-  const [prices, setPrices] = useState(null);
-  const [rates, setRates] = useState(null);
+  const [prices, setPrices] = useState(pageCache?.prices || null);
+  const [rates, setRates] = useState(pageCache?.rates || null);
   const [selectedLang, setSelectedLang] = useState('ja-JP');
   const [toastMessage, setToastMessage] = useState('');
   
@@ -95,8 +98,13 @@ export default function ScannerApp() {
   const [newCommentText, setNewCommentText] = useState("");
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
   const [isAdminSecret, setIsAdminSecret] = useState(null);
-  const [isSortedByPrice, setIsSortedByPrice] = useState(false);
+  const [isSortedByPrice, setIsSortedByPrice] = useState(pageCache?.isSortedByPrice || false);
   const [replyingToId, setReplyingToId] = useState(null);
+
+  // Sync state to cache so it survives navigation
+  useEffect(() => {
+    pageCache = { results, previewImages, prices, rates, isSortedByPrice };
+  }, [results, previewImages, prices, rates, isSortedByPrice]);
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -637,7 +645,20 @@ export default function ScannerApp() {
     'tr-TR': 'Aynı anda 8 görüntüye kadar değerlendirme yapılabilir',
     'vi-VN': 'Có thể đánh giá đồng thời tối đa 8 hình ảnh'
   };
-
+  const cashoutAdTranslations = {
+    'en-US': '💡 Tip: How to use or cash out your Steam Wallet balance',
+    'ja-JP': '💡 Tips: Steamウォレットの換金術について',
+    'zh-Hans': '💡 提示：如何使用或提现您的Steam钱包余额',
+    'zh-Hant': '💡 提示：如何使用或提現您的Steam錢包餘額',
+    'ko-KR': '💡 팁: Steam 지갑 잔액 사용처 및 현금화 방법',
+    'ru-RU': '💡 Совет: Как использовать или вывести средства со Steam Wallet',
+    'es-ES': '💡 Consejo: Cómo usar o retirar el saldo de tu Cartera de Steam',
+    'fr-FR': '💡 Astuce : Comment utiliser ou retirer le solde de votre portefeuille Steam',
+    'de-DE': '💡 Tipp: So nutzen oder auszahlen lassen Sie sich Ihr Steam-Guthaben',
+    'pt-BR': '💡 Dica: Como usar ou sacar o saldo da sua Carteira Steam',
+    'tr-TR': '💡 İpucu: Steam Cüzdan bakiyenizi nasıl kullanır veya nakde çevirirsiniz',
+    'vi-VN': '💡 Mẹo: Cách sử dụng hoặc rút số dư Ví Steam'
+  };
 
   const commentsTitleTranslations = {
     'ja-JP': '💬 コメント欄', 'en-US': '💬 Comments Section', 'zh-Hans': '💬 评论区',
@@ -703,7 +724,28 @@ export default function ScannerApp() {
         </div>
       </header>
 
-
+      {/* Helpful Tip Banner for Cashout Guide (Test Server Only) */}
+      <div style={{ maxWidth: '1200px', margin: '0 auto 20px auto', padding: '0 20px', display: 'flex', justifyContent: 'flex-end' }}>
+        <Link href="/cashout" style={{ textDecoration: 'none' }}>
+          <div style={{
+            background: 'rgba(255, 255, 255, 0.05)',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            borderRadius: '20px',
+            padding: '8px 16px',
+            textAlign: 'right',
+            transition: 'background 0.2s, color 0.2s',
+            cursor: 'pointer',
+            display: 'inline-block'
+          }}
+          onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'}
+          onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'}
+          >
+            <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              {cashoutAdTranslations[selectedLang] || cashoutAdTranslations['en-US']}
+            </span>
+          </div>
+        </Link>
+      </div>
 
       <main className={styles.content}>
         {/* Left Side: Upload & Canvas */}
