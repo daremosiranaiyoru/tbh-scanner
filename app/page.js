@@ -758,18 +758,18 @@ export default function ScannerApp() {
               'vi-VN': 'Thông báo'
             },
             text: { 
-              'en-US': 'Currently, there is an issue where the database is unstable and prices may not be displayed correctly. We apologize for the inconvenience, but please wait until it is restored.', 
-              'ja-JP': '現在データベースが不安定で金額が正しく表示されないエラーがあります。お手数ですが復旧までしばらくお待ちください。',
-              'zh-Hans': '目前存在数据库不稳定导致价格无法正确显示的错误。给您带来不便，敬请谅解，请耐心等待恢复。',
-              'zh-Hant': '目前存在資料庫不穩定導致價格無法正確顯示的錯誤。給您帶來不便，敬請見諒，請耐心等待恢復。',
-              'ko-KR': '현재 데이터베이스가 불안정하여 가격이 올바르게 표시되지 않는 오류가 있습니다. 불편을 끼쳐 드려 죄송하며 복구될 때까지 잠시 기다려 주시기 바랍니다.',
-              'ru-RU': 'В настоящее время существует ошибка, из-за которой база данных нестабильна и цены могут отображаться некорректно. Приносим извинения за неудобства, пожалуйста, подождите до восстановления работоспособности.',
-              'es-ES': 'Actualmente, hay un error donde la base de datos es inestable y los precios pueden no mostrarse correctamente. Nos disculpamos por las molestias y le rogamos que espere hasta que se restaure el servicio.',
-              'fr-FR': 'Actuellement, il y a une erreur où la base de données est instable et les prix peuvent ne pas s\'afficher correctement. Nous nous excusons pour le désagrément et vous prions de bien vouloir patienter jusqu\'à ce que le service soit rétabli.',
-              'de-DE': 'Derzeit gibt es einen Fehler, bei dem die Datenbank instabil ist und Preise möglicherweise nicht korrekt angezeigt werden. Wir entschuldigen uns für die Unannehmlichkeiten, bitte warten Sie, bis der Dienst wiederhergestellt ist.',
-              'pt-BR': 'Atualmente, há um erro onde o banco de dados está instável e os preços podem não ser exibidos corretamente. Pedimos desculpas pelo inconveniente, por favor aguarde até que o serviço seja restaurado.',
-              'tr-TR': 'Şu anda, veritabanının kararsız olduğu ve fiyatların doğru görüntülenemeyebileceği bir hata var. Verdiğimiz rahatsızlıktan dolayı özür dileriz, lütfen sistem onarılana kadar bekleyin.',
-              'vi-VN': 'Hiện tại, có một lỗi khiến cơ sở dữ liệu không ổn định và giá có thể không được hiển thị chính xác. Chúng tôi xin lỗi vì sự bất tiện này, vui lòng đợi cho đến khi dịch vụ được khôi phục.'
+              'en-US': 'Due to the market currently being unavailable for listings, many items are sold out and will display as No Data. Also, the price labeled as "Recent Transaction" is temporarily displaying the current lowest listing price, which may differ greatly from actual market value. Please wait until the market reopens.', 
+              'ja-JP': '現在マーケットで出品が不可になっている影響で多くのアイテムが売り切れており、それらの値段はNo Dataと表示されます。また直近の取引と書かれている値段も応急的に現在の最低出品額を表示しており、実態から大きくかけ離れています。マーケットが再開するまで今しばらくお待ちください。',
+              'zh-Hans': '由于目前市场无法上架物品，许多物品已售罄，其价格将显示为 No Data。此外，标为“最近交易”的价格目前暂时显示的是最低上架价格，可能与实际价值相差甚远。请耐心等待市场重新开放。',
+              'zh-Hant': '由於目前市場無法上架物品，許多物品已售罄，其價格將顯示為 No Data。此外，標為「最近交易」的價格目前暫時顯示的是最低上架價格，可能與實際價值相差甚遠。請耐心等待市場重新開放。',
+              'ko-KR': '현재 마켓에 아이템을 등록할 수 없는 관계로 많은 아이템이 품절되어 No Data로 표시됩니다. 또한 "최근 거래"라고 표시된 가격은 임시로 현재 최저 등록 가격을 표시하고 있어 실제 가치와 크게 다를 수 있습니다. 마켓이 다시 열릴 때까지 기다려 주시기 바랍니다.',
+              'ru-RU': 'В связи с тем, что в настоящее время выставление предметов на Торговой площадке недоступно, многие предметы распроданы, и их цена отображается как No Data. Кроме того, цена, указанная как «Последняя сделка», временно отображает текущую минимальную цену выставления, что может сильно отличаться от реальной стоимости. Пожалуйста, подождите, пока Торговая площадка не откроется снова.',
+              'es-ES': 'Debido a que actualmente no se pueden publicar artículos en el mercado, muchos artículos están agotados y su precio se muestra como No Data. Además, el precio marcado como "Transacción reciente" muestra temporalmente el precio de publicación más bajo actual, lo cual puede diferir enormemente del valor real. Por favor, espere hasta que el mercado vuelva a abrir.',
+              'fr-FR': 'En raison de l\'impossibilité actuelle de lister des objets sur le marché, de nombreux objets sont en rupture de stock et leur prix est affiché comme No Data. De plus, le prix indiqué comme "Transaction récente" affiche temporairement le prix de mise en vente actuel le plus bas, ce qui peut différer grandement de la valeur réelle. Veuillez patienter jusqu\'à la réouverture du marché.',
+              'de-DE': 'Da das Einstellen von Gegenständen auf dem Markt derzeit nicht möglich ist, sind viele Artikel ausverkauft und ihr Preis wird als No Data angezeigt. Außerdem zeigt der als "Letzte Transaktion" gekennzeichnete Preis vorübergehend den aktuell niedrigsten Angebotspreis an, der stark vom tatsächlichen Wert abweichen kann. Bitte warten Sie, bis der Markt wieder öffnet.',
+              'pt-BR': 'Devido à impossibilidade atual de listar itens no mercado, muitos itens estão esgotados e seu preço é exibido como No Data. Além disso, o preço marcado como "Transação recente" exibe temporariamente o menor preço de listagem atual, o que pode diferir muito do valor real. Por favor, aguarde até que o mercado reabra.',
+              'tr-TR': 'Şu anda pazarda eşya listelemek mümkün olmadığından, birçok eşya tükenmiştir ve fiyatları No Data olarak görüntülenir. Ayrıca, "Son İşlem" olarak belirtilen fiyat, geçici olarak mevcut en düşük listeleme fiyatını göstermektedir ve bu durum gerçek değerden büyük ölçüde farklı olabilir. Lütfen pazar yeniden açılana kadar bekleyin.',
+              'vi-VN': 'Do hiện tại không thể đăng bán vật phẩm trên chợ, nhiều vật phẩm đã hết hàng và giá của chúng được hiển thị là No Data. Ngoài ra, giá được dán nhãn "Giao dịch gần đây" tạm thời hiển thị giá đăng bán thấp nhất hiện tại, điều này có thể khác xa so với giá trị thực tế. Vui lòng đợi cho đến khi chợ mở cửa trở lại.'
             }
           };
           
