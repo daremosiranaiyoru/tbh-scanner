@@ -8,8 +8,8 @@ let localComments = [
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
-  const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+  const url = null; // Temporarily disabled to let Upstash recover
+  const token = null;
 
   if (url && token) {
     try {
@@ -68,8 +68,8 @@ export async function POST(request) {
       ...(parentId && { parentId: parentId })
     };
 
-    const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
-    const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+    const url = null; // Temporarily disabled
+    const token = null;
 
     if (url && token) {
       if (parentId) {
@@ -158,8 +158,8 @@ export async function DELETE(request) {
       return NextResponse.json({ error: 'Missing comment ID' }, { status: 400 });
     }
 
-    const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
-    const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+    const url = null; // Temporarily disabled
+    const token = null;
 
     if (url && token) {
       // Fetch the list to find the exact string to remove
@@ -220,8 +220,8 @@ export async function PUT(request) {
       return NextResponse.json({ error: 'Invalid comments data' }, { status: 400 });
     }
 
-    const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
-    const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+    const url = null; // Temporarily disabled
+    const token = null;
 
     if (url && token) {
       // Create pipeline to DEL existing list and RPUSH all comments in order
