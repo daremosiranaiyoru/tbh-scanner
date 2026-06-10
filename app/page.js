@@ -391,10 +391,11 @@ export default function ScannerApp() {
     }
     
     setResults(allResults);
-    setIsScanning(false);
     
-    // Fetch prices in background
-    fetchPrices();
+    // Fetch prices and wait for the network response before hiding the scanning UI
+    await fetchPrices();
+
+    setIsScanning(false);
   };
 
   const showToast = (msg) => {
