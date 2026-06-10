@@ -647,7 +647,7 @@ export default function ScannerApp() {
   };
   const cashoutAdTranslations = {
     'en-US': '💡 Tip: How to use or cash out your Steam Wallet balance',
-    'ja-JP': '💡 Tips: TBHで稼いだsteamウォレットの換金術について',
+    'ja-JP': '💡 Tips: Steamウォレットの換金術について',
     'zh-Hans': '💡 提示：如何使用或提现您的Steam钱包余额',
     'zh-Hant': '💡 提示：如何使用或提現您的Steam錢包餘額',
     'ko-KR': '💡 팁: Steam 지갑 잔액 사용처 및 현금화 방법',
