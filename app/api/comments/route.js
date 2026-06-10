@@ -5,30 +5,40 @@ let localComments = [
   { id: 1, text: "Welcome to the anonymous comment section! / 匿名コメント欄へようこそ！", timestamp: Date.now() }
 ];
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   const url = process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
 
   if (url && token) {
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 3000);
+      
       // LRANGE tbh_comments 0 499
       const res = await fetch(`${url}/lrange/tbh_comments/0/499`, {
         headers: { Authorization: `Bearer ${token}` },
-        cache: 'no-store'
+        cache: 'no-store',
+        signal: controller.signal
       });
       const data = await res.json();
+      
       if (data.result) {
         // Upstash returns strings for JSON objects stored in lists if added via REST, or objects. 
-        // We ensure they are parsed properly.
         const comments = data.result.map(item => typeof item === 'string' ? JSON.parse(item) : item);
         return NextResponse.json(comments);
+      } else {
+        console.error("Upstash Error (Comments GET data missing):", data);
+        return NextResponse.json([]);
       }
     } catch (e) {
       console.error("Upstash Error (Comments GET):", e);
+      return NextResponse.json([]);
     }
   }
   
-  // Fallback
+  // Fallback for local development
   return NextResponse.json(localComments);
 }
 
