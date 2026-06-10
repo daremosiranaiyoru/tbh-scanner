@@ -95,6 +95,7 @@ export default function ScannerApp() {
   
   // Comments state
   const [comments, setComments] = useState([]);
+  const [isCommentsLoading, setIsCommentsLoading] = useState(true);
   const [newCommentText, setNewCommentText] = useState("");
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
   const [isAdminSecret, setIsAdminSecret] = useState(null);
@@ -156,6 +157,7 @@ export default function ScannerApp() {
   }, []);
 
   const fetchComments = async () => {
+    setIsCommentsLoading(true);
     try {
       const res = await fetch('/api/comments');
       if (res.ok) {
@@ -164,6 +166,8 @@ export default function ScannerApp() {
       }
     } catch (e) {
       console.error("Failed to fetch comments", e);
+    } finally {
+      setIsCommentsLoading(false);
     }
   };
 
@@ -1334,7 +1338,12 @@ export default function ScannerApp() {
         </form>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', paddingRight: '8px' }}>
-          {comments.length === 0 ? (
+          {isCommentsLoading ? (
+            <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '20px' }}>
+              <div className={styles.spinner} style={{ margin: '0 auto 12px auto', width: '24px', height: '24px', borderTopColor: '#2196f3' }}></div>
+              Loading comments... / コメントを読み込み中...
+            </div>
+          ) : comments.length === 0 ? (
             <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '20px' }}>
               No comments yet. Be the first to share your scan results!
             </div>
