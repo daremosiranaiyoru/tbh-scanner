@@ -637,20 +637,7 @@ export default function ScannerApp() {
     'tr-TR': 'Aynı anda 8 görüntüye kadar değerlendirme yapılabilir',
     'vi-VN': 'Có thể đánh giá đồng thời tối đa 8 hình ảnh'
   };
-  const cashoutAdTranslations = {
-    'en-US': '💡 Tip: How to use or cash out your Steam Wallet balance',
-    'ja-JP': '💡 Tips: 稼いだSteamウォレットの使い道・換金術について',
-    'zh-Hans': '💡 提示：如何使用或提现您的Steam钱包余额',
-    'zh-Hant': '💡 提示：如何使用或提現您的Steam錢包餘額',
-    'ko-KR': '💡 팁: Steam 지갑 잔액 사용처 및 현금화 방법',
-    'ru-RU': '💡 Совет: Как использовать или вывести средства со Steam Wallet',
-    'es-ES': '💡 Consejo: Cómo usar o retirar el saldo de tu Cartera de Steam',
-    'fr-FR': '💡 Astuce : Comment utiliser ou retirer le solde de votre portefeuille Steam',
-    'de-DE': '💡 Tipp: So nutzen oder auszahlen lassen Sie sich Ihr Steam-Guthaben',
-    'pt-BR': '💡 Dica: Como usar ou sacar o saldo da sua Carteira Steam',
-    'tr-TR': '💡 İpucu: Steam Cüzdan bakiyenizi nasıl kullanır veya nakde çevirirsiniz',
-    'vi-VN': '💡 Mẹo: Cách sử dụng hoặc rút số dư Ví Steam'
-  };
+
 
   const commentsTitleTranslations = {
     'ja-JP': '💬 コメント欄', 'en-US': '💬 Comments Section', 'zh-Hans': '💬 评论区',
@@ -716,28 +703,7 @@ export default function ScannerApp() {
         </div>
       </header>
 
-      {/* Helpful Tip Banner for Cashout Guide (Test Server Only) */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto 20px auto', padding: '0 20px', display: 'flex', justifyContent: 'flex-end' }}>
-        <Link href="/cashout" style={{ textDecoration: 'none' }}>
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.05)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            borderRadius: '20px',
-            padding: '8px 16px',
-            textAlign: 'right',
-            transition: 'background 0.2s, color 0.2s',
-            cursor: 'pointer',
-            display: 'inline-block'
-          }}
-          onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'}
-          onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'}
-          >
-            <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              {cashoutAdTranslations[selectedLang] || cashoutAdTranslations['en-US']}
-            </span>
-          </div>
-        </Link>
-      </div>
+
 
       <main className={styles.content}>
         {/* Left Side: Upload & Canvas */}
