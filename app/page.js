@@ -79,14 +79,17 @@ const langToCurrency = {
   'vi-VN': { code: 'VND' },
 };
 
+// Cache for preserving state across client-side navigations (e.g. going to tips page and back)
+let pageCache = null;
+
 export default function ScannerApp() {
   const [isScanning, setIsScanning] = useState(false);
   const [isEngineReady, setIsEngineReady] = useState(false);
-  const [results, setResults] = useState([]);
-  const [previewImages, setPreviewImages] = useState([]);
+  const [results, setResults] = useState(pageCache?.results || []);
+  const [previewImages, setPreviewImages] = useState(pageCache?.previewImages || []);
   const [dragActive, setDragActive] = useState(false);
-  const [prices, setPrices] = useState(null);
-  const [rates, setRates] = useState(null);
+  const [prices, setPrices] = useState(pageCache?.prices || null);
+  const [rates, setRates] = useState(pageCache?.rates || null);
   const [selectedLang, setSelectedLang] = useState('ja-JP');
   const [toastMessage, setToastMessage] = useState('');
   
@@ -95,8 +98,13 @@ export default function ScannerApp() {
   const [newCommentText, setNewCommentText] = useState("");
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
   const [isAdminSecret, setIsAdminSecret] = useState(null);
-  const [isSortedByPrice, setIsSortedByPrice] = useState(false);
+  const [isSortedByPrice, setIsSortedByPrice] = useState(pageCache?.isSortedByPrice || false);
   const [replyingToId, setReplyingToId] = useState(null);
+
+  // Sync state to cache so it survives navigation
+  useEffect(() => {
+    pageCache = { results, previewImages, prices, rates, isSortedByPrice };
+  }, [results, previewImages, prices, rates, isSortedByPrice]);
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -639,7 +647,7 @@ export default function ScannerApp() {
   };
   const cashoutAdTranslations = {
     'en-US': '💡 Tip: How to use or cash out your Steam Wallet balance',
-    'ja-JP': '💡 Tips: 稼いだSteamウォレットの使い道・換金術について',
+    'ja-JP': '💡 Tips: TBHで稼いだsteamウォレットの換金術について',
     'zh-Hans': '💡 提示：如何使用或提现您的Steam钱包余额',
     'zh-Hant': '💡 提示：如何使用或提現您的Steam錢包餘額',
     'ko-KR': '💡 팁: Steam 지갑 잔액 사용처 및 현금화 방법',

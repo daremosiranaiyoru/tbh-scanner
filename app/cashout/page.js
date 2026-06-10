@@ -24,7 +24,7 @@ const translations = {
   },
   'ja-JP': {
     back: '← スキャナーに戻る',
-    title: '📝 Steamウォレットの効率的な活用・換金ルートについて',
+    title: '📝 steamウォレットの安全な換金ルートについて',
     intro: 'Taskbar Heroなどのゲームで貯まったSteamウォレット残高ですが、実はSteam外のサービスを経由することで、現金や仮想通貨として引き出すことが可能です。ここでは、海外のトレーダーやゲーマーの間で一般的に利用されている「アイテムを通じた換金手順」について、その仕組みを分かりやすく解説します。',
     step1Title: '1. Steamマーケットで「流動性の高いアイテム」を購入する',
     step1Text: 'Steamウォレットを直接出金することはできないため、まずはSteamのコミュニティマーケットで「世界中で常に取引されているアイテム」を購入します。取引量の多い『CS2』のスキンや『TF2』の鍵（Key）などがよく選ばれます。',
@@ -126,6 +126,20 @@ export default function CashoutGuide() {
 
   const t = translations[selectedLang] || translations['en-US'];
 
+  const videoNotes = {
+    'ja-JP': '（※英語の動画ですみません！）',
+    'zh-Hans': '（※抱歉，视频是英文的！）',
+    'zh-Hant': '（※抱歉，影片是英文的！）',
+    'ko-KR': '（※죄송합니다. 영상이 영어로 되어 있습니다!）',
+    'ru-RU': '(Извините, видео на английском!)',
+    'es-ES': '(¡Perdón, el video está en inglés!)',
+    'fr-FR': '(Désolé, la vidéo est en anglais !)',
+    'de-DE': '(Sorry, das Video ist auf Englisch!)',
+    'pt-BR': '(Desculpe, o vídeo está em inglês!)',
+    'tr-TR': '(Özür dileriz, video İngilizce!)',
+    'vi-VN': '(Xin lỗi, video bằng tiếng Anh!)'
+  };
+
   return (
     <div style={{
       minHeight: '100vh',
@@ -194,8 +208,13 @@ export default function CashoutGuide() {
 
         {/* Video Guide */}
         <div style={{ marginTop: '40px' }}>
-          <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', color: '#fff', borderLeft: '4px solid #2196f3', paddingLeft: '12px' }}>
+          <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', color: '#fff', borderLeft: '4px solid #2196f3', paddingLeft: '12px', display: 'flex', alignItems: 'center' }}>
             {t.videoTitle}
+            {selectedLang !== 'en-US' && videoNotes[selectedLang] && (
+              <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.6)', marginLeft: '12px', fontWeight: 'normal' }}>
+                {videoNotes[selectedLang]}
+              </span>
+            )}
           </h3>
           <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '12px', background: '#000' }}>
             <iframe 
