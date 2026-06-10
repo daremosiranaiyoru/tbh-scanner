@@ -758,18 +758,18 @@ export default function ScannerApp() {
               'vi-VN': 'Thông báo'
             },
             text: { 
-              'en-US': 'Currently, there is an issue where the database is unstable and prices may not be displayed correctly. If this happens, we apologize for the inconvenience, but please wait a while and try again later.', 
-              'ja-JP': '現在データベースが不安定で金額が正しく表示されないエラーがあります。その場合お手数ですがしばらく時間をおいて再度ご利用ください。',
-              'zh-Hans': '目前存在数据库不稳定导致价格无法正确显示的错误。如果发生这种情况，给您带来不便，敬请稍后再试。',
-              'zh-Hant': '目前存在資料庫不穩定導致價格無法正確顯示的錯誤。如果發生這種情況，給您帶來不便，敬請稍後再試。',
-              'ko-KR': '현재 데이터베이스가 불안정하여 가격이 올바르게 표시되지 않는 오류가 있습니다. 이 경우 불편을 끼쳐 드려 죄송하지만, 잠시 후 다시 시도해 주시기 바랍니다.',
-              'ru-RU': 'В настоящее время существует ошибка, из-за которой база данных нестабильна и цены могут отображаться некорректно. Приносим извинения за неудобства, пожалуйста, подождите немного и повторите попытку позже.',
-              'es-ES': 'Actualmente, hay un error donde la base de datos es inestable y los precios pueden no mostrarse correctamente. Si esto sucede, nos disculpamos por las molestias, espere un momento e inténtelo de nuevo más tarde.',
-              'fr-FR': 'Actuellement, il y a une erreur où la base de données est instable et les prix peuvent ne pas s\'afficher correctement. Si cela se produit, nous nous excusons pour le désagrément, veuillez patienter un peu et réessayer plus tard.',
-              'de-DE': 'Derzeit gibt es einen Fehler, bei dem die Datenbank instabil ist und Preise möglicherweise nicht korrekt angezeigt werden. Wenn dies passiert, entschuldigen wir uns für die Unannehmlichkeiten. Bitte warten Sie eine Weile und versuchen Sie es später erneut.',
-              'pt-BR': 'Atualmente, há um erro onde o banco de dados está instável e os preços podem não ser exibidos corretamente. Se isso acontecer, pedimos desculpas pelo inconveniente, aguarde um momento e tente novamente mais tarde.',
-              'tr-TR': 'Şu anda, veritabanının kararsız olduğu ve fiyatların doğru görüntülenemeyebileceği bir hata var. Bu olursa, verdiğimiz rahatsızlıktan dolayı özür dileriz, lütfen bir süre bekleyin ve daha sonra tekrar deneyin.',
-              'vi-VN': 'Hiện tại, có một lỗi khiến cơ sở dữ liệu không ổn định và giá có thể không được hiển thị chính xác. Nếu điều này xảy ra, chúng tôi xin lỗi vì sự bất tiện này, vui lòng đợi một lát và thử lại sau.'
+              'en-US': 'Currently, there is an issue where the database is unstable and prices may not be displayed correctly. We apologize for the inconvenience, but please wait until it is restored.', 
+              'ja-JP': '現在データベースが不安定で金額が正しく表示されないエラーがあります。お手数ですが復旧までしばらくお待ちください。',
+              'zh-Hans': '目前存在数据库不稳定导致价格无法正确显示的错误。给您带来不便，敬请谅解，请耐心等待恢复。',
+              'zh-Hant': '目前存在資料庫不穩定導致價格無法正確顯示的錯誤。給您帶來不便，敬請見諒，請耐心等待恢復。',
+              'ko-KR': '현재 데이터베이스가 불안정하여 가격이 올바르게 표시되지 않는 오류가 있습니다. 불편을 끼쳐 드려 죄송하며 복구될 때까지 잠시 기다려 주시기 바랍니다.',
+              'ru-RU': 'В настоящее время существует ошибка, из-за которой база данных нестабильна и цены могут отображаться некорректно. Приносим извинения за неудобства, пожалуйста, подождите до восстановления работоспособности.',
+              'es-ES': 'Actualmente, hay un error donde la base de datos es inestable y los precios pueden no mostrarse correctamente. Nos disculpamos por las molestias y le rogamos que espere hasta que se restaure el servicio.',
+              'fr-FR': 'Actuellement, il y a une erreur où la base de données est instable et les prix peuvent ne pas s\'afficher correctement. Nous nous excusons pour le désagrément et vous prions de bien vouloir patienter jusqu\'à ce que le service soit rétabli.',
+              'de-DE': 'Derzeit gibt es einen Fehler, bei dem die Datenbank instabil ist und Preise möglicherweise nicht korrekt angezeigt werden. Wir entschuldigen uns für die Unannehmlichkeiten, bitte warten Sie, bis der Dienst wiederhergestellt ist.',
+              'pt-BR': 'Atualmente, há um erro onde o banco de dados está instável e os preços podem não ser exibidos corretamente. Pedimos desculpas pelo inconveniente, por favor aguarde até que o serviço seja restaurado.',
+              'tr-TR': 'Şu anda, veritabanının kararsız olduğu ve fiyatların doğru görüntülenemeyebileceği bir hata var. Verdiğimiz rahatsızlıktan dolayı özür dileriz, lütfen sistem onarılana kadar bekleyin.',
+              'vi-VN': 'Hiện tại, có một lỗi khiến cơ sở dữ liệu không ổn định và giá có thể không được hiển thị chính xác. Chúng tôi xin lỗi vì sự bất tiện này, vui lòng đợi cho đến khi dịch vụ được khôi phục.'
             }
           };
           
