@@ -1252,6 +1252,39 @@ export default function ScannerApp() {
         )}
       </main>
       
+      {/* Notice Section */}
+      <section style={{ 
+        marginTop: '20px', 
+        padding: '20px 30px', 
+        background: 'rgba(255, 87, 34, 0.1)', 
+        backdropFilter: 'blur(10px)', 
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 87, 34, 0.3)',
+        textAlign: 'center'
+      }}>
+        {(() => {
+          const noticeTrans = {
+            title: { 'en-US': 'Notice / お知らせ', 'ja-JP': 'お知らせ' },
+            text: { 
+              'en-US': 'Currently, there is an issue where the database is unstable and prices may not be displayed correctly. If this happens, we apologize for the inconvenience, but please wait a while and try again later.', 
+              'ja-JP': '現在データベースが不安定で金額が正しく表示されないエラーがあります。その場合お手数ですがしばらく時間をおいて再度ご利用ください。' 
+            }
+          };
+          
+          return (
+            <>
+              <h2 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#ffcc80' }}>
+                <span style={{ marginRight: '8px' }}>⚠️</span>
+                {noticeTrans.title[selectedLang] || noticeTrans.title['ja-JP']}
+              </h2>
+              <p style={{ color: 'white', lineHeight: '1.6' }}>
+                {noticeTrans.text[selectedLang] || noticeTrans.text['ja-JP']}
+              </p>
+            </>
+          );
+        })()}
+      </section>
+      
       {/* How to Use Section */}
       <section style={{ 
         marginTop: '20px', 
