@@ -35,7 +35,7 @@ function SortableComment({ comment, isAdminSecret, deleteComment, selectedLang, 
           {...listeners} 
           title="Drag to reorder"
         >
-          笘ｰ
+          ☰
         </div>
       )}
       {isAdminSecret && (
@@ -44,7 +44,7 @@ function SortableComment({ comment, isAdminSecret, deleteComment, selectedLang, 
           style={{ position: 'absolute', top: '12px', right: '12px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.2rem', opacity: 0.6 }}
           title="Delete Comment"
         >
-          �卵・・
+          🗑️
         </button>
       )}
       <button 
@@ -52,10 +52,10 @@ function SortableComment({ comment, isAdminSecret, deleteComment, selectedLang, 
         style={{ position: 'absolute', bottom: '12px', right: '12px', background: 'none', border: 'none', cursor: 'pointer', fontSize: '1.2rem', opacity: 0.8 }}
         title="Reply"
       >
-        竊ｩ・・
+        ↩️
       </button>
       <div style={{ fontSize: '0.8rem', color: comment.isAdmin ? '#f44336' : 'var(--text-secondary)', marginBottom: '8px', fontWeight: comment.isAdmin ? 'bold' : 'normal' }}>
-        {comment.isAdmin ? '[Admin]' : 'Anonymous'} 窶｢ {new Date(comment.timestamp).toLocaleString(selectedLang)} {comment.parentId && ' (Reply)'}
+        {comment.isAdmin ? '[Admin]' : 'Anonymous'} • {new Date(comment.timestamp).toLocaleString(selectedLang)} {comment.parentId && ' (Reply)'}
       </div>
       <div style={{ fontSize: '1rem', color: 'white', lineHeight: '1.4' }}>
         {comment.text}
@@ -212,7 +212,7 @@ export default function ScannerApp() {
         setNewCommentText('');
         setReplyingToId(null);
         fetchComments(); // Refresh comments list
-        showToast("繧ｳ繝｡繝ｳ繝医ｒ謚慕ｨｿ縺励∪縺励◆・・);
+        showToast("コメントを投稿しました！");
       } else {
         const err = await res.json();
         showToast("Error: " + err.error);
@@ -330,7 +330,7 @@ export default function ScannerApp() {
     
     // If engine is not ready, wait for it
     if (!window.isDatabaseLoaded) {
-      showToast("繧ｨ繝ｳ繧ｸ繝ｳ縺ｮ襍ｷ蜍輔→繝・・繧ｿ繝吶・繧ｹ縺ｮ讒狗ｯ峨ｒ蠕・▲縺ｦ縺・∪縺・..");
+      showToast("エンジンの起動とデータベースの構築を待っています...");
       while (!window.isDatabaseLoaded) {
         await new Promise(r => setTimeout(r, 200));
       }
@@ -410,7 +410,7 @@ export default function ScannerApp() {
 
   const handleShareX = async (totalString) => {
     // 1. Open X intent synchronously to avoid popup blockers
-    const text = `�腸 遘√・Taskbar Hero繧､繝ｳ繝吶Φ繝医Μ邱剰ｳ・肇縺ｯ ${totalString} 縺ｧ縺励◆・―n縺ゅ↑縺溘・繧､繝ｳ繝吶Φ繝医Μ繧ゅせ繧ｭ繝｣繝ｳ縺励※縺ｿ繧医≧・Å汨Ⅸnhttps://tbh-scanner.vercel.app\n\n#TaskbarHero #TBHScanner`;
+    const text = `💰 私のTaskbar Heroインベントリ総資産は ${totalString} でした！\nあなたのインベントリもスキャンしてみよう！👇\nhttps://tbh-scanner.vercel.app\n\n#TaskbarHero #TBHScanner`;
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank', 'width=600,height=600');
   };
@@ -518,160 +518,160 @@ export default function ScannerApp() {
 
   // Rarity Translations
   const rarityTranslations = {
-    'UNKNOWN': { 'en-US': 'None / Material', 'ja-JP': '邏�譚・/ 遲臥ｴ壹↑縺・, 'zh-Hans': '譌� / 譚先侭', 'zh-Hant': '辟｡ / 譚先侭', 'ko-KR': '・・搆 / ・ｬ・・ },
-    'COMMON': { 'en-US': 'Common', 'ja-JP': '繧ｳ繝｢繝ｳ', 'zh-Hans': '譎ｮ騾・, 'zh-Hant': '譎ｮ騾・, 'ko-KR': '・ｼ・・ },
-    'UNCOMMON': { 'en-US': 'Uncommon', 'ja-JP': '繧｢繝ｳ繧ｳ繝｢繝ｳ', 'zh-Hans': '莨倡ｧ', 'zh-Hant': '蜆ｪ遘', 'ko-KR': '・�・・ },
-    'RARE': { 'en-US': 'Rare', 'ja-JP': '繝ｬ繧｢', 'zh-Hans': '遞譛・, 'zh-Hant': '遞譛・, 'ko-KR': '彧ｬ・' },
-    'LEGENDARY': { 'en-US': 'Legendary', 'ja-JP': '繝ｬ繧ｸ繧ｧ繝ｳ繝繝ｪ繝ｼ', 'zh-Hans': '莨�隸ｴ', 'zh-Hant': '蛯ｳ隱ｪ', 'ko-KR': '・・└' },
-    'IMMORTAL': { 'en-US': 'Immortal', 'ja-JP': '繧､繝｢繝ｼ繧ｿ繝ｫ', 'zh-Hans': '荳肴愎', 'zh-Hant': '荳肴愎', 'ko-KR': '・壱ｩｸ' },
-    'ARCANA': { 'en-US': 'Arcana', 'ja-JP': '繧｢繝ｫ繧ｫ繝・, 'zh-Hans': '螂･遘・, 'zh-Hant': '螂ｧ遘・, 'ko-KR': '・・･ｴ・ｴ・・ },
-    'BEYOND': { 'en-US': 'Beyond', 'ja-JP': '繝薙Κ繝ｳ繝・, 'zh-Hans': '雜・ｶ・, 'zh-Hant': '雜・ｶ・, 'ko-KR': '・・囗・・ },
-    'CELESTIAL': { 'en-US': 'Celestial', 'ja-JP': '繧ｻ繝ｬ繧ｹ繝・ぅ繧｢繝ｫ', 'zh-Hans': '螟ｩ逡・, 'zh-Hant': '螟ｩ逡・, 'ko-KR': '・懍メ' },
-    'DIVINE': { 'en-US': 'Divine', 'ja-JP': '繝・ぅ繝ｴ繧｡繧､繝ｳ', 'zh-Hans': '逾槫悒', 'zh-Hant': '逾櫁＊', 'ko-KR': '・�・ｱ' },
-    'COSMIC': { 'en-US': 'Cosmic', 'ja-JP': '繧ｳ繧ｺ繝溘ャ繧ｯ', 'zh-Hans': '螳・ｮ・, 'zh-Hant': '螳・ｮ・, 'ko-KR': '・ｰ・ｼ' }
+    'UNKNOWN': { 'en-US': 'None / Material', 'ja-JP': '素材 / 等級なし', 'zh-Hans': '无 / 材料', 'zh-Hant': '無 / 材料', 'ko-KR': '없음 / 재료' },
+    'COMMON': { 'en-US': 'Common', 'ja-JP': 'コモン', 'zh-Hans': '普通', 'zh-Hant': '普通', 'ko-KR': '일반' },
+    'UNCOMMON': { 'en-US': 'Uncommon', 'ja-JP': 'アンコモン', 'zh-Hans': '优秀', 'zh-Hant': '優秀', 'ko-KR': '고급' },
+    'RARE': { 'en-US': 'Rare', 'ja-JP': 'レア', 'zh-Hans': '稀有', 'zh-Hant': '稀有', 'ko-KR': '희귀' },
+    'LEGENDARY': { 'en-US': 'Legendary', 'ja-JP': 'レジェンダリー', 'zh-Hans': '传说', 'zh-Hant': '傳說', 'ko-KR': '전설' },
+    'IMMORTAL': { 'en-US': 'Immortal', 'ja-JP': 'イモータル', 'zh-Hans': '不朽', 'zh-Hant': '不朽', 'ko-KR': '불멸' },
+    'ARCANA': { 'en-US': 'Arcana', 'ja-JP': 'アルカナ', 'zh-Hans': '奥秘', 'zh-Hant': '奧秘', 'ko-KR': '아르카나' },
+    'BEYOND': { 'en-US': 'Beyond', 'ja-JP': 'ビヨンド', 'zh-Hans': '超越', 'zh-Hant': '超越', 'ko-KR': '비욘드' },
+    'CELESTIAL': { 'en-US': 'Celestial', 'ja-JP': 'セレスティアル', 'zh-Hans': '天界', 'zh-Hant': '天界', 'ko-KR': '천상' },
+    'DIVINE': { 'en-US': 'Divine', 'ja-JP': 'ディヴァイン', 'zh-Hans': '神圣', 'zh-Hant': '神聖', 'ko-KR': '신성' },
+    'COSMIC': { 'en-US': 'Cosmic', 'ja-JP': 'コズミック', 'zh-Hans': '宇宙', 'zh-Hant': '宇宙', 'ko-KR': '우주' }
   };
   const getRarityLabel = (rarity) => rarityTranslations[rarity]?.[selectedLang] || rarityTranslations[rarity]?.['en-US'] || rarity;
 
   const announcementTranslations = {
     'en-US': 'Multi-image upload is now supported! You can appraise up to 8 images at once!\nYou can also add more images by dragging and dropping or copy-pasting without pressing the Clear Screenshot button!',
-    'ja-JP': '隍・焚逕ｻ蜒上・繧｢繝・・繝ｭ繝ｼ繝峨↓蟇ｾ蠢懊＠縺ｾ縺励◆・∽ｸ豌励↓8譫壹∪縺ｧ髑大ｮ壼庄閭ｽ縺ｧ縺呻ｼ―n逕ｻ蜒上ｒ繧ｯ繝ｪ繧｢繝懊ち繝ｳ繧呈款縺輔★縺ｫ霑ｽ蜉�縺ｧ繝峨Λ繝・げ繧｢繝ｳ繝峨ラ繝ｭ繝・・縺九さ繝斐・繝壹・繧ｹ繝医ｒ陦後▲縺ｦ繧０K縺ｧ縺呻ｼ・,
-    'zh-Hans': '邇ｰ蟾ｲ謾ｯ謖∝､壼崟荳贋ｼ�・∽ｸ谺｡譛螟壼庄驩ｴ螳・蠑�蝗ｾ迚・ｼ―n謔ｨ譌�髴轤ｹ蜃ｻ窶懈ｸ・勁謌ｪ蝗ｾ窶晄潔髓ｮ・檎峩謗･騾夊ｿ・許諡ｽ謌門､榊宛邊倩ｴｴ蜊ｳ蜿ｯ霑ｽ蜉�荳贋ｼ�・・,
-    'zh-Hant': '迴ｾ蟾ｲ謾ｯ謠ｴ螟壼恂荳雁さ・∽ｸ谺｡譛螟壼庄髑大ｮ・蠑ｵ蝨也援・―n謔ｨ辟｡髴鮟樊投縲梧ｸ・勁謌ｪ蝨悶肴潔驤包ｼ檎峩謗･騾城℃諡匁峙謌冶､・｣ｽ雋ｼ荳雁叉蜿ｯ霑ｽ蜉�荳雁さ・・,
-    'ko-KR': '・､・・・ｴ・ｸ・ ・・｡罹糖・ｼ ・・戦鮒・壱共! 﨑・・溢乱 ・罹劇 8・･・護ｧ ・川�・・・･﨑ｩ・壱共!\n・､增ｬ・ｰ・ｷ ・・ｰ・ｰ ・・款・・・・･ｴ・ ・伎ｳ�・・・罹椈・ｸ ・､ ・罹｡ｭ・ｴ・・・ｵ・ｬ-・呷流・｣・ｰ・・・ｴ・ｸ・・ｼ ・緋ｰ﨑� ・・・溢慣・壱共!',
-    'ru-RU': 'ﾐ｢ﾐｵﾐｿﾐｵﾑﾑ・ﾐｿﾐｾﾐｴﾐｴﾐｵﾑﾐｶﾐｸﾐｲﾐｰﾐｵﾑび・・ﾐｷﾐｰﾐｳﾑﾑσｷﾐｺﾐｰ ﾐｽﾐｵﾑ・ｺﾐｾﾐｻﾑ糊ｺﾐｸﾑ・ﾐｸﾐｷﾐｾﾐｱﾑﾐｰﾐｶﾐｵﾐｽﾐｸﾐｹ! ﾐ柘・ﾐｼﾐｾﾐｶﾐｵﾑひｵ ﾐｾﾑ・ｵﾐｽﾐｸﾑび・ﾐｴﾐｾ 8 ﾐｸﾐｷﾐｾﾐｱﾑﾐｰﾐｶﾐｵﾐｽﾐｸﾐｹ ﾐｷﾐｰ ﾑﾐｰﾐｷ!\nﾐ柘・ﾑひｰﾐｺﾐｶﾐｵ ﾐｼﾐｾﾐｶﾐｵﾑひｵ ﾐｴﾐｾﾐｱﾐｰﾐｲﾐｻﾑ肖び・ﾐｴﾐｾﾐｿﾐｾﾐｻﾐｽﾐｸﾑひｵﾐｻﾑ糊ｽﾑ巾ｵ ﾐｸﾐｷﾐｾﾐｱﾑﾐｰﾐｶﾐｵﾐｽﾐｸﾑ・ﾐｿﾑτひｵﾐｼ ﾐｿﾐｵﾑﾐｵﾑひｰﾑ・ｺﾐｸﾐｲﾐｰﾐｽﾐｸﾑ・ﾐｸﾐｻﾐｸ ﾐｺﾐｾﾐｿﾐｸﾑﾐｾﾐｲﾐｰﾐｽﾐｸﾑ・ﾐｸ ﾐｲﾑ・ひｰﾐｲﾐｺﾐｸ ﾐｱﾐｵﾐｷ ﾐｽﾐｰﾐｶﾐｰﾑひｸﾑ・ﾐｺﾐｽﾐｾﾐｿﾐｺﾐｸ ﾐ樮・ｸﾑ・ひｸﾑび・ﾑ・ｺﾑﾐｸﾐｽﾑ威ｾﾑ・',
-    'es-ES': 'ﾂ｡Ahora se admite la carga de mﾃｺltiples imﾃ｡genes! ﾂ｡Puedes evaluar hasta 8 imﾃ｡genes a la vez!\nﾂ｡Tambiﾃｩn puedes agregar mﾃ｡s imﾃ｡genes arrastrando y soltando o copiando y pegando sin presionar el botﾃｳn Borrar captura!',
-    'fr-FR': 'Le tﾃｩlﾃｩchargement de plusieurs images est dﾃｩsormais pris en charge ! Vous pouvez ﾃｩvaluer jusqu\'8 images ﾃ� la fois !\nVous pouvez ﾃｩgalement ajouter d\'autres images par glisser-dﾃｩposer ou copier-coller sans appuyer sur le bouton Effacer la capture !',
-    'de-DE': 'Der Upload mehrerer Bilder wird jetzt unterstﾃｼtzt! Sie kﾃｶnnen bis zu 8 Bilder auf einmal bewerten!\nSie kﾃｶnnen auch weitere Bilder per Drag & Drop oder durch Kopieren und Einfﾃｼgen hinzufﾃｼgen, ohne die Schaltflﾃ､che Screenshot lﾃｶschen drﾃｼcken zu mﾃｼssen!',
-    'pt-BR': 'O upload de mﾃｺltiplas imagens agora ﾃｩ suportado! Vocﾃｪ pode avaliar atﾃｩ 8 imagens de uma vez!\nVocﾃｪ tambﾃｩm pode adicionar mais imagens arrastando e soltando ou copiando e colando sem pressionar o botﾃ｣o Limpar captura!',
-    'tr-TR': 'ﾃ㎜klu gﾃｶrﾃｼntﾃｼ yﾃｼkleme artﾄｱk destekleniyor! Aynﾄｱ anda 8 gﾃｶrﾃｼntﾃｼye kadar deﾄ歹rlendirme yapabilirsiniz!\nEkran Gﾃｶrﾃｼntﾃｼsﾃｼnﾃｼ Temizle dﾃｼﾄ殞esine basmadan sﾃｼrﾃｼkleyip bﾄｱrakarak veya kopyalayﾄｱp yapﾄｱﾅ殳ﾄｱrarak daha fazla gﾃｶrﾃｼntﾃｼ ekleyebilirsiniz!',
-    'vi-VN': 'Tﾃｭnh nﾄハg t蘯｣i lﾃｪn nhi盻「 hﾃｬnh 蘯｣nh hi盻㌻ ﾄ妥｣ ﾄ柁ｰ盻｣c h盻・tr盻｣! B蘯｡n cﾃｳ th盻・ﾄ妥｡nh giﾃ｡ t盻訴 ﾄ疎 8 hﾃｬnh 蘯｣nh cﾃｹng m盻冲 lﾃｺc!\nB蘯｡n cﾅｩng cﾃｳ th盻・thﾃｪm hﾃｬnh 蘯｣nh b蘯ｱng cﾃ｡ch kﾃｩo vﾃ� th蘯｣ ho蘯ｷc sao chﾃｩp vﾃ� dﾃ｡n mﾃ� khﾃｴng c蘯ｧn nh蘯･n nﾃｺt Xﾃｳa 蘯｣nh ch盻･p mﾃ�n hﾃｬnh!'
+    'ja-JP': '複数画像のアップロードに対応しました！一気に8枚まで鑑定可能です！\n画像をクリアボタンを押さずに追加でドラッグアンドドロップかコピーペーストを行ってもOKです！',
+    'zh-Hans': '现已支持多图上传！一次最多可鉴定8张图片！\n您无需点击“清除截图”按钮，直接通过拖拽或复制粘贴即可追加上传！',
+    'zh-Hant': '現已支援多圖上傳！一次最多可鑑定8張圖片！\n您無需點擊「清除截圖」按鈕，直接透過拖曳或複製貼上即可追加上傳！',
+    'ko-KR': '다중 이미지 업로드를 지원합니다! 한 번에 최대 8장까지 감정 가능합니다!\n스크린샷 지우기 버튼을 누르지 않고도 드래그 앤 드롭이나 복사-붙여넣기로 이미지를 추가할 수 있습니다!',
+    'ru-RU': 'Теперь поддерживается загрузка нескольких изображений! Вы можете оценить до 8 изображений за раз!\nВы также можете добавлять дополнительные изображения путем перетаскивания или копирования и вставки без нажатия кнопки Очистить скриншот!',
+    'es-ES': '¡Ahora se admite la carga de múltiples imágenes! ¡Puedes evaluar hasta 8 imágenes a la vez!\n¡También puedes agregar más imágenes arrastrando y soltando o copiando y pegando sin presionar el botón Borrar captura!',
+    'fr-FR': 'Le téléchargement de plusieurs images est désormais pris en charge ! Vous pouvez évaluer jusqu\'8 images à la fois !\nVous pouvez également ajouter d\'autres images par glisser-déposer ou copier-coller sans appuyer sur le bouton Effacer la capture !',
+    'de-DE': 'Der Upload mehrerer Bilder wird jetzt unterstützt! Sie können bis zu 8 Bilder auf einmal bewerten!\nSie können auch weitere Bilder per Drag & Drop oder durch Kopieren und Einfügen hinzufügen, ohne die Schaltfläche Screenshot löschen drücken zu müssen!',
+    'pt-BR': 'O upload de múltiplas imagens agora é suportado! Você pode avaliar até 8 imagens de uma vez!\nVocê também pode adicionar mais imagens arrastando e soltando ou copiando e colando sem pressionar o botão Limpar captura!',
+    'tr-TR': 'Çoklu görüntü yükleme artık destekleniyor! Aynı anda 8 görüntüye kadar değerlendirme yapabilirsiniz!\nEkran Görüntüsünü Temizle düğmesine basmadan sürükleyip bırakarak veya kopyalayıp yapıştırarak daha fazla görüntü ekleyebilirsiniz!',
+    'vi-VN': 'Tính năng tải lên nhiều hình ảnh hiện đã được hỗ trợ! Bạn có thể đánh giá tối đa 8 hình ảnh cùng một lúc!\nBạn cũng có thể thêm hình ảnh bằng cách kéo và thả hoặc sao chép và dán mà không cần nhấn nút Xóa ảnh chụp màn hình!'
   };
 
   const titleTranslations = {
-    'ja-JP': 'Taskbar Hero AI髑大ｮ壼｣ｫ',
+    'ja-JP': 'Taskbar Hero AI鑑定士',
     'en-US': 'Taskbar Hero AI Appraiser',
-    'zh-Hans': 'Taskbar Hero AI 驩ｴ螳壼ｸ・,
-    'zh-Hant': 'Taskbar Hero AI 髑大ｮ壼ｸｫ',
-    'ko-KR': 'Taskbar Hero AI ・川�菩ぎ',
-    'ru-RU': 'ﾐ侑・ﾐｾﾑ・ｵﾐｽﾑ禍ｸﾐｺ Taskbar Hero',
+    'zh-Hans': 'Taskbar Hero AI 鉴定师',
+    'zh-Hant': 'Taskbar Hero AI 鑑定師',
+    'ko-KR': 'Taskbar Hero AI 감정사',
+    'ru-RU': 'ИИ-оценщик Taskbar Hero',
     'es-ES': 'Tasador de IA de Taskbar Hero',
-    'fr-FR': 'ﾃ益aluateur IA Taskbar Hero',
+    'fr-FR': 'Évaluateur IA Taskbar Hero',
     'de-DE': 'Taskbar Hero KI-Gutachter',
     'pt-BR': 'Avaliador de IA do Taskbar Hero',
     'tr-TR': 'Taskbar Hero YZ Eksperi',
-    'vi-VN': 'Chuyﾃｪn gia th蘯ｩm ﾄ黛ｻ杵h AI Taskbar Hero'
+    'vi-VN': 'Chuyên gia thẩm định AI Taskbar Hero'
   };
 
   const descTranslations = {
-    'ja-JP': '蛟牙ｺｫ縺ｮ繧ｹ繧ｯ繝ｪ繝ｼ繝ｳ繧ｷ繝ｧ繝・ヨ縺九ｉ蜊ｳ蠎ｧ縺ｫ蛟､谿ｵ繧定ｦ狗ｩ阪ｂ繧翫∪縺・,
+    'ja-JP': '倉庫のスクリーンショットから即座に値段を見積もります',
     'en-US': 'Instantly appraise prices from your inventory screenshots.',
-    'zh-Hans': '騾夊ｿ・ｻ灘ｺ捺穐蝗ｾ蜊ｳ譌ｶ莨ｰ邂嶺ｻｷ譬ｼ縲・,
-    'zh-Hant': '騾城℃蛟牙ｺｫ謌ｪ蝨門叉譎ゆｼｰ邂怜・譬ｼ縲・,
-    'ko-KR': '・ｸ・､奝�・ｬ ・､增ｬ・ｰ・ｷ・ｼ・・・餓亨 ・・ｩ・・・川�倣鮒・壱共.',
-    'ru-RU': 'ﾐ慴ｳﾐｽﾐｾﾐｲﾐｵﾐｽﾐｽﾐｾ ﾐｾﾑ・ｵﾐｽﾐｸﾐｲﾐｰﾐｹﾑひｵ ﾑ・ｵﾐｽﾑ・ﾐｿﾐｾ ﾑ・ｺﾑﾐｸﾐｽﾑ威ｾﾑひｰﾐｼ ﾐｲﾐｰﾑ威ｵﾐｳﾐｾ ﾐｸﾐｽﾐｲﾐｵﾐｽﾑひｰﾑﾑ・',
-    'es-ES': 'Estima instantﾃ｡neamente los precios desde las capturas de pantalla de tu inventario.',
-    'fr-FR': 'Estimez instantanﾃｩment les prix ﾃ� partir des captures d\'ﾃｩcran de votre inventaire.',
-    'de-DE': 'Schﾃ､tzen Sie Preise sofort anhand von Screenshots Ihres Inventars.',
-    'pt-BR': 'Estime instantaneamente os preﾃｧos a partir das capturas de tela do seu inventﾃ｡rio.',
-    'tr-TR': 'Envanterinizin ekran gﾃｶrﾃｼntﾃｼlerinden anﾄｱnda fiyat tahmini alﾄｱn.',
-    'vi-VN': 'ﾄ雪ｻ杵h giﾃ｡ ngay l蘯ｭp t盻ｩc t盻ｫ 蘯｣nh ch盻･p mﾃ�n hﾃｬnh kho ﾄ黛ｻ・c盻ｧa b蘯｡n.'
+    'zh-Hans': '通过仓库截图即时估算价格。',
+    'zh-Hant': '透過倉庫截圖即時估算價格。',
+    'ko-KR': '인벤토리 스크린샷으로 즉시 가격을 감정합니다.',
+    'ru-RU': 'Мгновенно оценивайте цены по скриншотам вашего инвентаря.',
+    'es-ES': 'Estima instantáneamente los precios desde las capturas de pantalla de tu inventario.',
+    'fr-FR': 'Estimez instantanément les prix à partir des captures d\'écran de votre inventaire.',
+    'de-DE': 'Schätzen Sie Preise sofort anhand von Screenshots Ihres Inventars.',
+    'pt-BR': 'Estime instantaneamente os preços a partir das capturas de tela do seu inventário.',
+    'tr-TR': 'Envanterinizin ekran görüntülerinden anında fiyat tahmini alın.',
+    'vi-VN': 'Định giá ngay lập tức từ ảnh chụp màn hình kho đồ của bạn.'
   };
 
   const appraisingTranslations = {
-    'ja-JP': '髑大ｮ壻ｸｭ...',
+    'ja-JP': '鑑定中...',
     'en-US': 'Appraising...',
-    'zh-Hans': '豁｣蝨ｨ驩ｴ螳・..',
-    'zh-Hant': '豁｣蝨ｨ髑大ｮ・..',
-    'ko-KR': '・川�・・・..',
-    'ru-RU': 'ﾐ樮・ｵﾐｽﾐｺﾐｰ...',
+    'zh-Hans': '正在鉴定...',
+    'zh-Hant': '正在鑑定...',
+    'ko-KR': '감정 중...',
+    'ru-RU': 'Оценка...',
     'es-ES': 'Evaluando...',
-    'fr-FR': 'ﾃ益aluation...',
-    'de-DE': 'Schﾃ､tzung...',
+    'fr-FR': 'Évaluation...',
+    'de-DE': 'Schätzung...',
     'pt-BR': 'Avaliando...',
-    'tr-TR': 'Deﾄ歹rlendiriliyor...',
-    'vi-VN': 'ﾄ紳ng ﾄ黛ｻ杵h giﾃ｡...'
+    'tr-TR': 'Değerlendiriliyor...',
+    'vi-VN': 'Đang định giá...'
   };
 
   const pleaseWaitTranslations = {
-    'ja-JP': '縺励・繧峨￥縺雁ｾ・■縺上□縺輔＞',
+    'ja-JP': 'しばらくお待ちください',
     'en-US': 'Please wait a moment',
-    'zh-Hans': '隸ｷ遞咲ｭ・,
-    'zh-Hant': '隲狗ｨ榊・,
-    'ko-KR': '・�・罹ｧ・・ｰ・､・､・ｼ・ｸ・・,
-    'ru-RU': 'ﾐ渙ｾﾐｴﾐｾﾐｶﾐｴﾐｸﾑひｵ, ﾐｿﾐｾﾐｶﾐｰﾐｻﾑσｹﾑ・ひｰ',
+    'zh-Hans': '请稍等',
+    'zh-Hant': '請稍候',
+    'ko-KR': '잠시만 기다려주세요',
+    'ru-RU': 'Подождите, пожалуйста',
     'es-ES': 'Por favor espera un momento',
     'fr-FR': 'Veuillez patienter',
     'de-DE': 'Bitte warten Sie einen Moment',
     'pt-BR': 'Por favor, aguarde um momento',
-    'tr-TR': 'Lﾃｼtfen biraz bekleyin',
-    'vi-VN': 'Vui lﾃｲng ch盻・trong giﾃ｢y lﾃ｡t'
+    'tr-TR': 'Lütfen biraz bekleyin',
+    'vi-VN': 'Vui lòng chờ trong giây lát'
   };
 
   const clearScreenshotTranslations = {
     'en-US': 'Clear Screenshot',
-    'ja-JP': '逕ｻ蜒上ｒ繧ｯ繝ｪ繧｢',
-    'zh-Hans': '貂・勁謌ｪ蝗ｾ',
-    'zh-Hant': '貂・勁謌ｪ蝨・,
-    'ko-KR': '・､增ｬ・ｰ・ｷ ・・ｰ・ｰ',
-    'ru-RU': 'ﾐ樮・ｸﾑ・ひｸﾑび・ﾑ・ｺﾑﾐｸﾐｽﾑ威ｾﾑ・,
+    'ja-JP': '画像をクリア',
+    'zh-Hans': '清除截图',
+    'zh-Hant': '清除截圖',
+    'ko-KR': '스크린샷 지우기',
+    'ru-RU': 'Очистить скриншот',
     'es-ES': 'Borrar captura',
     'fr-FR': 'Effacer la capture',
-    'de-DE': 'Screenshot lﾃｶschen',
+    'de-DE': 'Screenshot löschen',
     'pt-BR': 'Limpar captura',
-    'tr-TR': 'Ekran Gﾃｶrﾃｼntﾃｼsﾃｼnﾃｼ Temizle',
-    'vi-VN': 'Xﾃｳa 蘯｣nh ch盻･p mﾃ�n hﾃｬnh'
+    'tr-TR': 'Ekran Görüntüsünü Temizle',
+    'vi-VN': 'Xóa ảnh chụp màn hình'
   };
 
   const uploadTitleTranslations = {
     'en-US': 'Drag & Drop or Paste (Ctrl+V) Screenshot',
-    'ja-JP': '繧ｹ繧ｯ繝ｪ繝ｼ繝ｳ繧ｷ繝ｧ繝・ヨ繧偵ラ繝ｩ繝・げ・・ラ繝ｭ繝・・縺ｾ縺溘・繝壹・繧ｹ繝・(Ctrl+V)',
-    'zh-Hans': '諡匁叛謌也ｲ倩ｴｴ (Ctrl+V) 謌ｪ蝗ｾ',
-    'zh-Hant': '諡匁叛謌冶ｲｼ荳・(Ctrl+V) 謌ｪ蝨・,
-    'ko-KR': '・､增ｬ・ｰ・ｷ・・・罹椈・ｸ ・､ ・罹｡ｭ﨑俾ｱｰ・・・呷流・｣・ｰ (Ctrl+V)',
-    'ru-RU': 'ﾐ渙ｵﾑﾐｵﾑひｰﾑ禍ｸﾑひｵ ﾐｸﾐｻﾐｸ ﾐｲﾑ・ひｰﾐｲﾑ袴ひｵ (Ctrl+V) ﾑ・ｺﾑﾐｸﾐｽﾑ威ｾﾑ・,
+    'ja-JP': 'スクリーンショットをドラッグ＆ドロップまたはペースト (Ctrl+V)',
+    'zh-Hans': '拖放或粘贴 (Ctrl+V) 截图',
+    'zh-Hant': '拖放或貼上 (Ctrl+V) 截圖',
+    'ko-KR': '스크린샷을 드래그 앤 드롭하거나 붙여넣기 (Ctrl+V)',
+    'ru-RU': 'Перетащите или вставьте (Ctrl+V) скриншот',
     'es-ES': 'Arrastra y suelta o pega (Ctrl+V) la captura de pantalla',
-    'fr-FR': 'Glissez-dﾃｩposez ou collez (Ctrl+V) la capture d\'ﾃｩcran',
-    'de-DE': 'Screenshot per Drag & Drop oder Einfﾃｼgen (Strg+V) hinzufﾃｼgen',
+    'fr-FR': 'Glissez-déposez ou collez (Ctrl+V) la capture d\'écran',
+    'de-DE': 'Screenshot per Drag & Drop oder Einfügen (Strg+V) hinzufügen',
     'pt-BR': 'Arraste e solte ou cole (Ctrl+V) a captura de tela',
-    'tr-TR': 'Ekran gﾃｶrﾃｼntﾃｼsﾃｼnﾃｼ Sﾃｼrﾃｼkleyip Bﾄｱrakﾄｱn veya Yapﾄｱﾅ殳ﾄｱrﾄｱn (Ctrl+V)',
-    'vi-VN': 'Kﾃｩo & Th蘯｣ ho蘯ｷc Dﾃ｡n (Ctrl+V) 蘯｣nh ch盻･p mﾃ�n hﾃｬnh'
+    'tr-TR': 'Ekran görüntüsünü Sürükleyip Bırakın veya Yapıştırın (Ctrl+V)',
+    'vi-VN': 'Kéo & Thả hoặc Dán (Ctrl+V) ảnh chụp màn hình'
   };
 
   const uploadDescTranslations = {
     'en-US': 'Up to 8 images can be appraised simultaneously',
-    'ja-JP': '8譫壹∪縺ｧ蜷梧凾縺ｫ髑大ｮ壼庄閭ｽ',
-    'zh-Hans': '譛螟壼庄蜷梧慮驩ｴ螳・蠑�蝗ｾ迚・,
-    'zh-Hant': '譛螟壼庄蜷梧凾髑大ｮ・蠑ｵ蝨也援',
-    'ko-KR': '・罹劇 8・･・護ｧ ・呷亨・・・川�・・・･',
-    'ru-RU': 'ﾐ漬ｾﾐｷﾐｼﾐｾﾐｶﾐｽﾐｰ ﾐｾﾐｴﾐｽﾐｾﾐｲﾑﾐｵﾐｼﾐｵﾐｽﾐｽﾐｰﾑ・ﾐｾﾑ・ｵﾐｽﾐｺﾐｰ ﾐｴﾐｾ 8 ﾐｸﾐｷﾐｾﾐｱﾑﾐｰﾐｶﾐｵﾐｽﾐｸﾐｹ',
-    'es-ES': 'Se pueden evaluar hasta 8 imﾃ｡genes simultﾃ｡neamente',
-    'fr-FR': 'Jusqu\'ﾃ� 8 images peuvent ﾃｪtre ﾃｩvaluﾃｩes simultanﾃｩment',
-    'de-DE': 'Bis zu 8 Bilder kﾃｶnnen gleichzeitig bewertet werden',
-    'pt-BR': 'Atﾃｩ 8 imagens podem ser avaliadas simultaneamente',
-    'tr-TR': 'Aynﾄｱ anda 8 gﾃｶrﾃｼntﾃｼye kadar deﾄ歹rlendirme yapﾄｱlabilir',
-    'vi-VN': 'Cﾃｳ th盻・ﾄ妥｡nh giﾃ｡ ﾄ黛ｻ渡g th盻拱 t盻訴 ﾄ疎 8 hﾃｬnh 蘯｣nh'
+    'ja-JP': '8枚まで同時に鑑定可能',
+    'zh-Hans': '最多可同时鉴定8张图片',
+    'zh-Hant': '最多可同時鑑定8張圖片',
+    'ko-KR': '최대 8장까지 동시에 감정 가능',
+    'ru-RU': 'Возможна одновременная оценка до 8 изображений',
+    'es-ES': 'Se pueden evaluar hasta 8 imágenes simultáneamente',
+    'fr-FR': 'Jusqu\'à 8 images peuvent être évaluées simultanément',
+    'de-DE': 'Bis zu 8 Bilder können gleichzeitig bewertet werden',
+    'pt-BR': 'Até 8 imagens podem ser avaliadas simultaneamente',
+    'tr-TR': 'Aynı anda 8 görüntüye kadar değerlendirme yapılabilir',
+    'vi-VN': 'Có thể đánh giá đồng thời tối đa 8 hình ảnh'
   };
   const cashoutAdTranslations = {
-    'en-US': '�庁 Tip: How to use or cash out your Steam Wallet balance',
-    'ja-JP': '�庁 Tips: Steam繧ｦ繧ｩ繝ｬ繝・ヨ縺ｮ謠幃≡陦薙↓縺､縺・※',
-    'zh-Hans': '�庁 謠千､ｺ・壼ｦゆｽ穂ｽｿ逕ｨ謌匁署邇ｰ謔ｨ逧Тteam髓ｱ蛹・ｽ咎｢・,
-    'zh-Hant': '�庁 謠千､ｺ・壼ｦゆｽ穂ｽｿ逕ｨ謌匁署迴ｾ謔ｨ逧Тteam骭｢蛹・､倬｡・,
-    'ko-KR': '�庁 甯・ Steam ・・・・肥複 ・ｬ・ｩ・・・・嶸・ｸ逸剩 ・ｩ・・,
-    'ru-RU': '�庁 ﾐ｡ﾐｾﾐｲﾐｵﾑ・ ﾐ墟ｰﾐｺ ﾐｸﾑ・ｿﾐｾﾐｻﾑ糊ｷﾐｾﾐｲﾐｰﾑび・ﾐｸﾐｻﾐｸ ﾐｲﾑ巾ｲﾐｵﾑ・ひｸ ﾑ・ﾐｵﾐｴﾑ・ひｲﾐｰ ﾑ・ｾ Steam Wallet',
-    'es-ES': '�庁 Consejo: Cﾃｳmo usar o retirar el saldo de tu Cartera de Steam',
-    'fr-FR': '�庁 Astuce : Comment utiliser ou retirer le solde de votre portefeuille Steam',
-    'de-DE': '�庁 Tipp: So nutzen oder auszahlen lassen Sie sich Ihr Steam-Guthaben',
-    'pt-BR': '�庁 Dica: Como usar ou sacar o saldo da sua Carteira Steam',
-    'tr-TR': '�庁 ﾄｰpucu: Steam Cﾃｼzdan bakiyenizi nasﾄｱl kullanﾄｱr veya nakde ﾃｧevirirsiniz',
-    'vi-VN': '�庁 M蘯ｹo: Cﾃ｡ch s盻ｭ d盻･ng ho蘯ｷc rﾃｺt s盻・dﾆｰ Vﾃｭ Steam'
+    'en-US': '💡 Tip: How to use or cash out your Steam Wallet balance',
+    'ja-JP': '💡 Tips: Steamウォレットの換金術について',
+    'zh-Hans': '💡 提示：如何使用或提现您的Steam钱包余额',
+    'zh-Hant': '💡 提示：如何使用或提現您的Steam錢包餘額',
+    'ko-KR': '💡 팁: Steam 지갑 잔액 사용처 및 현금화 방법',
+    'ru-RU': '💡 Совет: Как использовать или вывести средства со Steam Wallet',
+    'es-ES': '💡 Consejo: Cómo usar o retirar el saldo de tu Cartera de Steam',
+    'fr-FR': '💡 Astuce : Comment utiliser ou retirer le solde de votre portefeuille Steam',
+    'de-DE': '💡 Tipp: So nutzen oder auszahlen lassen Sie sich Ihr Steam-Guthaben',
+    'pt-BR': '💡 Dica: Como usar ou sacar o saldo da sua Carteira Steam',
+    'tr-TR': '💡 İpucu: Steam Cüzdan bakiyenizi nasıl kullanır veya nakde çevirirsiniz',
+    'vi-VN': '💡 Mẹo: Cách sử dụng hoặc rút số dư Ví Steam'
   };
 
   const commentsTitleTranslations = {
-    'ja-JP': '�町 繧ｳ繝｡繝ｳ繝域ｬ・, 'en-US': '�町 Comments Section', 'zh-Hans': '�町 隸・ｮｺ蛹ｺ',
-    'zh-Hant': '�町 隧戊ｫ門項', 'ko-KR': '�町 ・縄ｸ ・ｹ・・, 'ru-RU': '�町 ﾐ�ﾐｰﾐｷﾐｴﾐｵﾐｻ ﾐｺﾐｾﾐｼﾐｼﾐｵﾐｽﾑひｰﾑﾐｸﾐｵﾐｲ',
-    'es-ES': '�町 Secciﾃｳn de comentarios', 'fr-FR': '�町 Section des commentaires', 
-    'de-DE': '�町 Kommentarbereich', 'pt-BR': '�町 Seﾃｧﾃ｣o de comentﾃ｡rios', 
-    'tr-TR': '�町 Yorumlar Bﾃｶlﾃｼmﾃｼ', 'vi-VN': '�町 Ph蘯ｧn bﾃｬnh lu蘯ｭn'
+    'ja-JP': '💬 コメント欄', 'en-US': '💬 Comments Section', 'zh-Hans': '💬 评论区',
+    'zh-Hant': '💬 評論區', 'ko-KR': '💬 댓글 섹션', 'ru-RU': '💬 Раздел комментариев',
+    'es-ES': '💬 Sección de comentarios', 'fr-FR': '💬 Section des commentaires', 
+    'de-DE': '💬 Kommentarbereich', 'pt-BR': '💬 Seção de comentários', 
+    'tr-TR': '💬 Yorumlar Bölümü', 'vi-VN': '💬 Phần bình luận'
   };
 
   return (
@@ -714,17 +714,17 @@ export default function ScannerApp() {
               }}
             >
               <option value="en-US" style={{background: '#1a1d24', color: 'white'}}>English</option>
-              <option value="ja-JP" style={{background: '#1a1d24', color: 'white'}}>譌･譛ｬ隱・/option>
-              <option value="zh-Hans" style={{background: '#1a1d24', color: 'white'}}>邂菴謎ｸｭ譁・/option>
-              <option value="zh-Hant" style={{background: '#1a1d24', color: 'white'}}>郢・ｫ比ｸｭ譁・/option>
-              <option value="ko-KR" style={{background: '#1a1d24', color: 'white'}}>﨑懋ｵｭ・ｴ</option>
-              <option value="ru-RU" style={{background: '#1a1d24', color: 'white'}}>ﾐ�ﾑτ・・ｺﾐｸﾐｹ</option>
-              <option value="es-ES" style={{background: '#1a1d24', color: 'white'}}>Espaﾃｱol</option>
-              <option value="fr-FR" style={{background: '#1a1d24', color: 'white'}}>Franﾃｧais</option>
+              <option value="ja-JP" style={{background: '#1a1d24', color: 'white'}}>日本語</option>
+              <option value="zh-Hans" style={{background: '#1a1d24', color: 'white'}}>简体中文</option>
+              <option value="zh-Hant" style={{background: '#1a1d24', color: 'white'}}>繁體中文</option>
+              <option value="ko-KR" style={{background: '#1a1d24', color: 'white'}}>한국어</option>
+              <option value="ru-RU" style={{background: '#1a1d24', color: 'white'}}>Русский</option>
+              <option value="es-ES" style={{background: '#1a1d24', color: 'white'}}>Español</option>
+              <option value="fr-FR" style={{background: '#1a1d24', color: 'white'}}>Français</option>
               <option value="de-DE" style={{background: '#1a1d24', color: 'white'}}>Deutsch</option>
-              <option value="pt-BR" style={{background: '#1a1d24', color: 'white'}}>Portuguﾃｪs (BR)</option>
-              <option value="tr-TR" style={{background: '#1a1d24', color: 'white'}}>Tﾃｼrkﾃｧe</option>
-              <option value="vi-VN" style={{background: '#1a1d24', color: 'white'}}>Ti蘯ｿng Vi盻㏄</option>
+              <option value="pt-BR" style={{background: '#1a1d24', color: 'white'}}>Português (BR)</option>
+              <option value="tr-TR" style={{background: '#1a1d24', color: 'white'}}>Türkçe</option>
+              <option value="vi-VN" style={{background: '#1a1d24', color: 'white'}}>Tiếng Việt</option>
             </select>
           </div>
         </div>
@@ -745,38 +745,38 @@ export default function ScannerApp() {
           const noticeTrans = {
             title: { 
               'en-US': 'Notice', 
-              'ja-JP': '縺顔衍繧峨○',
-              'zh-Hans': '騾夂衍',
-              'zh-Hant': '騾夂衍',
-              'ko-KR': '・ｵ・・ｬ﨑ｭ',
-              'ru-RU': 'ﾐ｣ﾐｲﾐｵﾐｴﾐｾﾐｼﾐｻﾐｵﾐｽﾐｸﾐｵ',
+              'ja-JP': 'お知らせ',
+              'zh-Hans': '通知',
+              'zh-Hant': '通知',
+              'ko-KR': '공지사항',
+              'ru-RU': 'Уведомление',
               'es-ES': 'Aviso',
               'fr-FR': 'Avis',
               'de-DE': 'Hinweis',
               'pt-BR': 'Aviso',
               'tr-TR': 'Duyuru',
-              'vi-VN': 'Thﾃｴng bﾃ｡o'
+              'vi-VN': 'Thông báo'
             },
             text: { 
               'en-US': 'Currently, there is an issue where the database is unstable and prices may not be displayed correctly. We apologize for the inconvenience, but please wait until it is restored.', 
-              'ja-JP': '迴ｾ蝨ｨ繝・・繧ｿ繝吶・繧ｹ縺御ｸ榊ｮ牙ｮ壹〒驥鷹｡阪′豁｣縺励￥陦ｨ遉ｺ縺輔ｌ縺ｪ縺・お繝ｩ繝ｼ縺後≠繧翫∪縺吶ゅ♀謇区焚縺ｧ縺吶′蠕ｩ譌ｧ縺ｾ縺ｧ縺励・繧峨￥縺雁ｾ・■縺上□縺輔＞縲・,
-              'zh-Hans': '逶ｮ蜑榊ｭ伜惠謨ｰ謐ｮ蠎謎ｸ咲ｨｳ螳壼ｯｼ閾ｴ莉ｷ譬ｼ譌�豕墓ｭ｣遑ｮ譏ｾ遉ｺ逧・漠隸ｯ縲らｻ呎お蟶ｦ譚･荳堺ｾｿ・梧噴隸ｷ隹・ｧ｣・瑚ｯｷ閠仙ｿ・ｭ牙ｾ・△螟阪・,
-              'zh-Hant': '逶ｮ蜑榊ｭ伜惠雉・侭蠎ｫ荳咲ｩｩ螳壼ｰ手・蜒ｹ譬ｼ辟｡豕墓ｭ｣遒ｺ鬘ｯ遉ｺ逧・険隱､縲らｵｦ謔ｨ蟶ｶ萓・ｸ堺ｾｿ・梧噴隲玖ｦ玖ｫ抵ｼ瑚ｫ玖仙ｿ・ｭ牙ｾ・△蠕ｩ縲・,
-              'ko-KR': '嶸・椪 ・ｰ・ｴ奓ｰ・�・ｴ・､・ ・溢譜・倣葺・ｬ ・・ｩ・ｴ ・ｬ・罷･ｴ・・岺懍亨・們ｧ ・危株 ・､・俾ｰ ・溢慣・壱共. ・逸失・・・ｼ・・・罹�､ ・・・﨑俯ｩｰ ・ｵ・ｬ・� ・語ｹ護ｧ ・�・・・ｰ・､・､ ・ｼ・懋ｸｰ ・罷檮・壱共.',
-              'ru-RU': 'ﾐ・ﾐｽﾐｰﾑ・ひｾﾑ肖禍ｵﾐｵ ﾐｲﾑﾐｵﾐｼﾑ・ﾑ・τ禍ｵﾑ・ひｲﾑσｵﾑ・ﾐｾﾑ威ｸﾐｱﾐｺﾐｰ, ﾐｸﾐｷ-ﾐｷﾐｰ ﾐｺﾐｾﾑひｾﾑﾐｾﾐｹ ﾐｱﾐｰﾐｷﾐｰ ﾐｴﾐｰﾐｽﾐｽﾑ錦・ﾐｽﾐｵﾑ・ひｰﾐｱﾐｸﾐｻﾑ糊ｽﾐｰ ﾐｸ ﾑ・ｵﾐｽﾑ・ﾐｼﾐｾﾐｳﾑτ・ﾐｾﾑひｾﾐｱﾑﾐｰﾐｶﾐｰﾑび袴・・ﾐｽﾐｵﾐｺﾐｾﾑﾑﾐｵﾐｺﾑひｽﾐｾ. ﾐ湲ﾐｸﾐｽﾐｾﾑ・ｸﾐｼ ﾐｸﾐｷﾐｲﾐｸﾐｽﾐｵﾐｽﾐｸﾑ・ﾐｷﾐｰ ﾐｽﾐｵﾑσｴﾐｾﾐｱﾑ・ひｲﾐｰ, ﾐｿﾐｾﾐｶﾐｰﾐｻﾑσｹﾑ・ひｰ, ﾐｿﾐｾﾐｴﾐｾﾐｶﾐｴﾐｸﾑひｵ ﾐｴﾐｾ ﾐｲﾐｾﾑ・・ひｰﾐｽﾐｾﾐｲﾐｻﾐｵﾐｽﾐｸﾑ・ﾑﾐｰﾐｱﾐｾﾑひｾﾑ・ｿﾐｾﾑ・ｾﾐｱﾐｽﾐｾﾑ・ひｸ.',
+              'ja-JP': '現在データベースが不安定で金額が正しく表示されないエラーがあります。お手数ですが復旧までしばらくお待ちください。',
+              'zh-Hans': '目前存在数据库不稳定导致价格无法正确显示的错误。给您带来不便，敬请谅解，请耐心等待恢复。',
+              'zh-Hant': '目前存在資料庫不穩定導致價格無法正確顯示的錯誤。給您帶來不便，敬請見諒，請耐心等待恢復。',
+              'ko-KR': '현재 데이터베이스가 불안정하여 가격이 올바르게 표시되지 않는 오류가 있습니다. 불편을 끼쳐 드려 죄송하며 복구될 때까지 잠시 기다려 주시기 바랍니다.',
+              'ru-RU': 'В настоящее время существует ошибка, из-за которой база данных нестабильна и цены могут отображаться некорректно. Приносим извинения за неудобства, пожалуйста, подождите до восстановления работоспособности.',
               'es-ES': 'Actualmente, hay un error donde la base de datos es inestable y los precios pueden no mostrarse correctamente. Nos disculpamos por las molestias y le rogamos que espere hasta que se restaure el servicio.',
-              'fr-FR': 'Actuellement, il y a une erreur oﾃｹ la base de donnﾃｩes est instable et les prix peuvent ne pas s\'afficher correctement. Nous nous excusons pour le dﾃｩsagrﾃｩment et vous prions de bien vouloir patienter jusqu\'ﾃ� ce que le service soit rﾃｩtabli.',
-              'de-DE': 'Derzeit gibt es einen Fehler, bei dem die Datenbank instabil ist und Preise mﾃｶglicherweise nicht korrekt angezeigt werden. Wir entschuldigen uns fﾃｼr die Unannehmlichkeiten, bitte warten Sie, bis der Dienst wiederhergestellt ist.',
-              'pt-BR': 'Atualmente, hﾃ｡ um erro onde o banco de dados estﾃ｡ instﾃ｡vel e os preﾃｧos podem nﾃ｣o ser exibidos corretamente. Pedimos desculpas pelo inconveniente, por favor aguarde atﾃｩ que o serviﾃｧo seja restaurado.',
-              'tr-TR': 'ﾅ柆 anda, veritabanﾄｱnﾄｱn kararsﾄｱz olduﾄ殷 ve fiyatlarﾄｱn doﾄ殲u gﾃｶrﾃｼntﾃｼlenemeyebileceﾄ殃 bir hata var. Verdiﾄ殃miz rahatsﾄｱzlﾄｱktan dolayﾄｱ ﾃｶzﾃｼr dileriz, lﾃｼtfen sistem onarﾄｱlana kadar bekleyin.',
-              'vi-VN': 'Hi盻㌻ t蘯｡i, cﾃｳ m盻冲 l盻擁 khi蘯ｿn cﾆ｡ s盻・d盻ｯ li盻㎡ khﾃｴng 盻貧 ﾄ黛ｻ杵h vﾃ� giﾃ｡ cﾃｳ th盻・khﾃｴng ﾄ柁ｰ盻｣c hi盻ハ th盻・chﾃｭnh xﾃ｡c. Chﾃｺng tﾃｴi xin l盻擁 vﾃｬ s盻ｱ b蘯･t ti盻㌻ nﾃ�y, vui lﾃｲng ﾄ黛ｻ｣i cho ﾄ黛ｺｿn khi d盻議h v盻･ ﾄ柁ｰ盻｣c khﾃｴi ph盻･c.'
+              'fr-FR': 'Actuellement, il y a une erreur où la base de données est instable et les prix peuvent ne pas s\'afficher correctement. Nous nous excusons pour le désagrément et vous prions de bien vouloir patienter jusqu\'à ce que le service soit rétabli.',
+              'de-DE': 'Derzeit gibt es einen Fehler, bei dem die Datenbank instabil ist und Preise möglicherweise nicht korrekt angezeigt werden. Wir entschuldigen uns für die Unannehmlichkeiten, bitte warten Sie, bis der Dienst wiederhergestellt ist.',
+              'pt-BR': 'Atualmente, há um erro onde o banco de dados está instável e os preços podem não ser exibidos corretamente. Pedimos desculpas pelo inconveniente, por favor aguarde até que o serviço seja restaurado.',
+              'tr-TR': 'Şu anda, veritabanının kararsız olduğu ve fiyatların doğru görüntülenemeyebileceği bir hata var. Verdiğimiz rahatsızlıktan dolayı özür dileriz, lütfen sistem onarılana kadar bekleyin.',
+              'vi-VN': 'Hiện tại, có một lỗi khiến cơ sở dữ liệu không ổn định và giá có thể không được hiển thị chính xác. Chúng tôi xin lỗi vì sự bất tiện này, vui lòng đợi cho đến khi dịch vụ được khôi phục.'
             }
           };
           
           return (
             <>
               <h2 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#ffcc80' }}>
-                <span style={{ marginRight: '8px' }}>笞�・・/span>
+                <span style={{ marginRight: '8px' }}>⚠️</span>
                 {noticeTrans.title[selectedLang] || noticeTrans.title['ja-JP']}
               </h2>
               <p style={{ color: 'white', lineHeight: '1.6' }}>
@@ -825,7 +825,7 @@ export default function ScannerApp() {
             onClick={() => document.getElementById('fileInput').click()}
             style={{ display: (results.length > 0 || isScanning) ? 'none' : 'flex', pointerEvents: dragActive ? 'none' : 'auto' }}
           >
-            <div className={styles.uploadIcon}>�踏</div>
+            <div className={styles.uploadIcon}>📥</div>
             <h3>{uploadTitleTranslations[selectedLang] || uploadTitleTranslations['en-US']}</h3>
             <p style={{ color: 'var(--text-secondary)', marginTop: '8px' }}>
               {uploadDescTranslations[selectedLang] || uploadDescTranslations['en-US']}
@@ -960,36 +960,36 @@ export default function ScannerApp() {
             }
             
             const totalLabels = {
-              'en-US': 'Total Value:', 'ja-JP': '蜷郁ｨ磯≡鬘・', 'zh-Hans': '諤ｻ隶｡驥鷹｢・', 'zh-Hant': '邵ｽ險磯≡鬘・',
-              'ko-KR': '・晧複:', 'ru-RU': 'ﾐ榧ｱﾑ禍ｰﾑ・ﾑ・ひｾﾐｸﾐｼﾐｾﾑ・び・', 'es-ES': 'Valor total:', 'fr-FR': 'Valeur totale:',
-              'de-DE': 'Gesamtwert:', 'pt-BR': 'Valor total:', 'tr-TR': 'Toplam Deﾄ歹r:', 'vi-VN': 'T盻貧g giﾃ｡ tr盻・'
+              'en-US': 'Total Value:', 'ja-JP': '合計金額:', 'zh-Hans': '总计金额:', 'zh-Hant': '總計金額:',
+              'ko-KR': '총액:', 'ru-RU': 'Общая стоимость:', 'es-ES': 'Valor total:', 'fr-FR': 'Valeur totale:',
+              'de-DE': 'Gesamtwert:', 'pt-BR': 'Valor total:', 'tr-TR': 'Toplam Değer:', 'vi-VN': 'Tổng giá trị:'
             };
             const totalLabel = totalLabels[selectedLang] || 'Total Value:';
             
             const addBtnTranslations = {
-              'en-US': '筐・Add Item Manually', 'ja-JP': '筐・謇句虚縺ｧ繧｢繧､繝・Β繧定ｿｽ蜉�', 'zh-Hans': '筐・謇句勘豺ｻ蜉�迚ｩ蜩・,
-              'zh-Hant': '筐・謇句虚譁ｰ蠅樒黄蜩・, 'ko-KR': '筐・・俯徐・ｼ・・・・擽奛・・緋ｰ', 'ru-RU': '筐・ﾐ頒ｾﾐｱﾐｰﾐｲﾐｸﾑび・ﾐｿﾑﾐｵﾐｴﾐｼﾐｵﾑ・ﾐｲﾑﾑτ・ｽﾑτ・,
-              'es-ES': '筐・Aﾃｱadir objeto manualmente', 'fr-FR': '筐・Ajouter un objet manuellement',
-              'de-DE': '筐・Element manuell hinzufﾃｼgen', 'pt-BR': '筐・Adicionar item manualmente',
-              'tr-TR': '筐・ﾃ牝歹yi Manuel Ekle', 'vi-VN': '筐・Thﾃｪm v蘯ｭt ph蘯ｩm th盻ｧ cﾃｴng'
+              'en-US': '➕ Add Item Manually', 'ja-JP': '➕ 手動でアイテムを追加', 'zh-Hans': '➕ 手动添加物品',
+              'zh-Hant': '➕ 手動新增物品', 'ko-KR': '➕ 수동으로 아이템 추가', 'ru-RU': '➕ Добавить предмет вручную',
+              'es-ES': '➕ Añadir objeto manualmente', 'fr-FR': '➕ Ajouter un objet manuellement',
+              'de-DE': '➕ Element manuell hinzufügen', 'pt-BR': '➕ Adicionar item manualmente',
+              'tr-TR': '➕ Öğeyi Manuel Ekle', 'vi-VN': '➕ Thêm vật phẩm thủ công'
             };
-            const addBtnLabel = addBtnTranslations[selectedLang] || '筐・Add Item Manually';
+            const addBtnLabel = addBtnTranslations[selectedLang] || '➕ Add Item Manually';
 
             const sortPriceTranslations = {
-              'ja-JP': '�腸 驥鷹｡埼�・〒繧ｽ繝ｼ繝・, 'en-US': '�腸 Sort by Price', 'zh-Hans': '�腸 謖我ｻｷ譬ｼ謗貞ｺ・,
-              'zh-Hant': '�腸 謖牙・譬ｼ謗貞ｺ・, 'ko-KR': '�腸 ・・ｩ・・・簿�ｬ', 'ru-RU': '�腸 ﾐ｡ﾐｾﾑﾑひｸﾑﾐｾﾐｲﾐｰﾑび・ﾐｿﾐｾ ﾑ・ｵﾐｽﾐｵ',
-              'es-ES': '�腸 Ordenar por precio', 'fr-FR': '�腸 Trier par prix', 'de-DE': '�腸 Nach Preis sortieren',
-              'pt-BR': '�腸 Ordenar por preﾃｧo', 'tr-TR': '�腸 Fiyata gﾃｶre sﾄｱrala', 'vi-VN': '�腸 S蘯ｯp x蘯ｿp theo giﾃ｡'
+              'ja-JP': '💰 金額順でソート', 'en-US': '💰 Sort by Price', 'zh-Hans': '💰 按价格排序',
+              'zh-Hant': '💰 按價格排序', 'ko-KR': '💰 가격순 정렬', 'ru-RU': '💰 Сортировать по цене',
+              'es-ES': '💰 Ordenar por precio', 'fr-FR': '💰 Trier par prix', 'de-DE': '💰 Nach Preis sortieren',
+              'pt-BR': '💰 Ordenar por preço', 'tr-TR': '💰 Fiyata göre sırala', 'vi-VN': '💰 Sắp xếp theo giá'
             };
-            const sortPriceLabel = sortPriceTranslations[selectedLang] || '�腸 Sort by Price';
+            const sortPriceLabel = sortPriceTranslations[selectedLang] || '💰 Sort by Price';
             
             const sortRestoreTranslations = {
-              'ja-JP': '竊ｺ 蜈・・鬆・↓謌ｻ縺・, 'en-US': '竊ｺ Restore Order', 'zh-Hans': '竊ｺ 諱｢螟榊次蠎・,
-              'zh-Hant': '竊ｺ 諱｢蠕ｩ蜴溷ｺ・, 'ko-KR': '竊ｺ ・尖椈 ・懍・・・, 'ru-RU': '竊ｺ ﾐ漬ｾﾑ・・ひｰﾐｽﾐｾﾐｲﾐｸﾑび・ﾐｿﾐｾﾑﾑ紹ｴﾐｾﾐｺ',
-              'es-ES': '竊ｺ Restaurar orden', 'fr-FR': '竊ｺ Restaurer l\'ordre', 'de-DE': '竊ｺ Reihenfolge wiederherstellen',
-              'pt-BR': '竊ｺ Restaurar ordem', 'tr-TR': '竊ｺ Sﾄｱrayﾄｱ geri yﾃｼkle', 'vi-VN': '竊ｺ Khﾃｴi ph盻･c th盻ｩ t盻ｱ'
+              'ja-JP': '↺ 元の順に戻す', 'en-US': '↺ Restore Order', 'zh-Hans': '↺ 恢复原序',
+              'zh-Hant': '↺ 恢復原序', 'ko-KR': '↺ 원래 순서로', 'ru-RU': '↺ Восстановить порядок',
+              'es-ES': '↺ Restaurar orden', 'fr-FR': '↺ Restaurer l\'ordre', 'de-DE': '↺ Reihenfolge wiederherstellen',
+              'pt-BR': '↺ Restaurar ordem', 'tr-TR': '↺ Sırayı geri yükle', 'vi-VN': '↺ Khôi phục thứ tự'
             };
-            const sortRestoreLabel = sortRestoreTranslations[selectedLang] || '竊ｺ Restore Order';
+            const sortRestoreLabel = sortRestoreTranslations[selectedLang] || '↺ Restore Order';
 
             return (
               <>
@@ -1011,7 +1011,7 @@ export default function ScannerApp() {
                       onMouseOver={(e) => e.currentTarget.style.background = '#111'}
                       onMouseOut={(e) => e.currentTarget.style.background = '#000'}
                     >
-                      �撫 Post
+                      𝕏 Post
                     </button>
                   </div>
                 )}
@@ -1150,16 +1150,16 @@ export default function ScannerApp() {
                       const englishName = names['en-US'] || item.name.replace('.png', '');
                       
                       const labelTranslations = {
-                        'en-US': 'Recent Sold:', 'ja-JP': '逶ｴ霑代・蜿門ｼ・', 'zh-Hans': '譛霑台ｺ､譏・', 'zh-Hant': '譛霑台ｺ､譏・',
-                        'ko-KR': '・懋ｷｼ ・ｰ・・', 'ru-RU': 'ﾐ渙ｾﾑ・ｻﾐｵﾐｴﾐｽﾑ肖・ﾐｿﾑﾐｾﾐｴﾐｰﾐｶﾐｰ:', 'es-ES': 'ﾃ嗟tima venta:', 'fr-FR': 'Derniﾃｨre vente:',
-                        'de-DE': 'Zuletzt verkauft:', 'pt-BR': 'ﾃ嗟tima venda:', 'tr-TR': 'Son satﾄｱﾅ・', 'vi-VN': 'ﾄ静｣ bﾃ｡n g蘯ｧn ﾄ妥｢y:'
+                        'en-US': 'Recent Sold:', 'ja-JP': '直近の取引:', 'zh-Hans': '最近交易:', 'zh-Hant': '最近交易:',
+                        'ko-KR': '최근 거래:', 'ru-RU': 'Последняя продажа:', 'es-ES': 'Última venta:', 'fr-FR': 'Dernière vente:',
+                        'de-DE': 'Zuletzt verkauft:', 'pt-BR': 'Última venda:', 'tr-TR': 'Son satış:', 'vi-VN': 'Đã bán gần đây:'
                       };
                       const recentSoldLabel = labelTranslations[selectedLang] || 'Recent Sold:';
 
                       const lowestLabelTranslations = {
-                        'en-US': 'Lowest Listing:', 'ja-JP': '譛菴主・蜩・', 'zh-Hans': '譛菴惹ｸ頑楔:', 'zh-Hant': '譛菴惹ｸ頑楔:',
-                        'ko-KR': '・懍�・:', 'ru-RU': 'ﾐ｡ﾐｰﾐｼﾐｰﾑ・ﾐｽﾐｸﾐｷﾐｺﾐｰﾑ・ﾑ・ｵﾐｽﾐｰ:', 'es-ES': 'Listado mﾃ｡s bajo:', 'fr-FR': 'Liste la plus basse:',
-                        'de-DE': 'Niedrigstes Angebot:', 'pt-BR': 'Menor preﾃｧo:', 'tr-TR': 'En Dﾃｼﾅ淌ｼk ﾄｰlan:', 'vi-VN': 'Danh sﾃ｡ch th蘯･p nh蘯･t:'
+                        'en-US': 'Lowest Listing:', 'ja-JP': '最低出品:', 'zh-Hans': '最低上架:', 'zh-Hant': '最低上架:',
+                        'ko-KR': '최저가:', 'ru-RU': 'Самая низкая цена:', 'es-ES': 'Listado más bajo:', 'fr-FR': 'Liste la plus basse:',
+                        'de-DE': 'Niedrigstes Angebot:', 'pt-BR': 'Menor preço:', 'tr-TR': 'En Düşük İlan:', 'vi-VN': 'Danh sách thấp nhất:'
                       };
                       const lowestLabel = lowestLabelTranslations[selectedLang] || 'Lowest Listing:';
                       
@@ -1228,15 +1228,15 @@ export default function ScannerApp() {
                                       item.rarity === 'COSMIC' ? '#ffffff' : 'var(--text-secondary)'
                               }}>
                                 {getRarityLabel(item.rarity)}
-                              </span> 窶｢ {item.matchRate.toFixed(1)}% Match
+                              </span> • {item.matchRate.toFixed(1)}% Match
                               <br/>
                               <a 
                                 href={steamUrl} 
                                 target="_blank" 
-                                rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} 
+                                rel="noopener noreferrer" 
                                 style={{ color: '#64b5f6', textDecoration: 'none', fontSize: '0.85rem', display: 'inline-flex', alignItems: 'center', gap: '4px', marginTop: '6px', padding: '2px 8px', background: 'rgba(33, 150, 243, 0.1)', borderRadius: '12px', border: '1px solid rgba(33, 150, 243, 0.3)' }}
                               >
-                                �將 Steam Market
+                                🛒 Steam Market
                               </a>
                             </div>
                           </div>
@@ -1258,12 +1258,12 @@ export default function ScannerApp() {
                               onClick={() => handleEditClick(idx, item)}
                               title="Edit"
                               style={{ background: 'rgba(255,255,255,0.1)', border: 'none', color: 'white', width: '28px', height: '28px', borderRadius: '4px', cursor: 'pointer', fontSize: '14px' }}
-                            >笨・/button>
+                            >✎</button>
                             <button 
                               onClick={() => removeItem(idx)}
                               title="Remove"
                               style={{ background: 'rgba(244,67,54,0.1)', border: 'none', color: '#f44336', width: '28px', height: '28px', borderRadius: '4px', cursor: 'pointer', fontSize: '14px' }}
-                            >笨・/button>
+                            >✖</button>
                           </div>
                         </div>
                       );
@@ -1321,10 +1321,10 @@ export default function ScannerApp() {
       }}>
         {(() => {
           const guideTrans = {
-            title: { 'en-US': 'How to Use', 'ja-JP': '菴ｿ縺・婿', 'zh-Hans': '菴ｿ逕ｨ譁ｹ豕・, 'zh-Hant': '菴ｿ逕ｨ譁ｹ豕・, 'ko-KR': '・ｬ・ｩ ・ｩ・・, 'ru-RU': 'ﾐ墟ｰﾐｺ ﾐｸﾑ・ｿﾐｾﾐｻﾑ糊ｷﾐｾﾐｲﾐｰﾑび・, 'es-ES': 'Cﾃｳmo usar', 'fr-FR': 'Comment utiliser', 'de-DE': 'Wie man es benutzt', 'pt-BR': 'Como usar', 'tr-TR': 'Nasﾄｱl Kullanﾄｱlﾄｱr', 'vi-VN': 'Cﾃ｡ch s盻ｭ d盻･ng' },
-            step1: { 'en-US': '1. Take a screenshot of your in-game inventory.', 'ja-JP': '1. 繧ｲ繝ｼ繝�蜀・〒繧､繝ｳ繝吶Φ繝医Μ・医い繧､繝・Β谺・ｼ峨・繧ｹ繧ｯ繝ｪ繝ｼ繝ｳ繧ｷ繝ｧ繝・ヨ繧呈聴蠖ｱ縺励∪縺吶・, 'zh-Hans': '1. 蝨ｨ貂ｸ謌丈ｸｭ謌ｪ蜿匁お逧・黄蜩∵�上・, 'zh-Hant': '1. 蝨ｨ驕頑梓荳ｭ謌ｪ蜿匁お逧・黄蜩∵ｬ・・, 'ko-KR': '1. ・護桷 ・ｴ ・ｸ・､奝�・ｬ・・・､增ｬ・ｰ・ｷ・・・作慣・壱共.', 'ru-RU': '1. ﾐ｡ﾐｴﾐｵﾐｻﾐｰﾐｹﾑひｵ ﾑ・ｺﾑﾐｸﾐｽﾑ威ｾﾑ・ﾐｲﾐｰﾑ威ｵﾐｳﾐｾ ﾐｸﾐｽﾐｲﾐｵﾐｽﾑひｰﾑﾑ・ﾐｲ ﾐｸﾐｳﾑﾐｵ.', 'es-ES': '1. Toma una captura de pantalla de tu inventario en el juego.', 'fr-FR': '1. Prenez une capture d\'ﾃｩcran de votre inventaire en jeu.', 'de-DE': '1. Mache einen Screenshot deines Inventars im Spiel.', 'pt-BR': '1. Tire uma captura de tela do seu inventﾃ｡rio no jogo.', 'tr-TR': '1. Oyun iﾃｧi envanterinizin ekran gﾃｶrﾃｼntﾃｼsﾃｼnﾃｼ alﾄｱn.', 'vi-VN': '1. Ch盻･p 蘯｣nh mﾃ�n hﾃｬnh kho ﾄ黛ｻ・trong trﾃｲ chﾆ｡i c盻ｧa b蘯｡n.' },
-            step2: { 'en-US': '2. Drag & drop the image into the scanner above.', 'ja-JP': '2. 謦ｮ蠖ｱ縺励◆逕ｻ蜒上ｒ荳翫・繧ｹ繧ｭ繝｣繝翫・縺ｫ繝峨Λ繝・げ・・ラ繝ｭ繝・・縺励∪縺吶・, 'zh-Hans': '2. 蟆・崟迚・許謾ｾ蛻ｰ荳頑婿逧・沖謠丈ｻｪ荳ｭ縲・, 'zh-Hant': '2. 蟆・恂迚・許謾ｾ蛻ｰ荳頑婿逧・祉謠丞о荳ｭ縲・, 'ko-KR': '2. ・ｴ・ｸ・・ｼ ・・・､・尖ц・・・罹椈・ｸ ・､ ・罹｡ｭ﨑ｩ・壱共.', 'ru-RU': '2. ﾐ渙ｵﾑﾐｵﾑひｰﾑ禍ｸﾑひｵ ﾐｸﾐｷﾐｾﾐｱﾑﾐｰﾐｶﾐｵﾐｽﾐｸﾐｵ ﾐｲ ﾑ・ｺﾐｰﾐｽﾐｵﾑ ﾐｲﾑ錦威ｵ.', 'es-ES': '2. Arrastra y suelta la imagen en el escﾃ｡ner de arriba.', 'fr-FR': '2. Glissez-dﾃｩposez l\'image dans le scanner ci-dessus.', 'de-DE': '2. Ziehe das Bild per Drag & Drop in den Scanner oben.', 'pt-BR': '2. Arraste e solte a imagem no scanner acima.', 'tr-TR': '2. Resmi yukarﾄｱdaki tarayﾄｱcﾄｱya sﾃｼrﾃｼkleyip bﾄｱrakﾄｱn.', 'vi-VN': '2. Kﾃｩo vﾃ� th蘯｣ hﾃｬnh 蘯｣nh vﾃ�o mﾃ｡y quﾃｩt 盻・trﾃｪn.' },
-            example: { 'en-US': '�庁 Example: Make sure the image looks like this for the best accuracy!', 'ja-JP': '�庁 萓・ 莉･荳九・繧医≧縺ｪ邯ｺ鮗励↓譫�縺悟・縺｣縺溽判蜒上□縺ｨ縲∵怙繧よｭ｣遒ｺ縺ｫ隱崎ｭ倥〒縺阪∪縺呻ｼ・, 'zh-Hans': '�庁 遉ｺ萓具ｼ壼ワ霑呎�ｷ貂・匆逧・穐蝗ｾ蜿ｯ莉･闔ｷ蠕玲怙鬮倡噪隸・悪蜃・｡ｮ邇・ｼ・, 'zh-Hant': '�庁 遉ｺ萓具ｼ壼ワ騾呎ｨ｣貂・匆逧・穐蝨門庄莉･迯ｲ蠕玲怙鬮倡噪隴伜挨貅也｢ｺ邇・ｼ・, 'ko-KR': '�庁 ・溢亨: ・ｴ・ｰ ・晧攪 ・罷＃﨑・・､增ｬ・ｰ・ｷ・ｴ ・・･ ・倣剳﨑俾ｲ・・ｸ・晤姓・壱共!', 'ru-RU': '�庁 ﾐ湲ﾐｸﾐｼﾐｵﾑ: ﾐ｣ﾐｱﾐｵﾐｴﾐｸﾑひｵﾑ・・ ﾑ・ひｾ ﾐｸﾐｷﾐｾﾐｱﾑﾐｰﾐｶﾐｵﾐｽﾐｸﾐｵ ﾐｲﾑ巾ｳﾐｻﾑ紹ｴﾐｸﾑ・ﾑひｰﾐｺ ﾐｴﾐｻﾑ・ﾐｻﾑτ・威ｵﾐｹ ﾑひｾﾑ・ｽﾐｾﾑ・ひｸ!', 'es-ES': '�庁 Ejemplo: ﾂ｡Asegﾃｺrate de que la imagen se vea asﾃｭ para obtener la mejor precisiﾃｳn!', 'fr-FR': '�庁 Exemple: Assurez-vous que l\'image ressemble ﾃ� ceci pour une meilleure prﾃｩcision!', 'de-DE': '�庁 Beispiel: Stelle sicher, dass das Bild so aussieht, um die beste Genauigkeit zu erzielen!', 'pt-BR': '�庁 Exemplo: Certifique-se de que a imagem seja assim para melhor precisﾃ｣o!', 'tr-TR': '�庁 ﾃ睦nek: En iyi doﾄ殲uluk iﾃｧin gﾃｶrﾃｼntﾃｼnﾃｼn bﾃｶyle gﾃｶrﾃｼndﾃｼﾄ淌ｼnden emin olun!', 'vi-VN': '�庁 Vﾃｭ d盻･: ﾄ雪ｺ｣m b蘯｣o hﾃｬnh 蘯｣nh gi盻創g nhﾆｰ th蘯ｿ nﾃ�y ﾄ黛ｻ・cﾃｳ ﾄ黛ｻ・chﾃｭnh xﾃ｡c t盻奏 nh蘯･t!' }
+            title: { 'en-US': 'How to Use', 'ja-JP': '使い方', 'zh-Hans': '使用方法', 'zh-Hant': '使用方法', 'ko-KR': '사용 방법', 'ru-RU': 'Как использовать', 'es-ES': 'Cómo usar', 'fr-FR': 'Comment utiliser', 'de-DE': 'Wie man es benutzt', 'pt-BR': 'Como usar', 'tr-TR': 'Nasıl Kullanılır', 'vi-VN': 'Cách sử dụng' },
+            step1: { 'en-US': '1. Take a screenshot of your in-game inventory.', 'ja-JP': '1. ゲーム内でインベントリ（アイテム欄）のスクリーンショットを撮影します。', 'zh-Hans': '1. 在游戏中截取您的物品栏。', 'zh-Hant': '1. 在遊戲中截取您的物品欄。', 'ko-KR': '1. 게임 내 인벤토리의 스크린샷을 찍습니다.', 'ru-RU': '1. Сделайте скриншот вашего инвентаря в игре.', 'es-ES': '1. Toma una captura de pantalla de tu inventario en el juego.', 'fr-FR': '1. Prenez une capture d\'écran de votre inventaire en jeu.', 'de-DE': '1. Mache einen Screenshot deines Inventars im Spiel.', 'pt-BR': '1. Tire uma captura de tela do seu inventário no jogo.', 'tr-TR': '1. Oyun içi envanterinizin ekran görüntüsünü alın.', 'vi-VN': '1. Chụp ảnh màn hình kho đồ trong trò chơi của bạn.' },
+            step2: { 'en-US': '2. Drag & drop the image into the scanner above.', 'ja-JP': '2. 撮影した画像を上のスキャナーにドラッグ＆ドロップします。', 'zh-Hans': '2. 将图片拖放到上方的扫描仪中。', 'zh-Hant': '2. 將圖片拖放到上方的掃描儀中。', 'ko-KR': '2. 이미지를 위 스캐너에 드래그 앤 드롭합니다.', 'ru-RU': '2. Перетащите изображение в сканер выше.', 'es-ES': '2. Arrastra y suelta la imagen en el escáner de arriba.', 'fr-FR': '2. Glissez-déposez l\'image dans le scanner ci-dessus.', 'de-DE': '2. Ziehe das Bild per Drag & Drop in den Scanner oben.', 'pt-BR': '2. Arraste e solte a imagem no scanner acima.', 'tr-TR': '2. Resmi yukarıdaki tarayıcıya sürükleyip bırakın.', 'vi-VN': '2. Kéo và thả hình ảnh vào máy quét ở trên.' },
+            example: { 'en-US': '💡 Example: Make sure the image looks like this for the best accuracy!', 'ja-JP': '💡 例: 以下のような綺麗に枠が写った画像だと、最も正確に認識できます！', 'zh-Hans': '💡 示例：像这样清晰的截图可以获得最高的识别准确率！', 'zh-Hant': '💡 示例：像這樣清晰的截圖可以獲得最高的識別準確率！', 'ko-KR': '💡 예시: 이런 식의 깔끔한 스크린샷이 가장 정확하게 인식됩니다!', 'ru-RU': '💡 Пример: Убедитесь, что изображение выглядит так для лучшей точности!', 'es-ES': '💡 Ejemplo: ¡Asegúrate de que la imagen se vea así para obtener la mejor precisión!', 'fr-FR': '💡 Exemple: Assurez-vous que l\'image ressemble à ceci pour une meilleure précision!', 'de-DE': '💡 Beispiel: Stelle sicher, dass das Bild so aussieht, um die beste Genauigkeit zu erzielen!', 'pt-BR': '💡 Exemplo: Certifique-se de que a imagem seja assim para melhor precisão!', 'tr-TR': '💡 Örnek: En iyi doğruluk için görüntünün böyle göründüğünden emin olun!', 'vi-VN': '💡 Ví dụ: Đảm bảo hình ảnh giống như thế này để có độ chính xác tốt nhất!' }
           };
           
           return (
@@ -1399,7 +1399,7 @@ export default function ScannerApp() {
           {isCommentsLoading ? (
             <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '20px' }}>
               <div className={styles.spinner} style={{ margin: '0 auto 12px auto', width: '24px', height: '24px', borderTopColor: '#2196f3' }}></div>
-              Loading comments... / 繧ｳ繝｡繝ｳ繝医ｒ隱ｭ縺ｿ霎ｼ縺ｿ荳ｭ...
+              Loading comments... / コメントを読み込み中...
             </div>
           ) : comments.length === 0 ? (
             <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '20px' }}>
