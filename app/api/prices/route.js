@@ -76,8 +76,9 @@ export async function GET() {
                         cache: 'no-store',
                         signal: controller.signal
                     });
-                    if (!res.ok) return defaultValue;
+                    if (!res.ok) throw new Error("KV fetch failed: " + res.status);
                     const data = await res.json();
+                    if (data.error) throw new Error("Upstash Error: " + data.error);
                     if (data.result === null || data.result === undefined) return defaultValue;
                     if (typeof data.result === 'string') {
                         try { return JSON.parse(data.result); } catch(e) { return data.result; }
@@ -89,6 +90,12 @@ export async function GET() {
             };
 
             const items = await fetchKv('steam_prices', {});
+            if (Object.keys(items).length === 0) {
+                // If items are empty, something went wrong with the database fetch (e.g. rate limit error caught by fallback)
+                // We throw an error to return a 500 status so Vercel Edge Cache DOES NOT cache the "No Data" state for 10 minutes.
+                throw new Error("Failed to fetch steam_prices or rate limit hit");
+            }
+
             let rates = await fetchKv('steam_rates', { USD: 1, JPY: 150 });
             
             // If rates doesn't include KRW or CNY, fetch real-time rates

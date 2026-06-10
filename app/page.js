@@ -147,11 +147,12 @@ export default function ScannerApp() {
       }
     }, 100);
     
-    // Fetch initial comments
-    fetchComments();
-    
-    // Pre-fetch prices so they are instantly ready when scanning
-    fetchPrices();
+    // Fetch initial data sequentially to prevent concurrent request conflicts
+    const loadData = async () => {
+      await fetchComments();
+      await fetchPrices();
+    };
+    loadData();
     
     return () => clearInterval(checkCv);
   }, []);
