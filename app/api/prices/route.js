@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 600; // Cache the response for 10 minutes to protect Upstash from high traffic
 
 const APP_ID = '3678970';
 const CACHE_DURATION_MS = 30 * 60 * 1000;
