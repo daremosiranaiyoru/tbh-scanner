@@ -1,0 +1,1282 @@
+{
+  "Soulstone - Nightmare": {
+    "medianCents": 41,
+    "qty": 754,
+    "lowestCents": 41
+  },
+  "Iron Ingot": {
+    "medianCents": 6,
+    "qty": 80459,
+    "lowestCents": 6
+  },
+  "Soulstone - Normal": {
+    "medianCents": 8,
+    "qty": 23972,
+    "lowestCents": 8
+  },
+  "Stone": {
+    "medianCents": 9,
+    "qty": 71793,
+    "lowestCents": 9
+  },
+  "Bronze Ingot": {
+    "medianCents": 6,
+    "qty": 95224,
+    "lowestCents": 6
+  },
+  "Silver Ingot": {
+    "medianCents": 9,
+    "qty": 17872,
+    "lowestCents": 9
+  },
+  "Gold Ingot": {
+    "medianCents": 13,
+    "qty": 2488,
+    "lowestCents": 13
+  },
+  "Copper Nugget": {
+    "medianCents": 3,
+    "qty": 262383,
+    "lowestCents": 3
+  },
+  "Composite Bow (Legendary) A": {
+    "medianCents": 26,
+    "qty": 180,
+    "lowestCents": 26
+  },
+  "Coral Piece": {
+    "medianCents": 7,
+    "qty": 50049,
+    "lowestCents": 7
+  },
+  "Bastard Sword (Legendary) A": {
+    "medianCents": 11,
+    "qty": 422,
+    "lowestCents": 11
+  },
+  "Minor Emerald": {
+    "medianCents": 7,
+    "qty": 75510,
+    "lowestCents": 7
+  },
+  "Knight's Armor (Legendary) A": {
+    "medianCents": 50,
+    "qty": 51,
+    "lowestCents": 50
+  },
+  "Ruby": {
+    "medianCents": 47,
+    "qty": 1548,
+    "lowestCents": 47
+  },
+  "Chain Mail (Legendary) A": {
+    "medianCents": 10,
+    "qty": 1251,
+    "lowestCents": 10
+  },
+  "Chain Gloves (Legendary) A": {
+    "medianCents": 13,
+    "qty": 526,
+    "lowestCents": 13
+  },
+  "Minor Ruby": {
+    "medianCents": 6,
+    "qty": 30325,
+    "lowestCents": 6
+  },
+  "Leather": {
+    "medianCents": 2,
+    "qty": 354437,
+    "lowestCents": 2
+  },
+  "Chain Boots (Legendary) A": {
+    "medianCents": 22,
+    "qty": 81,
+    "lowestCents": 22
+  },
+  "Obsidian Shard": {
+    "medianCents": 5,
+    "qty": 53512,
+    "lowestCents": 5
+  },
+  "Chain Helmet (Legendary) A": {
+    "medianCents": 15,
+    "qty": 127,
+    "lowestCents": 15
+  },
+  "Knight Helmet (Legendary) A": {
+    "medianCents": 10,
+    "qty": 1382,
+    "lowestCents": 10
+  },
+  "Minor Topaz": {
+    "medianCents": 4,
+    "qty": 92666,
+    "lowestCents": 4
+  },
+  "Witch Staff (Legendary) A": {
+    "medianCents": 10,
+    "qty": 884,
+    "lowestCents": 10
+  },
+  "Knight Gloves (Legendary) A": {
+    "medianCents": 10,
+    "qty": 1426,
+    "lowestCents": 10
+  },
+  "Turquoise": {
+    "medianCents": 33,
+    "qty": 514,
+    "lowestCents": 33
+  },
+  "Knight Boots (Legendary) A": {
+    "medianCents": 10,
+    "qty": 1368,
+    "lowestCents": 10
+  },
+  "Steel Scepter (Legendary) A": {
+    "medianCents": 10,
+    "qty": 1041,
+    "lowestCents": 10
+  },
+  "Garnet": {
+    "medianCents": 13,
+    "qty": 1083,
+    "lowestCents": 13
+  },
+  "Crystal Quartz": {
+    "medianCents": 13,
+    "qty": 1591,
+    "lowestCents": 13
+  },
+  "Soulstone - Hell": {
+    "medianCents": 407,
+    "qty": 83,
+    "lowestCents": 407
+  },
+  "Amber Gem": {
+    "medianCents": 3,
+    "qty": 110653,
+    "lowestCents": 3
+  },
+  "Diamond": {
+    "medianCents": 110,
+    "qty": 425,
+    "lowestCents": 110
+  },
+  "Minor Amethyst": {
+    "medianCents": 2,
+    "qty": 214318,
+    "lowestCents": 2
+  },
+  "Spider Silk": {
+    "medianCents": 5,
+    "qty": 14198,
+    "lowestCents": 5
+  },
+  "Enchanted Ruby": {
+    "medianCents": 118,
+    "qty": 583,
+    "lowestCents": 118
+  },
+  "Sapphire": {
+    "medianCents": 3,
+    "qty": 35449,
+    "lowestCents": 3
+  },
+  "Topaz": {
+    "medianCents": 2,
+    "qty": 61000,
+    "lowestCents": 2
+  },
+  "Minor Sapphire": {
+    "medianCents": 2,
+    "qty": 251657,
+    "lowestCents": 2
+  },
+  "Amethyst": {
+    "medianCents": 265,
+    "qty": 157,
+    "lowestCents": 265
+  },
+  "Wraith Essence": {
+    "medianCents": 291,
+    "qty": 26,
+    "lowestCents": 291
+  },
+  "Sacred Scepter (Legendary) A": {
+    "medianCents": 353,
+    "qty": 8,
+    "lowestCents": 353
+  },
+  "Wood": {
+    "medianCents": 2,
+    "qty": 588720,
+    "lowestCents": 2
+  },
+  "Jade Stone": {
+    "medianCents": 2,
+    "qty": 161067,
+    "lowestCents": 2
+  },
+  "Mystic Topaz": {
+    "medianCents": 44,
+    "qty": 545,
+    "lowestCents": 44
+  },
+  "Void Iron": {
+    "medianCents": 766,
+    "qty": 7,
+    "lowestCents": 766
+  },
+  "Pearl": {
+    "medianCents": 209,
+    "qty": 34,
+    "lowestCents": 209
+  },
+  "Poisonous Herb": {
+    "medianCents": 3,
+    "qty": 28270,
+    "lowestCents": 3
+  },
+  "Emerald": {
+    "medianCents": 2020,
+    "qty": 6,
+    "lowestCents": 2020
+  },
+  "Great Sword (Legendary) A": {
+    "medianCents": 70,
+    "qty": 32,
+    "lowestCents": 70
+  },
+  "Bat Wing Membrane": {
+    "medianCents": 3,
+    "qty": 13798,
+    "lowestCents": 3
+  },
+  "Azure Staff (Legendary) A": {
+    "medianCents": 179,
+    "qty": 12,
+    "lowestCents": 179
+  },
+  "Arcane Crystal": {
+    "medianCents": 179,
+    "qty": 26,
+    "lowestCents": 179
+  },
+  "Soulstone - Torment": {
+    "medianCents": 464,
+    "qty": 51,
+    "lowestCents": 464
+  },
+  "Dragon Bile": {
+    "medianCents": 92,
+    "qty": 232,
+    "lowestCents": 92
+  },
+  "Lapis Lazuli": {
+    "medianCents": 596,
+    "qty": 14,
+    "lowestCents": 596
+  },
+  "Black Pearl": {
+    "medianCents": 112,
+    "qty": 107,
+    "lowestCents": 112
+  },
+  "Shine Armor (Legendary) A": {
+    "medianCents": 1510,
+    "qty": 1,
+    "lowestCents": 1510
+  },
+  "Nightshade Extract": {
+    "medianCents": 63,
+    "qty": 99,
+    "lowestCents": 63
+  },
+  "Mushroom Spore": {
+    "medianCents": 3,
+    "qty": 14808,
+    "lowestCents": 3
+  },
+  "Goblin Hide": {
+    "medianCents": 2,
+    "qty": 96829,
+    "lowestCents": 2
+  },
+  "Starlight Sapphire": {
+    "medianCents": 45,
+    "qty": 873,
+    "lowestCents": 45
+  },
+  "Ogre Blood": {
+    "medianCents": 3,
+    "qty": 15708,
+    "lowestCents": 3
+  },
+  "War Bow (Legendary) A": {
+    "medianCents": 242,
+    "qty": 9,
+    "lowestCents": 242
+  },
+  "Harpy Feather": {
+    "medianCents": 149,
+    "qty": 21,
+    "lowestCents": 149
+  },
+  "Healing Herb": {
+    "medianCents": 2,
+    "qty": 49061,
+    "lowestCents": 2
+  },
+  "Demon Blood": {
+    "medianCents": 107,
+    "qty": 51,
+    "lowestCents": 107
+  },
+  "Blessed Scepter (Legendary) A": {
+    "medianCents": 192,
+    "qty": 47,
+    "lowestCents": 192
+  },
+  "Ancient Tree Sap": {
+    "medianCents": 3,
+    "qty": 16819,
+    "lowestCents": 3
+  },
+  "Chaos Shard": {
+    "medianCents": 22,
+    "qty": 403,
+    "lowestCents": 22
+  },
+  "Wolf Fang": {
+    "medianCents": 2,
+    "qty": 60901,
+    "lowestCents": 2
+  },
+  "Rapier (Legendary) A": {
+    "medianCents": 64,
+    "qty": 45,
+    "lowestCents": 64
+  },
+  "Slime Jelly": {
+    "medianCents": 2,
+    "qty": 105907,
+    "lowestCents": 2
+  },
+  "Wyvern Claw": {
+    "medianCents": 26,
+    "qty": 219,
+    "lowestCents": 26
+  },
+  "Skeleton Bone": {
+    "medianCents": 2,
+    "qty": 109498,
+    "lowestCents": 2
+  },
+  "Void Ichor": {
+    "medianCents": 1182,
+    "qty": 5,
+    "lowestCents": 1182
+  },
+  "Stardust Ingot": {
+    "medianCents": 477,
+    "qty": 14,
+    "lowestCents": 477
+  },
+  "Scroll of Immortal Inscription": {
+    "medianCents": 528,
+    "qty": 43,
+    "lowestCents": 528
+  },
+  "Rune Scepter (Arcana) A": {
+    "medianCents": 2392,
+    "qty": 1,
+    "lowestCents": 2392
+  },
+  "Long Staff (Legendary) A": {
+    "medianCents": 323,
+    "qty": 13,
+    "lowestCents": 323
+  },
+  "Mandrake Root": {
+    "medianCents": 313,
+    "qty": 9,
+    "lowestCents": 313
+  },
+  "Fighter's Helmet (Legendary) A": {
+    "medianCents": 1510,
+    "qty": 1,
+    "lowestCents": 1510
+  },
+  "Heavy Shield (Legendary) A": {
+    "medianCents": 728,
+    "qty": 1,
+    "lowestCents": 728
+  },
+  "Battle Axe (Legendary) A": {
+    "medianCents": 959,
+    "qty": 1,
+    "lowestCents": 959
+  },
+  "Sacred Scepter (Immortal) A": {
+    "medianCents": 1613,
+    "qty": 1,
+    "lowestCents": 1613
+  },
+  "Dimensional Tome (Arcana) A": {
+    "medianCents": 1380,
+    "qty": 15,
+    "lowestCents": 1380
+  },
+  "Short Hatchet (Legendary) A": {
+    "medianCents": 3348,
+    "qty": 1,
+    "lowestCents": 3348
+  },
+  "Dragonite Crystal": {
+    "medianCents": 2106,
+    "qty": 8,
+    "lowestCents": 2106
+  },
+  "Rune Helmet (Legendary) A": {
+    "medianCents": 550,
+    "qty": 2,
+    "lowestCents": 550
+  },
+  "Chain Helmet (Immortal) A": {
+    "medianCents": 600,
+    "qty": 4,
+    "lowestCents": 600
+  },
+  "Sage Staff (Legendary) A": {
+    "medianCents": 5330,
+    "qty": 1,
+    "lowestCents": 5330
+  },
+  "Dimensional Gloves (Beyond) A": {
+    "medianCents": 1816,
+    "qty": 6,
+    "lowestCents": 1816
+  },
+  "Amethyst Ring (Legendary) A": {
+    "medianCents": 1575,
+    "qty": 1,
+    "lowestCents": 1575
+  },
+  "Warrior's Tome (Divine) A": {
+    "medianCents": 21237,
+    "qty": 1,
+    "lowestCents": 21237
+  },
+  "Dimensional Arrow (Celestial) A": {
+    "medianCents": 10513,
+    "qty": 2,
+    "lowestCents": 10513
+  },
+  "Vengeance Sword (Celestial) A": {
+    "medianCents": 4057,
+    "qty": 2,
+    "lowestCents": 4057
+  },
+  "Haste Bolt (Beyond) A": {
+    "medianCents": 7159,
+    "qty": 2,
+    "lowestCents": 7159
+  },
+  "Dimensional Sword (Celestial) A": {
+    "medianCents": 10619,
+    "qty": 2,
+    "lowestCents": 10619
+  },
+  "Shine Boots (Divine) A": {
+    "medianCents": 13724,
+    "qty": 2,
+    "lowestCents": 13724
+  },
+  "Celestial Pearl": {
+    "medianCents": 4128,
+    "qty": 18,
+    "lowestCents": 4128
+  },
+  "Dimensional Armor (Divine) A": {
+    "medianCents": 21134,
+    "qty": 2,
+    "lowestCents": 21134
+  },
+  "Ethereal Earring (Legendary) A": {
+    "medianCents": 4,
+    "qty": 33,
+    "lowestCents": 4
+  },
+  "Moonstone": {
+    "medianCents": 499,
+    "qty": 21,
+    "lowestCents": 499
+  },
+  "Mystic Orb (Beyond) A": {
+    "medianCents": 369,
+    "qty": 15,
+    "lowestCents": 369
+  },
+  "Fate Tome (Beyond) A": {
+    "medianCents": 686,
+    "qty": 17,
+    "lowestCents": 686
+  },
+  "Eclipse Bracer (Arcana) A": {
+    "medianCents": 161,
+    "qty": 24,
+    "lowestCents": 161
+  },
+  "Dimensional Armor (Celestial) A": {
+    "medianCents": 9548,
+    "qty": 2,
+    "lowestCents": 9548
+  },
+  "Warrior's Tome (Legendary) A": {
+    "medianCents": 895,
+    "qty": 1,
+    "lowestCents": 895
+  },
+  "Limitless Hatchet (Arcana) A": {
+    "medianCents": 202,
+    "qty": 27,
+    "lowestCents": 202
+  },
+  "Radiant Shield (Beyond) A": {
+    "medianCents": 3880,
+    "qty": 3,
+    "lowestCents": 3880
+  },
+  "Eclipse Amulet (Legendary) A": {
+    "medianCents": 1789,
+    "qty": 1,
+    "lowestCents": 1789
+  },
+  "Rune Gloves (Beyond) A": {
+    "medianCents": 17781,
+    "qty": 1,
+    "lowestCents": 17781
+  },
+  "Eclipse Amulet (Immortal) A": {
+    "medianCents": 2135,
+    "qty": 6,
+    "lowestCents": 2135
+  },
+  "Copper Amulet (Immortal) A": {
+    "medianCents": 3,
+    "qty": 29,
+    "lowestCents": 3
+  },
+  "Fighter's Helmet (Arcana) A": {
+    "medianCents": 6176,
+    "qty": 1,
+    "lowestCents": 6176
+  },
+  "Dimensional Tome (Beyond) A": {
+    "medianCents": 4297,
+    "qty": 1,
+    "lowestCents": 4297
+  },
+  "Beast Bolt (Immortal) A": {
+    "medianCents": 3307,
+    "qty": 1,
+    "lowestCents": 3307
+  },
+  "Fate Scepter (Arcana) A": {
+    "medianCents": 2544,
+    "qty": 1,
+    "lowestCents": 2544
+  },
+  "Fate Bolt (Arcana) A": {
+    "medianCents": 2418,
+    "qty": 2,
+    "lowestCents": 2418
+  },
+  "Wooden Helmet (Legendary) A": {
+    "medianCents": 980,
+    "qty": 1,
+    "lowestCents": 980
+  },
+  "Knight Helmet (Immortal) A": {
+    "medianCents": 1420,
+    "qty": 3,
+    "lowestCents": 1420
+  },
+  "Dimensional Scepter (Arcana) A": {
+    "medianCents": 1504,
+    "qty": 3,
+    "lowestCents": 1504
+  },
+  "War Armor (Arcana) A": {
+    "medianCents": 1527,
+    "qty": 1,
+    "lowestCents": 1527
+  },
+  "War Helmet (Arcana) A": {
+    "medianCents": 2637,
+    "qty": 1,
+    "lowestCents": 2637
+  },
+  "Obsidian Bracer (Legendary) A": {
+    "medianCents": 2349,
+    "qty": 1,
+    "lowestCents": 2349
+  },
+  "Mystic Boots (Beyond) A": {
+    "medianCents": 168,
+    "qty": 52,
+    "lowestCents": 168
+  },
+  "Shine Armor (Beyond) A": {
+    "medianCents": 1790,
+    "qty": 2,
+    "lowestCents": 1790
+  },
+  "Elite Hatchet (Arcana) A": {
+    "medianCents": 895,
+    "qty": 3,
+    "lowestCents": 895
+  },
+  "Chain Gloves (Arcana) A": {
+    "medianCents": 5500,
+    "qty": 1,
+    "lowestCents": 5500
+  },
+  "Heater Shield (Immortal) A": {
+    "medianCents": 4317,
+    "qty": 1,
+    "lowestCents": 4317
+  },
+  "Heavy Shield (Immortal) A": {
+    "medianCents": 4117,
+    "qty": 1,
+    "lowestCents": 4117
+  },
+  "Chain Mail (Arcana) A": {
+    "medianCents": 1291,
+    "qty": 1,
+    "lowestCents": 1291
+  },
+  "Kingdom 1st Anniversary Coin": {
+    "medianCents": 1107,
+    "qty": 1,
+    "lowestCents": 1107
+  },
+  "Kingdom 50th Anniversary Coin": {
+    "medianCents": 2984,
+    "qty": 1,
+    "lowestCents": 2984
+  },
+  "Ethereal Bracer (Legendary) A": {
+    "medianCents": 1127,
+    "qty": 2,
+    "lowestCents": 1127
+  },
+  "Dimensional Armor (Arcana) A": {
+    "medianCents": 3309,
+    "qty": 1,
+    "lowestCents": 3309
+  },
+  "Scroll of Common Inscription": {
+    "medianCents": 370,
+    "qty": 4,
+    "lowestCents": 370
+  },
+  "Heater Shield (Legendary) A": {
+    "medianCents": 1412,
+    "qty": 2,
+    "lowestCents": 1412
+  },
+  "Sapphire Earring (Legendary) A": {
+    "medianCents": 2806,
+    "qty": 1,
+    "lowestCents": 2806
+  },
+  "War Boots (Legendary) A": {
+    "medianCents": 701,
+    "qty": 2,
+    "lowestCents": 701
+  },
+  "Radiant Shield (Celestial) A": {
+    "medianCents": 10621,
+    "qty": 1,
+    "lowestCents": 10621
+  },
+  "Sacred Staff (Celestial) A": {
+    "medianCents": 3823,
+    "qty": 4,
+    "lowestCents": 3823
+  },
+  "Dimensional Gloves (Divine) A": {
+    "medianCents": 29835,
+    "qty": 1,
+    "lowestCents": 29835
+  },
+  "Dimensional Scepter (Celestial) A": {
+    "medianCents": 14868,
+    "qty": 1,
+    "lowestCents": 14868
+  },
+  "Sunstone": {
+    "medianCents": 481,
+    "qty": 19,
+    "lowestCents": 481
+  },
+  "Shadow Bow (Beyond) A": {
+    "medianCents": 15281,
+    "qty": 5,
+    "lowestCents": 15281
+  },
+  "Prayer Tome (Legendary) A": {
+    "medianCents": 16726,
+    "qty": 1,
+    "lowestCents": 16726
+  },
+  "Amber Ring (Arcana) A": {
+    "medianCents": 59,
+    "qty": 54,
+    "lowestCents": 59
+  },
+  "Frozen Orb (Legendary) A": {
+    "medianCents": 18520,
+    "qty": 1,
+    "lowestCents": 18520
+  },
+  "Dimensional Orb (Divine) A": {
+    "medianCents": 21239,
+    "qty": 1,
+    "lowestCents": 21239
+  },
+  "Beast Bolt (Arcana) A": {
+    "medianCents": 387,
+    "qty": 13,
+    "lowestCents": 387
+  },
+  "Ancient Orb (Celestial) A": {
+    "medianCents": 9399,
+    "qty": 2,
+    "lowestCents": 9399
+  },
+  "Dimensional Gloves (Celestial) A": {
+    "medianCents": 4774,
+    "qty": 2,
+    "lowestCents": 4774
+  },
+  "Rune Tome (Beyond) A": {
+    "medianCents": 178,
+    "qty": 25,
+    "lowestCents": 178
+  },
+  "Shine Gloves (Celestial) A": {
+    "medianCents": 3282,
+    "qty": 3,
+    "lowestCents": 3282
+  },
+  "Celestial Earring (Arcana) A": {
+    "medianCents": 242,
+    "qty": 21,
+    "lowestCents": 242
+  },
+  "Eclipse Bracer (Beyond) A": {
+    "medianCents": 3218,
+    "qty": 2,
+    "lowestCents": 3218
+  },
+  "Fear Bolt (Immortal) A": {
+    "medianCents": 178,
+    "qty": 9,
+    "lowestCents": 178
+  },
+  "Radiant Shield (Divine) A": {
+    "medianCents": 21239,
+    "qty": 1,
+    "lowestCents": 21239
+  },
+  "Dimensional Tome (Celestial) A": {
+    "medianCents": 13724,
+    "qty": 2,
+    "lowestCents": 13724
+  },
+  "Ethereal Earring (Arcana) A": {
+    "medianCents": 445,
+    "qty": 5,
+    "lowestCents": 445
+  },
+  "Mystic Gloves (Legendary) A": {
+    "medianCents": 1510,
+    "qty": 1,
+    "lowestCents": 1510
+  },
+  "Elite Shield (Immortal) A": {
+    "medianCents": 954,
+    "qty": 2,
+    "lowestCents": 954
+  },
+  "Platinum Bracer (Legendary) A": {
+    "medianCents": 5203,
+    "qty": 1,
+    "lowestCents": 5203
+  },
+  "Tiger Eye Earring (Legendary) A": {
+    "medianCents": 1530,
+    "qty": 1,
+    "lowestCents": 1530
+  },
+  "Cutlas (Immortal) A": {
+    "medianCents": 1661,
+    "qty": 1,
+    "lowestCents": 1661
+  },
+  "Steel Axe (Arcana) A": {
+    "medianCents": 664,
+    "qty": 1,
+    "lowestCents": 664
+  },
+  "War Axe (Immortal) A": {
+    "medianCents": 2200,
+    "qty": 1,
+    "lowestCents": 2200
+  },
+  "Rune Gloves (Immortal) A": {
+    "medianCents": 3818,
+    "qty": 1,
+    "lowestCents": 3818
+  },
+  "Ruby Pendant (Immortal) A": {
+    "medianCents": 3,
+    "qty": 112,
+    "lowestCents": 3
+  },
+  "Arcane Orb (Beyond) A": {
+    "medianCents": 1487,
+    "qty": 5,
+    "lowestCents": 1487
+  },
+  "Barbed Bolt (Immortal) A": {
+    "medianCents": 3740,
+    "qty": 1,
+    "lowestCents": 3740
+  },
+  "Fighter's Helmet (Beyond) A": {
+    "medianCents": 3111,
+    "qty": 1,
+    "lowestCents": 3111
+  },
+  "Vengeance Sword (Beyond) A": {
+    "medianCents": 25,
+    "qty": 70,
+    "lowestCents": 25
+  },
+  "Shine Boots (Legendary) A": {
+    "medianCents": 1510,
+    "qty": 1,
+    "lowestCents": 1510
+  },
+  "Shine Boots (Celestial) A": {
+    "medianCents": 7995,
+    "qty": 3,
+    "lowestCents": 7995
+  },
+  "Ancient Orb (Beyond) A": {
+    "medianCents": 1453,
+    "qty": 8,
+    "lowestCents": 1453
+  },
+  "Wooden Helmet (Immortal) A": {
+    "medianCents": 1555,
+    "qty": 1,
+    "lowestCents": 1555
+  },
+  "Ruby Pendant (Arcana) A": {
+    "medianCents": 40,
+    "qty": 25,
+    "lowestCents": 40
+  },
+  "Ruby Pendant (Legendary) A": {
+    "medianCents": 5848,
+    "qty": 1,
+    "lowestCents": 5848
+  },
+  "Scroll of Beyond Inscription": {
+    "medianCents": 333,
+    "qty": 17,
+    "lowestCents": 333
+  },
+  "Ethereal Amulet (Immortal) A": {
+    "medianCents": 1764,
+    "qty": 1,
+    "lowestCents": 1764
+  },
+  "Leather Hatchet (Immortal) A": {
+    "medianCents": 2871,
+    "qty": 3,
+    "lowestCents": 2871
+  },
+  "Limitless Crossbow (Beyond) A": {
+    "medianCents": 737,
+    "qty": 12,
+    "lowestCents": 737
+  },
+  "Ancient Orb (Cosmic) A": {
+    "medianCents": 11778,
+    "qty": 2,
+    "lowestCents": 11778
+  },
+  "Iron Crossbow (Arcana) A": {
+    "medianCents": 6373,
+    "qty": 1,
+    "lowestCents": 6373
+  },
+  "Wooden Boots (Legendary) A": {
+    "medianCents": 426,
+    "qty": 1,
+    "lowestCents": 426
+  },
+  "Bloodstone": {
+    "medianCents": 137,
+    "qty": 109,
+    "lowestCents": 137
+  },
+  "Chain Gloves (Immortal) A": {
+    "medianCents": 18520,
+    "qty": 1,
+    "lowestCents": 18520
+  },
+  "Rune Sword (Legendary) A": {
+    "medianCents": 722,
+    "qty": 2,
+    "lowestCents": 722
+  },
+  "Dimensional Armor (Beyond) A": {
+    "medianCents": 2773,
+    "qty": 9,
+    "lowestCents": 2773
+  },
+  "War Tome (Beyond) A": {
+    "medianCents": 155,
+    "qty": 14,
+    "lowestCents": 155
+  },
+  "Wooden Armor (Legendary) A": {
+    "medianCents": 532,
+    "qty": 1,
+    "lowestCents": 532
+  },
+  "Emerald Amulet (Immortal) A": {
+    "medianCents": 1372,
+    "qty": 2,
+    "lowestCents": 1372
+  },
+  "Herald Staff (Legendary) A": {
+    "medianCents": 1060,
+    "qty": 2,
+    "lowestCents": 1060
+  },
+  "Dimensional Helmet (Arcana) A": {
+    "medianCents": 2,
+    "qty": 545,
+    "lowestCents": 2
+  },
+  "Emerald Bracer (Beyond) A": {
+    "medianCents": 2878,
+    "qty": 4,
+    "lowestCents": 2878
+  },
+  "Warrior's Tome (Celestial) A": {
+    "medianCents": 10611,
+    "qty": 2,
+    "lowestCents": 10611
+  },
+  "Limitless Scepter (Celestial) A": {
+    "medianCents": 9111,
+    "qty": 1,
+    "lowestCents": 9111
+  },
+  "Ethereal Bracer (Arcana) A": {
+    "medianCents": 343,
+    "qty": 6,
+    "lowestCents": 343
+  },
+  "Emerald Earring (Beyond) A": {
+    "medianCents": 4475,
+    "qty": 3,
+    "lowestCents": 4475
+  },
+  "Fate Arrow (Beyond) A": {
+    "medianCents": 4910,
+    "qty": 3,
+    "lowestCents": 4910
+  },
+  "Tiger Eye Earring (Arcana) A": {
+    "medianCents": 4,
+    "qty": 46,
+    "lowestCents": 4
+  },
+  "Ethereal Ring (Immortal) A": {
+    "medianCents": 1285,
+    "qty": 1,
+    "lowestCents": 1285
+  },
+  "Dimensional Armor (Immortal) A": {
+    "medianCents": 2301,
+    "qty": 1,
+    "lowestCents": 2301
+  },
+  "Rune Sword (Arcana) A": {
+    "medianCents": 2032,
+    "qty": 1,
+    "lowestCents": 2032
+  },
+  "Abyssal Mucus": {
+    "medianCents": 6373,
+    "qty": 1,
+    "lowestCents": 6373
+  },
+  "Knight Gloves (Immortal) A": {
+    "medianCents": 555,
+    "qty": 1,
+    "lowestCents": 555
+  },
+  "Scroll of Arcana Inscription": {
+    "medianCents": 1830,
+    "qty": 3,
+    "lowestCents": 1830
+  },
+  "Herald Staff (Immortal) A": {
+    "medianCents": 2545,
+    "qty": 1,
+    "lowestCents": 2545
+  },
+  "Elite Shield (Arcana) A": {
+    "medianCents": 1372,
+    "qty": 2,
+    "lowestCents": 1372
+  },
+  "Iron Helmet (Legendary) A": {
+    "medianCents": 1492,
+    "qty": 1,
+    "lowestCents": 1492
+  },
+  "Iron Plate (Legendary) A": {
+    "medianCents": 2869,
+    "qty": 2,
+    "lowestCents": 2869
+  },
+  "Vengeance Sword (Immortal) A": {
+    "medianCents": 4327,
+    "qty": 1,
+    "lowestCents": 4327
+  },
+  "Emerald Bracer (Arcana) A": {
+    "medianCents": 227,
+    "qty": 17,
+    "lowestCents": 227
+  },
+  "Knight Sword (Immortal) A": {
+    "medianCents": 6862,
+    "qty": 1,
+    "lowestCents": 6862
+  },
+  "Opal": {
+    "medianCents": 1789,
+    "qty": 15,
+    "lowestCents": 1789
+  },
+  "Void Opal": {
+    "medianCents": 760,
+    "qty": 114,
+    "lowestCents": 760
+  },
+  "Long Staff (Immortal) A": {
+    "medianCents": 1626,
+    "qty": 1,
+    "lowestCents": 1626
+  },
+  "Rune Orb (Immortal) A": {
+    "medianCents": 5755,
+    "qty": 1,
+    "lowestCents": 5755
+  },
+  "Arcane Ore": {
+    "medianCents": 298,
+    "qty": 36,
+    "lowestCents": 298
+  },
+  "Gold Amulet (Arcana) A": {
+    "medianCents": 4350,
+    "qty": 1,
+    "lowestCents": 4350
+  },
+  "Emerald Earring (Legendary) A": {
+    "medianCents": 954,
+    "qty": 2,
+    "lowestCents": 954
+  },
+  "Frozen Orb (Immortal) A": {
+    "medianCents": 4180,
+    "qty": 1,
+    "lowestCents": 4180
+  },
+  "Empire Helmet (Immortal) A": {
+    "medianCents": 1127,
+    "qty": 1,
+    "lowestCents": 1127
+  },
+  "Rapier (Immortal) A": {
+    "medianCents": 1426,
+    "qty": 1,
+    "lowestCents": 1426
+  },
+  "Comet Staff (Legendary) A": {
+    "medianCents": 1017,
+    "qty": 1,
+    "lowestCents": 1017
+  },
+  "Iron Scepter (Legendary) A": {
+    "medianCents": 639,
+    "qty": 4,
+    "lowestCents": 639
+  },
+  "Knight Boots (Immortal) A": {
+    "medianCents": 1327,
+    "qty": 3,
+    "lowestCents": 1327
+  },
+  "Dice": {
+    "medianCents": 3432,
+    "qty": 2,
+    "lowestCents": 3432
+  },
+  "Basilisk Scale": {
+    "medianCents": 573,
+    "qty": 4,
+    "lowestCents": 573
+  },
+  "Dusk Bow (Legendary) A": {
+    "medianCents": 152768,
+    "qty": 1,
+    "lowestCents": 152768
+  },
+  "Limitless Crossbow (Arcana) A": {
+    "medianCents": 4,
+    "qty": 71,
+    "lowestCents": 4
+  },
+  "War Gloves (Beyond) A": {
+    "medianCents": 1898,
+    "qty": 1,
+    "lowestCents": 1898
+  },
+  "Steel Scepter (Immortal) A": {
+    "medianCents": 1753,
+    "qty": 2,
+    "lowestCents": 1753
+  },
+  "Great Sword (Immortal) A": {
+    "medianCents": 15276,
+    "qty": 1,
+    "lowestCents": 15276
+  },
+  "Sage Staff (Immortal) A": {
+    "medianCents": 7454,
+    "qty": 1,
+    "lowestCents": 7454
+  },
+  "War Armor (Legendary) A": {
+    "medianCents": 954,
+    "qty": 1,
+    "lowestCents": 954
+  },
+  "Knight's Armor (Arcana) A": {
+    "medianCents": 11000,
+    "qty": 1,
+    "lowestCents": 11000
+  },
+  "Iron Boots (Legendary) A": {
+    "medianCents": 18502,
+    "qty": 1,
+    "lowestCents": 18502
+  },
+  "Prophecy Orb (Immortal) A": {
+    "medianCents": 1716,
+    "qty": 1,
+    "lowestCents": 1716
+  },
+  "Knight's Tome (Legendary) A": {
+    "medianCents": 18520,
+    "qty": 1,
+    "lowestCents": 18520
+  },
+  "Rune Scepter (Immortal) A": {
+    "medianCents": 766,
+    "qty": 5,
+    "lowestCents": 766
+  },
+  "War Axe (Arcana) A": {
+    "medianCents": 586,
+    "qty": 1,
+    "lowestCents": 586
+  },
+  "Knight Sword (Legendary) A": {
+    "medianCents": 550,
+    "qty": 3,
+    "lowestCents": 550
+  },
+  "Dimensional Shield (Arcana) A": {
+    "medianCents": 1758,
+    "qty": 2,
+    "lowestCents": 1758
+  },
+  "Dusk Bow (Immortal) A": {
+    "medianCents": 5261,
+    "qty": 1,
+    "lowestCents": 5261
+  },
+  "Phoenix Ash": {
+    "medianCents": 2240,
+    "qty": 1,
+    "lowestCents": 2240
+  },
+  "Rune Sword (Immortal) A": {
+    "medianCents": 1211,
+    "qty": 1,
+    "lowestCents": 1211
+  },
+  "Dimensional Sword (Beyond) A": {
+    "medianCents": 1756,
+    "qty": 16,
+    "lowestCents": 1756
+  },
+  "Scroll of Legendary Inscription": {
+    "medianCents": 346,
+    "qty": 29,
+    "lowestCents": 346
+  },
+  "Witch Staff (Immortal) A": {
+    "medianCents": 645,
+    "qty": 2,
+    "lowestCents": 645
+  },
+  "Dimensional Orb (Beyond) A": {
+    "medianCents": 2216,
+    "qty": 7,
+    "lowestCents": 2216
+  },
+  "Dimensional Sword (Arcana) A": {
+    "medianCents": 1222,
+    "qty": 9,
+    "lowestCents": 1222
+  },
+  "Hunter's Bolt (Immortal) A": {
+    "medianCents": 3195,
+    "qty": 1,
+    "lowestCents": 3195
+  },
+  "War Boots (Immortal) A": {
+    "medianCents": 957,
+    "qty": 2,
+    "lowestCents": 957
+  }
+}
