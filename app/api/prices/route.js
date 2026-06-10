@@ -90,12 +90,6 @@ export async function GET() {
             };
 
             const items = await fetchKv('steam_prices', {});
-            if (Object.keys(items).length === 0) {
-                // If items are empty, something went wrong with the database fetch (e.g. rate limit error caught by fallback)
-                // We throw an error to return a 500 status so Vercel Edge Cache DOES NOT cache the "No Data" state for 10 minutes.
-                throw new Error("Failed to fetch steam_prices or rate limit hit");
-            }
-
             let rates = await fetchKv('steam_rates', { USD: 1, JPY: 150 });
             
             // If rates doesn't include KRW or CNY, fetch real-time rates
