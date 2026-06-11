@@ -394,7 +394,8 @@ export default function ScannerApp() {
       allResults = [...allResults, ...fileDisplayResults];
       
       // Progressively update the preview with the green rects for this image
-      currentPreviewImages[offset + i].rects = fileDisplayResults.map(r => ({ ...r.rect, matchRate: r.matchRate }));
+      const currentOffset = allResults.length - fileDisplayResults.length;
+      currentPreviewImages[offset + i].rects = fileDisplayResults.map((r, idx) => ({ ...r.rect, matchRate: r.matchRate, originalIdx: currentOffset + idx }));
       setPreviewImages([...currentPreviewImages]); // Trigger re-render
     }
     
@@ -1057,12 +1058,22 @@ export default function ScannerApp() {
                 />
                 <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} viewBox={`0 0 ${img.width} ${img.height}`} preserveAspectRatio="xMidYMid meet">
                   {img.rects.map((rect, i) => (
-                    <rect key={i} x={rect.x} y={rect.y} width={rect.width} height={rect.height} fill="none" stroke="#00ff00" strokeWidth="2" />
-                  ))}
-                  {img.rects.map((rect, i) => (
-                     <text key={"text-" + i} x={rect.x + 2} y={rect.y + 14} fill="#00ff00" fontSize="14" fontFamily="sans-serif">
-                       {rect.matchRate.toFixed(1)}%
-                     </text>
+                    <g 
+                      key={i}
+                      style={{ cursor: 'pointer', pointerEvents: 'all' }}
+                      onClick={() => {
+                        const el = document.getElementById('scanned-item-' + rect.originalIdx);
+                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                      }}
+                    >
+                      <rect 
+                        x={rect.x} y={rect.y} width={rect.width} height={rect.height} 
+                        fill="transparent" stroke="#00ff00" strokeWidth="2" 
+                      />
+                      <text x={rect.x + 2} y={rect.y + 14} fill="#00ff00" fontSize="14" fontFamily="sans-serif">
+                        {rect.matchRate.toFixed(1)}%
+                      </text>
+                    </g>
                   ))}
                 </svg>
               </div>
@@ -1259,7 +1270,7 @@ export default function ScannerApp() {
                       .map(({ item, originalIdx: idx }) => {
                       if (editingIndex === idx) {
                         return (
-                          <div key={idx} className={styles.itemRow} style={{ flexDirection: 'column', alignItems: 'stretch', gap: '12px', background: 'rgba(33, 150, 243, 0.1)' }}>
+                          <div key={idx} id={"scanned-item-" + idx} className={styles.itemRow} style={{ flexDirection: 'column', alignItems: 'stretch', gap: '12px', background: 'rgba(33, 150, 243, 0.1)' }}>
                             <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
                               <div style={{ flex: 1, position: 'relative' }}>
                                 <label style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>Item Name (Search)</label>
@@ -1422,7 +1433,7 @@ export default function ScannerApp() {
                       }
                       
                       return (
-                        <div key={idx} className={styles.itemRow}>
+                        <div key={idx} id={"scanned-item-" + idx} className={styles.itemRow}>
                           <img src={`/icons/${item.name}`} className={styles.itemIcon} alt={item.name} />
                           <div className={styles.itemInfo}>
                             <div className={styles.itemName}>
