@@ -9455,5 +9455,136 @@
   "Turquoise": {
     "buyOrderCents": 206,
     "lowestCents": 623
+  },
+  "Garnet": {
+    "buyOrderCents": 98,
+    "lowestCents": 221
+  },
+  "Crystal Quartz": {
+    "buyOrderCents": 144,
+    "lowestCents": 187
+  },
+  "Amber Gem": {
+    "buyOrderCents": 4,
+    "lowestCents": 5
+  },
+  "Diamond": {
+    "buyOrderCents": 225,
+    "lowestCents": 358
+  },
+  "Minor Amethyst": {
+    "buyOrderCents": 4,
+    "lowestCents": 4
+  },
+  "Enchanted Ruby": {
+    "buyOrderCents": 186,
+    "lowestCents": 467
+  },
+  "Sapphire": {
+    "buyOrderCents": 6,
+    "lowestCents": 6
+  },
+  "Topaz": {
+    "buyOrderCents": 4,
+    "lowestCents": 5
+  },
+  "Minor Sapphire": {
+    "buyOrderCents": 4,
+    "lowestCents": 4
+  },
+  "Amethyst": {
+    "buyOrderCents": 156,
+    "lowestCents": 467
+  },
+  "Jade Stone": {
+    "buyOrderCents": 4,
+    "lowestCents": 4
+  },
+  "Mystic Topaz": {
+    "buyOrderCents": 145,
+    "lowestCents": 160
+  },
+  "Pearl": {
+    "buyOrderCents": 187,
+    "lowestCents": 735
+  },
+  "Emerald": {
+    "buyOrderCents": 601,
+    "lowestCents": 2301
+  },
+  "Arcane Crystal": {
+    "buyOrderCents": 126
+  },
+  "Lapis Lazuli": {
+    "buyOrderCents": 192,
+    "lowestCents": 6574
+  },
+  "Black Pearl": {
+    "buyOrderCents": 135,
+    "lowestCents": 310
+  },
+  "Starlight Sapphire": {
+    "buyOrderCents": 69,
+    "lowestCents": 102
+  },
+  "Amethyst Ring (Legendary) A": {
+    "buyOrderCents": 100
+  },
+  "Warrior's Tome (Divine) A": {
+    "buyOrderCents": 8292,
+    "lowestCents": 22161
+  },
+  "Dimensional Arrow (Celestial) A": {
+    "buyOrderCents": 0
+  },
+  "Vengeance Sword (Celestial) A": {
+    "buyOrderCents": 1390,
+    "lowestCents": 4234
+  },
+  "Dimensional Sword (Celestial) A": {
+    "buyOrderCents": 2959
+  },
+  "Shine Boots (Divine) A": {
+    "buyOrderCents": 7138,
+    "lowestCents": 22164
+  },
+  "Dimensional Armor (Divine) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Earring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Armor (Celestial) A": {
+    "buyOrderCents": 4826,
+    "lowestCents": 22164
+  },
+  "Eclipse Amulet (Legendary) A": {
+    "buyOrderCents": 213,
+    "lowestCents": 1868
+  },
+  "Eclipse Amulet (Immortal) A": {
+    "buyOrderCents": 441,
+    "lowestCents": 3602
+  },
+  "Copper Amulet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Bracer (Legendary) A": {
+    "buyOrderCents": 81,
+    "lowestCents": 2459
+  },
+  "Ethereal Bracer (Legendary) A": {
+    "buyOrderCents": 221
+  },
+  "Sapphire Earring (Legendary) A": {
+    "buyOrderCents": 153,
+    "lowestCents": 2936
+  },
+  "Radiant Shield (Celestial) A": {
+    "buyOrderCents": 2084,
+    "lowestCents": 11084
   }
 }
