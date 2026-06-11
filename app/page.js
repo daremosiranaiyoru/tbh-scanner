@@ -1413,7 +1413,7 @@ export default function ScannerApp() {
                       let marketData = null;
                       let actualKey = englishName; // default fallback key for URL
                       if (prices) {
-                        if (item.type === 'GEAR' && item.rarity && item.rarity !== 'UNKNOWN') {
+                        if (!item.name.startsWith('Item_') && item.rarity && item.rarity !== 'UNKNOWN') {
                           const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
                           const prefix = `${englishName} (${rarityStr})`;
                           if (prices[`${prefix} A`]) {
