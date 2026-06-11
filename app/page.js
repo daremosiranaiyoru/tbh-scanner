@@ -1397,18 +1397,18 @@ export default function ScannerApp() {
                       const recentSoldLabel = labelTranslations[selectedLang] || 'Recent Sold:';
 
                       const lowestLabelTranslations = {
-                        'en-US': 'Lowest Sell Amount:', 'ja-JP': '最低売却額:', 'zh-Hans': '最低出售额:', 'zh-Hant': '最低出售額:',
-                        'ko-KR': '최저 판매가:', 'ru-RU': 'Мин. сумма продажи:', 'es-ES': 'Monto de venta más bajo:', 'fr-FR': 'Montant de vente min.:',
-                        'de-DE': 'Niedrigster Verkaufsbetrag:', 'pt-BR': 'Menor valor de venda:', 'tr-TR': 'En Düşük Satış Tutarı:', 'vi-VN': 'Số tiền bán thấp nhất:'
+                        'en-US': 'Sell Order:', 'ja-JP': '売却希望額:', 'zh-Hans': '期望售价:', 'zh-Hant': '期望售價:',
+                        'ko-KR': '판매 희망가:', 'ru-RU': 'Запрос на продажу:', 'es-ES': 'Orden de venta:', 'fr-FR': 'Ordre de vente:',
+                        'de-DE': 'Verkaufsauftrag:', 'pt-BR': 'Ordem de venda:', 'tr-TR': 'Satış Emri:', 'vi-VN': 'Lệnh bán:'
                       };
-                      const lowestLabel = lowestLabelTranslations[selectedLang] || 'Lowest Sell Amount:';
+                      const lowestLabel = lowestLabelTranslations[selectedLang] || 'Sell Order:';
 
                       const buyOrderLabelTranslations = {
-                        'en-US': 'Highest Buy Amount:', 'ja-JP': '最高購入額:', 'zh-Hans': '最高购买额:', 'zh-Hant': '最高購買額:',
-                        'ko-KR': '최고 구매가:', 'ru-RU': 'Макс. сумма покупки:', 'es-ES': 'Monto de compra más alto:', 'fr-FR': 'Montant d\'achat max.:',
-                        'de-DE': 'Höchster Kaufbetrag:', 'pt-BR': 'Maior valor de compra:', 'tr-TR': 'En Yüksek Alış Tutarı:', 'vi-VN': 'Số tiền mua cao nhất:'
+                        'en-US': 'Buy Order:', 'ja-JP': '購入希望額:', 'zh-Hans': '求购价:', 'zh-Hant': '求購價:',
+                        'ko-KR': '구매 희망가:', 'ru-RU': 'Запрос на покупку:', 'es-ES': 'Orden de compra:', 'fr-FR': 'Ordre d\'achat:',
+                        'de-DE': 'Kaufauftrag:', 'pt-BR': 'Ordem de compra:', 'tr-TR': 'Alış Emri:', 'vi-VN': 'Lệnh mua:'
                       };
-                      const buyOrderLabel = buyOrderLabelTranslations[selectedLang] || 'Highest Buy Amount:';
+                      const buyOrderLabel = buyOrderLabelTranslations[selectedLang] || 'Buy Order:';
                       
                       let marketData = null;
                       let actualKey = englishName; // default fallback key for URL
