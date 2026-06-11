@@ -9586,5 +9586,1361 @@
   "Radiant Shield (Celestial) A": {
     "buyOrderCents": 2084,
     "lowestCents": 11084
+  },
+  "Opal": {
+    "buyOrderCents": 138,
+    "lowestCents": 1869
+  },
+  "Void Opal": {
+    "buyOrderCents": 327,
+    "lowestCents": 836
+  },
+  "Astral Diamond": {
+    "buyOrderCents": 311
+  },
+  "Copper Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Amulet (Legendary) A": {
+    "buyOrderCents": 155
+  },
+  "Copper Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Amulet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Amulet (Legendary) A": {
+    "buyOrderCents": 127
+  },
+  "Bronze Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Amulet (Immortal) A": {
+    "buyOrderCents": 311
+  },
+  "Bronze Amulet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Amulet (Uncommon) A": {
+    "buyOrderCents": 9
+  },
+  "Silver Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Amulet (Legendary) A": {
+    "buyOrderCents": 98
+  },
+  "Silver Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Amulet (Immortal) A": {
+    "buyOrderCents": 116
+  },
+  "Silver Amulet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Amulet (Legendary) A": {
+    "buyOrderCents": 442
+  },
+  "Gold Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Amulet (Immortal) A": {
+    "buyOrderCents": 851
+  },
+  "Gold Amulet (Arcana) A": {
+    "buyOrderCents": 729,
+    "lowestCents": 4544
+  },
+  "Gold Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Amulet (Legendary) A": {
+    "buyOrderCents": 300
+  },
+  "Platinum Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Amulet (Immortal) A": {
+    "buyOrderCents": 252
+  },
+  "Platinum Amulet (Arcana) A": {
+    "buyOrderCents": 483
+  },
+  "Platinum Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Amulet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Amulet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Amulet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Pendant (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Pendant (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Pendant (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Pendant (Legendary) A": {
+    "buyOrderCents": 78
+  },
+  "Moonstone Pendant (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Pendant (Immortal) A": {
+    "buyOrderCents": 294
+  },
+  "Moonstone Pendant (Arcana) A": {
+    "buyOrderCents": 685
+  },
+  "Moonstone Pendant (Beyond) A": {
+    "buyOrderCents": 749
+  },
+  "Amber Pendant (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Pendant (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Pendant (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Pendant (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Pendant (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Pendant (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Pendant (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Pendant (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ruby Pendant (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ruby Pendant (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ruby Pendant (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ruby Pendant (Legendary) A": {
+    "buyOrderCents": 467,
+    "lowestCents": 6107
+  },
+  "Ruby Pendant (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ruby Pendant (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ruby Pendant (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ruby Pendant (Beyond) A": {
+    "buyOrderCents": 1122
+  },
+  "Amethyst Pendant (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Pendant (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Pendant (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Pendant (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Pendant (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Pendant (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Pendant (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Pendant (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Amulet (Legendary) A": {
+    "buyOrderCents": 279
+  },
+  "Emerald Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Amulet (Immortal) A": {
+    "buyOrderCents": 424
+  },
+  "Emerald Amulet (Arcana) A": {
+    "buyOrderCents": 1062
+  },
+  "Emerald Amulet (Beyond) A": {
+    "buyOrderCents": 879
+  },
+  "Diamond Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Amulet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Amulet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Amulet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Amulet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Amulet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Amulet (Arcana) A": {
+    "buyOrderCents": 5
+  },
+  "Stardust Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Amulet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Amulet (Beyond) A": {
+    "buyOrderCents": 1284
+  },
+  "Celestial Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Amulet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Amulet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Amulet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Amulet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Amulet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Amulet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Amulet (Legendary) A": {
+    "buyOrderCents": 264
+  },
+  "Ethereal Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Amulet (Immortal) A": {
+    "buyOrderCents": 395
+  },
+  "Ethereal Amulet (Arcana) A": {
+    "buyOrderCents": 1932
+  },
+  "Ethereal Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Void Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Amulet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Void Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Amulet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Void Amulet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Amulet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Amulet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Amulet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Amulet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Amulet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Amulet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Amulet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Amulet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Earring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Sapphire Earring": {
+    "buyOrderCents": 0
+  },
+  "Sapphire Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Sapphire Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Sapphire Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Sapphire Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Sapphire Earring (Immortal) A": {
+    "buyOrderCents": 241
+  },
+  "Sapphire Earring (Arcana) A": {
+    "buyOrderCents": 446
+  },
+  "Sapphire Earring (Beyond) A": {
+    "buyOrderCents": 779
+  },
+  "Diamond Earring": {
+    "buyOrderCents": 0
+  },
+  "Diamond Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Earring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Earring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Earring": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Earring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Earring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Earring": {
+    "buyOrderCents": 0
+  },
+  "Celestial Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Earring (Legendary) A": {
+    "buyOrderCents": 117
+  },
+  "Celestial Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Earring (Immortal) A": {
+    "buyOrderCents": 194
+  },
+  "Celestial Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Earring (Beyond) A": {
+    "buyOrderCents": 934
+  },
+  "Eclipse Earring": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Earring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Earring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Earring": {
+    "buyOrderCents": 0
+  },
+  "Astral Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Earring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Earring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Earring": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Earring (Immortal) A": {
+    "buyOrderCents": 1395
+  },
+  "Ethereal Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Earring (Beyond) A": {
+    "buyOrderCents": 4985
+  },
+  "Void Earring": {
+    "buyOrderCents": 0
+  },
+  "Void Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Earring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Void Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Earring (Immortal) A": {
+    "buyOrderCents": 4
+  },
+  "Void Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Earring": {
+    "buyOrderCents": 0
+  },
+  "Abyss Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Earring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Earring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Ring": {
+    "buyOrderCents": 0
+  },
+  "Copper Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Ring (Legendary) A": {
+    "buyOrderCents": 67
+  },
+  "Copper Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Ring (Immortal) A": {
+    "buyOrderCents": 133
+  },
+  "Copper Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Ring": {
+    "buyOrderCents": 0
+  },
+  "Bronze Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Ring (Legendary) A": {
+    "buyOrderCents": 48
+  },
+  "Bronze Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Ring (Immortal) A": {
+    "buyOrderCents": 228
+  },
+  "Bronze Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Ring": {
+    "buyOrderCents": 0
+  },
+  "Silver Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Ring (Legendary) A": {
+    "buyOrderCents": 80
+  },
+  "Silver Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Ring (Immortal) A": {
+    "buyOrderCents": 133
+  },
+  "Silver Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Ring": {
+    "buyOrderCents": 0
+  },
+  "Gold Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Ring (Legendary) A": {
+    "buyOrderCents": 194
+  },
+  "Gold Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Ring (Immortal) A": {
+    "buyOrderCents": 212
+  },
+  "Gold Ring (Arcana) A": {
+    "buyOrderCents": 966
+  },
+  "Gold Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Ring": {
+    "buyOrderCents": 0
+  },
+  "Platinum Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Ring (Legendary) A": {
+    "buyOrderCents": 464
+  },
+  "Platinum Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Ring (Immortal) A": {
+    "buyOrderCents": 161
+  },
+  "Platinum Ring (Arcana) A": {
+    "buyOrderCents": 612
+  },
+  "Platinum Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Ring": {
+    "buyOrderCents": 0
+  },
+  "Crystal Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Ring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Ring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Ring": {
+    "buyOrderCents": 0
+  },
+  "Amber Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Ring (Legendary) A": {
+    "buyOrderCents": 40
+  },
+  "Amber Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Ring (Immortal) A": {
+    "buyOrderCents": 217
+  },
+  "Amber Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Amber Ring (Beyond) A": {
+    "buyOrderCents": 1308
+  },
+  "Topaz Ring": {
+    "buyOrderCents": 0
+  },
+  "Topaz Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Topaz Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Topaz Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Topaz Ring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Topaz Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Topaz Ring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Topaz Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Topaz Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Ring": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Ring (Immortal) A": {
+    "buyOrderCents": 174
+  },
+  "Amethyst Ring (Arcana) A": {
+    "buyOrderCents": 436,
+    "lowestCents": 2493
+  },
+  "Amethyst Ring (Beyond) A": {
+    "buyOrderCents": 1264
+  },
+  "Garnet Ring": {
+    "buyOrderCents": 0
+  },
+  "Garnet Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Ring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Ring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Ring": {
+    "buyOrderCents": 0
+  },
+  "Emerald Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Ring (Legendary) A": {
+    "buyOrderCents": 107
+  },
+  "Emerald Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Ring (Immortal) A": {
+    "buyOrderCents": 375
+  },
+  "Emerald Ring (Arcana) A": {
+    "buyOrderCents": 389
+  },
+  "Emerald Ring (Beyond) A": {
+    "buyOrderCents": 386
+  },
+  "Diamond Ring": {
+    "buyOrderCents": 0
+  },
+  "Diamond Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Ring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Ring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Ring": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Ring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Ring (Immortal) A": {
+    "buyOrderCents": 6
+  },
+  "Moonstone Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Ring": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Ring (Legendary) A": {
+    "buyOrderCents": 87
+  },
+  "Eclipse Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Ring (Immortal) A": {
+    "buyOrderCents": 311
+  },
+  "Eclipse Ring (Arcana) A": {
+    "buyOrderCents": 1454,
+    "lowestCents": 3240
+  },
+  "Eclipse Ring (Beyond) A": {
+    "buyOrderCents": 779
+  },
+  "Celestial Ring": {
+    "buyOrderCents": 0
+  },
+  "Celestial Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Ring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Ring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Ring": {
+    "buyOrderCents": 0
+  },
+  "Astral Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Ring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Ring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Ring": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Ring (Legendary) A": {
+    "buyOrderCents": 206
+  },
+  "Ethereal Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Ring (Immortal) A": {
+    "buyOrderCents": 485
+  },
+  "Ethereal Ring (Arcana) A": {
+    "buyOrderCents": 800
+  },
+  "Ethereal Ring (Beyond) A": {
+    "buyOrderCents": 1595
+  },
+  "Void Ring": {
+    "buyOrderCents": 0
+  },
+  "Void Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Ring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Void Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Ring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Void Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Ring": {
+    "buyOrderCents": 0
+  },
+  "Abyss Ring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Ring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Ring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Ring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Ring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Ring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Ring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Ring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Bracer": {
+    "buyOrderCents": 0
+  },
+  "Copper Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Bracer (Legendary) A": {
+    "buyOrderCents": 36
+  },
+  "Copper Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Bracer (Immortal) A": {
+    "buyOrderCents": 91
+  },
+  "Copper Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Bracer": {
+    "buyOrderCents": 0
+  },
+  "Bronze Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Bracer (Legendary) A": {
+    "buyOrderCents": 21
+  },
+  "Bronze Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Bracer (Immortal) A": {
+    "buyOrderCents": 273
+  },
+  "Bronze Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Bracer": {
+    "buyOrderCents": 0
+  },
+  "Silver Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Bracer (Legendary) A": {
+    "buyOrderCents": 33
+  },
+  "Silver Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Bracer (Immortal) A": {
+    "buyOrderCents": 174
+  },
+  "Silver Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Bracer": {
+    "buyOrderCents": 0
+  },
+  "Gold Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Bracer (Legendary) A": {
+    "buyOrderCents": 81
+  },
+  "Gold Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Bracer (Immortal) A": {
+    "buyOrderCents": 185
+  },
+  "Gold Bracer (Arcana) A": {
+    "buyOrderCents": 198
+  },
+  "Gold Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Bracer": {
+    "buyOrderCents": 0
+  },
+  "Platinum Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Bracer (Legendary) A": {
+    "buyOrderCents": 117
+  },
+  "Platinum Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Bracer (Immortal) A": {
+    "buyOrderCents": 102
+  },
+  "Platinum Bracer (Arcana) A": {
+    "buyOrderCents": 408
+  },
+  "Platinum Bracer (Beyond) A": {
+    "buyOrderCents": 0
   }
 }
