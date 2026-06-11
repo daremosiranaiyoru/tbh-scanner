@@ -668,18 +668,18 @@ export default function ScannerApp() {
   const getRarityLabel = (rarity) => rarityTranslations[rarity]?.[selectedLang] || rarityTranslations[rarity]?.['en-US'] || rarity;
 
   const announcementTranslations = {
-    'en-US': 'Multi-image upload is now supported! You can appraise up to 8 images at once!\nYou can also add more images by dragging and dropping or copy-pasting without pressing the Clear Screenshot button!',
-    'ja-JP': '複数画像のアップロードに対応しました！一気に8枚まで鑑定可能です！\n画像をクリアボタンを押さずに追加でドラッグアンドドロップかコピーペーストを行ってもOKです！',
-    'zh-Hans': '现已支持多图上传！一次最多可鉴定8张图片！\n您无需点击“清除截图”按钮，直接通过拖拽或复制粘贴即可追加上传！',
-    'zh-Hant': '現已支援多圖上傳！一次最多可鑑定8張圖片！\n您無需點擊「清除截圖」按鈕，直接透過拖曳或複製貼上即可追加上傳！',
-    'ko-KR': '다중 이미지 업로드를 지원합니다! 한 번에 최대 8장까지 감정 가능합니다!\n스크린샷 지우기 버튼을 누르지 않고도 드래그 앤 드롭이나 복사-붙여넣기로 이미지를 추가할 수 있습니다!',
-    'ru-RU': 'Теперь поддерживается загрузка нескольких изображений! Вы можете оценить до 8 изображений за раз!\nВы также можете добавлять дополнительные изображения путем перетаскивания или копирования и вставки без нажатия кнопки Очистить скриншот!',
-    'es-ES': '¡Ahora se admite la carga de múltiples imágenes! ¡Puedes evaluar hasta 8 imágenes a la vez!\n¡También puedes agregar más imágenes arrastrando y soltando o copiando y pegando sin presionar el botón Borrar captura!',
-    'fr-FR': 'Le téléchargement de plusieurs images est désormais pris en charge ! Vous pouvez évaluer jusqu\'8 images à la fois !\nVous pouvez également ajouter d\'autres images par glisser-déposer ou copier-coller sans appuyer sur le bouton Effacer la capture !',
-    'de-DE': 'Der Upload mehrerer Bilder wird jetzt unterstützt! Sie können bis zu 8 Bilder auf einmal bewerten!\nSie können auch weitere Bilder per Drag & Drop oder durch Kopieren und Einfügen hinzufügen, ohne die Schaltfläche Screenshot löschen drücken zu müssen!',
-    'pt-BR': 'O upload de múltiplas imagens agora é suportado! Você pode avaliar até 8 imagens de uma vez!\nVocê também pode adicionar mais imagens arrastando e soltando ou copiando e colando sem pressionar o botão Limpar captura!',
-    'tr-TR': 'Çoklu görüntü yükleme artık destekleniyor! Aynı anda 8 görüntüye kadar değerlendirme yapabilirsiniz!\nEkran Görüntüsünü Temizle düğmesine basmadan sürükleyip bırakarak veya kopyalayıp yapıştırarak daha fazla görüntü ekleyebilirsiniz!',
-    'vi-VN': 'Tính năng tải lên nhiều hình ảnh hiện đã được hỗ trợ! Bạn có thể đánh giá tối đa 8 hình ảnh cùng một lúc!\nBạn cũng có thể thêm hình ảnh bằng cách kéo và thả hoặc sao chép và dán mà không cần nhấn nút Xóa ảnh chụp màn hình!'
+    'en-US': 'Update: You can now click on an item\'s icon in the scanned image to instantly view its information!',
+    'ja-JP': 'アップデート：スキャン画像からアイテムのアイコンをクリックすると即座にそのアイテムの情報が表示されるようになりました！',
+    'zh-Hans': '更新：现在点击扫描图像中的物品图标，即可立即查看该物品的信息！',
+    'zh-Hant': '更新：現在點擊掃描圖像中的物品圖示，即可立即查看該物品的資訊！',
+    'ko-KR': '업데이트: 스캔한 이미지에서 아이템 아이콘을 클릭하면 즉시 해당 아이템 정보를 볼 수 있습니다!',
+    'ru-RU': 'Обновление: теперь вы можете нажать на значок предмета на отсканированном изображении, чтобы мгновенно просмотреть информацию о нем!',
+    'es-ES': 'Actualización: ¡Ahora puedes hacer clic en el ícono de un elemento en la imagen escaneada para ver instantáneamente su información!',
+    'fr-FR': 'Mise à jour : vous pouvez désormais cliquer sur l\'icône d\'un objet dans l\'image numérisée pour afficher instantanément ses informations !',
+    'de-DE': 'Update: Sie können jetzt auf das Symbol eines Elements im gescannten Bild klicken, um dessen Informationen sofort anzuzeigen!',
+    'pt-BR': 'Atualização: Agora você pode clicar no ícone de um item na imagem digitalizada para ver instantaneamente suas informações!',
+    'tr-TR': 'Güncelleme: Artık taranan görüntüdeki bir öğenin simgesine tıklayarak bilgilerini anında görüntüleyebilirsiniz!',
+    'vi-VN': 'Cập nhật: Giờ đây, bạn có thể nhấp vào biểu tượng của một mục trong hình ảnh được quét để xem ngay thông tin của mục đó!'
   };
 
   const titleTranslations = {
