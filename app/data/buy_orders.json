@@ -9427,5 +9427,33 @@
   },
   "Radiant Boots (Beyond) A": {
     "buyOrderCents": 0
+  },
+  "Coral Piece": {
+    "buyOrderCents": 10,
+    "lowestCents": 11
+  },
+  "Minor Emerald": {
+    "buyOrderCents": 11,
+    "lowestCents": 11
+  },
+  "Ruby": {
+    "buyOrderCents": 287,
+    "lowestCents": 374
+  },
+  "Minor Ruby": {
+    "buyOrderCents": 7,
+    "lowestCents": 7
+  },
+  "Obsidian Shard": {
+    "buyOrderCents": 7,
+    "lowestCents": 7
+  },
+  "Minor Topaz": {
+    "buyOrderCents": 7,
+    "lowestCents": 7
+  },
+  "Turquoise": {
+    "buyOrderCents": 206,
+    "lowestCents": 623
   }
 }
