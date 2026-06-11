@@ -1144,8 +1144,7 @@ export default function ScannerApp() {
               const englishName = names['en-US'] || item.name.replace('.png', '');
               let marketData = null;
               if (prices) {
-                if (prices[englishName]) marketData = prices[englishName];
-                else if (item.rarity && item.rarity !== 'UNKNOWN') {
+                if (item.rarity && item.rarity !== 'UNKNOWN') {
                   const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
                   const prefix = `${englishName} (${rarityStr})`;
                   if (prices[`${prefix} A`]) marketData = prices[`${prefix} A`];
@@ -1153,6 +1152,11 @@ export default function ScannerApp() {
                     const matchedKey = Object.keys(prices).find(k => k.startsWith(prefix));
                     if (matchedKey) marketData = prices[matchedKey];
                   }
+                }
+                
+                // Fallback to base name if rarity check didn't yield marketData
+                if (!marketData && prices[englishName]) {
+                  marketData = prices[englishName];
                 }
               }
               if (marketData) {
@@ -1256,9 +1260,7 @@ export default function ScannerApp() {
                           const englishName = names['en-US'] || item.name.replace('.png', '');
                           
                           let marketData = null;
-                          if (prices[englishName]) {
-                            marketData = prices[englishName];
-                          } else if (item.rarity && item.rarity !== 'UNKNOWN') {
+                          if (item.rarity && item.rarity !== 'UNKNOWN') {
                             const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
                             const prefix = `${englishName} (${rarityStr})`;
                             if (prices[`${prefix} A`]) marketData = prices[`${prefix} A`];
@@ -1266,6 +1268,11 @@ export default function ScannerApp() {
                               const matchedKey = Object.keys(prices).find(k => k.startsWith(prefix));
                               if (matchedKey) marketData = prices[matchedKey];
                             }
+                          }
+                          
+                          // Fallback to base name if rarity check didn't yield marketData
+                          if (!marketData && prices[englishName]) {
+                            marketData = prices[englishName];
                           }
                           
                           if (marketData) {
@@ -1397,11 +1404,7 @@ export default function ScannerApp() {
                       let marketData = null;
                       let actualKey = englishName; // default fallback key for URL
                       if (prices) {
-                        if (prices[englishName]) {
-                          marketData = prices[englishName];
-                          actualKey = englishName;
-                        }
-                        else if (item.rarity && item.rarity !== 'UNKNOWN') {
+                        if (item.rarity && item.rarity !== 'UNKNOWN') {
                           const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
                           const prefix = `${englishName} (${rarityStr})`;
                           if (prices[`${prefix} A`]) {
@@ -1422,6 +1425,13 @@ export default function ScannerApp() {
                               actualKey = `${prefix} A`; // Fallback if absolutely no matching keys exist in the database
                             }
                           }
+                        }
+                        
+                        // Fallback to base name if rarity check didn't yield marketData
+                        if (!marketData && prices[englishName]) {
+                          marketData = prices[englishName];
+                          // Only override actualKey if we hadn't already set it to a valid fallback prefix in the rarity check
+                          if (actualKey === englishName) actualKey = englishName;
                         }
                       }
                       
