@@ -413,7 +413,21 @@ export default function ScannerApp() {
 
   const handleCopyToClipboard = (totalString) => {
     try {
-      showToast("📸 画面をキャプチャ中...");
+      const captureMsgs = {
+        'en-US': '📸 Capturing screen...',
+        'ja-JP': '📸 画面をキャプチャ中...',
+        'zh-Hans': '📸 正在截取屏幕...',
+        'zh-Hant': '📸 正在擷取畫面...',
+        'ko-KR': '📸 화면 캡처 중...',
+        'ru-RU': '📸 Захват экрана...',
+        'es-ES': '📸 Capturando pantalla...',
+        'fr-FR': '📸 Capture de l\'écran...',
+        'de-DE': '📸 Bildschirm wird erfasst...',
+        'pt-BR': '📸 Capturando a tela...',
+        'tr-TR': '📸 Ekran yakalanıyor...',
+        'vi-VN': '📸 Đang chụp màn hình...'
+      };
+      showToast(captureMsgs[selectedLang] || captureMsgs['en-US']);
       
       // Trigger flash effect
       setIsFlashing(true);
@@ -434,14 +448,45 @@ export default function ScannerApp() {
       };
       
       // Build plain text for text pasting
-      let plainText = `💰 私のTaskbar Heroインベントリ総資産は ${totalString} でした！\n`;
+      const plainTextTotalMsgs = {
+        'en-US': `💰 My Taskbar Hero inventory total value was ${totalString}!\n`,
+        'ja-JP': `💰 私のTaskbar Heroインベントリ総資産は ${totalString} でした！\n`,
+        'zh-Hans': `💰 我的 Taskbar Hero 物品库总价值为 ${totalString}！\n`,
+        'zh-Hant': `💰 我的 Taskbar Hero 物品庫總價值為 ${totalString}！\n`,
+        'ko-KR': `💰 내 Taskbar Hero 인벤토리 총 가치는 ${totalString}였습니다!\n`,
+        'ru-RU': `💰 Общая стоимость моего инвентаря Taskbar Hero составила ${totalString}!\n`,
+        'es-ES': `💰 ¡El valor total de mi inventario de Taskbar Hero fue ${totalString}!\n`,
+        'fr-FR': `💰 La valeur totale de mon inventaire Taskbar Hero était de ${totalString} !\n`,
+        'de-DE': `💰 Der Gesamtwert meines Taskbar Hero-Inventars betrug ${totalString}!\n`,
+        'pt-BR': `💰 O valor total do meu inventário do Taskbar Hero foi ${totalString}!\n`,
+        'tr-TR': `💰 Taskbar Hero envanterimin toplam değeri ${totalString} idi!\n`,
+        'vi-VN': `💰 Tổng giá trị kho đồ Taskbar Hero của tôi là ${totalString}!\n`
+      };
+      
+      let plainText = plainTextTotalMsgs[selectedLang] || plainTextTotalMsgs['en-US'];
       plainText += `https://tbh-scanner.vercel.app\n\n`;
       results.slice(0, 10).forEach(r => {
           const names = itemNames[r.name] || {};
           const displayName = names[selectedLang] || names['en-US'] || r.name.replace('.png', '');
           plainText += `- ${displayName}\n`;
       });
-      if (results.length > 10) plainText += `...他 ${results.length - 10} アイテム\n`;
+      if (results.length > 10) {
+        const othersMsgs = {
+          'en-US': `...and ${results.length - 10} other items\n`,
+          'ja-JP': `...他 ${results.length - 10} アイテム\n`,
+          'zh-Hans': `...及其他 ${results.length - 10} 件物品\n`,
+          'zh-Hant': `...及其他 ${results.length - 10} 件物品\n`,
+          'ko-KR': `...외 ${results.length - 10}개 아이템\n`,
+          'ru-RU': `...и еще ${results.length - 10} предметов\n`,
+          'es-ES': `...y otros ${results.length - 10} objetos\n`,
+          'fr-FR': `...et ${results.length - 10} autres objets\n`,
+          'de-DE': `...und ${results.length - 10} weitere Gegenstände\n`,
+          'pt-BR': `...e outros ${results.length - 10} itens\n`,
+          'tr-TR': `...ve ${results.length - 10} diğer öğe\n`,
+          'vi-VN': `...và ${results.length - 10} vật phẩm khác\n`
+        };
+        plainText += othersMsgs[selectedLang] || othersMsgs['en-US'];
+      }
       
       // Pass Promises directly to ClipboardItem so the browser doesn't block the async clipboard write
       navigator.clipboard.write([
@@ -450,15 +495,57 @@ export default function ScannerApp() {
           'image/png': generateImageBlob()
         })
       ]).then(() => {
-        showToast("✅ 画像と結果をクリップボードにコピーしました！");
+        const successMsgs = {
+          'en-US': '✅ Copied the result! Paste with Ctrl+V',
+          'ja-JP': '✅ 結果をコピーしました。Ctrl+Vで貼り付け',
+          'zh-Hans': '✅ 结果已复制！按 Ctrl+V 粘贴',
+          'zh-Hant': '✅ 結果已複製！按 Ctrl+V 貼上',
+          'ko-KR': '✅ 결과를 복사했습니다! Ctrl+V로 붙여넣으세요',
+          'ru-RU': '✅ Результат скопирован! Вставьте с помощью Ctrl+V',
+          'es-ES': '✅ ¡Resultado copiado! Pegue con Ctrl+V',
+          'fr-FR': '✅ Résultat copié ! Collez avec Ctrl+V',
+          'de-DE': '✅ Ergebnis kopiert! Mit Strg+V einfügen',
+          'pt-BR': '✅ Resultado copiado! Cole com Ctrl+V',
+          'tr-TR': '✅ Sonuç kopyalandı! Ctrl+V ile yapıştırın',
+          'vi-VN': '✅ Đã sao chép kết quả! Dán bằng Ctrl+V'
+        };
+        showToast(successMsgs[selectedLang] || successMsgs['en-US']);
       }).catch(err => {
         console.error(err);
-        showToast("❌ コピー失敗: " + err.message);
+        const failMsgs = {
+          'en-US': '❌ Copy failed: ',
+          'ja-JP': '❌ コピー失敗: ',
+          'zh-Hans': '❌ 复制失败: ',
+          'zh-Hant': '❌ 複製失敗: ',
+          'ko-KR': '❌ 복사 실패: ',
+          'ru-RU': '❌ Ошибка копирования: ',
+          'es-ES': '❌ Error al copiar: ',
+          'fr-FR': '❌ Échec de la copie : ',
+          'de-DE': '❌ Kopieren fehlgeschlagen: ',
+          'pt-BR': '❌ Falha ao copiar: ',
+          'tr-TR': '❌ Kopyalama başarısız: ',
+          'vi-VN': '❌ Sao chép thất bại: '
+        };
+        showToast((failMsgs[selectedLang] || failMsgs['en-US']) + err.message);
       });
       
     } catch (err) {
       console.error(err);
-      showToast("❌ コピー失敗: " + err.message);
+      const failMsgs = {
+        'en-US': '❌ Copy failed: ',
+        'ja-JP': '❌ コピー失敗: ',
+        'zh-Hans': '❌ 复制失败: ',
+        'zh-Hant': '❌ 複製失敗: ',
+        'ko-KR': '❌ 복사 실패: ',
+        'ru-RU': '❌ Ошибка копирования: ',
+        'es-ES': '❌ Error al copiar: ',
+        'fr-FR': '❌ Échec de la copie : ',
+        'de-DE': '❌ Kopieren fehlgeschlagen: ',
+        'pt-BR': '❌ Falha ao copiar: ',
+        'tr-TR': '❌ Kopyalama başarısız: ',
+        'vi-VN': '❌ Sao chép thất bại: '
+      };
+      showToast((failMsgs[selectedLang] || failMsgs['en-US']) + err.message);
     }
   };
 
