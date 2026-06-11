@@ -343,22 +343,27 @@
     "buyOrderCents": 0
   },
   "Fate Armor (Immortal) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Fate Armor (Arcana) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Fate Armor (Beyond) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "War Armor": {
     "buyOrderCents": 0
   },
   "War Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "War Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "War Armor (Epic) A": {
     "buyOrderCents": 0
@@ -382,37 +387,45 @@
     "buyOrderCents": 0
   },
   "Heavy Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Heavy Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Heavy Armor (Epic) A": {
     "buyOrderCents": 0
   },
   "Heavy Armor (Legendary) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Heavy Armor (Mythic) A": {
     "buyOrderCents": 0
   },
   "Heavy Armor (Immortal) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 11900,
+    "lowestCents": 8
   },
   "Heavy Armor (Arcana) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Heavy Armor (Beyond) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Rune Plate": {
     "buyOrderCents": 0
   },
   "Rune Plate (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Rune Plate (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Rune Plate (Epic) A": {
     "buyOrderCents": 0
@@ -436,25 +449,30 @@
     "buyOrderCents": 0
   },
   "Dragon Scale Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dragon Scale Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dragon Scale Armor (Epic) A": {
     "buyOrderCents": 0
   },
   "Dragon Scale Armor (Legendary) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dragon Scale Armor (Mythic) A": {
     "buyOrderCents": 0
   },
   "Dragon Scale Armor (Immortal) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dragon Scale Armor (Arcana) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dragon Scale Armor (Beyond) A": {
     "buyOrderCents": 0
@@ -463,10 +481,12 @@
     "buyOrderCents": 0
   },
   "Mystic Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Mystic Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Mystic Armor (Epic) A": {
     "buyOrderCents": 0
@@ -490,64 +510,78 @@
     "buyOrderCents": 0
   },
   "Great Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Great Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Great Armor (Epic) A": {
     "buyOrderCents": 0
   },
   "Great Armor (Legendary) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Great Armor (Mythic) A": {
     "buyOrderCents": 0
   },
   "Great Armor (Immortal) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Great Armor (Arcana) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Great Armor (Beyond) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Ancient Armor": {
     "buyOrderCents": 0
   },
   "Ancient Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Ancient Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Ancient Armor (Epic) A": {
     "buyOrderCents": 0
   },
   "Ancient Armor (Legendary) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Ancient Armor (Mythic) A": {
     "buyOrderCents": 0
   },
   "Ancient Armor (Immortal) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Ancient Armor (Arcana) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Ancient Armor (Beyond) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Shine Armor": {
     "buyOrderCents": 0
   },
   "Shine Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Shine Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Shine Armor (Epic) A": {
     "buyOrderCents": 0
@@ -572,22 +606,26 @@
     "buyOrderCents": 0
   },
   "Void Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Void Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Void Armor (Epic) A": {
     "buyOrderCents": 0
   },
   "Void Armor (Legendary) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Void Armor (Mythic) A": {
     "buyOrderCents": 0
   },
   "Void Armor (Immortal) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Void Armor (Arcana) A": {
     "buyOrderCents": 0
@@ -602,34 +640,41 @@
     "buyOrderCents": 0
   },
   "Dragon Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dragon Armor (Epic) A": {
     "buyOrderCents": 0
   },
   "Dragon Armor (Legendary) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dragon Armor (Mythic) A": {
     "buyOrderCents": 0
   },
   "Dragon Armor (Immortal) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dragon Armor (Arcana) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dragon Armor (Beyond) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dimensional Armor": {
     "buyOrderCents": 0
   },
   "Dimensional Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dimensional Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Dimensional Armor (Epic) A": {
     "buyOrderCents": 0
@@ -655,55 +700,67 @@
     "buyOrderCents": 0
   },
   "Shadow Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Shadow Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Shadow Armor (Epic) A": {
     "buyOrderCents": 0
   },
   "Shadow Armor (Legendary) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Shadow Armor (Mythic) A": {
     "buyOrderCents": 0
   },
   "Shadow Armor (Immortal) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 600,
+    "lowestCents": 8
   },
   "Shadow Armor (Arcana) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Shadow Armor (Beyond) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 800,
+    "lowestCents": 8
   },
   "Eternal Armor": {
     "buyOrderCents": 0
   },
   "Eternal Armor (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Eternal Armor (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Eternal Armor (Epic) A": {
     "buyOrderCents": 0
   },
   "Eternal Armor (Legendary) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Eternal Armor (Mythic) A": {
     "buyOrderCents": 0
   },
   "Eternal Armor (Immortal) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Eternal Armor (Arcana) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Eternal Armor (Beyond) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Radiant Armor": {
     "buyOrderCents": 0
@@ -889,10 +946,12 @@
     "buyOrderCents": 0
   },
   "Copper Earring (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Copper Earring (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Copper Earring (Epic) A": {
     "buyOrderCents": 0
@@ -916,15 +975,7850 @@
     "buyOrderCents": 0
   },
   "Bronze Earring (Uncommon) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Bronze Earring (Rare) A": {
-    "buyOrderCents": 0
+    "buyOrderCents": 8,
+    "lowestCents": 8
   },
   "Bronze Earring (Epic) A": {
     "buyOrderCents": 0
   },
   "Bronze Earring (Legendary) A": {
     "buyOrderCents": 6900
+  },
+  "Bronze Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Earring (Immortal) A": {
+    "buyOrderCents": 23100
+  },
+  "Bronze Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Earring": {
+    "buyOrderCents": 0
+  },
+  "Silver Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Earring (Legendary) A": {
+    "buyOrderCents": 14200
+  },
+  "Silver Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Earring (Immortal) A": {
+    "buyOrderCents": 12500
+  },
+  "Silver Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Silver Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Earring": {
+    "buyOrderCents": 0
+  },
+  "Gold Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Earring (Legendary) A": {
+    "buyOrderCents": 18600
+  },
+  "Gold Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Gold Earring (Immortal) A": {
+    "buyOrderCents": 35500
+  },
+  "Gold Earring (Arcana) A": {
+    "buyOrderCents": 42000
+  },
+  "Gold Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Earring": {
+    "buyOrderCents": 0
+  },
+  "Platinum Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Earring (Legendary) A": {
+    "buyOrderCents": 18200
+  },
+  "Platinum Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Platinum Earring (Immortal) A": {
+    "buyOrderCents": 50600
+  },
+  "Platinum Earring (Arcana) A": {
+    "buyOrderCents": 83700
+  },
+  "Platinum Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Earring": {
+    "buyOrderCents": 0
+  },
+  "Crystal Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Earring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Earring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Earring": {
+    "buyOrderCents": 0
+  },
+  "Emerald Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Earring (Legendary) A": {
+    "buyOrderCents": 10600,
+    "lowestCents": 442800
+  },
+  "Emerald Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Earring (Immortal) A": {
+    "buyOrderCents": 34900
+  },
+  "Emerald Earring (Arcana) A": {
+    "buyOrderCents": 74600
+  },
+  "Emerald Earring (Beyond) A": {
+    "buyOrderCents": 304800,
+    "lowestCents": 750000
+  },
+  "Jade Earring": {
+    "buyOrderCents": 0
+  },
+  "Jade Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Earring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Earring (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Tiger Eye Earring": {
+    "buyOrderCents": 0
+  },
+  "Tiger Eye Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Tiger Eye Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Tiger Eye Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Tiger Eye Earring (Legendary) A": {
+    "buyOrderCents": 17600
+  },
+  "Tiger Eye Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Tiger Eye Earring (Immortal) A": {
+    "buyOrderCents": 77700
+  },
+  "Tiger Eye Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Tiger Eye Earring (Beyond) A": {
+    "buyOrderCents": 199800
+  },
+  "Garnet Earring": {
+    "buyOrderCents": 0
+  },
+  "Garnet Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Garnet Earring (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Phantom Emerald": {
+    "buyOrderCents": 295
+  },
+  "Twilight Amethyst": {
+    "buyOrderCents": 934
+  },
+  "Celestial Pearl": {
+    "buyOrderCents": 0
+  },
+  "Dragonite Crystal": {
+    "buyOrderCents": 1239,
+    "lowestCents": 2198
+  },
+  "Void Crystal": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Pearl": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Gem": {
+    "buyOrderCents": 0
+  },
+  "Chaos Diamond": {
+    "buyOrderCents": 0
+  },
+  "Goblin Hide": {
+    "buyOrderCents": 4,
+    "lowestCents": 4
+  },
+  "Skeleton Bone": {
+    "buyOrderCents": 4,
+    "lowestCents": 4
+  },
+  "Slime Jelly": {
+    "buyOrderCents": 4,
+    "lowestCents": 4
+  },
+  "Wolf Fang": {
+    "buyOrderCents": 4,
+    "lowestCents": 4
+  },
+  "Spider Silk": {
+    "buyOrderCents": 6,
+    "lowestCents": 6
+  },
+  "Poisonous Herb": {
+    "buyOrderCents": 4,
+    "lowestCents": 5
+  },
+  "Healing Herb": {
+    "buyOrderCents": 4,
+    "lowestCents": 4
+  },
+  "Bat Wing Membrane": {
+    "buyOrderCents": 4,
+    "lowestCents": 5
+  },
+  "Ogre Blood": {
+    "buyOrderCents": 4,
+    "lowestCents": 5
+  },
+  "Mushroom Spore": {
+    "buyOrderCents": 4,
+    "lowestCents": 5
+  },
+  "Ancient Tree Sap": {
+    "buyOrderCents": 4,
+    "lowestCents": 5
+  },
+  "Skull": {
+    "buyOrderCents": 125
+  },
+  "Harpy Feather": {
+    "buyOrderCents": 74,
+    "lowestCents": 1468
+  },
+  "Mandrake Root": {
+    "buyOrderCents": 87,
+    "lowestCents": 623
+  },
+  "Nightshade Extract": {
+    "buyOrderCents": 148,
+    "lowestCents": 201
+  },
+  "Basilisk Scale": {
+    "buyOrderCents": 133,
+    "lowestCents": 810
+  },
+  "Wyvern Claw": {
+    "buyOrderCents": 144,
+    "lowestCents": 215
+  },
+  "Dice": {
+    "buyOrderCents": 511,
+    "lowestCents": 3583
+  },
+  "Demon Blood": {
+    "buyOrderCents": 102,
+    "lowestCents": 338
+  },
+  "Minotaur Horn": {
+    "buyOrderCents": 62
+  },
+  "Griffin Beak": {
+    "buyOrderCents": 48,
+    "lowestCents": 201
+  },
+  "Phoenix Ash": {
+    "buyOrderCents": 110,
+    "lowestCents": 2340
+  },
+  "Dragon Bile": {
+    "buyOrderCents": 100,
+    "lowestCents": 120
+  },
+  "Wraith Essence": {
+    "buyOrderCents": 244,
+    "lowestCents": 319
+  },
+  "Kraken Ink": {
+    "buyOrderCents": 189
+  },
+  "Titan Marrow": {
+    "buyOrderCents": 315,
+    "lowestCents": 1030
+  },
+  "Void Ichor": {
+    "buyOrderCents": 209,
+    "lowestCents": 1234
+  },
+  "Abyssal Mucus": {
+    "buyOrderCents": 1668,
+    "lowestCents": 6650
+  },
+  "Chaos Spore": {
+    "buyOrderCents": 1425
+  },
+  "Primordial Sap": {
+    "buyOrderCents": 0
+  },
+  "Eldritch Venom": {
+    "buyOrderCents": 0
+  },
+  "Chaso Dice": {
+    "buyOrderCents": 0
+  },
+  "Void Tendril": {
+    "buyOrderCents": 0
+  },
+  "Scroll of Common Inscription": {
+    "buyOrderCents": 24,
+    "lowestCents": 1390
+  },
+  "Scroll of Uncommon Inscription": {
+    "buyOrderCents": 44
+  },
+  "Scroll of Rare Inscription": {
+    "buyOrderCents": 45
+  },
+  "Scroll of Legendary Inscription": {
+    "buyOrderCents": 298,
+    "lowestCents": 798
+  },
+  "Scroll of Immortal Inscription": {
+    "buyOrderCents": 510,
+    "lowestCents": 1601
+  },
+  "Scroll of Arcana Inscription": {
+    "buyOrderCents": 924,
+    "lowestCents": 1914
+  },
+  "Scroll of Beyond Inscription": {
+    "buyOrderCents": 0
+  },
+  "Scroll of Celestial Inscription": {
+    "buyOrderCents": 0
+  },
+  "Scroll of Divine Inscription": {
+    "buyOrderCents": 0
+  },
+  "Scroll of Cosmic Inscription": {
+    "buyOrderCents": 0
+  },
+  "Wood": {
+    "buyOrderCents": 4,
+    "lowestCents": 4
+  },
+  "Stone": {
+    "buyOrderCents": 11,
+    "lowestCents": 11
+  },
+  "Leather": {
+    "buyOrderCents": 4,
+    "lowestCents": 5
+  },
+  "Copper Nugget": {
+    "buyOrderCents": 5,
+    "lowestCents": 5
+  },
+  "Bronze Ingot": {
+    "buyOrderCents": 11,
+    "lowestCents": 11
+  },
+  "Iron Ingot": {
+    "buyOrderCents": 14,
+    "lowestCents": 14
+  },
+  "Silver Ingot": {
+    "buyOrderCents": 118,
+    "lowestCents": 139
+  },
+  "Gold Ingot": {
+    "buyOrderCents": 292,
+    "lowestCents": 300
+  },
+  "Stardust Ingot": {
+    "buyOrderCents": 280,
+    "lowestCents": 1102
+  },
+  "Void Iron": {
+    "buyOrderCents": 313,
+    "lowestCents": 872
+  },
+  "Bloodstone": {
+    "buyOrderCents": 22,
+    "lowestCents": 248
+  },
+  "Thunderstone": {
+    "buyOrderCents": 135,
+    "lowestCents": 913
+  },
+  "Chaos Shard": {
+    "buyOrderCents": 56,
+    "lowestCents": 90
+  },
+  "Arcane Ore": {
+    "buyOrderCents": 102,
+    "lowestCents": 487
+  },
+  "Darksteel Ingot": {
+    "buyOrderCents": 36,
+    "lowestCents": 253
+  },
+  "Orichalcum Ore": {
+    "buyOrderCents": 110,
+    "lowestCents": 497
+  },
+  "Moonstone": {
+    "buyOrderCents": 156,
+    "lowestCents": 788
+  },
+  "Sunstone": {
+    "buyOrderCents": 127,
+    "lowestCents": 818
+  },
+  "Mithril Ore": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Ingot": {
+    "buyOrderCents": 0
+  },
+  "Adamantium Ore": {
+    "buyOrderCents": 0
+  },
+  "Aeon Ingot": {
+    "buyOrderCents": 0
+  },
+  "Kingdom 1st Anniversary Coin": {
+    "buyOrderCents": 133,
+    "lowestCents": 1157
+  },
+  "Empire 1st Anniversary Coin": {
+    "buyOrderCents": 35
+  },
+  "Kingdom 10th Anniversary Coin": {
+    "buyOrderCents": 148
+  },
+  "Empire 10th Anniversary Coin": {
+    "buyOrderCents": 403
+  },
+  "Kingdom 50th Anniversary Coin": {
+    "buyOrderCents": 966,
+    "lowestCents": 3116
+  },
+  "Empire 50th Anniversary Coin": {
+    "buyOrderCents": 1806,
+    "lowestCents": 9222
+  },
+  "Kingdom 100th Anniversary Coin": {
+    "buyOrderCents": 0
+  },
+  "Empire 100th Anniversary Coin": {
+    "buyOrderCents": 0
+  },
+  "Sacred Kingdom 1000th Anniversary Coin": {
+    "buyOrderCents": 0
+  },
+  "Eternal Empire 1000th Anniversary Coin": {
+    "buyOrderCents": 0
+  },
+  "Soulstone - Normal": {
+    "buyOrderCents": 209,
+    "lowestCents": 9
+  },
+  "Soulstone - Nightmare": {
+    "buyOrderCents": 342,
+    "lowestCents": 499
+  },
+  "Soulstone - Hell": {
+    "buyOrderCents": 638,
+    "lowestCents": 1565
+  },
+  "Soulstone - Torment": {
+    "buyOrderCents": 164,
+    "lowestCents": 717
+  },
+  "Long Sword": {
+    "buyOrderCents": 0
+  },
+  "Long Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Long Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Long Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Long Sword (Legendary) A": {
+    "buyOrderCents": 22
+  },
+  "Long Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Long Sword (Immortal) A": {
+    "buyOrderCents": 16
+  },
+  "Long Sword (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Long Sword (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Cutlas": {
+    "buyOrderCents": 0
+  },
+  "Cutlas (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Cutlas (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Cutlas (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Cutlas (Legendary) A": {
+    "buyOrderCents": 62
+  },
+  "Cutlas (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Cutlas (Immortal) A": {
+    "buyOrderCents": 51,
+    "lowestCents": 1735
+  },
+  "Cutlas (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Cutlas (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rapier": {
+    "buyOrderCents": 0
+  },
+  "Rapier (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rapier (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rapier (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rapier (Legendary) A": {
+    "buyOrderCents": 40
+  },
+  "Rapier (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rapier (Immortal) A": {
+    "buyOrderCents": 59
+  },
+  "Rapier (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Rapier (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Bastard Sword": {
+    "buyOrderCents": 0
+  },
+  "Bastard Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Bastard Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Bastard Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Bastard Sword (Legendary) A": {
+    "buyOrderCents": 634,
+    "lowestCents": 1001
+  },
+  "Bastard Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Bastard Sword (Immortal) A": {
+    "buyOrderCents": 62,
+    "lowestCents": 2027
+  },
+  "Bastard Sword (Arcana) A": {
+    "buyOrderCents": 42
+  },
+  "Bastard Sword (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Great Sword": {
+    "buyOrderCents": 0
+  },
+  "Great Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Great Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Great Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Sword (Legendary) A": {
+    "buyOrderCents": 147,
+    "lowestCents": 8006
+  },
+  "Great Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Sword (Immortal) A": {
+    "buyOrderCents": 27
+  },
+  "Great Sword (Arcana) A": {
+    "buyOrderCents": 31
+  },
+  "Great Sword (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Blade": {
+    "buyOrderCents": 0
+  },
+  "Heavy Blade (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Blade (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Blade (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Blade (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Blade (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Blade (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Blade (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Blade (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Sword": {
+    "buyOrderCents": 0
+  },
+  "Knight Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Sword (Legendary) A": {
+    "buyOrderCents": 127
+  },
+  "Knight Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Sword (Immortal) A": {
+    "buyOrderCents": 159,
+    "lowestCents": 7166
+  },
+  "Knight Sword (Arcana) A": {
+    "buyOrderCents": 36
+  },
+  "Knight Sword (Beyond) A": {
+    "buyOrderCents": 70
+  },
+  "Commander's Sword": {
+    "buyOrderCents": 0
+  },
+  "Commander's Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Sword (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Sword (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Sword (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Sword (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Sword": {
+    "buyOrderCents": 0
+  },
+  "Rune Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Sword (Legendary) A": {
+    "buyOrderCents": 50,
+    "lowestCents": 22164
+  },
+  "Rune Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Sword (Immortal) A": {
+    "buyOrderCents": 76
+  },
+  "Rune Sword (Arcana) A": {
+    "buyOrderCents": 217,
+    "lowestCents": 2126
+  },
+  "Rune Sword (Beyond) A": {
+    "buyOrderCents": 98
+  },
+  "Legend Sword": {
+    "buyOrderCents": 0
+  },
+  "Legend Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Sword (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Sword (Immortal) A": {
+    "buyOrderCents": 11
+  },
+  "Legend Sword (Arcana) A": {
+    "buyOrderCents": 37
+  },
+  "Legend Sword (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Sword": {
+    "buyOrderCents": 0
+  },
+  "Fate Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Sword (Legendary) A": {
+    "buyOrderCents": 180
+  },
+  "Fate Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Sword (Immortal) A": {
+    "buyOrderCents": 47
+  },
+  "Fate Sword (Arcana) A": {
+    "buyOrderCents": 235
+  },
+  "Fate Sword (Beyond) A": {
+    "buyOrderCents": 251
+  },
+  "Hero Sword": {
+    "buyOrderCents": 0
+  },
+  "Hero Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Sword (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Sword (Immortal) A": {
+    "buyOrderCents": 12
+  },
+  "Hero Sword (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Sword (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Sword": {
+    "buyOrderCents": 0
+  },
+  "Storm Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Sword (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Sword (Immortal) A": {
+    "buyOrderCents": 7
+  },
+  "Storm Sword (Arcana) A": {
+    "buyOrderCents": 259
+  },
+  "Storm Sword (Beyond) A": {
+    "buyOrderCents": 5
+  },
+  "Vengeance Sword": {
+    "buyOrderCents": 0
+  },
+  "Vengeance Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Vengeance Sword (Rare) A": {
+    "buyOrderCents": 7
+  },
+  "Vengeance Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Vengeance Sword (Legendary) A": {
+    "buyOrderCents": 44
+  },
+  "Vengeance Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Vengeance Sword (Immortal) A": {
+    "buyOrderCents": 118,
+    "lowestCents": 4520
+  },
+  "Vengeance Sword (Arcana) A": {
+    "buyOrderCents": 178
+  },
+  "Vengeance Sword (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Void Blade": {
+    "buyOrderCents": 0
+  },
+  "Void Blade (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Blade (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Blade (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Blade (Legendary) A": {
+    "buyOrderCents": 4
+  },
+  "Void Blade (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Blade (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Void Blade (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Blade (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Blade": {
+    "buyOrderCents": 0
+  },
+  "Crystal Blade (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Blade (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Blade (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Blade (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Blade (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Blade (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Blade (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Blade (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Sword": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Sword (Legendary) A": {
+    "buyOrderCents": 201
+  },
+  "Dimensional Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Sword (Immortal) A": {
+    "buyOrderCents": 102,
+    "lowestCents": 2221
+  },
+  "Dimensional Sword (Arcana) A": {
+    "buyOrderCents": 201
+  },
+  "Dimensional Sword (Beyond) A": {
+    "buyOrderCents": 1875,
+    "lowestCents": 2362
+  },
+  "Shadow Blade": {
+    "buyOrderCents": 0
+  },
+  "Shadow Blade (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Blade (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Blade (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Blade (Legendary) A": {
+    "buyOrderCents": 5
+  },
+  "Shadow Blade (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Blade (Immortal) A": {
+    "buyOrderCents": 5
+  },
+  "Shadow Blade (Arcana) A": {
+    "buyOrderCents": 29
+  },
+  "Shadow Blade (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Sword": {
+    "buyOrderCents": 0
+  },
+  "Eternal Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Sword (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Sword (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Sword (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Sword (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Sword": {
+    "buyOrderCents": 0
+  },
+  "Radiant Sword (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Sword (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Sword (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Sword (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Sword (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Sword (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Sword (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Sword (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bow": {
+    "buyOrderCents": 0
+  },
+  "Short Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bow (Legendary) A": {
+    "buyOrderCents": 19
+  },
+  "Short Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bow (Immortal) A": {
+    "buyOrderCents": 211
+  },
+  "Short Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Hunting Bow": {
+    "buyOrderCents": 0
+  },
+  "Hunting Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Hunting Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Hunting Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Hunting Bow (Legendary) A": {
+    "buyOrderCents": 4
+  },
+  "Hunting Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Hunting Bow (Immortal) A": {
+    "buyOrderCents": 26
+  },
+  "Hunting Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Hunting Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Long Bow": {
+    "buyOrderCents": 0
+  },
+  "Long Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Long Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Long Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Long Bow (Legendary) A": {
+    "buyOrderCents": 147,
+    "lowestCents": 5752
+  },
+  "Long Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Long Bow (Immortal) A": {
+    "buyOrderCents": 255,
+    "lowestCents": 8438
+  },
+  "Long Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Long Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Bow": {
+    "buyOrderCents": 0
+  },
+  "Composite Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Bow (Legendary) A": {
+    "buyOrderCents": 467,
+    "lowestCents": 2892
+  },
+  "Composite Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Bow (Immortal) A": {
+    "buyOrderCents": 162
+  },
+  "Composite Bow (Arcana) A": {
+    "buyOrderCents": 100
+  },
+  "Composite Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "War Bow": {
+    "buyOrderCents": 0
+  },
+  "War Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "War Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "War Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "War Bow (Legendary) A": {
+    "buyOrderCents": 224,
+    "lowestCents": 19307
+  },
+  "War Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "War Bow (Immortal) A": {
+    "buyOrderCents": 72
+  },
+  "War Bow (Arcana) A": {
+    "buyOrderCents": 282
+  },
+  "War Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Scarlet Bow": {
+    "buyOrderCents": 0
+  },
+  "Scarlet Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Scarlet Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Scarlet Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Scarlet Bow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Scarlet Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Scarlet Bow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Scarlet Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Scarlet Bow (Beyond) A": {
+    "buyOrderCents": 5
+  },
+  "Dusk Bow": {
+    "buyOrderCents": 0
+  },
+  "Dusk Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dusk Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dusk Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dusk Bow (Legendary) A": {
+    "buyOrderCents": 201,
+    "lowestCents": 159722
+  },
+  "Dusk Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dusk Bow (Immortal) A": {
+    "buyOrderCents": 404,
+    "lowestCents": 5503
+  },
+  "Dusk Bow (Arcana) A": {
+    "buyOrderCents": 483
+  },
+  "Dusk Bow (Beyond) A": {
+    "buyOrderCents": 698
+  },
+  "Jade Bow": {
+    "buyOrderCents": 0
+  },
+  "Jade Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Bow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Bow (Immortal) A": {
+    "buyOrderCents": 4
+  },
+  "Jade Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Jade Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Bow": {
+    "buyOrderCents": 0
+  },
+  "Elite Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Bow (Legendary) A": {
+    "buyOrderCents": 262
+  },
+  "Elite Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Bow (Immortal) A": {
+    "buyOrderCents": 114
+  },
+  "Elite Bow (Arcana) A": {
+    "buyOrderCents": 249
+  },
+  "Elite Bow (Beyond) A": {
+    "buyOrderCents": 778
+  },
+  "Rune Bow": {
+    "buyOrderCents": 0
+  },
+  "Rune Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Bow": {
+    "buyOrderCents": 0
+  },
+  "Mystic Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Bow (Legendary) A": {
+    "buyOrderCents": 201
+  },
+  "Mystic Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Bow (Immortal) A": {
+    "buyOrderCents": 194
+  },
+  "Mystic Bow (Arcana) A": {
+    "buyOrderCents": 1246
+  },
+  "Mystic Bow (Beyond) A": {
+    "buyOrderCents": 2392
+  },
+  "Swift Bow": {
+    "buyOrderCents": 0
+  },
+  "Swift Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bow (Legendary) A": {
+    "buyOrderCents": 19
+  },
+  "Swift Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bow (Immortal) A": {
+    "buyOrderCents": 6
+  },
+  "Swift Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bow": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Bow": {
+    "buyOrderCents": 0
+  },
+  "Limitless Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Bow (Legendary) A": {
+    "buyOrderCents": 74
+  },
+  "Limitless Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Bow (Immortal) A": {
+    "buyOrderCents": 232
+  },
+  "Limitless Bow (Arcana) A": {
+    "buyOrderCents": 1659
+  },
+  "Limitless Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Bow": {
+    "buyOrderCents": 0
+  },
+  "Chaos Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Bow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Bow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bow": {
+    "buyOrderCents": 0
+  },
+  "Storm Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bow (Immortal) A": {
+    "buyOrderCents": 14
+  },
+  "Storm Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bow": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bow (Legendary) A": {
+    "buyOrderCents": 166
+  },
+  "Shadow Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bow (Immortal) A": {
+    "buyOrderCents": 472
+  },
+  "Shadow Bow (Arcana) A": {
+    "buyOrderCents": 1138
+  },
+  "Shadow Bow (Beyond) A": {
+    "buyOrderCents": 7477
+  },
+  "Tempest Bow": {
+    "buyOrderCents": 0
+  },
+  "Tempest Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Bow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Bow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Bow (Arcana) A": {
+    "buyOrderCents": 5
+  },
+  "Tempest Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Bow": {
+    "buyOrderCents": 0
+  },
+  "Eternal Bow (Uncommon) A": {
+    "buyOrderCents": 5
+  },
+  "Eternal Bow (Rare) A": {
+    "buyOrderCents": 5
+  },
+  "Eternal Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Bow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Bow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Bow": {
+    "buyOrderCents": 0
+  },
+  "Radiant Bow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Bow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Bow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Bow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Bow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Bow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Bow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Bow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Staff": {
+    "buyOrderCents": 0
+  },
+  "Wooden Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Staff (Legendary) A": {
+    "buyOrderCents": 11
+  },
+  "Wooden Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Staff (Immortal) A": {
+    "buyOrderCents": 11
+  },
+  "Wooden Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Herald Staff": {
+    "buyOrderCents": 0
+  },
+  "Herald Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Herald Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Herald Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Herald Staff (Legendary) A": {
+    "buyOrderCents": 201
+  },
+  "Herald Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Herald Staff (Immortal) A": {
+    "buyOrderCents": 20
+  },
+  "Herald Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Herald Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Long Staff": {
+    "buyOrderCents": 0
+  },
+  "Long Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Long Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Long Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Long Staff (Legendary) A": {
+    "buyOrderCents": 467,
+    "lowestCents": 6232
+  },
+  "Long Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Long Staff (Immortal) A": {
+    "buyOrderCents": 16
+  },
+  "Long Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Long Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Witch Staff": {
+    "buyOrderCents": 0
+  },
+  "Witch Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Witch Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Witch Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Witch Staff (Legendary) A": {
+    "buyOrderCents": 43
+  },
+  "Witch Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Witch Staff (Immortal) A": {
+    "buyOrderCents": 56
+  },
+  "Witch Staff (Arcana) A": {
+    "buyOrderCents": 88
+  },
+  "Witch Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Azure Staff": {
+    "buyOrderCents": 0
+  },
+  "Azure Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Azure Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Azure Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Azure Staff (Legendary) A": {
+    "buyOrderCents": 72,
+    "lowestCents": 7561
+  },
+  "Azure Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Azure Staff (Immortal) A": {
+    "buyOrderCents": 82
+  },
+  "Azure Staff (Arcana) A": {
+    "buyOrderCents": 348
+  },
+  "Azure Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Staff": {
+    "buyOrderCents": 0
+  },
+  "Elder Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Staff (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Staff (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Sage Staff": {
+    "buyOrderCents": 0
+  },
+  "Sage Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Sage Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Sage Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Sage Staff (Legendary) A": {
+    "buyOrderCents": 117,
+    "lowestCents": 5576
+  },
+  "Sage Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Sage Staff (Immortal) A": {
+    "buyOrderCents": 201,
+    "lowestCents": 7771
+  },
+  "Sage Staff (Arcana) A": {
+    "buyOrderCents": 213
+  },
+  "Sage Staff (Beyond) A": {
+    "buyOrderCents": 156
+  },
+  "Mystic Staff": {
+    "buyOrderCents": 0
+  },
+  "Mystic Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Staff (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Staff (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Comet Staff": {
+    "buyOrderCents": 0
+  },
+  "Comet Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Comet Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Comet Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Comet Staff (Legendary) A": {
+    "buyOrderCents": 40
+  },
+  "Comet Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Comet Staff (Immortal) A": {
+    "buyOrderCents": 88
+  },
+  "Comet Staff (Arcana) A": {
+    "buyOrderCents": 213,
+    "lowestCents": 5608
+  },
+  "Comet Staff (Beyond) A": {
+    "buyOrderCents": 345
+  },
+  "Crystal Staff": {
+    "buyOrderCents": 0
+  },
+  "Crystal Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Staff (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Staff (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Void Staff": {
+    "buyOrderCents": 0
+  },
+  "Void Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Staff (Legendary) A": {
+    "buyOrderCents": 37
+  },
+  "Void Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Staff (Immortal) A": {
+    "buyOrderCents": 145
+  },
+  "Void Staff (Arcana) A": {
+    "buyOrderCents": 116
+  },
+  "Void Staff (Beyond) A": {
+    "buyOrderCents": 334
+  },
+  "Conqueror Staff": {
+    "buyOrderCents": 0
+  },
+  "Conqueror Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Conqueror Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Conqueror Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Conqueror Staff (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Conqueror Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Conqueror Staff (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Conqueror Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Conqueror Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Staff": {
+    "buyOrderCents": 0
+  },
+  "Ancient Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Staff (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Staff (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Staff": {
+    "buyOrderCents": 0
+  },
+  "Sacred Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Staff (Legendary) A": {
+    "buyOrderCents": 74
+  },
+  "Sacred Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Staff (Immortal) A": {
+    "buyOrderCents": 574
+  },
+  "Sacred Staff (Arcana) A": {
+    "buyOrderCents": 378
+  },
+  "Sacred Staff (Beyond) A": {
+    "buyOrderCents": 485
+  },
+  "Abyssal Staff": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Staff (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Staff (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Staff": {
+    "buyOrderCents": 0
+  },
+  "Chaos Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Staff (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Staff (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Staff": {
+    "buyOrderCents": 0
+  },
+  "Tempest Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Staff (Legendary) A": {
+    "buyOrderCents": 27
+  },
+  "Tempest Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Tempest Staff (Immortal) A": {
+    "buyOrderCents": 98
+  },
+  "Tempest Staff (Arcana) A": {
+    "buyOrderCents": 271
+  },
+  "Tempest Staff (Beyond) A": {
+    "buyOrderCents": 1496
+  },
+  "Nova Staff": {
+    "buyOrderCents": 0
+  },
+  "Nova Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Nova Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Nova Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Nova Staff (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Nova Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Nova Staff (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Nova Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Nova Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Staff": {
+    "buyOrderCents": 0
+  },
+  "Eternal Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Staff (Rare) A": {
+    "buyOrderCents": 4
+  },
+  "Eternal Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Staff (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Staff (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Staff (Arcana) A": {
+    "buyOrderCents": 30
+  },
+  "Eternal Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Staff": {
+    "buyOrderCents": 0
+  },
+  "Radiant Staff (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Staff (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Staff (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Staff (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Staff (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Staff (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Staff (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Staff (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Novice Scepter": {
+    "buyOrderCents": 0
+  },
+  "Novice Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Novice Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Novice Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Novice Scepter (Legendary) A": {
+    "buyOrderCents": 7
+  },
+  "Novice Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Novice Scepter (Immortal) A": {
+    "buyOrderCents": 11
+  },
+  "Novice Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Novice Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Scepter": {
+    "buyOrderCents": 0
+  },
+  "Iron Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Scepter (Legendary) A": {
+    "buyOrderCents": 67,
+    "lowestCents": 71664
+  },
+  "Iron Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Scepter (Immortal) A": {
+    "buyOrderCents": 12
+  },
+  "Iron Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Scepter": {
+    "buyOrderCents": 0
+  },
+  "Blessed Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Scepter (Legendary) A": {
+    "buyOrderCents": 217,
+    "lowestCents": 2892
+  },
+  "Blessed Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Scepter (Immortal) A": {
+    "buyOrderCents": 14
+  },
+  "Blessed Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Scepter": {
+    "buyOrderCents": 0
+  },
+  "Steel Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Scepter (Legendary) A": {
+    "buyOrderCents": 84,
+    "lowestCents": 3331
+  },
+  "Steel Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Scepter (Immortal) A": {
+    "buyOrderCents": 127,
+    "lowestCents": 1835
+  },
+  "Steel Scepter (Arcana) A": {
+    "buyOrderCents": 467,
+    "lowestCents": 2936
+  },
+  "Steel Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Scepter": {
+    "buyOrderCents": 0
+  },
+  "Sacred Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Scepter (Legendary) A": {
+    "buyOrderCents": 58,
+    "lowestCents": 1553
+  },
+  "Sacred Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Scepter (Immortal) A": {
+    "buyOrderCents": 152
+  },
+  "Sacred Scepter (Arcana) A": {
+    "buyOrderCents": 292
+  },
+  "Sacred Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Bishop's Scepter": {
+    "buyOrderCents": 0
+  },
+  "Bishop's Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Bishop's Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Bishop's Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Bishop's Scepter (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Bishop's Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Bishop's Scepter (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Bishop's Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Bishop's Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Devout Scepter": {
+    "buyOrderCents": 0
+  },
+  "Devout Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Devout Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Devout Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Devout Scepter (Legendary) A": {
+    "buyOrderCents": 234,
+    "lowestCents": 7166
+  },
+  "Devout Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Devout Scepter (Immortal) A": {
+    "buyOrderCents": 34
+  },
+  "Devout Scepter (Arcana) A": {
+    "buyOrderCents": 77
+  },
+  "Devout Scepter (Beyond) A": {
+    "buyOrderCents": 212
+  },
+  "Heavy Scepter": {
+    "buyOrderCents": 0
+  },
+  "Heavy Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Scepter (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Scepter (Immortal) A": {
+    "buyOrderCents": 12
+  },
+  "Heavy Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Scepter (Beyond) A": {
+    "buyOrderCents": 53
+  },
+  "Rune Scepter": {
+    "buyOrderCents": 0
+  },
+  "Rune Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Scepter (Legendary) A": {
+    "buyOrderCents": 77
+  },
+  "Rune Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Scepter (Immortal) A": {
+    "buyOrderCents": 116,
+    "lowestCents": 1246
+  },
+  "Rune Scepter (Arcana) A": {
+    "buyOrderCents": 145,
+    "lowestCents": 2503
+  },
+  "Rune Scepter (Beyond) A": {
+    "buyOrderCents": 280
+  },
+  "Legend Scepter": {
+    "buyOrderCents": 0
+  },
+  "Legend Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Scepter (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Scepter (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Scepter": {
+    "buyOrderCents": 0
+  },
+  "Fate Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Scepter (Legendary) A": {
+    "buyOrderCents": 40
+  },
+  "Fate Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Scepter (Immortal) A": {
+    "buyOrderCents": 57
+  },
+  "Fate Scepter (Arcana) A": {
+    "buyOrderCents": 513,
+    "lowestCents": 2657
+  },
+  "Fate Scepter (Beyond) A": {
+    "buyOrderCents": 389
+  },
+  "Hero Scepter": {
+    "buyOrderCents": 0
+  },
+  "Hero Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Scepter (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Scepter (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Scepter": {
+    "buyOrderCents": 0
+  },
+  "Storm Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Scepter (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Scepter (Immortal) A": {
+    "buyOrderCents": 11
+  },
+  "Storm Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Scepter": {
+    "buyOrderCents": 0
+  },
+  "Limitless Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Scepter (Legendary) A": {
+    "buyOrderCents": 17
+  },
+  "Limitless Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Scepter (Immortal) A": {
+    "buyOrderCents": 83
+  },
+  "Limitless Scepter (Arcana) A": {
+    "buyOrderCents": 311
+  },
+  "Limitless Scepter (Beyond) A": {
+    "buyOrderCents": 332,
+    "lowestCents": 3059
+  },
+  "Chaos Scepter": {
+    "buyOrderCents": 0
+  },
+  "Chaos Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Scepter (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Scepter (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Power Scepter": {
+    "buyOrderCents": 0
+  },
+  "Power Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Power Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Power Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Power Scepter (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Power Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Power Scepter (Immortal) A": {
+    "buyOrderCents": 16
+  },
+  "Power Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Power Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Scepter": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Scepter (Legendary) A": {
+    "buyOrderCents": 143
+  },
+  "Dimensional Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Scepter (Immortal) A": {
+    "buyOrderCents": 386
+  },
+  "Dimensional Scepter (Arcana) A": {
+    "buyOrderCents": 305
+  },
+  "Dimensional Scepter (Beyond) A": {
+    "buyOrderCents": 588,
+    "lowestCents": 3179
+  },
+  "Shadow Scepter": {
+    "buyOrderCents": 0
+  },
+  "Shadow Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Scepter (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Scepter (Immortal) A": {
+    "buyOrderCents": 5
+  },
+  "Shadow Scepter (Arcana) A": {
+    "buyOrderCents": 5
+  },
+  "Shadow Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Scepter": {
+    "buyOrderCents": 0
+  },
+  "Eternal Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Scepter (Rare) A": {
+    "buyOrderCents": 4
+  },
+  "Eternal Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Scepter (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Scepter (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Scepter": {
+    "buyOrderCents": 0
+  },
+  "Radiant Scepter (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Scepter (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Scepter (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Scepter (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Scepter (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Scepter (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Scepter (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Scepter (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Short Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Short Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Short Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Short Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Short Crossbow (Legendary) A": {
+    "buyOrderCents": 11
+  },
+  "Short Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Short Crossbow (Immortal) A": {
+    "buyOrderCents": 9
+  },
+  "Short Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Short Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Leather Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Crossbow (Legendary) A": {
+    "buyOrderCents": 20
+  },
+  "Leather Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Crossbow (Immortal) A": {
+    "buyOrderCents": 45
+  },
+  "Leather Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Long Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Long Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Long Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Long Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Long Crossbow (Legendary) A": {
+    "buyOrderCents": 6
+  },
+  "Long Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Long Crossbow (Immortal) A": {
+    "buyOrderCents": 95
+  },
+  "Long Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Long Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Complete Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Complete Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Complete Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Complete Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Complete Crossbow (Legendary) A": {
+    "buyOrderCents": 59
+  },
+  "Complete Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Complete Crossbow (Immortal) A": {
+    "buyOrderCents": 145
+  },
+  "Complete Crossbow (Arcana) A": {
+    "buyOrderCents": 327
+  },
+  "Complete Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Exceptional Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Exceptional Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Exceptional Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Exceptional Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Exceptional Crossbow (Legendary) A": {
+    "buyOrderCents": 117
+  },
+  "Exceptional Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Exceptional Crossbow (Immortal) A": {
+    "buyOrderCents": 216
+  },
+  "Exceptional Crossbow (Arcana) A": {
+    "buyOrderCents": 623
+  },
+  "Exceptional Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Reinforced Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Reinforced Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Reinforced Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Reinforced Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Reinforced Crossbow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Reinforced Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Reinforced Crossbow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Reinforced Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Reinforced Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Iron Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Crossbow (Legendary) A": {
+    "buyOrderCents": 42
+  },
+  "Iron Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Crossbow (Immortal) A": {
+    "buyOrderCents": 131
+  },
+  "Iron Crossbow (Arcana) A": {
+    "buyOrderCents": 588
+  },
+  "Iron Crossbow (Beyond) A": {
+    "buyOrderCents": 1199
+  },
+  "Wing Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Wing Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Crossbow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Crossbow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Elite Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Crossbow (Legendary) A": {
+    "buyOrderCents": 59
+  },
+  "Elite Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Crossbow (Immortal) A": {
+    "buyOrderCents": 61
+  },
+  "Elite Crossbow (Arcana) A": {
+    "buyOrderCents": 946
+  },
+  "Elite Crossbow (Beyond) A": {
+    "buyOrderCents": 574
+  },
+  "Large Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Large Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Large Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Large Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Large Crossbow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Large Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Large Crossbow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Large Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Large Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Mystic Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Crossbow (Legendary) A": {
+    "buyOrderCents": 19
+  },
+  "Mystic Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Crossbow (Immortal) A": {
+    "buyOrderCents": 213
+  },
+  "Mystic Crossbow (Arcana) A": {
+    "buyOrderCents": 300
+  },
+  "Mystic Crossbow (Beyond) A": {
+    "buyOrderCents": 1932
+  },
+  "Fast Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Fast Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fast Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fast Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fast Crossbow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Fast Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fast Crossbow (Immortal) A": {
+    "buyOrderCents": 4
+  },
+  "Fast Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Fast Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Ancient Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Crossbow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Crossbow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Limitless Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Crossbow (Legendary) A": {
+    "buyOrderCents": 257
+  },
+  "Limitless Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Crossbow (Immortal) A": {
+    "buyOrderCents": 178
+  },
+  "Limitless Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Chaos Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Crossbow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Crossbow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Power Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Power Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Power Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Power Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Power Crossbow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Power Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Power Crossbow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Power Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Power Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Crossbow (Legendary) A": {
+    "buyOrderCents": 39
+  },
+  "Dimensional Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Crossbow (Immortal) A": {
+    "buyOrderCents": 70
+  },
+  "Dimensional Crossbow (Arcana) A": {
+    "buyOrderCents": 500
+  },
+  "Dimensional Crossbow (Beyond) A": {
+    "buyOrderCents": 2526
+  },
+  "Shadow Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Shadow Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Crossbow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Crossbow (Immortal) A": {
+    "buyOrderCents": 9
+  },
+  "Shadow Crossbow (Arcana) A": {
+    "buyOrderCents": 19
+  },
+  "Shadow Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Eternal Crossbow (Uncommon) A": {
+    "buyOrderCents": 4
+  },
+  "Eternal Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Crossbow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Crossbow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Crossbow": {
+    "buyOrderCents": 0
+  },
+  "Radiant Crossbow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Crossbow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Crossbow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Crossbow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Crossbow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Crossbow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Crossbow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Crossbow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Axe": {
+    "buyOrderCents": 0
+  },
+  "Wooden Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Axe (Legendary) A": {
+    "buyOrderCents": 34
+  },
+  "Wooden Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Axe (Immortal) A": {
+    "buyOrderCents": 20
+  },
+  "Wooden Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Axe": {
+    "buyOrderCents": 0
+  },
+  "Iron Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Axe (Legendary) A": {
+    "buyOrderCents": 29
+  },
+  "Iron Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Axe (Immortal) A": {
+    "buyOrderCents": 7
+  },
+  "Iron Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Axe": {
+    "buyOrderCents": 0
+  },
+  "Battle Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Axe (Immortal) A": {
+    "buyOrderCents": 13
+  },
+  "Battle Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Axe": {
+    "buyOrderCents": 0
+  },
+  "Steel Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Axe (Legendary) A": {
+    "buyOrderCents": 117
+  },
+  "Steel Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Axe (Immortal) A": {
+    "buyOrderCents": 77
+  },
+  "Steel Axe (Arcana) A": {
+    "buyOrderCents": 70
+  },
+  "Steel Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "War Axe": {
+    "buyOrderCents": 0
+  },
+  "War Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "War Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "War Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "War Axe (Legendary) A": {
+    "buyOrderCents": 9
+  },
+  "War Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "War Axe (Immortal) A": {
+    "buyOrderCents": 348,
+    "lowestCents": 2301
+  },
+  "War Axe (Arcana) A": {
+    "buyOrderCents": 441
+  },
+  "War Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Axe": {
+    "buyOrderCents": 0
+  },
+  "Knight's Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Axe (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Great Axe": {
+    "buyOrderCents": 0
+  },
+  "Great Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Great Axe (Rare) A": {
+    "buyOrderCents": 4
+  },
+  "Great Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Axe (Legendary) A": {
+    "buyOrderCents": 11
+  },
+  "Great Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Axe (Immortal) A": {
+    "buyOrderCents": 37
+  },
+  "Great Axe (Arcana) A": {
+    "buyOrderCents": 98
+  },
+  "Great Axe (Beyond) A": {
+    "buyOrderCents": 502
+  },
+  "Heavy Axe": {
+    "buyOrderCents": 0
+  },
+  "Heavy Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Axe (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Axe": {
+    "buyOrderCents": 0
+  },
+  "Rune Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Axe (Legendary) A": {
+    "buyOrderCents": 8
+  },
+  "Rune Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Axe (Immortal) A": {
+    "buyOrderCents": 27
+  },
+  "Rune Axe (Arcana) A": {
+    "buyOrderCents": 124
+  },
+  "Rune Axe (Beyond) A": {
+    "buyOrderCents": 233
+  },
+  "Legend Axe": {
+    "buyOrderCents": 0
+  },
+  "Legend Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Axe (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Legend Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Axe": {
+    "buyOrderCents": 0
+  },
+  "Fate Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Axe (Legendary) A": {
+    "buyOrderCents": 50
+  },
+  "Fate Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Axe (Immortal) A": {
+    "buyOrderCents": 40
+  },
+  "Fate Axe (Arcana) A": {
+    "buyOrderCents": 93
+  },
+  "Fate Axe (Beyond) A": {
+    "buyOrderCents": 262
+  },
+  "Hero Axe": {
+    "buyOrderCents": 0
+  },
+  "Hero Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Axe (Immortal) A": {
+    "buyOrderCents": 12
+  },
+  "Hero Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Axe": {
+    "buyOrderCents": 0
+  },
+  "Storm Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Axe (Immortal) A": {
+    "buyOrderCents": 5
+  },
+  "Storm Axe (Arcana) A": {
+    "buyOrderCents": 16
+  },
+  "Storm Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Axe": {
+    "buyOrderCents": 0
+  },
+  "Limitless Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Axe (Legendary) A": {
+    "buyOrderCents": 29
+  },
+  "Limitless Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Axe (Immortal) A": {
+    "buyOrderCents": 34
+  },
+  "Limitless Axe (Arcana) A": {
+    "buyOrderCents": 252
+  },
+  "Limitless Axe (Beyond) A": {
+    "buyOrderCents": 374
+  },
+  "Chaos Axe": {
+    "buyOrderCents": 0
+  },
+  "Chaos Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Axe (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Power Axe": {
+    "buyOrderCents": 0
+  },
+  "Power Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Power Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Power Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Power Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Power Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Power Axe (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Power Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Power Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Axe": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Axe (Legendary) A": {
+    "buyOrderCents": 16
+  },
+  "Dimensional Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Axe (Immortal) A": {
+    "buyOrderCents": 199
+  },
+  "Dimensional Axe (Arcana) A": {
+    "buyOrderCents": 224
+  },
+  "Dimensional Axe (Beyond) A": {
+    "buyOrderCents": 1175
+  },
+  "Shadow Axe": {
+    "buyOrderCents": 0
+  },
+  "Shadow Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Axe (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Axe (Arcana) A": {
+    "buyOrderCents": 9
+  },
+  "Shadow Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Axe": {
+    "buyOrderCents": 0
+  },
+  "Eternal Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Axe (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Axe": {
+    "buyOrderCents": 0
+  },
+  "Radiant Axe (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Axe (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Axe (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Axe (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Axe (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Axe (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Axe (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Axe (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Buckler": {
+    "buyOrderCents": 0
+  },
+  "Buckler (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Buckler (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Buckler (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Buckler (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Buckler (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Buckler (Immortal) A": {
+    "buyOrderCents": 29
+  },
+  "Buckler (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Buckler (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Shield": {
+    "buyOrderCents": 0
+  },
+  "Wooden Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Shield (Legendary) A": {
+    "buyOrderCents": 20
+  },
+  "Wooden Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Shield (Immortal) A": {
+    "buyOrderCents": 4
+  },
+  "Wooden Shield (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Shield": {
+    "buyOrderCents": 0
+  },
+  "Iron Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Shield (Legendary) A": {
+    "buyOrderCents": 56
+  },
+  "Iron Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Shield (Immortal) A": {
+    "buyOrderCents": 57
+  },
+  "Iron Shield (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Heater Shield": {
+    "buyOrderCents": 0
+  },
+  "Heater Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Heater Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Heater Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Heater Shield (Legendary) A": {
+    "buyOrderCents": 148,
+    "lowestCents": 2180
+  },
+  "Heater Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Heater Shield (Immortal) A": {
+    "buyOrderCents": 156,
+    "lowestCents": 4509
+  },
+  "Heater Shield (Arcana) A": {
+    "buyOrderCents": 193
+  },
+  "Heater Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Shield": {
+    "buyOrderCents": 0
+  },
+  "Heavy Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Shield (Legendary) A": {
+    "buyOrderCents": 117
+  },
+  "Heavy Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Shield (Immortal) A": {
+    "buyOrderCents": 100,
+    "lowestCents": 4300
+  },
+  "Heavy Shield (Arcana) A": {
+    "buyOrderCents": 203
+  },
+  "Heavy Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Forest Shield": {
+    "buyOrderCents": 0
+  },
+  "Forest Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Forest Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Forest Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Forest Shield (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Forest Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Forest Shield (Immortal) A": {
+    "buyOrderCents": 9
+  },
+  "Forest Shield (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Forest Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "War Shield": {
+    "buyOrderCents": 0
+  },
+  "War Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "War Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "War Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "War Shield (Legendary) A": {
+    "buyOrderCents": 19
+  },
+  "War Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "War Shield (Immortal) A": {
+    "buyOrderCents": 29,
+    "lowestCents": 2804
+  },
+  "War Shield (Arcana) A": {
+    "buyOrderCents": 87
+  },
+  "War Shield (Beyond) A": {
+    "buyOrderCents": 113
+  },
+  "Barrier Shield": {
+    "buyOrderCents": 0
+  },
+  "Barrier Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Barrier Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Barrier Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Barrier Shield (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Barrier Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Barrier Shield (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Barrier Shield (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Barrier Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Shield": {
+    "buyOrderCents": 0
+  },
+  "Elite Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Shield (Legendary) A": {
+    "buyOrderCents": 30
+  },
+  "Elite Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Shield (Immortal) A": {
+    "buyOrderCents": 129
+  },
+  "Elite Shield (Arcana) A": {
+    "buyOrderCents": 110,
+    "lowestCents": 7337
+  },
+  "Elite Shield (Beyond) A": {
+    "buyOrderCents": 262
+  },
+  "Crimson Shield": {
+    "buyOrderCents": 0
+  },
+  "Crimson Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Shield (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Shield (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Shield (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Shield": {
+    "buyOrderCents": 0
+  },
+  "Mystic Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Shield (Legendary) A": {
+    "buyOrderCents": 20
+  },
+  "Mystic Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Shield (Immortal) A": {
+    "buyOrderCents": 44
+  },
+  "Mystic Shield (Arcana) A": {
+    "buyOrderCents": 160
+  },
+  "Mystic Shield (Beyond) A": {
+    "buyOrderCents": 294
+  },
+  "Grand Shield": {
+    "buyOrderCents": 0
+  },
+  "Grand Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Shield (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Shield (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Shield (Arcana) A": {
+    "buyOrderCents": 20
+  },
+  "Grand Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Shield": {
+    "buyOrderCents": 0
+  },
+  "Ancient Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Shield (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Shield (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Shield (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Shield": {
+    "buyOrderCents": 0
+  },
+  "Radiant Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Shield (Legendary) A": {
+    "buyOrderCents": 29
+  },
+  "Radiant Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Shield (Immortal) A": {
+    "buyOrderCents": 82
+  },
+  "Radiant Shield (Arcana) A": {
+    "buyOrderCents": 171
+  },
+  "Radiant Shield (Beyond) A": {
+    "buyOrderCents": 2077,
+    "lowestCents": 4059
+  },
+  "Void Shield": {
+    "buyOrderCents": 0
+  },
+  "Void Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Shield (Legendary) A": {
+    "buyOrderCents": 7
+  },
+  "Void Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Shield (Immortal) A": {
+    "buyOrderCents": 12
+  },
+  "Void Shield (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Divine Shield": {
+    "buyOrderCents": 0
+  },
+  "Divine Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Divine Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Divine Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Divine Shield (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Divine Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Divine Shield (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Divine Shield (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Divine Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Shield": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Shield (Legendary) A": {
+    "buyOrderCents": 85
+  },
+  "Dimensional Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Shield (Immortal) A": {
+    "buyOrderCents": 59
+  },
+  "Dimensional Shield (Arcana) A": {
+    "buyOrderCents": 199
+  },
+  "Dimensional Shield (Beyond) A": {
+    "buyOrderCents": 1052,
+    "lowestCents": 2576
+  },
+  "Shadow Shield": {
+    "buyOrderCents": 0
+  },
+  "Shadow Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Shield (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Shield (Immortal) A": {
+    "buyOrderCents": 7
+  },
+  "Shadow Shield (Arcana) A": {
+    "buyOrderCents": 37
+  },
+  "Shadow Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Shield": {
+    "buyOrderCents": 0
+  },
+  "Eternal Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Shield (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Shield (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Shield (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Shield": {
+    "buyOrderCents": 0
+  },
+  "Dragon Shield (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Shield (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Shield (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Shield (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Shield (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Shield (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Shield (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Shield (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Arrow": {
+    "buyOrderCents": 0
+  },
+  "Wooden Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Arrow (Legendary) A": {
+    "buyOrderCents": 9
+  },
+  "Wooden Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Arrow (Immortal) A": {
+    "buyOrderCents": 17
+  },
+  "Wooden Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Arrow": {
+    "buyOrderCents": 0
+  },
+  "Iron Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Arrow (Legendary) A": {
+    "buyOrderCents": 100
+  },
+  "Iron Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Arrow (Immortal) A": {
+    "buyOrderCents": 290,
+    "lowestCents": 4062
+  },
+  "Iron Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Arrow": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Arrow (Legendary) A": {
+    "buyOrderCents": 73
+  },
+  "Hunter's Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Arrow (Immortal) A": {
+    "buyOrderCents": 37
+  },
+  "Hunter's Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Barbed Arrow": {
+    "buyOrderCents": 0
+  },
+  "Barbed Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Barbed Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Barbed Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Barbed Arrow (Legendary) A": {
+    "buyOrderCents": 62
+  },
+  "Barbed Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Barbed Arrow (Immortal) A": {
+    "buyOrderCents": 98
+  },
+  "Barbed Arrow (Arcana) A": {
+    "buyOrderCents": 810
+  },
+  "Barbed Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Azure Arrow": {
+    "buyOrderCents": 0
+  },
+  "Azure Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Azure Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Azure Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Azure Arrow (Legendary) A": {
+    "buyOrderCents": 59
+  },
+  "Azure Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Azure Arrow (Immortal) A": {
+    "buyOrderCents": 103
+  },
+  "Azure Arrow (Arcana) A": {
+    "buyOrderCents": 290
+  },
+  "Azure Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Brutal Arrow": {
+    "buyOrderCents": 0
+  },
+  "Brutal Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Brutal Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Brutal Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Brutal Arrow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Brutal Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Brutal Arrow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Brutal Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Brutal Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Gale Arrow": {
+    "buyOrderCents": 0
+  },
+  "Gale Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Gale Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Gale Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Gale Arrow (Legendary) A": {
+    "buyOrderCents": 160
+  },
+  "Gale Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Gale Arrow (Immortal) A": {
+    "buyOrderCents": 116
+  },
+  "Gale Arrow (Arcana) A": {
+    "buyOrderCents": 345
+  },
+  "Gale Arrow (Beyond) A": {
+    "buyOrderCents": 638
+  },
+  "Serpent Arrow": {
+    "buyOrderCents": 0
+  },
+  "Serpent Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Serpent Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Serpent Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Serpent Arrow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Serpent Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Serpent Arrow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Serpent Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Serpent Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Arrow": {
+    "buyOrderCents": 0
+  },
+  "Rune Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Arrow (Legendary) A": {
+    "buyOrderCents": 11
+  },
+  "Rune Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Arrow (Immortal) A": {
+    "buyOrderCents": 194
+  },
+  "Rune Arrow (Arcana) A": {
+    "buyOrderCents": 502
+  },
+  "Rune Arrow (Beyond) A": {
+    "buyOrderCents": 637,
+    "lowestCents": 3739
+  },
+  "Tribal Arrow": {
+    "buyOrderCents": 0
+  },
+  "Tribal Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Tribal Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Tribal Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Tribal Arrow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Tribal Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Tribal Arrow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Tribal Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Tribal Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Arrow": {
+    "buyOrderCents": 0
+  },
+  "Fate Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Arrow (Legendary) A": {
+    "buyOrderCents": 162
+  },
+  "Fate Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Arrow (Immortal) A": {
+    "buyOrderCents": 255
+  },
+  "Fate Arrow (Arcana) A": {
+    "buyOrderCents": 1034
+  },
+  "Fate Arrow (Beyond) A": {
+    "buyOrderCents": 719,
+    "lowestCents": 6650
+  },
+  "Storm Arrow": {
+    "buyOrderCents": 0
+  },
+  "Storm Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Arrow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Arrow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Arrow": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Arrow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Arrow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Haste Arrow": {
+    "buyOrderCents": 0
+  },
+  "Haste Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Haste Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Haste Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Haste Arrow (Legendary) A": {
+    "buyOrderCents": 140
+  },
+  "Haste Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Haste Arrow (Immortal) A": {
+    "buyOrderCents": 511
+  },
+  "Haste Arrow (Arcana) A": {
+    "buyOrderCents": 1390
+  },
+  "Haste Arrow (Beyond) A": {
+    "buyOrderCents": 3141
+  },
+  "Void Arrow": {
+    "buyOrderCents": 0
+  },
+  "Void Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Arrow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Void Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Arrow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Void Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Arrow": {
+    "buyOrderCents": 0
+  },
+  "Poison Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Arrow (Legendary) A": {
+    "buyOrderCents": 7
+  },
+  "Poison Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Arrow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Arrow": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Arrow (Legendary) A": {
+    "buyOrderCents": 187
+  },
+  "Dimensional Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Arrow (Immortal) A": {
+    "buyOrderCents": 889
+  },
+  "Dimensional Arrow (Arcana) A": {
+    "buyOrderCents": 2362
+  },
+  "Dimensional Arrow (Beyond) A": {
+    "buyOrderCents": 2510
+  },
+  "Shadow Arrow": {
+    "buyOrderCents": 0
+  },
+  "Shadow Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Arrow (Legendary) A": {
+    "buyOrderCents": 14
+  },
+  "Shadow Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Arrow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Arrow": {
+    "buyOrderCents": 0
+  },
+  "Ancient Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Arrow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Arrow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Arrow": {
+    "buyOrderCents": 0
+  },
+  "Exalted Arrow (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Arrow (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Arrow (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Arrow (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Arrow (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Arrow (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Arrow (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Arrow (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Magic Orb": {
+    "buyOrderCents": 0
+  },
+  "Magic Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Magic Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Magic Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Magic Orb (Legendary) A": {
+    "buyOrderCents": 9
+  },
+  "Magic Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Magic Orb (Immortal) A": {
+    "buyOrderCents": 20
+  },
+  "Magic Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Magic Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Orb": {
+    "buyOrderCents": 0
+  },
+  "Elder Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Orb (Legendary) A": {
+    "buyOrderCents": 12
+  },
+  "Elder Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Orb (Immortal) A": {
+    "buyOrderCents": 16
+  },
+  "Elder Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Elder Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Brilliant Orb": {
+    "buyOrderCents": 0
+  },
+  "Brilliant Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Brilliant Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Brilliant Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Brilliant Orb (Legendary) A": {
+    "buyOrderCents": 7
+  },
+  "Brilliant Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Brilliant Orb (Immortal) A": {
+    "buyOrderCents": 21
+  },
+  "Brilliant Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Brilliant Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Frozen Orb": {
+    "buyOrderCents": 0
+  },
+  "Frozen Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Frozen Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Frozen Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Frozen Orb (Legendary) A": {
+    "buyOrderCents": 40,
+    "lowestCents": 19307
+  },
+  "Frozen Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Frozen Orb (Immortal) A": {
+    "buyOrderCents": 623
+  },
+  "Frozen Orb (Arcana) A": {
+    "buyOrderCents": 3427
+  },
+  "Frozen Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Prophecy Orb": {
+    "buyOrderCents": 0
+  },
+  "Prophecy Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Prophecy Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Prophecy Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Prophecy Orb (Legendary) A": {
+    "buyOrderCents": 58
+  },
+  "Prophecy Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Prophecy Orb (Immortal) A": {
+    "buyOrderCents": 406
+  },
+  "Prophecy Orb (Arcana) A": {
+    "buyOrderCents": 102
+  },
+  "Prophecy Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dark Orb": {
+    "buyOrderCents": 0
+  },
+  "Dark Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dark Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dark Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dark Orb (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Dark Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dark Orb (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Dark Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Dark Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Orb": {
+    "buyOrderCents": 0
+  },
+  "Rune Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Orb (Legendary) A": {
+    "buyOrderCents": 17
+  },
+  "Rune Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Orb (Immortal) A": {
+    "buyOrderCents": 174,
+    "lowestCents": 6011
+  },
+  "Rune Orb (Arcana) A": {
+    "buyOrderCents": 251
+  },
+  "Rune Orb (Beyond) A": {
+    "buyOrderCents": 182
+  },
+  "Shining Orb": {
+    "buyOrderCents": 0
+  },
+  "Shining Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shining Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shining Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shining Orb (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shining Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shining Orb (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shining Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Shining Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Arcane Orb": {
+    "buyOrderCents": 0
+  },
+  "Arcane Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Arcane Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Arcane Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Arcane Orb (Legendary) A": {
+    "buyOrderCents": 34
+  },
+  "Arcane Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Arcane Orb (Immortal) A": {
+    "buyOrderCents": 142,
+    "lowestCents": 4803
+  },
+  "Arcane Orb (Arcana) A": {
+    "buyOrderCents": 128
+  },
+  "Arcane Orb (Beyond) A": {
+    "buyOrderCents": 429,
+    "lowestCents": 3116
+  },
+  "Fate Orb": {
+    "buyOrderCents": 0
+  },
+  "Fate Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Orb (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Orb (Immortal) A": {
+    "buyOrderCents": 16
+  },
+  "Fate Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Orb": {
+    "buyOrderCents": 0
+  },
+  "Mystic Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Orb (Legendary) A": {
+    "buyOrderCents": 29
+  },
+  "Mystic Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Orb (Immortal) A": {
+    "buyOrderCents": 67
+  },
+  "Mystic Orb (Arcana) A": {
+    "buyOrderCents": 195
+  },
+  "Mystic Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Sky Orb": {
+    "buyOrderCents": 0
+  },
+  "Sky Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Sky Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Sky Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Sky Orb (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Sky Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Sky Orb (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Sky Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Sky Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Spirit Orb": {
+    "buyOrderCents": 0
+  },
+  "Spirit Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Spirit Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Spirit Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Spirit Orb (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Spirit Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Spirit Orb (Immortal) A": {
+    "buyOrderCents": 9
+  },
+  "Spirit Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Spirit Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Orb": {
+    "buyOrderCents": 0
+  },
+  "Ancient Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Orb (Legendary) A": {
+    "buyOrderCents": 67
+  },
+  "Ancient Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Orb (Immortal) A": {
+    "buyOrderCents": 95
+  },
+  "Ancient Orb (Arcana) A": {
+    "buyOrderCents": 348
+  },
+  "Ancient Orb (Beyond) A": {
+    "buyOrderCents": 375,
+    "lowestCents": 2150
+  },
+  "Abyssal Orb": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Orb (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Orb (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Abyssal Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Void Orb": {
+    "buyOrderCents": 0
+  },
+  "Void Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Orb (Legendary) A": {
+    "buyOrderCents": 7
+  },
+  "Void Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Orb (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Void Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Orb": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Orb (Legendary) A": {
+    "buyOrderCents": 51
+  },
+  "Dimensional Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Orb (Immortal) A": {
+    "buyOrderCents": 91
+  },
+  "Dimensional Orb (Arcana) A": {
+    "buyOrderCents": 300
+  },
+  "Dimensional Orb (Beyond) A": {
+    "buyOrderCents": 986,
+    "lowestCents": 2318
+  },
+  "Shadow Orb": {
+    "buyOrderCents": 0
+  },
+  "Shadow Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Orb (Legendary) A": {
+    "buyOrderCents": 12
+  },
+  "Shadow Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Orb (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Orb": {
+    "buyOrderCents": 0
+  },
+  "Eternal Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Orb (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Orb (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Aureate Orb": {
+    "buyOrderCents": 0
+  },
+  "Aureate Orb (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Aureate Orb (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Aureate Orb (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Aureate Orb (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Aureate Orb (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Aureate Orb (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Aureate Orb (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Aureate Orb (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Prayer Tome": {
+    "buyOrderCents": 0
+  },
+  "Prayer Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Prayer Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Prayer Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Prayer Tome (Legendary) A": {
+    "buyOrderCents": 292,
+    "lowestCents": 17467
+  },
+  "Prayer Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Prayer Tome (Immortal) A": {
+    "buyOrderCents": 21
+  },
+  "Prayer Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Prayer Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Tome": {
+    "buyOrderCents": 0
+  },
+  "Empire Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Tome (Legendary) A": {
+    "buyOrderCents": 28
+  },
+  "Empire Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Tome (Immortal) A": {
+    "buyOrderCents": 22
+  },
+  "Empire Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Tome": {
+    "buyOrderCents": 0
+  },
+  "Iron Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Tome (Legendary) A": {
+    "buyOrderCents": 23
+  },
+  "Iron Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Tome (Immortal) A": {
+    "buyOrderCents": 62
+  },
+  "Iron Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Tome": {
+    "buyOrderCents": 0
+  },
+  "Knight's Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Tome (Legendary) A": {
+    "buyOrderCents": 117,
+    "lowestCents": 19307
+  },
+  "Knight's Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Tome (Immortal) A": {
+    "buyOrderCents": 59
+  },
+  "Knight's Tome (Arcana) A": {
+    "buyOrderCents": 61
+  },
+  "Knight's Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Tome": {
+    "buyOrderCents": 0
+  },
+  "Blessed Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Tome (Legendary) A": {
+    "buyOrderCents": 233
+  },
+  "Blessed Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Blessed Tome (Immortal) A": {
+    "buyOrderCents": 67
+  },
+  "Blessed Tome (Arcana) A": {
+    "buyOrderCents": 384
+  },
+  "Blessed Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Tome": {
+    "buyOrderCents": 0
+  },
+  "Commander's Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Tome (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Tome (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Commander's Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "War Tome": {
+    "buyOrderCents": 0
+  },
+  "War Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "War Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "War Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "War Tome (Legendary) A": {
+    "buyOrderCents": 53
+  },
+  "War Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "War Tome (Immortal) A": {
+    "buyOrderCents": 106
+  },
+  "War Tome (Arcana) A": {
+    "buyOrderCents": 350
+  },
+  "War Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor's Tome": {
+    "buyOrderCents": 0
+  },
+  "Emperor's Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor's Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor's Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor's Tome (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor's Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor's Tome (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor's Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor's Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Tome": {
+    "buyOrderCents": 0
+  },
+  "Rune Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Tome (Legendary) A": {
+    "buyOrderCents": 62
+  },
+  "Rune Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Tome (Immortal) A": {
+    "buyOrderCents": 69
+  },
+  "Rune Tome (Arcana) A": {
+    "buyOrderCents": 275
+  },
+  "Rune Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Tome": {
+    "buyOrderCents": 0
+  },
+  "Crimson Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Tome (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Tome (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Tome": {
+    "buyOrderCents": 0
+  },
+  "Fate Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Tome (Legendary) A": {
+    "buyOrderCents": 125
+  },
+  "Fate Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Tome (Immortal) A": {
+    "buyOrderCents": 146
+  },
+  "Fate Tome (Arcana) A": {
+    "buyOrderCents": 273
+  },
+  "Fate Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Tome": {
+    "buyOrderCents": 0
+  },
+  "Grand Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Tome (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Tome (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Grand Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Tome": {
+    "buyOrderCents": 0
+  },
+  "Storm Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Tome (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Tome (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Warrior's Tome": {
+    "buyOrderCents": 0
+  },
+  "Warrior's Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Warrior's Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Warrior's Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Warrior's Tome (Legendary) A": {
+    "buyOrderCents": 103
+  },
+  "Warrior's Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Warrior's Tome (Immortal) A": {
+    "buyOrderCents": 118
+  },
+  "Warrior's Tome (Arcana) A": {
+    "buyOrderCents": 701
+  },
+  "Warrior's Tome (Beyond) A": {
+    "buyOrderCents": 601,
+    "lowestCents": 3325
+  },
+  "Void Tome": {
+    "buyOrderCents": 0
+  },
+  "Void Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Tome (Rare) A": {
+    "buyOrderCents": 20
+  },
+  "Void Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Tome (Legendary) A": {
+    "buyOrderCents": 7
+  },
+  "Void Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Tome (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Void Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Tome": {
+    "buyOrderCents": 0
+  },
+  "Crystal Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Tome (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Tome (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Tome": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Tome (Legendary) A": {
+    "buyOrderCents": 66
+  },
+  "Dimensional Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Tome (Immortal) A": {
+    "buyOrderCents": 128
+  },
+  "Dimensional Tome (Arcana) A": {
+    "buyOrderCents": 679,
+    "lowestCents": 6598
+  },
+  "Dimensional Tome (Beyond) A": {
+    "buyOrderCents": 1372,
+    "lowestCents": 4497
+  },
+  "Shadow Tome": {
+    "buyOrderCents": 0
+  },
+  "Shadow Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Tome (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Tome (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Tome (Arcana) A": {
+    "buyOrderCents": 7
+  },
+  "Shadow Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Tome (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Tome (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Empyrean Tome (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Empyrean Tome (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Empyrean Tome (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Empyrean Tome (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Empyrean Tome (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Empyrean Tome (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Empyrean Tome (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Empyrean Tome (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bolt (Legendary) A": {
+    "buyOrderCents": 74
+  },
+  "Short Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bolt (Immortal) A": {
+    "buyOrderCents": 98
+  },
+  "Short Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Short Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fear Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fear Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fear Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fear Bolt (Legendary) A": {
+    "buyOrderCents": 4
+  },
+  "Fear Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fear Bolt (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Fear Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Fear Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Bolt (Legendary) A": {
+    "buyOrderCents": 151
+  },
+  "Hunter's Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Bolt (Immortal) A": {
+    "buyOrderCents": 255
+  },
+  "Hunter's Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Hunter's Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Barbed Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Barbed Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Barbed Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Barbed Bolt (Legendary) A": {
+    "buyOrderCents": 131
+  },
+  "Barbed Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Barbed Bolt (Immortal) A": {
+    "buyOrderCents": 223,
+    "lowestCents": 3912
+  },
+  "Barbed Bolt (Arcana) A": {
+    "buyOrderCents": 381,
+    "lowestCents": 4433
+  },
+  "Barbed Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Beast Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Beast Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Beast Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Beast Bolt (Legendary) A": {
+    "buyOrderCents": 182
+  },
+  "Beast Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Beast Bolt (Immortal) A": {
+    "buyOrderCents": 522,
+    "lowestCents": 3452
+  },
+  "Beast Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Beast Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bolt (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bolt (Immortal) A": {
+    "buyOrderCents": 251
+  },
+  "Swift Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Bolt (Legendary) A": {
+    "buyOrderCents": 273
+  },
+  "Iron Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Bolt (Immortal) A": {
+    "buyOrderCents": 637,
+    "lowestCents": 3419
+  },
+  "Iron Bolt (Arcana) A": {
+    "buyOrderCents": 502
+  },
+  "Iron Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Bolt (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Bolt (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bolt (Legendary) A": {
+    "buyOrderCents": 91
+  },
+  "Rune Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Bolt (Immortal) A": {
+    "buyOrderCents": 164
+  },
+  "Rune Bolt (Arcana) A": {
+    "buyOrderCents": 810,
+    "lowestCents": 4433
+  },
+  "Rune Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Bolt (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Bolt (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Hero Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Bolt (Legendary) A": {
+    "buyOrderCents": 83
+  },
+  "Fate Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Bolt (Immortal) A": {
+    "buyOrderCents": 184
+  },
+  "Fate Bolt (Arcana) A": {
+    "buyOrderCents": 551,
+    "lowestCents": 2549
+  },
+  "Fate Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bolt (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bolt (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Thunder Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Thunder Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Thunder Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Thunder Bolt (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Thunder Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Thunder Bolt (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Thunder Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Thunder Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Haste Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Haste Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Haste Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Haste Bolt (Legendary) A": {
+    "buyOrderCents": 58
+  },
+  "Haste Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Haste Bolt (Immortal) A": {
+    "buyOrderCents": 271
+  },
+  "Haste Bolt (Arcana) A": {
+    "buyOrderCents": 580
+  },
+  "Haste Bolt (Beyond) A": {
+    "buyOrderCents": 1896,
+    "lowestCents": 7477
+  },
+  "Void Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bolt (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bolt (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Bolt (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Bolt (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Poison Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Bolt (Legendary) A": {
+    "buyOrderCents": 125
+  },
+  "Dimensional Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Bolt (Immortal) A": {
+    "buyOrderCents": 160
+  },
+  "Dimensional Bolt (Arcana) A": {
+    "buyOrderCents": 1122
+  },
+  "Dimensional Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bolt (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bolt (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bolt (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bolt (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Sanctified Bolt (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Sanctified Bolt (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Sanctified Bolt (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Sanctified Bolt (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Sanctified Bolt (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Sanctified Bolt (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Sanctified Bolt (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Sanctified Bolt (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Short Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Short Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Short Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Short Hatchet (Legendary) A": {
+    "buyOrderCents": 44,
+    "lowestCents": 3502
+  },
+  "Short Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Short Hatchet (Immortal) A": {
+    "buyOrderCents": 8
+  },
+  "Short Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Short Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Hatchet (Legendary) A": {
+    "buyOrderCents": 32
+  },
+  "Leather Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Hatchet (Immortal) A": {
+    "buyOrderCents": 117,
+    "lowestCents": 2936
+  },
+  "Leather Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Long Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Long Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Long Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Long Hatchet (Legendary) A": {
+    "buyOrderCents": 37
+  },
+  "Long Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Long Hatchet (Immortal) A": {
+    "buyOrderCents": 11
+  },
+  "Long Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Long Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Hatchet (Legendary) A": {
+    "buyOrderCents": 40
+  },
+  "Steel Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Steel Hatchet (Immortal) A": {
+    "buyOrderCents": 98
+  },
+  "Steel Hatchet (Arcana) A": {
+    "buyOrderCents": 41
+  },
+  "Steel Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "War Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "War Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "War Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "War Hatchet (Legendary) A": {
+    "buyOrderCents": 74
+  },
+  "War Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "War Hatchet (Immortal) A": {
+    "buyOrderCents": 95
+  },
+  "War Hatchet (Arcana) A": {
+    "buyOrderCents": 135
+  },
+  "War Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Hatchet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Hatchet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Composite Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Hatchet (Legendary) A": {
+    "buyOrderCents": 44
+  },
+  "Battle Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Battle Hatchet (Immortal) A": {
+    "buyOrderCents": 91
+  },
+  "Battle Hatchet (Arcana) A": {
+    "buyOrderCents": 209
+  },
+  "Battle Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Hatchet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Hatchet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Wing Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Hatchet (Legendary) A": {
+    "buyOrderCents": 9
+  },
+  "Elite Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Elite Hatchet (Immortal) A": {
+    "buyOrderCents": 92
+  },
+  "Elite Hatchet (Arcana) A": {
+    "buyOrderCents": 316
+  },
+  "Elite Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Large Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Large Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Large Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Large Hatchet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Large Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Large Hatchet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Large Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Large Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Hatchet (Legendary) A": {
+    "buyOrderCents": 15
+  },
+  "Mystic Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Hatchet (Immortal) A": {
+    "buyOrderCents": 37
+  },
+  "Mystic Hatchet (Arcana) A": {
+    "buyOrderCents": 474
+  },
+  "Mystic Hatchet (Beyond) A": {
+    "buyOrderCents": 56
+  },
+  "Swift Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Hatchet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Hatchet (Immortal) A": {
+    "buyOrderCents": 5
+  },
+  "Swift Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Swift Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Hatchet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Hatchet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Hatchet (Legendary) A": {
+    "buyOrderCents": 16
+  },
+  "Limitless Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Hatchet (Immortal) A": {
+    "buyOrderCents": 62
+  },
+  "Limitless Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Limitless Hatchet (Beyond) A": {
+    "buyOrderCents": 1558
+  },
+  "Chaos Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Hatchet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Hatchet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Chaos Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Power Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Power Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Power Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Power Hatchet (Legendary) A": {
+    "buyOrderCents": 7
+  },
+  "Power Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Power Hatchet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Power Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Power Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Hatchet (Legendary) A": {
+    "buyOrderCents": 85
+  },
+  "Dimensional Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Hatchet (Immortal) A": {
+    "buyOrderCents": 98
+  },
+  "Dimensional Hatchet (Arcana) A": {
+    "buyOrderCents": 1564
+  },
+  "Dimensional Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Hatchet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Hatchet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Hatchet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Hatchet (Immortal) A": {
+    "buyOrderCents": 11
+  },
+  "Eternal Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Hatchet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Hatchet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Hatchet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Hatchet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Hatchet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Hatchet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Hatchet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Exalted Hatchet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Helmet (Legendary) A": {
+    "buyOrderCents": 13,
+    "lowestCents": 1025
+  },
+  "Wooden Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Helmet (Immortal) A": {
+    "buyOrderCents": 14,
+    "lowestCents": 1621
+  },
+  "Wooden Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Helmet (Legendary) A": {
+    "buyOrderCents": 9
+  },
+  "Empire Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Helmet (Immortal) A": {
+    "buyOrderCents": 16,
+    "lowestCents": 1205
+  },
+  "Empire Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Helmet (Legendary) A": {
+    "buyOrderCents": 112,
+    "lowestCents": 1558
+  },
+  "Iron Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Helmet (Immortal) A": {
+    "buyOrderCents": 20
+  },
+  "Iron Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Helmet (Legendary) A": {
+    "buyOrderCents": 91
+  },
+  "Knight Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Helmet (Immortal) A": {
+    "buyOrderCents": 386,
+    "lowestCents": 1486
+  },
+  "Knight Helmet (Arcana) A": {
+    "buyOrderCents": 295
+  },
+  "Knight Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Helmet (Legendary) A": {
+    "buyOrderCents": 87
+  },
+  "Chain Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Helmet (Immortal) A": {
+    "buyOrderCents": 580,
+    "lowestCents": 19307
+  },
+  "Chain Helmet (Arcana) A": {
+    "buyOrderCents": 135
+  },
+  "Chain Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Medium Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Medium Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Medium Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Medium Helmet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Medium Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Medium Helmet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Medium Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Medium Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "War Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "War Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "War Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "War Helmet (Legendary) A": {
+    "buyOrderCents": 24
+  },
+  "War Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "War Helmet (Immortal) A": {
+    "buyOrderCents": 49
+  },
+  "War Helmet (Arcana) A": {
+    "buyOrderCents": 172,
+    "lowestCents": 2759
+  },
+  "War Helmet (Beyond) A": {
+    "buyOrderCents": 250
+  },
+  "Emperor Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor Helmet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor Helmet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Emperor Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Helmet (Legendary) A": {
+    "buyOrderCents": 21
+  },
+  "Rune Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Helmet (Immortal) A": {
+    "buyOrderCents": 49
+  },
+  "Rune Helmet (Arcana) A": {
+    "buyOrderCents": 386
+  },
+  "Rune Helmet (Beyond) A": {
+    "buyOrderCents": 323
+  },
+  "Red Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Red Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Red Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Red Helmet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Red Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Red Helmet (Immortal) A": {
+    "buyOrderCents": 105
+  },
+  "Red Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Red Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Helmet (Legendary) A": {
+    "buyOrderCents": 44
+  },
+  "Fate Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Helmet (Immortal) A": {
+    "buyOrderCents": 94
+  },
+  "Fate Helmet (Arcana) A": {
+    "buyOrderCents": 310
+  },
+  "Fate Helmet (Beyond) A": {
+    "buyOrderCents": 580
+  },
+  "Great Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Great Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Great Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Helmet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Great Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Helmet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Great Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Great Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Helmet (Legendary) A": {
+    "buyOrderCents": 14
+  },
+  "Storm Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Helmet (Immortal) A": {
+    "buyOrderCents": 143
+  },
+  "Storm Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Storm Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fighter's Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fighter's Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fighter's Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fighter's Helmet (Legendary) A": {
+    "buyOrderCents": 142
+  },
+  "Fighter's Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fighter's Helmet (Immortal) A": {
+    "buyOrderCents": 57
+  },
+  "Fighter's Helmet (Arcana) A": {
+    "buyOrderCents": 289,
+    "lowestCents": 6450
+  },
+  "Fighter's Helmet (Beyond) A": {
+    "buyOrderCents": 1264
+  },
+  "Void Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Helmet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Void Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Helmet (Immortal) A": {
+    "buyOrderCents": 6
+  },
+  "Void Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Helmet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Helmet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Helmet (Legendary) A": {
+    "buyOrderCents": 145
+  },
+  "Dimensional Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Helmet (Immortal) A": {
+    "buyOrderCents": 74
+  },
+  "Dimensional Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Helmet (Beyond) A": {
+    "buyOrderCents": 1116,
+    "lowestCents": 6306
+  },
+  "Shadow Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Helmet (Legendary) A": {
+    "buyOrderCents": 4
+  },
+  "Shadow Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Helmet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Helmet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Helmet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Helmet (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Helmet (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Helmet (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Helmet (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Helmet (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Helmet (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Helmet (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Helmet (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Armor (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Armor (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Armor (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Gloves (Legendary) A": {
+    "buyOrderCents": 11
+  },
+  "Leather Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Gloves (Immortal) A": {
+    "buyOrderCents": 63
+  },
+  "Leather Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Leather Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Gloves (Legendary) A": {
+    "buyOrderCents": 49,
+    "lowestCents": 15007
+  },
+  "Empire Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Gloves (Immortal) A": {
+    "buyOrderCents": 12
+  },
+  "Empire Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Gloves (Legendary) A": {
+    "buyOrderCents": 12
+  },
+  "Iron Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Gloves (Immortal) A": {
+    "buyOrderCents": 10
+  },
+  "Iron Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Gloves (Legendary) A": {
+    "buyOrderCents": 105,
+    "lowestCents": 10480
+  },
+  "Knight Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Gloves (Immortal) A": {
+    "buyOrderCents": 96
+  },
+  "Knight Gloves (Arcana) A": {
+    "buyOrderCents": 84
+  },
+  "Knight Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Gloves (Legendary) A": {
+    "buyOrderCents": 93
+  },
+  "Chain Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Gloves (Immortal) A": {
+    "buyOrderCents": 117,
+    "lowestCents": 19307
+  },
+  "Chain Gloves (Arcana) A": {
+    "buyOrderCents": 121,
+    "lowestCents": 5752
+  },
+  "Chain Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Gloves (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Gloves (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "War Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "War Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "War Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "War Gloves (Legendary) A": {
+    "buyOrderCents": 64
+  },
+  "War Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "War Gloves (Immortal) A": {
+    "buyOrderCents": 117,
+    "lowestCents": 12007
+  },
+  "War Gloves (Arcana) A": {
+    "buyOrderCents": 105
+  },
+  "War Gloves (Beyond) A": {
+    "buyOrderCents": 694
+  },
+  "Heavy Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Gloves (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Gloves (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Gloves (Legendary) A": {
+    "buyOrderCents": 101
+  },
+  "Rune Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Gloves (Immortal) A": {
+    "buyOrderCents": 91,
+    "lowestCents": 3988
+  },
+  "Rune Gloves (Arcana) A": {
+    "buyOrderCents": 69
+  },
+  "Rune Gloves (Beyond) A": {
+    "buyOrderCents": 219,
+    "lowestCents": 18570
+  },
+  "Plate Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Gloves (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Gloves (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Gloves (Legendary) A": {
+    "buyOrderCents": 82
+  },
+  "Mystic Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Gloves (Immortal) A": {
+    "buyOrderCents": 110
+  },
+  "Mystic Gloves (Arcana) A": {
+    "buyOrderCents": 173
+  },
+  "Mystic Gloves (Beyond) A": {
+    "buyOrderCents": 1058
+  },
+  "Great Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Great Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Great Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Gloves (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Great Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Gloves (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Great Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Great Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Gloves (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Gloves (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Gloves (Legendary) A": {
+    "buyOrderCents": 198
+  },
+  "Shine Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Gloves (Immortal) A": {
+    "buyOrderCents": 88
+  },
+  "Shine Gloves (Arcana) A": {
+    "buyOrderCents": 274
+  },
+  "Shine Gloves (Beyond) A": {
+    "buyOrderCents": 328,
+    "lowestCents": 18570
+  },
+  "Void Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Gloves (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Void Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Gloves (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Void Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Gloves (Beyond) A": {
+    "buyOrderCents": 0
   }
 }
