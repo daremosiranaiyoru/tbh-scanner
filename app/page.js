@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import Link from 'next/link';
 import { loadDatabase, scanIcons } from '../lib/ocr-engine';
 import itemNames from '../public/item_names.json';
+import html2canvas from 'html2canvas';
 
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
@@ -96,6 +97,9 @@ export default function ScannerApp() {
   // Comments state
   const [comments, setComments] = useState([]);
   const [isCommentsLoading, setIsCommentsLoading] = useState(true);
+  const [commentsOpen, setCommentsOpen] = useState(false);
+  const commentsLoadedRef = useRef(false);
+  const [isFlashing, setIsFlashing] = useState(false); // cache: fetch only on first open
   const [newCommentText, setNewCommentText] = useState("");
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
   const [isAdminSecret, setIsAdminSecret] = useState(null);
@@ -147,9 +151,8 @@ export default function ScannerApp() {
       }
     }, 100);
     
-    // Fetch initial data sequentially to prevent concurrent request conflicts
+    // Fetch prices on load; comments are fetched lazily on first open
     const loadData = async () => {
-      await fetchComments();
       await fetchPrices();
     };
     loadData();
@@ -408,11 +411,55 @@ export default function ScannerApp() {
     setTimeout(() => setToastMessage(''), 4000);
   };
 
-  const handleShareX = async (totalString) => {
-    // 1. Open X intent synchronously to avoid popup blockers
-    const text = `💰 私のTaskbar Heroインベントリ総資産は ${totalString} でした！\nあなたのインベントリもスキャンしてみよう！👇\nhttps://tbh-scanner.vercel.app\n\n#TaskbarHero #TBHScanner`;
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank', 'width=600,height=600');
+  const handleCopyToClipboard = (totalString) => {
+    try {
+      showToast("📸 画面をキャプチャ中...");
+      
+      // Trigger flash effect
+      setIsFlashing(true);
+      setTimeout(() => setIsFlashing(false), 800);
+      
+      const captureElement = document.getElementById('capture-area');
+      if (!captureElement) throw new Error("Capture area not found");
+      
+      const generateImageBlob = async () => {
+        const captureElement = document.getElementById('capture-area');
+        const canvas = await html2canvas(captureElement, {
+          backgroundColor: '#1a1d24',
+          scale: 1, // Set to 1 so the copied image size is exactly what is seen on screen
+          useCORS: true,
+          logging: false
+        });
+        return new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+      };
+      
+      // Build plain text for text pasting
+      let plainText = `💰 私のTaskbar Heroインベントリ総資産は ${totalString} でした！\n`;
+      plainText += `https://tbh-scanner.vercel.app\n\n`;
+      results.slice(0, 10).forEach(r => {
+          const names = itemNames[r.name] || {};
+          const displayName = names[selectedLang] || names['en-US'] || r.name.replace('.png', '');
+          plainText += `- ${displayName}\n`;
+      });
+      if (results.length > 10) plainText += `...他 ${results.length - 10} アイテム\n`;
+      
+      // Pass Promises directly to ClipboardItem so the browser doesn't block the async clipboard write
+      navigator.clipboard.write([
+        new ClipboardItem({
+          'text/plain': Promise.resolve(new Blob([plainText], { type: 'text/plain' })),
+          'image/png': generateImageBlob()
+        })
+      ]).then(() => {
+        showToast("✅ 画像と結果をクリップボードにコピーしました！");
+      }).catch(err => {
+        console.error(err);
+        showToast("❌ コピー失敗: " + err.message);
+      });
+      
+    } catch (err) {
+      console.error(err);
+      showToast("❌ コピー失敗: " + err.message);
+    }
   };
 
   const processImagesRef = useRef(processImages);
@@ -810,7 +857,26 @@ export default function ScannerApp() {
         </Link>
       </div>
 
-      <main className={styles.content}>
+      <style>{`
+        @keyframes capture-flash {
+          0% { box-shadow: inset 0 0 0 0 rgba(255,255,255,0.8); background: rgba(255,255,255,0.2); }
+          10% { box-shadow: inset 0 0 20px 20px rgba(255,255,255,0.9); background: rgba(255,255,255,0.4); }
+          100% { box-shadow: inset 0 0 0 0 rgba(255,255,255,0); background: transparent; }
+        }
+      `}</style>
+
+      <main id="capture-area" className={styles.content} style={{ position: 'relative', borderRadius: '16px' }}>
+        {isFlashing && (
+          <div 
+            data-html2canvas-ignore="true"
+            style={{
+              position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+              pointerEvents: 'none', zIndex: 9999,
+              animation: 'capture-flash 0.8s ease-out',
+              borderRadius: 'inherit'
+            }}
+          />
+        )}
         {/* Left Side: Upload & Canvas */}
         <div 
           className={`glass-panel ${dragActive ? styles.dragActive : ''}`} 
@@ -853,13 +919,24 @@ export default function ScannerApp() {
           >
             {previewImages.map((img, idx) => (
               <div key={idx} style={{ position: 'relative', width: '100%', height: '100%' }}>
-                <img src={img.src} style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', borderRadius: '8px' }} alt={`Scanned screenshot ${idx + 1}`} />
+                <div 
+                  style={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    backgroundImage: 'url(' + img.src + ')', 
+                    backgroundSize: 'contain', 
+                    backgroundPosition: 'center', 
+                    backgroundRepeat: 'no-repeat',
+                    borderRadius: '8px'
+                  }} 
+                  aria-label={"Scanned screenshot " + (idx + 1)} 
+                />
                 <svg style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} viewBox={`0 0 ${img.width} ${img.height}`} preserveAspectRatio="xMidYMid meet">
                   {img.rects.map((rect, i) => (
                     <rect key={i} x={rect.x} y={rect.y} width={rect.width} height={rect.height} fill="none" stroke="#00ff00" strokeWidth="2" />
                   ))}
                   {img.rects.map((rect, i) => (
-                     <text key={`text-${i}`} x={rect.x + 2} y={rect.y + 14} fill="#00ff00" fontSize="14" fontFamily="sans-serif">
+                     <text key={"text-" + i} x={rect.x + 2} y={rect.y + 14} fill="#00ff00" fontSize="14" fontFamily="sans-serif">
                        {rect.matchRate.toFixed(1)}%
                      </text>
                   ))}
@@ -1002,16 +1079,20 @@ export default function ScannerApp() {
                     <span style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>{totalLabel}</span>
                     <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: '#4caf50' }}>{localizedTotal}</span>
                     <button 
-                      onClick={() => handleShareX(localizedTotal)}
+                      onClick={() => handleCopyToClipboard(localizedTotal)}
                       style={{
-                        marginLeft: 'auto', background: '#000000', color: 'white', border: '1px solid #333',
-                        padding: '8px 16px', borderRadius: '20px', cursor: 'pointer', fontWeight: 'bold',
-                        display: 'flex', alignItems: 'center', gap: '6px', transition: 'background 0.2s'
+                        marginLeft: 'auto', background: 'transparent', color: 'var(--text-secondary)', border: '1px solid rgba(255,255,255,0.2)',
+                        padding: '6px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '0.85rem',
+                        display: 'flex', alignItems: 'center', gap: '6px', transition: 'all 0.2s'
                       }}
-                      onMouseOver={(e) => e.currentTarget.style.background = '#111'}
-                      onMouseOut={(e) => e.currentTarget.style.background = '#000'}
+                      onMouseOver={(e) => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.5)'; e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; }}
+                      onMouseOut={(e) => { e.currentTarget.style.color = 'var(--text-secondary)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)'; e.currentTarget.style.background = 'transparent'; }}
                     >
-                      𝕏 Post
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                      </svg>
+                      Copy to Clipboard
                     </button>
                   </div>
                 )}
@@ -1353,16 +1434,35 @@ export default function ScannerApp() {
 
       {/* Anonymous Comments Section */}
       <section style={{
-        marginTop: '20px', 
-        padding: '30px', 
-        background: 'rgba(0, 0, 0, 0.2)', 
+        marginTop: '20px',
         borderRadius: '16px',
         border: '1px solid rgba(255, 255, 255, 0.05)',
+        overflow: 'hidden',
       }}>
-        <h2 style={{ fontSize: '1.2rem', marginBottom: '16px', color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
-          {commentsTitleTranslations[selectedLang] || commentsTitleTranslations['en-US']}
-        </h2>
-        
+        <button
+          onClick={() => {
+            const next = !commentsOpen;
+            setCommentsOpen(next);
+            // Fetch only on first open; use cache thereafter
+            if (next && !commentsLoadedRef.current) {
+              commentsLoadedRef.current = true;
+              fetchComments();
+            }
+          }}
+          style={{
+            width: '100%', padding: '18px 30px',
+            background: 'rgba(0, 0, 0, 0.2)',
+            border: 'none',
+            borderBottom: commentsOpen ? '1px solid rgba(255,255,255,0.07)' : 'none',
+            color: 'white', fontSize: '1.2rem', fontWeight: 'bold',
+            cursor: 'pointer', display: 'flex', alignItems: 'center',
+            justifyContent: 'space-between', gap: '8px',
+          }}
+        >
+          <span>{commentsTitleTranslations[selectedLang] || commentsTitleTranslations['en-US']}</span>
+          <span style={{ fontSize: '1rem' }}>{commentsOpen ? '▼' : '◀'}</span>
+        </button>
+        <div style={{ display: commentsOpen ? 'block' : 'none', padding: '30px' }}>
         {replyingToId && (
           <div style={{ fontSize: '0.8rem', color: '#ff9800', marginBottom: '8px', display: 'flex', justifyContent: 'space-between' }}>
             <span>Replying to a comment...</span>
@@ -1428,6 +1528,7 @@ export default function ScannerApp() {
               </SortableContext>
             </DndContext>
           )}
+        </div>
         </div>
       </section>
 
