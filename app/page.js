@@ -1409,12 +1409,17 @@ export default function ScannerApp() {
                             actualKey = `${prefix} A`;
                           }
                           else {
-                            const matchedKey = Object.keys(prices).find(k => k.startsWith(prefix));
-                            if (matchedKey) {
-                              marketData = prices[matchedKey];
-                              actualKey = matchedKey;
+                            const possibleKeys = Object.keys(prices).filter(k => k.startsWith(prefix));
+                            if (possibleKeys.length > 0) {
+                              const matchedKey = possibleKeys.find(k => k.endsWith(' A')) || possibleKeys[0];
+                              if (matchedKey) {
+                                marketData = prices[matchedKey];
+                                actualKey = matchedKey;
+                              } else {
+                                actualKey = `${prefix} A`;
+                              }
                             } else {
-                              actualKey = `${prefix} A`; // fallback for URL if not found in prices but rarity is known
+                              actualKey = `${prefix} A`; // Fallback if absolutely no matching keys exist in the database
                             }
                           }
                         }
