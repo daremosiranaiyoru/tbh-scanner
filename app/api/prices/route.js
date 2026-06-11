@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
+import prices from '../../data/prices.json';
+import buyOrders from '../../data/buy_orders.json';
 
-export const revalidate = 0; // Disable static caching completely
+export const revalidate = 60;
 
 export async function GET() {
     try {
@@ -17,23 +17,6 @@ export async function GET() {
                 if (fxData && fxData.rates) rates = fxData.rates;
             }
         } catch (e) {}
-
-        let prices = {};
-        let buyOrders = {};
-
-        try {
-            const pricesData = await fs.readFile(path.join(process.cwd(), 'app/data/prices.json'), 'utf8');
-            prices = JSON.parse(pricesData);
-        } catch (e) {
-            console.error("Failed to read prices.json", e);
-        }
-
-        try {
-            const buyOrdersData = await fs.readFile(path.join(process.cwd(), 'app/data/buy_orders.json'), 'utf8');
-            buyOrders = JSON.parse(buyOrdersData);
-        } catch (e) {
-            console.error("Failed to read buy_orders.json", e);
-        }
 
         // Merge buy_orders.json data into prices.json data
         const mergedItems = { ...prices };
