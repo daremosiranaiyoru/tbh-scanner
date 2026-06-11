@@ -254,5 +254,677 @@
   "Iron Plate (Legendary) A": {
     "buyOrderCents": 24200,
     "lowestCents": 10000000
+  },
+  "Iron Plate (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Plate (Immortal) A": {
+    "buyOrderCents": 1900
+  },
+  "Iron Plate (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Plate (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Mail": {
+    "buyOrderCents": 0
+  },
+  "Chain Mail (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Mail (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Mail (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Mail (Legendary) A": {
+    "buyOrderCents": 12100,
+    "lowestCents": 690000
+  },
+  "Chain Mail (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Mail (Immortal) A": {
+    "buyOrderCents": 19700,
+    "lowestCents": 923100
+  },
+  "Chain Mail (Arcana) A": {
+    "buyOrderCents": 19300
+  },
+  "Chain Mail (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Armor": {
+    "buyOrderCents": 0
+  },
+  "Knight's Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Armor (Legendary) A": {
+    "buyOrderCents": 26000
+  },
+  "Knight's Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight's Armor (Immortal) A": {
+    "buyOrderCents": 87100
+  },
+  "Knight's Armor (Arcana) A": {
+    "buyOrderCents": 64500,
+    "lowestCents": 1846200
+  },
+  "Knight's Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Armor": {
+    "buyOrderCents": 0
+  },
+  "Fate Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Armor (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Armor (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Armor (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "War Armor": {
+    "buyOrderCents": 0
+  },
+  "War Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "War Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "War Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "War Armor (Legendary) A": {
+    "buyOrderCents": 14600
+  },
+  "War Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "War Armor (Immortal) A": {
+    "buyOrderCents": 21100
+  },
+  "War Armor (Arcana) A": {
+    "buyOrderCents": 37400
+  },
+  "War Armor (Beyond) A": {
+    "buyOrderCents": 111400
+  },
+  "Heavy Armor": {
+    "buyOrderCents": 0
+  },
+  "Heavy Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Armor (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Armor (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Armor (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Plate": {
+    "buyOrderCents": 0
+  },
+  "Rune Plate (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Plate (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Plate (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Plate (Legendary) A": {
+    "buyOrderCents": 16400
+  },
+  "Rune Plate (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Plate (Immortal) A": {
+    "buyOrderCents": 11900
+  },
+  "Rune Plate (Arcana) A": {
+    "buyOrderCents": 93000
+  },
+  "Rune Plate (Beyond) A": {
+    "buyOrderCents": 32300
+  },
+  "Dragon Scale Armor": {
+    "buyOrderCents": 0
+  },
+  "Dragon Scale Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Scale Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Scale Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Scale Armor (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Scale Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Scale Armor (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Scale Armor (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Scale Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Armor": {
+    "buyOrderCents": 0
+  },
+  "Mystic Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Armor (Legendary) A": {
+    "buyOrderCents": 13000
+  },
+  "Mystic Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Armor (Immortal) A": {
+    "buyOrderCents": 20200
+  },
+  "Mystic Armor (Arcana) A": {
+    "buyOrderCents": 42200
+  },
+  "Mystic Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Great Armor": {
+    "buyOrderCents": 0
+  },
+  "Great Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Great Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Great Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Armor (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Great Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Armor (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Great Armor (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Great Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Armor": {
+    "buyOrderCents": 0
+  },
+  "Ancient Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Armor (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Armor (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Armor (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Armor": {
+    "buyOrderCents": 0
+  },
+  "Shine Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Armor (Legendary) A": {
+    "buyOrderCents": 7100,
+    "lowestCents": 253000
+  },
+  "Shine Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Armor (Immortal) A": {
+    "buyOrderCents": 37700
+  },
+  "Shine Armor (Arcana) A": {
+    "buyOrderCents": 112500
+  },
+  "Shine Armor (Beyond) A": {
+    "buyOrderCents": 129600
+  },
+  "Void Armor": {
+    "buyOrderCents": 0
+  },
+  "Void Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Armor (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Void Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Armor (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Void Armor (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Armor": {
+    "buyOrderCents": 0
+  },
+  "Dragon Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Armor (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Armor (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Armor (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Armor": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Armor (Legendary) A": {
+    "buyOrderCents": 34500
+  },
+  "Dimensional Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Armor (Immortal) A": {
+    "buyOrderCents": 46600,
+    "lowestCents": 385500
+  },
+  "Dimensional Armor (Arcana) A": {
+    "buyOrderCents": 77500
+  },
+  "Dimensional Armor (Beyond) A": {
+    "buyOrderCents": 316600,
+    "lowestCents": 475400
+  },
+  "Shadow Armor": {
+    "buyOrderCents": 0
+  },
+  "Shadow Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Armor (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Armor (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Armor (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Armor": {
+    "buyOrderCents": 0
+  },
+  "Eternal Armor (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Armor (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Armor (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Armor (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Armor (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Armor (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Armor (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Armor (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Armor": {
+    "buyOrderCents": 0
+  },
+  "Leather Gloves": {
+    "buyOrderCents": 0
+  },
+  "Empire Gloves": {
+    "buyOrderCents": 0
+  },
+  "Iron Gloves": {
+    "buyOrderCents": 0
+  },
+  "Knight Gloves": {
+    "buyOrderCents": 0
+  },
+  "Chain Gloves": {
+    "buyOrderCents": 0
+  },
+  "Fate Gloves": {
+    "buyOrderCents": 0
+  },
+  "War Gloves": {
+    "buyOrderCents": 0
+  },
+  "Heavy Gloves": {
+    "buyOrderCents": 0
+  },
+  "Rune Gloves": {
+    "buyOrderCents": 0
+  },
+  "Plate Gloves": {
+    "buyOrderCents": 0
+  },
+  "Mystic Gloves": {
+    "buyOrderCents": 0
+  },
+  "Great Gloves": {
+    "buyOrderCents": 0
+  },
+  "Ancient Gloves": {
+    "buyOrderCents": 0
+  },
+  "Shine Gloves": {
+    "buyOrderCents": 0
+  },
+  "Void Gloves": {
+    "buyOrderCents": 0
+  },
+  "Dragon Gloves": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Gloves": {
+    "buyOrderCents": 0
+  },
+  "Shadow Gloves": {
+    "buyOrderCents": 0
+  },
+  "Eternal Gloves": {
+    "buyOrderCents": 0
+  },
+  "Radiant Gloves": {
+    "buyOrderCents": 0
+  },
+  "Wooden Boots": {
+    "buyOrderCents": 0
+  },
+  "Empire Boots": {
+    "buyOrderCents": 0
+  },
+  "Iron Boots": {
+    "buyOrderCents": 0
+  },
+  "Knight Boots": {
+    "buyOrderCents": 0
+  },
+  "Chain Boots": {
+    "buyOrderCents": 0
+  },
+  "Fate Boots": {
+    "buyOrderCents": 0
+  },
+  "War Boots": {
+    "buyOrderCents": 0
+  },
+  "Heavy Boots": {
+    "buyOrderCents": 0
+  },
+  "Rune Boots": {
+    "buyOrderCents": 0
+  },
+  "Plate Boots": {
+    "buyOrderCents": 0
+  },
+  "Mystic Boots": {
+    "buyOrderCents": 0
+  },
+  "Great Boots": {
+    "buyOrderCents": 0
+  },
+  "Ancient Boots": {
+    "buyOrderCents": 0
+  },
+  "Shine Boots": {
+    "buyOrderCents": 0
+  },
+  "Void Boots": {
+    "buyOrderCents": 0
+  },
+  "Crystal Boots": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Boots": {
+    "buyOrderCents": 0
+  },
+  "Shadow Boots": {
+    "buyOrderCents": 0
+  },
+  "Eternal Boots": {
+    "buyOrderCents": 0
+  },
+  "Radiant Boots": {
+    "buyOrderCents": 0
+  },
+  "Copper Amulet": {
+    "buyOrderCents": 0
+  },
+  "Bronze Amulet": {
+    "buyOrderCents": 0
+  },
+  "Silver Amulet": {
+    "buyOrderCents": 0
+  },
+  "Gold Amulet": {
+    "buyOrderCents": 0
+  },
+  "Platinum Amulet": {
+    "buyOrderCents": 0
+  },
+  "Crystal Amulet": {
+    "buyOrderCents": 0
+  },
+  "Moonstone Pendant": {
+    "buyOrderCents": 0
+  },
+  "Amber Pendant": {
+    "buyOrderCents": 0
+  },
+  "Ruby Pendant": {
+    "buyOrderCents": 0
+  },
+  "Amethyst Pendant": {
+    "buyOrderCents": 0
+  },
+  "Emerald Amulet": {
+    "buyOrderCents": 0
+  },
+  "Diamond Amulet": {
+    "buyOrderCents": 0
+  },
+  "Stardust Amulet": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Amulet": {
+    "buyOrderCents": 0
+  },
+  "Celestial Amulet": {
+    "buyOrderCents": 0
+  },
+  "Astral Amulet": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Amulet": {
+    "buyOrderCents": 0
+  },
+  "Void Amulet": {
+    "buyOrderCents": 0
+  },
+  "Abyss Amulet": {
+    "buyOrderCents": 0
+  },
+  "Copper Earring": {
+    "buyOrderCents": 0
+  },
+  "Copper Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Earring (Legendary) A": {
+    "buyOrderCents": 2500
+  },
+  "Copper Earring (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Earring (Immortal) A": {
+    "buyOrderCents": 21000
+  },
+  "Copper Earring (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Copper Earring (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Earring": {
+    "buyOrderCents": 0
+  },
+  "Bronze Earring (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Earring (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Earring (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Bronze Earring (Legendary) A": {
+    "buyOrderCents": 6900
   }
 }
