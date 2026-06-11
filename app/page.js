@@ -788,7 +788,7 @@ export default function ScannerApp() {
   };
   const cashoutAdTranslations = {
     'en-US': '💡 Tip: How to use or cash out your Steam Wallet balance',
-    'ja-JP': '💡 Tips: Steamウォレットの換金術について',
+    'ja-JP': '💡 Tips: Steamウォレットの現金化について',
     'zh-Hans': '💡 提示：如何使用或提现您的Steam钱包余额',
     'zh-Hant': '💡 提示：如何使用或提現您的Steam錢包餘額',
     'ko-KR': '💡 팁: Steam 지갑 잔액 사용처 및 현금화 방법',
@@ -799,6 +799,21 @@ export default function ScannerApp() {
     'pt-BR': '💡 Dica: Como usar ou sacar o saldo da sua Carteira Steam',
     'tr-TR': '💡 İpucu: Steam Cüzdan bakiyenizi nasıl kullanır veya nakde çevirirsiniz',
     'vi-VN': '💡 Mẹo: Cách sử dụng hoặc rút số dư Ví Steam'
+  };
+
+  const kofiSmallTrans = {
+    'en-US': 'Support Server Costs',
+    'ja-JP': 'サーバー代ご支援のお願い',
+    'zh-Hans': '支持服务器费用',
+    'zh-Hant': '支持伺服器費用',
+    'ko-KR': '서버 비용 후원',
+    'ru-RU': 'Поддержать сервер',
+    'es-ES': 'Apoyar servidor',
+    'fr-FR': 'Soutenir le serveur',
+    'de-DE': 'Server unterstützen',
+    'pt-BR': 'Apoiar servidor',
+    'tr-TR': 'Sunucuyu destekle',
+    'vi-VN': 'Hỗ trợ máy chủ'
   };
 
   const commentsTitleTranslations = {
@@ -861,43 +876,6 @@ export default function ScannerApp() {
               <option value="tr-TR" style={{background: '#1a1d24', color: 'white'}}>Türkçe</option>
               <option value="vi-VN" style={{background: '#1a1d24', color: 'white'}}>Tiếng Việt</option>
             </select>
-            
-            {/* Small Ko-fi Link */}
-            <div style={{ marginTop: '8px', display: 'flex', justifyContent: 'flex-end' }}>
-              <a 
-                href="https://ko-fi.com/tbh_scanner" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: '6px',
-                  background: 'rgba(255, 183, 77, 0.1)', color: '#ffb74d', textDecoration: 'none',
-                  padding: '4px 10px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 'bold',
-                  border: '1px solid rgba(255, 183, 77, 0.3)', transition: 'all 0.2s',
-                  boxShadow: '0 2px 8px rgba(255, 183, 77, 0.1)'
-                }}
-                onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255, 183, 77, 0.2)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
-                onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 183, 77, 0.1)'; e.currentTarget.style.transform = 'none'; }}
-              >
-                <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi" style={{ width: '16px' }} />
-                {(() => {
-                  const kofiSmallTrans = {
-                    'en-US': 'Support Server Costs',
-                    'ja-JP': 'サーバー代ご支援のお願い',
-                    'zh-Hans': '支持服务器费用',
-                    'zh-Hant': '支持伺服器費用',
-                    'ko-KR': '서버 비용 후원',
-                    'ru-RU': 'Поддержать сервер',
-                    'es-ES': 'Apoyar servidor',
-                    'fr-FR': 'Soutenir le serveur',
-                    'de-DE': 'Server unterstützen',
-                    'pt-BR': 'Apoiar servidor',
-                    'tr-TR': 'Sunucuyu destekle',
-                    'vi-VN': 'Hỗ trợ máy chủ'
-                  };
-                  return kofiSmallTrans[selectedLang] || kofiSmallTrans['en-US'];
-                })()}
-              </a>
-            </div>
           </div>
         </div>
       </header>
@@ -959,27 +937,57 @@ export default function ScannerApp() {
         })()}
       </section>
 
-      {/* Helpful Tip Banner for Cashout Guide (Test Server Only) */}
-      <div style={{ maxWidth: '1200px', margin: '0 auto 20px auto', padding: '0 20px', display: 'flex', justifyContent: 'flex-end' }}>
-        <Link href="/cashout" style={{ textDecoration: 'none' }}>
-          <div style={{
-            background: 'rgba(255, 255, 255, 0.05)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            borderRadius: '20px',
-            padding: '8px 16px',
-            textAlign: 'right',
-            transition: 'background 0.2s, color 0.2s',
-            cursor: 'pointer',
-            display: 'inline-block'
-          }}
-          onMouseOver={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'}
-          onMouseOut={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'}
+      {/* Helpful Tip Banner & Ko-fi Support */}
+      <div style={{ maxWidth: '1200px', margin: '0 auto 20px auto', padding: '0 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}>
+        
+        {/* Left Spacer to ensure perfect centering */}
+        <div style={{ flex: 1 }}></div>
+
+        {/* Center: Tips Banner */}
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Link href="/cashout" style={{ textDecoration: 'none' }}>
+            <div style={{
+              background: 'rgba(76, 175, 80, 0.15)',
+              border: '1px solid rgba(76, 175, 80, 0.4)',
+              borderRadius: '20px',
+              padding: '8px 16px',
+              textAlign: 'center',
+              transition: 'all 0.2s',
+              cursor: 'pointer',
+              display: 'inline-block',
+              boxShadow: '0 2px 8px rgba(76, 175, 80, 0.1)'
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(76, 175, 80, 0.25)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(76, 175, 80, 0.15)'; e.currentTarget.style.transform = 'none'; }}
+            >
+              <span style={{ color: '#81c784', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 'bold' }}>
+                {cashoutAdTranslations[selectedLang] || cashoutAdTranslations['en-US']}
+              </span>
+            </div>
+          </Link>
+        </div>
+
+        {/* Right: Small Ko-fi Link */}
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+          <a 
+            href="https://ko-fi.com/tbh_scanner" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: '6px',
+              background: 'rgba(255, 183, 77, 0.1)', color: '#ffb74d', textDecoration: 'none',
+              padding: '6px 16px', borderRadius: '20px', fontSize: '0.9rem', fontWeight: 'bold',
+              border: '1px solid rgba(255, 183, 77, 0.3)', transition: 'all 0.2s',
+              boxShadow: '0 2px 8px rgba(255, 183, 77, 0.1)',
+              whiteSpace: 'nowrap'
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255, 183, 77, 0.2)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+            onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 183, 77, 0.1)'; e.currentTarget.style.transform = 'none'; }}
           >
-            <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              {cashoutAdTranslations[selectedLang] || cashoutAdTranslations['en-US']}
-            </span>
-          </div>
-        </Link>
+            <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi" style={{ width: '16px' }} />
+            {kofiSmallTrans[selectedLang] || kofiSmallTrans['en-US']}
+          </a>
+        </div>
       </div>
 
       <style>{`
@@ -1373,18 +1381,18 @@ export default function ScannerApp() {
                       const recentSoldLabel = labelTranslations[selectedLang] || 'Recent Sold:';
 
                       const lowestLabelTranslations = {
-                        'en-US': 'Lowest Listing:', 'ja-JP': '最低出品:', 'zh-Hans': '最低上架:', 'zh-Hant': '最低上架:',
-                        'ko-KR': '최저가:', 'ru-RU': 'Самая низкая цена:', 'es-ES': 'Listado más bajo:', 'fr-FR': 'Liste la plus basse:',
-                        'de-DE': 'Niedrigstes Angebot:', 'pt-BR': 'Menor preço:', 'tr-TR': 'En Düşük İlan:', 'vi-VN': 'Danh sách thấp nhất:'
+                        'en-US': 'Lowest Sell Amount:', 'ja-JP': '最低売却額:', 'zh-Hans': '最低出售额:', 'zh-Hant': '最低出售額:',
+                        'ko-KR': '최저 판매가:', 'ru-RU': 'Мин. сумма продажи:', 'es-ES': 'Monto de venta más bajo:', 'fr-FR': 'Montant de vente min.:',
+                        'de-DE': 'Niedrigster Verkaufsbetrag:', 'pt-BR': 'Menor valor de venda:', 'tr-TR': 'En Düşük Satış Tutarı:', 'vi-VN': 'Số tiền bán thấp nhất:'
                       };
-                      const lowestLabel = lowestLabelTranslations[selectedLang] || 'Lowest Listing:';
+                      const lowestLabel = lowestLabelTranslations[selectedLang] || 'Lowest Sell Amount:';
 
                       const buyOrderLabelTranslations = {
-                        'en-US': 'Immediate Sell:', 'ja-JP': '即売却価格:', 'zh-Hans': '立即出售:', 'zh-Hant': '立即出售:',
-                        'ko-KR': '즉시 판매:', 'ru-RU': 'Мгновенная продажа:', 'es-ES': 'Venta Inmediata:', 'fr-FR': 'Vente Immédiate:',
-                        'de-DE': 'Sofortverkauf:', 'pt-BR': 'Venda Imediata:', 'tr-TR': 'Hemen Sat:', 'vi-VN': 'Bán Ngay:'
+                        'en-US': 'Highest Buy Amount:', 'ja-JP': '最高購入額:', 'zh-Hans': '最高购买额:', 'zh-Hant': '最高購買額:',
+                        'ko-KR': '최고 구매가:', 'ru-RU': 'Макс. сумма покупки:', 'es-ES': 'Monto de compra más alto:', 'fr-FR': 'Montant d\'achat max.:',
+                        'de-DE': 'Höchster Kaufbetrag:', 'pt-BR': 'Maior valor de compra:', 'tr-TR': 'En Yüksek Alış Tutarı:', 'vi-VN': 'Số tiền mua cao nhất:'
                       };
-                      const buyOrderLabel = buyOrderLabelTranslations[selectedLang] || 'Immediate Sell:';
+                      const buyOrderLabel = buyOrderLabelTranslations[selectedLang] || 'Highest Buy Amount:';
                       
                       let marketData = null;
                       let actualKey = englishName; // default fallback key for URL
@@ -1425,7 +1433,10 @@ export default function ScannerApp() {
                           maximumFractionDigits: ['JPY', 'KRW', 'VND'].includes(curr.code) ? 0 : 2
                         });
                         if (marketData) {
-                          const primaryCents = marketData.medianCents || marketData.priceCents;
+                          let primaryCents = marketData.medianCents || marketData.priceCents;
+                          if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) {
+                            primaryCents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
+                          }
                           if (primaryCents) localizedPrice = formatter.format((primaryCents / 100) * rate);
                           if (marketData.lowestCents) localizedLowestPrice = formatter.format((marketData.lowestCents / 100) * rate);
                           if (marketData.buyOrderCents > 0) localizedBuyOrderPrice = formatter.format((marketData.buyOrderCents / 100) * rate);
@@ -1470,7 +1481,7 @@ export default function ScannerApp() {
                               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '2px' }}>
                                 {localizedPrice && <div className={styles.priceValue} style={{ color: '#4caf50', fontWeight: 'bold' }}>{recentSoldLabel} {localizedPrice}</div>}
                                 {localizedLowestPrice && <div style={{ fontSize: '0.85rem', color: '#81c784' }}>{lowestLabel} {localizedLowestPrice}</div>}
-                                {localizedBuyOrderPrice && <div style={{ fontSize: '0.85rem', color: '#ffb74d', fontWeight: 'bold' }}>{buyOrderLabel} {localizedBuyOrderPrice}</div>}
+                                {localizedBuyOrderPrice && <div style={{ fontSize: '0.85rem', color: '#81c784' }}>{buyOrderLabel} {localizedBuyOrderPrice}</div>}
                                 {(!localizedPrice && !localizedLowestPrice && !localizedBuyOrderPrice) && <div className={styles.priceLabel}>No Data</div>}
                               </div>
                             ) : prices ? (
