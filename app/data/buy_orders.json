@@ -10942,5 +10942,422 @@
   },
   "Platinum Bracer (Beyond) A": {
     "buyOrderCents": 0
+  },
+  "Crystal Bracer": {
+    "buyOrderCents": 0
+  },
+  "Crystal Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Bracer (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Bracer (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Bracer": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Obsidian Bracer (Immortal) A": {
+    "buyOrderCents": 100
+  },
+  "Obsidian Bracer (Arcana) A": {
+    "buyOrderCents": 189
+  },
+  "Obsidian Bracer (Beyond) A": {
+    "buyOrderCents": 1028
+  },
+  "Shadow Bracer": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bracer (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bracer (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Bracer": {
+    "buyOrderCents": 0
+  },
+  "Crimson Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Bracer (Legendary) A": {
+    "buyOrderCents": 97
+  },
+  "Crimson Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crimson Bracer (Immortal) A": {
+    "buyOrderCents": 146
+  },
+  "Crimson Bracer (Arcana) A": {
+    "buyOrderCents": 317
+  },
+  "Crimson Bracer (Beyond) A": {
+    "buyOrderCents": 1183
+  },
+  "Bloodstone Bracer": {
+    "buyOrderCents": 0
+  },
+  "Bloodstone Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Bloodstone Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Bloodstone Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Bloodstone Bracer (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Bloodstone Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Bloodstone Bracer (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Bloodstone Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Bloodstone Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Bracer": {
+    "buyOrderCents": 0
+  },
+  "Emerald Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Bracer (Legendary) A": {
+    "buyOrderCents": 42
+  },
+  "Emerald Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Bracer (Immortal) A": {
+    "buyOrderCents": 200
+  },
+  "Emerald Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Emerald Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Bracer": {
+    "buyOrderCents": 0
+  },
+  "Diamond Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Bracer (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Bracer (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Diamond Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Bracer": {
+    "buyOrderCents": 0
+  },
+  "Stardust Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Bracer (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Bracer (Immortal) A": {
+    "buyOrderCents": 8
+  },
+  "Stardust Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Stardust Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Bracer": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Bracer (Legendary) A": {
+    "buyOrderCents": 162
+  },
+  "Eclipse Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eclipse Bracer (Immortal) A": {
+    "buyOrderCents": 168
+  },
+  "Eclipse Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Bracer": {
+    "buyOrderCents": 0
+  },
+  "Celestial Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Bracer (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Bracer (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Celestial Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Bracer": {
+    "buyOrderCents": 0
+  },
+  "Astral Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Bracer (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Bracer (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Astral Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Bracer": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Bracer (Immortal) A": {
+    "buyOrderCents": 249
+  },
+  "Ethereal Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ethereal Bracer (Beyond) A": {
+    "buyOrderCents": 8101
+  },
+  "Void Bracer": {
+    "buyOrderCents": 0
+  },
+  "Void Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bracer (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bracer (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Void Bracer (Arcana) A": {
+    "buyOrderCents": 133
+  },
+  "Void Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Bracer": {
+    "buyOrderCents": 0
+  },
+  "Abyss Bracer (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Bracer (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Bracer (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Bracer (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Bracer (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Bracer (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Bracer (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Abyss Bracer (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Sacred Staff (Celestial) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Gloves (Divine) A": {
+    "buyOrderCents": 3427
+  },
+  "Dimensional Scepter (Celestial) A": {
+    "buyOrderCents": 5104,
+    "lowestCents": 15593
+  },
+  "Dimensional Orb (Divine) A": {
+    "buyOrderCents": 5874,
+    "lowestCents": 22273
+  },
+  "Ancient Orb (Celestial) A": {
+    "buyOrderCents": 1560,
+    "lowestCents": 9790
+  },
+  "Dimensional Gloves (Celestial) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Gloves (Celestial) A": {
+    "buyOrderCents": 1292,
+    "lowestCents": 4362
+  },
+  "Radiant Shield (Divine) A": {
+    "buyOrderCents": 3427,
+    "lowestCents": 22273
+  },
+  "Dimensional Tome (Celestial) A": {
+    "buyOrderCents": 2714,
+    "lowestCents": 14333
+  },
+  "Shine Boots (Celestial) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Orb (Cosmic) A": {
+    "buyOrderCents": 3296,
+    "lowestCents": 12352
+  },
+  "Warrior's Tome (Celestial) A": {
+    "buyOrderCents": 3462,
+    "lowestCents": 11128
+  },
+  "Limitless Scepter (Celestial) A": {
+    "buyOrderCents": 2621,
+    "lowestCents": 9490
   }
 }
