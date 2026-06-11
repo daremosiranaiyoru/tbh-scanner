@@ -1160,8 +1160,12 @@ export default function ScannerApp() {
                 }
               }
               if (marketData) {
-                const cents = marketData.medianCents || marketData.priceCents || marketData.lowestCents;
-                if (cents) totalCents += cents;
+                let cents = marketData.medianCents || marketData.priceCents;
+                if (!cents) {
+                  if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) cents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
+                  else cents = marketData.lowestCents || marketData.buyOrderCents || 0;
+                }
+                if (cents > 0) totalCents += cents;
               }
             });
             
@@ -1276,7 +1280,12 @@ export default function ScannerApp() {
                           }
                           
                           if (marketData) {
-                            return marketData.medianCents || marketData.priceCents || marketData.lowestCents || 0;
+                            let pc = marketData.medianCents || marketData.priceCents;
+                            if (!pc) {
+                              if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) pc = (marketData.lowestCents + marketData.buyOrderCents) / 2;
+                              else pc = marketData.lowestCents || marketData.buyOrderCents || 0;
+                            }
+                            return pc;
                           }
                           return 0;
                         };
@@ -1449,11 +1458,15 @@ export default function ScannerApp() {
                         });
                         if (marketData) {
                           let primaryCents = marketData.medianCents || marketData.priceCents;
-                          if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) {
-                            primaryCents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
+                          if (!primaryCents) {
+                            if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) {
+                              primaryCents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
+                            } else {
+                              primaryCents = marketData.lowestCents || marketData.buyOrderCents || 0;
+                            }
                           }
-                          if (primaryCents) localizedPrice = formatter.format((primaryCents / 100) * rate);
-                          if (marketData.lowestCents) localizedLowestPrice = formatter.format((marketData.lowestCents / 100) * rate);
+                          if (primaryCents > 0) localizedPrice = formatter.format((primaryCents / 100) * rate);
+                          if (marketData.lowestCents > 0) localizedLowestPrice = formatter.format((marketData.lowestCents / 100) * rate);
                           if (marketData.buyOrderCents > 0) localizedBuyOrderPrice = formatter.format((marketData.buyOrderCents / 100) * rate);
                         }
                       }
