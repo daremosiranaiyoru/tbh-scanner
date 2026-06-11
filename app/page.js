@@ -860,6 +860,43 @@ export default function ScannerApp() {
               <option value="tr-TR" style={{background: '#1a1d24', color: 'white'}}>Türkçe</option>
               <option value="vi-VN" style={{background: '#1a1d24', color: 'white'}}>Tiếng Việt</option>
             </select>
+            
+            {/* Small Ko-fi Link */}
+            <div style={{ marginTop: '8px', display: 'flex', justifyContent: 'flex-end' }}>
+              <a 
+                href="https://ko-fi.com/tbh_scanner" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '6px',
+                  background: 'rgba(255, 183, 77, 0.1)', color: '#ffb74d', textDecoration: 'none',
+                  padding: '4px 10px', borderRadius: '6px', fontSize: '0.8rem', fontWeight: 'bold',
+                  border: '1px solid rgba(255, 183, 77, 0.3)', transition: 'all 0.2s',
+                  boxShadow: '0 2px 8px rgba(255, 183, 77, 0.1)'
+                }}
+                onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255, 183, 77, 0.2)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+                onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 183, 77, 0.1)'; e.currentTarget.style.transform = 'none'; }}
+              >
+                <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi" style={{ width: '16px' }} />
+                {(() => {
+                  const kofiSmallTrans = {
+                    'en-US': 'Support Server Costs',
+                    'ja-JP': 'サーバー代のご支援',
+                    'zh-Hans': '支持服务器费用',
+                    'zh-Hant': '支持伺服器費用',
+                    'ko-KR': '서버 비용 후원',
+                    'ru-RU': 'Поддержать сервер',
+                    'es-ES': 'Apoyar servidor',
+                    'fr-FR': 'Soutenir le serveur',
+                    'de-DE': 'Server unterstützen',
+                    'pt-BR': 'Apoiar servidor',
+                    'tr-TR': 'Sunucuyu destekle',
+                    'vi-VN': 'Hỗ trợ máy chủ'
+                  };
+                  return kofiSmallTrans[selectedLang] || kofiSmallTrans['en-US'];
+                })()}
+              </a>
+            </div>
           </div>
         </div>
       </header>
