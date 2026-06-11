@@ -1144,7 +1144,7 @@ export default function ScannerApp() {
               const englishName = names['en-US'] || item.name.replace('.png', '');
               let marketData = null;
               if (prices) {
-                if (item.rarity && item.rarity !== 'UNKNOWN') {
+                if (!item.name.startsWith('Item_') && item.rarity && item.rarity !== 'UNKNOWN') {
                   const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
                   const prefix = `${englishName} (${rarityStr})`;
                   if (prices[`${prefix} A`]) marketData = prices[`${prefix} A`];
@@ -1264,7 +1264,7 @@ export default function ScannerApp() {
                           const englishName = names['en-US'] || item.name.replace('.png', '');
                           
                           let marketData = null;
-                          if (item.rarity && item.rarity !== 'UNKNOWN') {
+                          if (!item.name.startsWith('Item_') && item.rarity && item.rarity !== 'UNKNOWN') {
                             const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
                             const prefix = `${englishName} (${rarityStr})`;
                             if (prices[`${prefix} A`]) marketData = prices[`${prefix} A`];
