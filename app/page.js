@@ -881,7 +881,7 @@ export default function ScannerApp() {
                 {(() => {
                   const kofiSmallTrans = {
                     'en-US': 'Support Server Costs',
-                    'ja-JP': 'サーバー代のご支援',
+                    'ja-JP': 'サーバー代ご支援のお願い',
                     'zh-Hans': '支持服务器费用',
                     'zh-Hant': '支持伺服器費用',
                     'ko-KR': '서버 비용 후원',
@@ -1367,6 +1367,13 @@ export default function ScannerApp() {
                         'de-DE': 'Niedrigstes Angebot:', 'pt-BR': 'Menor preço:', 'tr-TR': 'En Düşük İlan:', 'vi-VN': 'Danh sách thấp nhất:'
                       };
                       const lowestLabel = lowestLabelTranslations[selectedLang] || 'Lowest Listing:';
+
+                      const buyOrderLabelTranslations = {
+                        'en-US': 'Immediate Sell:', 'ja-JP': '即売却価格:', 'zh-Hans': '立即出售:', 'zh-Hant': '立即出售:',
+                        'ko-KR': '즉시 판매:', 'ru-RU': 'Мгновенная продажа:', 'es-ES': 'Venta Inmediata:', 'fr-FR': 'Vente Immédiate:',
+                        'de-DE': 'Sofortverkauf:', 'pt-BR': 'Venda Imediata:', 'tr-TR': 'Hemen Sat:', 'vi-VN': 'Bán Ngay:'
+                      };
+                      const buyOrderLabel = buyOrderLabelTranslations[selectedLang] || 'Immediate Sell:';
                       
                       let marketData = null;
                       let actualKey = englishName; // default fallback key for URL
@@ -1398,6 +1405,7 @@ export default function ScannerApp() {
                       
                       let localizedPrice = '';
                       let localizedLowestPrice = '';
+                      let localizedBuyOrderPrice = '';
                       if (rates) {
                         const curr = langToCurrency[selectedLang] || { code: 'USD' };
                         const rate = rates[curr.code] || 1;
@@ -1409,6 +1417,7 @@ export default function ScannerApp() {
                           const primaryCents = marketData.medianCents || marketData.priceCents;
                           if (primaryCents) localizedPrice = formatter.format((primaryCents / 100) * rate);
                           if (marketData.lowestCents) localizedLowestPrice = formatter.format((marketData.lowestCents / 100) * rate);
+                          if (marketData.buyOrderCents > 0) localizedBuyOrderPrice = formatter.format((marketData.buyOrderCents / 100) * rate);
                         }
                       }
                       
@@ -1450,7 +1459,8 @@ export default function ScannerApp() {
                               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '2px' }}>
                                 {localizedPrice && <div className={styles.priceValue} style={{ color: '#4caf50', fontWeight: 'bold' }}>{recentSoldLabel} {localizedPrice}</div>}
                                 {localizedLowestPrice && <div style={{ fontSize: '0.85rem', color: '#81c784' }}>{lowestLabel} {localizedLowestPrice}</div>}
-                                {(!localizedPrice && !localizedLowestPrice) && <div className={styles.priceLabel}>No Data</div>}
+                                {localizedBuyOrderPrice && <div style={{ fontSize: '0.85rem', color: '#ffb74d', fontWeight: 'bold' }}>{buyOrderLabel} {localizedBuyOrderPrice}</div>}
+                                {(!localizedPrice && !localizedLowestPrice && !localizedBuyOrderPrice) && <div className={styles.priceLabel}>No Data</div>}
                               </div>
                             ) : prices ? (
                               <div className={styles.priceLabel}>No Data</div>
