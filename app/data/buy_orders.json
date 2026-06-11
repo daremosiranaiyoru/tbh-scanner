@@ -8820,5 +8820,612 @@
   },
   "Void Gloves (Beyond) A": {
     "buyOrderCents": 0
+  },
+  "Dragon Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Gloves (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Gloves (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Dragon Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Gloves (Legendary) A": {
+    "buyOrderCents": 98
+  },
+  "Dimensional Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Gloves (Immortal) A": {
+    "buyOrderCents": 168
+  },
+  "Dimensional Gloves (Arcana) A": {
+    "buyOrderCents": 262
+  },
+  "Dimensional Gloves (Beyond) A": {
+    "buyOrderCents": 994
+  },
+  "Shadow Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Gloves (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Gloves (Immortal) A": {
+    "buyOrderCents": 5
+  },
+  "Shadow Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Gloves (Rare) A": {
+    "buyOrderCents": 5
+  },
+  "Eternal Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Gloves (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Gloves (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Gloves (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Gloves (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Gloves (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Gloves (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Gloves (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Gloves (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Gloves (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Gloves (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Boots (Legendary) A": {
+    "buyOrderCents": 7
+  },
+  "Wooden Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Boots (Immortal) A": {
+    "buyOrderCents": 45
+  },
+  "Wooden Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Wooden Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Boots (Legendary) A": {
+    "buyOrderCents": 47
+  },
+  "Empire Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Boots (Immortal) A": {
+    "buyOrderCents": 7
+  },
+  "Empire Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Empire Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Boots (Legendary) A": {
+    "buyOrderCents": 60,
+    "lowestCents": 19288
+  },
+  "Iron Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Boots (Immortal) A": {
+    "buyOrderCents": 58,
+    "lowestCents": 1817
+  },
+  "Iron Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Iron Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Boots (Legendary) A": {
+    "buyOrderCents": 271,
+    "lowestCents": 19307
+  },
+  "Knight Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Knight Boots (Immortal) A": {
+    "buyOrderCents": 386,
+    "lowestCents": 1496
+  },
+  "Knight Boots (Arcana) A": {
+    "buyOrderCents": 1382
+  },
+  "Knight Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Boots (Legendary) A": {
+    "buyOrderCents": 117,
+    "lowestCents": 1646
+  },
+  "Chain Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Chain Boots (Immortal) A": {
+    "buyOrderCents": 543
+  },
+  "Chain Boots (Arcana) A": {
+    "buyOrderCents": 98
+  },
+  "Chain Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Boots (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Boots (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Fate Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "War Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "War Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "War Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "War Boots (Legendary) A": {
+    "buyOrderCents": 61
+  },
+  "War Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "War Boots (Immortal) A": {
+    "buyOrderCents": 290,
+    "lowestCents": 1025
+  },
+  "War Boots (Arcana) A": {
+    "buyOrderCents": 148
+  },
+  "War Boots (Beyond) A": {
+    "buyOrderCents": 71
+  },
+  "Heavy Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Boots (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Boots (Immortal) A": {
+    "buyOrderCents": 9
+  },
+  "Heavy Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Heavy Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Boots (Legendary) A": {
+    "buyOrderCents": 45
+  },
+  "Rune Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Rune Boots (Immortal) A": {
+    "buyOrderCents": 39
+  },
+  "Rune Boots (Arcana) A": {
+    "buyOrderCents": 78
+  },
+  "Rune Boots (Beyond) A": {
+    "buyOrderCents": 140
+  },
+  "Plate Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Boots (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Boots (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Plate Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Boots (Legendary) A": {
+    "buyOrderCents": 26
+  },
+  "Mystic Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Mystic Boots (Immortal) A": {
+    "buyOrderCents": 153
+  },
+  "Mystic Boots (Arcana) A": {
+    "buyOrderCents": 350
+  },
+  "Mystic Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Great Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Great Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Great Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Boots (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Great Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Great Boots (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Great Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Great Boots (Beyond) A": {
+    "buyOrderCents": 4
+  },
+  "Ancient Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Boots (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Boots (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Ancient Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Boots (Legendary) A": {
+    "buyOrderCents": 56
+  },
+  "Shine Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shine Boots (Immortal) A": {
+    "buyOrderCents": 110
+  },
+  "Shine Boots (Arcana) A": {
+    "buyOrderCents": 307
+  },
+  "Shine Boots (Beyond) A": {
+    "buyOrderCents": 808
+  },
+  "Void Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Void Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Void Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Boots (Legendary) A": {
+    "buyOrderCents": 24
+  },
+  "Void Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Void Boots (Immortal) A": {
+    "buyOrderCents": 12
+  },
+  "Void Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Void Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Boots (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Boots (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Crystal Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Boots (Legendary) A": {
+    "buyOrderCents": 133,
+    "lowestCents": 5460
+  },
+  "Dimensional Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Dimensional Boots (Immortal) A": {
+    "buyOrderCents": 280
+  },
+  "Dimensional Boots (Arcana) A": {
+    "buyOrderCents": 302
+  },
+  "Dimensional Boots (Beyond) A": {
+    "buyOrderCents": 995
+  },
+  "Shadow Boots (Uncommon) A": {
+    "buyOrderCents": 4
+  },
+  "Shadow Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Boots (Legendary) A": {
+    "buyOrderCents": 7
+  },
+  "Shadow Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Boots (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Shadow Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Boots (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Boots (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Eternal Boots (Beyond) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Boots (Uncommon) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Boots (Rare) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Boots (Epic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Boots (Legendary) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Boots (Mythic) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Boots (Immortal) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Boots (Arcana) A": {
+    "buyOrderCents": 0
+  },
+  "Radiant Boots (Beyond) A": {
+    "buyOrderCents": 0
   }
 }
