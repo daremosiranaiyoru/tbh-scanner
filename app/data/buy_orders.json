@@ -2857,14 +2857,14 @@
     "buyOrderCents": 0
   },
   "Comet Staff (Immortal) A": {
-    "buyOrderCents": 88
+    "buyOrderCents": 89
   },
   "Comet Staff (Arcana) A": {
-    "buyOrderCents": 213,
+    "buyOrderCents": 214,
     "lowestCents": 5608
   },
   "Comet Staff (Beyond) A": {
-    "buyOrderCents": 345
+    "buyOrderCents": 346
   },
   "Crystal Staff": {
     "buyOrderCents": 0

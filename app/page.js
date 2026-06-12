@@ -1511,7 +1511,7 @@ export default function ScannerApp() {
         {/* Left Side: Upload & Canvas */}
         <div 
           className={`glass-panel ${dragActive ? styles.dragActive : ''}`} 
-          style={{ padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isScanning) ? '600px' : 'auto', transition: 'border 0.3s' }}
+          style={{ border: 'none', padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isScanning) ? '600px' : 'auto', transition: 'border 0.3s' }}
           onDragEnter={handleDrag}
           onDragLeave={handleDrag}
           onDragOver={handleDrag}
@@ -1611,7 +1611,7 @@ export default function ScannerApp() {
 
         {/* Right Side: Results or Loading Screen */}
         {isScanning ? (
-          <div className={`glass-panel ${styles.resultsPanel}`} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '20px' }}>
+          <div className={`glass-panel ${styles.resultsPanel}`} style={{ border: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '20px' }}>
             <h2 style={{ fontSize: '1.5rem', marginBottom: '10px', color: '#fff' }}>
               {appraisingTranslations[selectedLang] || appraisingTranslations['en-US']}
             </h2>
