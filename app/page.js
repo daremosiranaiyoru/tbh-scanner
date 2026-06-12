@@ -5,11 +5,43 @@ import styles from './page.module.css';
 import Link from 'next/link';
 import { loadDatabase, scanIcons } from '../lib/ocr-engine';
 import itemNames from '../public/item_names.json';
+import spriteMap from '../public/sprite_map.json';
 import html2canvas from 'html2canvas';
 
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
+
+const SPRITE_WIDTH = 640;
+
+function SpriteIcon({ icon, size = 32, style = {}, className = '', alt = '', title = '' }) {
+  const sprite = spriteMap[icon];
+  
+  if (!sprite) {
+    return <img src={`/icons/${icon}`} alt={alt || title} title={title} style={{ width: `${size}px`, height: `${size}px`, imageRendering: 'pixelated', ...style }} className={className} />;
+  }
+  
+  const scale = size / 32;
+  const scaledSpriteWidth = SPRITE_WIDTH * scale;
+  
+  return (
+    <div
+      title={title || alt}
+      className={className}
+      style={{
+        width: `${size}px`,
+        height: `${size}px`,
+        backgroundImage: 'url(/icons_sprite.png)',
+        backgroundPosition: `-${sprite.x * scale}px -${sprite.y * scale}px`,
+        backgroundSize: `${scaledSpriteWidth}px auto`,
+        imageRendering: 'pixelated',
+        backgroundRepeat: 'no-repeat',
+        display: 'inline-block',
+        ...style
+      }}
+    />
+  );
+}
 
 function SortableComment({ comment, isAdminSecret, deleteComment, selectedLang, handleReply }) {
   const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: comment.id });
@@ -1858,7 +1890,7 @@ export default function ScannerApp() {
                                           background: editSelectedKey === fItem.key ? 'rgba(33, 150, 243, 0.3)' : 'transparent'
                                         }}
                                       >
-                                        <img src={`/icons/${fItem.key}`} style={{ width: '24px', height: '24px' }} alt="" />
+                                        <SpriteIcon icon={fItem.key} size={24} />
                                         {fItem.localName}
                                       </li>
                                     ))}
@@ -2009,7 +2041,7 @@ export default function ScannerApp() {
                       
                       return (
                         <div key={idx} id={"scanned-item-" + idx} className={styles.itemRow}>
-                          <img src={`/icons/${item.name}`} className={styles.itemIcon} alt={item.name} />
+                          <SpriteIcon icon={item.name} className={styles.itemIcon} alt={item.name} size={64} style={{ borderRadius: '4px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} />
                           <div className={styles.itemInfo}>
                             <div className={styles.itemName}>
                               {displayName}

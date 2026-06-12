@@ -198,7 +198,7 @@
     "buyOrderCents": 0
   },
   "Wooden Armor (Legendary) A": {
-    "buyOrderCents": 21
+    "buyOrderCents": 9
   },
   "Wooden Armor (Mythic) A": {
     "buyOrderCents": 0
@@ -252,7 +252,7 @@
     "buyOrderCents": 0
   },
   "Iron Plate (Legendary) A": {
-    "buyOrderCents": 150,
+    "buyOrderCents": 175,
     "lowestCents": 62396
   },
   "Iron Plate (Mythic) A": {
@@ -280,7 +280,7 @@
     "buyOrderCents": 0
   },
   "Chain Mail (Legendary) A": {
-    "buyOrderCents": 75,
+    "buyOrderCents": 72,
     "lowestCents": 4305
   },
   "Chain Mail (Mythic) A": {
