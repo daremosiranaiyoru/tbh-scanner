@@ -20,13 +20,19 @@ import { CSS } from '@dnd-kit/utilities';
 const SPRITE_WIDTH = 640;
 
 function SpriteIcon({ icon, size = 32, style = {}, className = '', alt = '', title = '' }) {
-  const sprite = spriteMap[icon];
+  if (!icon) return null;
+  let filename = icon.split('/').pop();
+  if (!filename.endsWith('.png')) {
+    filename += '.png';
+  }
+
+  const sprite = spriteMap[filename];
   
   if (!sprite) {
-    if (!validIcons.has(icon)) {
+    if (!validIcons.has(filename)) {
       return <div title={title || alt} style={{ width: `${size}px`, height: `${size}px`, display: 'inline-block', ...style }} className={className} />;
     }
-    return <img src={`/icons/${icon}`} alt={alt || title} title={title} style={{ width: `${size}px`, height: `${size}px`, imageRendering: 'pixelated', ...style }} className={className} />;
+    return <img src={`/icons/${filename}`} alt={alt || title} title={title} style={{ width: `${size}px`, height: `${size}px`, imageRendering: 'pixelated', ...style }} className={className} />;
   }
   
   const scale = size / 32;

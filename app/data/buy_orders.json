@@ -252,7 +252,7 @@
     "buyOrderCents": 0
   },
   "Iron Plate (Legendary) A": {
-    "buyOrderCents": 175,
+    "buyOrderCents": 177,
     "lowestCents": 62396
   },
   "Iron Plate (Mythic) A": {
@@ -280,18 +280,18 @@
     "buyOrderCents": 0
   },
   "Chain Mail (Legendary) A": {
-    "buyOrderCents": 72,
+    "buyOrderCents": 73,
     "lowestCents": 4305
   },
   "Chain Mail (Mythic) A": {
     "buyOrderCents": 0
   },
   "Chain Mail (Immortal) A": {
-    "buyOrderCents": 123,
+    "buyOrderCents": 124,
     "lowestCents": 5765
   },
   "Chain Mail (Arcana) A": {
-    "buyOrderCents": 120
+    "buyOrderCents": 121
   },
   "Chain Mail (Beyond) A": {
     "buyOrderCents": 0
@@ -315,7 +315,7 @@
     "buyOrderCents": 0
   },
   "Knight's Armor (Immortal) A": {
-    "buyOrderCents": 541
+    "buyOrderCents": 539
   },
   "Knight's Armor (Arcana) A": {
     "buyOrderCents": 402,
@@ -4355,7 +4355,7 @@
     "buyOrderCents": 0
   },
   "Steel Axe (Immortal) A": {
-    "buyOrderCents": 77
+    "buyOrderCents": 79
   },
   "Steel Axe (Arcana) A": {
     "buyOrderCents": 70
@@ -4382,11 +4382,11 @@
     "buyOrderCents": 0
   },
   "War Axe (Immortal) A": {
-    "buyOrderCents": 347,
+    "buyOrderCents": 348,
     "lowestCents": 2301
   },
   "War Axe (Arcana) A": {
-    "buyOrderCents": 442
+    "buyOrderCents": 441
   },
   "War Axe (Beyond) A": {
     "buyOrderCents": 0
@@ -4431,7 +4431,7 @@
     "buyOrderCents": 0
   },
   "Great Axe (Legendary) A": {
-    "buyOrderCents": 11
+    "buyOrderCents": 6
   },
   "Great Axe (Mythic) A": {
     "buyOrderCents": 0
@@ -4440,10 +4440,10 @@
     "buyOrderCents": 37
   },
   "Great Axe (Arcana) A": {
-    "buyOrderCents": 98
+    "buyOrderCents": 97
   },
   "Great Axe (Beyond) A": {
-    "buyOrderCents": 503
+    "buyOrderCents": 502
   },
   "Heavy Axe": {
     "buyOrderCents": 0
@@ -4497,7 +4497,7 @@
     "buyOrderCents": 124
   },
   "Rune Axe (Beyond) A": {
-    "buyOrderCents": 232
+    "buyOrderCents": 233
   },
   "Legend Axe": {
     "buyOrderCents": 0
@@ -4545,7 +4545,7 @@
     "buyOrderCents": 0
   },
   "Fate Axe (Immortal) A": {
-    "buyOrderCents": 40
+    "buyOrderCents": 41
   },
   "Fate Axe (Arcana) A": {
     "buyOrderCents": 94
@@ -4602,7 +4602,7 @@
     "buyOrderCents": 5
   },
   "Storm Axe (Arcana) A": {
-    "buyOrderCents": 16
+    "buyOrderCents": 15
   },
   "Storm Axe (Beyond) A": {
     "buyOrderCents": 0
@@ -4620,16 +4620,16 @@
     "buyOrderCents": 0
   },
   "Limitless Axe (Legendary) A": {
-    "buyOrderCents": 29
+    "buyOrderCents": 30
   },
   "Limitless Axe (Mythic) A": {
     "buyOrderCents": 0
   },
   "Limitless Axe (Immortal) A": {
-    "buyOrderCents": 34
+    "buyOrderCents": 36
   },
   "Limitless Axe (Arcana) A": {
-    "buyOrderCents": 253
+    "buyOrderCents": 256
   },
   "Limitless Axe (Beyond) A": {
     "buyOrderCents": 374
@@ -4713,7 +4713,7 @@
     "buyOrderCents": 225
   },
   "Dimensional Axe (Beyond) A": {
-    "buyOrderCents": 1177
+    "buyOrderCents": 1175
   },
   "Shadow Axe": {
     "buyOrderCents": 0
@@ -4815,7 +4815,7 @@
     "buyOrderCents": 0
   },
   "Buckler (Immortal) A": {
-    "buyOrderCents": 29
+    "buyOrderCents": 30
   },
   "Buckler (Arcana) A": {
     "buyOrderCents": 0
