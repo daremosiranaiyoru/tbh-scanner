@@ -1385,7 +1385,7 @@ export default function ScannerApp() {
                     const isSelected = manualSelectedTypes.includes(fi.id);
                     return (
                       <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
-                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
+                        <SpriteIcon icon={fi.icon} alt={fi.label} />
                         <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
                       </button>
                     );
@@ -1396,7 +1396,7 @@ export default function ScannerApp() {
                     const isSelected = manualSelectedTypes.includes(fi.id);
                     return (
                       <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
-                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
+                        <SpriteIcon icon={fi.icon} alt={fi.label} />
                         <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
                       </button>
                     );
@@ -1407,7 +1407,7 @@ export default function ScannerApp() {
                     const isSelected = manualSelectedTypes.includes(fi.id);
                     return (
                       <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
-                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
+                        <SpriteIcon icon={fi.icon} alt={fi.label} />
                         <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
                       </button>
                     );
@@ -1418,7 +1418,7 @@ export default function ScannerApp() {
                     const isSelected = manualSelectedTypes.includes(fi.id);
                     return (
                       <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
-                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
+                        <SpriteIcon icon={fi.icon} alt={fi.label} />
                         <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
                       </button>
                     );
@@ -1515,7 +1515,7 @@ export default function ScannerApp() {
                         }}
                       >
                         {iconFilename ? (
-                          <img src={`/icons/${iconFilename}`} alt={itemName} style={{ width: '48px', height: '48px', imageRendering: 'pixelated', borderRadius: '4px', marginBottom: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} />
+                          <SpriteIcon icon={iconFilename} alt={itemName} size={48} style={{ borderRadius: '4px', marginBottom: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} />
                         ) : (
                           <div style={{ width: '48px', height: '48px', background: '#444', borderRadius: '4px', marginBottom: '8px' }}></div>
                         )}

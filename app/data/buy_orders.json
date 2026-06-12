@@ -1481,13 +1481,13 @@
     "buyOrderCents": 35
   },
   "Kingdom 10th Anniversary Coin": {
-    "buyOrderCents": 148
+    "buyOrderCents": 147
   },
   "Empire 10th Anniversary Coin": {
     "buyOrderCents": 404
   },
   "Kingdom 50th Anniversary Coin": {
-    "buyOrderCents": 971,
+    "buyOrderCents": 983,
     "lowestCents": 3120
   },
   "Empire 50th Anniversary Coin": {
@@ -1507,20 +1507,20 @@
     "buyOrderCents": 0
   },
   "Soulstone - Normal": {
-    "buyOrderCents": 330,
+    "buyOrderCents": 381,
     "lowestCents": 9
   },
   "Soulstone - Nightmare": {
-    "buyOrderCents": 273,
-    "lowestCents": 693
+    "buyOrderCents": 271,
+    "lowestCents": 734
   },
   "Soulstone - Hell": {
-    "buyOrderCents": 457,
+    "buyOrderCents": 455,
     "lowestCents": 7145
   },
   "Soulstone - Torment": {
-    "buyOrderCents": 291,
-    "lowestCents": 1871
+    "buyOrderCents": 315,
+    "lowestCents": 2370
   },
   "Long Sword": {
     "buyOrderCents": 0
@@ -1535,7 +1535,7 @@
     "buyOrderCents": 0
   },
   "Long Sword (Legendary) A": {
-    "buyOrderCents": 22
+    "buyOrderCents": 23
   },
   "Long Sword (Mythic) A": {
     "buyOrderCents": 0
@@ -1596,7 +1596,7 @@
     "buyOrderCents": 0
   },
   "Rapier (Immortal) A": {
-    "buyOrderCents": 59
+    "buyOrderCents": 41
   },
   "Rapier (Arcana) A": {
     "buyOrderCents": 0
@@ -1617,15 +1617,15 @@
     "buyOrderCents": 0
   },
   "Bastard Sword (Legendary) A": {
-    "buyOrderCents": 631,
-    "lowestCents": 1249
+    "buyOrderCents": 669,
+    "lowestCents": 1688
   },
   "Bastard Sword (Mythic) A": {
     "buyOrderCents": 0
   },
   "Bastard Sword (Immortal) A": {
-    "buyOrderCents": 24,
-    "lowestCents": 2311
+    "buyOrderCents": 52,
+    "lowestCents": 11507
   },
   "Bastard Sword (Arcana) A": {
     "buyOrderCents": 42
@@ -1646,8 +1646,8 @@
     "buyOrderCents": 0
   },
   "Great Sword (Legendary) A": {
-    "buyOrderCents": 49,
-    "lowestCents": 8022
+    "buyOrderCents": 295,
+    "lowestCents": 8007
   },
   "Great Sword (Mythic) A": {
     "buyOrderCents": 0
@@ -1701,7 +1701,7 @@
     "buyOrderCents": 0
   },
   "Knight Sword (Legendary) A": {
-    "buyOrderCents": 126
+    "buyOrderCents": 125
   },
   "Knight Sword (Mythic) A": {
     "buyOrderCents": 0
@@ -1756,14 +1756,14 @@
     "buyOrderCents": 0
   },
   "Rune Sword (Legendary) A": {
-    "buyOrderCents": 51,
-    "lowestCents": 22302
+    "buyOrderCents": 197,
+    "lowestCents": 22276
   },
   "Rune Sword (Mythic) A": {
     "buyOrderCents": 0
   },
   "Rune Sword (Immortal) A": {
-    "buyOrderCents": 77
+    "buyOrderCents": 76
   },
   "Rune Sword (Arcana) A": {
     "buyOrderCents": 217,
