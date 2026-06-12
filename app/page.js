@@ -87,6 +87,11 @@ const langToCurrency = {
 // Cache for preserving state across client-side navigations (e.g. going to tips page and back)
 let pageCache = null;
 
+// Global memory cache to prevent redundant fetches within the same session
+let globalPricesCache = null;
+let globalRatesCache = null;
+let globalPricesLastFetch = 0;
+
 export default function ScannerApp() {
   const [isScanning, setIsScanning] = useState(false);
   const [isEngineReady, setIsEngineReady] = useState(false);
@@ -414,23 +419,29 @@ export default function ScannerApp() {
 
   const fetchPrices = async () => {
     try {
-      const res = await fetch('/api/prices', { cache: 'no-store' });
+      const now = Date.now();
+      // Use memory cache if fetched within the last 5 minutes (300,000 ms)
+      if (globalPricesCache && globalRatesCache && (now - globalPricesLastFetch < 300000)) {
+        setPrices(prev => ({ ...(prev || {}), ...globalPricesCache }));
+        setRates(prev => ({ ...(prev || {}), ...globalRatesCache }));
+        return;
+      }
+
+      // Remove 'cache: no-store' to allow browser caching based on API headers
+      const res = await fetch('/api/prices');
       if (!res.ok) throw new Error("Prices API returned " + res.status);
       const data = await res.json();
       
-      setPrices(prev => {
-        if (data.items && Object.keys(data.items).length > 0) {
-          return { ...(prev || {}), ...data.items };
-        }
-        return prev || {};
-      });
+      if (data.items && Object.keys(data.items).length > 0) {
+        globalPricesCache = data.items;
+        globalPricesLastFetch = now;
+        setPrices(prev => ({ ...(prev || {}), ...data.items }));
+      }
       
-      setRates(prev => {
-        if (data.rates && Object.keys(data.rates).length > 0) {
-          return { ...(prev || {}), ...data.rates };
-        }
-        return prev || null;
-      });
+      if (data.rates && Object.keys(data.rates).length > 0) {
+        globalRatesCache = data.rates;
+        setRates(prev => ({ ...(prev || {}), ...data.rates }));
+      }
     } catch (e) {
       console.error("Failed to fetch prices:", e);
       setPrices(prev => prev || {});

@@ -35,9 +35,17 @@ export async function GET() {
             items: mergedItems,
             rates,
             queueLength: 0
+        }, {
+            headers: {
+                'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400'
+            }
         });
     } catch (e) {
         console.error("Prices API Error:", e);
-        return NextResponse.json({ error: "API Error", cachedAt: 0, items: {}, rates: { USD: 1, JPY: 150 } });
+        return NextResponse.json({ error: "API Error", cachedAt: 0, items: {}, rates: { USD: 1, JPY: 150 } }, {
+            headers: {
+                'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=600'
+            }
+        });
     }
 }
