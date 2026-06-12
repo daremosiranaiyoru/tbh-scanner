@@ -1372,7 +1372,7 @@ export default function ScannerApp() {
               const convertedTotal = (totalCents / 100) * rate;
               localizedTotal = new Intl.NumberFormat(selectedLang, {
                 style: 'currency', currency: curr.code,
-                maximumFractionDigits: curr.code === 'JPY' || curr.code === 'KRW' ? 0 : 2
+                maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes(curr.code) ? 0 : 2
               }).format(convertedTotal);
             }
             
@@ -1667,7 +1667,7 @@ export default function ScannerApp() {
                         const rate = rates[curr.code] || 1;
                         const formatter = new Intl.NumberFormat(selectedLang, {
                           style: 'currency', currency: curr.code,
-                          maximumFractionDigits: ['JPY', 'KRW', 'VND'].includes(curr.code) ? 0 : 2
+                          maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes(curr.code) ? 0 : 2
                         });
                         if (marketData) {
                           let primaryCents = marketData.medianCents || marketData.priceCents;
