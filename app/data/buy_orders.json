@@ -5035,11 +5035,11 @@
     "buyOrderCents": 0
   },
   "Elite Shield (Immortal) A": {
-    "buyOrderCents": 129
+    "buyOrderCents": 130
   },
   "Elite Shield (Arcana) A": {
-    "buyOrderCents": 110,
-    "lowestCents": 7337
+    "buyOrderCents": 152,
+    "lowestCents": 7350
   },
   "Elite Shield (Beyond) A": {
     "buyOrderCents": 262
@@ -5084,19 +5084,19 @@
     "buyOrderCents": 0
   },
   "Mystic Shield (Legendary) A": {
-    "buyOrderCents": 20
+    "buyOrderCents": 21
   },
   "Mystic Shield (Mythic) A": {
     "buyOrderCents": 0
   },
   "Mystic Shield (Immortal) A": {
-    "buyOrderCents": 44
+    "buyOrderCents": 34
   },
   "Mystic Shield (Arcana) A": {
     "buyOrderCents": 160
   },
   "Mystic Shield (Beyond) A": {
-    "buyOrderCents": 294
+    "buyOrderCents": 295
   },
   "Grand Shield": {
     "buyOrderCents": 0
@@ -5174,11 +5174,11 @@
     "buyOrderCents": 82
   },
   "Radiant Shield (Arcana) A": {
-    "buyOrderCents": 171
+    "buyOrderCents": 172
   },
   "Radiant Shield (Beyond) A": {
-    "buyOrderCents": 2077,
-    "lowestCents": 4059
+    "buyOrderCents": 2080,
+    "lowestCents": 4444
   },
   "Void Shield": {
     "buyOrderCents": 0
@@ -5256,11 +5256,11 @@
     "buyOrderCents": 59
   },
   "Dimensional Shield (Arcana) A": {
-    "buyOrderCents": 199
+    "buyOrderCents": 200
   },
   "Dimensional Shield (Beyond) A": {
-    "buyOrderCents": 1052,
-    "lowestCents": 2576
+    "buyOrderCents": 1046,
+    "lowestCents": 2581
   },
   "Shadow Shield": {
     "buyOrderCents": 0
@@ -5362,7 +5362,7 @@
     "buyOrderCents": 0
   },
   "Wooden Arrow (Immortal) A": {
-    "buyOrderCents": 17
+    "buyOrderCents": 26
   },
   "Wooden Arrow (Arcana) A": {
     "buyOrderCents": 0
@@ -5389,8 +5389,8 @@
     "buyOrderCents": 0
   },
   "Iron Arrow (Immortal) A": {
-    "buyOrderCents": 290,
-    "lowestCents": 4062
+    "buyOrderCents": 313,
+    "lowestCents": 4071
   },
   "Iron Arrow (Arcana) A": {
     "buyOrderCents": 0
@@ -5438,7 +5438,7 @@
     "buyOrderCents": 0
   },
   "Barbed Arrow (Legendary) A": {
-    "buyOrderCents": 62
+    "buyOrderCents": 59
   },
   "Barbed Arrow (Mythic) A": {
     "buyOrderCents": 0
@@ -5447,7 +5447,7 @@
     "buyOrderCents": 98
   },
   "Barbed Arrow (Arcana) A": {
-    "buyOrderCents": 810
+    "buyOrderCents": 809
   },
   "Barbed Arrow (Beyond) A": {
     "buyOrderCents": 0
@@ -5474,7 +5474,7 @@
     "buyOrderCents": 103
   },
   "Azure Arrow (Arcana) A": {
-    "buyOrderCents": 290
+    "buyOrderCents": 291
   },
   "Azure Arrow (Beyond) A": {
     "buyOrderCents": 0
@@ -5528,10 +5528,10 @@
     "buyOrderCents": 116
   },
   "Gale Arrow (Arcana) A": {
-    "buyOrderCents": 345
+    "buyOrderCents": 346
   },
   "Gale Arrow (Beyond) A": {
-    "buyOrderCents": 638
+    "buyOrderCents": 641
   },
   "Serpent Arrow": {
     "buyOrderCents": 0
