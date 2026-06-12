@@ -1914,37 +1914,37 @@ export default function ScannerApp() {
                       const englishName = names['en-US'] || item.name.replace('.png', '');
                       
                       const labelTranslations = {
-                        'en-US': 'Recent Sold:', 'ja-JP': '直近の取引:', 'zh-Hans': '最近交易:', 'zh-Hant': '最近交易:',
-                        'ko-KR': '최근 거래:', 'ru-RU': 'Последняя продажа:', 'es-ES': 'Última venta:', 'fr-FR': 'Dernière vente:',
+                        'en-US': 'Mid Rate:', 'ja-JP': 'ミッドレート:', 'zh-Hans': '中间价:', 'zh-Hant': '中間價:',
+                        'ko-KR': '중간값:', 'ru-RU': 'Средний курс:', 'es-ES': 'Tasa media:', 'fr-FR': 'Taux médian:',
                         'de-DE': 'Zuletzt verkauft:', 'pt-BR': 'Última venda:', 'tr-TR': 'Son satış:', 'vi-VN': 'Đã bán gần đây:',
-  'id-ID': 'Baru Terjual:',
-  'th-TH': 'ขายล่าสุด:',
-  'pl-PL': 'Ostatnio Sprzedane:',
-  'uk-UA': 'Нещодавно продані:'
+  'id-ID': 'Nilai Tengah:',
+  'th-TH': 'อัตรากลาง:',
+  'pl-PL': 'Kurs średni:',
+  'uk-UA': 'Середній курс:'
                       };
-                      const recentSoldLabel = labelTranslations[selectedLang] || 'Recent Sold:';
+                      const recentSoldLabel = labelTranslations[selectedLang] || 'Mid Rate:';
 
                       const lowestLabelTranslations = {
-                        'en-US': 'Sell Order:', 'ja-JP': '売却希望額:', 'zh-Hans': '期望售价:', 'zh-Hant': '期望售價:',
-                        'ko-KR': '판매 희망가:', 'ru-RU': 'Запрос на продажу:', 'es-ES': 'Orden de venta:', 'fr-FR': 'Ordre de vente:',
+                        'en-US': 'Ask Price:', 'ja-JP': '売値:', 'zh-Hans': '卖价:', 'zh-Hant': '賣價:',
+                        'ko-KR': '매도호가:', 'ru-RU': 'Цена продажи:', 'es-ES': 'Precio de Venta:', 'fr-FR': 'Prix de vente:',
                         'de-DE': 'Verkaufsauftrag:', 'pt-BR': 'Ordem de venda:', 'tr-TR': 'Satış Emri:', 'vi-VN': 'Lệnh bán:',
-  'id-ID': 'Pesanan Jual:',
-  'th-TH': 'คำสั่งขาย:',
-  'pl-PL': 'Zlecenie Sprzedaży:',
-  'uk-UA': 'Замовлення на продаж:'
+  'id-ID': 'Harga Jual:',
+  'th-TH': 'ราคาขาย:',
+  'pl-PL': 'Cena sprzedaży:',
+  'uk-UA': 'Ціна продажу:'
                       };
-                      const lowestLabel = lowestLabelTranslations[selectedLang] || 'Sell Order:';
+                      const lowestLabel = lowestLabelTranslations[selectedLang] || 'Ask Price:';
 
                       const buyOrderLabelTranslations = {
-                        'en-US': 'Buy Order:', 'ja-JP': '購入希望額:', 'zh-Hans': '求购价:', 'zh-Hant': '求購價:',
-                        'ko-KR': '구매 희망가:', 'ru-RU': 'Запрос на покупку:', 'es-ES': 'Orden de compra:', 'fr-FR': 'Ordre d\'achat:',
+                        'en-US': 'Bid Price:', 'ja-JP': '買値:', 'zh-Hans': '买价:', 'zh-Hant': '買價:',
+                        'ko-KR': '매수호가:', 'ru-RU': 'Цена покупки:', 'es-ES': 'Precio de Compra:', 'fr-FR': 'Prix d\'achat:',
                         'de-DE': 'Kaufauftrag:', 'pt-BR': 'Ordem de compra:', 'tr-TR': 'Alış Emri:', 'vi-VN': 'Lệnh mua:',
-  'id-ID': 'Pesanan Beli:',
-  'th-TH': 'คำสั่งซื้อ:',
-  'pl-PL': 'Zlecenie Kupna:',
-  'uk-UA': 'Замовлення на купівлю:'
+  'id-ID': 'Harga Beli:',
+  'th-TH': 'ราคาซื้อ:',
+  'pl-PL': 'Cena kupna:',
+  'uk-UA': 'Ціна покупки:'
                       };
-                      const buyOrderLabel = buyOrderLabelTranslations[selectedLang] || 'Buy Order:';
+                      const buyOrderLabel = buyOrderLabelTranslations[selectedLang] || 'Bid Price:';
                       
                       let marketData = null;
                       let actualKey = englishName; // default fallback key for URL
