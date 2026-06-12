@@ -2851,7 +2851,7 @@
     "buyOrderCents": 0
   },
   "Comet Staff (Legendary) A": {
-    "buyOrderCents": 40
+    "buyOrderCents": 41
   },
   "Comet Staff (Mythic) A": {
     "buyOrderCents": 0
@@ -2860,7 +2860,7 @@
     "buyOrderCents": 89
   },
   "Comet Staff (Arcana) A": {
-    "buyOrderCents": 214,
+    "buyOrderCents": 217,
     "lowestCents": 5608
   },
   "Comet Staff (Beyond) A": {
@@ -2906,7 +2906,7 @@
     "buyOrderCents": 0
   },
   "Void Staff (Legendary) A": {
-    "buyOrderCents": 37
+    "buyOrderCents": 38
   },
   "Void Staff (Mythic) A": {
     "buyOrderCents": 0
@@ -2915,10 +2915,10 @@
     "buyOrderCents": 144
   },
   "Void Staff (Arcana) A": {
-    "buyOrderCents": 117
+    "buyOrderCents": 119
   },
   "Void Staff (Beyond) A": {
-    "buyOrderCents": 333
+    "buyOrderCents": 331
   },
   "Conqueror Staff": {
     "buyOrderCents": 0

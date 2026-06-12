@@ -123,6 +123,7 @@ let pageCache = null;
 let globalPricesCache = null;
 let globalRatesCache = null;
 let globalPricesLastFetch = 0;
+let globalFetchPricesPromise = null;
 
 export default function ScannerApp() {
   const [isScanning, setIsScanning] = useState(false);
@@ -450,32 +451,48 @@ export default function ScannerApp() {
   };
 
   const fetchPrices = async () => {
-    try {
-      const now = Date.now();
-      // Use memory cache if fetched within the last 5 minutes (300,000 ms)
-      if (globalPricesCache && globalRatesCache && (now - globalPricesLastFetch < 300000)) {
-        setPrices(prev => ({ ...(prev || {}), ...globalPricesCache }));
-        setRates(prev => ({ ...(prev || {}), ...globalRatesCache }));
-        return;
-      }
+    const now = Date.now();
+    // Use memory cache if fetched within the last 5 minutes (300,000 ms)
+    if (globalPricesCache && globalRatesCache && (now - globalPricesLastFetch < 300000)) {
+      setPrices(prev => ({ ...(prev || {}), ...globalPricesCache }));
+      setRates(prev => ({ ...(prev || {}), ...globalRatesCache }));
+      return;
+    }
 
-      // Remove 'cache: no-store' to allow browser caching based on API headers
-      const res = await fetch('/api/prices');
-      if (!res.ok) throw new Error("Prices API returned " + res.status);
-      const data = await res.json();
-      
-      if (data.items && Object.keys(data.items).length > 0) {
-        globalPricesCache = data.items;
-        globalPricesLastFetch = now;
-        setPrices(prev => ({ ...(prev || {}), ...data.items }));
+    if (globalFetchPricesPromise) {
+      const data = await globalFetchPricesPromise;
+      if (data && data.items) setPrices(prev => ({ ...(prev || {}), ...data.items }));
+      if (data && data.rates) setRates(prev => ({ ...(prev || {}), ...data.rates }));
+      return;
+    }
+
+    globalFetchPricesPromise = (async () => {
+      try {
+        const res = await fetch('/api/prices');
+        if (!res.ok) throw new Error("Prices API returned " + res.status);
+        const data = await res.json();
+        
+        if (data.items && Object.keys(data.items).length > 0) {
+          globalPricesCache = data.items;
+          globalPricesLastFetch = Date.now();
+        }
+        if (data.rates && Object.keys(data.rates).length > 0) {
+          globalRatesCache = data.rates;
+        }
+        return data;
+      } catch (e) {
+        console.error("Failed to fetch prices:", e);
+        return null;
       }
-      
-      if (data.rates && Object.keys(data.rates).length > 0) {
-        globalRatesCache = data.rates;
-        setRates(prev => ({ ...(prev || {}), ...data.rates }));
-      }
-    } catch (e) {
-      console.error("Failed to fetch prices:", e);
+    })();
+
+    const data = await globalFetchPricesPromise;
+    globalFetchPricesPromise = null;
+
+    if (data) {
+      if (data.items) setPrices(prev => ({ ...(prev || {}), ...data.items }));
+      if (data.rates) setRates(prev => ({ ...(prev || {}), ...data.rates }));
+    } else {
       setPrices(prev => prev || {});
     }
   };
