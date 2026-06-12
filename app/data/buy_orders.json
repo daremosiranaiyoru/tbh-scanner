@@ -9702,16 +9702,16 @@
     "buyOrderCents": 0
   },
   "Platinum Amulet (Legendary) A": {
-    "buyOrderCents": 300
+    "buyOrderCents": 301
   },
   "Platinum Amulet (Mythic) A": {
     "buyOrderCents": 0
   },
   "Platinum Amulet (Immortal) A": {
-    "buyOrderCents": 252
+    "buyOrderCents": 253
   },
   "Platinum Amulet (Arcana) A": {
-    "buyOrderCents": 483
+    "buyOrderCents": 486
   },
   "Platinum Amulet (Beyond) A": {
     "buyOrderCents": 0
@@ -9756,13 +9756,13 @@
     "buyOrderCents": 0
   },
   "Moonstone Pendant (Immortal) A": {
-    "buyOrderCents": 294
+    "buyOrderCents": 293
   },
   "Moonstone Pendant (Arcana) A": {
-    "buyOrderCents": 685
+    "buyOrderCents": 686
   },
   "Moonstone Pendant (Beyond) A": {
-    "buyOrderCents": 749
+    "buyOrderCents": 750
   },
   "Amber Pendant (Uncommon) A": {
     "buyOrderCents": 0
@@ -9798,8 +9798,8 @@
     "buyOrderCents": 0
   },
   "Ruby Pendant (Legendary) A": {
-    "buyOrderCents": 467,
-    "lowestCents": 6107
+    "buyOrderCents": 469,
+    "lowestCents": 6115
   },
   "Ruby Pendant (Mythic) A": {
     "buyOrderCents": 0
@@ -9811,7 +9811,7 @@
     "buyOrderCents": 0
   },
   "Ruby Pendant (Beyond) A": {
-    "buyOrderCents": 1122
+    "buyOrderCents": 1123
   },
   "Amethyst Pendant (Uncommon) A": {
     "buyOrderCents": 0
@@ -9856,10 +9856,10 @@
     "buyOrderCents": 424
   },
   "Emerald Amulet (Arcana) A": {
-    "buyOrderCents": 1062
+    "buyOrderCents": 1068
   },
   "Emerald Amulet (Beyond) A": {
-    "buyOrderCents": 879
+    "buyOrderCents": 880
   },
   "Diamond Amulet (Uncommon) A": {
     "buyOrderCents": 0
@@ -9925,7 +9925,7 @@
     "buyOrderCents": 0
   },
   "Eclipse Amulet (Beyond) A": {
-    "buyOrderCents": 1284
+    "buyOrderCents": 1277
   },
   "Celestial Amulet (Uncommon) A": {
     "buyOrderCents": 0
@@ -9985,7 +9985,7 @@
     "buyOrderCents": 0
   },
   "Ethereal Amulet (Legendary) A": {
-    "buyOrderCents": 264
+    "buyOrderCents": 265
   },
   "Ethereal Amulet (Mythic) A": {
     "buyOrderCents": 0
@@ -9994,7 +9994,7 @@
     "buyOrderCents": 395
   },
   "Ethereal Amulet (Arcana) A": {
-    "buyOrderCents": 1932
+    "buyOrderCents": 1942
   },
   "Ethereal Amulet (Beyond) A": {
     "buyOrderCents": 0
@@ -10078,10 +10078,10 @@
     "buyOrderCents": 241
   },
   "Sapphire Earring (Arcana) A": {
-    "buyOrderCents": 446
+    "buyOrderCents": 447
   },
   "Sapphire Earring (Beyond) A": {
-    "buyOrderCents": 779
+    "buyOrderCents": 780
   },
   "Diamond Earring": {
     "buyOrderCents": 0
@@ -10156,13 +10156,13 @@
     "buyOrderCents": 0
   },
   "Celestial Earring (Immortal) A": {
-    "buyOrderCents": 194
+    "buyOrderCents": 195
   },
   "Celestial Earring (Arcana) A": {
     "buyOrderCents": 0
   },
   "Celestial Earring (Beyond) A": {
-    "buyOrderCents": 934
+    "buyOrderCents": 935
   },
   "Eclipse Earring": {
     "buyOrderCents": 0
@@ -10234,13 +10234,13 @@
     "buyOrderCents": 0
   },
   "Ethereal Earring (Immortal) A": {
-    "buyOrderCents": 1395
+    "buyOrderCents": 1397
   },
   "Ethereal Earring (Arcana) A": {
     "buyOrderCents": 0
   },
   "Ethereal Earring (Beyond) A": {
-    "buyOrderCents": 4985
+    "buyOrderCents": 4992
   },
   "Void Earring": {
     "buyOrderCents": 0
@@ -10390,16 +10390,16 @@
     "buyOrderCents": 0
   },
   "Gold Ring (Legendary) A": {
-    "buyOrderCents": 194
+    "buyOrderCents": 195
   },
   "Gold Ring (Mythic) A": {
     "buyOrderCents": 0
   },
   "Gold Ring (Immortal) A": {
-    "buyOrderCents": 212
+    "buyOrderCents": 213
   },
   "Gold Ring (Arcana) A": {
-    "buyOrderCents": 966
+    "buyOrderCents": 967
   },
   "Gold Ring (Beyond) A": {
     "buyOrderCents": 0
@@ -10423,10 +10423,10 @@
     "buyOrderCents": 0
   },
   "Platinum Ring (Immortal) A": {
-    "buyOrderCents": 161
+    "buyOrderCents": 187
   },
   "Platinum Ring (Arcana) A": {
-    "buyOrderCents": 612
+    "buyOrderCents": 613
   },
   "Platinum Ring (Beyond) A": {
     "buyOrderCents": 0
@@ -10477,13 +10477,13 @@
     "buyOrderCents": 0
   },
   "Amber Ring (Immortal) A": {
-    "buyOrderCents": 217
+    "buyOrderCents": 218
   },
   "Amber Ring (Arcana) A": {
     "buyOrderCents": 0
   },
   "Amber Ring (Beyond) A": {
-    "buyOrderCents": 1308
+    "buyOrderCents": 1310
   },
   "Topaz Ring": {
     "buyOrderCents": 0
@@ -10528,14 +10528,14 @@
     "buyOrderCents": 0
   },
   "Amethyst Ring (Immortal) A": {
-    "buyOrderCents": 174
+    "buyOrderCents": 175
   },
   "Amethyst Ring (Arcana) A": {
-    "buyOrderCents": 436,
-    "lowestCents": 2493
+    "buyOrderCents": 438,
+    "lowestCents": 2496
   },
   "Amethyst Ring (Beyond) A": {
-    "buyOrderCents": 1264
+    "buyOrderCents": 1265
   },
   "Garnet Ring": {
     "buyOrderCents": 0
@@ -10583,13 +10583,13 @@
     "buyOrderCents": 0
   },
   "Emerald Ring (Immortal) A": {
-    "buyOrderCents": 375
+    "buyOrderCents": 267
   },
   "Emerald Ring (Arcana) A": {
     "buyOrderCents": 389
   },
   "Emerald Ring (Beyond) A": {
-    "buyOrderCents": 386
+    "buyOrderCents": 387
   },
   "Diamond Ring": {
     "buyOrderCents": 0
@@ -10667,11 +10667,11 @@
     "buyOrderCents": 311
   },
   "Eclipse Ring (Arcana) A": {
-    "buyOrderCents": 1454,
-    "lowestCents": 3240
+    "buyOrderCents": 1456,
+    "lowestCents": 3588
   },
   "Eclipse Ring (Beyond) A": {
-    "buyOrderCents": 779
+    "buyOrderCents": 780
   },
   "Celestial Ring": {
     "buyOrderCents": 0
@@ -10746,13 +10746,13 @@
     "buyOrderCents": 0
   },
   "Ethereal Ring (Immortal) A": {
-    "buyOrderCents": 485
+    "buyOrderCents": 486
   },
   "Ethereal Ring (Arcana) A": {
-    "buyOrderCents": 800
+    "buyOrderCents": 801
   },
   "Ethereal Ring (Beyond) A": {
-    "buyOrderCents": 1595
+    "buyOrderCents": 1597
   },
   "Void Ring": {
     "buyOrderCents": 0
