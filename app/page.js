@@ -908,18 +908,18 @@ export default function ScannerApp() {
               'vi-VN': 'Thông báo'
             },
             text: { 
-              'en-US': 'Due to the market currently being unavailable for listings, many items are sold out and will display as No Data. Also, the price labeled as "Recent Transaction" is temporarily displaying the current lowest listing price, which may differ greatly from actual market value. Please wait until the market reopens.', 
-              'ja-JP': '現在マーケットで出品が不可になっている影響で多くのアイテムが売り切れており、それらの値段はNo Dataと表示されます。また直近の取引と書かれている値段も応急的に現在の最低出品額を表示しており、実態から大きくかけ離れています。マーケットが再開するまで今しばらくお待ちください。',
-              'zh-Hans': '由于目前市场无法上架物品，许多物品已售罄，其价格将显示为 No Data。此外，标为“最近交易”的价格目前暂时显示的是最低上架价格，可能与实际价值相差甚远。请耐心等待市场重新开放。',
-              'zh-Hant': '由於目前市場無法上架物品，許多物品已售罄，其價格將顯示為 No Data。此外，標為「最近交易」的價格目前暫時顯示的是最低上架價格，可能與實際價值相差甚遠。請耐心等待市場重新開放。',
-              'ko-KR': '현재 마켓에 아이템을 등록할 수 없는 관계로 많은 아이템이 품절되어 No Data로 표시됩니다. 또한 "최근 거래"라고 표시된 가격은 임시로 현재 최저 등록 가격을 표시하고 있어 실제 가치와 크게 다를 수 있습니다. 마켓이 다시 열릴 때까지 기다려 주시기 바랍니다.',
-              'ru-RU': 'В связи с тем, что в настоящее время выставление предметов на Торговой площадке недоступно, многие предметы распроданы, и их цена отображается как No Data. Кроме того, цена, указанная как «Последняя сделка», временно отображает текущую минимальную цену выставления, что может сильно отличаться от реальной стоимости. Пожалуйста, подождите, пока Торговая площадка не откроется снова.',
-              'es-ES': 'Debido a que actualmente no se pueden publicar artículos en el mercado, muchos artículos están agotados y su precio se muestra como No Data. Además, el precio marcado como "Transacción reciente" muestra temporalmente el precio de publicación más bajo actual, lo cual puede diferir enormemente del valor real. Por favor, espere hasta que el mercado vuelva a abrir.',
-              'fr-FR': 'En raison de l\'impossibilité actuelle de lister des objets sur le marché, de nombreux objets sont en rupture de stock et leur prix est affiché comme No Data. De plus, le prix indiqué comme "Transaction récente" affiche temporairement le prix de mise en vente actuel le plus bas, ce qui peut différer grandement de la valeur réelle. Veuillez patienter jusqu\'à la réouverture du marché.',
-              'de-DE': 'Da das Einstellen von Gegenständen auf dem Markt derzeit nicht möglich ist, sind viele Artikel ausverkauft und ihr Preis wird als No Data angezeigt. Außerdem zeigt der als "Letzte Transaktion" gekennzeichnete Preis vorübergehend den aktuell niedrigsten Angebotspreis an, der stark vom tatsächlichen Wert abweichen kann. Bitte warten Sie, bis der Markt wieder öffnet.',
-              'pt-BR': 'Devido à impossibilidade atual de listar itens no mercado, muitos itens estão esgotados e seu preço é exibido como No Data. Além disso, o preço marcado como "Transação recente" exibe temporariamente o menor preço de listagem atual, o que pode diferir muito do valor real. Por favor, aguarde até que o mercado reabra.',
-              'tr-TR': 'Şu anda pazarda eşya listelemek mümkün olmadığından, birçok eşya tükenmiştir ve fiyatları No Data olarak görüntülenir. Ayrıca, "Son İşlem" olarak belirtilen fiyat, geçici olarak mevcut en düşük listeleme fiyatını göstermektedir ve bu durum gerçek değerden büyük ölçüde farklı olabilir. Lütfen pazar yeniden açılana kadar bekleyin.',
-              'vi-VN': 'Do hiện tại không thể đăng bán vật phẩm trên chợ, nhiều vật phẩm đã hết hàng và giá của chúng được hiển thị là No Data. Ngoài ra, giá được dán nhãn "Giao dịch gần đây" tạm thời hiển thị giá đăng bán thấp nhất hiện tại, điều này có thể khác xa so với giá trị thực tế. Vui lòng đợi cho đến khi chợ mở cửa trở lại.'
+              'en-US': 'Due to the market closure, some items are experiencing abnormal price spikes or are sold out. Please wait a while until the market reopens.', 
+              'ja-JP': 'マーケット閉鎖の影響により異常な高騰をしているアイテムや売り切れているアイテムがあります。マーケットが再開されるまで今しばらくお待ちください。',
+              'zh-Hans': '受市场关闭的影响，部分物品出现了异常的价格暴涨或已售罄。请耐心等待直到市场重新开放。',
+              'zh-Hant': '受市場關閉的影響，部分物品出現了異常的價格暴漲或已售罄。請耐心等待直到市場重新開放。',
+              'ko-KR': '마켓 폐쇄의 영향으로 일부 아이템이 비정상적으로 가격이 급등하거나 품절되었습니다. 마켓이 다시 열릴 때까지 잠시 기다려 주십시오.',
+              'ru-RU': 'Из-за закрытия рынка некоторые предметы испытывают аномальный скачок цен или распроданы. Пожалуйста, подождите, пока рынок снова не откроется.',
+              'es-ES': 'Debido al cierre del mercado, algunos artículos están experimentando aumentos de precio anormales o están agotados. Por favor, espere hasta que el mercado vuelva a abrir.',
+              'fr-FR': 'En raison de la fermeture du marché, certains articles connaissent des hausses de prix anormales ou sont en rupture de stock. Veuillez patienter jusqu\'à la réouverture du marché.',
+              'de-DE': 'Aufgrund der Schließung des Marktes verzeichnen einige Artikel abnormale Preisspitzen oder sind ausverkauft. Bitte warten Sie, bis der Markt wieder öffnet.',
+              'pt-BR': 'Devido ao fechamento do mercado, alguns itens estão sofrendo picos anormais de preços ou estão esgotados. Por favor, aguarde até que o mercado reabra.',
+              'tr-TR': 'Pazarın kapanması nedeniyle bazı eşyalarda anormal fiyat artışları yaşanıyor veya tükenmiş durumdalar. Lütfen pazar yeniden açılana kadar bekleyin.',
+              'vi-VN': 'Do việc đóng cửa chợ, một số vật phẩm đang gặp phải tình trạng tăng giá bất thường hoặc đã hết hàng. Vui lòng đợi cho đến khi chợ mở cửa trở lại.'
             }
           };
           
