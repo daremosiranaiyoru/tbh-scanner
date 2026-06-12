@@ -1118,7 +1118,6 @@
     "lowestCents": 1426
   },
   "Comet Staff (Legendary) A": {
-    "medianCents": 1017,
     "qty": 1,
     "lowestCents": 1017
   },
@@ -1393,5 +1392,8 @@
   },
   "Eternal Bow (Rare) A": {
     "lowestCents": 66
+  },
+  "Comet Staff (Arcana) A": {
+    "lowestCents": 5602
   }
 }

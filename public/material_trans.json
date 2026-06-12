@@ -1,0 +1,37 @@
+{
+  "craft": {
+    "en-US": "Crafting Material",
+    "ja-JP": "制作素材",
+    "zh-Hans": "制作材料",
+    "zh-Hant": "製作材料",
+    "ko-KR": "제작 재료"
+  },
+  "deco": {
+    "en-US": "Decoration Material",
+    "ja-JP": "装飾素材",
+    "zh-Hans": "装饰材料",
+    "zh-Hant": "裝飾材料",
+    "ko-KR": "장식 재료"
+  },
+  "sculpt": {
+    "en-US": "Sculpting Material",
+    "ja-JP": "彫刻素材",
+    "zh-Hans": "雕刻材料",
+    "zh-Hant": "雕刻材料",
+    "ko-KR": "조각 재료"
+  },
+  "inscription": {
+    "en-US": "Inscription Material",
+    "ja-JP": "碑文素材",
+    "zh-Hans": "碑文材料",
+    "zh-Hant": "碑文材料",
+    "ko-KR": "비문 재료"
+  },
+  "wish": {
+    "en-US": "Wishing Material",
+    "ja-JP": "祈願素材",
+    "zh-Hans": "祈愿材料",
+    "zh-Hant": "祈願材料",
+    "ko-KR": "기원 재료"
+  }
+}

@@ -11,9 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <head>
-        <Script src="/opencv.js" strategy="beforeInteractive" />
       </head>
       <body>
+        <Script src="/opencv.js" strategy="beforeInteractive" />
         {children}
         <Analytics />
       </body>
