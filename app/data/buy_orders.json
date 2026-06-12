@@ -2993,13 +2993,13 @@
     "buyOrderCents": 0
   },
   "Sacred Staff (Immortal) A": {
-    "buyOrderCents": 573
+    "buyOrderCents": 575
   },
   "Sacred Staff (Arcana) A": {
-    "buyOrderCents": 379
+    "buyOrderCents": 378
   },
   "Sacred Staff (Beyond) A": {
-    "buyOrderCents": 486
+    "buyOrderCents": 485
   },
   "Abyssal Staff": {
     "buyOrderCents": 0
@@ -3077,7 +3077,7 @@
     "buyOrderCents": 77
   },
   "Tempest Staff (Arcana) A": {
-    "buyOrderCents": 273
+    "buyOrderCents": 275
   },
   "Tempest Staff (Beyond) A": {
     "buyOrderCents": 1498
@@ -3203,7 +3203,7 @@
     "buyOrderCents": 0
   },
   "Iron Scepter (Legendary) A": {
-    "buyOrderCents": 33,
+    "buyOrderCents": 36,
     "lowestCents": 71756
   },
   "Iron Scepter (Mythic) A": {

@@ -13,7 +13,6 @@ export default function RootLayout({ children }) {
       <head>
       </head>
       <body>
-        <Script src="/opencv.js" strategy="beforeInteractive" />
         {children}
         <Analytics />
       </body>

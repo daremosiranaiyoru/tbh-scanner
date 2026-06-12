@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import styles from './page.module.css';
 import Link from 'next/link';
+import Script from 'next/script';
 import { loadDatabase, scanIcons } from '../lib/ocr-engine';
 import itemNames from '../public/item_names.json';
 import spriteMap from '../public/sprite_map.json';
@@ -1069,6 +1070,7 @@ export default function ScannerApp() {
 
   return (
     <>
+      <Script src="/opencv.js" strategy="beforeInteractive" />
       {/* Full Width Edge-to-Edge Announcement Banner */}
       <div style={{
         width: '100%',
