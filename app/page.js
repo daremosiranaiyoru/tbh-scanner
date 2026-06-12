@@ -1324,9 +1324,6 @@ export default function ScannerApp() {
 
           return (
             <div>
-              <h2 style={{ fontSize: '1.3rem', marginBottom: '16px', color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                🔍 {searchTrans.title[selectedLang] || searchTrans.title['en-US']}
-              </h2>
               
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '16px' }}>
                 <input 

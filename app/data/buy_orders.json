@@ -1484,15 +1484,15 @@
     "buyOrderCents": 148
   },
   "Empire 10th Anniversary Coin": {
-    "buyOrderCents": 403
+    "buyOrderCents": 404
   },
   "Kingdom 50th Anniversary Coin": {
-    "buyOrderCents": 966,
-    "lowestCents": 3116
+    "buyOrderCents": 971,
+    "lowestCents": 3120
   },
   "Empire 50th Anniversary Coin": {
-    "buyOrderCents": 1806,
-    "lowestCents": 9222
+    "buyOrderCents": 1872,
+    "lowestCents": 9234
   },
   "Kingdom 100th Anniversary Coin": {
     "buyOrderCents": 0
@@ -1507,20 +1507,20 @@
     "buyOrderCents": 0
   },
   "Soulstone - Normal": {
-    "buyOrderCents": 209,
+    "buyOrderCents": 330,
     "lowestCents": 9
   },
   "Soulstone - Nightmare": {
-    "buyOrderCents": 342,
-    "lowestCents": 499
+    "buyOrderCents": 273,
+    "lowestCents": 693
   },
   "Soulstone - Hell": {
-    "buyOrderCents": 638,
-    "lowestCents": 1565
+    "buyOrderCents": 457,
+    "lowestCents": 7145
   },
   "Soulstone - Torment": {
-    "buyOrderCents": 164,
-    "lowestCents": 717
+    "buyOrderCents": 291,
+    "lowestCents": 1871
   },
   "Long Sword": {
     "buyOrderCents": 0
@@ -1562,7 +1562,7 @@
     "buyOrderCents": 0
   },
   "Cutlas (Legendary) A": {
-    "buyOrderCents": 62
+    "buyOrderCents": 9
   },
   "Cutlas (Mythic) A": {
     "buyOrderCents": 0
@@ -1590,7 +1590,7 @@
     "buyOrderCents": 0
   },
   "Rapier (Legendary) A": {
-    "buyOrderCents": 40
+    "buyOrderCents": 34
   },
   "Rapier (Mythic) A": {
     "buyOrderCents": 0
@@ -1617,15 +1617,15 @@
     "buyOrderCents": 0
   },
   "Bastard Sword (Legendary) A": {
-    "buyOrderCents": 634,
-    "lowestCents": 1001
+    "buyOrderCents": 631,
+    "lowestCents": 1249
   },
   "Bastard Sword (Mythic) A": {
     "buyOrderCents": 0
   },
   "Bastard Sword (Immortal) A": {
-    "buyOrderCents": 62,
-    "lowestCents": 2027
+    "buyOrderCents": 24,
+    "lowestCents": 2311
   },
   "Bastard Sword (Arcana) A": {
     "buyOrderCents": 42
@@ -1646,8 +1646,8 @@
     "buyOrderCents": 0
   },
   "Great Sword (Legendary) A": {
-    "buyOrderCents": 147,
-    "lowestCents": 8006
+    "buyOrderCents": 49,
+    "lowestCents": 8022
   },
   "Great Sword (Mythic) A": {
     "buyOrderCents": 0
@@ -1701,17 +1701,17 @@
     "buyOrderCents": 0
   },
   "Knight Sword (Legendary) A": {
-    "buyOrderCents": 127
+    "buyOrderCents": 126
   },
   "Knight Sword (Mythic) A": {
     "buyOrderCents": 0
   },
   "Knight Sword (Immortal) A": {
-    "buyOrderCents": 159,
+    "buyOrderCents": 158,
     "lowestCents": 7166
   },
   "Knight Sword (Arcana) A": {
-    "buyOrderCents": 36
+    "buyOrderCents": 45
   },
   "Knight Sword (Beyond) A": {
     "buyOrderCents": 70
@@ -1756,14 +1756,14 @@
     "buyOrderCents": 0
   },
   "Rune Sword (Legendary) A": {
-    "buyOrderCents": 50,
-    "lowestCents": 22164
+    "buyOrderCents": 51,
+    "lowestCents": 22302
   },
   "Rune Sword (Mythic) A": {
     "buyOrderCents": 0
   },
   "Rune Sword (Immortal) A": {
-    "buyOrderCents": 76
+    "buyOrderCents": 77
   },
   "Rune Sword (Arcana) A": {
     "buyOrderCents": 217,
@@ -1899,8 +1899,8 @@
     "buyOrderCents": 0
   },
   "Vengeance Sword (Immortal) A": {
-    "buyOrderCents": 118,
-    "lowestCents": 4520
+    "buyOrderCents": 137,
+    "lowestCents": 4518
   },
   "Vengeance Sword (Arcana) A": {
     "buyOrderCents": 178
@@ -1975,21 +1975,21 @@
     "buyOrderCents": 0
   },
   "Dimensional Sword (Legendary) A": {
-    "buyOrderCents": 201
+    "buyOrderCents": 202
   },
   "Dimensional Sword (Mythic) A": {
     "buyOrderCents": 0
   },
   "Dimensional Sword (Immortal) A": {
-    "buyOrderCents": 102,
+    "buyOrderCents": 127,
     "lowestCents": 2221
   },
   "Dimensional Sword (Arcana) A": {
-    "buyOrderCents": 201
+    "buyOrderCents": 202
   },
   "Dimensional Sword (Beyond) A": {
-    "buyOrderCents": 1875,
-    "lowestCents": 2362
+    "buyOrderCents": 1878,
+    "lowestCents": 3399
   },
   "Shadow Blade": {
     "buyOrderCents": 0
@@ -2091,7 +2091,7 @@
     "buyOrderCents": 0
   },
   "Short Bow (Immortal) A": {
-    "buyOrderCents": 211
+    "buyOrderCents": 71
   },
   "Short Bow (Arcana) A": {
     "buyOrderCents": 0
@@ -2118,7 +2118,7 @@
     "buyOrderCents": 0
   },
   "Hunting Bow (Immortal) A": {
-    "buyOrderCents": 26
+    "buyOrderCents": 23
   },
   "Hunting Bow (Arcana) A": {
     "buyOrderCents": 0
@@ -2140,14 +2140,14 @@
   },
   "Long Bow (Legendary) A": {
     "buyOrderCents": 147,
-    "lowestCents": 5752
+    "lowestCents": 5765
   },
   "Long Bow (Mythic) A": {
     "buyOrderCents": 0
   },
   "Long Bow (Immortal) A": {
-    "buyOrderCents": 255,
-    "lowestCents": 8438
+    "buyOrderCents": 317,
+    "lowestCents": 8453
   },
   "Long Bow (Arcana) A": {
     "buyOrderCents": 0
@@ -2168,8 +2168,8 @@
     "buyOrderCents": 0
   },
   "Composite Bow (Legendary) A": {
-    "buyOrderCents": 467,
-    "lowestCents": 2892
+    "buyOrderCents": 301,
+    "lowestCents": 2890
   },
   "Composite Bow (Mythic) A": {
     "buyOrderCents": 0
@@ -2196,8 +2196,8 @@
     "buyOrderCents": 0
   },
   "War Bow (Legendary) A": {
-    "buyOrderCents": 224,
-    "lowestCents": 19307
+    "buyOrderCents": 223,
+    "lowestCents": 19409
   },
   "War Bow (Mythic) A": {
     "buyOrderCents": 0
@@ -2251,21 +2251,21 @@
     "buyOrderCents": 0
   },
   "Dusk Bow (Legendary) A": {
-    "buyOrderCents": 201,
-    "lowestCents": 159722
+    "buyOrderCents": 202,
+    "lowestCents": 159408
   },
   "Dusk Bow (Mythic) A": {
     "buyOrderCents": 0
   },
   "Dusk Bow (Immortal) A": {
-    "buyOrderCents": 404,
+    "buyOrderCents": 359,
     "lowestCents": 5503
   },
   "Dusk Bow (Arcana) A": {
-    "buyOrderCents": 483
+    "buyOrderCents": 486
   },
   "Dusk Bow (Beyond) A": {
-    "buyOrderCents": 698
+    "buyOrderCents": 696
   },
   "Jade Bow": {
     "buyOrderCents": 0
@@ -2307,19 +2307,19 @@
     "buyOrderCents": 0
   },
   "Elite Bow (Legendary) A": {
-    "buyOrderCents": 262
+    "buyOrderCents": 263
   },
   "Elite Bow (Mythic) A": {
     "buyOrderCents": 0
   },
   "Elite Bow (Immortal) A": {
-    "buyOrderCents": 114
+    "buyOrderCents": 115
   },
   "Elite Bow (Arcana) A": {
-    "buyOrderCents": 249
+    "buyOrderCents": 250
   },
   "Elite Bow (Beyond) A": {
-    "buyOrderCents": 778
+    "buyOrderCents": 779
   },
   "Rune Bow": {
     "buyOrderCents": 0
@@ -2367,13 +2367,13 @@
     "buyOrderCents": 0
   },
   "Mystic Bow (Immortal) A": {
-    "buyOrderCents": 194
+    "buyOrderCents": 195
   },
   "Mystic Bow (Arcana) A": {
-    "buyOrderCents": 1246
+    "buyOrderCents": 950
   },
   "Mystic Bow (Beyond) A": {
-    "buyOrderCents": 2392
+    "buyOrderCents": 2395
   },
   "Swift Bow": {
     "buyOrderCents": 0
@@ -2448,10 +2448,10 @@
     "buyOrderCents": 0
   },
   "Limitless Bow (Immortal) A": {
-    "buyOrderCents": 232
+    "buyOrderCents": 233
   },
   "Limitless Bow (Arcana) A": {
-    "buyOrderCents": 1659
+    "buyOrderCents": 1663
   },
   "Limitless Bow (Beyond) A": {
     "buyOrderCents": 0
@@ -2523,19 +2523,19 @@
     "buyOrderCents": 0
   },
   "Shadow Bow (Legendary) A": {
-    "buyOrderCents": 166
+    "buyOrderCents": 175
   },
   "Shadow Bow (Mythic) A": {
     "buyOrderCents": 0
   },
   "Shadow Bow (Immortal) A": {
-    "buyOrderCents": 472
+    "buyOrderCents": 474
   },
   "Shadow Bow (Arcana) A": {
-    "buyOrderCents": 1138
+    "buyOrderCents": 1142
   },
   "Shadow Bow (Beyond) A": {
-    "buyOrderCents": 7477
+    "buyOrderCents": 7487
   },
   "Tempest Bow": {
     "buyOrderCents": 0
@@ -2658,13 +2658,13 @@
     "buyOrderCents": 0
   },
   "Herald Staff (Legendary) A": {
-    "buyOrderCents": 201
+    "buyOrderCents": 202
   },
   "Herald Staff (Mythic) A": {
     "buyOrderCents": 0
   },
   "Herald Staff (Immortal) A": {
-    "buyOrderCents": 20
+    "buyOrderCents": 21
   },
   "Herald Staff (Arcana) A": {
     "buyOrderCents": 0
@@ -2685,8 +2685,8 @@
     "buyOrderCents": 0
   },
   "Long Staff (Legendary) A": {
-    "buyOrderCents": 467,
-    "lowestCents": 6232
+    "buyOrderCents": 67,
+    "lowestCents": 6240
   },
   "Long Staff (Mythic) A": {
     "buyOrderCents": 0
@@ -2722,7 +2722,7 @@
     "buyOrderCents": 56
   },
   "Witch Staff (Arcana) A": {
-    "buyOrderCents": 88
+    "buyOrderCents": 89
   },
   "Witch Staff (Beyond) A": {
     "buyOrderCents": 0
@@ -2741,16 +2741,16 @@
   },
   "Azure Staff (Legendary) A": {
     "buyOrderCents": 72,
-    "lowestCents": 7561
+    "lowestCents": 7515
   },
   "Azure Staff (Mythic) A": {
     "buyOrderCents": 0
   },
   "Azure Staff (Immortal) A": {
-    "buyOrderCents": 82
+    "buyOrderCents": 81
   },
   "Azure Staff (Arcana) A": {
-    "buyOrderCents": 348
+    "buyOrderCents": 347
   },
   "Azure Staff (Beyond) A": {
     "buyOrderCents": 0
