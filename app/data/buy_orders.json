@@ -1128,7 +1128,7 @@
     "buyOrderCents": 0
   },
   "Emerald Earring (Immortal) A": {
-    "buyOrderCents": 218
+    "buyOrderCents": 224
   },
   "Emerald Earring (Arcana) A": {
     "buyOrderCents": 467
@@ -1248,8 +1248,8 @@
     "lowestCents": 4
   },
   "Spider Silk": {
-    "buyOrderCents": 7,
-    "lowestCents": 7
+    "buyOrderCents": 9,
+    "lowestCents": 9
   },
   "Poisonous Herb": {
     "buyOrderCents": 4,
@@ -1260,20 +1260,20 @@
     "lowestCents": 4
   },
   "Bat Wing Membrane": {
-    "buyOrderCents": 6,
-    "lowestCents": 6
+    "buyOrderCents": 7,
+    "lowestCents": 7
   },
   "Ogre Blood": {
-    "buyOrderCents": 5,
-    "lowestCents": 6
+    "buyOrderCents": 7,
+    "lowestCents": 7
   },
   "Mushroom Spore": {
-    "buyOrderCents": 6,
-    "lowestCents": 6
+    "buyOrderCents": 7,
+    "lowestCents": 7
   },
   "Ancient Tree Sap": {
-    "buyOrderCents": 6,
-    "lowestCents": 6
+    "buyOrderCents": 7,
+    "lowestCents": 7
   },
   "Skull": {
     "buyOrderCents": 125
@@ -1288,7 +1288,7 @@
   },
   "Nightshade Extract": {
     "buyOrderCents": 148,
-    "lowestCents": 532
+    "lowestCents": 749
   },
   "Basilisk Scale": {
     "buyOrderCents": 134,
@@ -1296,7 +1296,7 @@
   },
   "Wyvern Claw": {
     "buyOrderCents": 38,
-    "lowestCents": 514
+    "lowestCents": 718
   },
   "Dice": {
     "buyOrderCents": 512,
@@ -1307,7 +1307,7 @@
     "lowestCents": 1961
   },
   "Minotaur Horn": {
-    "buyOrderCents": 62
+    "buyOrderCents": 77
   },
   "Griffin Beak": {
     "buyOrderCents": 48,
@@ -1319,7 +1319,7 @@
   },
   "Dragon Bile": {
     "buyOrderCents": 100,
-    "lowestCents": 144
+    "lowestCents": 207
   },
   "Wraith Essence": {
     "buyOrderCents": 342,
@@ -1330,7 +1330,7 @@
   },
   "Titan Marrow": {
     "buyOrderCents": 317,
-    "lowestCents": 1037
+    "lowestCents": 1339
   },
   "Void Ichor": {
     "buyOrderCents": 210,
@@ -1357,7 +1357,7 @@
   },
   "Scroll of Common Inscription": {
     "buyOrderCents": 24,
-    "lowestCents": 1386
+    "lowestCents": 1380
   },
   "Scroll of Uncommon Inscription": {
     "buyOrderCents": 44
@@ -1366,16 +1366,16 @@
     "buyOrderCents": 45
   },
   "Scroll of Legendary Inscription": {
-    "buyOrderCents": 300,
+    "buyOrderCents": 303,
     "lowestCents": 798
   },
   "Scroll of Immortal Inscription": {
-    "buyOrderCents": 162,
-    "lowestCents": 1602
+    "buyOrderCents": 160,
+    "lowestCents": 1997
   },
   "Scroll of Arcana Inscription": {
-    "buyOrderCents": 928,
-    "lowestCents": 1910
+    "buyOrderCents": 940,
+    "lowestCents": 1901
   },
   "Scroll of Beyond Inscription": {
     "buyOrderCents": 0
@@ -1394,60 +1394,60 @@
     "lowestCents": 4
   },
   "Stone": {
-    "buyOrderCents": 12,
-    "lowestCents": 14
+    "buyOrderCents": 61,
+    "lowestCents": 102
   },
   "Leather": {
-    "buyOrderCents": 5,
+    "buyOrderCents": 4,
     "lowestCents": 5
   },
   "Copper Nugget": {
-    "buyOrderCents": 7,
-    "lowestCents": 7
+    "buyOrderCents": 9,
+    "lowestCents": 9
   },
   "Bronze Ingot": {
-    "buyOrderCents": 195,
-    "lowestCents": 406
+    "buyOrderCents": 177,
+    "lowestCents": 808
   },
   "Iron Ingot": {
-    "buyOrderCents": 273,
-    "lowestCents": 471
+    "buyOrderCents": 272,
+    "lowestCents": 845
   },
   "Silver Ingot": {
     "buyOrderCents": 202,
-    "lowestCents": 397
+    "lowestCents": 588
   },
   "Gold Ingot": {
     "buyOrderCents": 359,
-    "lowestCents": 583
+    "lowestCents": 623
   },
   "Stardust Ingot": {
     "buyOrderCents": 301,
-    "lowestCents": 1235
+    "lowestCents": 2211
   },
   "Void Iron": {
     "buyOrderCents": 314,
-    "lowestCents": 2229
+    "lowestCents": 2226
   },
   "Bloodstone": {
-    "buyOrderCents": 40,
-    "lowestCents": 311
+    "buyOrderCents": 41,
+    "lowestCents": 359
   },
   "Thunderstone": {
     "buyOrderCents": 189,
-    "lowestCents": 924
+    "lowestCents": 983
   },
   "Chaos Shard": {
-    "buyOrderCents": 56,
-    "lowestCents": 156
+    "buyOrderCents": 57,
+    "lowestCents": 187
   },
   "Arcane Ore": {
     "buyOrderCents": 102,
     "lowestCents": 935
   },
   "Darksteel Ingot": {
-    "buyOrderCents": 40,
-    "lowestCents": 283
+    "buyOrderCents": 41,
+    "lowestCents": 346
   },
   "Orichalcum Ore": {
     "buyOrderCents": 114,
@@ -1459,7 +1459,7 @@
   },
   "Sunstone": {
     "buyOrderCents": 124,
-    "lowestCents": 832
+    "lowestCents": 830
   },
   "Mithril Ore": {
     "buyOrderCents": 0
