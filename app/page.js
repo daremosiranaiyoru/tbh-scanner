@@ -102,6 +102,7 @@ export default function ScannerApp() {
   const [comments, setComments] = useState([]);
   const [isCommentsLoading, setIsCommentsLoading] = useState(true);
   const [commentsOpen, setCommentsOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const commentsLoadedRef = useRef(false);
   const [isFlashing, setIsFlashing] = useState(false); // cache: fetch only on first open
   const [newCommentText, setNewCommentText] = useState("");
@@ -1191,6 +1192,313 @@ export default function ScannerApp() {
         }
       `}</style>
 
+      {/* Manual Search Section */}
+      <section style={{ 
+        marginBottom: '20px', 
+        borderRadius: '16px',
+        border: '1px solid rgba(255, 255, 255, 0.05)',
+        overflow: 'hidden',
+      }}>
+        <button
+          onClick={() => setSearchOpen(!searchOpen)}
+          style={{
+            width: '100%', padding: '18px 30px',
+            background: 'rgba(0, 0, 0, 0.2)',
+            border: 'none',
+            borderBottom: searchOpen ? '1px solid rgba(255,255,255,0.07)' : 'none',
+            color: 'white', fontSize: '1.2rem', fontWeight: 'bold',
+            cursor: 'pointer', display: 'flex', alignItems: 'center',
+            justifyContent: 'space-between', gap: '8px',
+          }}
+        >
+          <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            🔍 {{ 'en-US': 'Search & Add Items', 'ja-JP': 'アイテムを検索して追加', 'zh-Hans': '搜索并添加物品', 'zh-Hant': '搜尋並新增物品', 'ko-KR': '아이템 검색 및 추가', 'ru-RU': 'Поиск и добавление предметов', 'es-ES': 'Buscar y agregar artículos', 'fr-FR': 'Rechercher et ajouter des objets', 'de-DE': 'Suchen & Gegenstände hinzufügen', 'pt-BR': 'Buscar e Adicionar Itens', 'tr-TR': 'Öğe Ara ve Ekle', 'vi-VN': 'Tìm kiếm & Thêm Vật phẩm', 'id-ID': 'Cari & Tambah Item', 'th-TH': 'ค้นหาและเพิ่มไอเทม', 'pl-PL': 'Szukaj i dodawaj przedmioty', 'uk-UA': 'Пошук і додавання предметів' }[selectedLang] || 'Search & Add Items'}
+          </span>
+          <span style={{ fontSize: '1rem' }}>{searchOpen ? '▼' : '◀'}</span>
+        </button>
+        <div style={{ display: searchOpen ? 'block' : 'none', padding: '30px', background: 'rgba(255, 255, 255, 0.03)' }}>
+        {(() => {
+          const inlineMaterialTrans = {
+            craft: { 'en-US': 'Crafting Material', 'ja-JP': '制作素材', 'zh-Hans': '制作材料', 'zh-Hant': '製作材料', 'ko-KR': '제작 재료', 'ru-RU': 'Материал для крафта', 'es-ES': 'Material de fabricación', 'fr-FR': 'Matériau de fabrication', 'de-DE': 'Herstellungsmaterial', 'pt-BR': 'Material de Criação', 'tr-TR': 'Üretim Malzemesi', 'vi-VN': 'Nguyên liệu chế tạo', 'id-ID': 'Bahan Pembuatan', 'th-TH': 'วัสดุคราฟต์', 'pl-PL': 'Materiały Rzemieślnicze', 'uk-UA': 'Матеріали для крафту' },
+            deco: { 'en-US': 'Decoration Material', 'ja-JP': '装飾素材', 'zh-Hans': '装饰材料', 'zh-Hant': '裝飾材料', 'ko-KR': '장식 재료', 'ru-RU': 'Материал для украшения', 'es-ES': 'Material de decoración', 'fr-FR': 'Matériau de décoration', 'de-DE': 'Dekorationsmaterial', 'pt-BR': 'Material de Decoração', 'tr-TR': 'Dekorasyon Malzemesi', 'vi-VN': 'Nguyên liệu trang trí', 'id-ID': 'Bahan Dekorasi', 'th-TH': 'วัสดุตกแต่ง', 'pl-PL': 'Materiały Dekoracyjne', 'uk-UA': 'Матеріали для декору' },
+            sculpt: { 'en-US': 'Sculpting Material', 'ja-JP': '彫刻素材', 'zh-Hans': '雕刻材料', 'zh-Hant': '雕刻材料', 'ko-KR': '조각 재료', 'ru-RU': 'Материал для лепки', 'es-ES': 'Material de escultura', 'fr-FR': 'Matériau de sculpture', 'de-DE': 'Skulpturmaterial', 'pt-BR': 'Material de Escultura', 'tr-TR': 'Heykel Malzemesi', 'vi-VN': 'Nguyên liệu điêu khắc', 'id-ID': 'Bahan Pahatan', 'th-TH': 'วัสดุแกะสลัก', 'pl-PL': 'Materiały Rzeźbiarskie', 'uk-UA': 'Матеріали для ліплення' },
+            inscription: { 'en-US': 'Inscription Material', 'ja-JP': '碑文素材', 'zh-Hans': '碑文材料', 'zh-Hant': '碑文材料', 'ko-KR': '비문 재료', 'ru-RU': 'Материал для надписей', 'es-ES': 'Material de inscripción', 'fr-FR': 'Matériau d\'inscription', 'de-DE': 'Inschriftenmaterial', 'pt-BR': 'Material de Inscrição', 'tr-TR': 'Yazıt Malzemesi', 'vi-VN': 'Nguyên liệu khắc', 'id-ID': 'Bahan Prasasti', 'th-TH': 'วัสดุจารึก', 'pl-PL': 'Materiały Inskrypcyjne', 'uk-UA': 'Матеріали для написів' },
+            wish: { 'en-US': 'Wishing Material', 'ja-JP': '祈願素材', 'zh-Hans': '祈愿材料', 'zh-Hant': '祈願材料', 'ko-KR': '기원 재료', 'ru-RU': 'Материал для желаний', 'es-ES': 'Material de deseo', 'fr-FR': 'Matériau de souhait', 'de-DE': 'Wunschmaterial', 'pt-BR': 'Material de Desejo', 'tr-TR': 'Dilek Malzemesi', 'vi-VN': 'Nguyên liệu ước nguyện', 'id-ID': 'Bahan Harapan', 'th-TH': 'วัสดุอธิษฐาน', 'pl-PL': 'Materiały Życzeń', 'uk-UA': 'Матеріали для побажань' },
+            soulstone: { 'en-US': 'Soulstone', 'ja-JP': 'ソウルストーン', 'zh-Hans': '灵魂石', 'zh-Hant': '靈魂石', 'ko-KR': '영혼석', 'ru-RU': 'Камень души', 'es-ES': 'Piedra de alma', 'fr-FR': 'Pierre d\'âme', 'de-DE': 'Seelenstein', 'pt-BR': 'Pedra da Alma', 'tr-TR': 'Ruh Taşı', 'vi-VN': 'Đá linh hồn', 'id-ID': 'Batu Jiwa', 'th-TH': 'หินวิญญาณ', 'pl-PL': 'Kamień Duszy', 'uk-UA': 'Камінь душі' }
+          };
+                    const searchTrans = {
+            title: { 'en-US': 'Search & Add Items', 'ja-JP': 'アイテムを検索して追加', 'zh-Hans': '搜索并添加物品', 'zh-Hant': '搜尋並新增物品', 'ko-KR': '아이템 검색 및 추가', 'ru-RU': 'Поиск и добавление предметов', 'es-ES': 'Buscar y agregar artículos', 'fr-FR': 'Rechercher et ajouter des objets', 'de-DE': 'Suchen & Gegenstände hinzufügen', 'pt-BR': 'Buscar e Adicionar Itens', 'tr-TR': 'Öğe Ara ve Ekle', 'vi-VN': 'Tìm kiếm & Thêm Vật phẩm', 'id-ID': 'Cari & Tambah Item', 'th-TH': 'ค้นหาและเพิ่มไอเทม', 'pl-PL': 'Szukaj i dodawaj przedmioty', 'uk-UA': 'Пошук і додавання предметів' },
+            placeholder: { 'en-US': 'Search by name...', 'ja-JP': '名前で検索...', 'zh-Hans': '按名称搜索...', 'zh-Hant': '按名稱搜尋...', 'ko-KR': '이름으로 검색...', 'ru-RU': 'Поиск по имени...', 'es-ES': 'Buscar por nombre...', 'fr-FR': 'Rechercher par nom...', 'de-DE': 'Nach Name suchen...', 'pt-BR': 'Buscar por nome...', 'tr-TR': 'İsme göre ara...', 'vi-VN': 'Tìm kiếm theo tên...', 'id-ID': 'Cari berdasarkan nama...', 'th-TH': 'ค้นหาตามชื่อ...', 'pl-PL': 'Szukaj po nazwie...', 'uk-UA': 'Пошук за назвою...' },
+            all: { 'en-US': 'All Categories', 'ja-JP': 'すべての種類', 'zh-Hans': '所有类别', 'zh-Hant': '所有類別', 'ko-KR': '모든 카테고리', 'ru-RU': 'Все категории', 'es-ES': 'Todas las categorías', 'fr-FR': 'Toutes les catégories', 'de-DE': 'Alle Kategorien', 'pt-BR': 'Todas as Categorias', 'tr-TR': 'Tüm Kategoriler', 'vi-VN': 'Tất cả danh mục', 'id-ID': 'Semua Kategori', 'th-TH': 'หมวดหมู่ทั้งหมด', 'pl-PL': 'Wszystkie Kategorie', 'uk-UA': 'Всі категорії' },
+            gear: { 'en-US': 'Gear', 'ja-JP': '装備', 'zh-Hans': '装备', 'zh-Hant': '裝備', 'ko-KR': '장비', 'ru-RU': 'Снаряжение', 'es-ES': 'Equipamiento', 'fr-FR': 'Équipement', 'de-DE': 'Ausrüstung', 'pt-BR': 'Equipamento', 'tr-TR': 'Ekipman', 'vi-VN': 'Trang bị', 'id-ID': 'Perlengkapan', 'th-TH': 'อุปกรณ์', 'pl-PL': 'Ekwipunek', 'uk-UA': 'Спорядження' },
+            allClasses: { 'en-US': 'All Classes', 'ja-JP': 'すべての部位', 'zh-Hans': '所有部位', 'zh-Hant': '所有部位', 'ko-KR': '모든 부위', 'ru-RU': 'Все типы', 'es-ES': 'Todas las clases', 'fr-FR': 'Toutes les classes', 'de-DE': 'Alle Klassen', 'pt-BR': 'Todas as Classes', 'tr-TR': 'Tüm Sınıflar', 'vi-VN': 'Tất cả các lớp', 'id-ID': 'Semua Kelas', 'th-TH': 'ทุกคลาส', 'pl-PL': 'Wszystkie Klasy', 'uk-UA': 'Усі класи' },
+            allRarities: { 'en-US': 'All Rarities', 'ja-JP': 'すべての等級', 'zh-Hans': '所有稀有度', 'zh-Hant': '所有稀有度', 'ko-KR': '모든 등급', 'ru-RU': 'Все редкости', 'es-ES': 'Todas las rarezas', 'fr-FR': 'Toutes les raretés', 'de-DE': 'Alle Seltenheiten', 'pt-BR': 'Todas as Raridades', 'tr-TR': 'Tüm Nadirlikler', 'vi-VN': 'Tất cả độ hiếm', 'id-ID': 'Semua Kelangkaan', 'th-TH': 'ความหายากทั้งหมด', 'pl-PL': 'Wszystkie Rzadkości', 'uk-UA': 'Усі рідкості' },
+            levelPlaceholder: { 'en-US': 'Lv', 'ja-JP': 'Lv', 'zh-Hans': '等级', 'zh-Hant': '等級', 'ko-KR': '레벨', 'ru-RU': 'Ур', 'es-ES': 'Niv', 'fr-FR': 'Niv', 'de-DE': 'Stufe', 'pt-BR': 'Nív', 'tr-TR': 'Svy', 'vi-VN': 'Cấp', 'id-ID': 'Lv', 'th-TH': 'เลเวล', 'pl-PL': 'Poz', 'uk-UA': 'Рів' },
+            sword: { 'en-US': 'Sword', 'ja-JP': '剣', 'zh-Hans': '剑', 'zh-Hant': '劍', 'ko-KR': '검', 'ru-RU': 'Меч', 'es-ES': 'Espada', 'fr-FR': 'Épée', 'de-DE': 'Schwert', 'pt-BR': 'Espada', 'tr-TR': 'Kılıç', 'vi-VN': 'Kiếm', 'id-ID': 'Pedang', 'th-TH': 'ดาบ', 'pl-PL': 'Miecz', 'uk-UA': 'Меч' },
+            bow: { 'en-US': 'Bow', 'ja-JP': '弓', 'zh-Hans': '弓', 'zh-Hant': '弓', 'ko-KR': '활', 'ru-RU': 'Лук', 'es-ES': 'Arco', 'fr-FR': 'Arc', 'de-DE': 'Bogen', 'pt-BR': 'Arco', 'tr-TR': 'Yay', 'vi-VN': 'Cung', 'id-ID': 'Busur', 'th-TH': 'ธนู', 'pl-PL': 'Łuk', 'uk-UA': 'Лук' },
+            staff: { 'en-US': 'Staff', 'ja-JP': '杖', 'zh-Hans': '法杖', 'zh-Hant': '法杖', 'ko-KR': '지팡이', 'ru-RU': 'Посох', 'es-ES': 'Bastón', 'fr-FR': 'Bâton', 'de-DE': 'Stab', 'pt-BR': 'Cajado', 'tr-TR': 'Asa', 'vi-VN': 'Gậy', 'id-ID': 'Tongkat', 'th-TH': 'ไม้เท้า', 'pl-PL': 'Kostur', 'uk-UA': 'Посох' },
+            scepter: { 'en-US': 'Scepter', 'ja-JP': '王笏', 'zh-Hans': '权杖', 'zh-Hant': '權杖', 'ko-KR': '홀', 'ru-RU': 'Скипетр', 'es-ES': 'Cetro', 'fr-FR': 'Sceptre', 'de-DE': 'Zepter', 'pt-BR': 'Cetro', 'tr-TR': 'Asa', 'vi-VN': 'Quyền trượng', 'id-ID': 'Tongkat Kerajaan', 'th-TH': 'คทา', 'pl-PL': 'Berło', 'uk-UA': 'Скіпетр' },
+            crossbow: { 'en-US': 'Crossbow', 'ja-JP': 'クロスボウ', 'zh-Hans': '弩', 'zh-Hant': '弩', 'ko-KR': '석궁', 'ru-RU': 'Арбалет', 'es-ES': 'Ballesta', 'fr-FR': 'Arbalète', 'de-DE': 'Armbrust', 'pt-BR': 'Besta', 'tr-TR': 'Arbalet', 'vi-VN': 'Nỏ', 'id-ID': 'Busur Silang', 'th-TH': 'หน้าไม้', 'pl-PL': 'Kusza', 'uk-UA': 'Арбалет' },
+            axe: { 'en-US': 'Axe', 'ja-JP': '斧', 'zh-Hans': '斧头', 'zh-Hant': '斧頭', 'ko-KR': '도끼', 'ru-RU': 'Топор', 'es-ES': 'Hacha', 'fr-FR': 'Hache', 'de-DE': 'Axt', 'pt-BR': 'Machado', 'tr-TR': 'Balt', 'vi-VN': 'Rìu', 'id-ID': 'Kapak', 'th-TH': 'ขวาน', 'pl-PL': 'Topór', 'uk-UA': 'Сокира' },
+            shield: { 'en-US': 'Shield', 'ja-JP': '盾', 'zh-Hans': '盾牌', 'zh-Hant': '盾牌', 'ko-KR': '방패', 'ru-RU': 'Щит', 'es-ES': 'Escudo', 'fr-FR': 'Bouclier', 'de-DE': 'Schild', 'pt-BR': 'Escudo', 'tr-TR': 'Kalkan', 'vi-VN': 'Khiên', 'id-ID': 'Perisai', 'th-TH': 'โล่', 'pl-PL': 'Tarcza', 'uk-UA': 'Щит' },
+            arrow: { 'en-US': 'Arrow', 'ja-JP': '矢', 'zh-Hans': '箭', 'zh-Hant': '箭', 'ko-KR': '화살', 'ru-RU': 'Стрела', 'es-ES': 'Flecha', 'fr-FR': 'Flèche', 'de-DE': 'Pfeil', 'pt-BR': 'Flecha', 'tr-TR': 'Ok', 'vi-VN': 'Mũi tên', 'id-ID': 'Anak Panah', 'th-TH': 'ลูกศร', 'pl-PL': 'Strzała', 'uk-UA': 'Стріла' },
+            orb: { 'en-US': 'Orb', 'ja-JP': 'オーブ', 'zh-Hans': '宝珠', 'zh-Hant': '寶珠', 'ko-KR': '오브', 'ru-RU': 'Сфера', 'es-ES': 'Orbe', 'fr-FR': 'Orbe', 'de-DE': 'Kugel', 'pt-BR': 'Orbe', 'tr-TR': 'Küre', 'vi-VN': 'Ngọc', 'id-ID': 'Orb', 'th-TH': 'ลูกแก้ว', 'pl-PL': 'Kula', 'uk-UA': 'Сфера' },
+            tome: { 'en-US': 'Tome', 'ja-JP': '魔導書', 'zh-Hans': '法典', 'zh-Hant': '法典', 'ko-KR': '마도서', 'ru-RU': 'Фолиант', 'es-ES': 'Tomo', 'fr-FR': 'Tome', 'de-DE': 'Foliant', 'pt-BR': 'Tomo', 'tr-TR': 'Cilt', 'vi-VN': 'Sách phép', 'id-ID': 'Buku Sihir', 'th-TH': 'ตำรา', 'pl-PL': 'Księga', 'uk-UA': 'Том' },
+            bolt: { 'en-US': 'Bolt', 'ja-JP': 'ボルト', 'zh-Hans': '弩箭', 'zh-Hant': '弩箭', 'ko-KR': '볼트', 'ru-RU': 'Болт', 'es-ES': 'Virote', 'fr-FR': 'Carreau', 'de-DE': 'Bolzen', 'pt-BR': 'Dardo', 'tr-TR': 'Civata', 'vi-VN': 'Bu lông', 'id-ID': 'Baut', 'th-TH': 'ลูกดอกไม้กางเขน', 'pl-PL': 'Bełt', 'uk-UA': 'Болт' },
+            hatchet: { 'en-US': 'Hatchet', 'ja-JP': '手斧', 'zh-Hans': '短斧', 'zh-Hant': '短斧', 'ko-KR': '손도끼', 'ru-RU': 'Топорик', 'es-ES': 'Hachuela', 'fr-FR': 'Hachette', 'de-DE': 'Beil', 'pt-BR': 'Machadinha', 'tr-TR': 'Küçük Balta', 'vi-VN': 'Rìu nhỏ', 'id-ID': 'Kapak Kecil', 'th-TH': 'ขวานสั้น', 'pl-PL': 'Toporek', 'uk-UA': 'Топірець' },
+            helmet: { 'en-US': 'Helmet', 'ja-JP': '兜', 'zh-Hans': '头盔', 'zh-Hant': '頭盔', 'ko-KR': '투구', 'ru-RU': 'Шлем', 'es-ES': 'Casco', 'fr-FR': 'Casque', 'de-DE': 'Helm', 'pt-BR': 'Capacete', 'tr-TR': 'Kask', 'vi-VN': 'Mũ bảo hiểm', 'id-ID': 'Helm', 'th-TH': 'หมวกเกราะ', 'pl-PL': 'Hełm', 'uk-UA': 'Шолом' },
+            armor: { 'en-US': 'Armor', 'ja-JP': '鎧', 'zh-Hans': '盔甲', 'zh-Hant': '盔甲', 'ko-KR': '갑옷', 'ru-RU': 'Броня', 'es-ES': 'Armadura', 'fr-FR': 'Armure', 'de-DE': 'Rüstung', 'pt-BR': 'Armadura', 'tr-TR': 'Zırh', 'vi-VN': 'Áo giáp', 'id-ID': 'Baju Besi', 'th-TH': 'เสื้อเกราะ', 'pl-PL': 'Zbroja', 'uk-UA': 'Броня' },
+            gloves: { 'en-US': 'Gloves', 'ja-JP': '手袋', 'zh-Hans': '手套', 'zh-Hant': '手套', 'ko-KR': '장갑', 'ru-RU': 'Перчатки', 'es-ES': 'Guantes', 'fr-FR': 'Gants', 'de-DE': 'Handschuhe', 'pt-BR': 'Luvas', 'tr-TR': 'Eldiven', 'vi-VN': 'Găng tay', 'id-ID': 'Sarung Tangan', 'th-TH': 'ถุงมือ', 'pl-PL': 'Rękawice', 'uk-UA': 'Рукавички' },
+            boots: { 'en-US': 'Boots', 'ja-JP': '靴', 'zh-Hans': '靴子', 'zh-Hant': '靴子', 'ko-KR': '장화', 'ru-RU': 'Ботинки', 'es-ES': 'Botas', 'fr-FR': 'Bottes', 'de-DE': 'Stiefel', 'pt-BR': 'Botas', 'tr-TR': 'Çizme', 'vi-VN': 'Giày', 'id-ID': 'Sepatu Bot', 'th-TH': 'รองเท้าบูท', 'pl-PL': 'Buty', 'uk-UA': 'Чоботи' },
+            amulet: { 'en-US': 'Amulet', 'ja-JP': '首飾り', 'zh-Hans': '护身符', 'zh-Hant': '護身符', 'ko-KR': '목걸이', 'ru-RU': 'Амулет', 'es-ES': 'Amuleto', 'fr-FR': 'Amulette', 'de-DE': 'Amulett', 'pt-BR': 'Amuleto', 'tr-TR': 'Muska', 'vi-VN': 'Bùa hộ mệnh', 'id-ID': 'Jimat', 'th-TH': 'เครื่องราง', 'pl-PL': 'Amulet', 'uk-UA': 'Амулет' },
+            earing: { 'en-US': 'Earing', 'ja-JP': '耳飾り', 'zh-Hans': '耳环', 'zh-Hant': '耳環', 'ko-KR': '귀걸이', 'ru-RU': 'Серьга', 'es-ES': 'Pendiente', 'fr-FR': 'Boucle d\'oreille', 'de-DE': 'Ohrring', 'pt-BR': 'Brinco', 'tr-TR': 'Küpe', 'vi-VN': 'Bông tai', 'id-ID': 'Anting-anting', 'th-TH': 'ต่างหู', 'pl-PL': 'Kolczyk', 'uk-UA': 'Сережка' },
+            ring: { 'en-US': 'Ring', 'ja-JP': '指輪', 'zh-Hans': '戒指', 'zh-Hant': '戒指', 'ko-KR': '반지', 'ru-RU': 'Кольцо', 'es-ES': 'Anillo', 'fr-FR': 'Anneau', 'de-DE': 'Ring', 'pt-BR': 'Anel', 'tr-TR': 'Yüzük', 'vi-VN': 'Nhẫn', 'id-ID': 'Cincin', 'th-TH': 'แหวน', 'pl-PL': 'Pierścień', 'uk-UA': 'Кільце' },
+            bracer: { 'en-US': 'Bracer', 'ja-JP': '腕輪', 'zh-Hans': '护腕', 'zh-Hant': '護腕', 'ko-KR': '팔찌', 'ru-RU': 'Наруч', 'es-ES': 'Brazalete', 'fr-FR': 'Brassard', 'de-DE': 'Armschiene', 'pt-BR': 'Bracelete', 'tr-TR': 'Bileklik', 'vi-VN': 'Bao tay', 'id-ID': 'Gelang', 'th-TH': 'ปลอกแขน', 'pl-PL': 'Karwasz', 'uk-UA': 'Наруч' }
+          };
+          
+          const filterIcons = [
+            { id: 'MATERIAL_CRAFT', icon: 'Item_140001.png', label: inlineMaterialTrans.craft[selectedLang] || 'Crafting Material' },
+            { id: 'MATERIAL_DECO', icon: 'Item_110001.png', label: inlineMaterialTrans.deco[selectedLang] || 'Decoration Material' },
+            { id: 'MATERIAL_SCULPT', icon: 'Item_124001.png', label: inlineMaterialTrans.sculpt[selectedLang] || 'Sculpting Material' },
+            { id: 'MATERIAL_INSCRIPTION', icon: 'Item_130001.png', label: inlineMaterialTrans.inscription[selectedLang] || 'Inscription Material' },
+            { id: 'MATERIAL_WISH', icon: 'Item_160001.png', label: inlineMaterialTrans.wish[selectedLang] || 'Wishing Material' },
+            { id: 'MATERIAL_SOULSTONE', icon: 'Item_190001.png', label: inlineMaterialTrans.soulstone[selectedLang] || 'Soulstone' },
+            { id: 'SWORD', icon: 'SWORD_300001.png', label: gearTrans?.sword?.[selectedLang] || searchTrans.sword[selectedLang] || searchTrans.sword['en-US'] },
+            { id: 'BOW', icon: 'BOW_310001.png', label: gearTrans?.bow?.[selectedLang] || searchTrans.bow[selectedLang] || searchTrans.bow['en-US'] },
+            { id: 'STAFF', icon: 'STAFF_320001.png', label: gearTrans?.staff?.[selectedLang] || searchTrans.staff[selectedLang] || searchTrans.staff['en-US'] },
+            { id: 'SCEPTER', icon: 'SCEPTER_330001.png', label: gearTrans?.scepter?.[selectedLang] || searchTrans.scepter[selectedLang] || searchTrans.scepter['en-US'] },
+            { id: 'CROSSBOW', icon: 'CROSSBOW_340001.png', label: gearTrans?.crossbow?.[selectedLang] || searchTrans.crossbow[selectedLang] || searchTrans.crossbow['en-US'] },
+            { id: 'AXE', icon: 'AXE_350001.png', label: gearTrans?.axe?.[selectedLang] || searchTrans.axe[selectedLang] || searchTrans.axe['en-US'] },
+            { id: 'SHIELD', icon: 'SHIELD_400001.png', label: gearTrans?.shield?.[selectedLang] || searchTrans.shield[selectedLang] || searchTrans.shield['en-US'] },
+            { id: 'ARROW', icon: 'ARROW_410001.png', label: gearTrans?.arrow?.[selectedLang] || searchTrans.arrow[selectedLang] || searchTrans.arrow['en-US'] },
+            { id: 'ORB', icon: 'ORB_420001.png', label: gearTrans?.orb?.[selectedLang] || searchTrans.orb[selectedLang] || searchTrans.orb['en-US'] },
+            { id: 'TOME', icon: 'TOME_430001.png', label: gearTrans?.tome?.[selectedLang] || searchTrans.tome[selectedLang] || searchTrans.tome['en-US'] },
+            { id: 'BOLT', icon: 'BOLT_440001.png', label: gearTrans?.bolt?.[selectedLang] || searchTrans.bolt[selectedLang] || searchTrans.bolt['en-US'] },
+            { id: 'HATCHET', icon: 'HATCHET_450001.png', label: gearTrans?.hatchet?.[selectedLang] || searchTrans.hatchet[selectedLang] || searchTrans.hatchet['en-US'] },
+            { id: 'HELMET', icon: 'HELMET_500001.png', label: gearTrans?.helmet?.[selectedLang] || searchTrans.helmet[selectedLang] || searchTrans.helmet['en-US'] },
+            { id: 'ARMOR', icon: 'ARMOR_510001.png', label: gearTrans?.armor?.[selectedLang] || searchTrans.armor[selectedLang] || searchTrans.armor['en-US'] },
+            { id: 'GLOVES', icon: 'GLOVES_520001.png', label: gearTrans?.gloves?.[selectedLang] || searchTrans.gloves[selectedLang] || searchTrans.gloves['en-US'] },
+            { id: 'BOOTS', icon: 'BOOTS_530001.png', label: gearTrans?.boots?.[selectedLang] || searchTrans.boots[selectedLang] || searchTrans.boots['en-US'] },
+            { id: 'AMULET', icon: 'AMULET_600001.png', label: gearTrans?.amulet?.[selectedLang] || searchTrans.amulet[selectedLang] || searchTrans.amulet['en-US'] },
+            { id: 'EARING', icon: 'EARING_610001.png', label: gearTrans?.earing?.[selectedLang] || searchTrans.earing[selectedLang] || searchTrans.earing['en-US'] },
+            { id: 'RING', icon: 'RING_620001.png', label: gearTrans?.ring?.[selectedLang] || searchTrans.ring[selectedLang] || searchTrans.ring['en-US'] },
+            { id: 'BRACER', icon: 'BRACER_630001.png', label: gearTrans?.bracer?.[selectedLang] || searchTrans.bracer[selectedLang] || searchTrans.bracer['en-US'] }
+          ];
+
+          const handleTypeToggle = (typeId) => {
+            setManualSelectedTypes(prev => 
+              prev.includes(typeId) 
+                ? prev.filter(t => t !== typeId)
+                : [...prev, typeId]
+            );
+          };
+
+          const filterRarities = [
+            { id: 'COMMON', color: 'gray', label: 'Common' },
+            { id: 'UNCOMMON', color: '#4caf50', label: 'Uncommon' },
+            { id: 'RARE', color: '#2196f3', label: 'Rare' },
+            { id: 'LEGENDARY', color: '#ff9800', label: 'Legendary' },
+            { id: 'IMMORTAL', color: '#f44336', label: 'Immortal' },
+            { id: 'ARCANA', color: '#9c27b0', label: 'Arcana' },
+            { id: 'BEYOND', color: '#e91e63', label: 'Beyond' },
+            { id: 'CELESTIAL', color: '#00bcd4', label: 'Celestial' },
+            { id: 'DIVINE', color: '#ffeb3b', label: 'Divine' },
+            { id: 'COSMIC', color: '#ffffff', label: 'Cosmic' }
+          ];
+
+          const handleRarityToggle = (rarityId) => {
+            setManualSelectedRarities(prev => 
+              prev.includes(rarityId) ? prev.filter(r => r !== rarityId) : [...prev, rarityId]
+            );
+          };
+
+          const filterLevels = [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 100];
+
+          const handleLevelToggle = (lvl) => {
+            setManualSelectedLevels(prev => 
+              prev.includes(lvl) ? prev.filter(l => l !== lvl) : [...prev, lvl]
+            );
+          };
+          
+
+
+          return (
+            <div>
+              <h2 style={{ fontSize: '1.3rem', marginBottom: '16px', color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                🔍 {searchTrans.title[selectedLang] || searchTrans.title['en-US']}
+              </h2>
+              
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '16px' }}>
+                <input 
+                  type="text" 
+                  placeholder={searchTrans.placeholder[selectedLang] || searchTrans.placeholder['en-US']}
+                  value={manualSearchText}
+                  onChange={(e) => setManualSearchText(e.target.value)}
+                  style={{ flex: '1 1 150px', padding: '10px 12px', borderRadius: '8px', border: '1px solid #444', background: 'rgba(0,0,0,0.4)', color: 'white' }}
+                />
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                  {filterIcons.filter(fi => ['MATERIAL_CRAFT', 'MATERIAL_DECO', 'MATERIAL_SCULPT', 'MATERIAL_INSCRIPTION', 'MATERIAL_WISH', 'MATERIAL_SOULSTONE'].includes(fi.id)).map(fi => {
+                    const isSelected = manualSelectedTypes.includes(fi.id);
+                    return (
+                      <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
+                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
+                        <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                  {filterIcons.filter(fi => ['SWORD', 'BOW', 'STAFF', 'SCEPTER', 'CROSSBOW', 'AXE'].includes(fi.id)).map(fi => {
+                    const isSelected = manualSelectedTypes.includes(fi.id);
+                    return (
+                      <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
+                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
+                        <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                  {filterIcons.filter(fi => ['SHIELD', 'ARROW', 'ORB', 'TOME', 'BOLT', 'HATCHET'].includes(fi.id)).map(fi => {
+                    const isSelected = manualSelectedTypes.includes(fi.id);
+                    return (
+                      <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
+                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
+                        <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                  {filterIcons.filter(fi => ['HELMET', 'ARMOR', 'GLOVES', 'BOOTS', 'AMULET', 'EARING', 'RING', 'BRACER'].includes(fi.id)).map(fi => {
+                    const isSelected = manualSelectedTypes.includes(fi.id);
+                    return (
+                      <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
+                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
+                        <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+              
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                {filterRarities.map(fr => {
+                  const isSelected = manualSelectedRarities.includes(fr.id);
+                  return (
+                    <button
+                      key={fr.id}
+                      onClick={() => handleRarityToggle(fr.id)}
+                      title={fr.label}
+                      style={{
+                        background: isSelected ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.3)',
+                        border: isSelected ? `2px solid ${fr.color}` : '2px solid transparent',
+                        borderRadius: '6px',
+                        padding: '4px 8px',
+                        cursor: 'pointer',
+                        transition: 'all 0.2s',
+                        color: fr.color,
+                        fontWeight: 'bold',
+                        fontSize: '0.75rem',
+                        outline: 'none',
+                        boxShadow: isSelected ? `0 0 8px ${fr.color}40` : 'none'
+                      }}
+                    >
+                      {fr.label}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '16px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                {filterLevels.map(lvl => {
+                  const isSelected = manualSelectedLevels.includes(lvl);
+                  return (
+                    <button
+                      key={lvl}
+                      onClick={() => handleLevelToggle(lvl)}
+                      style={{
+                        background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(0,0,0,0.3)',
+                        border: isSelected ? '2px solid #4caf50' : '2px solid transparent',
+                        borderRadius: '4px',
+                        padding: '4px 8px',
+                        cursor: 'pointer',
+                        transition: 'all 0.2s',
+                        color: isSelected ? '#4caf50' : '#888',
+                        fontWeight: 'bold',
+                        fontSize: '0.75rem',
+                        outline: 'none'
+                      }}
+                    >
+                      Lv.{lvl}
+                    </button>
+                  );
+                })}
+              </div>
+              
+              <div ref={searchWrapperRef}>
+                {filteredSearchItems.length > 0 && (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', padding: '4px' }}>
+                  {filteredSearchItems.map(item => {
+                    const itemName = item.name?.[selectedLang] || item.name?.['en-US'] || item.slug;
+                    const iconFilename = item.icon ? item.icon.split('/').pop() : null;
+                    const color = getItemColor(item.grade);
+                    return (
+                      <div 
+                        key={item.id} 
+                        title={`${itemName} (${item.type})`}
+                        onClick={() => handleAddManualItem(item)}
+                        style={{ 
+                          width: '100px',
+                          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
+                          padding: '12px 8px', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', 
+                          cursor: 'pointer', transition: 'all 0.2s', 
+                          border: '1px solid transparent',
+                          borderBottom: `4px solid ${color}`,
+                          textAlign: 'center'
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
+                          e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)';
+                          e.currentTarget.style.borderBottom = `4px solid ${color}`;
+                          e.currentTarget.style.transform = 'translateY(-2px)';
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = 'rgba(0,0,0,0.3)';
+                          e.currentTarget.style.border = '1px solid transparent';
+                          e.currentTarget.style.borderBottom = `4px solid ${color}`;
+                          e.currentTarget.style.transform = 'translateY(0)';
+                        }}
+                      >
+                        {iconFilename ? (
+                          <img src={`/icons/${iconFilename}`} alt={itemName} style={{ width: '48px', height: '48px', imageRendering: 'pixelated', borderRadius: '4px', marginBottom: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} />
+                        ) : (
+                          <div style={{ width: '48px', height: '48px', background: '#444', borderRadius: '4px', marginBottom: '8px' }}></div>
+                        )}
+                        <div style={{ fontWeight: 'bold', fontSize: '0.85rem', color: color, width: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', marginBottom: '4px' }}>
+                          {itemName}
+                        </div>
+                        {item.level && <div style={{ fontSize: '0.75rem', color: '#999', background: '#222', padding: '2px 6px', borderRadius: '4px', border: '1px solid #444' }}>Lv.{item.level}</div>}
+                      </div>
+                    );
+                  })}
+                  </div>
+                )}
+                {filteredSearchItems.length === 0 && (
+                  <div style={{ padding: '30px 20px', textAlign: 'center', color: '#888', background: 'rgba(0,0,0,0.2)', borderRadius: '8px', border: '1px dashed #444' }}>
+                    No items found matching the criteria.
+                  </div>
+                )}
+              </div>
+            </div>
+          );
+        })()}
+        </div>
+      </section>
+
       <main id="capture-area" className={styles.content} style={{ position: 'relative', borderRadius: '16px' }}>
         {isFlashing && (
           <div 
@@ -1795,295 +2103,6 @@ export default function ScannerApp() {
         )}
       </main>
       
-      {/* Manual Search Section */}
-      <section style={{ 
-        marginTop: '20px', 
-        padding: '30px', 
-        background: 'rgba(255, 255, 255, 0.05)', 
-        backdropFilter: 'blur(10px)', 
-        borderRadius: '16px',
-        border: '1px solid rgba(255, 255, 255, 0.1)',
-      }}>
-        {(() => {
-          const inlineMaterialTrans = {
-            craft: { 'en-US': 'Crafting Material', 'ja-JP': '制作素材', 'zh-Hans': '制作材料', 'zh-Hant': '製作材料', 'ko-KR': '제작 재료', 'ru-RU': 'Материал для крафта', 'es-ES': 'Material de fabricación', 'fr-FR': 'Matériau de fabrication', 'de-DE': 'Herstellungsmaterial', 'pt-BR': 'Material de Criação', 'tr-TR': 'Üretim Malzemesi', 'vi-VN': 'Nguyên liệu chế tạo', 'id-ID': 'Bahan Pembuatan', 'th-TH': 'วัสดุคราฟต์', 'pl-PL': 'Materiały Rzemieślnicze', 'uk-UA': 'Матеріали для крафту' },
-            deco: { 'en-US': 'Decoration Material', 'ja-JP': '装飾素材', 'zh-Hans': '装饰材料', 'zh-Hant': '裝飾材料', 'ko-KR': '장식 재료', 'ru-RU': 'Материал для украшения', 'es-ES': 'Material de decoración', 'fr-FR': 'Matériau de décoration', 'de-DE': 'Dekorationsmaterial', 'pt-BR': 'Material de Decoração', 'tr-TR': 'Dekorasyon Malzemesi', 'vi-VN': 'Nguyên liệu trang trí', 'id-ID': 'Bahan Dekorasi', 'th-TH': 'วัสดุตกแต่ง', 'pl-PL': 'Materiały Dekoracyjne', 'uk-UA': 'Матеріали для декору' },
-            sculpt: { 'en-US': 'Sculpting Material', 'ja-JP': '彫刻素材', 'zh-Hans': '雕刻材料', 'zh-Hant': '雕刻材料', 'ko-KR': '조각 재료', 'ru-RU': 'Материал для лепки', 'es-ES': 'Material de escultura', 'fr-FR': 'Matériau de sculpture', 'de-DE': 'Skulpturmaterial', 'pt-BR': 'Material de Escultura', 'tr-TR': 'Heykel Malzemesi', 'vi-VN': 'Nguyên liệu điêu khắc', 'id-ID': 'Bahan Pahatan', 'th-TH': 'วัสดุแกะสลัก', 'pl-PL': 'Materiały Rzeźbiarskie', 'uk-UA': 'Матеріали для ліплення' },
-            inscription: { 'en-US': 'Inscription Material', 'ja-JP': '碑文素材', 'zh-Hans': '碑文材料', 'zh-Hant': '碑文材料', 'ko-KR': '비문 재료', 'ru-RU': 'Материал для надписей', 'es-ES': 'Material de inscripción', 'fr-FR': 'Matériau d\'inscription', 'de-DE': 'Inschriftenmaterial', 'pt-BR': 'Material de Inscrição', 'tr-TR': 'Yazıt Malzemesi', 'vi-VN': 'Nguyên liệu khắc', 'id-ID': 'Bahan Prasasti', 'th-TH': 'วัสดุจารึก', 'pl-PL': 'Materiały Inskrypcyjne', 'uk-UA': 'Матеріали для написів' },
-            wish: { 'en-US': 'Wishing Material', 'ja-JP': '祈願素材', 'zh-Hans': '祈愿材料', 'zh-Hant': '祈願材料', 'ko-KR': '기원 재료', 'ru-RU': 'Материал для желаний', 'es-ES': 'Material de deseo', 'fr-FR': 'Matériau de souhait', 'de-DE': 'Wunschmaterial', 'pt-BR': 'Material de Desejo', 'tr-TR': 'Dilek Malzemesi', 'vi-VN': 'Nguyên liệu ước nguyện', 'id-ID': 'Bahan Harapan', 'th-TH': 'วัสดุอธิษฐาน', 'pl-PL': 'Materiały Życzeń', 'uk-UA': 'Матеріали для побажань' },
-            soulstone: { 'en-US': 'Soulstone', 'ja-JP': 'ソウルストーン', 'zh-Hans': '灵魂石', 'zh-Hant': '靈魂石', 'ko-KR': '영혼석', 'ru-RU': 'Камень души', 'es-ES': 'Piedra de alma', 'fr-FR': 'Pierre d\'âme', 'de-DE': 'Seelenstein', 'pt-BR': 'Pedra da Alma', 'tr-TR': 'Ruh Taşı', 'vi-VN': 'Đá linh hồn', 'id-ID': 'Batu Jiwa', 'th-TH': 'หินวิญญาณ', 'pl-PL': 'Kamień Duszy', 'uk-UA': 'Камінь душі' }
-          };
-                    const searchTrans = {
-            title: { 'en-US': 'Search & Add Items', 'ja-JP': 'アイテムを検索して追加', 'zh-Hans': '搜索并添加物品', 'zh-Hant': '搜尋並新增物品', 'ko-KR': '아이템 검색 및 추가', 'ru-RU': 'Поиск и добавление предметов', 'es-ES': 'Buscar y agregar artículos', 'fr-FR': 'Rechercher et ajouter des objets', 'de-DE': 'Suchen & Gegenstände hinzufügen', 'pt-BR': 'Buscar e Adicionar Itens', 'tr-TR': 'Öğe Ara ve Ekle', 'vi-VN': 'Tìm kiếm & Thêm Vật phẩm', 'id-ID': 'Cari & Tambah Item', 'th-TH': 'ค้นหาและเพิ่มไอเทม', 'pl-PL': 'Szukaj i dodawaj przedmioty', 'uk-UA': 'Пошук і додавання предметів' },
-            placeholder: { 'en-US': 'Search by name...', 'ja-JP': '名前で検索...', 'zh-Hans': '按名称搜索...', 'zh-Hant': '按名稱搜尋...', 'ko-KR': '이름으로 검색...', 'ru-RU': 'Поиск по имени...', 'es-ES': 'Buscar por nombre...', 'fr-FR': 'Rechercher par nom...', 'de-DE': 'Nach Name suchen...', 'pt-BR': 'Buscar por nome...', 'tr-TR': 'İsme göre ara...', 'vi-VN': 'Tìm kiếm theo tên...', 'id-ID': 'Cari berdasarkan nama...', 'th-TH': 'ค้นหาตามชื่อ...', 'pl-PL': 'Szukaj po nazwie...', 'uk-UA': 'Пошук за назвою...' },
-            all: { 'en-US': 'All Categories', 'ja-JP': 'すべての種類', 'zh-Hans': '所有类别', 'zh-Hant': '所有類別', 'ko-KR': '모든 카테고리', 'ru-RU': 'Все категории', 'es-ES': 'Todas las categorías', 'fr-FR': 'Toutes les catégories', 'de-DE': 'Alle Kategorien', 'pt-BR': 'Todas as Categorias', 'tr-TR': 'Tüm Kategoriler', 'vi-VN': 'Tất cả danh mục', 'id-ID': 'Semua Kategori', 'th-TH': 'หมวดหมู่ทั้งหมด', 'pl-PL': 'Wszystkie Kategorie', 'uk-UA': 'Всі категорії' },
-            gear: { 'en-US': 'Gear', 'ja-JP': '装備', 'zh-Hans': '装备', 'zh-Hant': '裝備', 'ko-KR': '장비', 'ru-RU': 'Снаряжение', 'es-ES': 'Equipamiento', 'fr-FR': 'Équipement', 'de-DE': 'Ausrüstung', 'pt-BR': 'Equipamento', 'tr-TR': 'Ekipman', 'vi-VN': 'Trang bị', 'id-ID': 'Perlengkapan', 'th-TH': 'อุปกรณ์', 'pl-PL': 'Ekwipunek', 'uk-UA': 'Спорядження' },
-            allClasses: { 'en-US': 'All Classes', 'ja-JP': 'すべての部位', 'zh-Hans': '所有部位', 'zh-Hant': '所有部位', 'ko-KR': '모든 부위', 'ru-RU': 'Все типы', 'es-ES': 'Todas las clases', 'fr-FR': 'Toutes les classes', 'de-DE': 'Alle Klassen', 'pt-BR': 'Todas as Classes', 'tr-TR': 'Tüm Sınıflar', 'vi-VN': 'Tất cả các lớp', 'id-ID': 'Semua Kelas', 'th-TH': 'ทุกคลาส', 'pl-PL': 'Wszystkie Klasy', 'uk-UA': 'Усі класи' },
-            allRarities: { 'en-US': 'All Rarities', 'ja-JP': 'すべての等級', 'zh-Hans': '所有稀有度', 'zh-Hant': '所有稀有度', 'ko-KR': '모든 등급', 'ru-RU': 'Все редкости', 'es-ES': 'Todas las rarezas', 'fr-FR': 'Toutes les raretés', 'de-DE': 'Alle Seltenheiten', 'pt-BR': 'Todas as Raridades', 'tr-TR': 'Tüm Nadirlikler', 'vi-VN': 'Tất cả độ hiếm', 'id-ID': 'Semua Kelangkaan', 'th-TH': 'ความหายากทั้งหมด', 'pl-PL': 'Wszystkie Rzadkości', 'uk-UA': 'Усі рідкості' },
-            levelPlaceholder: { 'en-US': 'Lv', 'ja-JP': 'Lv', 'zh-Hans': '等级', 'zh-Hant': '等級', 'ko-KR': '레벨', 'ru-RU': 'Ур', 'es-ES': 'Niv', 'fr-FR': 'Niv', 'de-DE': 'Stufe', 'pt-BR': 'Nív', 'tr-TR': 'Svy', 'vi-VN': 'Cấp', 'id-ID': 'Lv', 'th-TH': 'เลเวล', 'pl-PL': 'Poz', 'uk-UA': 'Рів' },
-            sword: { 'en-US': 'Sword', 'ja-JP': '剣', 'zh-Hans': '剑', 'zh-Hant': '劍', 'ko-KR': '검', 'ru-RU': 'Меч', 'es-ES': 'Espada', 'fr-FR': 'Épée', 'de-DE': 'Schwert', 'pt-BR': 'Espada', 'tr-TR': 'Kılıç', 'vi-VN': 'Kiếm', 'id-ID': 'Pedang', 'th-TH': 'ดาบ', 'pl-PL': 'Miecz', 'uk-UA': 'Меч' },
-            bow: { 'en-US': 'Bow', 'ja-JP': '弓', 'zh-Hans': '弓', 'zh-Hant': '弓', 'ko-KR': '활', 'ru-RU': 'Лук', 'es-ES': 'Arco', 'fr-FR': 'Arc', 'de-DE': 'Bogen', 'pt-BR': 'Arco', 'tr-TR': 'Yay', 'vi-VN': 'Cung', 'id-ID': 'Busur', 'th-TH': 'ธนู', 'pl-PL': 'Łuk', 'uk-UA': 'Лук' },
-            staff: { 'en-US': 'Staff', 'ja-JP': '杖', 'zh-Hans': '法杖', 'zh-Hant': '法杖', 'ko-KR': '지팡이', 'ru-RU': 'Посох', 'es-ES': 'Bastón', 'fr-FR': 'Bâton', 'de-DE': 'Stab', 'pt-BR': 'Cajado', 'tr-TR': 'Asa', 'vi-VN': 'Gậy', 'id-ID': 'Tongkat', 'th-TH': 'ไม้เท้า', 'pl-PL': 'Kostur', 'uk-UA': 'Посох' },
-            scepter: { 'en-US': 'Scepter', 'ja-JP': '王笏', 'zh-Hans': '权杖', 'zh-Hant': '權杖', 'ko-KR': '홀', 'ru-RU': 'Скипетр', 'es-ES': 'Cetro', 'fr-FR': 'Sceptre', 'de-DE': 'Zepter', 'pt-BR': 'Cetro', 'tr-TR': 'Asa', 'vi-VN': 'Quyền trượng', 'id-ID': 'Tongkat Kerajaan', 'th-TH': 'คทา', 'pl-PL': 'Berło', 'uk-UA': 'Скіпетр' },
-            crossbow: { 'en-US': 'Crossbow', 'ja-JP': 'クロスボウ', 'zh-Hans': '弩', 'zh-Hant': '弩', 'ko-KR': '석궁', 'ru-RU': 'Арбалет', 'es-ES': 'Ballesta', 'fr-FR': 'Arbalète', 'de-DE': 'Armbrust', 'pt-BR': 'Besta', 'tr-TR': 'Arbalet', 'vi-VN': 'Nỏ', 'id-ID': 'Busur Silang', 'th-TH': 'หน้าไม้', 'pl-PL': 'Kusza', 'uk-UA': 'Арбалет' },
-            axe: { 'en-US': 'Axe', 'ja-JP': '斧', 'zh-Hans': '斧头', 'zh-Hant': '斧頭', 'ko-KR': '도끼', 'ru-RU': 'Топор', 'es-ES': 'Hacha', 'fr-FR': 'Hache', 'de-DE': 'Axt', 'pt-BR': 'Machado', 'tr-TR': 'Balt', 'vi-VN': 'Rìu', 'id-ID': 'Kapak', 'th-TH': 'ขวาน', 'pl-PL': 'Topór', 'uk-UA': 'Сокира' },
-            shield: { 'en-US': 'Shield', 'ja-JP': '盾', 'zh-Hans': '盾牌', 'zh-Hant': '盾牌', 'ko-KR': '방패', 'ru-RU': 'Щит', 'es-ES': 'Escudo', 'fr-FR': 'Bouclier', 'de-DE': 'Schild', 'pt-BR': 'Escudo', 'tr-TR': 'Kalkan', 'vi-VN': 'Khiên', 'id-ID': 'Perisai', 'th-TH': 'โล่', 'pl-PL': 'Tarcza', 'uk-UA': 'Щит' },
-            arrow: { 'en-US': 'Arrow', 'ja-JP': '矢', 'zh-Hans': '箭', 'zh-Hant': '箭', 'ko-KR': '화살', 'ru-RU': 'Стрела', 'es-ES': 'Flecha', 'fr-FR': 'Flèche', 'de-DE': 'Pfeil', 'pt-BR': 'Flecha', 'tr-TR': 'Ok', 'vi-VN': 'Mũi tên', 'id-ID': 'Anak Panah', 'th-TH': 'ลูกศร', 'pl-PL': 'Strzała', 'uk-UA': 'Стріла' },
-            orb: { 'en-US': 'Orb', 'ja-JP': 'オーブ', 'zh-Hans': '宝珠', 'zh-Hant': '寶珠', 'ko-KR': '오브', 'ru-RU': 'Сфера', 'es-ES': 'Orbe', 'fr-FR': 'Orbe', 'de-DE': 'Kugel', 'pt-BR': 'Orbe', 'tr-TR': 'Küre', 'vi-VN': 'Ngọc', 'id-ID': 'Orb', 'th-TH': 'ลูกแก้ว', 'pl-PL': 'Kula', 'uk-UA': 'Сфера' },
-            tome: { 'en-US': 'Tome', 'ja-JP': '魔導書', 'zh-Hans': '法典', 'zh-Hant': '法典', 'ko-KR': '마도서', 'ru-RU': 'Фолиант', 'es-ES': 'Tomo', 'fr-FR': 'Tome', 'de-DE': 'Foliant', 'pt-BR': 'Tomo', 'tr-TR': 'Cilt', 'vi-VN': 'Sách phép', 'id-ID': 'Buku Sihir', 'th-TH': 'ตำรา', 'pl-PL': 'Księga', 'uk-UA': 'Том' },
-            bolt: { 'en-US': 'Bolt', 'ja-JP': 'ボルト', 'zh-Hans': '弩箭', 'zh-Hant': '弩箭', 'ko-KR': '볼트', 'ru-RU': 'Болт', 'es-ES': 'Virote', 'fr-FR': 'Carreau', 'de-DE': 'Bolzen', 'pt-BR': 'Dardo', 'tr-TR': 'Civata', 'vi-VN': 'Bu lông', 'id-ID': 'Baut', 'th-TH': 'ลูกดอกไม้กางเขน', 'pl-PL': 'Bełt', 'uk-UA': 'Болт' },
-            hatchet: { 'en-US': 'Hatchet', 'ja-JP': '手斧', 'zh-Hans': '短斧', 'zh-Hant': '短斧', 'ko-KR': '손도끼', 'ru-RU': 'Топорик', 'es-ES': 'Hachuela', 'fr-FR': 'Hachette', 'de-DE': 'Beil', 'pt-BR': 'Machadinha', 'tr-TR': 'Küçük Balta', 'vi-VN': 'Rìu nhỏ', 'id-ID': 'Kapak Kecil', 'th-TH': 'ขวานสั้น', 'pl-PL': 'Toporek', 'uk-UA': 'Топірець' },
-            helmet: { 'en-US': 'Helmet', 'ja-JP': '兜', 'zh-Hans': '头盔', 'zh-Hant': '頭盔', 'ko-KR': '투구', 'ru-RU': 'Шлем', 'es-ES': 'Casco', 'fr-FR': 'Casque', 'de-DE': 'Helm', 'pt-BR': 'Capacete', 'tr-TR': 'Kask', 'vi-VN': 'Mũ bảo hiểm', 'id-ID': 'Helm', 'th-TH': 'หมวกเกราะ', 'pl-PL': 'Hełm', 'uk-UA': 'Шолом' },
-            armor: { 'en-US': 'Armor', 'ja-JP': '鎧', 'zh-Hans': '盔甲', 'zh-Hant': '盔甲', 'ko-KR': '갑옷', 'ru-RU': 'Броня', 'es-ES': 'Armadura', 'fr-FR': 'Armure', 'de-DE': 'Rüstung', 'pt-BR': 'Armadura', 'tr-TR': 'Zırh', 'vi-VN': 'Áo giáp', 'id-ID': 'Baju Besi', 'th-TH': 'เสื้อเกราะ', 'pl-PL': 'Zbroja', 'uk-UA': 'Броня' },
-            gloves: { 'en-US': 'Gloves', 'ja-JP': '手袋', 'zh-Hans': '手套', 'zh-Hant': '手套', 'ko-KR': '장갑', 'ru-RU': 'Перчатки', 'es-ES': 'Guantes', 'fr-FR': 'Gants', 'de-DE': 'Handschuhe', 'pt-BR': 'Luvas', 'tr-TR': 'Eldiven', 'vi-VN': 'Găng tay', 'id-ID': 'Sarung Tangan', 'th-TH': 'ถุงมือ', 'pl-PL': 'Rękawice', 'uk-UA': 'Рукавички' },
-            boots: { 'en-US': 'Boots', 'ja-JP': '靴', 'zh-Hans': '靴子', 'zh-Hant': '靴子', 'ko-KR': '장화', 'ru-RU': 'Ботинки', 'es-ES': 'Botas', 'fr-FR': 'Bottes', 'de-DE': 'Stiefel', 'pt-BR': 'Botas', 'tr-TR': 'Çizme', 'vi-VN': 'Giày', 'id-ID': 'Sepatu Bot', 'th-TH': 'รองเท้าบูท', 'pl-PL': 'Buty', 'uk-UA': 'Чоботи' },
-            amulet: { 'en-US': 'Amulet', 'ja-JP': '首飾り', 'zh-Hans': '护身符', 'zh-Hant': '護身符', 'ko-KR': '목걸이', 'ru-RU': 'Амулет', 'es-ES': 'Amuleto', 'fr-FR': 'Amulette', 'de-DE': 'Amulett', 'pt-BR': 'Amuleto', 'tr-TR': 'Muska', 'vi-VN': 'Bùa hộ mệnh', 'id-ID': 'Jimat', 'th-TH': 'เครื่องราง', 'pl-PL': 'Amulet', 'uk-UA': 'Амулет' },
-            earing: { 'en-US': 'Earing', 'ja-JP': '耳飾り', 'zh-Hans': '耳环', 'zh-Hant': '耳環', 'ko-KR': '귀걸이', 'ru-RU': 'Серьга', 'es-ES': 'Pendiente', 'fr-FR': 'Boucle d\'oreille', 'de-DE': 'Ohrring', 'pt-BR': 'Brinco', 'tr-TR': 'Küpe', 'vi-VN': 'Bông tai', 'id-ID': 'Anting-anting', 'th-TH': 'ต่างหู', 'pl-PL': 'Kolczyk', 'uk-UA': 'Сережка' },
-            ring: { 'en-US': 'Ring', 'ja-JP': '指輪', 'zh-Hans': '戒指', 'zh-Hant': '戒指', 'ko-KR': '반지', 'ru-RU': 'Кольцо', 'es-ES': 'Anillo', 'fr-FR': 'Anneau', 'de-DE': 'Ring', 'pt-BR': 'Anel', 'tr-TR': 'Yüzük', 'vi-VN': 'Nhẫn', 'id-ID': 'Cincin', 'th-TH': 'แหวน', 'pl-PL': 'Pierścień', 'uk-UA': 'Кільце' },
-            bracer: { 'en-US': 'Bracer', 'ja-JP': '腕輪', 'zh-Hans': '护腕', 'zh-Hant': '護腕', 'ko-KR': '팔찌', 'ru-RU': 'Наруч', 'es-ES': 'Brazalete', 'fr-FR': 'Brassard', 'de-DE': 'Armschiene', 'pt-BR': 'Bracelete', 'tr-TR': 'Bileklik', 'vi-VN': 'Bao tay', 'id-ID': 'Gelang', 'th-TH': 'ปลอกแขน', 'pl-PL': 'Karwasz', 'uk-UA': 'Наруч' }
-          };
-          
-          const filterIcons = [
-            { id: 'MATERIAL_CRAFT', icon: 'Item_140001.png', label: inlineMaterialTrans.craft[selectedLang] || 'Crafting Material' },
-            { id: 'MATERIAL_DECO', icon: 'Item_110001.png', label: inlineMaterialTrans.deco[selectedLang] || 'Decoration Material' },
-            { id: 'MATERIAL_SCULPT', icon: 'Item_124001.png', label: inlineMaterialTrans.sculpt[selectedLang] || 'Sculpting Material' },
-            { id: 'MATERIAL_INSCRIPTION', icon: 'Item_130001.png', label: inlineMaterialTrans.inscription[selectedLang] || 'Inscription Material' },
-            { id: 'MATERIAL_WISH', icon: 'Item_160001.png', label: inlineMaterialTrans.wish[selectedLang] || 'Wishing Material' },
-            { id: 'MATERIAL_SOULSTONE', icon: 'Item_190001.png', label: inlineMaterialTrans.soulstone[selectedLang] || 'Soulstone' },
-            { id: 'SWORD', icon: 'SWORD_300001.png', label: gearTrans?.sword?.[selectedLang] || searchTrans.sword[selectedLang] || searchTrans.sword['en-US'] },
-            { id: 'BOW', icon: 'BOW_310001.png', label: gearTrans?.bow?.[selectedLang] || searchTrans.bow[selectedLang] || searchTrans.bow['en-US'] },
-            { id: 'STAFF', icon: 'STAFF_320001.png', label: gearTrans?.staff?.[selectedLang] || searchTrans.staff[selectedLang] || searchTrans.staff['en-US'] },
-            { id: 'SCEPTER', icon: 'SCEPTER_330001.png', label: gearTrans?.scepter?.[selectedLang] || searchTrans.scepter[selectedLang] || searchTrans.scepter['en-US'] },
-            { id: 'CROSSBOW', icon: 'CROSSBOW_340001.png', label: gearTrans?.crossbow?.[selectedLang] || searchTrans.crossbow[selectedLang] || searchTrans.crossbow['en-US'] },
-            { id: 'AXE', icon: 'AXE_350001.png', label: gearTrans?.axe?.[selectedLang] || searchTrans.axe[selectedLang] || searchTrans.axe['en-US'] },
-            { id: 'SHIELD', icon: 'SHIELD_400001.png', label: gearTrans?.shield?.[selectedLang] || searchTrans.shield[selectedLang] || searchTrans.shield['en-US'] },
-            { id: 'ARROW', icon: 'ARROW_410001.png', label: gearTrans?.arrow?.[selectedLang] || searchTrans.arrow[selectedLang] || searchTrans.arrow['en-US'] },
-            { id: 'ORB', icon: 'ORB_420001.png', label: gearTrans?.orb?.[selectedLang] || searchTrans.orb[selectedLang] || searchTrans.orb['en-US'] },
-            { id: 'TOME', icon: 'TOME_430001.png', label: gearTrans?.tome?.[selectedLang] || searchTrans.tome[selectedLang] || searchTrans.tome['en-US'] },
-            { id: 'BOLT', icon: 'BOLT_440001.png', label: gearTrans?.bolt?.[selectedLang] || searchTrans.bolt[selectedLang] || searchTrans.bolt['en-US'] },
-            { id: 'HATCHET', icon: 'HATCHET_450001.png', label: gearTrans?.hatchet?.[selectedLang] || searchTrans.hatchet[selectedLang] || searchTrans.hatchet['en-US'] },
-            { id: 'HELMET', icon: 'HELMET_500001.png', label: gearTrans?.helmet?.[selectedLang] || searchTrans.helmet[selectedLang] || searchTrans.helmet['en-US'] },
-            { id: 'ARMOR', icon: 'ARMOR_510001.png', label: gearTrans?.armor?.[selectedLang] || searchTrans.armor[selectedLang] || searchTrans.armor['en-US'] },
-            { id: 'GLOVES', icon: 'GLOVES_520001.png', label: gearTrans?.gloves?.[selectedLang] || searchTrans.gloves[selectedLang] || searchTrans.gloves['en-US'] },
-            { id: 'BOOTS', icon: 'BOOTS_530001.png', label: gearTrans?.boots?.[selectedLang] || searchTrans.boots[selectedLang] || searchTrans.boots['en-US'] },
-            { id: 'AMULET', icon: 'AMULET_600001.png', label: gearTrans?.amulet?.[selectedLang] || searchTrans.amulet[selectedLang] || searchTrans.amulet['en-US'] },
-            { id: 'EARING', icon: 'EARING_610001.png', label: gearTrans?.earing?.[selectedLang] || searchTrans.earing[selectedLang] || searchTrans.earing['en-US'] },
-            { id: 'RING', icon: 'RING_620001.png', label: gearTrans?.ring?.[selectedLang] || searchTrans.ring[selectedLang] || searchTrans.ring['en-US'] },
-            { id: 'BRACER', icon: 'BRACER_630001.png', label: gearTrans?.bracer?.[selectedLang] || searchTrans.bracer[selectedLang] || searchTrans.bracer['en-US'] }
-          ];
-
-          const handleTypeToggle = (typeId) => {
-            setManualSelectedTypes(prev => 
-              prev.includes(typeId) 
-                ? prev.filter(t => t !== typeId)
-                : [...prev, typeId]
-            );
-          };
-
-          const filterRarities = [
-            { id: 'COMMON', color: 'gray', label: 'Common' },
-            { id: 'UNCOMMON', color: '#4caf50', label: 'Uncommon' },
-            { id: 'RARE', color: '#2196f3', label: 'Rare' },
-            { id: 'LEGENDARY', color: '#ff9800', label: 'Legendary' },
-            { id: 'IMMORTAL', color: '#f44336', label: 'Immortal' },
-            { id: 'ARCANA', color: '#9c27b0', label: 'Arcana' },
-            { id: 'BEYOND', color: '#e91e63', label: 'Beyond' },
-            { id: 'CELESTIAL', color: '#00bcd4', label: 'Celestial' },
-            { id: 'DIVINE', color: '#ffeb3b', label: 'Divine' },
-            { id: 'COSMIC', color: '#ffffff', label: 'Cosmic' }
-          ];
-
-          const handleRarityToggle = (rarityId) => {
-            setManualSelectedRarities(prev => 
-              prev.includes(rarityId) ? prev.filter(r => r !== rarityId) : [...prev, rarityId]
-            );
-          };
-
-          const filterLevels = [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 100];
-
-          const handleLevelToggle = (lvl) => {
-            setManualSelectedLevels(prev => 
-              prev.includes(lvl) ? prev.filter(l => l !== lvl) : [...prev, lvl]
-            );
-          };
-          
-
-
-          return (
-            <div>
-              <h2 style={{ fontSize: '1.3rem', marginBottom: '16px', color: 'white', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                🔍 {searchTrans.title[selectedLang] || searchTrans.title['en-US']}
-              </h2>
-              
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '16px' }}>
-                <input 
-                  type="text" 
-                  placeholder={searchTrans.placeholder[selectedLang] || searchTrans.placeholder['en-US']}
-                  value={manualSearchText}
-                  onChange={(e) => setManualSearchText(e.target.value)}
-                  style={{ flex: '1 1 150px', padding: '10px 12px', borderRadius: '8px', border: '1px solid #444', background: 'rgba(0,0,0,0.4)', color: 'white' }}
-                />
-              </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  {filterIcons.filter(fi => ['MATERIAL_CRAFT', 'MATERIAL_DECO', 'MATERIAL_SCULPT', 'MATERIAL_INSCRIPTION', 'MATERIAL_WISH', 'MATERIAL_SOULSTONE'].includes(fi.id)).map(fi => {
-                    const isSelected = manualSelectedTypes.includes(fi.id);
-                    return (
-                      <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
-                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
-                        <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  {filterIcons.filter(fi => ['SWORD', 'BOW', 'STAFF', 'SCEPTER', 'CROSSBOW', 'AXE'].includes(fi.id)).map(fi => {
-                    const isSelected = manualSelectedTypes.includes(fi.id);
-                    return (
-                      <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
-                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
-                        <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  {filterIcons.filter(fi => ['SHIELD', 'ARROW', 'ORB', 'TOME', 'BOLT', 'HATCHET'].includes(fi.id)).map(fi => {
-                    const isSelected = manualSelectedTypes.includes(fi.id);
-                    return (
-                      <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
-                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
-                        <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  {filterIcons.filter(fi => ['HELMET', 'ARMOR', 'GLOVES', 'BOOTS', 'AMULET', 'EARING', 'RING', 'BRACER'].includes(fi.id)).map(fi => {
-                    const isSelected = manualSelectedTypes.includes(fi.id);
-                    return (
-                      <button key={fi.id} onClick={() => handleTypeToggle(fi.id)} title={fi.label} style={{ background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255,255,255,0.05)', border: isSelected ? '2px solid #4caf50' : '2px solid transparent', borderRadius: '8px', padding: '6px', cursor: 'pointer', transition: 'all 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', width: '60px', outline: 'none' }}>
-                        <img src={`/icons/${fi.icon}`} alt={fi.label} style={{ width: '32px', height: '32px', imageRendering: 'pixelated' }} />
-                        <span style={{ fontSize: '0.65rem', color: isSelected ? '#4caf50' : '#888', fontWeight: isSelected ? 'bold' : 'normal', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', width: '100%', textAlign: 'center' }}>{fi.label}</span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-              
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                {filterRarities.map(fr => {
-                  const isSelected = manualSelectedRarities.includes(fr.id);
-                  return (
-                    <button
-                      key={fr.id}
-                      onClick={() => handleRarityToggle(fr.id)}
-                      title={fr.label}
-                      style={{
-                        background: isSelected ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.3)',
-                        border: isSelected ? `2px solid ${fr.color}` : '2px solid transparent',
-                        borderRadius: '6px',
-                        padding: '4px 8px',
-                        cursor: 'pointer',
-                        transition: 'all 0.2s',
-                        color: fr.color,
-                        fontWeight: 'bold',
-                        fontSize: '0.75rem',
-                        outline: 'none',
-                        boxShadow: isSelected ? `0 0 8px ${fr.color}40` : 'none'
-                      }}
-                    >
-                      {fr.label}
-                    </button>
-                  );
-                })}
-              </div>
-
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '16px', background: 'rgba(0,0,0,0.2)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                {filterLevels.map(lvl => {
-                  const isSelected = manualSelectedLevels.includes(lvl);
-                  return (
-                    <button
-                      key={lvl}
-                      onClick={() => handleLevelToggle(lvl)}
-                      style={{
-                        background: isSelected ? 'rgba(76, 175, 80, 0.2)' : 'rgba(0,0,0,0.3)',
-                        border: isSelected ? '2px solid #4caf50' : '2px solid transparent',
-                        borderRadius: '4px',
-                        padding: '4px 8px',
-                        cursor: 'pointer',
-                        transition: 'all 0.2s',
-                        color: isSelected ? '#4caf50' : '#888',
-                        fontWeight: 'bold',
-                        fontSize: '0.75rem',
-                        outline: 'none'
-                      }}
-                    >
-                      Lv.{lvl}
-                    </button>
-                  );
-                })}
-              </div>
-              
-              <div ref={searchWrapperRef}>
-                {filteredSearchItems.length > 0 && (
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', padding: '4px' }}>
-                  {filteredSearchItems.map(item => {
-                    const itemName = item.name?.[selectedLang] || item.name?.['en-US'] || item.slug;
-                    const iconFilename = item.icon ? item.icon.split('/').pop() : null;
-                    const color = getItemColor(item.grade);
-                    return (
-                      <div 
-                        key={item.id} 
-                        title={`${itemName} (${item.type})`}
-                        onClick={() => handleAddManualItem(item)}
-                        style={{ 
-                          width: '100px',
-                          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                          padding: '12px 8px', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', 
-                          cursor: 'pointer', transition: 'all 0.2s', 
-                          border: '1px solid transparent',
-                          borderBottom: `4px solid ${color}`,
-                          textAlign: 'center'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'rgba(255,255,255,0.08)';
-                          e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)';
-                          e.currentTarget.style.borderBottom = `4px solid ${color}`;
-                          e.currentTarget.style.transform = 'translateY(-2px)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = 'rgba(0,0,0,0.3)';
-                          e.currentTarget.style.border = '1px solid transparent';
-                          e.currentTarget.style.borderBottom = `4px solid ${color}`;
-                          e.currentTarget.style.transform = 'translateY(0)';
-                        }}
-                      >
-                        {iconFilename ? (
-                          <img src={`/icons/${iconFilename}`} alt={itemName} style={{ width: '48px', height: '48px', imageRendering: 'pixelated', borderRadius: '4px', marginBottom: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} />
-                        ) : (
-                          <div style={{ width: '48px', height: '48px', background: '#444', borderRadius: '4px', marginBottom: '8px' }}></div>
-                        )}
-                        <div style={{ fontWeight: 'bold', fontSize: '0.85rem', color: color, width: '100%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', marginBottom: '4px' }}>
-                          {itemName}
-                        </div>
-                        {item.level && <div style={{ fontSize: '0.75rem', color: '#999', background: '#222', padding: '2px 6px', borderRadius: '4px', border: '1px solid #444' }}>Lv.{item.level}</div>}
-                      </div>
-                    );
-                  })}
-                  </div>
-                )}
-                {filteredSearchItems.length === 0 && (
-                  <div style={{ padding: '30px 20px', textAlign: 'center', color: '#888', background: 'rgba(0,0,0,0.2)', borderRadius: '8px', border: '1px dashed #444' }}>
-                    No items found matching the criteria.
-                  </div>
-                )}
-              </div>
-            </div>
-          );
-        })()}
-      </section>
 
       {/* How to Use Section */}
       <section style={{ 
