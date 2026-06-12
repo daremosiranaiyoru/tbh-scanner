@@ -11094,7 +11094,7 @@
     "buyOrderCents": 0
   },
   "Emerald Bracer (Immortal) A": {
-    "buyOrderCents": 200
+    "buyOrderCents": 250
   },
   "Emerald Bracer (Arcana) A": {
     "buyOrderCents": 0
@@ -11256,7 +11256,7 @@
     "buyOrderCents": 0
   },
   "Ethereal Bracer (Beyond) A": {
-    "buyOrderCents": 8101
+    "buyOrderCents": 9704
   },
   "Void Bracer": {
     "buyOrderCents": 0
@@ -11316,48 +11316,48 @@
     "buyOrderCents": 0
   },
   "Dimensional Gloves (Divine) A": {
-    "buyOrderCents": 3427
+    "buyOrderCents": 3432
   },
   "Dimensional Scepter (Celestial) A": {
-    "buyOrderCents": 5104,
-    "lowestCents": 15593
+    "buyOrderCents": 5110,
+    "lowestCents": 15613
   },
   "Dimensional Orb (Divine) A": {
-    "buyOrderCents": 5874,
-    "lowestCents": 22273
+    "buyOrderCents": 8820,
+    "lowestCents": 22302
   },
   "Ancient Orb (Celestial) A": {
     "buyOrderCents": 1560,
-    "lowestCents": 9790
+    "lowestCents": 9802
   },
   "Dimensional Gloves (Celestial) A": {
     "buyOrderCents": 0
   },
   "Shine Gloves (Celestial) A": {
-    "buyOrderCents": 1292,
+    "buyOrderCents": 1293,
     "lowestCents": 4362
   },
   "Radiant Shield (Divine) A": {
-    "buyOrderCents": 3427,
-    "lowestCents": 22273
+    "buyOrderCents": 3432,
+    "lowestCents": 22302
   },
   "Dimensional Tome (Celestial) A": {
-    "buyOrderCents": 2714,
-    "lowestCents": 14333
+    "buyOrderCents": 2717,
+    "lowestCents": 14351
   },
   "Shine Boots (Celestial) A": {
     "buyOrderCents": 0
   },
   "Ancient Orb (Cosmic) A": {
-    "buyOrderCents": 3296,
-    "lowestCents": 12352
+    "buyOrderCents": 3512,
+    "lowestCents": 12368
   },
   "Warrior's Tome (Celestial) A": {
-    "buyOrderCents": 3462,
-    "lowestCents": 11128
+    "buyOrderCents": 3467,
+    "lowestCents": 11142
   },
   "Limitless Scepter (Celestial) A": {
-    "buyOrderCents": 2621,
-    "lowestCents": 9490
+    "buyOrderCents": 2624,
+    "lowestCents": 9502
   }
 }
