@@ -2126,7 +2126,7 @@ export default function ScannerApp() {
           </span>
           <span style={{ fontSize: '1rem' }}>{howToUseOpen ? '▼' : '◀'}</span>
         </button>
-        <div style={{ display: howToUseOpen ? 'block' : 'none', padding: '30px', background: 'rgba(255, 255, 255, 0.03)' }}>
+        <div style={{ display: howToUseOpen ? 'block' : 'none', padding: '30px', background: 'rgba(255, 255, 255, 0.03)', textAlign: 'center' }}>
           {(() => {
           const guideTrans = {
             title: { 'en-US': 'How to Use', 'ja-JP': '使い方', 'zh-Hans': '使用方法', 'zh-Hant': '使用方法', 'ko-KR': '사용 방법', 'ru-RU': 'Как использовать', 'es-ES': 'Cómo usar', 'fr-FR': 'Comment utiliser', 'de-DE': 'Wie man es benutzt', 'pt-BR': 'Como usar', 'tr-TR': 'Nasıl Kullanılır', 'vi-VN': 'Cách sử dụng' },

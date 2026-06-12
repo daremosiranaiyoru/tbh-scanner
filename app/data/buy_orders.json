@@ -3455,7 +3455,7 @@
     "buyOrderCents": 0
   },
   "Fate Scepter (Legendary) A": {
-    "buyOrderCents": 40
+    "buyOrderCents": 24
   },
   "Fate Scepter (Mythic) A": {
     "buyOrderCents": 0
@@ -3464,7 +3464,7 @@
     "buyOrderCents": 57
   },
   "Fate Scepter (Arcana) A": {
-    "buyOrderCents": 513,
+    "buyOrderCents": 515,
     "lowestCents": 2657
   },
   "Fate Scepter (Beyond) A": {
