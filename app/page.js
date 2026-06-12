@@ -8,7 +8,10 @@ import { useRouter } from 'next/navigation';
 import { loadDatabase, scanIcons } from '../lib/ocr-engine';
 import itemNames from '../public/item_names.json';
 import spriteMap from '../public/sprite_map.json';
+import iconsManifest from '../public/icons_manifest.json';
 import html2canvas from 'html2canvas';
+
+const validIcons = new Set(iconsManifest);
 
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
@@ -20,6 +23,9 @@ function SpriteIcon({ icon, size = 32, style = {}, className = '', alt = '', tit
   const sprite = spriteMap[icon];
   
   if (!sprite) {
+    if (!validIcons.has(icon)) {
+      return <div title={title || alt} style={{ width: `${size}px`, height: `${size}px`, display: 'inline-block', ...style }} className={className} />;
+    }
     return <img src={`/icons/${icon}`} alt={alt || title} title={title} style={{ width: `${size}px`, height: `${size}px`, imageRendering: 'pixelated', ...style }} className={className} />;
   }
   
