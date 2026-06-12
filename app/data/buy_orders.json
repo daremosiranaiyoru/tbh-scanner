@@ -2658,7 +2658,7 @@
     "buyOrderCents": 0
   },
   "Herald Staff (Legendary) A": {
-    "buyOrderCents": 202
+    "buyOrderCents": 26
   },
   "Herald Staff (Mythic) A": {
     "buyOrderCents": 0
@@ -2685,7 +2685,7 @@
     "buyOrderCents": 0
   },
   "Long Staff (Legendary) A": {
-    "buyOrderCents": 67,
+    "buyOrderCents": 109,
     "lowestCents": 6240
   },
   "Long Staff (Mythic) A": {
@@ -2713,7 +2713,7 @@
     "buyOrderCents": 0
   },
   "Witch Staff (Legendary) A": {
-    "buyOrderCents": 43
+    "buyOrderCents": 44
   },
   "Witch Staff (Mythic) A": {
     "buyOrderCents": 0
@@ -2740,17 +2740,17 @@
     "buyOrderCents": 0
   },
   "Azure Staff (Legendary) A": {
-    "buyOrderCents": 72,
-    "lowestCents": 7515
+    "buyOrderCents": 84,
+    "lowestCents": 7568
   },
   "Azure Staff (Mythic) A": {
     "buyOrderCents": 0
   },
   "Azure Staff (Immortal) A": {
-    "buyOrderCents": 81
+    "buyOrderCents": 82
   },
   "Azure Staff (Arcana) A": {
-    "buyOrderCents": 347
+    "buyOrderCents": 348
   },
   "Azure Staff (Beyond) A": {
     "buyOrderCents": 0
@@ -2795,21 +2795,21 @@
     "buyOrderCents": 0
   },
   "Sage Staff (Legendary) A": {
-    "buyOrderCents": 117,
-    "lowestCents": 5586
+    "buyOrderCents": 156,
+    "lowestCents": 5579
   },
   "Sage Staff (Mythic) A": {
     "buyOrderCents": 0
   },
   "Sage Staff (Immortal) A": {
-    "buyOrderCents": 202,
-    "lowestCents": 7812
+    "buyOrderCents": 402,
+    "lowestCents": 7907
   },
   "Sage Staff (Arcana) A": {
-    "buyOrderCents": 214
+    "buyOrderCents": 217
   },
   "Sage Staff (Beyond) A": {
-    "buyOrderCents": 157
+    "buyOrderCents": 158
   },
   "Mystic Staff": {
     "buyOrderCents": 0

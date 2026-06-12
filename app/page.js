@@ -1183,7 +1183,7 @@ export default function ScannerApp() {
 
         {/* Center: Tips Banner */}
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Link href={`/cashout?lang=${selectedLang}`} prefetch={false} style={{ textDecoration: 'none' }}>
+          <a href={`/cashout?lang=${selectedLang}`} style={{ textDecoration: 'none' }}>
             <div style={{
               background: 'rgba(76, 175, 80, 0.15)',
               border: '1px solid rgba(76, 175, 80, 0.4)',
@@ -1202,7 +1202,7 @@ export default function ScannerApp() {
                 {cashoutAdTranslations[selectedLang] || cashoutAdTranslations['en-US']}
               </span>
             </div>
-          </Link>
+          </a>
         </div>
 
         {/* Right: Small Ko-fi Link */}
