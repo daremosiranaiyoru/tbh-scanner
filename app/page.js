@@ -33,7 +33,7 @@ function SpriteIcon({ icon, size = 32, style = {}, className = '', alt = '', tit
       style={{
         width: `${size}px`,
         height: `${size}px`,
-        backgroundImage: 'url(/icons_sprite.png)',
+        backgroundImage: 'url(/icons_sprite.png?v=2)',
         backgroundPosition: `-${sprite.x * scale}px -${sprite.y * scale}px`,
         backgroundSize: `${scaledSpriteWidth}px auto`,
         imageRendering: 'pixelated',

@@ -3399,21 +3399,21 @@
     "buyOrderCents": 0
   },
   "Rune Scepter (Legendary) A": {
-    "buyOrderCents": 76
+    "buyOrderCents": 77
   },
   "Rune Scepter (Mythic) A": {
     "buyOrderCents": 0
   },
   "Rune Scepter (Immortal) A": {
-    "buyOrderCents": 117,
-    "lowestCents": 2944
+    "buyOrderCents": 233,
+    "lowestCents": 2951
   },
   "Rune Scepter (Arcana) A": {
-    "buyOrderCents": 232,
-    "lowestCents": 2508
+    "buyOrderCents": 329,
+    "lowestCents": 2503
   },
   "Rune Scepter (Beyond) A": {
-    "buyOrderCents": 282
+    "buyOrderCents": 192
   },
   "Legend Scepter": {
     "buyOrderCents": 0
@@ -3464,7 +3464,7 @@
     "buyOrderCents": 57
   },
   "Fate Scepter (Arcana) A": {
-    "buyOrderCents": 515,
+    "buyOrderCents": 521,
     "lowestCents": 2657
   },
   "Fate Scepter (Beyond) A": {
@@ -3537,20 +3537,20 @@
     "buyOrderCents": 0
   },
   "Limitless Scepter (Legendary) A": {
-    "buyOrderCents": 17
+    "buyOrderCents": 16
   },
   "Limitless Scepter (Mythic) A": {
     "buyOrderCents": 0
   },
   "Limitless Scepter (Immortal) A": {
-    "buyOrderCents": 83
+    "buyOrderCents": 41
   },
   "Limitless Scepter (Arcana) A": {
     "buyOrderCents": 311
   },
   "Limitless Scepter (Beyond) A": {
-    "buyOrderCents": 335,
-    "lowestCents": 3206
+    "buyOrderCents": 354,
+    "lowestCents": 3395
   },
   "Chaos Scepter": {
     "buyOrderCents": 0
@@ -3625,7 +3625,7 @@
     "buyOrderCents": 0
   },
   "Dimensional Scepter (Immortal) A": {
-    "buyOrderCents": 388
+    "buyOrderCents": 393
   },
   "Dimensional Scepter (Arcana) A": {
     "buyOrderCents": 250
