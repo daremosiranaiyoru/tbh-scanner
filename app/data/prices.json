@@ -54,9 +54,9 @@
     "buyOrderCents": 48300
   },
   "Coral Piece": {
-    "medianCents": 9,
-    "qty": 23007,
-    "lowestCents": 9,
+    "medianCents": 12,
+    "qty": 19376,
+    "lowestCents": 12,
     "buyOrderCents": 1500
   },
   "Bastard Sword (Legendary) A": {
@@ -66,8 +66,8 @@
     "buyOrderCents": 101800
   },
   "Minor Emerald": {
-    "medianCents": 9,
-    "qty": 32596,
+    "medianCents": 10,
+    "qty": 26839,
     "lowestCents": 10
   },
   "Knight's Armor (Legendary) A": {
@@ -76,9 +76,9 @@
     "lowestCents": 50
   },
   "Ruby": {
-    "medianCents": 187,
-    "qty": 1777,
-    "lowestCents": 203
+    "medianCents": 507,
+    "qty": 432,
+    "lowestCents": 533
   },
   "Chain Mail (Legendary) A": {
     "medianCents": 734,
@@ -106,9 +106,9 @@
     "lowestCents": 22
   },
   "Obsidian Shard": {
-    "medianCents": 6,
-    "qty": 22270,
-    "lowestCents": 6
+    "medianCents": 7,
+    "qty": 19316,
+    "lowestCents": 7
   },
   "Chain Helmet (Legendary) A": {
     "medianCents": 15,
@@ -122,7 +122,7 @@
   },
   "Minor Topaz": {
     "medianCents": 6,
-    "qty": 28365,
+    "qty": 23843,
     "lowestCents": 6
   },
   "Witch Staff (Legendary) A": {
@@ -136,9 +136,9 @@
     "lowestCents": 10
   },
   "Turquoise": {
-    "medianCents": 361,
-    "qty": 773,
-    "lowestCents": 443
+    "medianCents": 657,
+    "qty": 76,
+    "lowestCents": 716
   },
   "Knight Boots (Legendary) A": {
     "medianCents": 10,
@@ -151,14 +151,14 @@
     "lowestCents": 10
   },
   "Garnet": {
-    "medianCents": 148,
-    "qty": 1329,
-    "lowestCents": 146
+    "medianCents": 236,
+    "qty": 164,
+    "lowestCents": 236
   },
   "Crystal Quartz": {
-    "medianCents": 124,
-    "qty": 1789,
-    "lowestCents": 124
+    "medianCents": 248,
+    "qty": 219,
+    "lowestCents": 287
   },
   "Soulstone - Hell": {
     "medianCents": 1467,
@@ -167,53 +167,53 @@
   },
   "Amber Gem": {
     "medianCents": 4,
-    "qty": 13808,
+    "qty": 15183,
     "lowestCents": 4
   },
   "Diamond": {
-    "medianCents": 250,
-    "qty": 375,
-    "lowestCents": 267
+    "medianCents": 358,
+    "qty": 160,
+    "lowestCents": 373
   },
   "Minor Amethyst": {
     "medianCents": 4,
-    "qty": 21649,
-    "lowestCents": 3
+    "qty": 24162,
+    "lowestCents": 4
   },
   "Spider Silk": {
-    "medianCents": 6,
-    "qty": 4646,
+    "medianCents": 7,
+    "qty": 4880,
     "lowestCents": 6
   },
   "Enchanted Ruby": {
-    "medianCents": 176,
-    "qty": 577,
-    "lowestCents": 191
+    "medianCents": 467,
+    "qty": 348,
+    "lowestCents": 553
   },
   "Sapphire": {
     "medianCents": 5,
-    "qty": 8604,
-    "lowestCents": 4
+    "qty": 11386,
+    "lowestCents": 5
   },
   "Topaz": {
     "medianCents": 4,
-    "qty": 17816,
+    "qty": 19676,
     "lowestCents": 4
   },
   "Minor Sapphire": {
     "medianCents": 4,
-    "qty": 13744,
+    "qty": 14769,
     "lowestCents": 3
   },
   "Amethyst": {
-    "medianCents": 437,
-    "qty": 125,
-    "lowestCents": 443
+    "medianCents": 467,
+    "qty": 60,
+    "lowestCents": 466
   },
   "Wraith Essence": {
-    "medianCents": 319,
-    "qty": 16,
-    "lowestCents": 317
+    "medianCents": 346,
+    "qty": 15,
+    "lowestCents": 747
   },
   "Sacred Scepter (Legendary) A": {
     "medianCents": 353,
@@ -227,13 +227,13 @@
   },
   "Jade Stone": {
     "medianCents": 4,
-    "qty": 10097,
+    "qty": 11181,
     "lowestCents": 3
   },
   "Mystic Topaz": {
-    "medianCents": 70,
-    "qty": 496,
-    "lowestCents": 73
+    "medianCents": 188,
+    "qty": 308,
+    "lowestCents": 203
   },
   "Void Iron": {
     "medianCents": 811,
@@ -242,16 +242,15 @@
   },
   "Pearl": {
     "medianCents": 734,
-    "qty": 40,
+    "qty": 1,
     "lowestCents": 732
   },
   "Poisonous Herb": {
     "medianCents": 4,
-    "qty": 3900,
+    "qty": 4081,
     "lowestCents": 4
   },
   "Emerald": {
-    "medianCents": 2198,
     "qty": 16,
     "lowestCents": 2300
   },
@@ -261,9 +260,9 @@
     "lowestCents": 8000
   },
   "Bat Wing Membrane": {
-    "medianCents": 4,
-    "qty": 3756,
-    "lowestCents": 4
+    "medianCents": 10,
+    "qty": 6074,
+    "lowestCents": 5
   },
   "Azure Staff (Legendary) A": {
     "medianCents": 179,
@@ -271,8 +270,8 @@
     "lowestCents": 179
   },
   "Arcane Crystal": {
-    "medianCents": 1315,
-    "qty": 27,
+    "medianCents": 1432,
+    "qty": 3,
     "lowestCents": 179
   },
   "Soulstone - Torment": {
@@ -281,48 +280,48 @@
     "lowestCents": 716
   },
   "Dragon Bile": {
-    "medianCents": 121,
-    "qty": 104,
-    "lowestCents": 120
+    "medianCents": 143,
+    "qty": 84,
+    "lowestCents": 142
   },
   "Lapis Lazuli": {
-    "medianCents": 664,
+    "medianCents": 966,
     "qty": 9,
-    "lowestCents": 796
+    "lowestCents": 6517
   },
   "Black Pearl": {
-    "medianCents": 213,
-    "qty": 97,
-    "lowestCents": 214
+    "medianCents": 310,
+    "qty": 32,
+    "lowestCents": 310
   },
   "Shine Armor (Legendary) A": {
     "qty": 1,
     "lowestCents": 1576
   },
   "Nightshade Extract": {
-    "medianCents": 154,
-    "qty": 88,
-    "lowestCents": 203
+    "medianCents": 299,
+    "qty": 37,
+    "lowestCents": 311
   },
   "Mushroom Spore": {
     "medianCents": 5,
-    "qty": 3971,
-    "lowestCents": 4
+    "qty": 6080,
+    "lowestCents": 5
   },
   "Goblin Hide": {
     "medianCents": 4,
-    "qty": 3993,
+    "qty": 4083,
     "lowestCents": 3
   },
   "Starlight Sapphire": {
-    "medianCents": 74,
-    "qty": 698,
-    "lowestCents": 93
+    "medianCents": 132,
+    "qty": 606,
+    "lowestCents": 132
   },
   "Ogre Blood": {
     "medianCents": 5,
-    "qty": 3233,
-    "lowestCents": 4
+    "qty": 6401,
+    "lowestCents": 5
   },
   "War Bow (Legendary) A": {
     "qty": 9,
@@ -330,18 +329,18 @@
   },
   "Harpy Feather": {
     "medianCents": 532,
-    "qty": 20,
+    "qty": 2,
     "lowestCents": 1466
   },
   "Healing Herb": {
     "medianCents": 4,
-    "qty": 3616,
+    "qty": 4966,
     "lowestCents": 3
   },
   "Demon Blood": {
-    "medianCents": 310,
-    "qty": 53,
-    "lowestCents": 337
+    "medianCents": 409,
+    "qty": 17,
+    "lowestCents": 560
   },
   "Blessed Scepter (Legendary) A": {
     "medianCents": 192,
@@ -349,9 +348,9 @@
     "lowestCents": 192
   },
   "Ancient Tree Sap": {
-    "medianCents": 4,
-    "qty": 5703,
-    "lowestCents": 4
+    "medianCents": 5,
+    "qty": 8367,
+    "lowestCents": 5
   },
   "Chaos Shard": {
     "medianCents": 85,
@@ -360,7 +359,7 @@
   },
   "Wolf Fang": {
     "medianCents": 4,
-    "qty": 2740,
+    "qty": 4709,
     "lowestCents": 3
   },
   "Rapier (Legendary) A": {
@@ -370,17 +369,17 @@
   },
   "Slime Jelly": {
     "medianCents": 4,
-    "qty": 1127,
+    "qty": 1544,
     "lowestCents": 3
   },
   "Wyvern Claw": {
-    "medianCents": 215,
-    "qty": 229,
-    "lowestCents": 214
+    "medianCents": 348,
+    "qty": 18,
+    "lowestCents": 358
   },
   "Skeleton Bone": {
-    "medianCents": 4,
-    "qty": 1124,
+    "medianCents": 3,
+    "qty": 1490,
     "lowestCents": 3
   },
   "Void Ichor": {
@@ -409,9 +408,9 @@
     "lowestCents": 323
   },
   "Mandrake Root": {
-    "medianCents": 390,
-    "qty": 6,
-    "lowestCents": 623
+    "medianCents": 622,
+    "qty": 7,
+    "lowestCents": 767
   },
   "Fighter's Helmet (Legendary) A": {
     "medianCents": 1510,
@@ -445,7 +444,7 @@
   },
   "Dragonite Crystal": {
     "qty": 8,
-    "lowestCents": 2196
+    "lowestCents": 2204
   },
   "Rune Helmet (Legendary) A": {
     "medianCents": 550,
@@ -504,7 +503,7 @@
   },
   "Celestial Pearl": {
     "qty": 18,
-    "lowestCents": 4306
+    "lowestCents": 4324
   },
   "Dimensional Armor (Divine) A": {
     "medianCents": 21134,
@@ -1077,12 +1076,12 @@
   },
   "Opal": {
     "qty": 15,
-    "lowestCents": 1868
+    "lowestCents": 1867
   },
   "Void Opal": {
-    "medianCents": 836,
+    "medianCents": 835,
     "qty": 9,
-    "lowestCents": 835
+    "lowestCents": 839
   },
   "Long Staff (Immortal) A": {
     "medianCents": 1626,
@@ -1141,12 +1140,12 @@
   },
   "Dice": {
     "qty": 2,
-    "lowestCents": 3581
+    "lowestCents": 3579
   },
   "Basilisk Scale": {
-    "medianCents": 624,
-    "qty": 2,
-    "lowestCents": 809
+    "medianCents": 809,
+    "qty": 1,
+    "lowestCents": 9219
   },
   "Dusk Bow (Legendary) A": {
     "qty": 1,
@@ -1226,7 +1225,7 @@
   },
   "Phoenix Ash": {
     "qty": 1,
-    "lowestCents": 2338
+    "lowestCents": 2337
   },
   "Rune Sword (Immortal) A": {
     "medianCents": 1266,
@@ -1305,13 +1304,12 @@
     "lowestCents": 58
   },
   "Astral Diamond": {
-    "medianCents": 1248,
     "qty": 1
   },
   "Griffin Beak": {
-    "medianCents": 169,
-    "lowestCents": 200,
-    "qty": 84
+    "medianCents": 277,
+    "lowestCents": 292,
+    "qty": 54
   },
   "Titan Marrow": {
     "medianCents": 1030,
