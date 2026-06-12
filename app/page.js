@@ -78,6 +78,10 @@ const langToCurrency = {
   'pt-BR': { code: 'BRL' },
   'tr-TR': { code: 'TRY' },
   'vi-VN': { code: 'VND' },
+  'id-ID': { code: 'IDR' },
+  'th-TH': { code: 'THB' },
+  'pl-PL': { code: 'PLN' },
+  'uk-UA': { code: 'UAH' },
 };
 
 // Cache for preserving state across client-side navigations (e.g. going to tips page and back)
@@ -1363,7 +1367,11 @@ export default function ScannerApp() {
               'en-US': { code: 'USD' }, 'ja-JP': { code: 'JPY' }, 'zh-Hans': { code: 'CNY' },
               'zh-Hant': { code: 'TWD' }, 'ko-KR': { code: 'KRW' }, 'ru-RU': { code: 'RUB' },
               'es-ES': { code: 'EUR' }, 'fr-FR': { code: 'EUR' }, 'de-DE': { code: 'EUR' },
-              'pt-BR': { code: 'BRL' }, 'tr-TR': { code: 'TRY' }, 'vi-VN': { code: 'VND' }
+              'pt-BR': { code: 'BRL' }, 'tr-TR': { code: 'TRY' }, 'vi-VN': { code: 'VND' },
+  'id-ID': { code: 'IDR' },
+  'th-TH': { code: 'THB' },
+  'pl-PL': { code: 'PLN' },
+  'uk-UA': { code: 'UAH' },
             };
             
             if (rates) {
