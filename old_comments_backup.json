@@ -1,0 +1,25 @@
+﻿{
+    "result":  [
+                   "{\"id\":\"178104844601328za6\",\"text\":\"xin xon xin\",\"timestamp\":1781048446013}",
+                   "{\"id\":\"1781039919872rtlx0\",\"text\":\"Holding Alt-L in the inventory displays the item levels. Try using it to improve accuracy.\",\"timestamp\":1781039919872}",
+                   "{\"id\":\"1781033363707ck0uh\",\"text\":\"Add multifiles please\",\"timestamp\":1781033363714}",
+                   "{\"id\":\"1781041728175625dk\",\"text\":\"Thanks for the suggestion! I implemented the multifiles scan\",\"timestamp\":1781041728175,\"isAdmin\":true,\"parentId\":\"1781033363707ck0uh\"}",
+                   "{\"id\":\"17810329504560aots\",\"text\":\"これ終わってる\",\"timestamp\":1781032950456}",
+                   "{\"id\":\"1781028341803q7jyq\",\"text\":\"pilipinz nambawan!!!!!!!!!!!!!!!!!!!!!!!!!!!!\",\"timestamp\":1781028341803}",
+                   "{\"id\":\"17810245891777r364\",\"text\":\"Open the steam market lmao\",\"timestamp\":1781024589177}",
+                   "{\"id\":\"1781021992035dm7qm\",\"text\":\"Congrats for the app!!! Cheers from BRASIL GALOOOOOOOOOOOOOOO\",\"timestamp\":1781021992035}",
+                   "{\"id\":\"1781020694337zzt7n\",\"text\":\"Ferramenta maravilhosa parabéns pra quem desenvolveu!\",\"timestamp\":1781020694337}",
+                   "{\"id\":\"1781009315632e09oe\",\"text\":\"КОГДА ТП ВКЛЮЧАТ?\",\"timestamp\":1781009315632}",
+                   "{\"id\":\"1781008201515knp2m\",\"text\":\"Hey dev, could you add a localStorage key to persist the language selection?\",\"timestamp\":1781008201515}",
+                   "{\"id\":\"1781011324348pxa65\",\"text\":\"Thanks for the suggestion! I just implemented the language saving feature.\",\"timestamp\":1781011324348,\"isAdmin\":true,\"parentId\":\"1781008201515knp2m\"}",
+                   "{\"id\":\"17809988506859eusq\",\"text\":\"the recent sold price not up-to-date\",\"timestamp\":1780998850685}",
+                   "{\"id\":\"1781009976298qnf14\",\"text\":\"Prices shown here might be slightly delayed. Check the Steam Market for the most up-to-date prices.\",\"timestamp\":1781009976298,\"isAdmin\":true,\"parentId\":\"17809988506859eusq\"}",
+                   "{\"id\":\"1780985631396tvbvf\",\"text\":\"他に私の旅を助けてくれるようなツールがあるか、ご存知の方がいらっしゃいましたら教えていただけませんか？ よろしくお願いいたします\",\"timestamp\":1780985631396}",
+                   "{\"id\":\"1780981538071flvcn\",\"text\":\"バイヤーごとに最低リクエスト価格を表示する機能を追加してもらえますか？\",\"timestamp\":1780981538071}",
+                   "{\"id\":\"1781009867419u6fd3\",\"text\":\"技術的問題で情報の取得が難しくsteam marketで確認いただければ幸いです。お手数おかけします\",\"timestamp\":1781009867419,\"isAdmin\":true,\"parentId\":\"1780981538071flvcn\"}",
+                   "{\"id\":\"1780972767411umkor\",\"text\":\"金額順のソート機能があれば嬉しいです\",\"timestamp\":1780972767411}",
+                   "{\"id\":\"1781009711214zzv0f\",\"text\":\"ソート機能追加しました！リクエストありがとうございます！\",\"timestamp\":1781009711214,\"isAdmin\":true,\"parentId\":\"1780972767411umkor\"}",
+                   "{\"id\":\"1780961569604ygozi\",\"text\":\"Isso aqui é GOLD my friend!\",\"timestamp\":1780961569604}",
+                   "{\"id\":\"1780959836139dbiie\",\"text\":\"枠が変になるときがあります\",\"timestamp\":1780959836139}"
+               ]
+}

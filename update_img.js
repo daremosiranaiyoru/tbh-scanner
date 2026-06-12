@@ -1,0 +1,8 @@
+const fs = require('fs'); 
+let html = fs.readFileSync('app/page.js', 'utf8'); 
+html = html.replace(/<img src=\{`\/icons\/\$\{filterItems\.weapon\.icon\}`\} alt=\{filterItems\.weapon\.label\} style=\{\{ width: '32px', height: '32px', imageRendering: 'pixelated' \}\} \/>/g, "<SpriteIcon icon={filterItems.weapon.icon} alt={filterItems.weapon.label} />"); 
+html = html.replace(/<img src=\{`\/icons\/\$\{filterItems\.armor\.icon\}`\} alt=\{filterItems\.armor\.label\} style=\{\{ width: '32px', height: '32px', imageRendering: 'pixelated' \}\} \/>/g, "<SpriteIcon icon={filterItems.armor.icon} alt={filterItems.armor.label} />"); 
+html = html.replace(/<img src=\{`\/icons\/\$\{filterItems\.jewelry\.icon\}`\} alt=\{filterItems\.jewelry\.label\} style=\{\{ width: '32px', height: '32px', imageRendering: 'pixelated' \}\} \/>/g, "<SpriteIcon icon={filterItems.jewelry.icon} alt={filterItems.jewelry.label} />"); 
+html = html.replace(/<img src=\{`\/icons\/\$\{filterItems\.other\.icon\}`\} alt=\{filterItems\.other\.label\} style=\{\{ width: '32px', height: '32px', imageRendering: 'pixelated' \}\} \/>/g, "<SpriteIcon icon={filterItems.other.icon} alt={filterItems.other.label} />"); 
+html = html.replace(/<img src=\{`\/icons\/\$\{iconFilename\}`\} alt=\{itemName\} style=\{\{ width: '48px', height: '48px', imageRendering: 'pixelated', borderRadius: '4px', marginBottom: '8px', boxShadow: '0 4px 6px rgba\\(0,0,0,0\\.3\\)' \}\} \/>/g, "<SpriteIcon icon={iconFilename} alt={itemName} size={48} style={{ borderRadius: '4px', marginBottom: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} />"); 
+fs.writeFileSync('app/page.js', html);
