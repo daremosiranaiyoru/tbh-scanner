@@ -3074,13 +3074,13 @@
     "buyOrderCents": 0
   },
   "Tempest Staff (Immortal) A": {
-    "buyOrderCents": 98
+    "buyOrderCents": 77
   },
   "Tempest Staff (Arcana) A": {
-    "buyOrderCents": 271
+    "buyOrderCents": 273
   },
   "Tempest Staff (Beyond) A": {
-    "buyOrderCents": 1496
+    "buyOrderCents": 1498
   },
   "Nova Staff": {
     "buyOrderCents": 0
@@ -3203,8 +3203,8 @@
     "buyOrderCents": 0
   },
   "Iron Scepter (Legendary) A": {
-    "buyOrderCents": 67,
-    "lowestCents": 71664
+    "buyOrderCents": 33,
+    "lowestCents": 71756
   },
   "Iron Scepter (Mythic) A": {
     "buyOrderCents": 0
@@ -3231,8 +3231,8 @@
     "buyOrderCents": 0
   },
   "Blessed Scepter (Legendary) A": {
-    "buyOrderCents": 217,
-    "lowestCents": 2892
+    "buyOrderCents": 220,
+    "lowestCents": 2890
   },
   "Blessed Scepter (Mythic) A": {
     "buyOrderCents": 0
@@ -3260,17 +3260,17 @@
   },
   "Steel Scepter (Legendary) A": {
     "buyOrderCents": 84,
-    "lowestCents": 3331
+    "lowestCents": 3348
   },
   "Steel Scepter (Mythic) A": {
     "buyOrderCents": 0
   },
   "Steel Scepter (Immortal) A": {
-    "buyOrderCents": 127,
-    "lowestCents": 1835
+    "buyOrderCents": 178,
+    "lowestCents": 2392
   },
   "Steel Scepter (Arcana) A": {
-    "buyOrderCents": 467,
+    "buyOrderCents": 117,
     "lowestCents": 2936
   },
   "Steel Scepter (Beyond) A": {
@@ -3289,17 +3289,17 @@
     "buyOrderCents": 0
   },
   "Sacred Scepter (Legendary) A": {
-    "buyOrderCents": 58,
-    "lowestCents": 1553
+    "buyOrderCents": 117,
+    "lowestCents": 1922
   },
   "Sacred Scepter (Mythic) A": {
     "buyOrderCents": 0
   },
   "Sacred Scepter (Immortal) A": {
-    "buyOrderCents": 152
+    "buyOrderCents": 122
   },
   "Sacred Scepter (Arcana) A": {
-    "buyOrderCents": 292
+    "buyOrderCents": 291
   },
   "Sacred Scepter (Beyond) A": {
     "buyOrderCents": 0
@@ -3344,8 +3344,8 @@
     "buyOrderCents": 0
   },
   "Devout Scepter (Legendary) A": {
-    "buyOrderCents": 234,
-    "lowestCents": 7166
+    "buyOrderCents": 235,
+    "lowestCents": 7176
   },
   "Devout Scepter (Mythic) A": {
     "buyOrderCents": 0
@@ -3399,21 +3399,21 @@
     "buyOrderCents": 0
   },
   "Rune Scepter (Legendary) A": {
-    "buyOrderCents": 77
+    "buyOrderCents": 76
   },
   "Rune Scepter (Mythic) A": {
     "buyOrderCents": 0
   },
   "Rune Scepter (Immortal) A": {
-    "buyOrderCents": 116,
-    "lowestCents": 1246
+    "buyOrderCents": 117,
+    "lowestCents": 2944
   },
   "Rune Scepter (Arcana) A": {
-    "buyOrderCents": 145,
-    "lowestCents": 2503
+    "buyOrderCents": 232,
+    "lowestCents": 2508
   },
   "Rune Scepter (Beyond) A": {
-    "buyOrderCents": 280
+    "buyOrderCents": 282
   },
   "Legend Scepter": {
     "buyOrderCents": 0
