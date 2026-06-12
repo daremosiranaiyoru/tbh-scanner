@@ -3549,8 +3549,8 @@
     "buyOrderCents": 311
   },
   "Limitless Scepter (Beyond) A": {
-    "buyOrderCents": 332,
-    "lowestCents": 3059
+    "buyOrderCents": 335,
+    "lowestCents": 3206
   },
   "Chaos Scepter": {
     "buyOrderCents": 0
@@ -3619,20 +3619,20 @@
     "buyOrderCents": 0
   },
   "Dimensional Scepter (Legendary) A": {
-    "buyOrderCents": 143
+    "buyOrderCents": 144
   },
   "Dimensional Scepter (Mythic) A": {
     "buyOrderCents": 0
   },
   "Dimensional Scepter (Immortal) A": {
-    "buyOrderCents": 386
+    "buyOrderCents": 388
   },
   "Dimensional Scepter (Arcana) A": {
-    "buyOrderCents": 305
+    "buyOrderCents": 250
   },
   "Dimensional Scepter (Beyond) A": {
     "buyOrderCents": 588,
-    "lowestCents": 3179
+    "lowestCents": 3172
   },
   "Shadow Scepter": {
     "buyOrderCents": 0
@@ -3755,7 +3755,7 @@
     "buyOrderCents": 0
   },
   "Leather Crossbow (Legendary) A": {
-    "buyOrderCents": 20
+    "buyOrderCents": 21
   },
   "Leather Crossbow (Mythic) A": {
     "buyOrderCents": 0
@@ -3818,7 +3818,7 @@
     "buyOrderCents": 145
   },
   "Complete Crossbow (Arcana) A": {
-    "buyOrderCents": 327
+    "buyOrderCents": 326
   },
   "Complete Crossbow (Beyond) A": {
     "buyOrderCents": 0
@@ -3842,7 +3842,7 @@
     "buyOrderCents": 0
   },
   "Exceptional Crossbow (Immortal) A": {
-    "buyOrderCents": 216
+    "buyOrderCents": 217
   },
   "Exceptional Crossbow (Arcana) A": {
     "buyOrderCents": 623
@@ -3890,7 +3890,7 @@
     "buyOrderCents": 0
   },
   "Iron Crossbow (Legendary) A": {
-    "buyOrderCents": 42
+    "buyOrderCents": 40
   },
   "Iron Crossbow (Mythic) A": {
     "buyOrderCents": 0
@@ -3902,7 +3902,7 @@
     "buyOrderCents": 588
   },
   "Iron Crossbow (Beyond) A": {
-    "buyOrderCents": 1199
+    "buyOrderCents": 1201
   },
   "Wing Crossbow": {
     "buyOrderCents": 0
@@ -3953,7 +3953,7 @@
     "buyOrderCents": 61
   },
   "Elite Crossbow (Arcana) A": {
-    "buyOrderCents": 946
+    "buyOrderCents": 950
   },
   "Elite Crossbow (Beyond) A": {
     "buyOrderCents": 574
@@ -3998,19 +3998,19 @@
     "buyOrderCents": 0
   },
   "Mystic Crossbow (Legendary) A": {
-    "buyOrderCents": 19
+    "buyOrderCents": 9
   },
   "Mystic Crossbow (Mythic) A": {
     "buyOrderCents": 0
   },
   "Mystic Crossbow (Immortal) A": {
-    "buyOrderCents": 213
+    "buyOrderCents": 214
   },
   "Mystic Crossbow (Arcana) A": {
-    "buyOrderCents": 300
+    "buyOrderCents": 301
   },
   "Mystic Crossbow (Beyond) A": {
-    "buyOrderCents": 1932
+    "buyOrderCents": 1942
   },
   "Fast Crossbow": {
     "buyOrderCents": 0
@@ -4166,13 +4166,13 @@
     "buyOrderCents": 0
   },
   "Dimensional Crossbow (Immortal) A": {
-    "buyOrderCents": 70
+    "buyOrderCents": 71
   },
   "Dimensional Crossbow (Arcana) A": {
-    "buyOrderCents": 500
+    "buyOrderCents": 505
   },
   "Dimensional Crossbow (Beyond) A": {
-    "buyOrderCents": 2526
+    "buyOrderCents": 2531
   },
   "Shadow Crossbow": {
     "buyOrderCents": 0
