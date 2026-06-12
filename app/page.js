@@ -979,6 +979,10 @@ export default function ScannerApp() {
               <option value="fr-FR" style={{background: '#1a1d24', color: 'white'}}>Français</option>
               <option value="de-DE" style={{background: '#1a1d24', color: 'white'}}>Deutsch</option>
               <option value="pt-BR" style={{background: '#1a1d24', color: 'white'}}>Português (BR)</option>
+              <option value="id-ID" style={{background: '#1a1d24', color: 'white'}}>Bahasa Indonesia</option>
+              <option value="th-TH" style={{background: '#1a1d24', color: 'white'}}>ภาษาไทย</option>
+              <option value="pl-PL" style={{background: '#1a1d24', color: 'white'}}>Polski</option>
+              <option value="uk-UA" style={{background: '#1a1d24', color: 'white'}}>Українська</option>
               <option value="tr-TR" style={{background: '#1a1d24', color: 'white'}}>Türkçe</option>
               <option value="vi-VN" style={{background: '#1a1d24', color: 'white'}}>Tiếng Việt</option>
             </select>
