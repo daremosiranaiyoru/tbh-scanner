@@ -3231,8 +3231,8 @@
     "buyOrderCents": 0
   },
   "Blessed Scepter (Legendary) A": {
-    "buyOrderCents": 220,
-    "lowestCents": 2890
+    "buyOrderCents": 217,
+    "lowestCents": 2896
   },
   "Blessed Scepter (Mythic) A": {
     "buyOrderCents": 0
@@ -3260,7 +3260,7 @@
   },
   "Steel Scepter (Legendary) A": {
     "buyOrderCents": 84,
-    "lowestCents": 3348
+    "lowestCents": 3389
   },
   "Steel Scepter (Mythic) A": {
     "buyOrderCents": 0
@@ -3270,7 +3270,7 @@
     "lowestCents": 2392
   },
   "Steel Scepter (Arcana) A": {
-    "buyOrderCents": 117,
+    "buyOrderCents": 119,
     "lowestCents": 2936
   },
   "Steel Scepter (Beyond) A": {
@@ -3296,10 +3296,10 @@
     "buyOrderCents": 0
   },
   "Sacred Scepter (Immortal) A": {
-    "buyOrderCents": 122
+    "buyOrderCents": 70
   },
   "Sacred Scepter (Arcana) A": {
-    "buyOrderCents": 291
+    "buyOrderCents": 292
   },
   "Sacred Scepter (Beyond) A": {
     "buyOrderCents": 0

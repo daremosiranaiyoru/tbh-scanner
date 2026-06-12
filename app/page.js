@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import styles from './page.module.css';
 import Link from 'next/link';
 import Script from 'next/script';
+import { useRouter } from 'next/navigation';
 import { loadDatabase, scanIcons } from '../lib/ocr-engine';
 import itemNames from '../public/item_names.json';
 import spriteMap from '../public/sprite_map.json';
@@ -127,6 +128,7 @@ let globalPricesLastFetch = 0;
 let globalFetchPricesPromise = null;
 
 export default function ScannerApp() {
+  const router = useRouter();
   const [isScanning, setIsScanning] = useState(false);
   const [isEngineReady, setIsEngineReady] = useState(false);
   const [results, setResults] = useState(pageCache?.results || []);
@@ -1202,26 +1204,25 @@ export default function ScannerApp() {
 
         {/* Center: Tips Banner */}
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <a href={`/cashout?lang=${selectedLang}`} style={{ textDecoration: 'none' }}>
-            <div style={{
-              background: 'rgba(76, 175, 80, 0.15)',
-              border: '1px solid rgba(76, 175, 80, 0.4)',
-              borderRadius: '20px',
-              padding: '8px 16px',
-              textAlign: 'center',
-              transition: 'all 0.2s',
-              cursor: 'pointer',
-              display: 'inline-block',
-              boxShadow: '0 2px 8px rgba(76, 175, 80, 0.1)'
-            }}
-            onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(76, 175, 80, 0.25)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
-            onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(76, 175, 80, 0.15)'; e.currentTarget.style.transform = 'none'; }}
-            >
-              <span style={{ color: '#81c784', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 'bold' }}>
-                {cashoutAdTranslations[selectedLang] || cashoutAdTranslations['en-US']}
-              </span>
-            </div>
-          </a>
+          <div style={{
+            background: 'rgba(76, 175, 80, 0.15)',
+            border: '1px solid rgba(76, 175, 80, 0.4)',
+            borderRadius: '20px',
+            padding: '8px 16px',
+            textAlign: 'center',
+            transition: 'all 0.2s',
+            cursor: 'pointer',
+            display: 'inline-block',
+            boxShadow: '0 2px 8px rgba(76, 175, 80, 0.1)'
+          }}
+          onClick={() => router.push(`/cashout?lang=${selectedLang}`)}
+          onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(76, 175, 80, 0.25)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+          onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(76, 175, 80, 0.15)'; e.currentTarget.style.transform = 'none'; }}
+          >
+            <span style={{ color: '#81c784', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 'bold' }}>
+              {cashoutAdTranslations[selectedLang] || cashoutAdTranslations['en-US']}
+            </span>
+          </div>
         </div>
 
         {/* Right: Small Ko-fi Link */}
