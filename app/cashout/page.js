@@ -491,13 +491,24 @@ footerTitle: '📝 Reference Link',
 
 export default function CashoutGuide() {
   const [selectedLang, setSelectedLang] = useState('en-US');
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const langParam = urlParams.get('lang');
     const saved = localStorage.getItem('preferredLang');
-    if (saved) {
+    
+    if (langParam && translations[langParam]) {
+      setSelectedLang(langParam);
+    } else if (saved && translations[saved]) {
       setSelectedLang(saved);
+    } else {
+      setSelectedLang('ja-JP');
     }
+    setMounted(true);
   }, []);
+
+  if (!mounted) return <div style={{ minHeight: '100vh', background: '#121212' }} />;
 
   const t = translations[selectedLang] || translations['en-US'];
 
