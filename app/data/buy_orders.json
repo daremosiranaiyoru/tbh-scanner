@@ -4274,7 +4274,7 @@
     "buyOrderCents": 0
   },
   "Wooden Axe (Immortal) A": {
-    "buyOrderCents": 20
+    "buyOrderCents": 21
   },
   "Wooden Axe (Arcana) A": {
     "buyOrderCents": 0
@@ -4382,11 +4382,11 @@
     "buyOrderCents": 0
   },
   "War Axe (Immortal) A": {
-    "buyOrderCents": 348,
+    "buyOrderCents": 347,
     "lowestCents": 2301
   },
   "War Axe (Arcana) A": {
-    "buyOrderCents": 441
+    "buyOrderCents": 442
   },
   "War Axe (Beyond) A": {
     "buyOrderCents": 0
@@ -4443,7 +4443,7 @@
     "buyOrderCents": 98
   },
   "Great Axe (Beyond) A": {
-    "buyOrderCents": 502
+    "buyOrderCents": 503
   },
   "Heavy Axe": {
     "buyOrderCents": 0
@@ -4497,7 +4497,7 @@
     "buyOrderCents": 124
   },
   "Rune Axe (Beyond) A": {
-    "buyOrderCents": 233
+    "buyOrderCents": 232
   },
   "Legend Axe": {
     "buyOrderCents": 0
@@ -4539,7 +4539,7 @@
     "buyOrderCents": 0
   },
   "Fate Axe (Legendary) A": {
-    "buyOrderCents": 50
+    "buyOrderCents": 51
   },
   "Fate Axe (Mythic) A": {
     "buyOrderCents": 0
@@ -4548,7 +4548,7 @@
     "buyOrderCents": 40
   },
   "Fate Axe (Arcana) A": {
-    "buyOrderCents": 93
+    "buyOrderCents": 94
   },
   "Fate Axe (Beyond) A": {
     "buyOrderCents": 262
@@ -4629,7 +4629,7 @@
     "buyOrderCents": 34
   },
   "Limitless Axe (Arcana) A": {
-    "buyOrderCents": 252
+    "buyOrderCents": 253
   },
   "Limitless Axe (Beyond) A": {
     "buyOrderCents": 374
@@ -4710,10 +4710,10 @@
     "buyOrderCents": 199
   },
   "Dimensional Axe (Arcana) A": {
-    "buyOrderCents": 224
+    "buyOrderCents": 225
   },
   "Dimensional Axe (Beyond) A": {
-    "buyOrderCents": 1175
+    "buyOrderCents": 1177
   },
   "Shadow Axe": {
     "buyOrderCents": 0
@@ -4836,7 +4836,7 @@
     "buyOrderCents": 0
   },
   "Wooden Shield (Legendary) A": {
-    "buyOrderCents": 20
+    "buyOrderCents": 21
   },
   "Wooden Shield (Mythic) A": {
     "buyOrderCents": 0
@@ -4863,7 +4863,7 @@
     "buyOrderCents": 0
   },
   "Iron Shield (Legendary) A": {
-    "buyOrderCents": 56
+    "buyOrderCents": 12
   },
   "Iron Shield (Mythic) A": {
     "buyOrderCents": 0
@@ -4890,15 +4890,15 @@
     "buyOrderCents": 0
   },
   "Heater Shield (Legendary) A": {
-    "buyOrderCents": 148,
+    "buyOrderCents": 99,
     "lowestCents": 2180
   },
   "Heater Shield (Mythic) A": {
     "buyOrderCents": 0
   },
   "Heater Shield (Immortal) A": {
-    "buyOrderCents": 156,
-    "lowestCents": 4509
+    "buyOrderCents": 157,
+    "lowestCents": 4506
   },
   "Heater Shield (Arcana) A": {
     "buyOrderCents": 193
@@ -4926,7 +4926,7 @@
   },
   "Heavy Shield (Immortal) A": {
     "buyOrderCents": 100,
-    "lowestCents": 4300
+    "lowestCents": 4305
   },
   "Heavy Shield (Arcana) A": {
     "buyOrderCents": 203
@@ -4980,14 +4980,14 @@
     "buyOrderCents": 0
   },
   "War Shield (Immortal) A": {
-    "buyOrderCents": 29,
+    "buyOrderCents": 40,
     "lowestCents": 2804
   },
   "War Shield (Arcana) A": {
     "buyOrderCents": 87
   },
   "War Shield (Beyond) A": {
-    "buyOrderCents": 113
+    "buyOrderCents": 114
   },
   "Barrier Shield": {
     "buyOrderCents": 0
