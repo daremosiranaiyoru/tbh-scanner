@@ -556,41 +556,68 @@ export default function ScannerApp() {
       
       // Build plain text for text pasting
       const plainTextTotalMsgs = {
-        'en-US': `💰 My Taskbar Hero inventory total value was ${totalString}!\n`,
-        'ja-JP': `💰 私のTaskbar Heroインベントリ総資産は ${totalString} でした！\n`,
-        'zh-Hans': `💰 我的 Taskbar Hero 物品库总价值为 ${totalString}！\n`,
-        'zh-Hant': `💰 我的 Taskbar Hero 物品庫總價值為 ${totalString}！\n`,
-        'ko-KR': `💰 내 Taskbar Hero 인벤토리 총 가치는 ${totalString}였습니다!\n`,
-        'ru-RU': `💰 Общая стоимость моего инвентаря Taskbar Hero составила ${totalString}!\n`,
-        'es-ES': `💰 ¡El valor total de mi inventario de Taskbar Hero fue ${totalString}!\n`,
-        'fr-FR': `💰 La valeur totale de mon inventaire Taskbar Hero était de ${totalString} !\n`,
-        'de-DE': `💰 Der Gesamtwert meines Taskbar Hero-Inventars betrug ${totalString}!\n`,
-        'pt-BR': `💰 O valor total do meu inventário do Taskbar Hero foi ${totalString}!\n`,
-        'tr-TR': `💰 Taskbar Hero envanterimin toplam değeri ${totalString} idi!\n`,
-        'vi-VN': `💰 Tổng giá trị kho đồ Taskbar Hero của tôi là ${totalString}!\n`
+        'en-US': `💰 My Taskbar Hero inventory total value was ${totalString}!
+`,
+        'ja-JP': `💰 私のTaskbar Heroインベントリ総資産は ${totalString} でした！
+`,
+        'zh-Hans': `💰 我的 Taskbar Hero 物品库总价值为 ${totalString}！
+`,
+        'zh-Hant': `💰 我的 Taskbar Hero 物品庫總價值為 ${totalString}！
+`,
+        'ko-KR': `💰 내 Taskbar Hero 인벤토리 총 가치는 ${totalString}였습니다!
+`,
+        'ru-RU': `💰 Общая стоимость моего инвентаря Taskbar Hero составила ${totalString}!
+`,
+        'es-ES': `💰 ¡El valor total de mi inventario de Taskbar Hero fue ${totalString}!
+`,
+        'fr-FR': `💰 La valeur totale de mon inventaire Taskbar Hero était de ${totalString} !
+`,
+        'de-DE': `💰 Der Gesamtwert meines Taskbar Hero-Inventars betrug ${totalString}!
+`,
+        'pt-BR': `💰 O valor total do meu inventário do Taskbar Hero foi ${totalString}!
+`,
+        'tr-TR': `💰 Taskbar Hero envanterimin toplam değeri ${totalString} idi!
+`,
+        'vi-VN': `💰 Tổng giá trị kho đồ Taskbar Hero của tôi là ${totalString}!
+`
       };
       
       let plainText = plainTextTotalMsgs[selectedLang] || plainTextTotalMsgs['en-US'];
-      plainText += `https://tbh-scanner.vercel.app\n\n`;
+      plainText += `https://tbh-scanner.vercel.app
+
+`;
       results.slice(0, 10).forEach(r => {
           const names = itemNames[r.name] || {};
           const displayName = names[selectedLang] || names['en-US'] || r.name.replace('.png', '');
-          plainText += `- ${displayName}\n`;
+          plainText += `- ${displayName}
+`;
       });
       if (results.length > 10) {
         const othersMsgs = {
-          'en-US': `...and ${results.length - 10} other items\n`,
-          'ja-JP': `...他 ${results.length - 10} アイテム\n`,
-          'zh-Hans': `...及其他 ${results.length - 10} 件物品\n`,
-          'zh-Hant': `...及其他 ${results.length - 10} 件物品\n`,
-          'ko-KR': `...외 ${results.length - 10}개 아이템\n`,
-          'ru-RU': `...и еще ${results.length - 10} предметов\n`,
-          'es-ES': `...y otros ${results.length - 10} objetos\n`,
-          'fr-FR': `...et ${results.length - 10} autres objets\n`,
-          'de-DE': `...und ${results.length - 10} weitere Gegenstände\n`,
-          'pt-BR': `...e outros ${results.length - 10} itens\n`,
-          'tr-TR': `...ve ${results.length - 10} diğer öğe\n`,
-          'vi-VN': `...và ${results.length - 10} vật phẩm khác\n`
+          'en-US': `...and ${results.length - 10} other items
+`,
+          'ja-JP': `...他 ${results.length - 10} アイテム
+`,
+          'zh-Hans': `...及其他 ${results.length - 10} 件物品
+`,
+          'zh-Hant': `...及其他 ${results.length - 10} 件物品
+`,
+          'ko-KR': `...외 ${results.length - 10}개 아이템
+`,
+          'ru-RU': `...и еще ${results.length - 10} предметов
+`,
+          'es-ES': `...y otros ${results.length - 10} objetos
+`,
+          'fr-FR': `...et ${results.length - 10} autres objets
+`,
+          'de-DE': `...und ${results.length - 10} weitere Gegenstände
+`,
+          'pt-BR': `...e outros ${results.length - 10} itens
+`,
+          'tr-TR': `...ve ${results.length - 10} diğer öğe
+`,
+          'vi-VN': `...và ${results.length - 10} vật phẩm khác
+`
         };
         plainText += othersMsgs[selectedLang] || othersMsgs['en-US'];
       }
@@ -785,7 +812,11 @@ export default function ScannerApp() {
     'de-DE': 'Update: Sie können jetzt auf das Symbol eines Elements im gescannten Bild klicken, um dessen Informationen sofort anzuzeigen!',
     'pt-BR': 'Atualização: Agora você pode clicar no ícone de um item na imagem digitalizada para ver instantaneamente suas informações!',
     'tr-TR': 'Güncelleme: Artık taranan görüntüdeki bir öğenin simgesine tıklayarak bilgilerini anında görüntüleyebilirsiniz!',
-    'vi-VN': 'Cập nhật: Giờ đây, bạn có thể nhấp vào biểu tượng của một mục trong hình ảnh được quét để xem ngay thông tin của mục đó!'
+    'vi-VN': 'Cập nhật: Giờ đây, bạn có thể nhấp vào biểu tượng của một mục trong hình ảnh được quét để xem ngay thông tin của mục đó!',
+    'id-ID': 'Baru: Dukungan untuk penambahan item manual!',
+    'th-TH': 'ใหม่: รองรับการเพิ่มไอเทมด้วยตนเอง!',
+    'pl-PL': 'Nowość: Wsparcie dla ręcznego dodawania przedmiotów!',
+    'uk-UA': 'Нове: Підтримка ручного додавання предметів!'
   };
 
   const titleTranslations = {
@@ -800,7 +831,11 @@ export default function ScannerApp() {
     'de-DE': 'Taskbar Hero KI-Gutachter',
     'pt-BR': 'Avaliador de IA do Taskbar Hero',
     'tr-TR': 'Taskbar Hero YZ Eksperi',
-    'vi-VN': 'Chuyên gia thẩm định AI Taskbar Hero'
+    'vi-VN': 'Chuyên gia thẩm định AI Taskbar Hero',
+    'id-ID': 'Penilai AI Taskbar Hero',
+    'th-TH': 'ผู้ประเมิน AI ของ Taskbar Hero',
+    'pl-PL': 'Rzeczoznawca AI Taskbar Hero',
+    'uk-UA': 'Оцінювач ШІ Taskbar Hero'
   };
 
   const descTranslations = {
@@ -815,7 +850,11 @@ export default function ScannerApp() {
     'de-DE': 'Schätzen Sie Preise sofort anhand von Screenshots Ihres Inventars.',
     'pt-BR': 'Estime instantaneamente os preços a partir das capturas de tela do seu inventário.',
     'tr-TR': 'Envanterinizin ekran görüntülerinden anında fiyat tahmini alın.',
-    'vi-VN': 'Định giá ngay lập tức từ ảnh chụp màn hình kho đồ của bạn.'
+    'vi-VN': 'Định giá ngay lập tức từ ảnh chụp màn hình kho đồ của bạn.',
+    'id-ID': 'Menilai harga secara instan dari tangkapan layar inventaris Anda.',
+    'th-TH': 'ประเมินราคาจากภาพหน้าจอช่องเก็บของของคุณทันที',
+    'pl-PL': 'Błyskawicznie oceniaj ceny na podstawie zrzutów ekranu ekwipunku.',
+    'uk-UA': 'Миттєво оцінюйте ціни за скріншотами інвентарю.'
   };
 
   const appraisingTranslations = {
@@ -830,7 +869,11 @@ export default function ScannerApp() {
     'de-DE': 'Schätzung...',
     'pt-BR': 'Avaliando...',
     'tr-TR': 'Değerlendiriliyor...',
-    'vi-VN': 'Đang định giá...'
+    'vi-VN': 'Đang định giá...',
+    'id-ID': 'Menilai...',
+    'th-TH': 'กำลังประเมิน...',
+    'pl-PL': 'Ocenianie...',
+    'uk-UA': 'Оцінювання...'
   };
 
   const pleaseWaitTranslations = {
@@ -845,7 +888,11 @@ export default function ScannerApp() {
     'de-DE': 'Bitte warten Sie einen Moment',
     'pt-BR': 'Por favor, aguarde um momento',
     'tr-TR': 'Lütfen biraz bekleyin',
-    'vi-VN': 'Vui lòng chờ trong giây lát'
+    'vi-VN': 'Vui lòng chờ trong giây lát',
+    'id-ID': 'Mohon tunggu sebentar.',
+    'th-TH': 'กรุณารอสักครู่',
+    'pl-PL': 'Proszę chwilę poczekać.',
+    'uk-UA': 'Будь ласка, зачекайте хвилинку.'
   };
 
   const clearScreenshotTranslations = {
@@ -860,7 +907,11 @@ export default function ScannerApp() {
     'de-DE': 'Screenshot löschen',
     'pt-BR': 'Limpar captura',
     'tr-TR': 'Ekran Görüntüsünü Temizle',
-    'vi-VN': 'Xóa ảnh chụp màn hình'
+    'vi-VN': 'Xóa ảnh chụp màn hình',
+    'id-ID': 'Hapus Tangkapan Layar',
+    'th-TH': 'ล้างภาพหน้าจอ',
+    'pl-PL': 'Wyczyść Zrzut Ekranu',
+    'uk-UA': 'Очистити скріншот'
   };
 
   const uploadTitleTranslations = {
@@ -875,7 +926,11 @@ export default function ScannerApp() {
     'de-DE': 'Screenshot per Drag & Drop oder Einfügen (Strg+V) hinzufügen',
     'pt-BR': 'Arraste e solte ou cole (Ctrl+V) a captura de tela',
     'tr-TR': 'Ekran görüntüsünü Sürükleyip Bırakın veya Yapıştırın (Ctrl+V)',
-    'vi-VN': 'Kéo & Thả hoặc Dán (Ctrl+V) ảnh chụp màn hình'
+    'vi-VN': 'Kéo & Thả hoặc Dán (Ctrl+V) ảnh chụp màn hình',
+    'id-ID': 'Unggah Tangkapan Layar',
+    'th-TH': 'อัปโหลดภาพหน้าจอ',
+    'pl-PL': 'Prześlij Zrzut Ekranu',
+    'uk-UA': 'Завантажити скріншот'
   };
 
   const uploadDescTranslations = {
@@ -890,7 +945,11 @@ export default function ScannerApp() {
     'de-DE': 'Bis zu 8 Bilder können gleichzeitig bewertet werden',
     'pt-BR': 'Até 8 imagens podem ser avaliadas simultaneamente',
     'tr-TR': 'Aynı anda 8 görüntüye kadar değerlendirme yapılabilir',
-    'vi-VN': 'Có thể đánh giá đồng thời tối đa 8 hình ảnh'
+    'vi-VN': 'Có thể đánh giá đồng thời tối đa 8 hình ảnh',
+    'id-ID': 'Seret & jatuhkan atau tempel dari papan klip',
+    'th-TH': 'ลากและวางหรือวางจากคลิปบอร์ด',
+    'pl-PL': 'Przeciągnij i upuść lub wklej ze schowka',
+    'uk-UA': 'Перетягніть або вставте з буфера обміну'
   };
   const cashoutAdTranslations = {
     'en-US': '💡 Tip: How to use or cash out your Steam Wallet balance',
@@ -904,7 +963,11 @@ export default function ScannerApp() {
     'de-DE': '💡 Tipp: So nutzen oder auszahlen lassen Sie sich Ihr Steam-Guthaben',
     'pt-BR': '💡 Dica: Como usar ou sacar o saldo da sua Carteira Steam',
     'tr-TR': '💡 İpucu: Steam Cüzdan bakiyenizi nasıl kullanır veya nakde çevirirsiniz',
-    'vi-VN': '💡 Mẹo: Cách sử dụng hoặc rút số dư Ví Steam'
+    'vi-VN': '💡 Mẹo: Cách sử dụng hoặc rút số dư Ví Steam',
+    'id-ID': '💡 Tips: Cara menggunakan atau mencairkan saldo Steam Wallet Anda',
+    'th-TH': '💡 เคล็ดลับ: วิธีใช้หรือถอนยอดคงเหลือใน Steam Wallet ของคุณ',
+    'pl-PL': '💡 Wskazówka: Jak wykorzystać lub wypłacić saldo Portfela Steam',
+    'uk-UA': '💡 Порада: Як використовувати або вивести баланс Гаманця Steam'
   };
 
   const kofiSmallTrans = {
@@ -919,7 +982,11 @@ export default function ScannerApp() {
     'de-DE': 'Server unterstützen',
     'pt-BR': 'Apoiar servidor',
     'tr-TR': 'Sunucuyu destekle',
-    'vi-VN': 'Hỗ trợ máy chủ'
+    'vi-VN': 'Hỗ trợ máy chủ',
+    'id-ID': 'Dukung Biaya Server',
+    'th-TH': 'สนับสนุนค่าเซิร์ฟเวอร์',
+    'pl-PL': 'Wesprzyj koszty serwera',
+    'uk-UA': 'Підтримати оплату серверів'
   };
 
   const commentsTitleTranslations = {
@@ -927,7 +994,11 @@ export default function ScannerApp() {
     'zh-Hant': '💬 評論區', 'ko-KR': '💬 댓글 섹션', 'ru-RU': '💬 Раздел комментариев',
     'es-ES': '💬 Sección de comentarios', 'fr-FR': '💬 Section des commentaires', 
     'de-DE': '💬 Kommentarbereich', 'pt-BR': '💬 Seção de comentários', 
-    'tr-TR': '💬 Yorumlar Bölümü', 'vi-VN': '💬 Phần bình luận'
+    'tr-TR': '💬 Yorumlar Bölümü', 'vi-VN': '💬 Phần bình luận',
+    'id-ID': '💬 Catatan Komunitas',
+    'th-TH': '💬 บันทึกชุมชน',
+    'pl-PL': '💬 Notatki Społeczności',
+    'uk-UA': '💬 Нотатки Спільноти'
   };
 
   return (
@@ -1015,7 +1086,11 @@ export default function ScannerApp() {
               'de-DE': 'Hinweis',
               'pt-BR': 'Aviso',
               'tr-TR': 'Duyuru',
-              'vi-VN': 'Thông báo'
+              'vi-VN': 'Thông báo',
+    'id-ID': 'Pemberitahuan',
+    'th-TH': 'ประกาศ',
+    'pl-PL': 'Ogłoszenie',
+    'uk-UA': 'Повідомлення'
             },
             text: { 
               'en-US': 'Due to the market closure, some items are experiencing abnormal price spikes or are sold out. Please wait a while until the market reopens.', 
@@ -1029,7 +1104,11 @@ export default function ScannerApp() {
               'de-DE': 'Aufgrund der Schließung des Marktes verzeichnen einige Artikel abnormale Preisspitzen oder sind ausverkauft. Bitte warten Sie, bis der Markt wieder öffnet.',
               'pt-BR': 'Devido ao fechamento do mercado, alguns itens estão sofrendo picos anormais de preços ou estão esgotados. Por favor, aguarde até que o mercado reabra.',
               'tr-TR': 'Pazarın kapanması nedeniyle bazı eşyalarda anormal fiyat artışları yaşanıyor veya tükenmiş durumdalar. Lütfen pazar yeniden açılana kadar bekleyin.',
-              'vi-VN': 'Do việc đóng cửa chợ, một số vật phẩm đang gặp phải tình trạng tăng giá bất thường hoặc đã hết hàng. Vui lòng đợi cho đến khi chợ mở cửa trở lại.'
+              'vi-VN': 'Do việc đóng cửa chợ, một số vật phẩm đang gặp phải tình trạng tăng giá bất thường hoặc đã hết hàng. Vui lòng đợi cho đến khi chợ mở cửa trở lại.',
+    'id-ID': 'Akibat penutupan pasar, beberapa item mengalami lonjakan harga yang tidak normal atau habis terjual. Harap tunggu sebentar sampai pasar dibuka kembali.',
+    'th-TH': 'เนื่องจากการปิดตลาด ไอเทมบางรายการประสบปัญหาราคาพุ่งสูงผิดปกติหรือขายหมดแล้ว โปรดรอสักครู่จนกว่าตลาดจะเปิดอีกครั้ง',
+    'pl-PL': 'Z powodu zamknięcia rynku, niektóre przedmioty odnotowują nienormalne skoki cen lub są wyprzedane. Proszę chwilę poczekać, aż rynek zostanie ponownie otwarty.',
+    'uk-UA': 'Через закриття ринку деякі предмети відчувають аномальні стрибки цін або розпродані. Будь ласка, зачекайте, поки ринок знову відкриється.'
             }
           };
           
@@ -1309,7 +1388,11 @@ export default function ScannerApp() {
               'zh-Hant': '➕ 手動新增物品', 'ko-KR': '➕ 수동으로 아이템 추가', 'ru-RU': '➕ Добавить предмет вручную',
               'es-ES': '➕ Añadir objeto manualmente', 'fr-FR': '➕ Ajouter un objet manuellement',
               'de-DE': '➕ Element manuell hinzufügen', 'pt-BR': '➕ Adicionar item manualmente',
-              'tr-TR': '➕ Öğeyi Manuel Ekle', 'vi-VN': '➕ Thêm vật phẩm thủ công'
+              'tr-TR': '➕ Öğeyi Manuel Ekle', 'vi-VN': '➕ Thêm vật phẩm thủ công',
+  'id-ID': '➕ Tambah Item Manual',
+  'th-TH': '➕ เพิ่มไอเทมด้วยตนเอง',
+  'pl-PL': '➕ Dodaj Przedmiot Ręcznie',
+  'uk-UA': '➕ Додати Предмет Вручну'
             };
             const addBtnLabel = addBtnTranslations[selectedLang] || '➕ Add Item Manually';
 
@@ -1317,7 +1400,11 @@ export default function ScannerApp() {
               'ja-JP': '💰 金額順でソート', 'en-US': '💰 Sort by Price', 'zh-Hans': '💰 按价格排序',
               'zh-Hant': '💰 按價格排序', 'ko-KR': '💰 가격순 정렬', 'ru-RU': '💰 Сортировать по цене',
               'es-ES': '💰 Ordenar por precio', 'fr-FR': '💰 Trier par prix', 'de-DE': '💰 Nach Preis sortieren',
-              'pt-BR': '💰 Ordenar por preço', 'tr-TR': '💰 Fiyata göre sırala', 'vi-VN': '💰 Sắp xếp theo giá'
+              'pt-BR': '💰 Ordenar por preço', 'tr-TR': '💰 Fiyata göre sırala', 'vi-VN': '💰 Sắp xếp theo giá',
+  'id-ID': '💰 Urutkan Harga',
+  'th-TH': '💰 เรียงตามราคา',
+  'pl-PL': '💰 Sortuj po Cenie',
+  'uk-UA': '💰 Сортувати за Ціною'
             };
             const sortPriceLabel = sortPriceTranslations[selectedLang] || '💰 Sort by Price';
             
@@ -1325,7 +1412,11 @@ export default function ScannerApp() {
               'ja-JP': '↺ 元の順に戻す', 'en-US': '↺ Restore Order', 'zh-Hans': '↺ 恢复原序',
               'zh-Hant': '↺ 恢復原序', 'ko-KR': '↺ 원래 순서로', 'ru-RU': '↺ Восстановить порядок',
               'es-ES': '↺ Restaurar orden', 'fr-FR': '↺ Restaurer l\'ordre', 'de-DE': '↺ Reihenfolge wiederherstellen',
-              'pt-BR': '↺ Restaurar ordem', 'tr-TR': '↺ Sırayı geri yükle', 'vi-VN': '↺ Khôi phục thứ tự'
+              'pt-BR': '↺ Restaurar ordem', 'tr-TR': '↺ Sırayı geri yükle', 'vi-VN': '↺ Khôi phục thứ tự',
+  'id-ID': '↺ Pulihkan Urutan',
+  'th-TH': '↺ กู้คืนลำดับ',
+  'pl-PL': '↺ Przywróć Kolejność',
+  'uk-UA': '↺ Відновити Порядок'
             };
             const sortRestoreLabel = sortRestoreTranslations[selectedLang] || '↺ Restore Order';
 
@@ -1502,21 +1593,33 @@ export default function ScannerApp() {
                       const labelTranslations = {
                         'en-US': 'Recent Sold:', 'ja-JP': '直近の取引:', 'zh-Hans': '最近交易:', 'zh-Hant': '最近交易:',
                         'ko-KR': '최근 거래:', 'ru-RU': 'Последняя продажа:', 'es-ES': 'Última venta:', 'fr-FR': 'Dernière vente:',
-                        'de-DE': 'Zuletzt verkauft:', 'pt-BR': 'Última venda:', 'tr-TR': 'Son satış:', 'vi-VN': 'Đã bán gần đây:'
+                        'de-DE': 'Zuletzt verkauft:', 'pt-BR': 'Última venda:', 'tr-TR': 'Son satış:', 'vi-VN': 'Đã bán gần đây:',
+  'id-ID': 'Baru Terjual:',
+  'th-TH': 'ขายล่าสุด:',
+  'pl-PL': 'Ostatnio Sprzedane:',
+  'uk-UA': 'Нещодавно продані:'
                       };
                       const recentSoldLabel = labelTranslations[selectedLang] || 'Recent Sold:';
 
                       const lowestLabelTranslations = {
                         'en-US': 'Sell Order:', 'ja-JP': '売却希望額:', 'zh-Hans': '期望售价:', 'zh-Hant': '期望售價:',
                         'ko-KR': '판매 희망가:', 'ru-RU': 'Запрос на продажу:', 'es-ES': 'Orden de venta:', 'fr-FR': 'Ordre de vente:',
-                        'de-DE': 'Verkaufsauftrag:', 'pt-BR': 'Ordem de venda:', 'tr-TR': 'Satış Emri:', 'vi-VN': 'Lệnh bán:'
+                        'de-DE': 'Verkaufsauftrag:', 'pt-BR': 'Ordem de venda:', 'tr-TR': 'Satış Emri:', 'vi-VN': 'Lệnh bán:',
+  'id-ID': 'Pesanan Jual:',
+  'th-TH': 'คำสั่งขาย:',
+  'pl-PL': 'Zlecenie Sprzedaży:',
+  'uk-UA': 'Замовлення на продаж:'
                       };
                       const lowestLabel = lowestLabelTranslations[selectedLang] || 'Sell Order:';
 
                       const buyOrderLabelTranslations = {
                         'en-US': 'Buy Order:', 'ja-JP': '購入希望額:', 'zh-Hans': '求购价:', 'zh-Hant': '求購價:',
                         'ko-KR': '구매 희망가:', 'ru-RU': 'Запрос на покупку:', 'es-ES': 'Orden de compra:', 'fr-FR': 'Ordre d\'achat:',
-                        'de-DE': 'Kaufauftrag:', 'pt-BR': 'Ordem de compra:', 'tr-TR': 'Alış Emri:', 'vi-VN': 'Lệnh mua:'
+                        'de-DE': 'Kaufauftrag:', 'pt-BR': 'Ordem de compra:', 'tr-TR': 'Alış Emri:', 'vi-VN': 'Lệnh mua:',
+  'id-ID': 'Pesanan Beli:',
+  'th-TH': 'คำสั่งซื้อ:',
+  'pl-PL': 'Zlecenie Kupna:',
+  'uk-UA': 'Замовлення на купівлю:'
                       };
                       const buyOrderLabel = buyOrderLabelTranslations[selectedLang] || 'Buy Order:';
                       
@@ -1695,41 +1798,41 @@ export default function ScannerApp() {
       }}>
         {(() => {
           const inlineMaterialTrans = {
-            craft: { 'en-US': 'Crafting Material', 'ja-JP': '制作素材', 'zh-Hans': '制作材料', 'zh-Hant': '製作材料', 'ko-KR': '제작 재료' },
-            deco: { 'en-US': 'Decoration Material', 'ja-JP': '装飾素材', 'zh-Hans': '装饰材料', 'zh-Hant': '裝飾材料', 'ko-KR': '장식 재료' },
-            sculpt: { 'en-US': 'Sculpting Material', 'ja-JP': '彫刻素材', 'zh-Hans': '雕刻材料', 'zh-Hant': '雕刻材料', 'ko-KR': '조각 재료' },
-            inscription: { 'en-US': 'Inscription Material', 'ja-JP': '碑文素材', 'zh-Hans': '碑文材料', 'zh-Hant': '碑文材料', 'ko-KR': '비문 재료' },
-            wish: { 'en-US': 'Wishing Material', 'ja-JP': '祈願素材', 'zh-Hans': '祈愿材料', 'zh-Hant': '祈願材料', 'ko-KR': '기원 재료' },
-            soulstone: { 'en-US': 'Soulstone', 'ja-JP': 'ソウルストーン', 'zh-Hans': '灵魂石', 'zh-Hant': '靈魂石', 'ko-KR': '영혼석' }
+            craft: { 'en-US': 'Crafting Material', 'ja-JP': '制作素材', 'zh-Hans': '制作材料', 'zh-Hant': '製作材料', 'ko-KR': '제작 재료', 'ru-RU': 'Материал для крафта', 'es-ES': 'Material de fabricación', 'fr-FR': 'Matériau de fabrication', 'de-DE': 'Herstellungsmaterial', 'pt-BR': 'Material de Criação', 'tr-TR': 'Üretim Malzemesi', 'vi-VN': 'Nguyên liệu chế tạo', 'id-ID': 'Bahan Pembuatan', 'th-TH': 'วัสดุคราฟต์', 'pl-PL': 'Materiały Rzemieślnicze', 'uk-UA': 'Матеріали для крафту' },
+            deco: { 'en-US': 'Decoration Material', 'ja-JP': '装飾素材', 'zh-Hans': '装饰材料', 'zh-Hant': '裝飾材料', 'ko-KR': '장식 재료', 'ru-RU': 'Материал для украшения', 'es-ES': 'Material de decoración', 'fr-FR': 'Matériau de décoration', 'de-DE': 'Dekorationsmaterial', 'pt-BR': 'Material de Decoração', 'tr-TR': 'Dekorasyon Malzemesi', 'vi-VN': 'Nguyên liệu trang trí', 'id-ID': 'Bahan Dekorasi', 'th-TH': 'วัสดุตกแต่ง', 'pl-PL': 'Materiały Dekoracyjne', 'uk-UA': 'Матеріали для декору' },
+            sculpt: { 'en-US': 'Sculpting Material', 'ja-JP': '彫刻素材', 'zh-Hans': '雕刻材料', 'zh-Hant': '雕刻材料', 'ko-KR': '조각 재료', 'ru-RU': 'Материал для лепки', 'es-ES': 'Material de escultura', 'fr-FR': 'Matériau de sculpture', 'de-DE': 'Skulpturmaterial', 'pt-BR': 'Material de Escultura', 'tr-TR': 'Heykel Malzemesi', 'vi-VN': 'Nguyên liệu điêu khắc', 'id-ID': 'Bahan Pahatan', 'th-TH': 'วัสดุแกะสลัก', 'pl-PL': 'Materiały Rzeźbiarskie', 'uk-UA': 'Матеріали для ліплення' },
+            inscription: { 'en-US': 'Inscription Material', 'ja-JP': '碑文素材', 'zh-Hans': '碑文材料', 'zh-Hant': '碑文材料', 'ko-KR': '비문 재료', 'ru-RU': 'Материал для надписей', 'es-ES': 'Material de inscripción', 'fr-FR': 'Matériau d\'inscription', 'de-DE': 'Inschriftenmaterial', 'pt-BR': 'Material de Inscrição', 'tr-TR': 'Yazıt Malzemesi', 'vi-VN': 'Nguyên liệu khắc', 'id-ID': 'Bahan Prasasti', 'th-TH': 'วัสดุจารึก', 'pl-PL': 'Materiały Inskrypcyjne', 'uk-UA': 'Матеріали для написів' },
+            wish: { 'en-US': 'Wishing Material', 'ja-JP': '祈願素材', 'zh-Hans': '祈愿材料', 'zh-Hant': '祈願材料', 'ko-KR': '기원 재료', 'ru-RU': 'Материал для желаний', 'es-ES': 'Material de deseo', 'fr-FR': 'Matériau de souhait', 'de-DE': 'Wunschmaterial', 'pt-BR': 'Material de Desejo', 'tr-TR': 'Dilek Malzemesi', 'vi-VN': 'Nguyên liệu ước nguyện', 'id-ID': 'Bahan Harapan', 'th-TH': 'วัสดุอธิษฐาน', 'pl-PL': 'Materiały Życzeń', 'uk-UA': 'Матеріали для побажань' },
+            soulstone: { 'en-US': 'Soulstone', 'ja-JP': 'ソウルストーン', 'zh-Hans': '灵魂石', 'zh-Hant': '靈魂石', 'ko-KR': '영혼석', 'ru-RU': 'Камень души', 'es-ES': 'Piedra de alma', 'fr-FR': 'Pierre d\'âme', 'de-DE': 'Seelenstein', 'pt-BR': 'Pedra da Alma', 'tr-TR': 'Ruh Taşı', 'vi-VN': 'Đá linh hồn', 'id-ID': 'Batu Jiwa', 'th-TH': 'หินวิญญาณ', 'pl-PL': 'Kamień Duszy', 'uk-UA': 'Камінь душі' }
           };
-          const searchTrans = {
-            title: { 'en-US': 'Search & Add Items', 'ja-JP': 'アイテムを検索して追加' },
-            placeholder: { 'en-US': 'Search by name...', 'ja-JP': '名前で検索...' },
-            all: { 'en-US': 'All Categories', 'ja-JP': 'すべての種類' },
-            gear: { 'en-US': 'Gear', 'ja-JP': '装備' },
-            allClasses: { 'en-US': 'All Classes', 'ja-JP': 'すべての部位' },
-            allRarities: { 'en-US': 'All Rarities', 'ja-JP': 'すべての等級' },
-            levelPlaceholder: { 'en-US': 'Lv', 'ja-JP': 'Lv' },
-            sword: { 'en-US': 'Sword', 'ja-JP': '剣' },
-            bow: { 'en-US': 'Bow', 'ja-JP': '弓' },
-            staff: { 'en-US': 'Staff', 'ja-JP': '杖' },
-            scepter: { 'en-US': 'Scepter', 'ja-JP': '王笏' },
-            crossbow: { 'en-US': 'Crossbow', 'ja-JP': 'クロスボウ' },
-            axe: { 'en-US': 'Axe', 'ja-JP': '斧' },
-            shield: { 'en-US': 'Shield', 'ja-JP': '盾' },
-            arrow: { 'en-US': 'Arrow', 'ja-JP': '矢' },
-            orb: { 'en-US': 'Orb', 'ja-JP': 'オーブ' },
-            tome: { 'en-US': 'Tome', 'ja-JP': '魔導書' },
-            bolt: { 'en-US': 'Bolt', 'ja-JP': 'ボルト' },
-            hatchet: { 'en-US': 'Hatchet', 'ja-JP': '手斧' },
-            helmet: { 'en-US': 'Helmet', 'ja-JP': '兜' },
-            armor: { 'en-US': 'Armor', 'ja-JP': '鎧' },
-            gloves: { 'en-US': 'Gloves', 'ja-JP': '手袋' },
-            boots: { 'en-US': 'Boots', 'ja-JP': '靴' },
-            amulet: { 'en-US': 'Amulet', 'ja-JP': '首飾り' },
-            earing: { 'en-US': 'Earing', 'ja-JP': '耳飾り' },
-            ring: { 'en-US': 'Ring', 'ja-JP': '指輪' },
-            bracer: { 'en-US': 'Bracer', 'ja-JP': '腕輪' }
+                    const searchTrans = {
+            title: { 'en-US': 'Search & Add Items', 'ja-JP': 'アイテムを検索して追加', 'zh-Hans': '搜索并添加物品', 'zh-Hant': '搜尋並新增物品', 'ko-KR': '아이템 검색 및 추가', 'ru-RU': 'Поиск и добавление предметов', 'es-ES': 'Buscar y agregar artículos', 'fr-FR': 'Rechercher et ajouter des objets', 'de-DE': 'Suchen & Gegenstände hinzufügen', 'pt-BR': 'Buscar e Adicionar Itens', 'tr-TR': 'Öğe Ara ve Ekle', 'vi-VN': 'Tìm kiếm & Thêm Vật phẩm', 'id-ID': 'Cari & Tambah Item', 'th-TH': 'ค้นหาและเพิ่มไอเทม', 'pl-PL': 'Szukaj i dodawaj przedmioty', 'uk-UA': 'Пошук і додавання предметів' },
+            placeholder: { 'en-US': 'Search by name...', 'ja-JP': '名前で検索...', 'zh-Hans': '按名称搜索...', 'zh-Hant': '按名稱搜尋...', 'ko-KR': '이름으로 검색...', 'ru-RU': 'Поиск по имени...', 'es-ES': 'Buscar por nombre...', 'fr-FR': 'Rechercher par nom...', 'de-DE': 'Nach Name suchen...', 'pt-BR': 'Buscar por nome...', 'tr-TR': 'İsme göre ara...', 'vi-VN': 'Tìm kiếm theo tên...', 'id-ID': 'Cari berdasarkan nama...', 'th-TH': 'ค้นหาตามชื่อ...', 'pl-PL': 'Szukaj po nazwie...', 'uk-UA': 'Пошук за назвою...' },
+            all: { 'en-US': 'All Categories', 'ja-JP': 'すべての種類', 'zh-Hans': '所有类别', 'zh-Hant': '所有類別', 'ko-KR': '모든 카테고리', 'ru-RU': 'Все категории', 'es-ES': 'Todas las categorías', 'fr-FR': 'Toutes les catégories', 'de-DE': 'Alle Kategorien', 'pt-BR': 'Todas as Categorias', 'tr-TR': 'Tüm Kategoriler', 'vi-VN': 'Tất cả danh mục', 'id-ID': 'Semua Kategori', 'th-TH': 'หมวดหมู่ทั้งหมด', 'pl-PL': 'Wszystkie Kategorie', 'uk-UA': 'Всі категорії' },
+            gear: { 'en-US': 'Gear', 'ja-JP': '装備', 'zh-Hans': '装备', 'zh-Hant': '裝備', 'ko-KR': '장비', 'ru-RU': 'Снаряжение', 'es-ES': 'Equipamiento', 'fr-FR': 'Équipement', 'de-DE': 'Ausrüstung', 'pt-BR': 'Equipamento', 'tr-TR': 'Ekipman', 'vi-VN': 'Trang bị', 'id-ID': 'Perlengkapan', 'th-TH': 'อุปกรณ์', 'pl-PL': 'Ekwipunek', 'uk-UA': 'Спорядження' },
+            allClasses: { 'en-US': 'All Classes', 'ja-JP': 'すべての部位', 'zh-Hans': '所有部位', 'zh-Hant': '所有部位', 'ko-KR': '모든 부위', 'ru-RU': 'Все типы', 'es-ES': 'Todas las clases', 'fr-FR': 'Toutes les classes', 'de-DE': 'Alle Klassen', 'pt-BR': 'Todas as Classes', 'tr-TR': 'Tüm Sınıflar', 'vi-VN': 'Tất cả các lớp', 'id-ID': 'Semua Kelas', 'th-TH': 'ทุกคลาส', 'pl-PL': 'Wszystkie Klasy', 'uk-UA': 'Усі класи' },
+            allRarities: { 'en-US': 'All Rarities', 'ja-JP': 'すべての等級', 'zh-Hans': '所有稀有度', 'zh-Hant': '所有稀有度', 'ko-KR': '모든 등급', 'ru-RU': 'Все редкости', 'es-ES': 'Todas las rarezas', 'fr-FR': 'Toutes les raretés', 'de-DE': 'Alle Seltenheiten', 'pt-BR': 'Todas as Raridades', 'tr-TR': 'Tüm Nadirlikler', 'vi-VN': 'Tất cả độ hiếm', 'id-ID': 'Semua Kelangkaan', 'th-TH': 'ความหายากทั้งหมด', 'pl-PL': 'Wszystkie Rzadkości', 'uk-UA': 'Усі рідкості' },
+            levelPlaceholder: { 'en-US': 'Lv', 'ja-JP': 'Lv', 'zh-Hans': '等级', 'zh-Hant': '等級', 'ko-KR': '레벨', 'ru-RU': 'Ур', 'es-ES': 'Niv', 'fr-FR': 'Niv', 'de-DE': 'Stufe', 'pt-BR': 'Nív', 'tr-TR': 'Svy', 'vi-VN': 'Cấp', 'id-ID': 'Lv', 'th-TH': 'เลเวล', 'pl-PL': 'Poz', 'uk-UA': 'Рів' },
+            sword: { 'en-US': 'Sword', 'ja-JP': '剣', 'zh-Hans': '剑', 'zh-Hant': '劍', 'ko-KR': '검', 'ru-RU': 'Меч', 'es-ES': 'Espada', 'fr-FR': 'Épée', 'de-DE': 'Schwert', 'pt-BR': 'Espada', 'tr-TR': 'Kılıç', 'vi-VN': 'Kiếm', 'id-ID': 'Pedang', 'th-TH': 'ดาบ', 'pl-PL': 'Miecz', 'uk-UA': 'Меч' },
+            bow: { 'en-US': 'Bow', 'ja-JP': '弓', 'zh-Hans': '弓', 'zh-Hant': '弓', 'ko-KR': '활', 'ru-RU': 'Лук', 'es-ES': 'Arco', 'fr-FR': 'Arc', 'de-DE': 'Bogen', 'pt-BR': 'Arco', 'tr-TR': 'Yay', 'vi-VN': 'Cung', 'id-ID': 'Busur', 'th-TH': 'ธนู', 'pl-PL': 'Łuk', 'uk-UA': 'Лук' },
+            staff: { 'en-US': 'Staff', 'ja-JP': '杖', 'zh-Hans': '法杖', 'zh-Hant': '法杖', 'ko-KR': '지팡이', 'ru-RU': 'Посох', 'es-ES': 'Bastón', 'fr-FR': 'Bâton', 'de-DE': 'Stab', 'pt-BR': 'Cajado', 'tr-TR': 'Asa', 'vi-VN': 'Gậy', 'id-ID': 'Tongkat', 'th-TH': 'ไม้เท้า', 'pl-PL': 'Kostur', 'uk-UA': 'Посох' },
+            scepter: { 'en-US': 'Scepter', 'ja-JP': '王笏', 'zh-Hans': '权杖', 'zh-Hant': '權杖', 'ko-KR': '홀', 'ru-RU': 'Скипетр', 'es-ES': 'Cetro', 'fr-FR': 'Sceptre', 'de-DE': 'Zepter', 'pt-BR': 'Cetro', 'tr-TR': 'Asa', 'vi-VN': 'Quyền trượng', 'id-ID': 'Tongkat Kerajaan', 'th-TH': 'คทา', 'pl-PL': 'Berło', 'uk-UA': 'Скіпетр' },
+            crossbow: { 'en-US': 'Crossbow', 'ja-JP': 'クロスボウ', 'zh-Hans': '弩', 'zh-Hant': '弩', 'ko-KR': '석궁', 'ru-RU': 'Арбалет', 'es-ES': 'Ballesta', 'fr-FR': 'Arbalète', 'de-DE': 'Armbrust', 'pt-BR': 'Besta', 'tr-TR': 'Arbalet', 'vi-VN': 'Nỏ', 'id-ID': 'Busur Silang', 'th-TH': 'หน้าไม้', 'pl-PL': 'Kusza', 'uk-UA': 'Арбалет' },
+            axe: { 'en-US': 'Axe', 'ja-JP': '斧', 'zh-Hans': '斧头', 'zh-Hant': '斧頭', 'ko-KR': '도끼', 'ru-RU': 'Топор', 'es-ES': 'Hacha', 'fr-FR': 'Hache', 'de-DE': 'Axt', 'pt-BR': 'Machado', 'tr-TR': 'Balt', 'vi-VN': 'Rìu', 'id-ID': 'Kapak', 'th-TH': 'ขวาน', 'pl-PL': 'Topór', 'uk-UA': 'Сокира' },
+            shield: { 'en-US': 'Shield', 'ja-JP': '盾', 'zh-Hans': '盾牌', 'zh-Hant': '盾牌', 'ko-KR': '방패', 'ru-RU': 'Щит', 'es-ES': 'Escudo', 'fr-FR': 'Bouclier', 'de-DE': 'Schild', 'pt-BR': 'Escudo', 'tr-TR': 'Kalkan', 'vi-VN': 'Khiên', 'id-ID': 'Perisai', 'th-TH': 'โล่', 'pl-PL': 'Tarcza', 'uk-UA': 'Щит' },
+            arrow: { 'en-US': 'Arrow', 'ja-JP': '矢', 'zh-Hans': '箭', 'zh-Hant': '箭', 'ko-KR': '화살', 'ru-RU': 'Стрела', 'es-ES': 'Flecha', 'fr-FR': 'Flèche', 'de-DE': 'Pfeil', 'pt-BR': 'Flecha', 'tr-TR': 'Ok', 'vi-VN': 'Mũi tên', 'id-ID': 'Anak Panah', 'th-TH': 'ลูกศร', 'pl-PL': 'Strzała', 'uk-UA': 'Стріла' },
+            orb: { 'en-US': 'Orb', 'ja-JP': 'オーブ', 'zh-Hans': '宝珠', 'zh-Hant': '寶珠', 'ko-KR': '오브', 'ru-RU': 'Сфера', 'es-ES': 'Orbe', 'fr-FR': 'Orbe', 'de-DE': 'Kugel', 'pt-BR': 'Orbe', 'tr-TR': 'Küre', 'vi-VN': 'Ngọc', 'id-ID': 'Orb', 'th-TH': 'ลูกแก้ว', 'pl-PL': 'Kula', 'uk-UA': 'Сфера' },
+            tome: { 'en-US': 'Tome', 'ja-JP': '魔導書', 'zh-Hans': '法典', 'zh-Hant': '法典', 'ko-KR': '마도서', 'ru-RU': 'Фолиант', 'es-ES': 'Tomo', 'fr-FR': 'Tome', 'de-DE': 'Foliant', 'pt-BR': 'Tomo', 'tr-TR': 'Cilt', 'vi-VN': 'Sách phép', 'id-ID': 'Buku Sihir', 'th-TH': 'ตำรา', 'pl-PL': 'Księga', 'uk-UA': 'Том' },
+            bolt: { 'en-US': 'Bolt', 'ja-JP': 'ボルト', 'zh-Hans': '弩箭', 'zh-Hant': '弩箭', 'ko-KR': '볼트', 'ru-RU': 'Болт', 'es-ES': 'Virote', 'fr-FR': 'Carreau', 'de-DE': 'Bolzen', 'pt-BR': 'Dardo', 'tr-TR': 'Civata', 'vi-VN': 'Bu lông', 'id-ID': 'Baut', 'th-TH': 'ลูกดอกไม้กางเขน', 'pl-PL': 'Bełt', 'uk-UA': 'Болт' },
+            hatchet: { 'en-US': 'Hatchet', 'ja-JP': '手斧', 'zh-Hans': '短斧', 'zh-Hant': '短斧', 'ko-KR': '손도끼', 'ru-RU': 'Топорик', 'es-ES': 'Hachuela', 'fr-FR': 'Hachette', 'de-DE': 'Beil', 'pt-BR': 'Machadinha', 'tr-TR': 'Küçük Balta', 'vi-VN': 'Rìu nhỏ', 'id-ID': 'Kapak Kecil', 'th-TH': 'ขวานสั้น', 'pl-PL': 'Toporek', 'uk-UA': 'Топірець' },
+            helmet: { 'en-US': 'Helmet', 'ja-JP': '兜', 'zh-Hans': '头盔', 'zh-Hant': '頭盔', 'ko-KR': '투구', 'ru-RU': 'Шлем', 'es-ES': 'Casco', 'fr-FR': 'Casque', 'de-DE': 'Helm', 'pt-BR': 'Capacete', 'tr-TR': 'Kask', 'vi-VN': 'Mũ bảo hiểm', 'id-ID': 'Helm', 'th-TH': 'หมวกเกราะ', 'pl-PL': 'Hełm', 'uk-UA': 'Шолом' },
+            armor: { 'en-US': 'Armor', 'ja-JP': '鎧', 'zh-Hans': '盔甲', 'zh-Hant': '盔甲', 'ko-KR': '갑옷', 'ru-RU': 'Броня', 'es-ES': 'Armadura', 'fr-FR': 'Armure', 'de-DE': 'Rüstung', 'pt-BR': 'Armadura', 'tr-TR': 'Zırh', 'vi-VN': 'Áo giáp', 'id-ID': 'Baju Besi', 'th-TH': 'เสื้อเกราะ', 'pl-PL': 'Zbroja', 'uk-UA': 'Броня' },
+            gloves: { 'en-US': 'Gloves', 'ja-JP': '手袋', 'zh-Hans': '手套', 'zh-Hant': '手套', 'ko-KR': '장갑', 'ru-RU': 'Перчатки', 'es-ES': 'Guantes', 'fr-FR': 'Gants', 'de-DE': 'Handschuhe', 'pt-BR': 'Luvas', 'tr-TR': 'Eldiven', 'vi-VN': 'Găng tay', 'id-ID': 'Sarung Tangan', 'th-TH': 'ถุงมือ', 'pl-PL': 'Rękawice', 'uk-UA': 'Рукавички' },
+            boots: { 'en-US': 'Boots', 'ja-JP': '靴', 'zh-Hans': '靴子', 'zh-Hant': '靴子', 'ko-KR': '장화', 'ru-RU': 'Ботинки', 'es-ES': 'Botas', 'fr-FR': 'Bottes', 'de-DE': 'Stiefel', 'pt-BR': 'Botas', 'tr-TR': 'Çizme', 'vi-VN': 'Giày', 'id-ID': 'Sepatu Bot', 'th-TH': 'รองเท้าบูท', 'pl-PL': 'Buty', 'uk-UA': 'Чоботи' },
+            amulet: { 'en-US': 'Amulet', 'ja-JP': '首飾り', 'zh-Hans': '护身符', 'zh-Hant': '護身符', 'ko-KR': '목걸이', 'ru-RU': 'Амулет', 'es-ES': 'Amuleto', 'fr-FR': 'Amulette', 'de-DE': 'Amulett', 'pt-BR': 'Amuleto', 'tr-TR': 'Muska', 'vi-VN': 'Bùa hộ mệnh', 'id-ID': 'Jimat', 'th-TH': 'เครื่องราง', 'pl-PL': 'Amulet', 'uk-UA': 'Амулет' },
+            earing: { 'en-US': 'Earing', 'ja-JP': '耳飾り', 'zh-Hans': '耳环', 'zh-Hant': '耳環', 'ko-KR': '귀걸이', 'ru-RU': 'Серьга', 'es-ES': 'Pendiente', 'fr-FR': 'Boucle d\'oreille', 'de-DE': 'Ohrring', 'pt-BR': 'Brinco', 'tr-TR': 'Küpe', 'vi-VN': 'Bông tai', 'id-ID': 'Anting-anting', 'th-TH': 'ต่างหู', 'pl-PL': 'Kolczyk', 'uk-UA': 'Сережка' },
+            ring: { 'en-US': 'Ring', 'ja-JP': '指輪', 'zh-Hans': '戒指', 'zh-Hant': '戒指', 'ko-KR': '반지', 'ru-RU': 'Кольцо', 'es-ES': 'Anillo', 'fr-FR': 'Anneau', 'de-DE': 'Ring', 'pt-BR': 'Anel', 'tr-TR': 'Yüzük', 'vi-VN': 'Nhẫn', 'id-ID': 'Cincin', 'th-TH': 'แหวน', 'pl-PL': 'Pierścień', 'uk-UA': 'Кільце' },
+            bracer: { 'en-US': 'Bracer', 'ja-JP': '腕輪', 'zh-Hans': '护腕', 'zh-Hant': '護腕', 'ko-KR': '팔찌', 'ru-RU': 'Наруч', 'es-ES': 'Brazalete', 'fr-FR': 'Brassard', 'de-DE': 'Armschiene', 'pt-BR': 'Bracelete', 'tr-TR': 'Bileklik', 'vi-VN': 'Bao tay', 'id-ID': 'Gelang', 'th-TH': 'ปลอกแขน', 'pl-PL': 'Karwasz', 'uk-UA': 'Наруч' }
           };
           
           const filterIcons = [
@@ -1989,7 +2092,11 @@ export default function ScannerApp() {
             title: { 'en-US': 'How to Use', 'ja-JP': '使い方', 'zh-Hans': '使用方法', 'zh-Hant': '使用方法', 'ko-KR': '사용 방법', 'ru-RU': 'Как использовать', 'es-ES': 'Cómo usar', 'fr-FR': 'Comment utiliser', 'de-DE': 'Wie man es benutzt', 'pt-BR': 'Como usar', 'tr-TR': 'Nasıl Kullanılır', 'vi-VN': 'Cách sử dụng' },
             step1: { 'en-US': '1. Take a screenshot of your in-game inventory.', 'ja-JP': '1. ゲーム内でインベントリ（アイテム欄）のスクリーンショットを撮影します。', 'zh-Hans': '1. 在游戏中截取您的物品栏。', 'zh-Hant': '1. 在遊戲中截取您的物品欄。', 'ko-KR': '1. 게임 내 인벤토리의 스크린샷을 찍습니다.', 'ru-RU': '1. Сделайте скриншот вашего инвентаря в игре.', 'es-ES': '1. Toma una captura de pantalla de tu inventario en el juego.', 'fr-FR': '1. Prenez une capture d\'écran de votre inventaire en jeu.', 'de-DE': '1. Mache einen Screenshot deines Inventars im Spiel.', 'pt-BR': '1. Tire uma captura de tela do seu inventário no jogo.', 'tr-TR': '1. Oyun içi envanterinizin ekran görüntüsünü alın.', 'vi-VN': '1. Chụp ảnh màn hình kho đồ trong trò chơi của bạn.' },
             step2: { 'en-US': '2. Drag & drop the image into the scanner above.', 'ja-JP': '2. 撮影した画像を上のスキャナーにドラッグ＆ドロップします。', 'zh-Hans': '2. 将图片拖放到上方的扫描仪中。', 'zh-Hant': '2. 將圖片拖放到上方的掃描儀中。', 'ko-KR': '2. 이미지를 위 스캐너에 드래그 앤 드롭합니다.', 'ru-RU': '2. Перетащите изображение в сканер выше.', 'es-ES': '2. Arrastra y suelta la imagen en el escáner de arriba.', 'fr-FR': '2. Glissez-déposez l\'image dans le scanner ci-dessus.', 'de-DE': '2. Ziehe das Bild per Drag & Drop in den Scanner oben.', 'pt-BR': '2. Arraste e solte a imagem no scanner acima.', 'tr-TR': '2. Resmi yukarıdaki tarayıcıya sürükleyip bırakın.', 'vi-VN': '2. Kéo và thả hình ảnh vào máy quét ở trên.' },
-            example: { 'en-US': '💡 Example: Make sure the image looks like this for the best accuracy!', 'ja-JP': '💡 例: 以下のような綺麗に枠が写った画像だと、最も正確に認識できます！', 'zh-Hans': '💡 示例：像这样清晰的截图可以获得最高的识别准确率！', 'zh-Hant': '💡 示例：像這樣清晰的截圖可以獲得最高的識別準確率！', 'ko-KR': '💡 예시: 이런 식의 깔끔한 스크린샷이 가장 정확하게 인식됩니다!', 'ru-RU': '💡 Пример: Убедитесь, что изображение выглядит так для лучшей точности!', 'es-ES': '💡 Ejemplo: ¡Asegúrate de que la imagen se vea así para obtener la mejor precisión!', 'fr-FR': '💡 Exemple: Assurez-vous que l\'image ressemble à ceci pour une meilleure précision!', 'de-DE': '💡 Beispiel: Stelle sicher, dass das Bild so aussieht, um die beste Genauigkeit zu erzielen!', 'pt-BR': '💡 Exemplo: Certifique-se de que a imagem seja assim para melhor precisão!', 'tr-TR': '💡 Örnek: En iyi doğruluk için görüntünün böyle göründüğünden emin olun!', 'vi-VN': '💡 Ví dụ: Đảm bảo hình ảnh giống như thế này để có độ chính xác tốt nhất!' }
+            example: { 'en-US': '💡 Example: Make sure the image looks like this for the best accuracy!', 'ja-JP': '💡 例: 以下のような綺麗に枠が写った画像だと、最も正確に認識できます！', 'zh-Hans': '💡 示例：像这样清晰的截图可以获得最高的识别准确率！', 'zh-Hant': '💡 示例：像這樣清晰的截圖可以獲得最高的識別準確率！', 'ko-KR': '💡 예시: 이런 식의 깔끔한 스크린샷이 가장 정확하게 인식됩니다!', 'ru-RU': '💡 Пример: Убедитесь, что изображение выглядит так для лучшей точности!', 'es-ES': '💡 Ejemplo: ¡Asegúrate de que la imagen se vea así para obtener la mejor precisión!', 'fr-FR': '💡 Exemple: Assurez-vous que l\'image ressemble à ceci pour une meilleure précision!', 'de-DE': '💡 Beispiel: Stelle sicher, dass das Bild so aussieht, um die beste Genauigkeit zu erzielen!', 'pt-BR': '💡 Exemplo: Certifique-se de que a imagem seja assim para melhor precisão!', 'tr-TR': '💡 Örnek: En iyi doğruluk için görüntünün böyle göründüğünden emin olun!', 'vi-VN': '💡 Ví dụ: Đảm bảo hình ảnh giống như thế này để có độ chính xác tốt nhất!' },
+  'id-ID': 'Tips: Cara bermain dan mendapatkan uang sungguhan dengan berdagang',
+  'th-TH': 'เคล็ดลับ: วิธีการเล่นและรับเงินจริงจากการซื้อขาย',
+  'pl-PL': 'Wskazówki: Jak grać i zarabiać prawdziwe pieniądze dzięki handlowi',
+  'uk-UA': 'Поради: Як грати та заробляти реальні гроші на торгівлі'
           };
           
           return (
