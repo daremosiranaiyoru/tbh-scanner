@@ -1,50 +1,50 @@
 {
   "Soulstone - Nightmare": {
-    "medianCents": 495,
-    "qty": 1223,
-    "lowestCents": 544,
+    "medianCents": 623,
+    "qty": 192,
+    "lowestCents": 623,
     "buyOrderCents": 54900
   },
   "Iron Ingot": {
-    "medianCents": 14,
-    "qty": 81386,
-    "lowestCents": 17,
+    "medianCents": 372,
+    "qty": 34721,
+    "lowestCents": 400,
     "buyOrderCents": 2000
   },
   "Soulstone - Normal": {
-    "medianCents": 232,
-    "qty": 25455,
-    "lowestCents": 262,
+    "medianCents": 311,
+    "qty": 679,
+    "lowestCents": 312,
     "buyOrderCents": 29200
   },
   "Stone": {
     "medianCents": 12,
-    "qty": 36332,
+    "qty": 30733,
     "lowestCents": 12,
     "buyOrderCents": 1600
   },
   "Bronze Ingot": {
-    "medianCents": 12,
-    "qty": 77080,
-    "lowestCents": 12,
+    "medianCents": 221,
+    "qty": 56043,
+    "lowestCents": 248,
     "buyOrderCents": 1700
   },
   "Silver Ingot": {
-    "medianCents": 130,
-    "qty": 19324,
-    "lowestCents": 139,
+    "medianCents": 297,
+    "qty": 3324,
+    "lowestCents": 311,
     "buyOrderCents": 10000
   },
   "Gold Ingot": {
-    "medianCents": 286,
-    "qty": 3088,
-    "lowestCents": 311,
+    "medianCents": 420,
+    "qty": 39,
+    "lowestCents": 529,
     "buyOrderCents": 26000
   },
   "Copper Nugget": {
-    "medianCents": 5,
-    "qty": 99859,
-    "lowestCents": 5,
+    "medianCents": 6,
+    "qty": 96939,
+    "lowestCents": 6,
     "buyOrderCents": 800
   },
   "Composite Bow (Legendary) A": {
@@ -60,9 +60,9 @@
     "buyOrderCents": 1500
   },
   "Bastard Sword (Legendary) A": {
-    "medianCents": 735,
-    "qty": 316,
-    "lowestCents": 1000,
+    "medianCents": 1002,
+    "qty": 2,
+    "lowestCents": 1246,
     "buyOrderCents": 101800
   },
   "Minor Emerald": {
@@ -97,7 +97,7 @@
   },
   "Leather": {
     "medianCents": 4,
-    "qty": 58251,
+    "qty": 52998,
     "lowestCents": 4
   },
   "Chain Boots (Legendary) A": {
@@ -161,9 +161,9 @@
     "lowestCents": 287
   },
   "Soulstone - Hell": {
-    "medianCents": 1467,
-    "qty": 79,
-    "lowestCents": 1565
+    "medianCents": 1823,
+    "qty": 17,
+    "lowestCents": 7126
   },
   "Amber Gem": {
     "medianCents": 4,
@@ -222,7 +222,7 @@
   },
   "Wood": {
     "medianCents": 4,
-    "qty": 15738,
+    "qty": 24044,
     "lowestCents": 3
   },
   "Jade Stone": {
@@ -236,9 +236,9 @@
     "lowestCents": 203
   },
   "Void Iron": {
-    "medianCents": 811,
+    "medianCents": 936,
     "qty": 2,
-    "lowestCents": 871
+    "lowestCents": 2223
   },
   "Pearl": {
     "medianCents": 734,
@@ -256,7 +256,7 @@
   },
   "Great Sword (Legendary) A": {
     "medianCents": 717,
-    "qty": 26,
+    "qty": 2,
     "lowestCents": 8000
   },
   "Bat Wing Membrane": {
@@ -275,9 +275,9 @@
     "lowestCents": 179
   },
   "Soulstone - Torment": {
-    "medianCents": 718,
-    "qty": 33,
-    "lowestCents": 716
+    "medianCents": 808,
+    "qty": 16,
+    "lowestCents": 1182
   },
   "Dragon Bile": {
     "medianCents": 143,
@@ -353,9 +353,9 @@
     "lowestCents": 5
   },
   "Chaos Shard": {
-    "medianCents": 85,
-    "qty": 326,
-    "lowestCents": 93
+    "medianCents": 117,
+    "qty": 120,
+    "lowestCents": 120
   },
   "Wolf Fang": {
     "medianCents": 4,
@@ -364,7 +364,7 @@
   },
   "Rapier (Legendary) A": {
     "medianCents": 2219,
-    "qty": 43,
+    "qty": 1,
     "lowestCents": 64
   },
   "Slime Jelly": {
@@ -383,19 +383,19 @@
     "lowestCents": 3
   },
   "Void Ichor": {
-    "medianCents": 828,
-    "qty": 2,
-    "lowestCents": 1233
+    "medianCents": 1235,
+    "qty": 1,
+    "lowestCents": 1760
   },
   "Stardust Ingot": {
     "medianCents": 1002,
-    "qty": 8,
+    "qty": 4,
     "lowestCents": 1100
   },
   "Scroll of Immortal Inscription": {
     "medianCents": 762,
-    "qty": 41,
-    "lowestCents": 1600
+    "qty": 5,
+    "lowestCents": 1596
   },
   "Rune Scepter (Arcana) A": {
     "medianCents": 2392,
@@ -516,9 +516,9 @@
     "lowestCents": 4
   },
   "Moonstone": {
-    "medianCents": 534,
-    "qty": 6,
-    "lowestCents": 787
+    "medianCents": 787,
+    "qty": 1,
+    "lowestCents": 915
   },
   "Mystic Orb (Beyond) A": {
     "medianCents": 369,
@@ -667,11 +667,12 @@
   },
   "Kingdom 1st Anniversary Coin": {
     "qty": 1,
-    "lowestCents": 1156
+    "lowestCents": 1156,
+    "medianCents": 1157
   },
   "Kingdom 50th Anniversary Coin": {
     "qty": 1,
-    "lowestCents": 3114
+    "lowestCents": 3112
   },
   "Ethereal Bracer (Legendary) A": {
     "medianCents": 1127,
@@ -686,7 +687,7 @@
   "Scroll of Common Inscription": {
     "medianCents": 880,
     "qty": 2,
-    "lowestCents": 1388
+    "lowestCents": 1383
   },
   "Heater Shield (Legendary) A": {
     "medianCents": 1412,
@@ -724,9 +725,9 @@
     "lowestCents": 14868
   },
   "Sunstone": {
-    "medianCents": 501,
-    "qty": 4,
-    "lowestCents": 818
+    "medianCents": 820,
+    "qty": 2,
+    "lowestCents": 829
   },
   "Shadow Bow (Beyond) A": {
     "medianCents": 15281,
@@ -830,7 +831,8 @@
   },
   "Cutlas (Immortal) A": {
     "qty": 1,
-    "lowestCents": 1733
+    "lowestCents": 1733,
+    "medianCents": 1730
   },
   "Steel Axe (Arcana) A": {
     "medianCents": 664,
@@ -903,7 +905,7 @@
   },
   "Scroll of Beyond Inscription": {
     "qty": 17,
-    "lowestCents": 347
+    "lowestCents": 348
   },
   "Ethereal Amulet (Immortal) A": {
     "medianCents": 1764,
@@ -936,9 +938,9 @@
     "lowestCents": 426
   },
   "Bloodstone": {
-    "medianCents": 233,
-    "qty": 61,
-    "lowestCents": 247
+    "medianCents": 280,
+    "qty": 20,
+    "lowestCents": 292
   },
   "Chain Gloves (Immortal) A": {
     "medianCents": 18520,
@@ -946,9 +948,8 @@
     "lowestCents": 18520
   },
   "Rune Sword (Legendary) A": {
-    "medianCents": 755,
     "qty": 1,
-    "lowestCents": 22155
+    "lowestCents": 22246
   },
   "Dimensional Armor (Beyond) A": {
     "medianCents": 2961,
@@ -1026,11 +1027,12 @@
   },
   "Rune Sword (Arcana) A": {
     "qty": 1,
-    "lowestCents": 2124
+    "lowestCents": 2124,
+    "medianCents": 2125
   },
   "Abyssal Mucus": {
     "qty": 1,
-    "lowestCents": 6648
+    "lowestCents": 6675
   },
   "Knight Gloves (Immortal) A": {
     "medianCents": 555,
@@ -1039,7 +1041,7 @@
   },
   "Scroll of Arcana Inscription": {
     "qty": 3,
-    "lowestCents": 1912
+    "lowestCents": 1904
   },
   "Herald Staff (Immortal) A": {
     "medianCents": 2545,
@@ -1063,7 +1065,7 @@
   },
   "Vengeance Sword (Immortal) A": {
     "qty": 1,
-    "lowestCents": 4517
+    "lowestCents": 4504
   },
   "Emerald Bracer (Arcana) A": {
     "medianCents": 227,
@@ -1072,7 +1074,7 @@
   },
   "Knight Sword (Immortal) A": {
     "qty": 1,
-    "lowestCents": 7164
+    "lowestCents": 7158
   },
   "Opal": {
     "qty": 15,
@@ -1094,9 +1096,9 @@
     "lowestCents": 5755
   },
   "Arcane Ore": {
-    "medianCents": 483,
+    "medianCents": 545,
     "qty": 21,
-    "lowestCents": 486
+    "lowestCents": 575
   },
   "Gold Amulet (Arcana) A": {
     "medianCents": 4350,
@@ -1119,7 +1121,6 @@
     "lowestCents": 1127
   },
   "Rapier (Immortal) A": {
-    "medianCents": 1492,
     "qty": 1,
     "lowestCents": 1426
   },
@@ -1210,7 +1211,6 @@
     "lowestCents": 586
   },
   "Knight Sword (Legendary) A": {
-    "medianCents": 668,
     "qty": 3,
     "lowestCents": 550
   },
@@ -1228,18 +1228,17 @@
     "lowestCents": 2337
   },
   "Rune Sword (Immortal) A": {
-    "medianCents": 1266,
     "qty": 1,
     "lowestCents": 1211
   },
   "Dimensional Sword (Beyond) A": {
-    "medianCents": 2301,
-    "qty": 9,
-    "lowestCents": 2360
+    "medianCents": 2449,
+    "qty": 8,
+    "lowestCents": 3070
   },
   "Scroll of Legendary Inscription": {
-    "medianCents": 611,
-    "qty": 27,
+    "medianCents": 869,
+    "qty": 14,
     "lowestCents": 797
   },
   "Witch Staff (Immortal) A": {
@@ -1253,7 +1252,6 @@
     "lowestCents": 2216
   },
   "Dimensional Sword (Arcana) A": {
-    "medianCents": 1331,
     "qty": 9,
     "lowestCents": 1222
   },
@@ -1313,8 +1311,8 @@
   },
   "Titan Marrow": {
     "medianCents": 1030,
-    "lowestCents": 1029,
-    "qty": 3
+    "lowestCents": 1032,
+    "qty": 4
   },
   "Thunderstone": {
     "medianCents": 623,
@@ -1322,23 +1320,22 @@
     "qty": 3
   },
   "Darksteel Ingot": {
-    "medianCents": 253,
-    "lowestCents": 253,
-    "qty": 123
+    "medianCents": 254,
+    "lowestCents": 254,
+    "qty": 50
   },
   "Orichalcum Ore": {
-    "medianCents": 377,
-    "lowestCents": 497,
-    "qty": 3
+    "medianCents": 497,
+    "lowestCents": 496,
+    "qty": 1
   },
   "Empire 50th Anniversary Coin": {
-    "medianCents": 7174,
-    "lowestCents": 9218,
+    "lowestCents": 9211,
     "qty": 1
   },
   "Bastard Sword (Immortal) A": {
-    "medianCents": 694,
-    "lowestCents": 2026,
+    "medianCents": 2026,
+    "lowestCents": 2304,
     "qty": 1
   },
   "Hero Sword (Rare) A": {
@@ -1360,20 +1357,20 @@
     "lowestCents": 112
   },
   "Dimensional Sword (Immortal) A": {
-    "lowestCents": 2219
+    "lowestCents": 2219,
+    "medianCents": 2227,
+    "qty": 1
   },
   "Shadow Blade (Immortal) A": {
-    "lowestCents": 98
+    "lowestCents": 97
   },
   "Eternal Sword (Legendary) A": {
-    "lowestCents": 117
+    "lowestCents": 118
   },
   "Short Bow (Legendary) A": {
-    "medianCents": 620,
     "qty": 1
   },
   "Short Bow (Immortal) A": {
-    "medianCents": 1780,
     "qty": 1
   },
   "Long Bow (Legendary) A": {
