@@ -2796,20 +2796,20 @@
   },
   "Sage Staff (Legendary) A": {
     "buyOrderCents": 117,
-    "lowestCents": 5576
+    "lowestCents": 5586
   },
   "Sage Staff (Mythic) A": {
     "buyOrderCents": 0
   },
   "Sage Staff (Immortal) A": {
-    "buyOrderCents": 201,
-    "lowestCents": 7771
+    "buyOrderCents": 202,
+    "lowestCents": 7812
   },
   "Sage Staff (Arcana) A": {
-    "buyOrderCents": 213
+    "buyOrderCents": 214
   },
   "Sage Staff (Beyond) A": {
-    "buyOrderCents": 156
+    "buyOrderCents": 157
   },
   "Mystic Staff": {
     "buyOrderCents": 0
