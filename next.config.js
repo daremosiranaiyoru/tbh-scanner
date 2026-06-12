@@ -13,6 +13,16 @@ const nextConfig = {
         ],
       },
       {
+        // Cache the master sprite sheet
+        source: '/icons_sprite.png',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          }
+        ],
+      },
+      {
         // Cache the massive 10MB opencv.js file for 1 year
         source: '/opencv.js',
         headers: [

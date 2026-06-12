@@ -1,0 +1,3068 @@
+{
+  "AMULET_600001.png": {
+    "x": 0,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600002.png": {
+    "x": 32,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600003.png": {
+    "x": 64,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600004.png": {
+    "x": 96,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600005.png": {
+    "x": 128,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600006.png": {
+    "x": 160,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600007.png": {
+    "x": 192,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600008.png": {
+    "x": 224,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600009.png": {
+    "x": 256,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600010.png": {
+    "x": 288,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600011.png": {
+    "x": 320,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600012.png": {
+    "x": 352,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600013.png": {
+    "x": 384,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600014.png": {
+    "x": 416,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600015.png": {
+    "x": 448,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600016.png": {
+    "x": 480,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600017.png": {
+    "x": 512,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600018.png": {
+    "x": 544,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AMULET_600019.png": {
+    "x": 576,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510001.png": {
+    "x": 608,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510002.png": {
+    "x": 0,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510003.png": {
+    "x": 32,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510004.png": {
+    "x": 64,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510005.png": {
+    "x": 96,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510006.png": {
+    "x": 128,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510007.png": {
+    "x": 160,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510008.png": {
+    "x": 192,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510009.png": {
+    "x": 224,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510010.png": {
+    "x": 256,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510011.png": {
+    "x": 288,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510012.png": {
+    "x": 320,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510013.png": {
+    "x": 352,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510014.png": {
+    "x": 384,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510015.png": {
+    "x": 416,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510016.png": {
+    "x": 448,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510017.png": {
+    "x": 480,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510018.png": {
+    "x": 512,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510019.png": {
+    "x": 544,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARMOR_510020.png": {
+    "x": 576,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410001.png": {
+    "x": 608,
+    "y": 32,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410002.png": {
+    "x": 0,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410003.png": {
+    "x": 32,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410004.png": {
+    "x": 64,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410005.png": {
+    "x": 96,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410006.png": {
+    "x": 128,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410007.png": {
+    "x": 160,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410008.png": {
+    "x": 192,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410009.png": {
+    "x": 224,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410010.png": {
+    "x": 256,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410011.png": {
+    "x": 288,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410012.png": {
+    "x": 320,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410013.png": {
+    "x": 352,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410014.png": {
+    "x": 384,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410015.png": {
+    "x": 416,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410016.png": {
+    "x": 448,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410017.png": {
+    "x": 480,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410018.png": {
+    "x": 512,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410019.png": {
+    "x": 544,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "ARROW_410020.png": {
+    "x": 576,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350001.png": {
+    "x": 608,
+    "y": 64,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350002.png": {
+    "x": 0,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350003.png": {
+    "x": 32,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350004.png": {
+    "x": 64,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350005.png": {
+    "x": 96,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350006.png": {
+    "x": 128,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350007.png": {
+    "x": 160,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350008.png": {
+    "x": 192,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350009.png": {
+    "x": 224,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350010.png": {
+    "x": 256,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350011.png": {
+    "x": 288,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350012.png": {
+    "x": 320,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350013.png": {
+    "x": 352,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350014.png": {
+    "x": 384,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350015.png": {
+    "x": 416,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350016.png": {
+    "x": 448,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350017.png": {
+    "x": 480,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350018.png": {
+    "x": 512,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350019.png": {
+    "x": 544,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "AXE_350020.png": {
+    "x": 576,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440001.png": {
+    "x": 608,
+    "y": 96,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440002.png": {
+    "x": 0,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440003.png": {
+    "x": 32,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440004.png": {
+    "x": 64,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440005.png": {
+    "x": 96,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440006.png": {
+    "x": 128,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440007.png": {
+    "x": 160,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440008.png": {
+    "x": 192,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440009.png": {
+    "x": 224,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440010.png": {
+    "x": 256,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440011.png": {
+    "x": 288,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440012.png": {
+    "x": 320,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440013.png": {
+    "x": 352,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440014.png": {
+    "x": 384,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440015.png": {
+    "x": 416,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440016.png": {
+    "x": 448,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440017.png": {
+    "x": 480,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440018.png": {
+    "x": 512,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440019.png": {
+    "x": 544,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOLT_440020.png": {
+    "x": 576,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530001.png": {
+    "x": 608,
+    "y": 128,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530002.png": {
+    "x": 0,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530003.png": {
+    "x": 32,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530004.png": {
+    "x": 64,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530005.png": {
+    "x": 96,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530006.png": {
+    "x": 128,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530007.png": {
+    "x": 160,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530008.png": {
+    "x": 192,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530009.png": {
+    "x": 224,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530010.png": {
+    "x": 256,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530011.png": {
+    "x": 288,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530012.png": {
+    "x": 320,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530013.png": {
+    "x": 352,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530014.png": {
+    "x": 384,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530015.png": {
+    "x": 416,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530016.png": {
+    "x": 448,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530017.png": {
+    "x": 480,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530018.png": {
+    "x": 512,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530019.png": {
+    "x": 544,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOOTS_530020.png": {
+    "x": 576,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310001.png": {
+    "x": 608,
+    "y": 160,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310002.png": {
+    "x": 0,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310003.png": {
+    "x": 32,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310004.png": {
+    "x": 64,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310005.png": {
+    "x": 96,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310006.png": {
+    "x": 128,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310007.png": {
+    "x": 160,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310008.png": {
+    "x": 192,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310009.png": {
+    "x": 224,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310010.png": {
+    "x": 256,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310011.png": {
+    "x": 288,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310012.png": {
+    "x": 320,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310013.png": {
+    "x": 352,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310014.png": {
+    "x": 384,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310015.png": {
+    "x": 416,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310016.png": {
+    "x": 448,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310017.png": {
+    "x": 480,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310018.png": {
+    "x": 512,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310019.png": {
+    "x": 544,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BOW_310020.png": {
+    "x": 576,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630001.png": {
+    "x": 608,
+    "y": 192,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630002.png": {
+    "x": 0,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630003.png": {
+    "x": 32,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630004.png": {
+    "x": 64,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630005.png": {
+    "x": 96,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630006.png": {
+    "x": 128,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630007.png": {
+    "x": 160,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630008.png": {
+    "x": 192,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630009.png": {
+    "x": 224,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630010.png": {
+    "x": 256,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630011.png": {
+    "x": 288,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630012.png": {
+    "x": 320,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630013.png": {
+    "x": 352,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630014.png": {
+    "x": 384,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630015.png": {
+    "x": 416,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630016.png": {
+    "x": 448,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630017.png": {
+    "x": 480,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630018.png": {
+    "x": 512,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "BRACER_630019.png": {
+    "x": 544,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340001.png": {
+    "x": 576,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340002.png": {
+    "x": 608,
+    "y": 224,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340003.png": {
+    "x": 0,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340004.png": {
+    "x": 32,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340005.png": {
+    "x": 64,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340006.png": {
+    "x": 96,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340007.png": {
+    "x": 128,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340008.png": {
+    "x": 160,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340009.png": {
+    "x": 192,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340010.png": {
+    "x": 224,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340011.png": {
+    "x": 256,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340012.png": {
+    "x": 288,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340013.png": {
+    "x": 320,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340014.png": {
+    "x": 352,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340015.png": {
+    "x": 384,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340016.png": {
+    "x": 416,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340017.png": {
+    "x": 448,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340018.png": {
+    "x": 480,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340019.png": {
+    "x": 512,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "CROSSBOW_340020.png": {
+    "x": 544,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610001.png": {
+    "x": 576,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610002.png": {
+    "x": 608,
+    "y": 256,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610003.png": {
+    "x": 0,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610004.png": {
+    "x": 32,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610005.png": {
+    "x": 64,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610006.png": {
+    "x": 96,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610007.png": {
+    "x": 128,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610008.png": {
+    "x": 160,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610009.png": {
+    "x": 192,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610010.png": {
+    "x": 224,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610011.png": {
+    "x": 256,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610012.png": {
+    "x": 288,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610013.png": {
+    "x": 320,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610014.png": {
+    "x": 352,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610015.png": {
+    "x": 384,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610016.png": {
+    "x": 416,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610017.png": {
+    "x": 448,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610018.png": {
+    "x": 480,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "EARING_610019.png": {
+    "x": 512,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520001.png": {
+    "x": 544,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520002.png": {
+    "x": 576,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520003.png": {
+    "x": 608,
+    "y": 288,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520004.png": {
+    "x": 0,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520005.png": {
+    "x": 32,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520006.png": {
+    "x": 64,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520007.png": {
+    "x": 96,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520008.png": {
+    "x": 128,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520009.png": {
+    "x": 160,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520010.png": {
+    "x": 192,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520011.png": {
+    "x": 224,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520012.png": {
+    "x": 256,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520013.png": {
+    "x": 288,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520014.png": {
+    "x": 320,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520015.png": {
+    "x": 352,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520016.png": {
+    "x": 384,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520017.png": {
+    "x": 416,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520018.png": {
+    "x": 448,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520019.png": {
+    "x": 480,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "GLOVES_520020.png": {
+    "x": 512,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450001.png": {
+    "x": 544,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450002.png": {
+    "x": 576,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450003.png": {
+    "x": 608,
+    "y": 320,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450004.png": {
+    "x": 0,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450005.png": {
+    "x": 32,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450006.png": {
+    "x": 64,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450007.png": {
+    "x": 96,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450008.png": {
+    "x": 128,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450009.png": {
+    "x": 160,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450010.png": {
+    "x": 192,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450011.png": {
+    "x": 224,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450012.png": {
+    "x": 256,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450013.png": {
+    "x": 288,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450014.png": {
+    "x": 320,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450015.png": {
+    "x": 352,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450016.png": {
+    "x": 384,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450017.png": {
+    "x": 416,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450018.png": {
+    "x": 448,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450019.png": {
+    "x": 480,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HATCHET_450020.png": {
+    "x": 512,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500001.png": {
+    "x": 544,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500002.png": {
+    "x": 576,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500003.png": {
+    "x": 608,
+    "y": 352,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500004.png": {
+    "x": 0,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500005.png": {
+    "x": 32,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500006.png": {
+    "x": 64,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500007.png": {
+    "x": 96,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500008.png": {
+    "x": 128,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500009.png": {
+    "x": 160,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500010.png": {
+    "x": 192,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500011.png": {
+    "x": 224,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500012.png": {
+    "x": 256,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500013.png": {
+    "x": 288,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500014.png": {
+    "x": 320,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500015.png": {
+    "x": 352,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500016.png": {
+    "x": 384,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500017.png": {
+    "x": 416,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500018.png": {
+    "x": 448,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500019.png": {
+    "x": 480,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "HELMET_500020.png": {
+    "x": 512,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "Item_110001.png": {
+    "x": 544,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "Item_110002.png": {
+    "x": 576,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "Item_110003.png": {
+    "x": 608,
+    "y": 384,
+    "width": 32,
+    "height": 32
+  },
+  "Item_110004.png": {
+    "x": 0,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_110005.png": {
+    "x": 32,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_111001.png": {
+    "x": 64,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_111002.png": {
+    "x": 96,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_111003.png": {
+    "x": 128,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_111004.png": {
+    "x": 160,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_112001.png": {
+    "x": 192,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_112002.png": {
+    "x": 224,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_112003.png": {
+    "x": 256,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_112004.png": {
+    "x": 288,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_112005.png": {
+    "x": 320,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_113001.png": {
+    "x": 352,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_113002.png": {
+    "x": 384,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_113003.png": {
+    "x": 416,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_113004.png": {
+    "x": 448,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_114001.png": {
+    "x": 480,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_114002.png": {
+    "x": 512,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_114003.png": {
+    "x": 544,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_114004.png": {
+    "x": 576,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_115001.png": {
+    "x": 608,
+    "y": 416,
+    "width": 32,
+    "height": 32
+  },
+  "Item_115002.png": {
+    "x": 0,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_115003.png": {
+    "x": 32,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_115004.png": {
+    "x": 64,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_116001.png": {
+    "x": 96,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_116002.png": {
+    "x": 128,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_116003.png": {
+    "x": 160,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_116004.png": {
+    "x": 192,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_117001.png": {
+    "x": 224,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_117002.png": {
+    "x": 256,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_118001.png": {
+    "x": 288,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_118002.png": {
+    "x": 320,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_119001.png": {
+    "x": 352,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_119002.png": {
+    "x": 384,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_120001.png": {
+    "x": 416,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_120002.png": {
+    "x": 448,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_120003.png": {
+    "x": 480,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_121001.png": {
+    "x": 512,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_121002.png": {
+    "x": 544,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_121003.png": {
+    "x": 576,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_121004.png": {
+    "x": 608,
+    "y": 448,
+    "width": 32,
+    "height": 32
+  },
+  "Item_122001.png": {
+    "x": 0,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_122002.png": {
+    "x": 32,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_122003.png": {
+    "x": 64,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_122004.png": {
+    "x": 96,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_123001.png": {
+    "x": 128,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_123002.png": {
+    "x": 160,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_123003.png": {
+    "x": 192,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_123004.png": {
+    "x": 224,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_124001.png": {
+    "x": 256,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_124002.png": {
+    "x": 288,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_124003.png": {
+    "x": 320,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_124004.png": {
+    "x": 352,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_125001.png": {
+    "x": 384,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_125002.png": {
+    "x": 416,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_125003.png": {
+    "x": 448,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_125004.png": {
+    "x": 480,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_126001.png": {
+    "x": 512,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_126002.png": {
+    "x": 544,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_126003.png": {
+    "x": 576,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_126004.png": {
+    "x": 608,
+    "y": 480,
+    "width": 32,
+    "height": 32
+  },
+  "Item_127001.png": {
+    "x": 0,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_127002.png": {
+    "x": 32,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_128001.png": {
+    "x": 64,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_128002.png": {
+    "x": 96,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_129001.png": {
+    "x": 128,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_129002.png": {
+    "x": 160,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_130001.png": {
+    "x": 192,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_131001.png": {
+    "x": 224,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_132001.png": {
+    "x": 256,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_133001.png": {
+    "x": 288,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_134001.png": {
+    "x": 320,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_135001.png": {
+    "x": 352,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_136001.png": {
+    "x": 384,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_137001.png": {
+    "x": 416,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_138001.png": {
+    "x": 448,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_139001.png": {
+    "x": 480,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_140001.png": {
+    "x": 512,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_140002.png": {
+    "x": 544,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_140003.png": {
+    "x": 576,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_140004.png": {
+    "x": 608,
+    "y": 512,
+    "width": 32,
+    "height": 32
+  },
+  "Item_141001.png": {
+    "x": 0,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_141002.png": {
+    "x": 32,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_142001.png": {
+    "x": 64,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_142002.png": {
+    "x": 96,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_143001.png": {
+    "x": 128,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_143002.png": {
+    "x": 160,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_144001.png": {
+    "x": 192,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_144002.png": {
+    "x": 224,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_145001.png": {
+    "x": 256,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_145002.png": {
+    "x": 288,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_146001.png": {
+    "x": 320,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_146002.png": {
+    "x": 352,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_147001.png": {
+    "x": 384,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_147002.png": {
+    "x": 416,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_148001.png": {
+    "x": 448,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_148002.png": {
+    "x": 480,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_149001.png": {
+    "x": 512,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_149002.png": {
+    "x": 544,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_160001.png": {
+    "x": 576,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_160002.png": {
+    "x": 608,
+    "y": 544,
+    "width": 32,
+    "height": 32
+  },
+  "Item_160003.png": {
+    "x": 0,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_160004.png": {
+    "x": 32,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_160005.png": {
+    "x": 64,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_160006.png": {
+    "x": 96,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_160007.png": {
+    "x": 128,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_160008.png": {
+    "x": 160,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_160009.png": {
+    "x": 192,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_160010.png": {
+    "x": 224,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_190001.png": {
+    "x": 256,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_190002.png": {
+    "x": 288,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_190003.png": {
+    "x": 320,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "Item_190004.png": {
+    "x": 352,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420001.png": {
+    "x": 384,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420002.png": {
+    "x": 416,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420003.png": {
+    "x": 448,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420004.png": {
+    "x": 480,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420005.png": {
+    "x": 512,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420006.png": {
+    "x": 544,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420007.png": {
+    "x": 576,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420008.png": {
+    "x": 608,
+    "y": 576,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420009.png": {
+    "x": 0,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420010.png": {
+    "x": 32,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420011.png": {
+    "x": 64,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420012.png": {
+    "x": 96,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420013.png": {
+    "x": 128,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420014.png": {
+    "x": 160,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420015.png": {
+    "x": 192,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420016.png": {
+    "x": 224,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420017.png": {
+    "x": 256,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420018.png": {
+    "x": 288,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420019.png": {
+    "x": 320,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "ORB_420020.png": {
+    "x": 352,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620001.png": {
+    "x": 384,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620002.png": {
+    "x": 416,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620003.png": {
+    "x": 448,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620004.png": {
+    "x": 480,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620005.png": {
+    "x": 512,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620006.png": {
+    "x": 544,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620007.png": {
+    "x": 576,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620008.png": {
+    "x": 608,
+    "y": 608,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620009.png": {
+    "x": 0,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620010.png": {
+    "x": 32,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620011.png": {
+    "x": 64,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620012.png": {
+    "x": 96,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620013.png": {
+    "x": 128,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620014.png": {
+    "x": 160,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620015.png": {
+    "x": 192,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620016.png": {
+    "x": 224,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620017.png": {
+    "x": 256,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620018.png": {
+    "x": 288,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "RING_620019.png": {
+    "x": 320,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330001.png": {
+    "x": 352,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330002.png": {
+    "x": 384,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330003.png": {
+    "x": 416,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330004.png": {
+    "x": 448,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330005.png": {
+    "x": 480,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330006.png": {
+    "x": 512,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330007.png": {
+    "x": 544,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330008.png": {
+    "x": 576,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330009.png": {
+    "x": 608,
+    "y": 640,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330010.png": {
+    "x": 0,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330011.png": {
+    "x": 32,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330012.png": {
+    "x": 64,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330013.png": {
+    "x": 96,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330014.png": {
+    "x": 128,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330015.png": {
+    "x": 160,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330016.png": {
+    "x": 192,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330017.png": {
+    "x": 224,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330018.png": {
+    "x": 256,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330019.png": {
+    "x": 288,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SCEPTER_330020.png": {
+    "x": 320,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400001.png": {
+    "x": 352,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400002.png": {
+    "x": 384,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400003.png": {
+    "x": 416,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400004.png": {
+    "x": 448,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400005.png": {
+    "x": 480,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400006.png": {
+    "x": 512,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400007.png": {
+    "x": 544,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400008.png": {
+    "x": 576,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400009.png": {
+    "x": 608,
+    "y": 672,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400010.png": {
+    "x": 0,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400011.png": {
+    "x": 32,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400012.png": {
+    "x": 64,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400013.png": {
+    "x": 96,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400014.png": {
+    "x": 128,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400015.png": {
+    "x": 160,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400016.png": {
+    "x": 192,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400017.png": {
+    "x": 224,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400018.png": {
+    "x": 256,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400019.png": {
+    "x": 288,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "SHIELD_400020.png": {
+    "x": 320,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320001.png": {
+    "x": 352,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320002.png": {
+    "x": 384,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320003.png": {
+    "x": 416,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320004.png": {
+    "x": 448,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320005.png": {
+    "x": 480,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320006.png": {
+    "x": 512,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320007.png": {
+    "x": 544,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320008.png": {
+    "x": 576,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320009.png": {
+    "x": 608,
+    "y": 704,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320010.png": {
+    "x": 0,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320011.png": {
+    "x": 32,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320012.png": {
+    "x": 64,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320013.png": {
+    "x": 96,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320014.png": {
+    "x": 128,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320015.png": {
+    "x": 160,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320016.png": {
+    "x": 192,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320017.png": {
+    "x": 224,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320018.png": {
+    "x": 256,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320019.png": {
+    "x": 288,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "STAFF_320020.png": {
+    "x": 320,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300001.png": {
+    "x": 352,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300002.png": {
+    "x": 384,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300003.png": {
+    "x": 416,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300004.png": {
+    "x": 448,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300005.png": {
+    "x": 480,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300006.png": {
+    "x": 512,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300007.png": {
+    "x": 544,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300008.png": {
+    "x": 576,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300009.png": {
+    "x": 608,
+    "y": 736,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300010.png": {
+    "x": 0,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300011.png": {
+    "x": 32,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300012.png": {
+    "x": 64,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300013.png": {
+    "x": 96,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300014.png": {
+    "x": 128,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300015.png": {
+    "x": 160,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300016.png": {
+    "x": 192,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300017.png": {
+    "x": 224,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300018.png": {
+    "x": 256,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300019.png": {
+    "x": 288,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "SWORD_300020.png": {
+    "x": 320,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430001.png": {
+    "x": 352,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430002.png": {
+    "x": 384,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430003.png": {
+    "x": 416,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430004.png": {
+    "x": 448,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430005.png": {
+    "x": 480,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430006.png": {
+    "x": 512,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430007.png": {
+    "x": 544,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430008.png": {
+    "x": 576,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430009.png": {
+    "x": 608,
+    "y": 768,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430010.png": {
+    "x": 0,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430011.png": {
+    "x": 32,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430012.png": {
+    "x": 64,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430013.png": {
+    "x": 96,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430014.png": {
+    "x": 128,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430015.png": {
+    "x": 160,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430016.png": {
+    "x": 192,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430017.png": {
+    "x": 224,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430018.png": {
+    "x": 256,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430019.png": {
+    "x": 288,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  },
+  "TOME_430020.png": {
+    "x": 320,
+    "y": 800,
+    "width": 32,
+    "height": 32
+  }
+}
