@@ -1511,7 +1511,7 @@ export default function ScannerApp() {
         {/* Left Side: Upload & Canvas */}
         <div 
           className={`glass-panel ${dragActive ? styles.dragActive : ''}`} 
-          style={{ border: 'none', padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isScanning) ? '600px' : 'auto', transition: 'border 0.3s' }}
+          style={{ border: 'none', boxShadow: 'none', padding: '20px', display: 'flex', flexDirection: 'column', height: (results.length > 0 || isScanning) ? '600px' : 'auto', transition: 'border 0.3s' }}
           onDragEnter={handleDrag}
           onDragLeave={handleDrag}
           onDragOver={handleDrag}
@@ -1625,7 +1625,7 @@ export default function ScannerApp() {
             </p>
           </div>
         ) : (
-          <div className={`glass-panel ${styles.resultsPanel}`}>
+          <div className={`glass-panel ${styles.resultsPanel}`} style={{ border: 'none', boxShadow: 'none' }}>
             <div className={styles.resultsHeader}>
             <h2>Detected Items ({results.length})</h2>
             {prices === null && results.length > 0 && (
