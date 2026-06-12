@@ -1183,7 +1183,7 @@ export default function ScannerApp() {
 
         {/* Center: Tips Banner */}
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <Link href="/cashout" style={{ textDecoration: 'none' }}>
+          <Link href="/cashout" prefetch={false} style={{ textDecoration: 'none' }}>
             <div style={{
               background: 'rgba(76, 175, 80, 0.15)',
               border: '1px solid rgba(76, 175, 80, 0.4)',
