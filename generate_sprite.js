@@ -40,7 +40,7 @@ async function generateSprite() {
       
       // OpenCV engine expects 32x32 images
       if (icon.bitmap.width !== ICON_SIZE || icon.bitmap.height !== ICON_SIZE) {
-         icon.resize({ w: ICON_SIZE, h: ICON_SIZE });
+         icon.resize({ w: ICON_SIZE, h: ICON_SIZE, mode: 'nearestNeighbor' });
       }
       
       sprite.composite(icon, x, y);
