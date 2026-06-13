@@ -44,6 +44,16 @@ const nextConfig = {
       }
     ];
   },
+  async rewrites() {
+    return {
+      fallback: [
+        {
+          source: '/icons/:path*',
+          destination: '/api/icons-fallback',
+        },
+      ],
+    };
+  },
 };
 
 module.exports = nextConfig;
