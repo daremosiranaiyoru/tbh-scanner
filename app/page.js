@@ -1156,48 +1156,47 @@ export default function ScannerApp() {
       }}>
         {(() => {
           const noticeTrans = {
-            title: { 
-              'en-US': 'Notice', 
-              'ja-JP': 'お知らせ',
-              'zh-Hans': '通知',
-              'zh-Hant': '通知',
-              'ko-KR': '공지사항',
-              'ru-RU': 'Уведомление',
-              'es-ES': 'Aviso',
-              'fr-FR': 'Avis',
-              'de-DE': 'Hinweis',
-              'pt-BR': 'Aviso',
-              'tr-TR': 'Duyuru',
-              'vi-VN': 'Thông báo',
-    'id-ID': 'Pemberitahuan',
-    'th-TH': 'ประกาศ',
-    'pl-PL': 'Ogłoszenie',
-    'uk-UA': 'Повідомлення'
-            },
-            text: { 
-              'en-US': 'Due to the market closure, some items are experiencing abnormal price spikes or are sold out. Please wait a while until the market reopens.', 
-              'ja-JP': 'マーケット閉鎖の影響により異常な高騰をしているアイテムや売り切れているアイテムがあります。マーケットが再開されるまで今しばらくお待ちください。',
-              'zh-Hans': '受市场关闭的影响，部分物品出现了异常的价格暴涨或已售罄。请耐心等待直到市场重新开放。',
-              'zh-Hant': '受市場關閉的影響，部分物品出現了異常的價格暴漲或已售罄。請耐心等待直到市場重新開放。',
-              'ko-KR': '마켓 폐쇄의 영향으로 일부 아이템이 비정상적으로 가격이 급등하거나 품절되었습니다. 마켓이 다시 열릴 때까지 잠시 기다려 주십시오.',
-              'ru-RU': 'Из-за закрытия рынка некоторые предметы испытывают аномальный скачок цен или распроданы. Пожалуйста, подождите, пока рынок снова не откроется.',
-              'es-ES': 'Debido al cierre del mercado, algunos artículos están experimentando aumentos de precio anormales o están agotados. Por favor, espere hasta que el mercado vuelva a abrir.',
-              'fr-FR': 'En raison de la fermeture du marché, certains articles connaissent des hausses de prix anormales ou sont en rupture de stock. Veuillez patienter jusqu\'à la réouverture du marché.',
-              'de-DE': 'Aufgrund der Schließung des Marktes verzeichnen einige Artikel abnormale Preisspitzen oder sind ausverkauft. Bitte warten Sie, bis der Markt wieder öffnet.',
-              'pt-BR': 'Devido ao fechamento do mercado, alguns itens estão sofrendo picos anormais de preços ou estão esgotados. Por favor, aguarde até que o mercado reabra.',
-              'tr-TR': 'Pazarın kapanması nedeniyle bazı eşyalarda anormal fiyat artışları yaşanıyor veya tükenmiş durumdalar. Lütfen pazar yeniden açılana kadar bekleyin.',
-              'vi-VN': 'Do việc đóng cửa chợ, một số vật phẩm đang gặp phải tình trạng tăng giá bất thường hoặc đã hết hàng. Vui lòng đợi cho đến khi chợ mở cửa trở lại.',
-    'id-ID': 'Akibat penutupan pasar, beberapa item mengalami lonjakan harga yang tidak normal atau habis terjual. Harap tunggu sebentar sampai pasar dibuka kembali.',
-    'th-TH': 'เนื่องจากการปิดตลาด ไอเทมบางรายการประสบปัญหาราคาพุ่งสูงผิดปกติหรือขายหมดแล้ว โปรดรอสักครู่จนกว่าตลาดจะเปิดอีกครั้ง',
-    'pl-PL': 'Z powodu zamknięcia rynku, niektóre przedmioty odnotowują nienormalne skoki cen lub są wyprzedane. Proszę chwilę poczekać, aż rynek zostanie ponownie otwarty.',
-    'uk-UA': 'Через закриття ринку деякі предмети відчувають аномальні стрибки цін або розпродані. Будь ласка, зачекайте, поки ринок знову відкриється.'
-            }
-          };
+  "title": {
+    "en-US": "To Everyone Using the Tool",
+    "ja-JP": "ツールを使ってくださる皆様へ",
+    "zh-Hans": "致所有使用本工具的用户",
+    "zh-Hant": "致所有使用本工具的用戶",
+    "ko-KR": "이 툴을 사용해주시는 모든 분들께",
+    "ru-RU": "Всем пользователям инструмента",
+    "es-ES": "A todos los que usan esta herramienta",
+    "fr-FR": "À tous les utilisateurs de l'outil",
+    "de-DE": "An alle Nutzer dieses Tools",
+    "pt-BR": "A todos que usam esta ferramenta",
+    "tr-TR": "Aracı Kullanan Herkese",
+    "vi-VN": "Gửi tới tất cả người dùng công cụ",
+    "id-ID": "Kepada Semua Pengguna Alat",
+    "th-TH": "ถึงผู้ใช้เครื่องมือทุกคน",
+    "pl-PL": "Do wszystkich użytkowników narzędzia",
+    "uk-UA": "До всіх користувачів інструменту"
+  },
+  "text": {
+    "en-US": "I'm maru, the developer. I'm incredibly grateful that so many people are using this! However, server costs have skyrocketed as a result, making it difficult for me to maintain personally. Costs are expected to rise even further once the market reopens. To help me continue updating the tool, I would deeply appreciate your support, even just a small amount!",
+    "ja-JP": "開発者のmaruです。予想以上に多くの方に使っていただき大変感謝しています！ですが、その分サーバー代が高騰しており、個人での維持が難しくなってきました。マーケット再開後はさらに費用がかさむと予想されます。今後もアップデートを続けていくため、もしよろしければ少額からでもご支援いただけますと大変助かります！",
+    "zh-Hans": "我是开发者maru。非常感谢有这么多人使用！但是服务器费用也随之飙升，让我个人难以承担。预计市场重新开放后费用还会进一步增加。为了能继续为大家更新，即使是少量的赞助也能帮上大忙，非常感谢！",
+    "zh-Hant": "我是開發者maru。非常感謝有這麼多人使用！但是伺服器費用也隨之飆升，讓我個人難以承擔。預計市場重新開放後費用還會進一步增加。為了能繼續為大家更新，即使是少量的贊助也能幫上大忙，非常感謝！",
+    "ko-KR": "개발자 maru입니다. 예상보다 훨씬 많은 분들이 사용해주셔서 정말 감사드립니다! 하지만 그만큼 서버 비용이 급등하여 개인적으로 유지하기가 어려워졌습니다. 마켓 재개 후에는 비용이 더 들 것으로 예상됩니다. 앞으로도 업데이트를 계속해 나갈 수 있도록, 적은 금액이라도 후원해주시면 정말 큰 도움이 되겠습니다!",
+    "ru-RU": "Я maru, разработчик. Я невероятно благодарен за то, что так много людей пользуются этим! Однако в результате расходы на сервер резко возросли, и мне стало трудно поддерживать его лично. Ожидается, что расходы возрастут еще больше после открытия рынка. Чтобы я мог продолжать обновления, я был бы очень признателен за вашу поддержку, даже на небольшую сумму!",
+    "es-ES": "Soy maru, el desarrollador. ¡Estoy muy agradecido de que tanta gente use esto! Sin embargo, los costos del servidor se han disparado como resultado, haciendo difícil que pueda mantenerlo personalmente. Se espera que los costos aumenten aún más cuando el mercado vuelva a abrir. Para poder seguir actualizando la herramienta, ¡agradecería enormemente su apoyo, incluso con una pequeña cantidad!",
+    "fr-FR": "Je suis maru, le développeur. Je suis incroyablement reconnaissant que tant de personnes utilisent ceci ! Cependant, les coûts des serveurs ont explosé en conséquence, ce qui rend difficile pour moi de le maintenir personnellement. Les coûts devraient encore augmenter une fois que le marché rouvrira. Pour m'aider à continuer les mises à jour, j'apprécierais profondément votre soutien, même pour un petit montant !",
+    "de-DE": "Ich bin maru, der Entwickler. Ich bin unglaublich dankbar, dass so viele dieses Tool nutzen! Allerdings sind die Serverkosten dadurch in die Höhe geschossen, was es für mich schwer macht, es privat zu erhalten. Es wird erwartet, dass die Kosten nach der Wiedereröffnung des Marktes weiter steigen. Damit ich die Updates fortsetzen kann, wäre ich für jede Unterstützung sehr dankbar, selbst für einen kleinen Betrag!",
+    "pt-BR": "Sou maru, o desenvolvedor. Sou incrivelmente grato por tantas pessoas usarem isso! No entanto, os custos do servidor dispararam como resultado, dificultando a manutenção pessoal. Espera-se que os custos subam ainda mais quando o mercado reabrir. Para me ajudar a continuar atualizando a ferramenta, eu agradeceria profundamente seu apoio, mesmo com uma quantia pequena!",
+    "tr-TR": "Ben geliştirici maru. Bu kadar çok kişinin bunu kullanmasından inanılmaz minnettarım! Ancak bunun sonucunda sunucu maliyetleri hızla arttı ve kişisel olarak sürdürmemi zorlaştırdı. Pazarın yeniden açılmasıyla maliyetlerin daha da artması bekleniyor. Aracı güncellemeye devam edebilmem için, küçük bir miktar da olsa desteğinize derinden minnettar olurum!",
+    "vi-VN": "Tôi là nhà phát triển maru. Tôi vô cùng biết ơn vì rất nhiều người đang sử dụng công cụ này! Tuy nhiên, chi phí máy chủ đã tăng vọt do đó, khiến tôi gặp khó khăn trong việc duy trì cá nhân. Dự kiến chi phí sẽ còn tăng cao hơn khi chợ mở cửa trở lại. Để giúp tôi tiếp tục cập nhật, tôi sẽ rất trân trọng sự hỗ trợ của bạn, dù chỉ là một số tiền nhỏ!",
+    "id-ID": "Saya maru, pengembang. Saya sangat berterima kasih karena begitu banyak orang menggunakan ini! Namun, akibatnya biaya server meroket, membuatnya sulit bagi saya untuk mengelolanya secara pribadi. Biaya diperkirakan akan naik lebih tinggi lagi setelah pasar dibuka kembali. Untuk membantu saya terus memperbarui alat ini, saya akan sangat menghargai dukungan Anda, meskipun dalam jumlah kecil!",
+    "th-TH": "ผม maru ผู้พัฒนาครับ ผมรู้สึกขอบคุณอย่างยิ่งที่มีคนใช้สิ่งนี้มากมาย! อย่างไรก็ตาม ค่าเซิร์ฟเวอร์ก็พุ่งสูงขึ้นตามไปด้วย ทำให้ยากต่อการดูแลรักษาด้วยตัวเอง คาดว่าค่าใช้จ่ายจะเพิ่มขึ้นอีกเมื่อตลาดเปิด เพื่อช่วยให้ผมอัปเดตเครื่องมือต่อไป ผมจะรู้สึกขอบคุณมากสำหรับการสนับสนุนของคุณ แม้เพียงเล็กน้อยก็ตาม!",
+    "pl-PL": "Jestem maru, deweloper. Jestem niesamowicie wdzięczny, że tak wiele osób z tego korzysta! Jednak w rezultacie koszty serwera gwałtownie wzrosły, utrudniając mi osobiste utrzymanie. Oczekuje się, że koszty jeszcze wzrosną po ponownym otwarciu rynku. Aby pomóc mi kontynuować aktualizacje, byłbym głęboko wdzięczny za twoje wsparcie, nawet za niewielką kwotę!",
+    "uk-UA": "Я maru, розробник. Я неймовірно вдячний, що так багато людей користуються цим! Однак у результаті витрати на сервер стрімко зросли, що ускладнює його підтримку особисто. Очікується, що витрати ще більше зростуть після відкриття ринку. Щоб я міг продовжувати оновлення, я був би дуже вдячний за вашу підтримку, навіть на невелику суму!"
+  }
+};
           
           return (
             <>
               <h2 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#ffcc80' }}>
-                <span style={{ marginRight: '8px' }}>⚠️</span>
                 {noticeTrans.title[selectedLang] || noticeTrans.title['ja-JP']}
               </h2>
               <p style={{ color: 'white', lineHeight: '1.6' }}>
@@ -1239,24 +1238,35 @@ export default function ScannerApp() {
 
         {/* Right: Small Ko-fi Link */}
         <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
-          <a 
-            href="https://ko-fi.com/tbh_scanner" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-flex', alignItems: 'center', gap: '6px',
-              background: 'rgba(255, 183, 77, 0.1)', color: '#ffb74d', textDecoration: 'none',
-              padding: '6px 16px', borderRadius: '20px', fontSize: '0.9rem', fontWeight: 'bold',
-              border: '1px solid rgba(255, 183, 77, 0.3)', transition: 'all 0.2s',
-              boxShadow: '0 2px 8px rgba(255, 183, 77, 0.1)',
-              whiteSpace: 'nowrap'
-            }}
-            onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255, 183, 77, 0.2)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
-            onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 183, 77, 0.1)'; e.currentTarget.style.transform = 'none'; }}
-          >
-            <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi" style={{ width: '16px' }} />
-            {kofiSmallTrans[selectedLang] || kofiSmallTrans['en-US']}
-          </a>
+          {/* OFUSE Container - Only visible in Japanese */}
+          <div style={{ display: selectedLang === 'ja-JP' ? 'block' : 'none' }}>
+            <a data-ofuse-widget-button href="https://ofuse.me/o?uid=187108" data-ofuse-id="187108">
+              OFUSEで応援を送る
+            </a>
+            <Script async src="https://ofuse.me/assets/platform/widget.js" charSet="utf-8" strategy="lazyOnload" />
+          </div>
+
+          {/* Ko-fi Container - Hidden in Japanese */}
+          <div style={{ display: selectedLang !== 'ja-JP' ? 'block' : 'none' }}>
+            <a 
+              href="https://ko-fi.com/tbh_scanner" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: '6px',
+                background: 'rgba(255, 183, 77, 0.1)', color: '#ffb74d', textDecoration: 'none',
+                padding: '6px 16px', borderRadius: '20px', fontSize: '0.9rem', fontWeight: 'bold',
+                border: '1px solid rgba(255, 183, 77, 0.3)', transition: 'all 0.2s',
+                boxShadow: '0 2px 8px rgba(255, 183, 77, 0.1)',
+                whiteSpace: 'nowrap'
+              }}
+              onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255, 183, 77, 0.2)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+              onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255, 183, 77, 0.1)'; e.currentTarget.style.transform = 'none'; }}
+            >
+              <img src="https://storage.ko-fi.com/cdn/cup-border.png" alt="Ko-fi" style={{ width: '16px' }} />
+              {kofiSmallTrans[selectedLang] || kofiSmallTrans['en-US']}
+            </a>
+          </div>
         </div>
       </div>
 
