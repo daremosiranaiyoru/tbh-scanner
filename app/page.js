@@ -163,12 +163,15 @@ export default function ScannerApp() {
   const [isSubmittingComment, setIsSubmittingComment] = useState(false);
   const [isAdminSecret, setIsAdminSecret] = useState(null);
   const [isSortedByPrice, setIsSortedByPrice] = useState(pageCache?.isSortedByPrice || false);
+  const [priceFilterMode, setPriceFilterMode] = useState(pageCache?.priceFilterMode || 'both'); // 'both', 'sell', 'buy'
   const [replyingToId, setReplyingToId] = useState(null);
 
   // Sync state to cache so it survives navigation
   useEffect(() => {
-    pageCache = { results, previewImages, prices, rates, isSortedByPrice };
-  }, [results, previewImages, prices, rates, isSortedByPrice]);
+    if (results.length > 0) {
+      pageCache = { results, previewImages, prices, rates, isSortedByPrice, priceFilterMode };
+    }
+  }, [results, previewImages, prices, rates, isSortedByPrice, priceFilterMode]);
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -893,7 +896,7 @@ export default function ScannerApp() {
     'de-DE': 'Update: Sie können jetzt auf das Symbol eines Elements im gescannten Bild klicken, um dessen Informationen sofort anzuzeigen!',
     'pt-BR': 'Atualização: Agora você pode clicar no ícone de um item na imagem digitalizada para ver instantaneamente suas informações!',
     'tr-TR': 'Güncelleme: Artık taranan görüntüdeki bir öğenin simgesine tıklayarak bilgilerini anında görüntüleyebilirsiniz!',
-    'vi-VN': 'Cập nhật: Giờ đây, bạn có thể nhấp vào biểu tượng của một mục trong hình ảnh được quét để xem ngay thông tin của mục đó!',
+    'vi-VN': 'Cập nhật: Giờ đây, bạn có thể nhấp vào biểu tượng của một mục trong hình ảnh được quét để xem ngay thông tin của mục đó!',
     'id-ID': 'Baru: Dukungan untuk penambahan item manual!',
     'th-TH': 'ใหม่: รองรับการเพิ่มไอเทมด้วยตนเอง!',
     'pl-PL': 'Nowość: Wsparcie dla ręcznego dodawania przedmiotów!',
@@ -912,7 +915,7 @@ export default function ScannerApp() {
     'de-DE': 'Taskbar Hero KI-Gutachter',
     'pt-BR': 'Avaliador de IA do Taskbar Hero',
     'tr-TR': 'Taskbar Hero YZ Eksperi',
-    'vi-VN': 'Chuyên gia thẩm định AI Taskbar Hero',
+    'vi-VN': 'Chuyên gia thẩm định AI Taskbar Hero',
     'id-ID': 'Penilai AI Taskbar Hero',
     'th-TH': 'ผู้ประเมิน AI ของ Taskbar Hero',
     'pl-PL': 'Rzeczoznawca AI Taskbar Hero',
@@ -931,7 +934,7 @@ export default function ScannerApp() {
     'de-DE': 'Schätzen Sie Preise sofort anhand von Screenshots Ihres Inventars.',
     'pt-BR': 'Estime instantaneamente os preços a partir das capturas de tela do seu inventário.',
     'tr-TR': 'Envanterinizin ekran görüntülerinden anında fiyat tahmini alın.',
-    'vi-VN': 'Định giá ngay lập tức từ ảnh chụp màn hình kho đồ của bạn.',
+    'vi-VN': 'Định giá ngay lập tức từ ảnh chụp màn hình kho đồ của bạn.',
     'id-ID': 'Menilai harga secara instan dari tangkapan layar inventaris Anda.',
     'th-TH': 'ประเมินราคาจากภาพหน้าจอช่องเก็บของของคุณทันที',
     'pl-PL': 'Błyskawicznie oceniaj ceny na podstawie zrzutów ekranu ekwipunku.',
@@ -950,7 +953,7 @@ export default function ScannerApp() {
     'de-DE': 'Schätzung...',
     'pt-BR': 'Avaliando...',
     'tr-TR': 'Değerlendiriliyor...',
-    'vi-VN': 'Đang định giá...',
+    'vi-VN': 'Đang định giá...',
     'id-ID': 'Menilai...',
     'th-TH': 'กำลังประเมิน...',
     'pl-PL': 'Ocenianie...',
@@ -969,7 +972,7 @@ export default function ScannerApp() {
     'de-DE': 'Bitte warten Sie einen Moment',
     'pt-BR': 'Por favor, aguarde um momento',
     'tr-TR': 'Lütfen biraz bekleyin',
-    'vi-VN': 'Vui lòng chờ trong giây lát',
+    'vi-VN': 'Vui lòng chờ trong giây lát',
     'id-ID': 'Mohon tunggu sebentar.',
     'th-TH': 'กรุณารอสักครู่',
     'pl-PL': 'Proszę chwilę poczekać.',
@@ -988,7 +991,7 @@ export default function ScannerApp() {
     'de-DE': 'Screenshot löschen',
     'pt-BR': 'Limpar captura',
     'tr-TR': 'Ekran Görüntüsünü Temizle',
-    'vi-VN': 'Xóa ảnh chụp màn hình',
+    'vi-VN': 'Xóa ảnh chụp màn hình',
     'id-ID': 'Hapus Tangkapan Layar',
     'th-TH': 'ล้างภาพหน้าจอ',
     'pl-PL': 'Wyczyść Zrzut Ekranu',
@@ -1007,7 +1010,7 @@ export default function ScannerApp() {
     'de-DE': 'Screenshot per Drag & Drop oder Einfügen (Strg+V) hinzufügen',
     'pt-BR': 'Arraste e solte ou cole (Ctrl+V) a captura de tela',
     'tr-TR': 'Ekran görüntüsünü Sürükleyip Bırakın veya Yapıştırın (Ctrl+V)',
-    'vi-VN': 'Kéo & Thả hoặc Dán (Ctrl+V) ảnh chụp màn hình',
+    'vi-VN': 'Kéo & Thả hoặc Dán (Ctrl+V) ảnh chụp màn hình',
     'id-ID': 'Unggah Tangkapan Layar',
     'th-TH': 'อัปโหลดภาพหน้าจอ',
     'pl-PL': 'Prześlij Zrzut Ekranu',
@@ -1026,7 +1029,7 @@ export default function ScannerApp() {
     'de-DE': 'Bis zu 8 Bilder können gleichzeitig bewertet werden',
     'pt-BR': 'Até 8 imagens podem ser avaliadas simultaneamente',
     'tr-TR': 'Aynı anda 8 görüntüye kadar değerlendirme yapılabilir',
-    'vi-VN': 'Có thể đánh giá đồng thời tối đa 8 hình ảnh',
+    'vi-VN': 'Có thể đánh giá đồng thời tối đa 8 hình ảnh',
     'id-ID': 'Seret & jatuhkan atau tempel dari papan klip',
     'th-TH': 'ลากและวางหรือวางจากคลิปบอร์ด',
     'pl-PL': 'Przeciągnij i upuść lub wklej ze schowka',
@@ -1044,7 +1047,7 @@ export default function ScannerApp() {
     'de-DE': '💡 Tipp: So nutzen oder auszahlen lassen Sie sich Ihr Steam-Guthaben',
     'pt-BR': '💡 Dica: Como usar ou sacar o saldo da sua Carteira Steam',
     'tr-TR': '💡 İpucu: Steam Cüzdan bakiyenizi nasıl kullanır veya nakde çevirirsiniz',
-    'vi-VN': '💡 Mẹo: Cách sử dụng hoặc rút số dư Ví Steam',
+    'vi-VN': '💡 Mẹo: Cách sử dụng hoặc rút số dư Ví Steam',
     'id-ID': '💡 Tips: Cara menggunakan atau mencairkan saldo Steam Wallet Anda',
     'th-TH': '💡 เคล็ดลับ: วิธีใช้หรือถอนยอดคงเหลือใน Steam Wallet ของคุณ',
     'pl-PL': '💡 Wskazówka: Jak wykorzystać lub wypłacić saldo Portfela Steam',
@@ -1063,7 +1066,7 @@ export default function ScannerApp() {
     'de-DE': 'Server unterstützen',
     'pt-BR': 'Apoiar servidor',
     'tr-TR': 'Sunucuyu destekle',
-    'vi-VN': 'Hỗ trợ máy chủ',
+    'vi-VN': 'Hỗ trợ máy chủ',
     'id-ID': 'Dukung Biaya Server',
     'th-TH': 'สนับสนุนค่าเซิร์ฟเวอร์',
     'pl-PL': 'Wesprzyj koszty serwera',
@@ -1075,7 +1078,7 @@ export default function ScannerApp() {
     'zh-Hant': '💬 評論區', 'ko-KR': '💬 댓글 섹션', 'ru-RU': '💬 Раздел комментариев',
     'es-ES': '💬 Sección de comentarios', 'fr-FR': '💬 Section des commentaires', 
     'de-DE': '💬 Kommentarbereich', 'pt-BR': '💬 Seção de comentários', 
-    'tr-TR': '💬 Yorumlar Bölümü', 'vi-VN': '💬 Phần bình luận',
+    'tr-TR': '💬 Yorumlar Bölümü', 'vi-VN': '💬 Phần bình luận',
     'id-ID': '💬 Catatan Komunitas',
     'th-TH': '💬 บันทึกชุมชน',
     'pl-PL': '💬 Notatki Społeczności',
@@ -1745,9 +1748,15 @@ export default function ScannerApp() {
               }
               if (marketData) {
                 let cents = 0;
-                if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) cents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
-                else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) cents = marketData.lowestCents || marketData.buyOrderCents;
-                else cents = marketData.medianCents || marketData.priceCents || 0;
+                if (priceFilterMode === 'sell') {
+                  cents = marketData.lowestCents || 0;
+                } else if (priceFilterMode === 'buy') {
+                  cents = marketData.buyOrderCents || 0;
+                } else {
+                  if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) cents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
+                  else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) cents = marketData.lowestCents || marketData.buyOrderCents;
+                  else cents = marketData.medianCents || marketData.priceCents || 0;
+                }
                 if (cents > 0) totalCents += cents;
               }
             });
@@ -1781,18 +1790,7 @@ export default function ScannerApp() {
             };
             const totalLabel = totalLabels[selectedLang] || 'Total Value:';
             
-            const addBtnTranslations = {
-              'en-US': '➕ Add Item Manually', 'ja-JP': '➕ 手動でアイテムを追加', 'zh-Hans': '➕ 手动添加物品',
-              'zh-Hant': '➕ 手動新增物品', 'ko-KR': '➕ 수동으로 아이템 추가', 'ru-RU': '➕ Добавить предмет вручную',
-              'es-ES': '➕ Añadir objeto manualmente', 'fr-FR': '➕ Ajouter un objet manuellement',
-              'de-DE': '➕ Element manuell hinzufügen', 'pt-BR': '➕ Adicionar item manualmente',
-              'tr-TR': '➕ Öğeyi Manuel Ekle', 'vi-VN': '➕ Thêm vật phẩm thủ công',
-  'id-ID': '➕ Tambah Item Manual',
-  'th-TH': '➕ เพิ่มไอเทมด้วยตนเอง',
-  'pl-PL': '➕ Dodaj Przedmiot Ręcznie',
-  'uk-UA': '➕ Додати Предмет Вручну'
-            };
-            const addBtnLabel = addBtnTranslations[selectedLang] || '➕ Add Item Manually';
+            const sellFilterTranslations = { 'en-US': '📉 Show Ask Only', 'ja-JP': '📉 売値のみ表示', 'zh-Hans': '📉 仅显示卖价', 'zh-Hant': '📉 僅顯示賣價', 'ko-KR': '📉 매도호가만 표시', 'ru-RU': '📉 Только продажа', 'es-ES': '📉 Solo venta', 'fr-FR': '📉 Vente uniquement', 'de-DE': '📉 Nur Verkauf', 'pt-BR': '📉 Só venda', 'tr-TR': '📉 Sadece Satış', 'vi-VN': '📉 Chỉ hiển thị giá bán', 'id-ID': '📉 Hanya Jual', 'th-TH': '📉 แสดงเฉพาะราคาขาย', 'pl-PL': '📉 Tylko Sprzedaż', 'uk-UA': '📉 Тільки продаж' }; const sellFilterLabel = sellFilterTranslations[selectedLang] || '📉 Show Ask Only'; const buyFilterTranslations = { 'en-US': '📈 Show Bid Only', 'ja-JP': '📈 買値のみ表示', 'zh-Hans': '📈 仅显示买价', 'zh-Hant': '📈 僅顯示買價', 'ko-KR': '📈 매수호가만 표시', 'ru-RU': '📈 Только покупка', 'es-ES': '📈 Solo compra', 'fr-FR': '📈 Achat uniquement', 'de-DE': '📈 Nur Kauf', 'pt-BR': '📈 Só compra', 'tr-TR': '📈 Sadece Alış', 'vi-VN': '📈 Chỉ hiển thị giá mua', 'id-ID': '📈 Hanya Beli', 'th-TH': '📈 แสดงเฉพาะราคาซื้อ', 'pl-PL': '📈 Tylko Kupno', 'uk-UA': '📈 Тільки покупка' }; const buyFilterLabel = buyFilterTranslations[selectedLang] || '📈 Show Bid Only';
 
             const sortPriceTranslations = {
               'ja-JP': '💰 金額順でソート', 'en-US': '💰 Sort by Price', 'zh-Hans': '💰 按价格排序',
@@ -1880,9 +1878,15 @@ export default function ScannerApp() {
                           
                           if (marketData) {
                             let pc = 0;
-                            if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) pc = (marketData.lowestCents + marketData.buyOrderCents) / 2;
-                            else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) pc = marketData.lowestCents || marketData.buyOrderCents;
-                            else pc = marketData.medianCents || marketData.priceCents || 0;
+                            if (priceFilterMode === 'sell') {
+                              pc = marketData.lowestCents || 0;
+                            } else if (priceFilterMode === 'buy') {
+                              pc = marketData.buyOrderCents || 0;
+                            } else {
+                              if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) pc = (marketData.lowestCents + marketData.buyOrderCents) / 2;
+                              else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) pc = marketData.lowestCents || marketData.buyOrderCents;
+                              else pc = marketData.medianCents || marketData.priceCents || 0;
+                            }
                             return pc;
                           }
                           return 0;
@@ -2117,10 +2121,13 @@ export default function ScannerApp() {
                           <div className={styles.itemPrice} style={{ textAlign: 'right', flexShrink: 0 }}>
                             {marketData ? (
                               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '2px' }}>
-                                {localizedPrice && <div className={styles.priceValue} style={{ color: '#4caf50', fontWeight: 'bold' }}>{recentSoldLabel} {localizedPrice}</div>}
-                                {localizedLowestPrice && <div style={{ fontSize: '0.85rem', color: '#81c784' }}>{lowestLabel} {localizedLowestPrice}</div>}
-                                {localizedBuyOrderPrice && <div style={{ fontSize: '0.85rem', color: '#81c784' }}>{buyOrderLabel} {localizedBuyOrderPrice}</div>}
-                                {(!localizedPrice && !localizedLowestPrice && !localizedBuyOrderPrice) && <div className={styles.priceLabel}>No Data</div>}
+                                {(priceFilterMode === 'both') && localizedPrice && <div className={styles.priceValue} style={{ color: '#4caf50', fontWeight: 'bold' }}>{recentSoldLabel} {localizedPrice}</div>}
+                                {(priceFilterMode === 'both' || priceFilterMode === 'sell') && localizedLowestPrice && <div style={{ fontSize: priceFilterMode === 'sell' ? '1.1rem' : '0.85rem', color: '#81c784', fontWeight: priceFilterMode === 'sell' ? 'bold' : 'normal' }}>{lowestLabel} {localizedLowestPrice}</div>}
+                                {(priceFilterMode === 'both' || priceFilterMode === 'buy') && localizedBuyOrderPrice && <div style={{ fontSize: priceFilterMode === 'buy' ? '1.1rem' : '0.85rem', color: '#81c784', fontWeight: priceFilterMode === 'buy' ? 'bold' : 'normal' }}>{buyOrderLabel} {localizedBuyOrderPrice}</div>}
+                                {((priceFilterMode === 'both' && !localizedPrice && !localizedLowestPrice && !localizedBuyOrderPrice) ||
+                                  (priceFilterMode === 'sell' && !localizedLowestPrice) ||
+                                  (priceFilterMode === 'buy' && !localizedBuyOrderPrice)) && 
+                                  <div className={styles.priceLabel}>No Data</div>}
                               </div>
                             ) : prices ? (
                               <div className={styles.priceLabel}>No Data</div>
@@ -2148,17 +2155,53 @@ export default function ScannerApp() {
                 {results.length > 0 && (
                   <div style={{ padding: '16px', display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
                     <button 
-                      onClick={addItem}
+                      onClick={() => setPriceFilterMode(prev => prev === 'sell' ? 'both' : 'sell')}
                       style={{ 
-                        background: 'rgba(33, 150, 243, 0.2)', border: '1px dashed rgba(33, 150, 243, 0.5)', 
-                        color: '#64b5f6', padding: '10px 24px', borderRadius: '8px', cursor: 'pointer',
+                        background: priceFilterMode === 'sell' ? 'rgba(244, 67, 54, 0.2)' : 'rgba(255, 255, 255, 0.05)', 
+                        border: priceFilterMode === 'sell' ? '1px solid rgba(244, 67, 54, 0.5)' : '1px solid rgba(255, 255, 255, 0.2)', 
+                        color: priceFilterMode === 'sell' ? '#ef5350' : 'var(--text-secondary)', padding: '10px 16px', borderRadius: '8px', cursor: 'pointer',
                         fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px',
                         transition: 'all 0.2s'
                       }}
-                      onMouseOver={(e) => e.currentTarget.style.background = 'rgba(33, 150, 243, 0.3)'}
-                      onMouseOut={(e) => e.currentTarget.style.background = 'rgba(33, 150, 243, 0.2)'}
+                      onMouseOver={(e) => {
+                        if (priceFilterMode !== 'sell') {
+                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.color = '#fff';
+                        }
+                      }}
+                      onMouseOut={(e) => {
+                        if (priceFilterMode !== 'sell') {
+                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                          e.currentTarget.style.color = 'var(--text-secondary)';
+                        }
+                      }}
                     >
-                      {addBtnLabel}
+                      {sellFilterLabel}
+                    </button>
+
+                    <button 
+                      onClick={() => setPriceFilterMode(prev => prev === 'buy' ? 'both' : 'buy')}
+                      style={{ 
+                        background: priceFilterMode === 'buy' ? 'rgba(76, 175, 80, 0.2)' : 'rgba(255, 255, 255, 0.05)', 
+                        border: priceFilterMode === 'buy' ? '1px solid rgba(76, 175, 80, 0.5)' : '1px solid rgba(255, 255, 255, 0.2)', 
+                        color: priceFilterMode === 'buy' ? '#66bb6a' : 'var(--text-secondary)', padding: '10px 16px', borderRadius: '8px', cursor: 'pointer',
+                        fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '8px',
+                        transition: 'all 0.2s'
+                      }}
+                      onMouseOver={(e) => {
+                        if (priceFilterMode !== 'buy') {
+                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+                          e.currentTarget.style.color = '#fff';
+                        }
+                      }}
+                      onMouseOut={(e) => {
+                        if (priceFilterMode !== 'buy') {
+                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                          e.currentTarget.style.color = 'var(--text-secondary)';
+                        }
+                      }}
+                    >
+                      {buyFilterLabel}
                     </button>
                     
                     <button 
