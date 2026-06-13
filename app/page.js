@@ -1665,9 +1665,7 @@ export default function ScannerApp() {
                         x={rect.x} y={rect.y} width={rect.width} height={rect.height} 
                         fill="transparent" stroke="#00ff00" strokeWidth="2" 
                       />
-                      <text x={rect.x + 2} y={rect.y + 14} fill="#00ff00" fontSize="14" fontFamily="sans-serif">
-                        {rect.matchRate.toFixed(1)}%
-                      </text>
+
                     </g>
                   ))}
                 </svg>
@@ -2106,7 +2104,7 @@ export default function ScannerApp() {
                                       item.rarity === 'COSMIC' ? '#ffffff' : 'var(--text-secondary)'
                               }}>
                                 {getRarityLabel(item.rarity)}
-                              </span> • {item.matchRate.toFixed(1)}% Match
+                              </span>
                               <br/>
                               <a 
                                 href={steamUrl} 
