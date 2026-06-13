@@ -1852,5 +1852,137 @@
     "tr-TR": "Dalga başına canavar +{0}",
     "uk-UA": "Монстрів за хвилю +{0}",
     "vi-VN": "Quái mỗi đợt +{0}"
+  },
+  "WaveMoveFastestPartyMember": {
+    "ja-JP": "移動速度を一番早いキャラクターに合わせる",
+    "en-US": "Matches movement speed to the fastest character",
+    "ko-KR": "가장 빠른 파티원에게 이동 속도 맞춤",
+    "zh-Hans": "移动速度与最快角色一致"
+  },
+  "SkillMultiStrikeCountUp": {
+    "ja-JP": "マルチストライクスキルの追加攻撃回数増加",
+    "en-US": "Increases multi-strike skill hit count",
+    "ko-KR": "연속 타격 스킬 추가 공격 횟수 증가",
+    "zh-Hans": "增加多重打击技能攻击次数"
+  },
+  "ShieldChargeKillCooldown": {
+    "ja-JP": "シールドチャージで敵を倒すとクールダウンリセット",
+    "en-US": "Shield Charge cooldown resets on kill",
+    "ko-KR": "실드 차지로 적 처치 시 쿨다운 초기화",
+    "zh-Hans": "盾牌冲锋击杀敌人时重置冷却"
+  },
+  "SkillProjectileCountUp": {
+    "ja-JP": "スキルの発射体数増加",
+    "en-US": "Increases skill projectile count",
+    "ko-KR": "스킬 발사체 수 증가",
+    "zh-Hans": "增加技能发射物数量"
+  },
+  "SkewerShotBleedingStrike": {
+    "ja-JP": "スキュアーショットに出血効果を付与",
+    "en-US": "Skewer Shot inflicts Bleed",
+    "ko-KR": "스큐어 샷 명중 시 출혈 부여",
+    "zh-Hans": "穿刺射击造成流血效果"
+  },
+  "ArrowRainCriticalCooldown": {
+    "ja-JP": "アローレインのクリティカルヒット時、クールダウン減少",
+    "en-US": "Arrow Rain critical hits reduce cooldown",
+    "ko-KR": "애로우 레인 치명타 시 쿨다운 감소",
+    "zh-Hans": "箭雨暴击时减少冷却时间"
+  },
+  "FlameHydraBerserk": {
+    "ja-JP": "フレイムヒドラがバーサーク状態になる",
+    "en-US": "Flame Hydra enters berserk state",
+    "ko-KR": "플레임 히드라가 광폭화 상태가 됨",
+    "zh-Hans": "火焰狂蛇进入狂暴状态"
+  },
+  "SorcererLightningShock": {
+    "ja-JP": "ソーサラーの攻撃が雷撃（ショック）を付与する",
+    "en-US": "Sorcerer attacks inflict Lightning Shock",
+    "ko-KR": "소서러 공격 시 뇌전(쇼크) 부여",
+    "zh-Hans": "巫师攻击附加闪电电击"
+  },
+  "IceOrbFreezeToCold": {
+    "ja-JP": "アイスオーブが凍結の代わりに寒冷を付与する",
+    "en-US": "Ice Orb inflicts Cold instead of Freeze",
+    "ko-KR": "아이스 오브가 빙결 대신 한기 부여",
+    "zh-Hans": "冰球施加寒冷而非冻结"
+  },
+  "SnowstormEnhanceFrozenEnemy": {
+    "ja-JP": "吹雪が凍結状態の敵へのダメージ増加",
+    "en-US": "Snowstorm deals extra damage to Frozen enemies",
+    "ko-KR": "눈보라가 빙결된 적에게 추가 피해",
+    "zh-Hans": "暴风雪对冻结敌人造成额外伤害"
+  },
+  "WrathOfHeavenHeal": {
+    "ja-JP": "天の怒りが味方を回復する",
+    "en-US": "Wrath of Heaven heals allies",
+    "ko-KR": "천상의 분노가 아군을 회복시킴",
+    "zh-Hans": "天堂之怒治疗友军"
+  },
+  "ExplosiveBoltHalf": {
+    "ja-JP": "エクスプローシブボルトが分裂する",
+    "en-US": "Explosive Bolt splits into smaller bolts",
+    "ko-KR": "폭발 볼트가 분열함",
+    "zh-Hans": "爆炸弩箭会分裂"
+  },
+  "ChargeTrapExplosiveCooldown": {
+    "ja-JP": "チャージトラップの爆発時、クールダウン減少",
+    "en-US": "Charge Trap explosions reduce cooldown",
+    "ko-KR": "차지 트랩 폭발 시 쿨다운 감소",
+    "zh-Hans": "充能陷阱爆炸时减少冷却"
+  },
+  "CrossbowTurretCooldown": {
+    "ja-JP": "クロスボウタレットのクールダウン減少",
+    "en-US": "Reduces Crossbow Turret cooldown",
+    "ko-KR": "석궁 터렛 쿨다운 감소",
+    "zh-Hans": "减少十字弓炮塔冷却时间"
+  },
+  "CrossbowTurretAddAmount": {
+    "ja-JP": "クロスボウタレットの設置数増加",
+    "en-US": "Increases Crossbow Turret placement amount",
+    "ko-KR": "석궁 터렛 설치 수 증가",
+    "zh-Hans": "增加十字弓炮塔放置数量"
+  },
+  "SlayerLowHpAttackSpeed": {
+    "ja-JP": "スレイヤーのHPが低いほど攻撃速度増加",
+    "en-US": "Slayer attack speed increases at low HP",
+    "ko-KR": "슬레이어의 HP가 낮을수록 공격 속도 증가",
+    "zh-Hans": "杀手生命值越低，攻击速度越快"
+  },
+  "WhirlwindFireIgnite": {
+    "ja-JP": "ワールウィンド（炎）が敵を発火させる",
+    "en-US": "Whirlwind (Fire) ignites enemies",
+    "ko-KR": "소용돌이(화염)가 적을 점화시킴",
+    "zh-Hans": "旋风斩（火）会点燃敌人"
+  },
+  "AxeSpinBleedingChance": {
+    "ja-JP": "アックススピンが出血を付与する",
+    "en-US": "Axe Spin has a chance to inflict Bleed",
+    "ko-KR": "도끼 회전 시 출혈 부여",
+    "zh-Hans": "飞斧旋转有几率造成流血"
+  },
+  "SkillBaseAttackCountReduce": {
+    "ja-JP": "スキル発動に必要な通常攻撃回数減少",
+    "en-US": "Reduces base attacks required for skill activation",
+    "ko-KR": "스킬 발동에 필요한 기본 공격 횟수 감소",
+    "zh-Hans": "减少技能激活所需的基础攻击次数"
+  },
+  "SkillCooldownReduce": {
+    "ja-JP": "スキルのクールダウン減少",
+    "en-US": "Reduces skill cooldowns",
+    "ko-KR": "스킬 쿨다운 감소",
+    "zh-Hans": "减少技能冷却时间"
+  },
+  "SkillElementChange": {
+    "ja-JP": "スキルの属性を変化させる",
+    "en-US": "Changes skill element",
+    "ko-KR": "스킬 속성 변화",
+    "zh-Hans": "改变技能属性"
+  },
+  "WaveMoveSlowestPartyExcludeSelf": {
+    "ja-JP": "自身を除く一番遅いキャラクターに移動速度を合わせる",
+    "en-US": "Matches movement speed to the slowest party member (excluding self)",
+    "ko-KR": "자신을 제외한 가장 느린 파티원에게 이동 속도를 맞춤",
+    "zh-Hans": "移动速度与最慢的队员一致（排除自身）"
   }
 }

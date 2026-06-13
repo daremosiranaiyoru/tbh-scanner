@@ -2301,12 +2301,14 @@ export default function ScannerApp() {
               
               let baseStats = [];
               let inherentVariations = [];
+              let uniqueMod = null;
               if (statObj) {
                 if (Array.isArray(statObj)) {
                   baseStats = statObj;
                 } else {
                   baseStats = statObj.base || [];
                   inherentVariations = statObj.inherentVariations || [];
+                  uniqueMod = statObj.uniqueMod || null;
                 }
               }
               
@@ -2401,6 +2403,17 @@ export default function ScannerApp() {
                               })}
                             </div>
                           ))}
+                        </div>
+                      )}
+                      
+                      {uniqueMod && (
+                        <div style={{ marginTop: '4px', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '6px' }}>
+                          <div style={{ fontSize: '0.85rem', color: '#e91e63', display: 'flex', alignItems: 'center' }}>
+                            <span style={{ color: '#e91e63', marginRight: '4px' }}>★</span> {(() => {
+                              const templateMap = statTrans[uniqueMod] || {};
+                              return templateMap[selectedLang] || templateMap['en-US'] || uniqueMod;
+                            })()}
+                          </div>
                         </div>
                       )}
                     </div>
