@@ -155,7 +155,7 @@ export default function ScannerApp() {
   const [comments, setComments] = useState([]);
   const [isCommentsLoading, setIsCommentsLoading] = useState(true);
   const [commentsOpen, setCommentsOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(true);
   const [howToUseOpen, setHowToUseOpen] = useState(false);
   const commentsLoadedRef = useRef(false);
   const [isFlashing, setIsFlashing] = useState(false); // cache: fetch only on first open
