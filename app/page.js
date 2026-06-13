@@ -9,6 +9,10 @@ import { loadDatabase, scanIcons } from '../lib/ocr-engine';
 import itemNames from '../public/item_names.json';
 import spriteMap from '../public/sprite_map.json';
 import iconsManifest from '../public/icons_manifest.json';
+import itemStats from '../public/item_stats.json';
+import statTrans from '../public/stat_trans.json';
+import materialTags from '../public/material_tags.json';
+import materialEffects from '../public/material_effects.json';
 import html2canvas from 'html2canvas';
 
 const validIcons = new Set(iconsManifest);
@@ -148,6 +152,10 @@ export default function ScannerApp() {
   const [dragActive, setDragActive] = useState(false);
   const [prices, setPrices] = useState(pageCache?.prices || null);
   const [rates, setRates] = useState(pageCache?.rates || null);
+  
+  const [hoveredItem, setHoveredItem] = useState(null);
+  const [tooltipEnabled, setTooltipEnabled] = useState(true);
+  const [hoverPos, setHoverPos] = useState({ x: 0, y: 0 });
   const [selectedLang, setSelectedLang] = useState('ja-JP');
   const [toastMessage, setToastMessage] = useState('');
   
@@ -1551,12 +1559,28 @@ export default function ScannerApp() {
                           e.currentTarget.style.border = '1px solid rgba(255,255,255,0.1)';
                           e.currentTarget.style.borderBottom = `4px solid ${color}`;
                           e.currentTarget.style.transform = 'translateY(-2px)';
+                          if (iconFilename) {
+                            setHoveredItem({
+                              name: iconFilename,
+                              rarity: item.grade,
+                              isManual: true
+                            });
+                            setHoverPos({ x: e.clientX - 10, y: e.clientY });
+                          }
+                        }}
+                        onMouseMove={(e) => {
+                          setHoverPos({ x: e.clientX - 10, y: e.clientY });
                         }}
                         onMouseLeave={(e) => {
                           e.currentTarget.style.background = 'rgba(0,0,0,0.3)';
                           e.currentTarget.style.border = '1px solid transparent';
                           e.currentTarget.style.borderBottom = `4px solid ${color}`;
                           e.currentTarget.style.transform = 'translateY(0)';
+                          setHoveredItem(null);
+                        }}
+                        onContextMenu={(e) => {
+                          e.preventDefault();
+                          setTooltipEnabled(prev => !prev);
                         }}
                       >
                         {iconFilename ? (
@@ -2084,7 +2108,24 @@ export default function ScannerApp() {
                       }
                       
                       return (
-                        <div key={idx} id={"scanned-item-" + idx} className={styles.itemRow}>
+                        <div 
+                          key={idx} 
+                          id={"scanned-item-" + idx} 
+                          className={styles.itemRow}
+                          onMouseEnter={(e) => {
+                            const rect = e.currentTarget.getBoundingClientRect();
+                            setHoveredItem(item);
+                            setHoverPos({ x: rect.left - 10, y: rect.top });
+                          }}
+                          onMouseMove={(e) => {
+                            setHoverPos({ x: e.clientX - 10, y: e.clientY });
+                          }}
+                          onMouseLeave={() => setHoveredItem(null)}
+                          onContextMenu={(e) => {
+                            e.preventDefault();
+                            setTooltipEnabled(prev => !prev);
+                          }}
+                        >
                           <SpriteIcon icon={item.name} className={styles.itemIcon} alt={item.name} size={64} style={{ borderRadius: '4px', boxShadow: '0 4px 6px rgba(0,0,0,0.3)' }} />
                           <div className={styles.itemInfo}>
                             <div className={styles.itemName}>
@@ -2221,6 +2262,195 @@ export default function ScannerApp() {
               </>
             );
           })()}
+          </div>
+        )}
+        {/* Tooltip Overlay */}
+        {hoveredItem && tooltipEnabled && (
+          <div style={{
+            position: 'fixed',
+            top: hoverPos.y,
+            left: hoverPos.x - 260, // Display to the left of the cursor
+            width: '250px',
+            background: 'rgba(20, 25, 30, 0.95)',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            borderRadius: '8px',
+            padding: '12px',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.8)',
+            pointerEvents: 'none',
+            zIndex: 99999,
+            color: 'white',
+            transition: 'opacity 0.2s', // ふわっと表示
+            opacity: 1
+          }}>
+            {(() => {
+              const names = itemNames[hoveredItem.name] || {};
+              const rawName = hoveredItem.name.replace('.png', '');
+              const englishName = names['en-US'] || rawName;
+              const displayName = names[selectedLang] || englishName;
+              const rarity = hoveredItem.rarity || 'UNKNOWN';
+              
+              // Get stats from item_stats.json using base English name and rarity
+              const statsMap = itemStats[englishName] || {};
+              let statObj = statsMap[rarity];
+              
+              // Fallback to the lowest available rarity if the specific rarity (e.g., UNKNOWN or CELESTIAL) is missing
+              if (!statObj && Object.keys(statsMap).length > 0) {
+                statObj = statsMap['COMMON'] || statsMap[Object.keys(statsMap)[0]];
+              }
+              
+              let baseStats = [];
+              let inherentVariations = [];
+              if (statObj) {
+                if (Array.isArray(statObj)) {
+                  baseStats = statObj;
+                } else {
+                  baseStats = statObj.base || [];
+                  inherentVariations = statObj.inherentVariations || [];
+                }
+              }
+              
+              const inherentLabel = selectedLang === 'ja-JP' ? '固有ステータス' :
+                                    selectedLang.startsWith('zh') ? '固有属性' :
+                                    selectedLang === 'ko-KR' ? '고유 옵션' : 'Inherent Stats';
+              
+              // Check if it's a Material with a specific tag (e.g. Decoration)
+              const matTag = materialTags[englishName];
+              const tagTranslations = {
+                'Decoration': { 'ja-JP': '装飾', 'ko-KR': '장식', 'zh-Hans': '装饰' },
+                'Engraving': { 'ja-JP': '刻印', 'ko-KR': '각인', 'zh-Hans': '雕刻' },
+                'Inscription': { 'ja-JP': '碑文', 'ko-KR': '비문', 'zh-Hans': '铭文' },
+                'Crafting': { 'ja-JP': '製作素材', 'ko-KR': '제작 재료', 'zh-Hans': '制作材料' },
+                'Offering': { 'ja-JP': '供物', 'ko-KR': '공물', 'zh-Hans': '贡品' },
+                'Soulstone': { 'ja-JP': 'ソウルストーン', 'ko-KR': '영혼석', 'zh-Hans': '灵魂石' }
+              };
+              let localizedTag = null;
+              if (matTag) {
+                localizedTag = (tagTranslations[matTag] && tagTranslations[matTag][selectedLang]) || matTag;
+              }
+              
+              const matEffects = materialEffects[englishName] || [];
+              
+              // Check if it's a Rune
+              let isRune = false;
+              let runeTemplate = '';
+              if (baseStats.length === 0 && statTrans[rawName]) {
+                isRune = true;
+                const templateMap = statTrans[rawName];
+                runeTemplate = templateMap[selectedLang] || templateMap['en-US'] || rawName + ' {0}';
+              }
+              
+              const color = hoveredItem.rarity === 'COMMON' ? 'gray' :
+                            hoveredItem.rarity === 'UNCOMMON' ? '#4caf50' :
+                            hoveredItem.rarity === 'RARE' ? '#2196f3' :
+                            hoveredItem.rarity === 'CELESTIAL' ? '#00bcd4' :
+                            hoveredItem.rarity === 'DIVINE' ? '#ffeb3b' :
+                            hoveredItem.rarity === 'LEGENDARY' ? '#ff9800' :
+                            hoveredItem.rarity === 'IMMORTAL' ? '#f44336' :
+                            hoveredItem.rarity === 'ARCANA' ? '#9c27b0' :
+                            hoveredItem.rarity === 'BEYOND' ? '#e91e63' :
+                            hoveredItem.rarity === 'COSMIC' ? '#ffffff' : 'white';
+
+              return (
+                <div>
+                  <div style={{ fontWeight: 'bold', fontSize: '1.1rem', marginBottom: '8px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '4px', color: color, display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                    <span>{displayName}</span>
+                    <span style={{ fontSize: '0.65rem', color: '#888', fontWeight: 'normal', marginLeft: '16px' }}>
+                      {selectedLang === 'ja-JP' ? '右クリックで表示切替' :
+                       selectedLang === 'ko-KR' ? '우클릭으로 표시 전환' :
+                       selectedLang.startsWith('zh') ? '右键切换显示' :
+                       'Right-click to toggle'}
+                    </span>
+                  </div>
+                  {(baseStats.length > 0 || inherentVariations.length > 0) ? (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      {baseStats.map((stat, i) => {
+                        // Lookup translated template
+                        const templateMap = statTrans[stat.stat] || {};
+                        const template = templateMap[selectedLang] || templateMap['en-US'] || stat.stat + ' {0}';
+                        // Replace {0} with stat.disp, stripping duplicate signs
+                        const cleanVal = stat.disp.replace(/^[+-]/, '');
+                        let localizedLine = template.replace('{0}', cleanVal);
+                        localizedLine = localizedLine.replace('%%', '%');
+                        
+                        return (
+                          <div key={`b-${i}`} style={{ fontSize: '0.85rem', color: '#ccc', display: 'flex', alignItems: 'center' }}>
+                            <span style={{ color: '#4caf50', marginRight: '4px' }}>•</span> {localizedLine}
+                          </div>
+                        );
+                      })}
+                      
+                      {inherentVariations.length > 0 && (
+                        <div style={{ marginTop: '4px', borderTop: '1px dashed rgba(255,255,255,0.2)', paddingTop: '6px' }}>
+                          <div style={{ fontSize: '0.8rem', color: '#ffb300', marginBottom: '4px', fontStyle: 'italic' }}>
+                            {inherentLabel}
+                          </div>
+                          {inherentVariations.slice(0, 1).map((variation, vIdx) => (
+                            <div key={`v-${vIdx}`} style={{ marginBottom: '0' }}>
+                              {variation.map((stat, i) => {
+                                const templateMap = statTrans[stat.stat] || {};
+                                const template = templateMap[selectedLang] || templateMap['en-US'] || stat.stat + ' {0}';
+                                const cleanVal = stat.disp.replace(/^[+-]/, '');
+                                let localizedLine = template.replace('{0}', cleanVal);
+                                localizedLine = localizedLine.replace('%%', '%');
+                                return (
+                                  <div key={`i-${i}`} style={{ fontSize: '0.85rem', color: '#ccc', display: 'flex', alignItems: 'center' }}>
+                                    <span style={{ color: '#ffb300', marginRight: '4px' }}>•</span> {localizedLine}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : isRune ? (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      <div style={{ fontSize: '0.85rem', color: '#ccc', display: 'flex', alignItems: 'center' }}>
+                        <span style={{ color: '#4caf50', marginRight: '4px' }}>•</span> {runeTemplate.replace('{0}', '?')}
+                      </div>
+                    </div>
+                  ) : (localizedTag || matEffects.length > 0) ? (
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                      {localizedTag && (
+                        <div style={{ fontSize: '0.85rem', color: '#ccc', display: 'flex', alignItems: 'center', marginBottom: matEffects.length > 0 ? '4px' : '0' }}>
+                          <span style={{ color: '#9c27b0', marginRight: '4px' }}>◆</span> {localizedTag}
+                        </div>
+                      )}
+                      {matEffects.map((eff, i) => {
+                        const slotTranslations = {
+                          'Weapon': { 'ja-JP': '武器', 'ko-KR': '무기', 'zh-Hans': '武器' },
+                          'Armor': { 'ja-JP': '防具', 'ko-KR': '방어구', 'zh-Hans': '防具' },
+                          'Accessory': { 'ja-JP': '装飾品', 'ko-KR': '장신구', 'zh-Hans': '饰品' },
+                          'All': { 'ja-JP': 'すべて', 'ko-KR': '모두', 'zh-Hans': '全部' }
+                        };
+                        const locSlot = (slotTranslations[eff.slot] && slotTranslations[eff.slot][selectedLang]) || eff.slot;
+                        
+                        const templateMap = statTrans[eff.stat] || {};
+                        const template = templateMap[selectedLang] || templateMap['en-US'] || eff.stat + ' {0}';
+                        const cleanVal = eff.disp.replace(/^[+-]/, '');
+                        let localizedLine = template.replace('{0}', cleanVal);
+                        localizedLine = localizedLine.replace('%%', '%');
+                        
+                        return (
+                          <div key={`m-${i}`} style={{ fontSize: '0.8rem', color: '#bbb', display: 'flex', alignItems: 'center' }}>
+                            <span style={{ color: '#ff9800', marginRight: '6px', fontSize: '0.7rem', border: '1px solid #ff9800', padding: '0 4px', borderRadius: '4px' }}>{locSlot}</span>
+                            {localizedLine}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <div style={{ fontSize: '0.8rem', color: 'gray' }}>
+                      {selectedLang === 'ja-JP' ? 'アイテム効果なし' : 
+                       selectedLang.startsWith('zh') ? '无物品效果' :
+                       selectedLang === 'ko-KR' ? '아이템 효과 없음' :
+                       'No item effects data'}
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
           </div>
         )}
       </main>

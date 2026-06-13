@@ -1,0 +1,2530 @@
+{
+  "Minor Ruby": [
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+20~30%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "FireResistance",
+      "disp": "+5~10%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+1~2"
+    }
+  ],
+  "Minor Sapphire": [
+    {
+      "slot": "Weapon",
+      "stat": "ColdDamagePercent",
+      "disp": "+20~30%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+25~50"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+10~15%"
+    }
+  ],
+  "Minor Topaz": [
+    {
+      "slot": "Weapon",
+      "stat": "LightningDamagePercent",
+      "disp": "+20~30%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+10~15%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CastSpeed",
+      "disp": "+8~10%"
+    }
+  ],
+  "Minor Emerald": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackSpeed",
+      "disp": "+5~6%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageAbsorption",
+      "disp": "+1"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+10~15%"
+    }
+  ],
+  "Minor Amethyst": [
+    {
+      "slot": "Weapon",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+20~30%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+10~30"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CooldownReduction",
+      "disp": "+1~2.5%"
+    }
+  ],
+  "Obsidian Shard": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+3~6"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+3.5~4.5%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+10~15%"
+    }
+  ],
+  "Coral Piece": [
+    {
+      "slot": "Weapon",
+      "stat": "AddHpPerHit",
+      "disp": "+1~2"
+    },
+    {
+      "slot": "Armor",
+      "stat": "HpRegenPerSec",
+      "disp": "+1.5~2"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "HpLeech",
+      "disp": "+1.5~2.5%"
+    }
+  ],
+  "Jade Stone": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalChance",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DodgeChance",
+      "disp": "+3.5~4.5%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackSpeed",
+      "disp": "+5~6%"
+    }
+  ],
+  "Amber Gem": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalDamage",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+8~11%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AreaOfEffect",
+      "disp": "+8~9%"
+    }
+  ],
+  "Ruby": [
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+30~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "FireResistance",
+      "disp": "+15~20%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+3~6"
+    }
+  ],
+  "Sapphire": [
+    {
+      "slot": "Weapon",
+      "stat": "ColdDamagePercent",
+      "disp": "+30~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ColdResistance",
+      "disp": "+15~20%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+20~25%"
+    }
+  ],
+  "Topaz": [
+    {
+      "slot": "Weapon",
+      "stat": "LightningDamagePercent",
+      "disp": "+30~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "LightningResistance",
+      "disp": "+15~20%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CastSpeed",
+      "disp": "+12~14%"
+    }
+  ],
+  "Emerald": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackSpeed",
+      "disp": "+7~9%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ChaosResistance",
+      "disp": "+15~20%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+20~25%"
+    }
+  ],
+  "Amethyst": [
+    {
+      "slot": "Weapon",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+30~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+60~90"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CooldownReduction",
+      "disp": "+4~5.5%"
+    }
+  ],
+  "Crystal Quartz": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+10~15"
+    },
+    {
+      "slot": "Armor",
+      "stat": "HpRegenPerSec",
+      "disp": "+2.5~3"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+25~30%"
+    }
+  ],
+  "Pearl": [
+    {
+      "slot": "Weapon",
+      "stat": "CooldownReduction",
+      "disp": "+7~8.5%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageReduction",
+      "disp": "+4~5.5%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+25~30%"
+    }
+  ],
+  "Turquoise": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalChance",
+      "disp": "+30~35%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "CooldownReduction",
+      "disp": "+5.5~7%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MaxHp",
+      "disp": "+90~120"
+    }
+  ],
+  "Garnet": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalDamage",
+      "disp": "+30~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+25~30%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackSpeed",
+      "disp": "+7~9%"
+    }
+  ],
+  "Diamond": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+15~30"
+    },
+    {
+      "slot": "Armor",
+      "stat": "AllElementalResistance",
+      "disp": "+13~15%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AreaOfEffect",
+      "disp": "+12~14%"
+    }
+  ],
+  "Opal": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackSpeed",
+      "disp": "+11~13%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+17~20%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "HpRegenPerSec",
+      "disp": "+3~4"
+    }
+  ],
+  "Lapis Lazuli": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalChance",
+      "disp": "+35~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DodgeChance",
+      "disp": "+7~9%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+30~35%"
+    }
+  ],
+  "Black Pearl": [
+    {
+      "slot": "Weapon",
+      "stat": "AreaOfEffect",
+      "disp": "+14~17%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+7~9%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CastSpeed",
+      "disp": "+16~20%"
+    }
+  ],
+  "Arcane Crystal": [
+    {
+      "slot": "Weapon",
+      "stat": "CastSpeed",
+      "disp": "+25~30%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "CooldownReduction",
+      "disp": "+8.5~10%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+40~50%"
+    }
+  ],
+  "Mystic Topaz": [
+    {
+      "slot": "Weapon",
+      "stat": "LightningDamagePercent",
+      "disp": "+80~100%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "LightningResistance",
+      "disp": "+30~35%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CastSpeed",
+      "disp": "+20~25%"
+    }
+  ],
+  "Enchanted Ruby": [
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+80~100%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "FireResistance",
+      "disp": "+30~35%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+15~30"
+    }
+  ],
+  "Starlight Sapphire": [
+    {
+      "slot": "Weapon",
+      "stat": "ColdDamagePercent",
+      "disp": "+80~100%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ColdResistance",
+      "disp": "+30~35%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+35~40%"
+    }
+  ],
+  "Void Opal": [
+    {
+      "slot": "Weapon",
+      "stat": "CooldownReduction",
+      "disp": "+11.5~13%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+25~30%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MaxHp",
+      "disp": "+180~210"
+    }
+  ],
+  "Astral Diamond": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+50~100"
+    },
+    {
+      "slot": "Armor",
+      "stat": "AllElementalResistance",
+      "disp": "+17~19%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AreaOfEffect",
+      "disp": "+17~20%"
+    }
+  ],
+  "Phantom Emerald": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackSpeed",
+      "disp": "+15~17%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ChaosResistance",
+      "disp": "+35~40%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+40~45%"
+    }
+  ],
+  "Twilight Amethyst": [
+    {
+      "slot": "Weapon",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+100~130%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+180~210"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CooldownReduction",
+      "disp": "+8.5~10%"
+    }
+  ],
+  "Celestial Pearl": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalChance",
+      "disp": "+50~55%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageAbsorption",
+      "disp": "+4~5"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+40~45%"
+    }
+  ],
+  "Dragonite Crystal": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalDamage",
+      "disp": "+80~100%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+45~50%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+60~80%"
+    }
+  ],
+  "Void Crystal": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+100~150%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "CooldownReduction",
+      "disp": "+13~14.5%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+70~100%"
+    }
+  ],
+  "Abyssal Pearl": [
+    {
+      "slot": "Weapon",
+      "stat": "AddHpPerHit",
+      "disp": "+10~12"
+    },
+    {
+      "slot": "Armor",
+      "stat": "HpRegenPerSec",
+      "disp": "+10~15"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "HpLeech",
+      "disp": "+5~6%"
+    }
+  ],
+  "Ethereal Gem": [
+    {
+      "slot": "Weapon",
+      "stat": "Multistrike",
+      "disp": "+1"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageReduction",
+      "disp": "+14~16%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "BaseAttackCountReduction",
+      "disp": "+1"
+    }
+  ],
+  "Chaos Diamond": [
+    {
+      "slot": "Weapon",
+      "stat": "ProjectileCount",
+      "disp": "+1"
+    },
+    {
+      "slot": "Armor",
+      "stat": "AllElementalResistance",
+      "disp": "+25~30%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+100~150%"
+    }
+  ],
+  "Goblin Hide": [
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+20~30%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "LightningDamagePercent",
+      "disp": "+20~30%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ColdResistance",
+      "disp": "+5~10%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "FireResistance",
+      "disp": "+5~10%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackSpeed",
+      "disp": "+4~5%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MaxHp",
+      "disp": "+10~30"
+    }
+  ],
+  "Skeleton Bone": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalDamage",
+      "disp": "+15~20%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+20~30%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+25~50"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+10~15%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AddHpPerHit",
+      "disp": "+1~2"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackSpeed",
+      "disp": "+4~5%"
+    }
+  ],
+  "Slime Jelly": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackSpeed",
+      "disp": "+5~6%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+2~3"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageAbsorption",
+      "disp": "+1"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+2.5~3.5%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MaxHp",
+      "disp": "+10~30"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+10~15%"
+    }
+  ],
+  "Wolf Fang": [
+    {
+      "slot": "Weapon",
+      "stat": "AreaOfEffect",
+      "disp": "+9~10%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "CriticalChance",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "LightningResistance",
+      "disp": "+10~15%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+15~20%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AddHpPerHit",
+      "disp": "+2~4"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+2~3"
+    }
+  ],
+  "Spider Silk": [
+    {
+      "slot": "Weapon",
+      "stat": "AreaOfEffect",
+      "disp": "+9~10%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+30~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ColdResistance",
+      "disp": "+10~15%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "CooldownReduction",
+      "disp": "+2.5~4%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CooldownReduction",
+      "disp": "+2.5~4%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MaxHp",
+      "disp": "+30~60"
+    }
+  ],
+  "Poisonous Herb": [
+    {
+      "slot": "Weapon",
+      "stat": "HpLeech",
+      "disp": "+2~3%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "LightningDamagePercent",
+      "disp": "+30~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+50~100"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageAbsorption",
+      "disp": "+1~1.4"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+2~3"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+15~20%"
+    }
+  ],
+  "Healing Herb": [
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+30~40%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "ColdDamagePercent",
+      "disp": "+30~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DodgeChance",
+      "disp": "+3.5~4.5%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+8~11%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+15~20%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+2~3"
+    }
+  ],
+  "Bat Wing Membrane": [
+    {
+      "slot": "Weapon",
+      "stat": "LightningDamagePercent",
+      "disp": "+40~50%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+40~50%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageReduction",
+      "disp": "+3~4%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+60~90"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AddHpPerHit",
+      "disp": "+1~2"
+    }
+  ],
+  "Ogre Blood": [
+    {
+      "slot": "Weapon",
+      "stat": "AreaOfEffect",
+      "disp": "+10~12%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "HpRegenPerSec",
+      "disp": "+2~2.5"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ColdResistance",
+      "disp": "+15~20%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MaxHp",
+      "disp": "+60~90"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+3~6"
+    }
+  ],
+  "Mushroom Spore": [
+    {
+      "slot": "Weapon",
+      "stat": "CooldownReduction",
+      "disp": "+5.5~7%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AddHpPerHit",
+      "disp": "+4~6"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+4.5~5.5%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "LightningResistance",
+      "disp": "+15~20%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "HpRegenPerSec",
+      "disp": "+2~2.5"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MaxHp",
+      "disp": "+60~90"
+    }
+  ],
+  "Ancient Tree Sap": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalDamage",
+      "disp": "+25~30%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AreaOfEffect",
+      "disp": "+10~12%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "HpRegenPerSec",
+      "disp": "+2~2.5"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageReduction",
+      "disp": "+3~4%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackSpeed",
+      "disp": "+6~7%"
+    }
+  ],
+  "Skull": [
+    {
+      "slot": "Weapon",
+      "stat": "CooldownReduction",
+      "disp": "+7~8.5%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "LightningDamagePercent",
+      "disp": "+50~60%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "LightningResistance",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ChaosResistance",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CastSpeed",
+      "disp": "+14~16%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+25~30%"
+    }
+  ],
+  "Harpy Feather": [
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+50~60%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+25~30%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+5.5~7%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageReduction",
+      "disp": "+4~5.5%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+6~10"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MaxHp",
+      "disp": "+90~120"
+    }
+  ],
+  "Mandrake Root": [
+    {
+      "slot": "Weapon",
+      "stat": "AddHpPerHit",
+      "disp": "+5~7"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+50~60%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ColdResistance",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+90~120"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "HpLeech",
+      "disp": "+2.5~3.5%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "HpRegenPerSec",
+      "disp": "+2.5~3"
+    }
+  ],
+  "Nightshade Extract": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+25~30%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "CriticalChance",
+      "disp": "+30~35%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "LightningResistance",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ColdResistance",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AddHpPerHit",
+      "disp": "+4~6"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+25~30%"
+    }
+  ],
+  "Basilisk Scale": [
+    {
+      "slot": "Weapon",
+      "stat": "HpLeech",
+      "disp": "+3.5~4.5%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+15~30"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+120~150"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageReduction",
+      "disp": "+5.5~7%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+30~35%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CastSpeed",
+      "disp": "+16~20%"
+    }
+  ],
+  "Wyvern Claw": [
+    {
+      "slot": "Weapon",
+      "stat": "ColdDamagePercent",
+      "disp": "+60~80%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AddHpPerHit",
+      "disp": "+6~8"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ColdResistance",
+      "disp": "+25~30%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+200~250"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+30~35%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "HpRegenPerSec",
+      "disp": "+3~4"
+    }
+  ],
+  "Dice": [
+    {
+      "slot": "Weapon",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+60~80%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "ColdDamagePercent",
+      "disp": "+60~80%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageAbsorption",
+      "disp": "+2.2~2.6"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+7~9%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CooldownReduction",
+      "disp": "+7~8.5%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+30~35%"
+    }
+  ],
+  "Demon Blood": [
+    {
+      "slot": "Weapon",
+      "stat": "AreaOfEffect",
+      "disp": "+14~17%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "LightningDamagePercent",
+      "disp": "+60~80%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+7~9%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DodgeChance",
+      "disp": "+7~9%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "HpLeech",
+      "disp": "+3~4%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+30~35%"
+    }
+  ],
+  "Minotaur Horn": [
+    {
+      "slot": "Weapon",
+      "stat": "ColdDamagePercent",
+      "disp": "+80~100%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AttackSpeed",
+      "disp": "+13~15%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "LightningResistance",
+      "disp": "+30~35%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "HpRegenPerSec",
+      "disp": "+4~5"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AreaOfEffect",
+      "disp": "+14~17%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CooldownReduction",
+      "disp": "+8.5~10%"
+    }
+  ],
+  "Griffin Beak": [
+    {
+      "slot": "Weapon",
+      "stat": "ColdDamagePercent",
+      "disp": "+80~100%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+30~50"
+    },
+    {
+      "slot": "Armor",
+      "stat": "LightningResistance",
+      "disp": "+30~35%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CastSpeed",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+40~50%"
+    }
+  ],
+  "Phoenix Ash": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalChance",
+      "disp": "+40~45%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+30~50"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageAbsorption",
+      "disp": "+2.6~3"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageReduction",
+      "disp": "+7~8.5%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackSpeed",
+      "disp": "+11~13%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+40~50%"
+    }
+  ],
+  "Dragon Bile": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalDamage",
+      "disp": "+50~60%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "CriticalChance",
+      "disp": "+40~45%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DodgeChance",
+      "disp": "+9~11%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+9~11%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+35~40%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AddHpPerHit",
+      "disp": "+6~8"
+    }
+  ],
+  "Wraith Essence": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalDamage",
+      "disp": "+60~80%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+100~130%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+11~13%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+180~210"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AddHpPerHit",
+      "disp": "+7~9"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalDamage",
+      "disp": "+50~60%"
+    }
+  ],
+  "Kraken Ink": [
+    {
+      "slot": "Weapon",
+      "stat": "ColdDamagePercent",
+      "disp": "+100~130%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AreaOfEffect",
+      "disp": "+20~23%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "LightningResistance",
+      "disp": "+35~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DodgeChance",
+      "disp": "+11~13%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AddHpPerHit",
+      "disp": "+7~9"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+30~50"
+    }
+  ],
+  "Titan Marrow": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+50~70%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+100~130%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "LightningResistance",
+      "disp": "+35~40%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageReduction",
+      "disp": "+8.5~10%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "HpRegenPerSec",
+      "disp": "+5~7"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MaxHp",
+      "disp": "+180~210"
+    }
+  ],
+  "Void Ichor": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalChance",
+      "disp": "+45~50%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AddHpPerHit",
+      "disp": "+8~10"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageReduction",
+      "disp": "+8.5~10%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ColdResistance",
+      "disp": "+35~40%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+40~45%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+40~45%"
+    }
+  ],
+  "Abyssal Mucus": [
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+130~180%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "CooldownReduction",
+      "disp": "+13~14.5%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+45~50%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+13~16%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackSpeed",
+      "disp": "+15~17%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+45~50%"
+    }
+  ],
+  "Chaos Spore": [
+    {
+      "slot": "Weapon",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+130~180%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+100~150"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ColdResistance",
+      "disp": "+40~45%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ChaosResistance",
+      "disp": "+40~45%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+45~50%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "HpRegenPerSec",
+      "disp": "+7~10"
+    }
+  ],
+  "Primordial Sap": [
+    {
+      "slot": "Weapon",
+      "stat": "AreaOfEffect",
+      "disp": "+28~35%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "FireDamagePercent",
+      "disp": "+180~250%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "ChaosResistance",
+      "disp": "+45~50%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "HpRegenPerSec",
+      "disp": "+10~15"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CastSpeed",
+      "disp": "+35~40%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MovementSpeed",
+      "disp": "+50~55%"
+    }
+  ],
+  "Eldritch Venom": [
+    {
+      "slot": "Weapon",
+      "stat": "AddHpPerHit",
+      "disp": "+10~12"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AttackSpeed",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "BlockChance",
+      "disp": "+16~20%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "Armor",
+      "disp": "+50~55%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+50~55%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CooldownReduction",
+      "disp": "+13~14.5%"
+    }
+  ],
+  "Chaso Dice": [
+    {
+      "slot": "Weapon",
+      "stat": "CriticalChance",
+      "disp": "+2.5~3%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+150~300"
+    },
+    {
+      "slot": "Armor",
+      "stat": "MaxHp",
+      "disp": "+270~300"
+    },
+    {
+      "slot": "Armor",
+      "stat": "DamageAbsorption",
+      "disp": "+6~8"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CastSpeed",
+      "disp": "+40~50%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "AttackDamage",
+      "disp": "+150~300"
+    }
+  ],
+  "Void Tendril": [
+    {
+      "slot": "Weapon",
+      "stat": "AttackDamage",
+      "disp": "+100~150%"
+    },
+    {
+      "slot": "Weapon",
+      "stat": "CriticalDamage",
+      "disp": "+100~150%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "FireResistance",
+      "disp": "+50~55%"
+    },
+    {
+      "slot": "Armor",
+      "stat": "CooldownReduction",
+      "disp": "+14.5~16%"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "MaxHp",
+      "disp": "+270~300"
+    },
+    {
+      "slot": "Accessory",
+      "stat": "CriticalChance",
+      "disp": "+55~60%"
+    }
+  ],
+  "Scroll of Common Inscription": [
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+1~6"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+5~20%"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+25~150"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+10~25%"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+10~90"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackSpeed",
+      "disp": "+4~7%"
+    },
+    {
+      "slot": "All",
+      "stat": "CastSpeed",
+      "disp": "+8~14%"
+    },
+    {
+      "slot": "All",
+      "stat": "AreaOfEffect",
+      "disp": "+7~10%"
+    },
+    {
+      "slot": "All",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+10~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireDamagePercent",
+      "disp": "+10~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdDamagePercent",
+      "disp": "+10~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningDamagePercent",
+      "disp": "+10~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireResistance",
+      "disp": "+5~20%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdResistance",
+      "disp": "+5~20%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningResistance",
+      "disp": "+5~20%"
+    },
+    {
+      "slot": "All",
+      "stat": "AddHpPerKill",
+      "disp": "+2~8"
+    }
+  ],
+  "Scroll of Uncommon Inscription": [
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+2~10"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+10~25%"
+    },
+    {
+      "slot": "All",
+      "stat": "DodgeChance",
+      "disp": "+3.5~7%"
+    },
+    {
+      "slot": "All",
+      "stat": "BlockChance",
+      "disp": "+3.5~7%"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+30~120"
+    },
+    {
+      "slot": "All",
+      "stat": "CooldownReduction",
+      "disp": "+2.5~7%"
+    },
+    {
+      "slot": "All",
+      "stat": "CriticalChance",
+      "disp": "+15~30%"
+    },
+    {
+      "slot": "All",
+      "stat": "CriticalDamage",
+      "disp": "+15~30%"
+    },
+    {
+      "slot": "All",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+20~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireDamagePercent",
+      "disp": "+20~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdDamagePercent",
+      "disp": "+20~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningDamagePercent",
+      "disp": "+20~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireResistance",
+      "disp": "+10~25%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdResistance",
+      "disp": "+10~25%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningResistance",
+      "disp": "+10~25%"
+    },
+    {
+      "slot": "All",
+      "stat": "HpRegenPerSec",
+      "disp": "+1.5~3"
+    }
+  ],
+  "Scroll of Rare Inscription": [
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+3~15"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+15~30%"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+100~250"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+20~35%"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+60~150"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackSpeed",
+      "disp": "+6~11%"
+    },
+    {
+      "slot": "All",
+      "stat": "CastSpeed",
+      "disp": "+12~20%"
+    },
+    {
+      "slot": "All",
+      "stat": "AreaOfEffect",
+      "disp": "+9~14%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseAreaOfEffectDamage",
+      "disp": "+30~60%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseMeleeDamage",
+      "disp": "+30~60%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseProjectileDamage",
+      "disp": "+30~60%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseSummonDamage",
+      "disp": "+30~60%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireResistance",
+      "disp": "+15~30%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdResistance",
+      "disp": "+15~30%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningResistance",
+      "disp": "+15~30%"
+    },
+    {
+      "slot": "All",
+      "stat": "AddHpPerHit",
+      "disp": "+1~7"
+    }
+  ],
+  "Scroll of Legendary Inscription": [
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+6~30"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+20~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+150~300"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+25~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "DodgeChance",
+      "disp": "+5.5~11%"
+    },
+    {
+      "slot": "All",
+      "stat": "BlockChance",
+      "disp": "+5.5~11%"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+90~180"
+    },
+    {
+      "slot": "All",
+      "stat": "CooldownReduction",
+      "disp": "+5.5~10%"
+    },
+    {
+      "slot": "All",
+      "stat": "CriticalChance",
+      "disp": "+25~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "CriticalDamage",
+      "disp": "+25~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+40~80%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireDamagePercent",
+      "disp": "+40~80%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdDamagePercent",
+      "disp": "+40~80%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningDamagePercent",
+      "disp": "+40~80%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireResistance",
+      "disp": "+20~35%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdResistance",
+      "disp": "+20~35%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningResistance",
+      "disp": "+20~35%"
+    },
+    {
+      "slot": "All",
+      "stat": "HpRegenPerSec",
+      "disp": "+2.5~5"
+    }
+  ],
+  "Scroll of Immortal Inscription": [
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+10~50"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+25~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+120~210"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackSpeed",
+      "disp": "+9~15%"
+    },
+    {
+      "slot": "All",
+      "stat": "CastSpeed",
+      "disp": "+16~30%"
+    },
+    {
+      "slot": "All",
+      "stat": "AreaOfEffect",
+      "disp": "+12~20%"
+    },
+    {
+      "slot": "All",
+      "stat": "SkillDurationIncrease",
+      "disp": "+22~36%"
+    },
+    {
+      "slot": "All",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+50~100%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireDamagePercent",
+      "disp": "+50~100%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdDamagePercent",
+      "disp": "+50~100%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningDamagePercent",
+      "disp": "+50~100%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireResistance",
+      "disp": "+25~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdResistance",
+      "disp": "+25~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningResistance",
+      "disp": "+25~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "HpLeech",
+      "disp": "+3~5%"
+    }
+  ],
+  "Scroll of Arcana Inscription": [
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+15~100"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+30~70%"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+250~400"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+35~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+20~35%"
+    },
+    {
+      "slot": "All",
+      "stat": "CooldownReduction",
+      "disp": "+8.5~13%"
+    },
+    {
+      "slot": "All",
+      "stat": "CriticalChance",
+      "disp": "+35~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "CriticalDamage",
+      "disp": "+40~80%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseAreaOfEffectDamage",
+      "disp": "+60~130%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseMeleeDamage",
+      "disp": "+60~130%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseProjectileDamage",
+      "disp": "+60~130%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseSummonDamage",
+      "disp": "+60~130%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireResistance",
+      "disp": "+30~45%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdResistance",
+      "disp": "+30~45%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningResistance",
+      "disp": "+30~45%"
+    },
+    {
+      "slot": "All",
+      "stat": "ChaosResistance",
+      "disp": "+30~45%"
+    },
+    {
+      "slot": "All",
+      "stat": "HpRegenPerSec",
+      "disp": "+4~10"
+    },
+    {
+      "slot": "All",
+      "stat": "SkillHealIncrease",
+      "disp": "+26.6~40.6%"
+    }
+  ],
+  "Scroll of Beyond Inscription": [
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+30~150"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+40~100%"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+300~450"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+40~55%"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+180~270"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackSpeed",
+      "disp": "+13~20%"
+    },
+    {
+      "slot": "All",
+      "stat": "CastSpeed",
+      "disp": "+25~40%"
+    },
+    {
+      "slot": "All",
+      "stat": "AreaOfEffect",
+      "disp": "+17~28%"
+    },
+    {
+      "slot": "All",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+80~180%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireDamagePercent",
+      "disp": "+80~180%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdDamagePercent",
+      "disp": "+80~180%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningDamagePercent",
+      "disp": "+80~180%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireResistance",
+      "disp": "+35~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdResistance",
+      "disp": "+35~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningResistance",
+      "disp": "+35~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "ChaosResistance",
+      "disp": "+35~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "AddHpPerKill",
+      "disp": "+16~30"
+    }
+  ],
+  "Scroll of Celestial Inscription": [
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+50~300"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+50~150%"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+350~500"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+45~60%"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+30~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "CriticalChance",
+      "disp": "+45~60%"
+    },
+    {
+      "slot": "All",
+      "stat": "CriticalDamage",
+      "disp": "+60~150%"
+    },
+    {
+      "slot": "All",
+      "stat": "SkillDurationIncrease",
+      "disp": "+36~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseAreaOfEffectDamage",
+      "disp": "+100~250%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseMeleeDamage",
+      "disp": "+100~250%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseProjectileDamage",
+      "disp": "+100~250%"
+    },
+    {
+      "slot": "All",
+      "stat": "IncreaseSummonDamage",
+      "disp": "+100~250%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireResistance",
+      "disp": "+40~55%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdResistance",
+      "disp": "+40~55%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningResistance",
+      "disp": "+40~55%"
+    },
+    {
+      "slot": "All",
+      "stat": "ChaosResistance",
+      "disp": "+40~55%"
+    },
+    {
+      "slot": "All",
+      "stat": "AddHpPerHit",
+      "disp": "+8~12"
+    }
+  ],
+  "Scroll of Divine Inscription": [
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+100~300"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+70~150%"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+400~500"
+    },
+    {
+      "slot": "All",
+      "stat": "Armor",
+      "disp": "+50~60%"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+240~300"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackSpeed",
+      "disp": "+17~25%"
+    },
+    {
+      "slot": "All",
+      "stat": "CastSpeed",
+      "disp": "+35~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "PhysicalDamagePercent",
+      "disp": "+130~250%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireDamagePercent",
+      "disp": "+130~250%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdDamagePercent",
+      "disp": "+130~250%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningDamagePercent",
+      "disp": "+130~250%"
+    },
+    {
+      "slot": "All",
+      "stat": "FireResistance",
+      "disp": "+45~55%"
+    },
+    {
+      "slot": "All",
+      "stat": "ColdResistance",
+      "disp": "+45~55%"
+    },
+    {
+      "slot": "All",
+      "stat": "LightningResistance",
+      "disp": "+45~55%"
+    },
+    {
+      "slot": "All",
+      "stat": "ChaosResistance",
+      "disp": "+45~55%"
+    },
+    {
+      "slot": "All",
+      "stat": "HpRegenPerSec",
+      "disp": "+10~20"
+    },
+    {
+      "slot": "All",
+      "stat": "SkillHealIncrease",
+      "disp": "+40.6~50%"
+    }
+  ],
+  "Scroll of Cosmic Inscription": [
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+150~300"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackDamage",
+      "disp": "+100~150%"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+270~300"
+    },
+    {
+      "slot": "All",
+      "stat": "MaxHp",
+      "disp": "+40~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "DodgeChance",
+      "disp": "+20~30%"
+    },
+    {
+      "slot": "All",
+      "stat": "BlockChance",
+      "disp": "+20~30%"
+    },
+    {
+      "slot": "All",
+      "stat": "AttackSpeed",
+      "disp": "+20~25%"
+    },
+    {
+      "slot": "All",
+      "stat": "CastSpeed",
+      "disp": "+40~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "AreaOfEffect",
+      "disp": "+28~35%"
+    },
+    {
+      "slot": "All",
+      "stat": "CooldownReduction",
+      "disp": "+14.5~16%"
+    },
+    {
+      "slot": "All",
+      "stat": "SkillDurationIncrease",
+      "disp": "+45.3~50%"
+    },
+    {
+      "slot": "All",
+      "stat": "MovementSpeed",
+      "disp": "+76~83"
+    },
+    {
+      "slot": "All",
+      "stat": "MovementSpeed",
+      "disp": "+55~60%"
+    },
+    {
+      "slot": "All",
+      "stat": "CriticalChance",
+      "disp": "+55~60%"
+    },
+    {
+      "slot": "All",
+      "stat": "CriticalDamage",
+      "disp": "+100~150%"
+    },
+    {
+      "slot": "All",
+      "stat": "AllElementalResistance",
+      "disp": "+25~30%"
+    },
+    {
+      "slot": "All",
+      "stat": "ChaosResistance",
+      "disp": "+50~55%"
+    },
+    {
+      "slot": "All",
+      "stat": "HpLeech",
+      "disp": "+5~6.5%"
+    }
+  ]
+}
