@@ -6,12 +6,8 @@ async function generateSprite() {
   console.log("Reading icons_manifest.json...");
   const manifest = JSON.parse(fs.readFileSync('public/icons_manifest.json', 'utf8'));
 
-  // Filter out unwanted items exactly like we did in OCR engine
-  const filteredPaths = manifest.filter(file => {
-    if (file.startsWith('Hero_')) return false;
-    if (file.startsWith('Item_9')) return false;
-    return true;
-  });
+  // Include ALL icons in the sprite sheet so the frontend NEVER falls back to individual image requests
+  const filteredPaths = manifest;
 
   const ICON_SIZE = 32;
   const COLS = 20; // 20 columns = 640px width
