@@ -8355,7 +8355,7 @@
   },
   "Dimensional Helmet (Beyond) A": {
     "buyOrderCents": 1135,
-    "lowestCents": 6338
+    "lowestCents": 6339
   },
   "Shadow Helmet (Uncommon) A": {
     "buyOrderCents": 0
@@ -8537,7 +8537,7 @@
   },
   "Knight Gloves (Legendary) A": {
     "buyOrderCents": 197,
-    "lowestCents": 10542
+    "lowestCents": 10544
   },
   "Knight Gloves (Mythic) A": {
     "buyOrderCents": 0
@@ -8568,10 +8568,10 @@
   },
   "Chain Gloves (Immortal) A": {
     "buyOrderCents": 117,
-    "lowestCents": 19645
+    "lowestCents": 19649
   },
   "Chain Gloves (Arcana) A": {
-    "buyOrderCents": 202,
+    "buyOrderCents": 233,
     "lowestCents": 5765
   },
   "Chain Gloves (Beyond) A": {
@@ -8611,14 +8611,14 @@
     "buyOrderCents": 0
   },
   "War Gloves (Legendary) A": {
-    "buyOrderCents": 64
+    "buyOrderCents": 22
   },
   "War Gloves (Mythic) A": {
     "buyOrderCents": 0
   },
   "War Gloves (Immortal) A": {
     "buyOrderCents": 138,
-    "lowestCents": 12009
+    "lowestCents": 12011
   },
   "War Gloves (Arcana) A": {
     "buyOrderCents": 106
@@ -8667,14 +8667,14 @@
   },
   "Rune Gloves (Immortal) A": {
     "buyOrderCents": 117,
-    "lowestCents": 3994
+    "lowestCents": 3995
   },
   "Rune Gloves (Arcana) A": {
     "buyOrderCents": 69
   },
   "Rune Gloves (Beyond) A": {
     "buyOrderCents": 580,
-    "lowestCents": 18594
+    "lowestCents": 18598
   },
   "Plate Gloves (Uncommon) A": {
     "buyOrderCents": 0
@@ -8795,7 +8795,7 @@
   },
   "Shine Gloves (Beyond) A": {
     "buyOrderCents": 336,
-    "lowestCents": 18594
+    "lowestCents": 18598
   },
   "Void Gloves (Uncommon) A": {
     "buyOrderCents": 0
@@ -8975,7 +8975,7 @@
     "buyOrderCents": 0
   },
   "Empire Boots (Legendary) A": {
-    "buyOrderCents": 47
+    "buyOrderCents": 19
   },
   "Empire Boots (Mythic) A": {
     "buyOrderCents": 0
@@ -9000,13 +9000,13 @@
   },
   "Iron Boots (Legendary) A": {
     "buyOrderCents": 79,
-    "lowestCents": 19624
+    "lowestCents": 19628
   },
   "Iron Boots (Mythic) A": {
     "buyOrderCents": 0
   },
   "Iron Boots (Immortal) A": {
-    "buyOrderCents": 59,
+    "buyOrderCents": 23,
     "lowestCents": 1817
   },
   "Iron Boots (Arcana) A": {
@@ -9026,7 +9026,7 @@
   },
   "Knight Boots (Legendary) A": {
     "buyOrderCents": 275,
-    "lowestCents": 19645
+    "lowestCents": 19649
   },
   "Knight Boots (Mythic) A": {
     "buyOrderCents": 0
@@ -9036,7 +9036,7 @@
     "lowestCents": 2107
   },
   "Knight Boots (Arcana) A": {
-    "buyOrderCents": 1436
+    "buyOrderCents": 1437
   },
   "Knight Boots (Beyond) A": {
     "buyOrderCents": 0
@@ -9052,7 +9052,7 @@
   },
   "Chain Boots (Legendary) A": {
     "buyOrderCents": 129,
-    "lowestCents": 2503
+    "lowestCents": 22280
   },
   "Chain Boots (Mythic) A": {
     "buyOrderCents": 0
@@ -9342,7 +9342,7 @@
   },
   "Dimensional Boots (Legendary) A": {
     "buyOrderCents": 135,
-    "lowestCents": 5484
+    "lowestCents": 5485
   },
   "Dimensional Boots (Mythic) A": {
     "buyOrderCents": 0
@@ -9433,16 +9433,16 @@
     "lowestCents": 16
   },
   "Minor Emerald": {
-    "buyOrderCents": 95,
-    "lowestCents": 221
+    "buyOrderCents": 270,
+    "lowestCents": 502
   },
   "Ruby": {
     "buyOrderCents": 288,
     "lowestCents": 1668
   },
   "Minor Ruby": {
-    "buyOrderCents": 11,
-    "lowestCents": 11
+    "buyOrderCents": 12,
+    "lowestCents": 12
   },
   "Obsidian Shard": {
     "buyOrderCents": 9,
@@ -9462,15 +9462,15 @@
   },
   "Crystal Quartz": {
     "buyOrderCents": 79,
-    "lowestCents": 623
+    "lowestCents": 690
   },
   "Amber Gem": {
     "buyOrderCents": 4,
     "lowestCents": 5
   },
   "Diamond": {
-    "buyOrderCents": 233,
-    "lowestCents": 1469
+    "buyOrderCents": 234,
+    "lowestCents": 2046
   },
   "Minor Amethyst": {
     "buyOrderCents": 4,
@@ -9481,11 +9481,11 @@
     "lowestCents": 467
   },
   "Sapphire": {
-    "buyOrderCents": 8,
-    "lowestCents": 8
+    "buyOrderCents": 9,
+    "lowestCents": 9
   },
   "Topaz": {
-    "buyOrderCents": 7,
+    "buyOrderCents": 8,
     "lowestCents": 9
   },
   "Minor Sapphire": {
@@ -9493,7 +9493,7 @@
     "lowestCents": 4
   },
   "Amethyst": {
-    "buyOrderCents": 158,
+    "buyOrderCents": 159,
     "lowestCents": 2780
   },
   "Jade Stone": {
@@ -9506,33 +9506,33 @@
   },
   "Pearl": {
     "buyOrderCents": 112,
-    "lowestCents": 1403
+    "lowestCents": 1404
   },
   "Emerald": {
     "buyOrderCents": 602,
-    "lowestCents": 19624
+    "lowestCents": 19628
   },
   "Arcane Crystal": {
     "buyOrderCents": 126
   },
   "Lapis Lazuli": {
     "buyOrderCents": 192,
-    "lowestCents": 6580
+    "lowestCents": 6582
   },
   "Black Pearl": {
-    "buyOrderCents": 124,
-    "lowestCents": 623
+    "buyOrderCents": 311,
+    "lowestCents": 718
   },
   "Starlight Sapphire": {
-    "buyOrderCents": 69,
-    "lowestCents": 309
+    "buyOrderCents": 70,
+    "lowestCents": 414
   },
   "Amethyst Ring (Legendary) A": {
     "buyOrderCents": 100
   },
   "Warrior's Tome (Divine) A": {
-    "buyOrderCents": 8304,
-    "lowestCents": 22274
+    "buyOrderCents": 8306,
+    "lowestCents": 22278
   },
   "Dimensional Arrow (Celestial) A": {
     "buyOrderCents": 0
@@ -9542,11 +9542,11 @@
     "lowestCents": 4305
   },
   "Dimensional Sword (Celestial) A": {
-    "buyOrderCents": 2961
+    "buyOrderCents": 2962
   },
   "Shine Boots (Divine) A": {
-    "buyOrderCents": 7148,
-    "lowestCents": 22276
+    "buyOrderCents": 7149,
+    "lowestCents": 22280
   },
   "Dimensional Armor (Divine) A": {
     "buyOrderCents": 0
@@ -9558,38 +9558,38 @@
     "buyOrderCents": 0
   },
   "Dimensional Armor (Celestial) A": {
-    "buyOrderCents": 8809,
-    "lowestCents": 22276
+    "buyOrderCents": 8811,
+    "lowestCents": 22280
   },
   "Eclipse Amulet (Legendary) A": {
     "buyOrderCents": 220,
     "lowestCents": 1871
   },
   "Eclipse Amulet (Immortal) A": {
-    "buyOrderCents": 460,
-    "lowestCents": 3620
+    "buyOrderCents": 461,
+    "lowestCents": 3621
   },
   "Copper Amulet (Immortal) A": {
     "buyOrderCents": 0
   },
   "Obsidian Bracer (Legendary) A": {
-    "buyOrderCents": 81,
+    "buyOrderCents": 82,
     "lowestCents": 2459
   },
   "Ethereal Bracer (Legendary) A": {
     "buyOrderCents": 221
   },
   "Sapphire Earring (Legendary) A": {
-    "buyOrderCents": 153,
-    "lowestCents": 2936
+    "buyOrderCents": 159,
+    "lowestCents": 2937
   },
   "Radiant Shield (Celestial) A": {
     "buyOrderCents": 2071,
-    "lowestCents": 11139
+    "lowestCents": 11141
   },
   "Opal": {
     "buyOrderCents": 2363,
-    "lowestCents": 4041
+    "lowestCents": 4042
   },
   "Void Opal": {
     "buyOrderCents": 327,
@@ -9635,7 +9635,7 @@
     "buyOrderCents": 0
   },
   "Bronze Amulet (Immortal) A": {
-    "buyOrderCents": 315
+    "buyOrderCents": 623
   },
   "Bronze Amulet (Arcana) A": {
     "buyOrderCents": 0
@@ -9686,7 +9686,7 @@
     "buyOrderCents": 852
   },
   "Gold Amulet (Arcana) A": {
-    "buyOrderCents": 726,
+    "buyOrderCents": 787,
     "lowestCents": 4544
   },
   "Gold Amulet (Beyond) A": {
@@ -9750,7 +9750,7 @@
     "buyOrderCents": 0
   },
   "Moonstone Pendant (Legendary) A": {
-    "buyOrderCents": 79
+    "buyOrderCents": 62
   },
   "Moonstone Pendant (Mythic) A": {
     "buyOrderCents": 0
@@ -9799,7 +9799,7 @@
   },
   "Ruby Pendant (Legendary) A": {
     "buyOrderCents": 474,
-    "lowestCents": 6115
+    "lowestCents": 6116
   },
   "Ruby Pendant (Mythic) A": {
     "buyOrderCents": 0
@@ -9856,7 +9856,7 @@
     "buyOrderCents": 429
   },
   "Emerald Amulet (Arcana) A": {
-    "buyOrderCents": 1081
+    "buyOrderCents": 1086
   },
   "Emerald Amulet (Beyond) A": {
     "buyOrderCents": 880
@@ -9925,7 +9925,7 @@
     "buyOrderCents": 0
   },
   "Eclipse Amulet (Beyond) A": {
-    "buyOrderCents": 1285
+    "buyOrderCents": 1286
   },
   "Celestial Amulet (Uncommon) A": {
     "buyOrderCents": 0
@@ -9994,7 +9994,7 @@
     "buyOrderCents": 396
   },
   "Ethereal Amulet (Arcana) A": {
-    "buyOrderCents": 1985
+    "buyOrderCents": 2141
   },
   "Ethereal Amulet (Beyond) A": {
     "buyOrderCents": 0
@@ -10240,7 +10240,7 @@
     "buyOrderCents": 0
   },
   "Ethereal Earring (Beyond) A": {
-    "buyOrderCents": 4992
+    "buyOrderCents": 4993
   },
   "Void Earring": {
     "buyOrderCents": 0
@@ -10749,7 +10749,7 @@
     "buyOrderCents": 492
   },
   "Ethereal Ring (Arcana) A": {
-    "buyOrderCents": 855
+    "buyOrderCents": 856
   },
   "Ethereal Ring (Beyond) A": {
     "buyOrderCents": 1609
@@ -11250,13 +11250,13 @@
     "buyOrderCents": 0
   },
   "Ethereal Bracer (Immortal) A": {
-    "buyOrderCents": 251
+    "buyOrderCents": 252
   },
   "Ethereal Bracer (Arcana) A": {
     "buyOrderCents": 0
   },
   "Ethereal Bracer (Beyond) A": {
-    "buyOrderCents": 9822
+    "buyOrderCents": 9824
   },
   "Void Bracer": {
     "buyOrderCents": 0
@@ -11319,45 +11319,45 @@
     "buyOrderCents": 3432
   },
   "Dimensional Scepter (Celestial) A": {
-    "buyOrderCents": 8809,
-    "lowestCents": 15595
+    "buyOrderCents": 8811,
+    "lowestCents": 15598
   },
   "Dimensional Orb (Divine) A": {
-    "buyOrderCents": 8809,
-    "lowestCents": 22276
+    "buyOrderCents": 8811,
+    "lowestCents": 22280
   },
   "Ancient Orb (Celestial) A": {
-    "buyOrderCents": 1663,
-    "lowestCents": 9872
+    "buyOrderCents": 1664,
+    "lowestCents": 9874
   },
   "Dimensional Gloves (Celestial) A": {
     "buyOrderCents": 0
   },
   "Shine Gloves (Celestial) A": {
-    "buyOrderCents": 1292,
+    "buyOrderCents": 374,
     "lowestCents": 4362
   },
   "Radiant Shield (Divine) A": {
     "buyOrderCents": 3432,
-    "lowestCents": 22276
+    "lowestCents": 22280
   },
   "Dimensional Tome (Celestial) A": {
-    "buyOrderCents": 2750,
-    "lowestCents": 14351
+    "buyOrderCents": 2751,
+    "lowestCents": 14354
   },
   "Shine Boots (Celestial) A": {
     "buyOrderCents": 0
   },
   "Ancient Orb (Cosmic) A": {
     "buyOrderCents": 3512,
-    "lowestCents": 12354
+    "lowestCents": 12356
   },
   "Warrior's Tome (Celestial) A": {
-    "buyOrderCents": 3450,
-    "lowestCents": 11130
+    "buyOrderCents": 3451,
+    "lowestCents": 11132
   },
   "Limitless Scepter (Celestial) A": {
     "buyOrderCents": 2629,
-    "lowestCents": 9569
+    "lowestCents": 9571
   }
 }
