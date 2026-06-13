@@ -4707,7 +4707,7 @@
     "buyOrderCents": 0
   },
   "Dimensional Axe (Immortal) A": {
-    "buyOrderCents": 199
+    "buyOrderCents": 0
   },
   "Dimensional Axe (Arcana) A": {
     "buyOrderCents": 225
@@ -4863,7 +4863,7 @@
     "buyOrderCents": 0
   },
   "Iron Shield (Legendary) A": {
-    "buyOrderCents": 12
+    "buyOrderCents": 17
   },
   "Iron Shield (Mythic) A": {
     "buyOrderCents": 0
@@ -4897,8 +4897,8 @@
     "buyOrderCents": 0
   },
   "Heater Shield (Immortal) A": {
-    "buyOrderCents": 157,
-    "lowestCents": 4506
+    "buyOrderCents": 207,
+    "lowestCents": 4516
   },
   "Heater Shield (Arcana) A": {
     "buyOrderCents": 193
@@ -4925,7 +4925,7 @@
     "buyOrderCents": 0
   },
   "Heavy Shield (Immortal) A": {
-    "buyOrderCents": 100,
+    "buyOrderCents": 393,
     "lowestCents": 4305
   },
   "Heavy Shield (Arcana) A": {
@@ -4980,14 +4980,14 @@
     "buyOrderCents": 0
   },
   "War Shield (Immortal) A": {
-    "buyOrderCents": 40,
+    "buyOrderCents": 41,
     "lowestCents": 2804
   },
   "War Shield (Arcana) A": {
     "buyOrderCents": 87
   },
   "War Shield (Beyond) A": {
-    "buyOrderCents": 114
+    "buyOrderCents": 70
   },
   "Barrier Shield": {
     "buyOrderCents": 0
@@ -5035,11 +5035,11 @@
     "buyOrderCents": 0
   },
   "Elite Shield (Immortal) A": {
-    "buyOrderCents": 130
+    "buyOrderCents": 131
   },
   "Elite Shield (Arcana) A": {
     "buyOrderCents": 152,
-    "lowestCents": 7350
+    "lowestCents": 7341
   },
   "Elite Shield (Beyond) A": {
     "buyOrderCents": 262
@@ -5096,7 +5096,7 @@
     "buyOrderCents": 160
   },
   "Mystic Shield (Beyond) A": {
-    "buyOrderCents": 295
+    "buyOrderCents": 293
   },
   "Grand Shield": {
     "buyOrderCents": 0
@@ -5178,7 +5178,7 @@
   },
   "Radiant Shield (Beyond) A": {
     "buyOrderCents": 2080,
-    "lowestCents": 4444
+    "lowestCents": 4455
   },
   "Void Shield": {
     "buyOrderCents": 0
@@ -5247,20 +5247,20 @@
     "buyOrderCents": 0
   },
   "Dimensional Shield (Legendary) A": {
-    "buyOrderCents": 85
+    "buyOrderCents": 86
   },
   "Dimensional Shield (Mythic) A": {
     "buyOrderCents": 0
   },
   "Dimensional Shield (Immortal) A": {
-    "buyOrderCents": 59
+    "buyOrderCents": 58
   },
   "Dimensional Shield (Arcana) A": {
     "buyOrderCents": 200
   },
   "Dimensional Shield (Beyond) A": {
-    "buyOrderCents": 1046,
-    "lowestCents": 2581
+    "buyOrderCents": 1053,
+    "lowestCents": 3577
   },
   "Shadow Shield": {
     "buyOrderCents": 0
@@ -5383,13 +5383,13 @@
     "buyOrderCents": 0
   },
   "Iron Arrow (Legendary) A": {
-    "buyOrderCents": 100
+    "buyOrderCents": 102
   },
   "Iron Arrow (Mythic) A": {
     "buyOrderCents": 0
   },
   "Iron Arrow (Immortal) A": {
-    "buyOrderCents": 313,
+    "buyOrderCents": 316,
     "lowestCents": 4071
   },
   "Iron Arrow (Arcana) A": {
@@ -5444,10 +5444,10 @@
     "buyOrderCents": 0
   },
   "Barbed Arrow (Immortal) A": {
-    "buyOrderCents": 98
+    "buyOrderCents": 74
   },
   "Barbed Arrow (Arcana) A": {
-    "buyOrderCents": 809
+    "buyOrderCents": 811
   },
   "Barbed Arrow (Beyond) A": {
     "buyOrderCents": 0
@@ -5471,10 +5471,10 @@
     "buyOrderCents": 0
   },
   "Azure Arrow (Immortal) A": {
-    "buyOrderCents": 103
+    "buyOrderCents": 104
   },
   "Azure Arrow (Arcana) A": {
-    "buyOrderCents": 291
+    "buyOrderCents": 295
   },
   "Azure Arrow (Beyond) A": {
     "buyOrderCents": 0
@@ -5525,13 +5525,13 @@
     "buyOrderCents": 0
   },
   "Gale Arrow (Immortal) A": {
-    "buyOrderCents": 116
+    "buyOrderCents": 117
   },
   "Gale Arrow (Arcana) A": {
     "buyOrderCents": 346
   },
   "Gale Arrow (Beyond) A": {
-    "buyOrderCents": 641
+    "buyOrderCents": 648
   },
   "Serpent Arrow": {
     "buyOrderCents": 0
@@ -5579,13 +5579,13 @@
     "buyOrderCents": 0
   },
   "Rune Arrow (Immortal) A": {
-    "buyOrderCents": 195
+    "buyOrderCents": 197
   },
   "Rune Arrow (Arcana) A": {
-    "buyOrderCents": 505
+    "buyOrderCents": 445
   },
   "Rune Arrow (Beyond) A": {
-    "buyOrderCents": 779,
+    "buyOrderCents": 789,
     "lowestCents": 3739
   },
   "Tribal Arrow": {
@@ -5634,13 +5634,13 @@
     "buyOrderCents": 0
   },
   "Fate Arrow (Immortal) A": {
-    "buyOrderCents": 256
+    "buyOrderCents": 259
   },
   "Fate Arrow (Arcana) A": {
-    "buyOrderCents": 1045
+    "buyOrderCents": 1056
   },
   "Fate Arrow (Beyond) A": {
-    "buyOrderCents": 1470,
+    "buyOrderCents": 1469,
     "lowestCents": 6650
   },
   "Storm Arrow": {
@@ -5710,19 +5710,19 @@
     "buyOrderCents": 0
   },
   "Haste Arrow (Legendary) A": {
-    "buyOrderCents": 102
+    "buyOrderCents": 119
   },
   "Haste Arrow (Mythic) A": {
     "buyOrderCents": 0
   },
   "Haste Arrow (Immortal) A": {
-    "buyOrderCents": 512
+    "buyOrderCents": 511
   },
   "Haste Arrow (Arcana) A": {
-    "buyOrderCents": 1386
+    "buyOrderCents": 1380
   },
   "Haste Arrow (Beyond) A": {
-    "buyOrderCents": 3122
+    "buyOrderCents": 3144
   },
   "Void Arrow": {
     "buyOrderCents": 0
@@ -5797,13 +5797,13 @@
     "buyOrderCents": 0
   },
   "Dimensional Arrow (Immortal) A": {
-    "buyOrderCents": 883
+    "buyOrderCents": 880
   },
   "Dimensional Arrow (Arcana) A": {
-    "buyOrderCents": 2357
+    "buyOrderCents": 2345
   },
   "Dimensional Arrow (Beyond) A": {
-    "buyOrderCents": 2524
+    "buyOrderCents": 2555
   },
   "Shadow Arrow": {
     "buyOrderCents": 0
@@ -5905,7 +5905,7 @@
     "buyOrderCents": 0
   },
   "Magic Orb (Immortal) A": {
-    "buyOrderCents": 21
+    "buyOrderCents": 12
   },
   "Magic Orb (Arcana) A": {
     "buyOrderCents": 0
@@ -5932,7 +5932,7 @@
     "buyOrderCents": 0
   },
   "Elder Orb (Immortal) A": {
-    "buyOrderCents": 16
+    "buyOrderCents": 4
   },
   "Elder Orb (Arcana) A": {
     "buyOrderCents": 0
@@ -5959,7 +5959,7 @@
     "buyOrderCents": 0
   },
   "Brilliant Orb (Immortal) A": {
-    "buyOrderCents": 21
+    "buyOrderCents": 11
   },
   "Brilliant Orb (Arcana) A": {
     "buyOrderCents": 0
@@ -5981,7 +5981,7 @@
   },
   "Frozen Orb (Legendary) A": {
     "buyOrderCents": 160,
-    "lowestCents": 19409
+    "lowestCents": 19645
   },
   "Frozen Orb (Mythic) A": {
     "buyOrderCents": 0
@@ -6068,14 +6068,14 @@
     "buyOrderCents": 0
   },
   "Rune Orb (Immortal) A": {
-    "buyOrderCents": 174,
+    "buyOrderCents": 175,
     "lowestCents": 6011
   },
   "Rune Orb (Arcana) A": {
     "buyOrderCents": 251
   },
   "Rune Orb (Beyond) A": {
-    "buyOrderCents": 182
+    "buyOrderCents": 181
   },
   "Shining Orb": {
     "buyOrderCents": 0
@@ -6123,15 +6123,15 @@
     "buyOrderCents": 0
   },
   "Arcane Orb (Immortal) A": {
-    "buyOrderCents": 142,
-    "lowestCents": 4813
+    "buyOrderCents": 144,
+    "lowestCents": 4805
   },
   "Arcane Orb (Arcana) A": {
-    "buyOrderCents": 129
+    "buyOrderCents": 128
   },
   "Arcane Orb (Beyond) A": {
-    "buyOrderCents": 432,
-    "lowestCents": 8040
+    "buyOrderCents": 485,
+    "lowestCents": 8002
   },
   "Fate Orb": {
     "buyOrderCents": 0
@@ -6173,7 +6173,7 @@
     "buyOrderCents": 0
   },
   "Mystic Orb (Legendary) A": {
-    "buyOrderCents": 29
+    "buyOrderCents": 30
   },
   "Mystic Orb (Mythic) A": {
     "buyOrderCents": 0
@@ -6263,10 +6263,10 @@
     "buyOrderCents": 95
   },
   "Ancient Orb (Arcana) A": {
-    "buyOrderCents": 349
+    "buyOrderCents": 329
   },
   "Ancient Orb (Beyond) A": {
-    "buyOrderCents": 374,
+    "buyOrderCents": 373,
     "lowestCents": 2173
   },
   "Abyssal Orb": {
@@ -6336,7 +6336,7 @@
     "buyOrderCents": 0
   },
   "Dimensional Orb (Legendary) A": {
-    "buyOrderCents": 51
+    "buyOrderCents": 59
   },
   "Dimensional Orb (Mythic) A": {
     "buyOrderCents": 0
@@ -6345,10 +6345,10 @@
     "buyOrderCents": 91
   },
   "Dimensional Orb (Arcana) A": {
-    "buyOrderCents": 301
+    "buyOrderCents": 305
   },
   "Dimensional Orb (Beyond) A": {
-    "buyOrderCents": 1151,
+    "buyOrderCents": 1149,
     "lowestCents": 3344
   },
   "Shadow Orb": {
@@ -6445,8 +6445,8 @@
     "buyOrderCents": 0
   },
   "Prayer Tome (Legendary) A": {
-    "buyOrderCents": 291,
-    "lowestCents": 17455
+    "buyOrderCents": 315,
+    "lowestCents": 17571
   },
   "Prayer Tome (Mythic) A": {
     "buyOrderCents": 0
@@ -6500,7 +6500,7 @@
     "buyOrderCents": 0
   },
   "Iron Tome (Legendary) A": {
-    "buyOrderCents": 23
+    "buyOrderCents": 12
   },
   "Iron Tome (Mythic) A": {
     "buyOrderCents": 0
@@ -6527,8 +6527,8 @@
     "buyOrderCents": 0
   },
   "Knight's Tome (Legendary) A": {
-    "buyOrderCents": 117,
-    "lowestCents": 19409
+    "buyOrderCents": 138,
+    "lowestCents": 19645
   },
   "Knight's Tome (Mythic) A": {
     "buyOrderCents": 0
@@ -6555,7 +6555,7 @@
     "buyOrderCents": 0
   },
   "Blessed Tome (Legendary) A": {
-    "buyOrderCents": 232
+    "buyOrderCents": 233
   },
   "Blessed Tome (Mythic) A": {
     "buyOrderCents": 0
@@ -6564,7 +6564,7 @@
     "buyOrderCents": 67
   },
   "Blessed Tome (Arcana) A": {
-    "buyOrderCents": 384
+    "buyOrderCents": 383
   },
   "Blessed Tome (Beyond) A": {
     "buyOrderCents": 0
@@ -6609,16 +6609,16 @@
     "buyOrderCents": 0
   },
   "War Tome (Legendary) A": {
-    "buyOrderCents": 53
+    "buyOrderCents": 54
   },
   "War Tome (Mythic) A": {
     "buyOrderCents": 0
   },
   "War Tome (Immortal) A": {
-    "buyOrderCents": 106
+    "buyOrderCents": 108
   },
   "War Tome (Arcana) A": {
-    "buyOrderCents": 349
+    "buyOrderCents": 348
   },
   "War Tome (Beyond) A": {
     "buyOrderCents": 0
@@ -6669,10 +6669,10 @@
     "buyOrderCents": 0
   },
   "Rune Tome (Immortal) A": {
-    "buyOrderCents": 69
+    "buyOrderCents": 70
   },
   "Rune Tome (Arcana) A": {
-    "buyOrderCents": 275
+    "buyOrderCents": 225
   },
   "Rune Tome (Beyond) A": {
     "buyOrderCents": 0
@@ -6717,13 +6717,13 @@
     "buyOrderCents": 0
   },
   "Fate Tome (Legendary) A": {
-    "buyOrderCents": 125
+    "buyOrderCents": 127
   },
   "Fate Tome (Mythic) A": {
     "buyOrderCents": 0
   },
   "Fate Tome (Immortal) A": {
-    "buyOrderCents": 146
+    "buyOrderCents": 51
   },
   "Fate Tome (Arcana) A": {
     "buyOrderCents": 273
@@ -6804,10 +6804,10 @@
     "buyOrderCents": 0
   },
   "Warrior's Tome (Immortal) A": {
-    "buyOrderCents": 78
+    "buyOrderCents": 79
   },
   "Warrior's Tome (Arcana) A": {
-    "buyOrderCents": 703
+    "buyOrderCents": 701
   },
   "Warrior's Tome (Beyond) A": {
     "buyOrderCents": 602,
@@ -6820,7 +6820,7 @@
     "buyOrderCents": 0
   },
   "Void Tome (Rare) A": {
-    "buyOrderCents": 20
+    "buyOrderCents": 21
   },
   "Void Tome (Epic) A": {
     "buyOrderCents": 0
@@ -6889,11 +6889,11 @@
     "buyOrderCents": 128
   },
   "Dimensional Tome (Arcana) A": {
-    "buyOrderCents": 680,
-    "lowestCents": 6612
+    "buyOrderCents": 688,
+    "lowestCents": 6600
   },
   "Dimensional Tome (Beyond) A": {
-    "buyOrderCents": 1378,
+    "buyOrderCents": 1396,
     "lowestCents": 4514
   },
   "Shadow Tome": {
@@ -6987,7 +6987,7 @@
     "buyOrderCents": 0
   },
   "Short Bolt (Immortal) A": {
-    "buyOrderCents": 98
+    "buyOrderCents": 96
   },
   "Short Bolt (Arcana) A": {
     "buyOrderCents": 0
@@ -7029,13 +7029,13 @@
     "buyOrderCents": 0
   },
   "Hunter's Bolt (Legendary) A": {
-    "buyOrderCents": 152
+    "buyOrderCents": 153
   },
   "Hunter's Bolt (Mythic) A": {
     "buyOrderCents": 0
   },
   "Hunter's Bolt (Immortal) A": {
-    "buyOrderCents": 239
+    "buyOrderCents": 238
   },
   "Hunter's Bolt (Arcana) A": {
     "buyOrderCents": 0
@@ -7053,17 +7053,17 @@
     "buyOrderCents": 0
   },
   "Barbed Bolt (Legendary) A": {
-    "buyOrderCents": 131
+    "buyOrderCents": 133
   },
   "Barbed Bolt (Mythic) A": {
     "buyOrderCents": 0
   },
   "Barbed Bolt (Immortal) A": {
-    "buyOrderCents": 223,
+    "buyOrderCents": 221,
     "lowestCents": 3920
   },
   "Barbed Bolt (Arcana) A": {
-    "buyOrderCents": 386,
+    "buyOrderCents": 390,
     "lowestCents": 4461
   },
   "Barbed Bolt (Beyond) A": {
@@ -7079,13 +7079,13 @@
     "buyOrderCents": 0
   },
   "Beast Bolt (Legendary) A": {
-    "buyOrderCents": 181
+    "buyOrderCents": 182
   },
   "Beast Bolt (Mythic) A": {
     "buyOrderCents": 0
   },
   "Beast Bolt (Immortal) A": {
-    "buyOrderCents": 522,
+    "buyOrderCents": 524,
     "lowestCents": 3452
   },
   "Beast Bolt (Arcana) A": {
@@ -7134,11 +7134,11 @@
     "buyOrderCents": 0
   },
   "Iron Bolt (Immortal) A": {
-    "buyOrderCents": 636,
-    "lowestCents": 3442
+    "buyOrderCents": 638,
+    "lowestCents": 3439
   },
   "Iron Bolt (Arcana) A": {
-    "buyOrderCents": 503
+    "buyOrderCents": 502
   },
   "Iron Bolt (Beyond) A": {
     "buyOrderCents": 0
@@ -7183,11 +7183,11 @@
     "buyOrderCents": 0
   },
   "Rune Bolt (Immortal) A": {
-    "buyOrderCents": 164
+    "buyOrderCents": 163
   },
   "Rune Bolt (Arcana) A": {
     "buyOrderCents": 811,
-    "lowestCents": 4461
+    "lowestCents": 4455
   },
   "Rune Bolt (Beyond) A": {
     "buyOrderCents": 0
@@ -7232,10 +7232,10 @@
     "buyOrderCents": 0
   },
   "Fate Bolt (Immortal) A": {
-    "buyOrderCents": 184
+    "buyOrderCents": 185
   },
   "Fate Bolt (Arcana) A": {
-    "buyOrderCents": 554,
+    "buyOrderCents": 560,
     "lowestCents": 2549
   },
   "Fate Bolt (Beyond) A": {
@@ -7305,14 +7305,14 @@
     "buyOrderCents": 0
   },
   "Haste Bolt (Immortal) A": {
-    "buyOrderCents": 273
+    "buyOrderCents": 275
   },
   "Haste Bolt (Arcana) A": {
-    "buyOrderCents": 583
+    "buyOrderCents": 590
   },
   "Haste Bolt (Beyond) A": {
-    "buyOrderCents": 1899,
-    "lowestCents": 7486
+    "buyOrderCents": 1898,
+    "lowestCents": 7487
   },
   "Void Bolt (Uncommon) A": {
     "buyOrderCents": 0
@@ -7468,8 +7468,8 @@
     "buyOrderCents": 0
   },
   "Short Hatchet (Legendary) A": {
-    "buyOrderCents": 44,
-    "lowestCents": 3510
+    "buyOrderCents": 45,
+    "lowestCents": 3503
   },
   "Short Hatchet (Mythic) A": {
     "buyOrderCents": 0
@@ -7499,8 +7499,8 @@
     "buyOrderCents": 0
   },
   "Leather Hatchet (Immortal) A": {
-    "buyOrderCents": 235,
-    "lowestCents": 2996
+    "buyOrderCents": 224,
+    "lowestCents": 4020
   },
   "Leather Hatchet (Arcana) A": {
     "buyOrderCents": 0
@@ -7524,7 +7524,7 @@
     "buyOrderCents": 0
   },
   "Long Hatchet (Immortal) A": {
-    "buyOrderCents": 11
+    "buyOrderCents": 12
   },
   "Long Hatchet (Arcana) A": {
     "buyOrderCents": 0
@@ -7542,13 +7542,13 @@
     "buyOrderCents": 0
   },
   "Steel Hatchet (Legendary) A": {
-    "buyOrderCents": 40
+    "buyOrderCents": 39
   },
   "Steel Hatchet (Mythic) A": {
     "buyOrderCents": 0
   },
   "Steel Hatchet (Immortal) A": {
-    "buyOrderCents": 98
+    "buyOrderCents": 99
   },
   "Steel Hatchet (Arcana) A": {
     "buyOrderCents": 42
@@ -7575,7 +7575,7 @@
     "buyOrderCents": 95
   },
   "War Hatchet (Arcana) A": {
-    "buyOrderCents": 137
+    "buyOrderCents": 138
   },
   "War Hatchet (Beyond) A": {
     "buyOrderCents": 0
@@ -7614,16 +7614,16 @@
     "buyOrderCents": 0
   },
   "Battle Hatchet (Legendary) A": {
-    "buyOrderCents": 44
+    "buyOrderCents": 16
   },
   "Battle Hatchet (Mythic) A": {
     "buyOrderCents": 0
   },
   "Battle Hatchet (Immortal) A": {
-    "buyOrderCents": 90
+    "buyOrderCents": 91
   },
   "Battle Hatchet (Arcana) A": {
-    "buyOrderCents": 208
+    "buyOrderCents": 207
   },
   "Battle Hatchet (Beyond) A": {
     "buyOrderCents": 0
@@ -7668,10 +7668,10 @@
     "buyOrderCents": 0
   },
   "Elite Hatchet (Immortal) A": {
-    "buyOrderCents": 91
+    "buyOrderCents": 92
   },
   "Elite Hatchet (Arcana) A": {
-    "buyOrderCents": 317
+    "buyOrderCents": 316
   },
   "Elite Hatchet (Beyond) A": {
     "buyOrderCents": 0
@@ -7710,7 +7710,7 @@
     "buyOrderCents": 0
   },
   "Mystic Hatchet (Legendary) A": {
-    "buyOrderCents": 15
+    "buyOrderCents": 16
   },
   "Mystic Hatchet (Mythic) A": {
     "buyOrderCents": 0
@@ -7719,7 +7719,7 @@
     "buyOrderCents": 37
   },
   "Mystic Hatchet (Arcana) A": {
-    "buyOrderCents": 475
+    "buyOrderCents": 482
   },
   "Mystic Hatchet (Beyond) A": {
     "buyOrderCents": 56
@@ -7854,7 +7854,7 @@
     "buyOrderCents": 0
   },
   "Dimensional Hatchet (Legendary) A": {
-    "buyOrderCents": 85
+    "buyOrderCents": 86
   },
   "Dimensional Hatchet (Mythic) A": {
     "buyOrderCents": 0
@@ -7976,7 +7976,7 @@
     "buyOrderCents": 0
   },
   "Empire Helmet (Legendary) A": {
-    "buyOrderCents": 9
+    "buyOrderCents": 10
   },
   "Empire Helmet (Mythic) A": {
     "buyOrderCents": 0
@@ -8026,7 +8026,7 @@
     "buyOrderCents": 0
   },
   "Knight Helmet (Legendary) A": {
-    "buyOrderCents": 91
+    "buyOrderCents": 36
   },
   "Knight Helmet (Mythic) A": {
     "buyOrderCents": 0
@@ -8051,17 +8051,17 @@
     "buyOrderCents": 0
   },
   "Chain Helmet (Legendary) A": {
-    "buyOrderCents": 87
+    "buyOrderCents": 89
   },
   "Chain Helmet (Mythic) A": {
     "buyOrderCents": 0
   },
   "Chain Helmet (Immortal) A": {
-    "buyOrderCents": 580,
-    "lowestCents": 19409
+    "buyOrderCents": 590,
+    "lowestCents": 19645
   },
   "Chain Helmet (Arcana) A": {
-    "buyOrderCents": 137
+    "buyOrderCents": 138
   },
   "Chain Helmet (Beyond) A": {
     "buyOrderCents": 0
@@ -8158,10 +8158,10 @@
     "buyOrderCents": 51
   },
   "Rune Helmet (Arcana) A": {
-    "buyOrderCents": 388
+    "buyOrderCents": 393
   },
   "Rune Helmet (Beyond) A": {
-    "buyOrderCents": 324
+    "buyOrderCents": 329
   },
   "Red Helmet (Uncommon) A": {
     "buyOrderCents": 0
@@ -8206,10 +8206,10 @@
     "buyOrderCents": 95
   },
   "Fate Helmet (Arcana) A": {
-    "buyOrderCents": 311
+    "buyOrderCents": 315
   },
   "Fate Helmet (Beyond) A": {
-    "buyOrderCents": 583
+    "buyOrderCents": 590
   },
   "Great Helmet (Uncommon) A": {
     "buyOrderCents": 0
@@ -8275,14 +8275,14 @@
     "buyOrderCents": 0
   },
   "Fighter's Helmet (Immortal) A": {
-    "buyOrderCents": 57
+    "buyOrderCents": 59
   },
   "Fighter's Helmet (Arcana) A": {
-    "buyOrderCents": 301,
+    "buyOrderCents": 393,
     "lowestCents": 6458
   },
   "Fighter's Helmet (Beyond) A": {
-    "buyOrderCents": 1267
+    "buyOrderCents": 1265
   },
   "Void Helmet (Uncommon) A": {
     "buyOrderCents": 0
