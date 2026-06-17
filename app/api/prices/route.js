@@ -30,6 +30,33 @@ export async function GET() {
             };
         }
 
+        // Merge recent transaction price from history.json
+        try {
+            const fs = require('fs');
+            const path = require('path');
+            const historyPath = path.join(process.cwd(), 'app', 'data', 'history.json');
+            if (fs.existsSync(historyPath)) {
+                const historyData = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+                for (const itemName in historyData) {
+                    const itemHist = historyData[itemName];
+                    if (Array.isArray(itemHist) && itemHist.length > 0) {
+                        const lastTx = itemHist[itemHist.length - 1]; // [date, price, volume]
+                        if (lastTx && typeof lastTx[1] === 'number') {
+                            const txTime = new Date(lastTx[0]).getTime();
+                            const cutoff = new Date('2026-06-03T00:00:00Z').getTime();
+                            if (txTime >= cutoff) {
+                                const recentCents = Math.round(lastTx[1] * 100);
+                                if (!mergedItems[itemName]) mergedItems[itemName] = {};
+                                mergedItems[itemName].recentPriceCents = recentCents;
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            console.error("Failed to merge history prices:", e);
+        }
+
         return NextResponse.json({
             cachedAt: Date.now(),
             items: mergedItems,

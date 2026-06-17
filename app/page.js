@@ -14,6 +14,7 @@ import statTrans from '../public/stat_trans.json';
 import materialTags from '../public/material_tags.json';
 import materialEffects from '../public/material_effects.json';
 import html2canvas from 'html2canvas';
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer, ComposedChart } from 'recharts';
 
 const validIcons = new Set(iconsManifest);
 
@@ -174,6 +175,12 @@ export default function ScannerApp() {
   const [priceFilterMode, setPriceFilterMode] = useState(pageCache?.priceFilterMode || 'both'); // 'both', 'sell', 'buy'
   const [replyingToId, setReplyingToId] = useState(null);
 
+  const [historyModalOpen, setHistoryModalOpen] = useState(false);
+  const [selectedHistoryItem, setSelectedHistoryItem] = useState(null);
+  const [historyData, setHistoryData] = useState([]);
+  const [historyRange, setHistoryRange] = useState('all');
+  const [historyLoading, setHistoryLoading] = useState(false);
+
   // Sync state to cache so it survives navigation
   useEffect(() => {
     if (results.length > 0) {
@@ -266,6 +273,49 @@ export default function ScannerApp() {
       if (obs) obs.disconnect();
     };
   }, []);
+
+  const handleOpenHistory = async (item, marketDataObj = null) => {
+    const names = itemNames[item.name] || {};
+    const englishName = names['en-US'] || item.name.replace('.png', '');
+    let searchName = englishName;
+    if (!item.name.startsWith('Item_')) {
+      if (item.rarity && item.rarity !== 'UNKNOWN') {
+        const rarityStr = item.rarity.charAt(0).toUpperCase() + item.rarity.slice(1).toLowerCase();
+        searchName = `${englishName} (${rarityStr})`;
+      }
+      searchName += ' A'; // Append A for equipment
+    }
+    
+    setSelectedHistoryItem({ ...item, searchName, displayName: names[selectedLang] || englishName, marketData: marketDataObj });
+    setHistoryModalOpen(true);
+    setHistoryLoading(true);
+    try {
+      const res = await fetch(`https://pub-972cbb217b1847ea80883cab22062426.r2.dev/history/${encodeURIComponent(searchName)}.json`);
+      if (!res.ok) {
+        setHistoryData([]);
+        setHistoryLoading(false);
+        return;
+      }
+      const data = await res.json();
+      if (data && data.history) {
+        const curr = langToCurrency[selectedLang] || { code: 'USD' };
+        const rate = rates && rates[curr.code] ? rates[curr.code] : 1;
+        const formatted = data.history.map(h => ({
+          rawDate: h[0],
+          date: new Date(h[0]).toLocaleDateString(selectedLang),
+          timeMs: new Date(h[0]).getTime(),
+          price: parseFloat((h[1] * rate).toFixed(2)),
+          volume: h[2]
+        }));
+        setHistoryData(formatted);
+      } else {
+        setHistoryData([]);
+      }
+    } catch(e) {
+      setHistoryData([]);
+    }
+    setHistoryLoading(false);
+  };
 
   const handleAddManualItem = (item) => {
     const iconFilename = item.icon ? item.icon.split('/').pop() : '';
@@ -494,7 +544,8 @@ export default function ScannerApp() {
 
     globalFetchPricesPromise = (async () => {
       try {
-        const res = await fetch('/api/prices');
+        const timestamp = new Date().getTime(); // cache busting
+        const res = await fetch(`https://pub-972cbb217b1847ea80883cab22062426.r2.dev/master_prices.json?t=${timestamp}`);
         if (!res.ok) throw new Error("Prices API returned " + res.status);
         const data = await res.json();
         
@@ -1775,7 +1826,8 @@ export default function ScannerApp() {
                 } else if (priceFilterMode === 'buy') {
                   cents = marketData.buyOrderCents || 0;
                 } else {
-                  if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) cents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
+                  if (marketData.recentPriceCents > 0) cents = marketData.recentPriceCents;
+                  else if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) cents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
                   else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) cents = marketData.lowestCents || marketData.buyOrderCents;
                   else cents = marketData.medianCents || marketData.priceCents || 0;
                 }
@@ -1811,6 +1863,9 @@ export default function ScannerApp() {
               'de-DE': 'Gesamtwert:', 'pt-BR': 'Valor total:', 'tr-TR': 'Toplam Değer:', 'vi-VN': 'Tổng giá trị:'
             };
             const totalLabel = totalLabels[selectedLang] || 'Total Value:';
+
+            const infoBtnMsgs = { 'en-US': 'History', 'ja-JP': '取引履歴', 'zh-Hans': '交易历史', 'zh-Hant': '交易歷史', 'ko-KR': '거래 내역', 'ru-RU': 'История', 'es-ES': 'Historial', 'fr-FR': 'Historique', 'de-DE': 'Verlauf', 'pt-BR': 'Histórico', 'tr-TR': 'Geçmiş', 'vi-VN': 'Lịch sử', 'id-ID': 'Riwayat', 'th-TH': 'ประวัติ', 'pl-PL': 'Historia', 'uk-UA': 'Історія' };
+            const infoBtnLabel = infoBtnMsgs[selectedLang] || 'History';
             
             const sellFilterTranslations = { 'en-US': '📉 Show Ask Only', 'ja-JP': '📉 売値のみ表示', 'zh-Hans': '📉 仅显示卖价', 'zh-Hant': '📉 僅顯示賣價', 'ko-KR': '📉 매도호가만 표시', 'ru-RU': '📉 Только продажа', 'es-ES': '📉 Solo venta', 'fr-FR': '📉 Vente uniquement', 'de-DE': '📉 Nur Verkauf', 'pt-BR': '📉 Só venda', 'tr-TR': '📉 Sadece Satış', 'vi-VN': '📉 Chỉ hiển thị giá bán', 'id-ID': '📉 Hanya Jual', 'th-TH': '📉 แสดงเฉพาะราคาขาย', 'pl-PL': '📉 Tylko Sprzedaż', 'uk-UA': '📉 Тільки продаж' }; const sellFilterLabel = sellFilterTranslations[selectedLang] || '📉 Show Ask Only'; const buyFilterTranslations = { 'en-US': '📈 Show Bid Only', 'ja-JP': '📈 買値のみ表示', 'zh-Hans': '📈 仅显示买价', 'zh-Hant': '📈 僅顯示買價', 'ko-KR': '📈 매수호가만 표시', 'ru-RU': '📈 Только покупка', 'es-ES': '📈 Solo compra', 'fr-FR': '📈 Achat uniquement', 'de-DE': '📈 Nur Kauf', 'pt-BR': '📈 Só compra', 'tr-TR': '📈 Sadece Alış', 'vi-VN': '📈 Chỉ hiển thị giá mua', 'id-ID': '📈 Hanya Beli', 'th-TH': '📈 แสดงเฉพาะราคาซื้อ', 'pl-PL': '📈 Tylko Kupno', 'uk-UA': '📈 Тільки покупка' }; const buyFilterLabel = buyFilterTranslations[selectedLang] || '📈 Show Bid Only';
 
@@ -1905,7 +1960,8 @@ export default function ScannerApp() {
                             } else if (priceFilterMode === 'buy') {
                               pc = marketData.buyOrderCents || 0;
                             } else {
-                              if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) pc = (marketData.lowestCents + marketData.buyOrderCents) / 2;
+                              if (marketData.recentPriceCents > 0) pc = marketData.recentPriceCents;
+                              else if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) pc = (marketData.lowestCents + marketData.buyOrderCents) / 2;
                               else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) pc = marketData.lowestCents || marketData.buyOrderCents;
                               else pc = marketData.medianCents || marketData.priceCents || 0;
                             }
@@ -2014,7 +2070,7 @@ export default function ScannerApp() {
                       const englishName = names['en-US'] || item.name.replace('.png', '');
                       
                       const labelTranslations = {
-                        'en-US': 'Mid Rate:', 'ja-JP': 'ミッドレート:', 'zh-Hans': '中间价:', 'zh-Hant': '中間價:',
+                        'en-US': 'Recent Tx:', 'ja-JP': '直近の取引:', 'zh-Hans': '最近交易:', 'zh-Hant': '最近交易:',
                         'ko-KR': '중간값:', 'ru-RU': 'Средний курс:', 'es-ES': 'Tasa media:', 'fr-FR': 'Taux médian:',
                         'de-DE': 'Zuletzt verkauft:', 'pt-BR': 'Última venda:', 'tr-TR': 'Son satış:', 'vi-VN': 'Đã bán gần đây:',
   'id-ID': 'Nilai Tengah:',
@@ -2022,7 +2078,7 @@ export default function ScannerApp() {
   'pl-PL': 'Kurs średni:',
   'uk-UA': 'Середній курс:'
                       };
-                      const recentSoldLabel = labelTranslations[selectedLang] || 'Mid Rate:';
+                      const recentSoldLabel = labelTranslations[selectedLang] || 'Recent Tx:';
 
                       const lowestLabelTranslations = {
                         'en-US': 'Ask Price:', 'ja-JP': '売値:', 'zh-Hans': '卖价:', 'zh-Hant': '賣價:',
@@ -2094,7 +2150,9 @@ export default function ScannerApp() {
                         });
                         if (marketData) {
                           let primaryCents = 0;
-                          if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) {
+                          if (marketData.recentPriceCents > 0) {
+                            primaryCents = marketData.recentPriceCents;
+                          } else if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) {
                             primaryCents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
                           } else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) {
                             primaryCents = marketData.lowestCents || marketData.buyOrderCents;
@@ -2112,6 +2170,7 @@ export default function ScannerApp() {
                           key={idx} 
                           id={"scanned-item-" + idx} 
                           className={styles.itemRow}
+                          style={{ position: 'relative' }}
                           onMouseEnter={(e) => {
                             const rect = e.currentTarget.getBoundingClientRect();
                             setHoveredItem(item);
@@ -2157,19 +2216,39 @@ export default function ScannerApp() {
                               </a>
                             </div>
                           </div>
+
+                          <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <button
+                              onClick={() => handleOpenHistory(item, marketData)}
+                              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: 'var(--text-secondary)', padding: '4px 12px', borderRadius: '6px', cursor: 'pointer', fontSize: '0.85rem', transition: 'all 0.2s', display: 'flex', alignItems: 'center', gap: '6px' }}
+                              onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.15)'; e.currentTarget.style.color = '#fff'; }}
+                              onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.color = 'var(--text-secondary)'; }}
+                            >
+                              📊 {infoBtnLabel}
+                            </button>
+                          </div>
+
                           <div className={styles.itemPrice} style={{ textAlign: 'right', flexShrink: 0 }}>
                             {marketData ? (
                               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '2px' }}>
-                                {(priceFilterMode === 'both') && localizedPrice && <div className={styles.priceValue} style={{ color: '#4caf50', fontWeight: 'bold' }}>{recentSoldLabel} {localizedPrice}</div>}
-                                {(priceFilterMode === 'both' || priceFilterMode === 'sell') && localizedLowestPrice && <div style={{ fontSize: priceFilterMode === 'sell' ? '1.1rem' : '0.85rem', color: '#81c784', fontWeight: priceFilterMode === 'sell' ? 'bold' : 'normal' }}>{lowestLabel} {localizedLowestPrice}</div>}
-                                {(priceFilterMode === 'both' || priceFilterMode === 'buy') && localizedBuyOrderPrice && <div style={{ fontSize: priceFilterMode === 'buy' ? '1.1rem' : '0.85rem', color: '#81c784', fontWeight: priceFilterMode === 'buy' ? 'bold' : 'normal' }}>{buyOrderLabel} {localizedBuyOrderPrice}</div>}
-                                {((priceFilterMode === 'both' && !localizedPrice && !localizedLowestPrice && !localizedBuyOrderPrice) ||
-                                  (priceFilterMode === 'sell' && !localizedLowestPrice) ||
-                                  (priceFilterMode === 'buy' && !localizedBuyOrderPrice)) && 
-                                  <div className={styles.priceLabel}>No Data</div>}
+                                {(priceFilterMode === 'both') && (
+                                  marketData.recentPriceCents > 0
+                                    ? <div className={styles.priceValue} style={{ color: '#4caf50', fontWeight: 'bold' }}>{recentSoldLabel} {localizedPrice}</div>
+                                    : <div className={styles.priceValue} style={{ color: 'gray', fontWeight: 'bold', fontSize: '0.85rem' }}>{recentSoldLabel} {{ 'en-US': 'No Data', 'ja-JP': 'データなし', 'zh-Hans': '无数据', 'ko-KR': '데이터 없음' }[selectedLang] || 'No Data'}</div>
+                                )}
+                                {(priceFilterMode === 'both' || priceFilterMode === 'sell') && (
+                                  marketData.lowestCents > 0
+                                    ? <div style={{ fontSize: priceFilterMode === 'sell' ? '1.1rem' : '0.85rem', color: '#81c784', fontWeight: priceFilterMode === 'sell' ? 'bold' : 'normal' }}>{lowestLabel} {localizedLowestPrice}</div>
+                                    : <div style={{ fontSize: priceFilterMode === 'sell' ? '1.1rem' : '0.85rem', color: 'gray', fontWeight: priceFilterMode === 'sell' ? 'bold' : 'normal' }}>{lowestLabel} {{ 'en-US': 'No Listings', 'ja-JP': '出品無し', 'zh-Hans': '无卖家', 'ko-KR': '판매자 없음' }[selectedLang] || 'No Listings'}</div>
+                                )}
+                                {(priceFilterMode === 'both' || priceFilterMode === 'buy') && (
+                                  marketData.buyOrderCents > 0
+                                    ? <div style={{ fontSize: priceFilterMode === 'buy' ? '1.1rem' : '0.85rem', color: '#81c784', fontWeight: priceFilterMode === 'buy' ? 'bold' : 'normal' }}>{buyOrderLabel} {localizedBuyOrderPrice}</div>
+                                    : <div style={{ fontSize: priceFilterMode === 'buy' ? '1.1rem' : '0.85rem', color: 'gray', fontWeight: priceFilterMode === 'buy' ? 'bold' : 'normal' }}>{buyOrderLabel} {{ 'en-US': 'No Bids', 'ja-JP': '注文無し', 'zh-Hans': '无买家', 'ko-KR': '구매자 없음' }[selectedLang] || 'No Bids'}</div>
+                                )}
                               </div>
                             ) : prices ? (
-                              <div className={styles.priceLabel}>No Data</div>
+                              <div className={styles.priceLabel}>{{ 'en-US': 'No Data', 'ja-JP': 'データなし', 'zh-Hans': '无数据', 'ko-KR': '데이터 없음' }[selectedLang] || 'No Data'}</div>
                             ) : (
                               <div className={styles.spinner} style={{ width: '16px', height: '16px', borderWidth: '2px', alignSelf: 'flex-end' }}></div>
                             )}
@@ -2499,16 +2578,15 @@ export default function ScannerApp() {
             title: { 'en-US': 'How to Use', 'ja-JP': '使い方', 'zh-Hans': '使用方法', 'zh-Hant': '使用方法', 'ko-KR': '사용 방법', 'ru-RU': 'Как использовать', 'es-ES': 'Cómo usar', 'fr-FR': 'Comment utiliser', 'de-DE': 'Wie man es benutzt', 'pt-BR': 'Como usar', 'tr-TR': 'Nasıl Kullanılır', 'vi-VN': 'Cách sử dụng' },
             step1: { 'en-US': '1. Take a screenshot of your in-game inventory.', 'ja-JP': '1. ゲーム内でインベントリ（アイテム欄）のスクリーンショットを撮影します。', 'zh-Hans': '1. 在游戏中截取您的物品栏。', 'zh-Hant': '1. 在遊戲中截取您的物品欄。', 'ko-KR': '1. 게임 내 인벤토리의 스크린샷을 찍습니다.', 'ru-RU': '1. Сделайте скриншот вашего инвентаря в игре.', 'es-ES': '1. Toma una captura de pantalla de tu inventario en el juego.', 'fr-FR': '1. Prenez une capture d\'écran de votre inventaire en jeu.', 'de-DE': '1. Mache einen Screenshot deines Inventars im Spiel.', 'pt-BR': '1. Tire uma captura de tela do seu inventário no jogo.', 'tr-TR': '1. Oyun içi envanterinizin ekran görüntüsünü alın.', 'vi-VN': '1. Chụp ảnh màn hình kho đồ trong trò chơi của bạn.' },
             step2: { 'en-US': '2. Drag & drop the image into the scanner above.', 'ja-JP': '2. 撮影した画像を上のスキャナーにドラッグ＆ドロップします。', 'zh-Hans': '2. 将图片拖放到上方的扫描仪中。', 'zh-Hant': '2. 將圖片拖放到上方的掃描儀中。', 'ko-KR': '2. 이미지를 위 스캐너에 드래그 앤 드롭합니다.', 'ru-RU': '2. Перетащите изображение в сканер выше.', 'es-ES': '2. Arrastra y suelta la imagen en el escáner de arriba.', 'fr-FR': '2. Glissez-déposez l\'image dans le scanner ci-dessus.', 'de-DE': '2. Ziehe das Bild per Drag & Drop in den Scanner oben.', 'pt-BR': '2. Arraste e solte a imagem no scanner acima.', 'tr-TR': '2. Resmi yukarıdaki tarayıcıya sürükleyip bırakın.', 'vi-VN': '2. Kéo và thả hình ảnh vào máy quét ở trên.' },
-            example: { 'en-US': '💡 Example: Make sure the image looks like this for the best accuracy!', 'ja-JP': '💡 例: 以下のような綺麗に枠が写った画像だと、最も正確に認識できます！', 'zh-Hans': '💡 示例：像这样清晰的截图可以获得最高的识别准确率！', 'zh-Hant': '💡 示例：像這樣清晰的截圖可以獲得最高的識別準確率！', 'ko-KR': '💡 예시: 이런 식의 깔끔한 스크린샷이 가장 정확하게 인식됩니다!', 'ru-RU': '💡 Пример: Убедитесь, что изображение выглядит так для лучшей точности!', 'es-ES': '💡 Ejemplo: ¡Asegúrate de que la imagen se vea así para obtener la mejor precisión!', 'fr-FR': '💡 Exemple: Assurez-vous que l\'image ressemble à ceci pour une meilleure précision!', 'de-DE': '💡 Beispiel: Stelle sicher, dass das Bild so aussieht, um die beste Genauigkeit zu erzielen!', 'pt-BR': '💡 Exemplo: Certifique-se de que a imagem seja assim para melhor precisão!', 'tr-TR': '💡 Örnek: En iyi doğruluk için görüntünün böyle göründüğünden emin olun!', 'vi-VN': '💡 Ví dụ: Đảm bảo hình ảnh giống như thế này để có độ chính xác tốt nhất!' },
-  'id-ID': 'Tips: Cara bermain dan mendapatkan uang sungguhan dengan berdagang',
-  'th-TH': 'เคล็ดลับ: วิธีการเล่นและรับเงินจริงจากการซื้อขาย',
-  'pl-PL': 'Wskazówki: Jak grać i zarabiać prawdziwe pieniądze dzięki handlowi',
-  'uk-UA': 'Поради: Як грати та заробляти реальні гроші на торгівлі'
+            example: { 'en-US': '💡 Example: Make sure the image looks like this for the best accuracy!', 'ja-JP': '💡 例: 以下のような綺麗に枠が写った画像だと、最も正確に認識できます！', 'zh-Hans': '💡 示例：像这样清晰的截图可以获得最高的识别准确率！', 'zh-Hant': '💡 示例：像這樣清晰的截圖可以獲得最高的識別準確率！', 'ko-KR': '💡 예시: 이런 식의 깔끔한 스크린샷이 가장 정확하게 인식됩니다!', 'ru-RU': '💡 Пример: Убедитесь, что изображение выглядит так для лучшей точности!', 'es-ES': '💡 Ejemplo: ¡Asegúrate de que la imagen se vea así para obtener la mejor precisión!', 'fr-FR': '💡 Exemple: Assurez-vous que l\'image ressemble à ceci pour une meilleure précision!', 'de-DE': '💡 Beispiel: Stelle sicher, dass das Bild so aussieht, um die beste Genauigkeit zu erzielen!', 'pt-BR': '💡 Exemplo: Certifique-se de que a imagem seja assim para melhor precisão!', 'tr-TR': '💡 Örnek: En iyi doğruluk için görüntünün böyle göründüğünden emin olun!', 'vi-VN': '💡 Ví dụ: Đảm bảo hình ảnh giống như thế này để có độ chính xác tốt nhất!' },
+            'id-ID': 'Tips: Cara bermain dan mendapatkan uang sungguhan dengan berdagang',
+            'th-TH': 'เคล็ดลับ: วิธีการเล่นและรับเงินจริงจากการซื้อขาย',
+            'pl-PL': 'Wskazówki: Jak grać i zarabiać prawdziwe pieniądze dzięki handlowi',
+            'uk-UA': 'Поради: Як грати та заробляти реальні гроші на торгівлі'
           };
           
           return (
             <>
-              
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', color: 'var(--text-secondary)', marginBottom: '24px' }}>
                 <p>{guideTrans.step1[selectedLang] || guideTrans.step1['en-US']}</p>
                 <p>{guideTrans.step2[selectedLang] || guideTrans.step2['en-US']}</p>
@@ -2648,6 +2726,111 @@ export default function ScannerApp() {
           `}</style>
         </div>
       )}
+
+      {historyModalOpen && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.8)', zIndex: 100000, display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px', animation: 'fadeIn 0.2s' }} onClick={() => setHistoryModalOpen(false)}>
+          <div style={{ background: '#1e222b', borderRadius: '12px', width: '100%', maxWidth: '900px', padding: '24px', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 10px 40px rgba(0,0,0,0.8)' }} onClick={e => e.stopPropagation()}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <h2 style={{ margin: 0, fontSize: '1.4rem', color: '#fff' }}>
+                {selectedHistoryItem?.displayName} - { { 'en-US': 'Market History', 'ja-JP': '取引履歴', 'zh-Hans': '交易历史', 'ko-KR': '거래 내역' }[selectedLang] || 'Market History' }
+              </h2>
+              <button onClick={() => setHistoryModalOpen(false)} style={{ background: 'none', border: 'none', color: '#f44336', fontSize: '1.5rem', cursor: 'pointer' }}>✖</button>
+            </div>
+            
+            {selectedHistoryItem?.marketData && (
+              <div style={{ display: 'flex', gap: '30px', marginBottom: '20px', background: 'rgba(0,0,0,0.3)', padding: '12px 20px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '4px' }}>
+                    {{ 'en-US': 'Recent Sold', 'ja-JP': '直近の取引', 'zh-Hans': '最近成交', 'ko-KR': '최근 거래' }[selectedLang] || 'Recent Sold'}
+                  </span>
+                  <span style={{ color: '#4caf50', fontWeight: 'bold', fontSize: '1.1rem' }}>
+                    {selectedHistoryItem.marketData.recentPriceCents > 0
+                      ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: (langToCurrency[selectedLang] || { code: 'USD' }).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes((langToCurrency[selectedLang] || { code: 'USD' }).code) ? 0 : 2 }).format((selectedHistoryItem.marketData.recentPriceCents / 100) * (rates[(langToCurrency[selectedLang] || { code: 'USD' }).code] || 1))
+                      : ({ 'en-US': 'No Data', 'ja-JP': 'データなし', 'zh-Hans': '无数据', 'ko-KR': '데이터 없음' }[selectedLang] || 'No Data')}
+                  </span>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '4px' }}>
+                    {{ 'en-US': 'Ask Price (Sell Orders)', 'ja-JP': '売値 (売り注文)', 'zh-Hans': '卖价 (卖单)', 'ko-KR': '매도 호가 (판매 주문)' }[selectedLang] || 'Ask Price'}
+                  </span>
+                  <span style={{ color: '#81c784', fontWeight: 'bold', fontSize: '1.1rem' }}>
+                    {selectedHistoryItem.marketData.lowestCents > 0
+                      ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: (langToCurrency[selectedLang] || { code: 'USD' }).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes((langToCurrency[selectedLang] || { code: 'USD' }).code) ? 0 : 2 }).format((selectedHistoryItem.marketData.lowestCents / 100) * (rates[(langToCurrency[selectedLang] || { code: 'USD' }).code] || 1))
+                      : ({ 'en-US': 'No Listings', 'ja-JP': '出品無し', 'zh-Hans': '无卖家', 'ko-KR': '판매자 없음' }[selectedLang] || 'No Listings')}
+                  </span>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '4px' }}>
+                    {{ 'en-US': 'Bid Price (Buy Orders)', 'ja-JP': '買値 (買い注文)', 'zh-Hans': '买价 (买单)', 'ko-KR': '매수 호가 (구매 주문)' }[selectedLang] || 'Bid Price'}
+                  </span>
+                  <span style={{ color: '#81c784', fontWeight: 'bold', fontSize: '1.1rem' }}>
+                    {selectedHistoryItem.marketData.buyOrderCents > 0
+                      ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: (langToCurrency[selectedLang] || { code: 'USD' }).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes((langToCurrency[selectedLang] || { code: 'USD' }).code) ? 0 : 2 }).format((selectedHistoryItem.marketData.buyOrderCents / 100) * (rates[(langToCurrency[selectedLang] || { code: 'USD' }).code] || 1))
+                      : ({ 'en-US': 'No Bids', 'ja-JP': '注文無し', 'zh-Hans': '无买家', 'ko-KR': '구매자 없음' }[selectedLang] || 'No Bids')}
+                  </span>
+                </div>
+              </div>
+            )}
+
+            {historyLoading ? (
+              <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-secondary)' }}>Loading...</div>
+            ) : historyData.length === 0 ? (
+              <div style={{ textAlign: 'center', padding: '60px 0', color: 'var(--text-secondary)' }}>No history data available</div>
+            ) : (
+              <>
+                <div style={{ display: 'flex', gap: '10px', marginBottom: '15px' }}>
+                  {['1d', '1w', 'all'].map(r => (
+                    <button key={r} onClick={() => setHistoryRange(r)} style={{ padding: '6px 16px', background: historyRange === r ? '#2196f3' : 'rgba(255,255,255,0.1)', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: '0.2s' }}>
+                      {r === '1d' ? ({'ja-JP':'1日', 'en-US':'1 Day', 'zh-Hans':'1天', 'ko-KR':'1일'}[selectedLang]||'1 Day') : r === '1w' ? ({'ja-JP':'1週間', 'en-US':'1 Week', 'zh-Hans':'1周', 'ko-KR':'1주'}[selectedLang]||'1 Week') : ({'ja-JP':'全期間', 'en-US':'All Time', 'zh-Hans':'所有时间', 'ko-KR':'전체 기간'}[selectedLang]||'All Time')}
+                    </button>
+                  ))}
+                </div>
+              <div style={{ width: '100%', height: '400px' }}>
+                <ResponsiveContainer width="100%" height="100%">
+                  <ComposedChart data={(() => {
+                    let filtered = historyData;
+                    const now = new Date();
+                    if (historyRange === '1d') {
+                      const cutoff = now.getTime() - 24*60*60*1000;
+                      filtered = historyData.filter(d => new Date(d.rawDate).getTime() >= cutoff);
+                    } else if (historyRange === '1w') {
+                      const cutoff = now.getTime() - 7*24*60*60*1000;
+                      filtered = historyData.filter(d => new Date(d.rawDate).getTime() >= cutoff);
+                    }
+                    if (filtered.length > 0) {
+                      const lastPoint = filtered[filtered.length - 1];
+                      if (now.getTime() - new Date(lastPoint.rawDate).getTime() > 2*60*60*1000) {
+                         filtered = [...filtered, { ...lastPoint, rawDate: now.toISOString(), date: now.toLocaleDateString(selectedLang), timeMs: now.getTime(), volume: 0 }];
+                      }
+                    }
+                    return filtered;
+                  })()}>
+                    <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
+                    <XAxis dataKey="timeMs" type="number" domain={['dataMin', 'dataMax']} tickCount={6} stroke="rgba(255,255,255,0.5)" tick={{fill: 'rgba(255,255,255,0.5)', fontSize: 12}} tickFormatter={(unixTime) => new Date(unixTime).toLocaleDateString(selectedLang)} />
+                    <YAxis yAxisId="left" stroke="#4caf50" tick={{fill: '#4caf50', fontSize: 12}} tickFormatter={(val) => {
+                      const curr = langToCurrency[selectedLang] || { code: 'USD' };
+                      return new Intl.NumberFormat(selectedLang, { style: 'currency', currency: curr.code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes(curr.code) ? 0 : 2 }).format(val);
+                    }} />
+                    <YAxis yAxisId="right" orientation="right" stroke="#2196f3" tick={{fill: '#2196f3', fontSize: 12}} />
+                    <RechartsTooltip contentStyle={{backgroundColor: '#1e222b', borderColor: 'rgba(255,255,255,0.2)', color: '#fff'}} itemStyle={{color: '#fff'}} labelFormatter={(label) => new Date(label).toLocaleDateString(selectedLang)} formatter={(value, name) => {
+                      if (name === ({'en-US':'Price','ja-JP':'価格','zh-Hans':'价格','ko-KR':'가격'}[selectedLang] || 'Price')) {
+                          const curr = langToCurrency[selectedLang] || { code: 'USD' };
+                          return [new Intl.NumberFormat(selectedLang, { style: 'currency', currency: curr.code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes(curr.code) ? 0 : 2 }).format(value), name];
+                      }
+                      return [value, name];
+                    }} />
+                    <Legend />
+                    <Bar yAxisId="right" dataKey="volume" name={{'en-US':'Volume','ja-JP':'取引量','zh-Hans':'交易量','ko-KR':'거래량'}[selectedLang] || 'Volume'} fill="rgba(33, 150, 243, 0.5)" />
+                    <Line yAxisId="left" type="monotone" dataKey="price" name={{'en-US':'Price','ja-JP':'価格','zh-Hans':'价格','ko-KR':'가격'}[selectedLang] || 'Price'} stroke="#4caf50" strokeWidth={2} dot={historyData && historyData.length < 5 ? { r: 3 } : false} activeDot={{ r: 5 }} />
+                  </ComposedChart>
+                </ResponsiveContainer>
+              </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+
       </div>
     </>
   );
