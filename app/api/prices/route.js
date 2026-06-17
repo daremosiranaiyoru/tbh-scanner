@@ -1,6 +1,4 @@
 import { NextResponse } from 'next/server';
-import prices from '../../data/prices.json';
-import buyOrders from '../../data/buy_orders.json';
 
 export const revalidate = 60;
 
@@ -18,17 +16,7 @@ export async function GET() {
             }
         } catch (e) {}
 
-        // Merge buy_orders.json data into prices.json data
-        const mergedItems = { ...prices };
-        for (const itemName in buyOrders) {
-            if (!mergedItems[itemName]) {
-                mergedItems[itemName] = {};
-            }
-            mergedItems[itemName] = {
-                ...mergedItems[itemName],
-                ...buyOrders[itemName]
-            };
-        }
+        const mergedItems = {};
 
         // Merge recent transaction price from history.json
         try {
