@@ -1964,6 +1964,7 @@ export default function ScannerApp() {
                               pc = marketData.buyOrderCents || 0;
                             } else {
                               if (!HIDE_RECENT_TX && marketData.recentPriceCents > 0) pc = marketData.recentPriceCents;
+                              else if (HIDE_RECENT_TX && marketData.buyOrderCents > 0) pc = marketData.buyOrderCents;
                               else if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) pc = (marketData.lowestCents + marketData.buyOrderCents) / 2;
                               else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) pc = marketData.lowestCents || marketData.buyOrderCents;
                               else pc = marketData.medianCents || marketData.priceCents || 0;
