@@ -2154,6 +2154,8 @@ export default function ScannerApp() {
                           let primaryCents = 0;
                           if (!HIDE_RECENT_TX && marketData.recentPriceCents > 0) {
                             primaryCents = marketData.recentPriceCents;
+                          } else if (HIDE_RECENT_TX && marketData.buyOrderCents > 0) {
+                            primaryCents = marketData.buyOrderCents;
                           } else if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) {
                             primaryCents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
                           } else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) {
@@ -2750,6 +2752,8 @@ export default function ScannerApp() {
                         let primaryCents = 0;
                         if (!HIDE_RECENT_TX && selectedHistoryItem.marketData.recentPriceCents > 0) {
                           primaryCents = selectedHistoryItem.marketData.recentPriceCents;
+                        } else if (HIDE_RECENT_TX && selectedHistoryItem.marketData.buyOrderCents > 0) {
+                          primaryCents = selectedHistoryItem.marketData.buyOrderCents;
                         } else if (selectedHistoryItem.marketData.lowestCents > 0 && selectedHistoryItem.marketData.buyOrderCents > 0) {
                           primaryCents = (selectedHistoryItem.marketData.lowestCents + selectedHistoryItem.marketData.buyOrderCents) / 2;
                         } else if (selectedHistoryItem.marketData.lowestCents > 0 || selectedHistoryItem.marketData.buyOrderCents > 0) {
