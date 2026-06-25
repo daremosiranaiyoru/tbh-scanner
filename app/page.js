@@ -18,6 +18,8 @@ import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as
 
 const validIcons = new Set(iconsManifest);
 
+const HIDE_RECENT_TX = true; // TEMPORARY: Hide recent transaction prices
+
 import { DndContext, closestCenter, KeyboardSensor, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
 import { arrayMove, SortableContext, sortableKeyboardCoordinates, verticalListSortingStrategy, useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
@@ -1826,7 +1828,7 @@ export default function ScannerApp() {
                 } else if (priceFilterMode === 'buy') {
                   cents = marketData.buyOrderCents || 0;
                 } else {
-                  if (marketData.recentPriceCents > 0) cents = marketData.recentPriceCents;
+                  if (!HIDE_RECENT_TX && marketData.recentPriceCents > 0) cents = marketData.recentPriceCents;
                   else if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) cents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
                   else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) cents = marketData.lowestCents || marketData.buyOrderCents;
                   else cents = marketData.medianCents || marketData.priceCents || 0;
@@ -1960,7 +1962,7 @@ export default function ScannerApp() {
                             } else if (priceFilterMode === 'buy') {
                               pc = marketData.buyOrderCents || 0;
                             } else {
-                              if (marketData.recentPriceCents > 0) pc = marketData.recentPriceCents;
+                              if (!HIDE_RECENT_TX && marketData.recentPriceCents > 0) pc = marketData.recentPriceCents;
                               else if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) pc = (marketData.lowestCents + marketData.buyOrderCents) / 2;
                               else if (marketData.lowestCents > 0 || marketData.buyOrderCents > 0) pc = marketData.lowestCents || marketData.buyOrderCents;
                               else pc = marketData.medianCents || marketData.priceCents || 0;
@@ -2150,7 +2152,7 @@ export default function ScannerApp() {
                         });
                         if (marketData) {
                           let primaryCents = 0;
-                          if (marketData.recentPriceCents > 0) {
+                          if (!HIDE_RECENT_TX && marketData.recentPriceCents > 0) {
                             primaryCents = marketData.recentPriceCents;
                           } else if (marketData.lowestCents > 0 && marketData.buyOrderCents > 0) {
                             primaryCents = (marketData.lowestCents + marketData.buyOrderCents) / 2;
@@ -2232,7 +2234,7 @@ export default function ScannerApp() {
                             {marketData ? (
                               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '2px' }}>
                                 {(priceFilterMode === 'both') && (
-                                  marketData.recentPriceCents > 0
+                                  localizedPrice
                                     ? <div className={styles.priceValue} style={{ color: '#4caf50', fontWeight: 'bold' }}>{recentSoldLabel} {localizedPrice}</div>
                                     : <div className={styles.priceValue} style={{ color: 'gray', fontWeight: 'bold', fontSize: '0.85rem' }}>{recentSoldLabel} {{ 'en-US': 'No Data', 'ja-JP': 'データなし', 'zh-Hans': '无数据', 'ko-KR': '데이터 없음' }[selectedLang] || 'No Data'}</div>
                                 )}
@@ -2744,9 +2746,21 @@ export default function ScannerApp() {
                     {{ 'en-US': 'Recent Sold', 'ja-JP': '直近の取引', 'zh-Hans': '最近成交', 'ko-KR': '최근 거래' }[selectedLang] || 'Recent Sold'}
                   </span>
                   <span style={{ color: '#4caf50', fontWeight: 'bold', fontSize: '1.1rem' }}>
-                    {selectedHistoryItem.marketData.recentPriceCents > 0
-                      ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: (langToCurrency[selectedLang] || { code: 'USD' }).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes((langToCurrency[selectedLang] || { code: 'USD' }).code) ? 0 : 2 }).format((selectedHistoryItem.marketData.recentPriceCents / 100) * (rates[(langToCurrency[selectedLang] || { code: 'USD' }).code] || 1))
-                      : ({ 'en-US': 'No Data', 'ja-JP': 'データなし', 'zh-Hans': '无数据', 'ko-KR': '데이터 없음' }[selectedLang] || 'No Data')}
+                    {(() => {
+                        let primaryCents = 0;
+                        if (!HIDE_RECENT_TX && selectedHistoryItem.marketData.recentPriceCents > 0) {
+                          primaryCents = selectedHistoryItem.marketData.recentPriceCents;
+                        } else if (selectedHistoryItem.marketData.lowestCents > 0 && selectedHistoryItem.marketData.buyOrderCents > 0) {
+                          primaryCents = (selectedHistoryItem.marketData.lowestCents + selectedHistoryItem.marketData.buyOrderCents) / 2;
+                        } else if (selectedHistoryItem.marketData.lowestCents > 0 || selectedHistoryItem.marketData.buyOrderCents > 0) {
+                          primaryCents = selectedHistoryItem.marketData.lowestCents || selectedHistoryItem.marketData.buyOrderCents;
+                        } else {
+                          primaryCents = selectedHistoryItem.marketData.medianCents || selectedHistoryItem.marketData.priceCents || 0;
+                        }
+                        return primaryCents > 0
+                          ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: (langToCurrency[selectedLang] || { code: 'USD' }).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes((langToCurrency[selectedLang] || { code: 'USD' }).code) ? 0 : 2 }).format((primaryCents / 100) * (rates[(langToCurrency[selectedLang] || { code: 'USD' }).code] || 1))
+                          : ({ 'en-US': 'No Data', 'ja-JP': 'データなし', 'zh-Hans': '无数据', 'ko-KR': '데이터 없음' }[selectedLang] || 'No Data');
+                    })()}
                   </span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
