@@ -6,6 +6,12 @@ const nextConfig = {
       return [
         {
           source: '/:path*',
+          has: [
+            {
+              type: 'host',
+              value: '.*vercel\\.app',
+            },
+          ],
           destination: 'https://tbh-scanner.com/:path*?redirected=true',
           permanent: false, // テスト中なので一時的なリダイレクト(307)
         },
