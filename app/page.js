@@ -1161,7 +1161,7 @@ export default function ScannerApp() {
 
   return (
     <>
-      <Script src="/opencv.js" strategy="beforeInteractive" />
+      <Script src="/opencv.js" strategy="afterInteractive" />
       {/* Full Width Edge-to-Edge Announcement Banner */}
       <div style={{
         width: '100%',
