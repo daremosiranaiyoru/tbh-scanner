@@ -1,6 +1,7 @@
 import './globals.css';
 import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/react';
+import DomainChangePopup from './DomainChangePopup';
 
 export const metadata = {
   title: 'Taskbar Hero Market Scanner',
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <head>
       </head>
       <body>
+        <DomainChangePopup />
         {children}
         <Analytics />
       </body>

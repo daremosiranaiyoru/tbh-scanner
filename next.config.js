@@ -6,7 +6,7 @@ const nextConfig = {
       return [
         {
           source: '/:path*',
-          destination: 'https://tbh-scanner.pages.dev/:path*',
+          destination: 'https://tbh-scanner.com/:path*?redirected=true',
           permanent: false, // テスト中なので一時的なリダイレクト(307)
         },
       ];
