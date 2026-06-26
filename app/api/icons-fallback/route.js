@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { NextResponse } from 'next/server';
 
 // 1x1 transparent PNG image (base64 encoded)

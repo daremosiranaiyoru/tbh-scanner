@@ -1,3 +1,4 @@
+export const runtime = 'edge';
 import { NextResponse } from 'next/server';
 
 export const revalidate = 3600; // Cache the Steam response for 1 hour at Vercel Edge
