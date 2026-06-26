@@ -123,6 +123,7 @@ const langToCurrency = {
   'ja-JP': { code: 'JPY' },
   'zh-Hans': { code: 'CNY' },
   'zh-Hant': { code: 'TWD' },
+  'zh-HK': { code: 'HKD' },
   'ko-KR': { code: 'KRW' },
   'ru-RU': { code: 'RUB' },
   'es-ES': { code: 'EUR' },
@@ -136,6 +137,13 @@ const langToCurrency = {
   'pl-PL': { code: 'PLN' },
   'uk-UA': { code: 'UAH' },
 };
+
+function getEffectiveCurrency(lang, explicitCurrency) {
+  if (explicitCurrency && explicitCurrency !== 'AUTO') {
+    return { code: explicitCurrency };
+  }
+  return langToCurrency[lang] || { code: 'USD' };
+}
 
 // Cache for preserving state across client-side navigations (e.g. going to tips page and back)
 let pageCache = null;
@@ -160,6 +168,7 @@ export default function ScannerApp() {
   const [tooltipEnabled, setTooltipEnabled] = useState(true);
   const [hoverPos, setHoverPos] = useState({ x: 0, y: 0 });
   const [selectedLang, setSelectedLang] = useState('ja-JP');
+  const [selectedCurrency, setSelectedCurrency] = useState('AUTO');
   const [toastMessage, setToastMessage] = useState('');
   
   // Comments state
@@ -221,6 +230,10 @@ export default function ScannerApp() {
       const savedLang = localStorage.getItem('preferredLang');
       if (savedLang) {
         setSelectedLang(savedLang);
+      }
+      const savedCurrency = localStorage.getItem('preferredCurrency');
+      if (savedCurrency) {
+        setSelectedCurrency(savedCurrency);
       }
     }
   }, []);
@@ -300,7 +313,7 @@ export default function ScannerApp() {
       }
       const data = await res.json();
       if (data && data.history) {
-        const curr = langToCurrency[selectedLang] || { code: 'USD' };
+        const curr = getEffectiveCurrency(selectedLang, selectedCurrency);
         const rate = rates && rates[curr.code] ? rates[curr.code] : 1;
         const formatted = data.history.map(h => ({
           rawDate: h[0],
@@ -1173,7 +1186,7 @@ export default function ScannerApp() {
                 <h1 className={styles.title}>{titleTranslations[selectedLang] || titleTranslations['en-US']}</h1>
                 <p className={styles.subtitle}>{descTranslations[selectedLang] || descTranslations['en-US']}</p>
               </div>
-              <div style={{flex: 1, textAlign: 'right'}}>
+              <div style={{flex: 1, textAlign: 'right', display: 'flex', justifyContent: 'flex-end', gap: '8px'}}>
             <select 
               value={selectedLang} 
               onChange={(e) => {
@@ -1190,6 +1203,7 @@ export default function ScannerApp() {
               <option value="ja-JP" style={{background: '#1a1d24', color: 'white'}}>日本語</option>
               <option value="zh-Hans" style={{background: '#1a1d24', color: 'white'}}>简体中文</option>
               <option value="zh-Hant" style={{background: '#1a1d24', color: 'white'}}>繁體中文</option>
+              <option value="zh-HK" style={{background: '#1a1d24', color: 'white'}}>繁體中文 (香港)</option>
               <option value="ko-KR" style={{background: '#1a1d24', color: 'white'}}>한국어</option>
               <option value="ru-RU" style={{background: '#1a1d24', color: 'white'}}>Русский</option>
               <option value="es-ES" style={{background: '#1a1d24', color: 'white'}}>Español</option>
@@ -1202,6 +1216,36 @@ export default function ScannerApp() {
               <option value="uk-UA" style={{background: '#1a1d24', color: 'white'}}>Українська</option>
               <option value="tr-TR" style={{background: '#1a1d24', color: 'white'}}>Türkçe</option>
               <option value="vi-VN" style={{background: '#1a1d24', color: 'white'}}>Tiếng Việt</option>
+            </select>
+            
+            <select 
+              value={selectedCurrency} 
+              onChange={(e) => {
+                setSelectedCurrency(e.target.value);
+                if (typeof window !== 'undefined') localStorage.setItem('preferredCurrency', e.target.value);
+              }}
+              className={styles.langSelect}
+              style={{
+                background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)',
+                padding: '8px 12px', borderRadius: '8px', outline: 'none', cursor: 'pointer'
+              }}
+            >
+              <option value="AUTO" style={{background: '#1a1d24', color: 'white'}}>Auto (Lang)</option>
+              <option value="USD" style={{background: '#1a1d24', color: 'white'}}>USD ($)</option>
+              <option value="EUR" style={{background: '#1a1d24', color: 'white'}}>EUR (€)</option>
+              <option value="JPY" style={{background: '#1a1d24', color: 'white'}}>JPY (¥)</option>
+              <option value="CNY" style={{background: '#1a1d24', color: 'white'}}>CNY (¥)</option>
+              <option value="HKD" style={{background: '#1a1d24', color: 'white'}}>HKD (HK$)</option>
+              <option value="TWD" style={{background: '#1a1d24', color: 'white'}}>TWD (NT$)</option>
+              <option value="KRW" style={{background: '#1a1d24', color: 'white'}}>KRW (₩)</option>
+              <option value="RUB" style={{background: '#1a1d24', color: 'white'}}>RUB (₽)</option>
+              <option value="BRL" style={{background: '#1a1d24', color: 'white'}}>BRL (R$)</option>
+              <option value="TRY" style={{background: '#1a1d24', color: 'white'}}>TRY (₺)</option>
+              <option value="VND" style={{background: '#1a1d24', color: 'white'}}>VND (₫)</option>
+              <option value="IDR" style={{background: '#1a1d24', color: 'white'}}>IDR (Rp)</option>
+              <option value="THB" style={{background: '#1a1d24', color: 'white'}}>THB (฿)</option>
+              <option value="PLN" style={{background: '#1a1d24', color: 'white'}}>PLN (zł)</option>
+              <option value="UAH" style={{background: '#1a1d24', color: 'white'}}>UAH (₴)</option>
             </select>
           </div>
         </div>
@@ -1851,7 +1895,7 @@ export default function ScannerApp() {
             };
             
             if (rates) {
-              const curr = langToCurrency[selectedLang] || { code: 'USD' };
+              const curr = getEffectiveCurrency(selectedLang, selectedCurrency);
               const rate = rates[curr.code] || 1;
               const convertedTotal = (totalCents / 100) * rate;
               localizedTotal = new Intl.NumberFormat(selectedLang, {
@@ -2146,7 +2190,7 @@ export default function ScannerApp() {
                       let localizedLowestPrice = '';
                       let localizedBuyOrderPrice = '';
                       if (rates) {
-                        const curr = langToCurrency[selectedLang] || { code: 'USD' };
+                        const curr = getEffectiveCurrency(selectedLang, selectedCurrency);
                         const rate = rates[curr.code] || 1;
                         const formatter = new Intl.NumberFormat(selectedLang, {
                           style: 'currency', currency: curr.code,
@@ -2764,7 +2808,7 @@ export default function ScannerApp() {
                           primaryCents = selectedHistoryItem.marketData.medianCents || selectedHistoryItem.marketData.priceCents || 0;
                         }
                         return primaryCents > 0
-                          ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: (langToCurrency[selectedLang] || { code: 'USD' }).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes((langToCurrency[selectedLang] || { code: 'USD' }).code) ? 0 : 2 }).format((primaryCents / 100) * (rates[(langToCurrency[selectedLang] || { code: 'USD' }).code] || 1))
+                          ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: getEffectiveCurrency(selectedLang, selectedCurrency).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes(getEffectiveCurrency(selectedLang, selectedCurrency).code) ? 0 : 2 }).format((primaryCents / 100) * (rates[getEffectiveCurrency(selectedLang, selectedCurrency).code] || 1))
                           : ({ 'en-US': 'No Data', 'ja-JP': 'データなし', 'zh-Hans': '无数据', 'ko-KR': '데이터 없음' }[selectedLang] || 'No Data');
                     })()}
                   </span>
@@ -2775,7 +2819,7 @@ export default function ScannerApp() {
                   </span>
                   <span style={{ color: '#81c784', fontWeight: 'bold', fontSize: '1.1rem' }}>
                     {selectedHistoryItem.marketData.lowestCents > 0
-                      ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: (langToCurrency[selectedLang] || { code: 'USD' }).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes((langToCurrency[selectedLang] || { code: 'USD' }).code) ? 0 : 2 }).format((selectedHistoryItem.marketData.lowestCents / 100) * (rates[(langToCurrency[selectedLang] || { code: 'USD' }).code] || 1))
+                      ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: getEffectiveCurrency(selectedLang, selectedCurrency).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes(getEffectiveCurrency(selectedLang, selectedCurrency).code) ? 0 : 2 }).format((selectedHistoryItem.marketData.lowestCents / 100) * (rates[getEffectiveCurrency(selectedLang, selectedCurrency).code] || 1))
                       : ({ 'en-US': 'No Listings', 'ja-JP': '出品無し', 'zh-Hans': '无卖家', 'ko-KR': '판매자 없음' }[selectedLang] || 'No Listings')}
                   </span>
                 </div>
@@ -2785,7 +2829,7 @@ export default function ScannerApp() {
                   </span>
                   <span style={{ color: '#81c784', fontWeight: 'bold', fontSize: '1.1rem' }}>
                     {selectedHistoryItem.marketData.buyOrderCents > 0
-                      ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: (langToCurrency[selectedLang] || { code: 'USD' }).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes((langToCurrency[selectedLang] || { code: 'USD' }).code) ? 0 : 2 }).format((selectedHistoryItem.marketData.buyOrderCents / 100) * (rates[(langToCurrency[selectedLang] || { code: 'USD' }).code] || 1))
+                      ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: getEffectiveCurrency(selectedLang, selectedCurrency).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes(getEffectiveCurrency(selectedLang, selectedCurrency).code) ? 0 : 2 }).format((selectedHistoryItem.marketData.buyOrderCents / 100) * (rates[getEffectiveCurrency(selectedLang, selectedCurrency).code] || 1))
                       : ({ 'en-US': 'No Bids', 'ja-JP': '注文無し', 'zh-Hans': '无买家', 'ko-KR': '구매자 없음' }[selectedLang] || 'No Bids')}
                   </span>
                 </div>
@@ -2828,13 +2872,13 @@ export default function ScannerApp() {
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                     <XAxis dataKey="timeMs" type="number" domain={['dataMin', 'dataMax']} tickCount={6} stroke="rgba(255,255,255,0.5)" tick={{fill: 'rgba(255,255,255,0.5)', fontSize: 12}} tickFormatter={(unixTime) => new Date(unixTime).toLocaleDateString(selectedLang)} />
                     <YAxis yAxisId="left" stroke="#4caf50" tick={{fill: '#4caf50', fontSize: 12}} tickFormatter={(val) => {
-                      const curr = langToCurrency[selectedLang] || { code: 'USD' };
+                      const curr = getEffectiveCurrency(selectedLang, selectedCurrency);
                       return new Intl.NumberFormat(selectedLang, { style: 'currency', currency: curr.code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes(curr.code) ? 0 : 2 }).format(val);
                     }} />
                     <YAxis yAxisId="right" orientation="right" stroke="#2196f3" tick={{fill: '#2196f3', fontSize: 12}} />
                     <RechartsTooltip contentStyle={{backgroundColor: '#1e222b', borderColor: 'rgba(255,255,255,0.2)', color: '#fff'}} itemStyle={{color: '#fff'}} labelFormatter={(label) => new Date(label).toLocaleDateString(selectedLang)} formatter={(value, name) => {
                       if (name === ({'en-US':'Price','ja-JP':'価格','zh-Hans':'价格','ko-KR':'가격'}[selectedLang] || 'Price')) {
-                          const curr = langToCurrency[selectedLang] || { code: 'USD' };
+                          const curr = getEffectiveCurrency(selectedLang, selectedCurrency);
                           return [new Intl.NumberFormat(selectedLang, { style: 'currency', currency: curr.code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes(curr.code) ? 0 : 2 }).format(value), name];
                       }
                       return [value, name];
