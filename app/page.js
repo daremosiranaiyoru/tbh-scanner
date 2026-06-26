@@ -246,12 +246,12 @@ export default function ScannerApp() {
     loadData();
     
     // Load full items database for manual search
-    fetch('/items.json')
+    fetch('https://pub-972cbb217b1847ea80883cab22062426.r2.dev/items.json')
       .then(res => res.json())
       .then(data => setItemsDbFull(data))
       .catch(err => console.error("Failed to load items.json", err));
       
-    fetch('/gear_trans.json')
+    fetch('https://pub-972cbb217b1847ea80883cab22062426.r2.dev/gear_trans.json')
       .then(res => res.json())
       .then(data => setGearTrans(data))
       .catch(err => console.error("Failed to load gear_trans.json", err));
