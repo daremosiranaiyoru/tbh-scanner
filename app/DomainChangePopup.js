@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 export default function DomainChangePopup() {
   const [isOpen, setIsOpen] = useState(false);
-  const [lang, setLang] = useState('en-US');
+  const [lang, setLang] = useState('ja-JP');
 
   useEffect(() => {
     // Check query params manually to avoid Suspense issues with useSearchParams
