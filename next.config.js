@@ -1,5 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    // Vercel上で実行されている場合のみ、Cloudflare Pagesへリダイレクト
+    if (process.env.VERCEL) {
+      return [
+        {
+          source: '/:path*',
+          destination: 'https://tbh-scanner.pages.dev/:path*',
+          permanent: false, // テスト中なので一時的なリダイレクト(307)
+        },
+      ];
+    }
+    return [];
+  },
   async headers() {
     return [
       {
