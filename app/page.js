@@ -958,42 +958,25 @@ export default function ScannerApp() {
   };
   const getRarityLabel = (rarity) => rarityTranslations[rarity]?.[selectedLang] || rarityTranslations[rarity]?.['en-US'] || rarity;
 
-  const announcementTranslations = {
-    'en-US': 'Update: You can now click on an item\'s icon in the scanned image to instantly view its information!',
-    'ja-JP': 'アップデート：スキャン画像からアイテムのアイコンをクリックすると即座にそのアイテムの情報が表示されるようになりました！',
-    'zh-Hans': '更新：现在点击扫描图像中的物品图标，即可立即查看该物品的信息！',
-    'zh-Hant': '更新：現在點擊掃描圖像中的物品圖示，即可立即查看該物品的資訊！',
-    'ko-KR': '업데이트: 스캔한 이미지에서 아이템 아이콘을 클릭하면 즉시 해당 아이템 정보를 볼 수 있습니다!',
-    'ru-RU': 'Обновление: теперь вы можете нажать на значок предмета на отсканированном изображении, чтобы мгновенно просмотреть информацию о нем!',
-    'es-ES': 'Actualización: ¡Ahora puedes hacer clic en el ícono de un elemento en la imagen escaneada para ver instantáneamente su información!',
-    'fr-FR': 'Mise à jour : vous pouvez désormais cliquer sur l\'icône d\'un objet dans l\'image numérisée pour afficher instantanément ses informations !',
-    'de-DE': 'Update: Sie können jetzt auf das Symbol eines Elements im gescannten Bild klicken, um dessen Informationen sofort anzuzeigen!',
-    'pt-BR': 'Atualização: Agora você pode clicar no ícone de um item na imagem digitalizada para ver instantaneamente suas informações!',
-    'tr-TR': 'Güncelleme: Artık taranan görüntüdeki bir öğenin simgesine tıklayarak bilgilerini anında görüntüleyebilirsiniz!',
-    'vi-VN': 'Cập nhật: Giờ đây, bạn có thể nhấp vào biểu tượng của một mục trong hình ảnh được quét để xem ngay thông tin của mục đó!',
-    'id-ID': 'Baru: Dukungan untuk penambahan item manual!',
-    'th-TH': 'ใหม่: รองรับการเพิ่มไอเทมด้วยตนเอง!',
-    'pl-PL': 'Nowość: Wsparcie dla ręcznego dodawania przedmiotów!',
-    'uk-UA': 'Нове: Підтримка ручного додавання предметів!'
-  };
+
 
   const titleTranslations = {
-    'ja-JP': 'Taskbar Hero AI鑑定士',
-    'en-US': 'Taskbar Hero AI Appraiser',
-    'zh-Hans': 'Taskbar Hero AI 鉴定师',
-    'zh-Hant': 'Taskbar Hero AI 鑑定師',
-    'ko-KR': 'Taskbar Hero AI 감정사',
-    'ru-RU': 'ИИ-оценщик Taskbar Hero',
-    'es-ES': 'Tasador de IA de Taskbar Hero',
-    'fr-FR': 'Évaluateur IA Taskbar Hero',
-    'de-DE': 'Taskbar Hero KI-Gutachter',
-    'pt-BR': 'Avaliador de IA do Taskbar Hero',
-    'tr-TR': 'Taskbar Hero YZ Eksperi',
-    'vi-VN': 'Chuyên gia thẩm định AI Taskbar Hero',
-    'id-ID': 'Penilai AI Taskbar Hero',
-    'th-TH': 'ผู้ประเมิน AI ของ Taskbar Hero',
-    'pl-PL': 'Rzeczoznawca AI Taskbar Hero',
-    'uk-UA': 'Оцінювач ШІ Taskbar Hero'
+    'ja-JP': 'TBH Scanner',
+    'en-US': 'TBH Scanner',
+    'zh-Hans': 'TBH Scanner',
+    'zh-Hant': 'TBH Scanner',
+    'ko-KR': 'TBH Scanner',
+    'ru-RU': 'TBH Scanner',
+    'es-ES': 'TBH Scanner',
+    'fr-FR': 'TBH Scanner',
+    'de-DE': 'TBH Scanner',
+    'pt-BR': 'TBH Scanner',
+    'tr-TR': 'TBH Scanner',
+    'vi-VN': 'TBH Scanner',
+    'id-ID': 'TBH Scanner',
+    'th-TH': 'TBH Scanner',
+    'pl-PL': 'TBH Scanner',
+    'uk-UA': 'TBH Scanner'
   };
 
   const descTranslations = {
@@ -1162,21 +1145,7 @@ export default function ScannerApp() {
   return (
     <>
       <Script src="/opencv.js" strategy="afterInteractive" />
-      {/* Full Width Edge-to-Edge Announcement Banner */}
-      <div style={{
-        width: '100%',
-        background: 'linear-gradient(90deg, #1e88e5, #8e24aa)',
-        padding: '12px 20px',
-        textAlign: 'center',
-        fontWeight: 'bold',
-        color: 'white',
-        boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
-        zIndex: 100,
-        position: 'relative',
-        whiteSpace: 'pre-wrap'
-      }}>
-        {announcementTranslations[selectedLang] || announcementTranslations['en-US']}
-      </div>
+
 
       <div className={styles.container}>
         <header className={styles.header}>
@@ -1191,7 +1160,10 @@ export default function ScannerApp() {
               value={selectedLang} 
               onChange={(e) => {
                 setSelectedLang(e.target.value);
-                if (typeof window !== 'undefined') localStorage.setItem('preferredLang', e.target.value);
+                  if (typeof window !== 'undefined') {
+                    localStorage.setItem('preferredLang', e.target.value);
+                    window.dispatchEvent(new CustomEvent('langChanged', { detail: e.target.value }));
+                  }
               }}
               className={styles.langSelect}
               style={{
@@ -1265,40 +1237,40 @@ export default function ScannerApp() {
         {(() => {
           const noticeTrans = {
   "title": {
-    "en-US": "To Everyone Using the Tool",
-    "ja-JP": "ツールを使ってくださる皆様へ",
-    "zh-Hans": "致所有使用本工具的用户",
-    "zh-Hant": "致所有使用本工具的用戶",
-    "ko-KR": "이 툴을 사용해주시는 모든 분들께",
-    "ru-RU": "Всем пользователям инструмента",
-    "es-ES": "A todos los que usan esta herramienta",
-    "fr-FR": "À tous les utilisateurs de l'outil",
-    "de-DE": "An alle Nutzer dieses Tools",
-    "pt-BR": "A todos que usam esta ferramenta",
-    "tr-TR": "Aracı Kullanan Herkese",
-    "vi-VN": "Gửi tới tất cả người dùng công cụ",
-    "id-ID": "Kepada Semua Pengguna Alat",
-    "th-TH": "ถึงผู้ใช้เครื่องมือทุกคน",
-    "pl-PL": "Do wszystkich użytkowników narzędzia",
-    "uk-UA": "До всіх користувачів інструменту"
+    "en-US": "Notice",
+    "ja-JP": "お知らせ",
+    "zh-Hans": "公告",
+    "zh-Hant": "公告",
+    "ko-KR": "공지사항",
+    "ru-RU": "Объявление",
+    "es-ES": "Aviso",
+    "fr-FR": "Avis",
+    "de-DE": "Hinweis",
+    "pt-BR": "Aviso",
+    "tr-TR": "Duyuru",
+    "vi-VN": "Thông báo",
+    "id-ID": "Pemberitahuan",
+    "th-TH": "ประกาศ",
+    "pl-PL": "Ogłoszenie",
+    "uk-UA": "Оголошення"
   },
   "text": {
-    "en-US": "I'm maru, the developer. I'm incredibly grateful that so many people are using this! However, server costs have skyrocketed as a result, making it difficult for me to maintain personally. Costs are expected to rise even further once the market reopens. To help me continue updating the tool, I would deeply appreciate your support, even just a small amount!\n\nDue to data retrieval constraints, the displayed prices are from about 1-2 hours ago. Right after the market reopens, prices are expected to be unstable, so please check the exact information directly on the Steam Market.",
-    "ja-JP": "開発者のmaruです。予想以上に多くの方に使っていただき大変感謝しています！ですが、その分サーバー代が高騰しており、個人での維持が難しくなってきました。マーケット再開後はさらに費用がかさむと予想されます。今後もアップデートを続けていくため、もしよろしければ少額からでもご支援いただけますと大変助かります！\n\nデータ取得の都合により表示される値段は1~2時間ほど前のものになります。マーケット再開直後は値段が安定しないと予想されるため、正確な情報はsteam marketで直接確認するようお願いします。",
-    "zh-Hans": "我是开发者maru。非常感谢有这么多人使用！但是服务器费用也随之飙升，让我个人难以承担。预计市场重新开放后费用还会进一步增加。为了能继续为大家更新，即使是少量的赞助也能帮上大忙，非常感谢！\n\n由于数据获取的原因，显示的价格大约是1-2小时前的价格。预计市场重新开放后价格会不稳定，因此请直接在Steam市场上确认准确信息。",
-    "zh-Hant": "我是開發者maru。非常感謝有這麼多人使用！但是伺服器費用也隨之飆升，讓我個人難以承擔。預計市場重新開放後費用還會進一步增加。為了能繼續為大家更新，即使是少量的贊助也能幫上大忙，非常感謝！\n\n由於資料獲取的原因，顯示的價格大約是1-2小時前的價格。預計市場重新開放後價格會不穩定，因此請直接在Steam市場上確認準確資訊。",
-    "ko-KR": "개발자 maru입니다. 예상보다 훨씬 많은 분들이 사용해주셔서 정말 감사드립니다! 하지만 그만큼 서버 비용이 급등하여 개인적으로 유지하기가 어려워졌습니다. 마켓 재개 후에는 비용이 더 들 것으로 예상됩니다. 앞으로도 업데이트를 계속해 나갈 수 있도록, 적은 금액이라도 후원해주시면 정말 큰 도움이 되겠습니다!\n\n데이터 수집의 한계로 인해 표시되는 가격은 약 1~2시간 전의 가격입니다. 마켓 재개 직후에는 가격이 불안정할 것으로 예상되므로 정확한 정보는 Steam 마켓에서 직접 확인하시기 바랍니다.",
-    "ru-RU": "Я maru, разработчик. Я невероятно благодарен за то, что так много людей пользуются этим! Однако в результате расходы на сервер резко возросли, и мне стало трудно поддерживать его лично. Ожидается, что расходы возрастут еще больше после открытия рынка. Чтобы я мог продолжать обновления, я был бы очень признателен за вашу поддержку, даже на небольшую сумму!\n\nИз-за ограничений получения данных отображаемые цены соответствуют ценам примерно 1-2 часовой давности. Ожидается, что сразу после открытия рынка цены будут нестабильными, поэтому, пожалуйста, проверяйте точную информацию непосредственно на Steam Market.",
-    "es-ES": "Soy maru, el desarrollador. ¡Estoy muy agradecido de que tanta gente use esto! Sin embargo, los costos del servidor se han disparado como resultado, haciendo difícil que pueda mantenerlo personalmente. Se espera que los costos aumenten aún más cuando el mercado vuelva a abrir. Para poder seguir actualizando la herramienta, ¡agradecería enormemente su apoyo, incluso con una pequeña cantidad!\n\nDebido a restricciones en la obtención de datos, los precios mostrados son de hace aproximadamente 1-2 horas. Se espera que los precios sean inestables justo después de que vuelva a abrir el mercado, así que verifique la información exacta directamente en el Steam Market.",
-    "fr-FR": "Je suis maru, le développeur. Je suis incroyablement reconnaissant que tant de personnes utilisent ceci ! Cependant, les coûts des serveurs ont explosé en conséquence, ce qui rend difficile pour moi de le maintenir personnellement. Les coûts devraient encore augmenter une fois que le marché rouvrira. Pour m'aider à continuer les mises à jour, j'apprécierais profondément votre soutien, même pour un petit montant !\n\nEn raison des contraintes de récupération des données, les prix affichés datent d'environ 1 à 2 heures. Il est prévu que les prix soient instables juste après la réouverture du marché, veuillez donc vérifier les informations exactes directement sur le marché Steam.",
-    "de-DE": "Ich bin maru, der Entwickler. Ich bin unglaublich dankbar, dass so viele dieses Tool nutzen! Allerdings sind die Serverkosten dadurch in die Höhe geschossen, was es für mich schwer macht, es privat zu erhalten. Es wird erwartet, dass die Kosten nach der Wiedereröffnung des Marktes weiter steigen. Damit ich die Updates fortsetzen kann, wäre ich für jede Unterstützung sehr dankbar, selbst für einen kleinen Betrag!\n\nAufgrund von Einschränkungen beim Datenabruf sind die angezeigten Preise etwa 1-2 Stunden alt. Es wird erwartet, dass die Preise direkt nach der Wiedereröffnung des Marktes instabil sind. Bitte überprüfen Sie die genauen Informationen direkt auf dem Steam Market.",
-    "pt-BR": "Sou maru, o desenvolvedor. Sou incrivelmente grato por tantas pessoas usarem isso! No entanto, os custos do servidor dispararam como resultado, dificultando a manutenção pessoal. Espera-se que os custos subam ainda mais quando o mercado reabrir. Para me ajudar a continuar atualizando a ferramenta, eu agradeceria profundamente seu apoio, mesmo com uma quantia pequena!\n\nDevido a restrições na obtenção de dados, os preços exibidos são de cerca de 1-2 horas atrás. Espera-se que os preços fiquem instáveis logo após a reabertura do mercado, portanto, verifique as informações exatas diretamente no Steam Market.",
-    "tr-TR": "Ben geliştirici maru. Bu kadar çok kişinin bunu kullanmasından inanılmaz minnettarım! Ancak bunun sonucunda sunucu maliyetleri hızla arttı ve kişisel olarak sürdürmemi zorlaştırdı. Pazarın yeniden açılmasıyla maliyetlerin daha da artması bekleniyor. Aracı güncellemeye devam edebilmem için, küçük bir miktar da olsa desteğinize derinden minnettar olurum!\n\nVeri alma kısıtlamaları nedeniyle, görüntülenen fiyatlar yaklaşık 1-2 saat öncesine aittir. Pazar yeniden açıldıktan hemen sonra fiyatların istikrarsız olması bekleniyor, bu nedenle lütfen kesin bilgileri doğrudan Steam Pazarı'ndan kontrol edin.",
-    "vi-VN": "Tôi là nhà phát triển maru. Tôi vô cùng biết ơn vì rất nhiều người đang sử dụng công cụ này! Tuy nhiên, chi phí máy chủ đã tăng vọt do đó, khiến tôi gặp khó khăn trong việc duy trì cá nhân. Dự kiến chi phí sẽ còn tăng cao hơn khi chợ mở cửa trở lại. Để giúp tôi tiếp tục cập nhật, tôi sẽ rất trân trọng sự hỗ trợ của bạn, dù chỉ là một số tiền nhỏ!\n\nDo hạn chế về truy xuất dữ liệu, giá hiển thị là từ khoảng 1-2 giờ trước. Ngay sau khi thị trường mở cửa trở lại, giá dự kiến sẽ không ổn định, vì vậy vui lòng kiểm tra thông tin chính xác trực tiếp trên Steam Market.",
-    "id-ID": "Saya maru, pengembang. Saya sangat berterima kasih karena begitu banyak orang menggunakan ini! Namun, akibatnya biaya server meroket, membuatnya sulit bagi saya untuk mengelolanya secara pribadi. Biaya diperkirakan akan naik lebih tinggi lagi setelah pasar dibuka kembali. Untuk membantu saya terus memperbarui alat ini, saya akan sangat menghargai dukungan Anda, meskipun dalam jumlah kecil!\n\nKarena kendala pengambilan data, harga yang ditampilkan adalah dari sekitar 1-2 jam yang lalu. Tepat setelah pasar dibuka kembali, harga diperkirakan tidak stabil, jadi silakan periksa informasi yang tepat secara langsung di Steam Market.",
-    "th-TH": "ผม maru ผู้พัฒนาครับ ผมรู้สึกขอบคุณอย่างยิ่งที่มีคนใช้สิ่งนี้มากมาย! อย่างไรก็ตาม ค่าเซิร์ฟเวอร์ก็พุ่งสูงขึ้นตามไปด้วย ทำให้ยากต่อการดูแลรักษาด้วยตัวเอง คาดว่าค่าใช้จ่ายจะเพิ่มขึ้นอีกเมื่อตลาดเปิด เพื่อช่วยให้ผมอัปเดตเครื่องมือต่อไป ผมจะรู้สึกขอบคุณมากสำหรับการสนับสนุนของคุณ แม้เพียงเล็กน้อยก็ตาม!\n\nเนื่องจากข้อจำกัดในการดึงข้อมูล ราคาที่แสดงจึงเป็นราคาเมื่อประมาณ 1-2 ชั่วโมงที่แล้ว คาดว่าราคาจะไม่เสถียรทันทีหลังจากเปิดตลาดอีกครั้ง ดังนั้นโปรดตรวจสอบข้อมูลที่แน่นอนใน Steam Market โดยตรง",
-    "pl-PL": "Jestem maru, deweloper. Jestem niesamowicie wdzięczny, że tak wiele osób z tego korzysta! Jednak w rezultacie koszty serwera gwałtownie wzrosły, utrudniając mi osobiste utrzymanie. Oczekuje się, że koszty jeszcze wzrosną po ponownym otwarciu rynku. Aby pomóc mi kontynuować aktualizacje, byłbym głęboko wdzięczny za twoje wsparcie, nawet za niewielką kwotę!\n\nZe względu na ograniczenia w pobieraniu danych, wyświetlane ceny pochodzą sprzed około 1-2 godzin. Oczekuje się, że ceny będą niestabilne tuż po ponownym otwarciu rynku, więc prosimy o sprawdzanie dokładnych informacji bezpośrednio na Rynku Steam.",
-    "uk-UA": "Я maru, розробник. Я неймовірно вдячний, що так багато людей користуються цим! Однак у результаті витрати на сервер стрімко зросли, що ускладнює його підтримку особисто. Очікується, що витрати ще більше зростуть після відкриття ринку. Щоб я міг продовжувати оновлення, я був би дуже вдячний за вашу підтримку, навіть на невелику суму!\n\nЧерез обмеження на отримання даних ціни, що відображаються, є цінами приблизно 1-2-годинної давності. Очікується, що одразу після відкриття ринку ціни будуть нестабільними, тому, будь ласка, перевіряйте точну інформацію безпосередньо на Steam Market."
+    "en-US": "We have opened an official X (formerly Twitter) account! We will be posting the latest updates and announcements there, so please follow us!",
+    "ja-JP": "公式X（旧Twitter）アカウントを開設しました！最新情報やアップデートのお知らせを発信していきますので、ぜひフォローをお願いします！",
+    "zh-Hans": "我们开设了官方X（原Twitter）账号！我们将在此发布最新更新和公告，请关注我们！",
+    "zh-Hant": "我們開設了官方X（原Twitter）帳號！我們將在此發布最新更新和公告，請關注我們！",
+    "ko-KR": "공식 X(구 Twitter) 계정을 개설했습니다! 최신 업데이트 및 공지사항을 게시할 예정이니 팔로우 부탁드립니다!",
+    "ru-RU": "Мы открыли официальный аккаунт в X (ранее Twitter)! Там мы будем публиковать последние обновления и анонсы, поэтому, пожалуйста, подпишитесь на нас!",
+    "es-ES": "¡Hemos abierto una cuenta oficial de X (anteriormente Twitter)! Publicaremos las últimas actualizaciones y anuncios allí, ¡así que síguenos!",
+    "fr-FR": "Nous avons ouvert un compte officiel X (anciennement Twitter) ! Nous y publierons les dernières mises à jour et annonces, alors suivez-nous !",
+    "de-DE": "Wir haben einen offiziellen X-Account (ehemals Twitter) eröffnet! Dort werden wir die neuesten Updates und Ankündigungen veröffentlichen. Bitte folgen Sie uns!",
+    "pt-BR": "Abrimos uma conta oficial no X (antigo Twitter)! Postaremos as últimas atualizações e anúncios lá, então nos siga!",
+    "tr-TR": "Resmi bir X (eski adıyla Twitter) hesabı açtık! En son güncellemeleri ve duyuruları orada paylaşacağız, bu yüzden lütfen bizi takip edin!",
+    "vi-VN": "Chúng tôi đã mở một tài khoản X (trước đây là Twitter) chính thức! Chúng tôi sẽ đăng các bản cập nhật và thông báo mới nhất tại đó, vì vậy hãy theo dõi chúng tôi!",
+    "id-ID": "Kami telah membuka akun resmi X (sebelumnya Twitter)! Kami akan memposting pembaruan dan pengumuman terbaru di sana, jadi silakan ikuti kami!",
+    "th-TH": "เราได้เปิดบัญชี X (ชื่อเดิม Twitter) อย่างเป็นทางการแล้ว! เราจะโพสต์การอัปเดตและประกาศล่าสุดที่นั่น ดังนั้นโปรดติดตามเรา!",
+    "pl-PL": "Otworzyliśmy oficjalne konto X (dawniej Twitter)! Będziemy tam publikować najnowsze aktualizacje i ogłoszenia, więc śledź nas!",
+    "uk-UA": "Ми відкрили офіційний акаунт X (колишній Twitter)! Там ми будемо публікувати останні оновлення та анонси, тож підписуйтесь на нас!"
   }
 };
           
@@ -1307,9 +1279,29 @@ export default function ScannerApp() {
               <h2 style={{ fontSize: '1.2rem', marginBottom: '12px', color: '#ffcc80' }}>
                 {noticeTrans.title[selectedLang] || noticeTrans.title['ja-JP']}
               </h2>
-              <p style={{ color: 'white', lineHeight: '1.6', whiteSpace: 'pre-wrap', textAlign: 'left' }}>
+              <p style={{ color: 'white', lineHeight: '1.6', whiteSpace: 'pre-wrap', textAlign: 'left', marginBottom: '16px' }}>
                 {noticeTrans.text[selectedLang] || noticeTrans.text['ja-JP']}
               </p>
+              <div style={{ textAlign: 'left' }}>
+                <a 
+                  href="https://x.com/tbh_scanner" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{ 
+                    color: '#1da1f2', 
+                    textDecoration: 'underline',
+                    fontWeight: 'bold',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px'
+                  }}
+                >
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  X (Twitter)
+                </a>
+              </div>
             </>
           );
         })()}

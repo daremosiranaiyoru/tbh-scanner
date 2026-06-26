@@ -9,7 +9,7 @@ const nextConfig = {
           has: [
             {
               type: 'host',
-              value: '.*vercel\\.app',
+              value: '(?<host>.*\\.vercel\\.app)',
             },
           ],
           destination: 'https://tbh-scanner.com/:path*?redirected=true',
