@@ -116,7 +116,19 @@ export default function DomainChangePopup() {
           {tTitle}
         </h2>
         <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '24px', color: '#e0e0e0' }}>
-          {tMessage}
+          {tMessage.split('tbh-scanner.com').map((part, i, arr) => (
+            <span key={i}>
+              {part}
+              {i < arr.length - 1 && (
+                <a 
+                  href="https://tbh-scanner.com/" 
+                  style={{ color: '#4fc3f7', textDecoration: 'underline', fontWeight: 'bold' }}
+                >
+                  https://tbh-scanner.com/
+                </a>
+              )}
+            </span>
+          ))}
         </p>
         <button 
           onClick={() => setIsOpen(false)}
