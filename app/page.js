@@ -1037,22 +1037,22 @@ export default function ScannerApp() {
   };
 
   const clearScreenshotTranslations = {
-    'en-US': 'Clear Screenshot',
-    'ja-JP': '画像をクリア',
-    'zh-Hans': '清除截图',
-    'zh-Hant': '清除截圖',
-    'ko-KR': '스크린샷 지우기',
-    'ru-RU': 'Очистить скриншот',
-    'es-ES': 'Borrar captura',
-    'fr-FR': 'Effacer la capture',
-    'de-DE': 'Screenshot löschen',
-    'pt-BR': 'Limpar captura',
-    'tr-TR': 'Ekran Görüntüsünü Temizle',
-    'vi-VN': 'Xóa ảnh chụp màn hình',
-    'id-ID': 'Hapus Tangkapan Layar',
-    'th-TH': 'ล้างภาพหน้าจอ',
-    'pl-PL': 'Wyczyść Zrzut Ekranu',
-    'uk-UA': 'Очистити скріншот'
+    'en-US': 'Clear Image & Items',
+    'ja-JP': '画像とアイテムをクリア',
+    'zh-Hans': '清除图片和物品',
+    'zh-Hant': '清除圖片和物品',
+    'ko-KR': '이미지 및 아이템 지우기',
+    'ru-RU': 'Очистить изображение и предметы',
+    'es-ES': 'Borrar imagen y artículos',
+    'fr-FR': 'Effacer l\'image et les objets',
+    'de-DE': 'Bild & Gegenstände löschen',
+    'pt-BR': 'Limpar Imagem e Itens',
+    'tr-TR': 'Görüntüyü ve Öğeleri Temizle',
+    'vi-VN': 'Xóa hình ảnh & vật phẩm',
+    'id-ID': 'Hapus Gambar & Item',
+    'th-TH': 'ล้างรูปภาพและไอเทม',
+    'pl-PL': 'Wyczyść Obraz i Przedmioty',
+    'uk-UA': 'Очистити зображення та предмети'
   };
 
   const uploadTitleTranslations = {
@@ -1310,8 +1310,28 @@ export default function ScannerApp() {
       {/* Helpful Tip Banner & Ko-fi Support */}
       <div style={{ maxWidth: '1200px', margin: '0 auto 20px auto', padding: '0 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}>
         
-        {/* Left Spacer to ensure perfect centering */}
-        <div style={{ flex: 1 }}></div>
+        {/* Left Spacer & Tips Button */}
+        <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-start' }}>
+          <div style={{
+            background: 'rgba(33, 150, 243, 0.15)',
+            border: '1px solid rgba(33, 150, 243, 0.4)',
+            borderRadius: '20px',
+            padding: '8px 16px',
+            textAlign: 'center',
+            transition: 'all 0.2s',
+            cursor: 'pointer',
+            boxShadow: '0 2px 8px rgba(33, 150, 243, 0.1)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px'
+          }}
+          onClick={() => router.push(`/tips/${selectedLang}`)}
+          onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(33, 150, 243, 0.25)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+          onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(33, 150, 243, 0.15)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+            <span style={{ fontSize: '1.1rem' }}>💡</span>
+            <span style={{ color: '#90caf9', fontWeight: '500', fontSize: '0.9rem' }}>Tips & Features</span>
+          </div>
+        </div>
 
         {/* Center: Tips Banner */}
         <div style={{ display: 'flex', justifyContent: 'center' }}>
