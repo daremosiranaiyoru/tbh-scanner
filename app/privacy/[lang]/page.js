@@ -56,6 +56,19 @@ export default async function Privacy({ params }) {
           <h2 style={{ color: 'white', borderBottom: '2px solid #2196f3', paddingBottom: '10px' }}>{getT(privacyTrans.contactTitle, lang)}</h2>
           <p>{getT(privacyTrans.contactBody, lang)}</p>
         </section>
+
+        <section style={{ marginBottom: '40px' }}>
+          <h2 style={{ color: 'white', borderBottom: '2px solid #2196f3', paddingBottom: '10px' }}>
+            {lang === 'ja-JP' ? '3. お問い合わせ' : '3. Contact Us'}
+          </h2>
+          <p>
+            {lang === 'ja-JP' ? '本サイトやプライバシーポリシーに関するご質問やお問い合わせは、以下のX（旧Twitter）アカウントまでご連絡ください：' : 'If you have any questions about this Privacy Policy, please contact us on X (formerly Twitter):'}
+            <br />
+            <a href="https://x.com/tbh_scanner" target="_blank" rel="noopener noreferrer" style={{ color: '#2196f3', textDecoration: 'none', fontWeight: 'bold', display: 'inline-block', marginTop: '10px' }}>
+              @tbh_scanner
+            </a>
+          </p>
+        </section>
       </main>
     </div>
   );
