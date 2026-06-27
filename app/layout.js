@@ -17,6 +17,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ja">
       <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4038227290670508"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body>
         <DomainChangePopup />
