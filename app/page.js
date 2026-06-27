@@ -1889,7 +1889,9 @@ export default function ScannerApp() {
               }
               if (marketData) {
                 let cents = 0;
-                if (priceFilterMode === 'sell') {
+                if (!marketData.buyOrderCents || marketData.buyOrderCents <= 0) {
+                  cents = 0;
+                } else if (priceFilterMode === 'sell') {
                   cents = marketData.lowestCents || 0;
                 } else if (priceFilterMode === 'buy') {
                   cents = marketData.buyOrderCents || 0;
@@ -2220,7 +2222,9 @@ export default function ScannerApp() {
                         });
                         if (marketData) {
                           let primaryCents = 0;
-                          if (!HIDE_RECENT_TX && marketData.recentPriceCents > 0) {
+                          if (!marketData.buyOrderCents || marketData.buyOrderCents <= 0) {
+                            primaryCents = 0;
+                          } else if (!HIDE_RECENT_TX && marketData.recentPriceCents > 0) {
                             primaryCents = marketData.recentPriceCents;
                           } else if (HIDE_RECENT_TX && marketData.buyOrderCents > 0) {
                             primaryCents = marketData.buyOrderCents;
@@ -2309,9 +2313,9 @@ export default function ScannerApp() {
                                     : <div className={styles.priceValue} style={{ color: 'gray', fontWeight: 'bold', fontSize: '0.85rem' }}>{recentSoldLabel} {{ 'en-US': 'No Data', 'ja-JP': 'データなし', 'zh-Hans': '无数据', 'ko-KR': '데이터 없음' }[selectedLang] || 'No Data'}</div>
                                 )}
                                 {(priceFilterMode === 'both' || priceFilterMode === 'sell') && (
-                                  marketData.lowestCents > 0
+                                  (marketData.lowestCents > 0 && marketData.buyOrderCents > 0)
                                     ? <div style={{ fontSize: priceFilterMode === 'sell' ? '1.1rem' : '0.85rem', color: '#81c784', fontWeight: priceFilterMode === 'sell' ? 'bold' : 'normal' }}>{lowestLabel} {localizedLowestPrice}</div>
-                                    : <div style={{ fontSize: priceFilterMode === 'sell' ? '1.1rem' : '0.85rem', color: 'gray', fontWeight: priceFilterMode === 'sell' ? 'bold' : 'normal' }}>{lowestLabel} {{ 'en-US': 'No Listings', 'ja-JP': '出品無し', 'zh-Hans': '无卖家', 'ko-KR': '판매자 없음' }[selectedLang] || 'No Listings'}</div>
+                                    : <div style={{ fontSize: priceFilterMode === 'sell' ? '1.1rem' : '0.85rem', color: 'gray', fontWeight: priceFilterMode === 'sell' ? 'bold' : 'normal' }}>{lowestLabel} {{ 'en-US': 'No Data', 'ja-JP': 'データなし', 'zh-Hans': '无数据', 'ko-KR': '데이터 없음' }[selectedLang] || 'No Data'}</div>
                                 )}
                                 {(priceFilterMode === 'both' || priceFilterMode === 'buy') && (
                                   marketData.buyOrderCents > 0
@@ -2818,7 +2822,9 @@ export default function ScannerApp() {
                   <span style={{ color: '#4caf50', fontWeight: 'bold', fontSize: '1.1rem' }}>
                     {(() => {
                         let primaryCents = 0;
-                        if (!HIDE_RECENT_TX && selectedHistoryItem.marketData.recentPriceCents > 0) {
+                        if (!selectedHistoryItem.marketData.buyOrderCents || selectedHistoryItem.marketData.buyOrderCents <= 0) {
+                          primaryCents = 0;
+                        } else if (!HIDE_RECENT_TX && selectedHistoryItem.marketData.recentPriceCents > 0) {
                           primaryCents = selectedHistoryItem.marketData.recentPriceCents;
                         } else if (HIDE_RECENT_TX && selectedHistoryItem.marketData.buyOrderCents > 0) {
                           primaryCents = selectedHistoryItem.marketData.buyOrderCents;
@@ -2840,9 +2846,9 @@ export default function ScannerApp() {
                     {{ 'en-US': 'Ask Price (Sell Orders)', 'ja-JP': '売値 (売り注文)', 'zh-Hans': '卖价 (卖单)', 'ko-KR': '매도 호가 (판매 주문)' }[selectedLang] || 'Ask Price'}
                   </span>
                   <span style={{ color: '#81c784', fontWeight: 'bold', fontSize: '1.1rem' }}>
-                    {selectedHistoryItem.marketData.lowestCents > 0
+                    {(selectedHistoryItem.marketData.lowestCents > 0 && selectedHistoryItem.marketData.buyOrderCents > 0)
                       ? new Intl.NumberFormat(selectedLang, { style: 'currency', currency: getEffectiveCurrency(selectedLang, selectedCurrency).code, maximumFractionDigits: ['JPY', 'KRW', 'VND', 'IDR'].includes(getEffectiveCurrency(selectedLang, selectedCurrency).code) ? 0 : 2 }).format((selectedHistoryItem.marketData.lowestCents / 100) * (rates[getEffectiveCurrency(selectedLang, selectedCurrency).code] || 1))
-                      : ({ 'en-US': 'No Listings', 'ja-JP': '出品無し', 'zh-Hans': '无卖家', 'ko-KR': '판매자 없음' }[selectedLang] || 'No Listings')}
+                      : ({ 'en-US': 'No Data', 'ja-JP': 'データなし', 'zh-Hans': '无数据', 'ko-KR': '데이터 없음' }[selectedLang] || 'No Data')}
                   </span>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
