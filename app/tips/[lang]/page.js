@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import { tipsTrans } from '../../lib/tipsTranslations';
 
-export const runtime = 'edge';
-
 export function generateStaticParams() {
   return [
     { lang: 'en-US' },
