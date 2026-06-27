@@ -1094,22 +1094,22 @@ export default function ScannerApp() {
     'uk-UA': 'Перетягніть або вставте з буфера обміну'
   };
   const cashoutAdTranslations = {
-    'en-US': '💡 Tip: How to use or cash out your Steam Wallet balance',
-    'ja-JP': '💡 Tips: Steamウォレットの現金化について',
-    'zh-Hans': '💡 提示：如何使用或提现您的Steam钱包余额',
-    'zh-Hant': '💡 提示：如何使用或提現您的Steam錢包餘額',
-    'ko-KR': '💡 팁: Steam 지갑 잔액 사용처 및 현금화 방법',
-    'ru-RU': '💡 Совет: Как использовать или вывести средства со Steam Wallet',
-    'es-ES': '💡 Consejo: Cómo usar o retirar el saldo de tu Cartera de Steam',
-    'fr-FR': '💡 Astuce : Comment utiliser ou retirer le solde de votre portefeuille Steam',
-    'de-DE': '💡 Tipp: So nutzen oder auszahlen lassen Sie sich Ihr Steam-Guthaben',
-    'pt-BR': '💡 Dica: Como usar ou sacar o saldo da sua Carteira Steam',
-    'tr-TR': '💡 İpucu: Steam Cüzdan bakiyenizi nasıl kullanır veya nakde çevirirsiniz',
-    'vi-VN': '💡 Mẹo: Cách sử dụng hoặc rút số dư Ví Steam',
-    'id-ID': '💡 Tips: Cara menggunakan atau mencairkan saldo Steam Wallet Anda',
-    'th-TH': '💡 เคล็ดลับ: วิธีใช้หรือถอนยอดคงเหลือใน Steam Wallet ของคุณ',
-    'pl-PL': '💡 Wskazówka: Jak wykorzystać lub wypłacić saldo Portfela Steam',
-    'uk-UA': '💡 Порада: Як використовувати або вивести баланс Гаманця Steam'
+    'en-US': 'Tip: How to use or cash out your Steam Wallet balance',
+    'ja-JP': 'Steamウォレットの現金化について',
+    'zh-Hans': '提示：如何使用或提现您的Steam钱包余额',
+    'zh-Hant': '提示：如何使用或提現您的Steam錢包餘額',
+    'ko-KR': '팁: Steam 지갑 잔액 사용처 및 현금화 방법',
+    'ru-RU': 'Совет: Как использовать или вывести средства со Steam Wallet',
+    'es-ES': 'Consejo: Cómo usar o retirar el saldo de tu Cartera de Steam',
+    'fr-FR': 'Astuce : Comment utiliser ou retirer le solde de votre portefeuille Steam',
+    'de-DE': 'Tipp: So nutzen oder auszahlen lassen Sie sich Ihr Steam-Guthaben',
+    'pt-BR': 'Dica: Como usar ou sacar o saldo da sua Carteira Steam',
+    'tr-TR': 'İpucu: Steam Cüzdan bakiyenizi nasıl kullanır veya nakde çevirirsiniz',
+    'vi-VN': 'Mẹo: Cách sử dụng hoặc rút số dư Ví Steam',
+    'id-ID': 'Tips: Cara menggunakan atau mencairkan saldo Steam Wallet Anda',
+    'th-TH': 'เคล็ดลับ: วิธีใช้หรือถอนยอดคงเหลือใน Steam Wallet ของคุณ',
+    'pl-PL': 'Wskazówka: Jak wykorzystać lub wypłacić saldo Portfela Steam',
+    'uk-UA': 'Порада: Як використовувати або вивести баланс Гаманця Steam'
   };
 
   const kofiSmallTrans = {
@@ -1317,20 +1317,23 @@ export default function ScannerApp() {
             background: 'rgba(33, 150, 243, 0.15)',
             border: '1px solid rgba(33, 150, 243, 0.4)',
             borderRadius: '20px',
-            padding: '8px 16px',
+            padding: '6px 16px',
+            height: '36px',
+            boxSizing: 'border-box',
             textAlign: 'center',
             transition: 'all 0.2s',
             cursor: 'pointer',
             boxShadow: '0 2px 8px rgba(33, 150, 243, 0.1)',
             display: 'flex',
             alignItems: 'center',
+            justifyContent: 'center',
             gap: '8px'
           }}
           onClick={() => router.push(`/tips/${selectedLang}`)}
           onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(33, 150, 243, 0.25)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
           onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(33, 150, 243, 0.15)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
             <span style={{ fontSize: '1.1rem' }}>💡</span>
-            <span style={{ color: '#90caf9', fontWeight: '500', fontSize: '0.9rem' }}>{tipsTrans.btnLabel[selectedLang] || tipsTrans.btnLabel['en-US']}</span>
+            <span style={{ color: '#90caf9', fontWeight: '500', fontSize: '0.9rem', whiteSpace: 'nowrap' }}>{tipsTrans.btnLabel[selectedLang] || tipsTrans.btnLabel['en-US']}</span>
           </div>
         </div>
 
@@ -1340,18 +1343,24 @@ export default function ScannerApp() {
             background: 'rgba(76, 175, 80, 0.15)',
             border: '1px solid rgba(76, 175, 80, 0.4)',
             borderRadius: '20px',
-            padding: '8px 16px',
+            padding: '6px 16px',
+            height: '36px',
+            boxSizing: 'border-box',
             textAlign: 'center',
             transition: 'all 0.2s',
             cursor: 'pointer',
-            display: 'inline-block',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '8px',
             boxShadow: '0 2px 8px rgba(76, 175, 80, 0.1)'
           }}
           onClick={() => router.push(`/cashout?lang=${selectedLang}`)}
           onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(76, 175, 80, 0.25)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
           onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(76, 175, 80, 0.15)'; e.currentTarget.style.transform = 'none'; }}
           >
-            <span style={{ color: '#81c784', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 'bold' }}>
+            <span style={{ fontSize: '1.1rem' }}>💡</span>
+            <span style={{ color: '#81c784', fontSize: '0.9rem', whiteSpace: 'nowrap', fontWeight: 'bold' }}>
               {cashoutAdTranslations[selectedLang] || cashoutAdTranslations['en-US']}
             </span>
           </div>
@@ -1374,9 +1383,9 @@ export default function ScannerApp() {
               target="_blank" 
               rel="noopener noreferrer"
               style={{
-                display: 'inline-flex', alignItems: 'center', gap: '6px',
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '6px',
                 background: 'rgba(255, 183, 77, 0.1)', color: '#ffb74d', textDecoration: 'none',
-                padding: '6px 16px', borderRadius: '20px', fontSize: '0.9rem', fontWeight: 'bold',
+                padding: '6px 16px', height: '36px', boxSizing: 'border-box', borderRadius: '20px', fontSize: '0.9rem', fontWeight: 'bold',
                 border: '1px solid rgba(255, 183, 77, 0.3)', transition: 'all 0.2s',
                 boxShadow: '0 2px 8px rgba(255, 183, 77, 0.1)',
                 whiteSpace: 'nowrap'
@@ -2641,7 +2650,7 @@ export default function ScannerApp() {
             title: { 'en-US': 'How to Use', 'ja-JP': '使い方', 'zh-Hans': '使用方法', 'zh-Hant': '使用方法', 'ko-KR': '사용 방법', 'ru-RU': 'Как использовать', 'es-ES': 'Cómo usar', 'fr-FR': 'Comment utiliser', 'de-DE': 'Wie man es benutzt', 'pt-BR': 'Como usar', 'tr-TR': 'Nasıl Kullanılır', 'vi-VN': 'Cách sử dụng' },
             step1: { 'en-US': '1. Take a screenshot of your in-game inventory.', 'ja-JP': '1. ゲーム内でインベントリ（アイテム欄）のスクリーンショットを撮影します。', 'zh-Hans': '1. 在游戏中截取您的物品栏。', 'zh-Hant': '1. 在遊戲中截取您的物品欄。', 'ko-KR': '1. 게임 내 인벤토리의 스크린샷을 찍습니다.', 'ru-RU': '1. Сделайте скриншот вашего инвентаря в игре.', 'es-ES': '1. Toma una captura de pantalla de tu inventario en el juego.', 'fr-FR': '1. Prenez une capture d\'écran de votre inventaire en jeu.', 'de-DE': '1. Mache einen Screenshot deines Inventars im Spiel.', 'pt-BR': '1. Tire uma captura de tela do seu inventário no jogo.', 'tr-TR': '1. Oyun içi envanterinizin ekran görüntüsünü alın.', 'vi-VN': '1. Chụp ảnh màn hình kho đồ trong trò chơi của bạn.' },
             step2: { 'en-US': '2. Drag & drop the image into the scanner above.', 'ja-JP': '2. 撮影した画像を上のスキャナーにドラッグ＆ドロップします。', 'zh-Hans': '2. 将图片拖放到上方的扫描仪中。', 'zh-Hant': '2. 將圖片拖放到上方的掃描儀中。', 'ko-KR': '2. 이미지를 위 스캐너에 드래그 앤 드롭합니다.', 'ru-RU': '2. Перетащите изображение в сканер выше.', 'es-ES': '2. Arrastra y suelta la imagen en el escáner de arriba.', 'fr-FR': '2. Glissez-déposez l\'image dans le scanner ci-dessus.', 'de-DE': '2. Ziehe das Bild per Drag & Drop in den Scanner oben.', 'pt-BR': '2. Arraste e solte a imagem no scanner acima.', 'tr-TR': '2. Resmi yukarıdaki tarayıcıya sürükleyip bırakın.', 'vi-VN': '2. Kéo và thả hình ảnh vào máy quét ở trên.' },
-            example: { 'en-US': '💡 Example: Make sure the image looks like this for the best accuracy!', 'ja-JP': '💡 例: 以下のような綺麗に枠が写った画像だと、最も正確に認識できます！', 'zh-Hans': '💡 示例：像这样清晰的截图可以获得最高的识别准确率！', 'zh-Hant': '💡 示例：像這樣清晰的截圖可以獲得最高的識別準確率！', 'ko-KR': '💡 예시: 이런 식의 깔끔한 스크린샷이 가장 정확하게 인식됩니다!', 'ru-RU': '💡 Пример: Убедитесь, что изображение выглядит так для лучшей точности!', 'es-ES': '💡 Ejemplo: ¡Asegúrate de que la imagen se vea así para obtener la mejor precisión!', 'fr-FR': '💡 Exemple: Assurez-vous que l\'image ressemble à ceci pour une meilleure précision!', 'de-DE': '💡 Beispiel: Stelle sicher, dass das Bild so aussieht, um die beste Genauigkeit zu erzielen!', 'pt-BR': '💡 Exemplo: Certifique-se de que a imagem seja assim para melhor precisão!', 'tr-TR': '💡 Örnek: En iyi doğruluk için görüntünün böyle göründüğünden emin olun!', 'vi-VN': '💡 Ví dụ: Đảm bảo hình ảnh giống như thế này để có độ chính xác tốt nhất!' },
+            example: { 'en-US': 'Example: Make sure the image looks like this for the best accuracy!', 'ja-JP': '例: 以下のような綺麗に枠が写った画像だと、最も正確に認識できます！', 'zh-Hans': '示例：像这样清晰的截图可以获得最高的识别准确率！', 'zh-Hant': '示例：像這樣清晰的截圖可以獲得最高的識別準確率！', 'ko-KR': '예시: 이런 식의 깔끔한 스크린샷이 가장 정확하게 인식됩니다!', 'ru-RU': 'Пример: Убедитесь, что изображение выглядит так для лучшей точности!', 'es-ES': 'Ejemplo: ¡Asegúrate de que la imagen se vea así para obtener la mejor precisión!', 'fr-FR': 'Exemple: Assurez-vous que l\'image ressemble à ceci pour une meilleure précision!', 'de-DE': 'Beispiel: Stelle sicher, dass das Bild so aussieht, um die beste Genauigkeit zu erzielen!', 'pt-BR': 'Exemplo: Certifique-se de que a imagem seja assim para melhor precisão!', 'tr-TR': 'Örnek: En iyi doğruluk için görüntünün böyle göründüğünden emin olun!', 'vi-VN': 'Ví dụ: Đảm bảo hình ảnh giống như thế này để có độ chính xác tốt nhất!' },
             'id-ID': 'Tips: Cara bermain dan mendapatkan uang sungguhan dengan berdagang',
             'th-TH': 'เคล็ดลับ: วิธีการเล่นและรับเงินจริงจากการซื้อขาย',
             'pl-PL': 'Wskazówki: Jak grać i zarabiać prawdziwe pieniądze dzięki handlowi',

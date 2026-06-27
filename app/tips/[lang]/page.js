@@ -29,7 +29,7 @@ export default async function TipsPage({ params }) {
   const t = tipsTrans;
   
   return (
-    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '40px 20px', color: '#e0e0e0', lineHeight: '1.6' }}>
+    <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px', color: '#e0e0e0', lineHeight: '1.6' }}>
       <Link href="/" style={{ color: '#4fc3f7', textDecoration: 'none', display: 'inline-block', marginBottom: '20px' }}>
         &larr; Back
       </Link>
@@ -43,26 +43,26 @@ export default async function TipsPage({ params }) {
           {t.s1_title[lang] || t.s1_title['en-US']}
         </h2>
         <div style={{ background: 'rgba(0,0,0,0.3)', padding: '20px', borderRadius: '8px' }}>
-          <p style={{ fontSize: '1rem', marginBottom: '15px' }}>
+          <p style={{ fontSize: '1rem', marginBottom: '15px', whiteSpace: 'pre-wrap' }}>
             {t.s1_text1[lang] || t.s1_text1['en-US']}
           </p>
-          <p style={{ fontSize: '1rem', marginBottom: '15px', color: '#ffb74d' }}>
+          <p style={{ fontSize: '1rem', marginBottom: '15px', color: '#ffb74d', whiteSpace: 'pre-wrap' }}>
             {t.s1_text2[lang] || t.s1_text2['en-US']}
           </p>
           
-          <div style={{ margin: '20px 0', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-            <img src="/images/tips_manual_add.png" alt="Search and Add Example" style={{ width: '100%', display: 'block' }} />
+          <div style={{ margin: '20px 0', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.5)', textAlign: 'center' }}>
+            <img src="/images/tips_manual_add.png" alt="Search and Add Example" style={{ maxWidth: '100%', height: 'auto', display: 'inline-block' }} />
           </div>
 
-          <p style={{ fontSize: '1rem', marginBottom: '15px', color: '#ffb74d' }}>
+          <p style={{ fontSize: '1rem', marginBottom: '15px', color: '#ffb74d', whiteSpace: 'pre-wrap' }}>
             {t.s1_text3[lang] || t.s1_text3['en-US']}
           </p>
           
-          <div style={{ margin: '20px 0', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-            <img src="/images/tips_sort_price.png" alt="Sort by Price Example" style={{ width: '100%', display: 'block' }} />
+          <div style={{ margin: '20px 0', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.5)', textAlign: 'center' }}>
+            <img src="/images/tips_sort_price.png" alt="Sort by Price Example" style={{ maxWidth: '100%', height: 'auto', display: 'inline-block' }} />
           </div>
 
-          <p style={{ fontSize: '1rem' }}>
+          <p style={{ fontSize: '1rem', whiteSpace: 'pre-wrap' }}>
             {t.s1_text4[lang] || t.s1_text4['en-US']}
           </p>
         </div>
@@ -72,18 +72,22 @@ export default async function TipsPage({ params }) {
         <h2 style={{ fontSize: '1.5rem', color: '#4fc3f7', marginBottom: '15px' }}>
           {t.s2_title[lang] || t.s2_title['en-US']}
         </h2>
-        <p style={{ fontSize: '1rem', background: 'rgba(0,0,0,0.3)', padding: '20px', borderRadius: '8px' }}>
-          {t.s2_text[lang] || t.s2_text['en-US']}
-        </p>
-      </section>
+        <div style={{ background: 'rgba(0,0,0,0.3)', padding: '20px', borderRadius: '8px' }}>
+          <p style={{ fontSize: '1rem', marginBottom: '15px', whiteSpace: 'pre-wrap' }}>
+            {t.s2_text1[lang] || t.s2_text1['en-US']}
+          </p>
+          <p style={{ fontSize: '1rem', marginBottom: '15px', color: '#ffb74d', whiteSpace: 'pre-wrap' }}>
+            {t.s2_text2[lang] || t.s2_text2['en-US']}
+          </p>
+          
+          <div style={{ margin: '20px 0', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.5)', textAlign: 'center' }}>
+            <img src="/images/tips_autoscroll_1.png" alt="Auto-scroll Example 1" style={{ maxWidth: '100%', height: 'auto', display: 'inline-block' }} />
+          </div>
 
-      <section style={{ marginBottom: '40px' }}>
-        <h2 style={{ fontSize: '1.5rem', color: '#4fc3f7', marginBottom: '15px' }}>
-          {t.s3_title[lang] || t.s3_title['en-US']}
-        </h2>
-        <p style={{ fontSize: '1rem', background: 'rgba(0,0,0,0.3)', padding: '20px', borderRadius: '8px' }}>
-          {t.s3_text[lang] || t.s3_text['en-US']}
-        </p>
+          <div style={{ margin: '20px 0', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.5)', textAlign: 'center' }}>
+            <img src="/images/tips_autoscroll_2.png" alt="Auto-scroll Example 2" style={{ maxWidth: '100%', height: 'auto', display: 'inline-block' }} />
+          </div>
+        </div>
       </section>
       
       <div style={{ textAlign: 'center', marginTop: '60px' }}>
