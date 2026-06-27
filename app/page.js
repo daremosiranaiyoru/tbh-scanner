@@ -10,6 +10,7 @@ import itemNames from '../public/item_names.json';
 import spriteMap from '../public/sprite_map.json';
 import iconsManifest from '../public/icons_manifest.json';
 import itemStats from '../public/item_stats.json';
+import { tipsTrans } from './lib/tipsTranslations';
 import statTrans from '../public/stat_trans.json';
 import materialTags from '../public/material_tags.json';
 import materialEffects from '../public/material_effects.json';
@@ -1329,7 +1330,7 @@ export default function ScannerApp() {
           onMouseOver={(e) => { e.currentTarget.style.background = 'rgba(33, 150, 243, 0.25)'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
           onMouseOut={(e) => { e.currentTarget.style.background = 'rgba(33, 150, 243, 0.15)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
             <span style={{ fontSize: '1.1rem' }}>💡</span>
-            <span style={{ color: '#90caf9', fontWeight: '500', fontSize: '0.9rem' }}>Tips & Features</span>
+            <span style={{ color: '#90caf9', fontWeight: '500', fontSize: '0.9rem' }}>{tipsTrans.btnLabel[selectedLang] || tipsTrans.btnLabel['en-US']}</span>
           </div>
         </div>
 

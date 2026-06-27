@@ -42,9 +42,32 @@ export default async function TipsPage({ params }) {
         <h2 style={{ fontSize: '1.5rem', color: '#4fc3f7', marginBottom: '15px' }}>
           {t.s1_title[lang] || t.s1_title['en-US']}
         </h2>
-        <p style={{ fontSize: '1rem', background: 'rgba(0,0,0,0.3)', padding: '20px', borderRadius: '8px' }}>
-          {t.s1_text[lang] || t.s1_text['en-US']}
-        </p>
+        <div style={{ background: 'rgba(0,0,0,0.3)', padding: '20px', borderRadius: '8px' }}>
+          <p style={{ fontSize: '1rem', marginBottom: '15px' }}>
+            {t.s1_text1[lang] || t.s1_text1['en-US']}
+          </p>
+          <p style={{ fontSize: '1rem', marginBottom: '15px', color: '#ffb74d' }}>
+            {t.s1_text2[lang] || t.s1_text2['en-US']}
+          </p>
+          
+          {/* Image Placeholder 1 */}
+          <div style={{ width: '100%', height: '200px', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '15px 0', border: '1px dashed rgba(255,255,255,0.2)', borderRadius: '8px' }}>
+            <span style={{ color: 'rgba(255,255,255,0.5)' }}>Image Placeholder (画像を添付)</span>
+          </div>
+
+          <p style={{ fontSize: '1rem', marginBottom: '15px', color: '#ffb74d' }}>
+            {t.s1_text3[lang] || t.s1_text3['en-US']}
+          </p>
+          
+          {/* Image Placeholder 2 */}
+          <div style={{ width: '100%', height: '200px', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '15px 0', border: '1px dashed rgba(255,255,255,0.2)', borderRadius: '8px' }}>
+            <span style={{ color: 'rgba(255,255,255,0.5)' }}>Image Placeholder (画像を添付)</span>
+          </div>
+
+          <p style={{ fontSize: '1rem' }}>
+            {t.s1_text4[lang] || t.s1_text4['en-US']}
+          </p>
+        </div>
       </section>
 
       <section style={{ marginBottom: '40px' }}>
