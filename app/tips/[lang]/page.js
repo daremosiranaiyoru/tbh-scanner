@@ -50,18 +50,16 @@ export default async function TipsPage({ params }) {
             {t.s1_text2[lang] || t.s1_text2['en-US']}
           </p>
           
-          {/* Image Placeholder 1 */}
-          <div style={{ width: '100%', height: '200px', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '15px 0', border: '1px dashed rgba(255,255,255,0.2)', borderRadius: '8px' }}>
-            <span style={{ color: 'rgba(255,255,255,0.5)' }}>Image Placeholder (画像を添付)</span>
+          <div style={{ margin: '20px 0', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <img src="/images/tips_manual_add.png" alt="Search and Add Example" style={{ width: '100%', display: 'block' }} />
           </div>
 
           <p style={{ fontSize: '1rem', marginBottom: '15px', color: '#ffb74d' }}>
             {t.s1_text3[lang] || t.s1_text3['en-US']}
           </p>
           
-          {/* Image Placeholder 2 */}
-          <div style={{ width: '100%', height: '200px', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '15px 0', border: '1px dashed rgba(255,255,255,0.2)', borderRadius: '8px' }}>
-            <span style={{ color: 'rgba(255,255,255,0.5)' }}>Image Placeholder (画像を添付)</span>
+          <div style={{ margin: '20px 0', borderRadius: '8px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
+            <img src="/images/tips_sort_price.png" alt="Sort by Price Example" style={{ width: '100%', display: 'block' }} />
           </div>
 
           <p style={{ fontSize: '1rem' }}>
