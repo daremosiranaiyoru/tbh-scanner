@@ -599,8 +599,8 @@ export default function CashoutGuide() {
           </div>
         </section>
 
-      {/* Warning / TOS Note */}
-      {t.warningTitle && (
+      {/* Warning / TOS Note - Temporarily hidden for AdSense review */}
+      {false && t.warningTitle && (
         <section style={{ marginBottom: '40px' }}>
           <h2 style={{ fontSize: '1.3rem', color: '#ffb74d', marginBottom: '15px' }}>
             {t.warningTitle}
